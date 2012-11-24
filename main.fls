@@ -339,7 +339,7 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/stmaryrd/stmary10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/stmaryrd/stmary7.tfm
 INPUT meromZsh/content.tex
 INPUT meromZsh/content.tex
-INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/ec-lmr8.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/ec-lmri8.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/rm-lmr5.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/lmmi5.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/lmsy5.tfm
@@ -349,6 +349,7 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm5.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/latex-fonts/lasy5.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/stmaryrd/stmary5.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/ec-lmr8.tfm
 INPUT lemma2-4/content.tex
 INPUT lemma2-4/content.tex
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/ec-lmr9.tfm
@@ -399,6 +400,7 @@ INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmsy6.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmsy8.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmsy9.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb

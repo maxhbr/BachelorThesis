@@ -1,51 +1,79 @@
 \chapter{Der Meromorpher Zusammenhang}
-% quelle ist sabbah
+Quelle ist \cite{sabbah_cimpa90}
 \section{Definition}~
 
 \begin{defn}[Meromorpher Zusammenhang]
   Ein \emph{Meromorpher zusammenhang} (Bzw. besser \emph{Keim eines Meromorphen
-    Zusammenhangs}) besteht aus folgenden Daten:
+  Zusammenhangs}) $(\M_K,\partial)$ besteht aus folgenden Daten:
   \begin{itemize}
-    \item $M$, ein endlich dimensionaler $K$-Vr wobei $K=\C\{z-x_0\}[(z-x_0)^{-1}]$
-    \item einer $\C$-linearen Abbildung $\partial:M\rightarrow M$, welche die
+    \item $\M_K$, ein endlich dimensionaler $K$-Vr
+    \item einer $\C$-linearen Abbildung $\partial:\M_K\rightarrow \M_K$, genannt
+      \emph{Derivation}. Wobei für alle $f\in K$ und $u\in \M_K$ die
       \emph{Leibnitzregel}
-      $$\partial(fu)=f'u+f\partial u$$
-      erfüllt.
+      \begin{equation}\label{eq:Leibnitzregel}
+        \partial(fu)=f'u+f\partial u
+      \end{equation}
+      erfüllt sein soll.
   \end{itemize}
 \end{defn}
 
 \section{Eigenschaften}
 Hier nun einige Eigenschaften von Meromorphen Zusammenhängen.
 
-Sei $(M,\partial)$ ein gegebener Meromorpher Zusammenhang, so wähle eine Basis
-$(m_i)_{i\in\{1,..,r\}}$ von M. Dann gilt:
-\begin{center}
-  \begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
-  \matrix (m) [
-    matrix of math nodes
-    , row sep=3em
-    , column sep=3em
-    %, text height=3em
-    %, text depth=0.25em
-    ]
-  {
-    M & M \\
-    K^r & K^r \\
-  };
-    \path[->,font=\scriptsize,>=angle 90]
-    (m-1-1) edge node[above]{$\partial$} (m-1-2)
-    (m-2-1) edge node[above]{$\phi^{-1}\partial\phi$} (m-2-2)
-    ;
-    %TODO: make this harpoon arrows
-    \path[->,font=\scriptsize,>=angle 90]
-    (m-2-1) edge node[descr]{$\cong$} node[right]{$\phi$} (m-1-1)
-    (m-2-2) edge node[descr]{$\cong$} node[left]{$\phi$} (m-1-2)
-    ;
+\begin{lem}
+  Sei $(M,\partial)$ ein gegebener Meromorpher Zusammenhang, und $\phi$ ein
+  Basisisomorphismus von $K^r$ nach $\M$, also in der Situation
+  \begin{center}
+    \begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
+    \matrix (m) [
+      matrix of math nodes
+      , row sep=3em
+      , column sep=3em
+      %, text height=3em
+      %, text depth=0.25em
+      ]
+    {
+      \M & \M \\
+      K^r & K^r \\
+    };
+      \path[->,font=\scriptsize,>=angle 90]
+      (m-1-1) edge node[above]{$\partial$} (m-1-2)
+      (m-2-1) edge node[above]{$\phi^{-1}\partial\phi$} (m-2-2)
+      ;
+      %TODO: make this harpoon arrows
+      \path[->,font=\scriptsize,>=angle 90]
+      (m-2-1) edge node[descr]{$\cong$} node[right]{$\phi$} (m-1-1)
+      (m-2-2) edge node[descr]{$\cong$} node[left]{$\phi$} (m-1-2)
+      ;
 
-    \path[>=stealth,|->]
-    ;
-  \end{tikzpicture}
-\end{center}
+      \path[>=stealth,|->]
+      ;
+    \end{tikzpicture}
+  \end{center}
+  gilt: $(K^r,\phi^{-1}\partial\phi)$ ist ebenfalls ein Meromorpher Zusammenhang.
+\end{lem}
+\begin{proof}
+  TODO, (3. Treffen)
+\end{proof}
+
+Sind $\partial_1$ und $\partial_2$ zwei Meromorphe Zusammenhänge auf $\M_K\cong
+K^r$. So betrachte $\partial_1-\partial_2:\M\rightarrow\M$für alle $f\in K$ und
+$u\in \M_K$ :
+\begin{eqnarray*}
+  (\partial_1-\partial_2)(fu) & = & \partial_1(fu)-\partial_2(fu)\\
+  & = & f'u+f\partial_1u-f'u-f\partial_2u\\
+  & = & f\cdot(\partial_1-\partial_2)(u)\\
+\end{eqnarray*}
+\begin{lem}
+  Da $\partial_1-\partial_2$ $\C$-linear und, wie eben gezeigt,
+  $(\partial_1-\partial_2)(fu)=f\cdot(\partial_1-\partial_2)(u)$ allgemein
+  gilt: Die differenz zweier Meromorpher Zusammenhäge ist $K$-linear.
+  %Differenz zweier Meromorpher Zshg. ist K-linear
+\end{lem}
+Insbesondere ist $\frac{d}{dz}-\partial:K^r\rightarrow K^r$ $K$-linear, also es
+existiert eine Matrix $A\in M(r\times r,K)$ mit $\frac{d}{dz}-\partial=A$, also
+ist $\partial=\frac{d}{dz}-A$.
+
 %TODO: beobachtung...
 
 %TODO: differenz ist linear
@@ -90,9 +118,18 @@ $(m_i)_{i\in\{1,..,r\}}$ von M. Dann gilt:
   $(\frac{d}{dz}+B)$ $\C$-Linear, gilt:\\
   Der Merom. Zush. $\frac{d}{dz}+A$ auf $K^r$ wird durch Basiswechsel $T\in
   GL(r,K)$ zu
-  $$
-  \frac{d}{dz}+(T^{-1}\cdot T'+T^{-1}AT) = \frac{d}{dz}+B
-  $$
+  \[
+    \frac{d}{dz}+(T^{-1}\cdot T'+T^{-1}AT) = \frac{d}{dz}+B
+  \]
 \end{defn}
+\begin{defn}
+  $A\sim B$ differenziell Äquivalent $:\Leftrightarrow$ $\exist T\in GL(r,K)$
+  mit $B=T^{-1}\cdot T'+T^{-1}AT$
+\end{defn}
+
+\begin{comment}
+  $1=TT^{-1}$ $\rightsquigarrow$ $T'T^{-1}+T(T^{-1})'=0$\\
+  $1=T^{-1}T$ $\rightsquigarrow$ $(T^{-1})'T+T^{-1}T'=0$
+\end{comment}
 
 % vim: set ft=tex :
