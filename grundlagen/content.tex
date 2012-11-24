@@ -139,18 +139,6 @@ $\D=\C\{x\}<\partial_x>$ bzw. $\hat{\D}=\C[[x]]<\partial_x>$) verwenden.
   $A_1(\C),~\D$ und $\hat\D$ sind nicht kommutative Algebren.
 \end{rem}
 
-\begin{prop} \label{prop:weyl_eundeutige_schreibung}
-  Jedes Element in $A_1(\C)$ (bzw. $\D$ oder $\hat{\D}$) kann auf eindeutige
-  weiße als $\sum_{i=0}^na_i(x)\partial_x^i$, mit $a_i(x)\in A_1(\C)$ (bzw.
-  $\D$ oder $\hat{\D}$), geschrieben werden
-\end{prop}
-\begin{proof}
-  \cite[Proposition 1.2.3]{sabbah_cimpa90}
-  \begin{comment}
-    ein teil des Beweises ist "left as an exersice"
-  \end{comment}
-\end{proof}
-
 \begin{lem}
   Es gelten die Formeln\\
   %\begin{eqnarray*}
@@ -167,12 +155,73 @@ $\D=\C\{x\}<\partial_x>$ bzw. $\hat{\D}=\C[[x]]<\partial_x>$) verwenden.
   Zula Barbara
 \end{proof}
 
+\begin{prop} \label{prop:weyl_eindeutige_schreibung}
+  Jedes Element in $A_1(\C)$ (bzw. $\D$ oder $\hat{\D}$) kann auf eindeutige
+  weiße als $P=\sum_{i=0}^na_i(x)\partial_x^i$, mit $a_i(x)\in A_1(\C)$ (bzw.
+  $\D$ oder $\hat{\D}$), geschrieben werden. 
+\end{prop}
+\begin{proof}
+  \cite[Proposition 1.2.3]{sabbah_cimpa90}
+  \begin{comment}
+    ein teil des Beweises ist "left as an exersice"
+  \end{comment}
+\end{proof}
+
+%TODO: definition Filtrierung und Grad 
+
+\begin{defn}
+  Sei $\deg P=\sum_{i=0}^na_i(x)\partial_x^i$ bzgl. $n$ minimal geschrieben, so 
+  ist $\deg P:=n$ der \emph{Grad von $P$}. So definiere 
+  $F_N\D:=\{P\in\D|\deg P\leq N\}$ und erhalte die aufsteigende Filtrierung
+  \[
+    \cdots\subset F_{-1}\D\subset F_{0}\D\subset F_{1}\D\subset\cdots\subset\D
+  \]
+  und erhalte $gr_k^F\D\underset{\mbox{def}}{=}F_N\D\slash F_{N-1}\D
+  =\{P\in\D|\deg P=N\}\cong\C\{x\}$.
+\end{defn}
+
+\begin{proof}
+  \begin{comment}
+    mit isom: $[P]=P+F_{N-1}\D\mapsto a_n(x)$
+  \end{comment}
+\end{proof}
+
+\begin{prop}
+  Es gilt:
+  \begin{center}
+    \begin{tikzpicture} [descr/.style={fill=white,inner sep=2.5pt}]
+    \matrix (m) [
+      matrix of math nodes,
+      row sep=1em,
+      %column sep=-0.7em,
+      text height=1.5ex,
+      text depth=0.25ex]
+    {
+      gr^F\D &
+      := &
+      \bigoplus_{\N\in\Z}gr_N^F\D &
+      = &
+      \bigoplus_{\N\in\N_0}gr_N^F\D &
+      \cong &
+      \bigoplus_{\N\in\N_0}\C\{x\} &
+      \cong &
+      \C\{x\}[\xi] &
+      = &
+      \bigoplus_{\N\in\N_0}\C\{x\}\cdot \xi^N \\
+    };
+      \path[solid]
+      (m-1-1) edge [bend right=20] node[descr]{$\cong$}
+        node[below]{$\mbox{Isom. von grad. Ringen}$} (m-1-11);
+    \end{tikzpicture}
+  \end{center}
+\end{prop}
+
 \subsection{Weyl Algebra als Graduierter Ring}
 % Treffen 2
 Sei $A$ nun einer der drei Koeffizienten Ringe, welche zuvor behandelt wurden.
 Der Ring $A<\partial_x>$ kommt zusammen mit einer aufsteigenden Filtrierung,
 welche wir mit $F(A<\partial_x)$ bezeichen werden.
-Sei $P$ ein bzgl. \ref{prop:weyl_eundeutige_schreibung} minimal geschriebener
+Sei $P$ ein bzgl. \ref{prop:weyl_eindeutige_schreibung} minimal geschriebener
 Operator, so ist $P$ in $F_k$ falls der maximale Grad von $\partial_x$ in $P$
 kleiner oder gleich $k$. So definiere den Grad $deg P$ von $P$ als die 
 Eindeutige ganze Zahl $k$ mit $P\in F_kA<\partial_x>\slash F_{k-1}<\partial_x>$
