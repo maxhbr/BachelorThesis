@@ -1,0 +1,98 @@
+\chapter{Der Meromorpher Zusammenhang}
+% quelle ist sabbah
+\section{Definition}~
+
+\begin{defn}[Meromorpher Zusammenhang]
+  Ein \emph{Meromorpher zusammenhang} (Bzw. besser \emph{Keim eines Meromorphen
+    Zusammenhangs}) besteht aus folgenden Daten:
+  \begin{itemize}
+    \item $M$, ein endlich dimensionaler $K$-Vr wobei $K=\C\{z-x_0\}[(z-x_0)^{-1}]$
+    \item einer $\C$-linearen Abbildung $\partial:M\rightarrow M$, welche die
+      \emph{Leibnitzregel}
+      $$\partial(fu)=f'u+f\partial u$$
+      erfüllt.
+  \end{itemize}
+\end{defn}
+
+\section{Eigenschaften}
+Hier nun einige Eigenschaften von Meromorphen Zusammenhängen.
+
+Sei $(M,\partial)$ ein gegebener Meromorpher Zusammenhang, so wähle eine Basis
+$(m_i)_{i\in\{1,..,r\}}$ von M. Dann gilt:
+\begin{center}
+  \begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
+  \matrix (m) [
+    matrix of math nodes
+    , row sep=3em
+    , column sep=3em
+    %, text height=3em
+    %, text depth=0.25em
+    ]
+  {
+    M & M \\
+    K^r & K^r \\
+  };
+    \path[->,font=\scriptsize,>=angle 90]
+    (m-1-1) edge node[above]{$\partial$} (m-1-2)
+    (m-2-1) edge node[above]{$\phi^{-1}\partial\phi$} (m-2-2)
+    ;
+    %TODO: make this harpoon arrows
+    \path[->,font=\scriptsize,>=angle 90]
+    (m-2-1) edge node[descr]{$\cong$} node[right]{$\phi$} (m-1-1)
+    (m-2-2) edge node[descr]{$\cong$} node[left]{$\phi$} (m-1-2)
+    ;
+
+    \path[>=stealth,|->]
+    ;
+  \end{tikzpicture}
+\end{center}
+%TODO: beobachtung...
+
+%TODO: differenz ist linear
+
+\begin{defn}[Transformationsformel]
+  In der Situation
+
+  \begin{center}
+    \begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
+    \matrix (m) [
+      matrix of math nodes
+      , row sep=3em
+      , column sep=3em
+      %, text height=3em
+      %, text depth=0.25em
+      ]
+    {
+      K^r & & & K^r \\
+       & M & M & \\
+      K^r & & & K^r \\
+    };
+      \path[->,font=\scriptsize,>=angle 90]
+      (m-1-1) edge node[descr]{$\cong$} node[above]{$\phi$} (m-2-2)
+      (m-3-1) edge node[descr]{$\cong$} node[above]{$\psi$} (m-2-2)
+      (m-1-4) edge node[descr]{$\cong$} node[above]{$\phi$} (m-2-3)
+      (m-3-4) edge node[descr]{$\cong$} node[above]{$\psi$} (m-2-3)
+
+      (m-2-2) edge node[above]{$\partial$} (m-2-3)
+
+      (m-1-1) edge node[above]{$\frac{d}{dz}+A$} (m-1-4)
+      (m-3-1) edge node[above]{$\frac{d}{dz}+B$} (m-3-4)
+
+      (m-3-1) edge node[descr]{$\cong$} node[right]{$T$} (m-1-1)
+      (m-3-4) edge node[descr]{$\cong$} node[left]{$T$} (m-1-4)
+      ;
+
+      \path[>=stealth,|->]
+      ;
+    \end{tikzpicture}
+  \end{center}
+  mit $\phi,\psi$ und $T$ $K$-Linear und $\partial,(\frac{d}{dz}+A)$ und
+  $(\frac{d}{dz}+B)$ $\C$-Linear, gilt:\\
+  Der Merom. Zush. $\frac{d}{dz}+A$ auf $K^r$ wird durch Basiswechsel $T\in
+  GL(r,K)$ zu
+  $$
+  \frac{d}{dz}+(T^{-1}\cdot T'+T^{-1}AT) = \frac{d}{dz}+B
+  $$
+\end{defn}
+
+% vim: set ft=tex :

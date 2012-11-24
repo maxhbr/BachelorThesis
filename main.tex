@@ -1,0 +1,177 @@
+\documentclass[ngerman
+  %,12pt
+  %,titelpage % unused
+  ,numbers=noenddot % obsolete
+  ,headsepline
+  ,parskip=half*
+  ,openany
+  ,DIV=15
+  %,biblography=totoc  % unused 
+]{scrbook}
+%,landscape,twocolumn
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+%\usepackage[ansinew]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern} %Type1-Schriftart für nicht-englische Texte
+
+\usepackage{lscape} % pdflscape for turning the page
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{latexsym}
+\usepackage{enumerate}
+%\pagestyle{scrheadings} % not found? usefull?
+
+\allowdisplaybreaks
+
+%\usepackage{natbib}
+
+%\usepackage{thmbox}
+
+\usepackage[automark]{scrpage2} % Headline styles
+\usepackage[square,numbers]{natbib}
+
+\renewcommand*{\thefootnote}{[\arabic{footnote}]}
+
+% Zeichen
+\usepackage{nicefrac}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+
+\usepackage{tikz}
+\usetikzlibrary{matrix,arrows,decorations.pathmorphing}
+
+\numberwithin{equation}{chapter}
+\numberwithin{figure}{chapter}
+
+%%%%  Theoreme Styles  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+
+\theoremstyle{plain}% default
+\newtheorem{thm}{Satz}[chapter]
+%\newtheorem{thm}[satz]{Satz}
+\newtheorem{lemma}[thm]{Lemma}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{kor}[thm]{Korollar}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Korollar}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{conj}[thm]{Conjecture}
+\newtheorem{exmp}[thm]{Beispiel}
+
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Bemerkung}
+\newtheorem{note}[thm]{Notiz}
+\newtheorem{case}{Fall}
+
+%%%%  Comment Boxes  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{verbatim}  %comment out for comments
+%\begin{comment}  %comment out for comments
+
+  \usepackage{xcolor}
+  \usepackage{color}
+  \usepackage{framed}
+
+  \newenvironment{fshaded}{%
+  \def\FrameCommand{\fcolorbox{framecolor}{shadecolor}}%
+  \MakeFramed {\FrameRestore}}%
+  {\endMakeFramed}
+  \newenvironment{comment}{\definecolor{shadecolor}{rgb}{1,.6,.6}%
+  \definecolor{framecolor}{rgb}{0,0,0}%
+  \begin{fshaded}}{\end{fshaded}}
+
+%\end{comment}  %comment out for comments
+
+\usepackage[german]{varioref}
+%\usepackage[nameinlink,german]{cleveref}
+\usepackage[colorlinks=true,linkcolor=black]{hyperref}
+
+%% Autoref Names %%%%%%%%%%%%%%%%%
+%\crefname{lemma}{Lemma}{Lemmas}
+%\crefname{equation}{Gleichung}{Gleichungen}
+%\crefname{definition}{Definition}{Definitionen}
+%\crefname{algorithmus}{Algorithmus}{Algorithmen}
+%\crefname{kor}{Korollar}{Korollare}
+
+%%%%  new Commands  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\P}{{\mathbb P}}
+\newcommand{\R}{{\mathbb R}}
+\newcommand{\K}{{\mathbb K}}
+\newcommand{\N}{{\mathbb N}}
+\newcommand{\Z}{{\mathbb Z}}
+\renewcommand{\O}{{\mathbb O}}
+\newcommand{\A}{{\mathbb A}}
+\newcommand{\I}{{\mathbb I}}
+\newcommand{\T}{{\mathbb T}}
+\newcommand{\C}{{\mathbb C}}
+\newcommand{\Q}{{\mathbb Q}}
+\newcommand{\e}{\varepsilon}
+\newcommand{\wto}{\rightharpoonup}
+\newcommand{\wsto}{\stackrel{*}{\rightharpoonup}}
+\newcommand{\css}{\subset\subset}
+\newcommand{\myhr}{\rule{0.3\textwidth}{1pt}}
+
+\renewcommand{\phi}{\varphi}
+\renewcommand{\epsilon}{\varepsilon}
+
+\DeclareMathOperator{\modulo}{mod}
+\DeclareMathOperator{\conv}{conv}
+\DeclareMathOperator{\Cof}{Cof}
+\DeclareMathOperator{\grad}{grad}
+\DeclareMathOperator{\Id}{Id}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\co}{co}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\graph}{graph}
+\DeclareMathOperator{\slopes}{slopes}
+
+% specific:
+\newcommand{\Dm}{{\mathcal{D}\mbox{-Modul}}}
+\newcommand{\D}{{\mathcal{D}}}
+\newcommand{\E}{{\mathscr E}}
+
+\makeatother
+%}}}
+
+\begin{document}
+
+%TODO: set titel variable??
+
+\frontmatter
+
+\input{titel/content.tex}
+
+%\begin{center}
+  %\today
+%\end{center}
+\tableofcontents{}
+\newpage
+
+\input{einleitung/content.tex}
+
+\mainmatter
+
+\input{grundlagen/content.tex}
+\newpage
+
+\input{meromZsh/content.tex}
+\newpage
+
+\chapter{Weiterführende Aussagen}
+\input{lemma2-4/content.tex}
+\newpage
+
+\appendix
+\addcontentsline{toc}{chapter}{Anhang}
+
+\input{lemma2-4/anhang.tex}
+
+\nocite{*}
+%\bibliographystyle{dinat} 
+\bibliographystyle{plain}
+\bibliography{main}
+
+\end{document}
