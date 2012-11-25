@@ -10,12 +10,16 @@ cd $DIR
 DropboxON=$(ps -A | grep -c dropbox)
 if [[ $DropboxON == "0" ]]; then
   dropboxd &
+else
+  echo "dropbox is already running"
 fi
 #sleep 5
 #git pull
 
-grep -r "TODO" * > TODO
+echo
+grep -r --exclude='TODO' "TODO" * > TODO
 wc -l TODO
+echo
 
 #work work work
 vim

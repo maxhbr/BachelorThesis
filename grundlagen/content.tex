@@ -31,7 +31,7 @@ wobei offensichtlich gilt $\C[x]\subset\C\{x\}\subset\C\llbracket x\rrbracket$.
           \underset{k}{\underleftarrow{\lim}} \C[X]\backslash\mathfrak{m}^k
         \]
         The ring $\C[[x]]$ ist ein nöterscher lokaler Ring:
-        jede Potenzreihe mit konstantem term $\neq0$ ist invertierbar.
+        jede Potenzreihe mit konstantem term $\neq 0$ ist invertierbar.
 
         Der ring ist ebenfalls ein diskreter ??? Ring (discrete valuation
         ring)
@@ -49,13 +49,13 @@ wobei offensichtlich gilt $\C[x]\subset\C\{x\}\subset\C\llbracket x\rrbracket$.
   \end{lem}
 \end{comment}
 
+\section{Weiterführende Definitionen}
+
 \begin{defn}[Kommutator]%zula seite 15
   Sei $R$ ein Ring. Für $a,b\in R$ wird
   \[[a,b]=b\cdot a-a\cdot b\]
   der \emph{Kommutator von a und b} genannt.
 \end{defn}
-
-\section{Weiterführende Definitionen}~
 
 \begin{defn}[pull-back]
   Der \emph{pull-back} $\rho^{+}M$ ist der Vektorraum
@@ -94,7 +94,7 @@ Sei $\frac{\partial}{\partial x}=\partial_x$ der Ableitungsoperator nach $x$
 und sei f $\in\C[x]$ (bzw. $\C\{x\}$ bzw. $\C\llbracket x\rrbracket$).
 Man hat die folgende Kommutations-Relation zwischen dem
 \emph{Ableitungsoperator}
-und dem \emph{Multiplikations Operator} f:
+und dem \emph{Multiplikations Operator} $f$:
 \begin{equation}\label{eq:weyl_relation}
   [\frac{\partial}{\partial x},f]=\frac{\partial f}{\partial x}
 \end{equation}
@@ -113,27 +113,25 @@ darstellt. Dies bedeutet für alle $g\in\C[x]$ hat man:
   zusammen mit dem Element $\partial_x$, erzeugt wird, Modulo der Relation
   \eqref{eq:weyl_relation}.
 \end{defn}
-Wir werden die Notation $A_1(\C)=\C[x]<\partial_x>$ (bzw.
-$\D=\C\{x\}<\partial_x>$ bzw. $\hat{\D}=\C[[x]]<\partial_x>$) verwenden.
+Wir werden die Notation $A_1(\C):=\C[x]<\partial_x>$ (bzw.
+$\D:=\C\{x\}<\partial_x>$ bzw. 
+$\hat{\D}:=\C\llbracket x\rrbracket<\partial_x>$) verwenden.
 
-\begin{comment}
-  \textbf{countinho's ansicht:}
-  Sei $K\{z_1,...,z_{2n}\}$ eine freie Algebra in $2n$ variablen. Die
-  Multiplikation von zwei Monomen ist als einfaches Nebeneinanderschreiben
-  Definiert. Betrachte nun den folgenden Homomorphismus:
-  \[ \phi:K\{z_1,...,z_{2n}\}\rightarrow A_n \]
-  mit $\phi(z_i)=x_i$ und $\phi(z_{i+n})=\partial_i$ für $i\in\{1,..,n\}$.\\
-  Sei $J$ das (two sided) Ideal von $K\{x_1,..,x_{2n}\}$ generiert durch:
-  \begin{itemize}
-    \item $[z_{i+n},z_i]-1$ für $i=1,...,n$
-    \item $[z_i,z_j]$
-      für $j\neq i+n$ und $1\leq i,j\leq 2n$
-  \end{itemize}
-  So dass $\phi$ einen homomorphismus
-  \[ \phi:K\{z_1,...,z_{2n}\}/J\rightarrow A_n \]
-  induziert.
-
-\end{comment}
+%TODO: vlt umsortieren
+\begin{lem} %TODO: vervollständigen
+  Sei $A$ einder der 3 soeben eingeführten Objekten, die Addition 
+  \[
+    +:A\times A \rightarrow A
+  \]
+  und die Multiplikation
+  \[
+    \cdot:A\times A \rightarrow A
+  \]
+  definieren auf $A$ eine Ringstruktur $(A,+,\cdot)$.
+\end{lem}
+\begin{proof}
+  Zula Barbara: Kapittel 2 section 1
+\end{proof}
 
 \begin{rem}
   $A_1(\C),~\D$ und $\hat\D$ sind nicht kommutative Algebren.
@@ -167,12 +165,17 @@ $\D=\C\{x\}<\partial_x>$ bzw. $\hat{\D}=\C[[x]]<\partial_x>$) verwenden.
   \end{comment}
 \end{proof}
 
-%TODO: definition Filtrierung und Grad 
+%TODO: Beispiele??
+
+%TODO: definition Filtrierung
 
 \begin{defn}
-  Sei $\deg P=\sum_{i=0}^na_i(x)\partial_x^i$ bzgl. $n$ minimal geschrieben, so 
-  ist $\deg P:=n$ der \emph{Grad von $P$}. So definiere 
-  $F_N\D:=\{P\in\D|\deg P\leq N\}$ und erhalte die aufsteigende Filtrierung
+  Sei $P=\sum_{i=0}^na_i(x)\partial_x^i$ gegeben, so definiere 
+  \[
+    \deg P:=\max\{i|a_i\neq 0\}
+  \]
+  In natürlicher Weise erhält man $F_N\D:=\{P\in\D|\deg P\leq N\}$ sowie die
+  entsprechende aufsteigende Filtrierung
   \[
     \cdots\subset F_{-1}\D\subset F_{0}\D\subset F_{1}\D\subset\cdots\subset\D
   \]
@@ -181,9 +184,10 @@ $\D=\C\{x\}<\partial_x>$ bzw. $\hat{\D}=\C[[x]]<\partial_x>$) verwenden.
 \end{defn}
 
 \begin{proof}
-  \begin{comment}
-    mit isom: $[P]=P+F_{N-1}\D\mapsto a_n(x)$
-  \end{comment}
+  Sei $P\in F_N\D$ so betrachte den Isomorphismus:
+  \[
+    F_N\D\slash F_{N-1}\D\rightarrow \C\{x\}; [P]=P+F_{N-1}\D\mapsto a_n(x)
+  \]
 \end{proof}
 
 \begin{prop}
@@ -211,7 +215,7 @@ $\D=\C\{x\}<\partial_x>$ bzw. $\hat{\D}=\C[[x]]<\partial_x>$) verwenden.
     };
       \path[solid]
       (m-1-1) edge [bend right=20] node[descr]{$\cong$}
-        node[below]{$\mbox{Isom. von grad. Ringen}$} (m-1-11);
+        node[below]{$\mbox{isomorph als grad. Ringen}$} (m-1-11);
     \end{tikzpicture}
   \end{center}
 \end{prop}
