@@ -1,7 +1,5 @@
 #!/bin/bash
 
-edit=1
-
 if [ -L $0 ] ; then
   DIR=$(dirname $(readlink -f $0)) ;
 else
@@ -15,6 +13,7 @@ if [[ $DropboxON == "0" ]]; then
 else
   echo "dropbox is already running"
 fi
+
 #sleep 5
 #git pull
 
@@ -24,28 +23,25 @@ wc -l TODO
 echo
 
 
+if [[ $# -gt 0 ]] ; then
+  case "$1" in
+    "mk")
+      latexmk -pvc -pdf main.tex
 
-case "$1" in
-  "mk")
-    latexmk -pvc -pdf main.tex
-    edit=0
-    shift
-    ;;
-  "rb")
-    rubber --ps --pdf main.tex
-    edit=0
-    shift
-    ;;
-  "-f")
-    edit=0
-    shift
-    ;;
-esac
-#work work work
+      git commit -a -m "automatic commit"
+      git push
+      ;;
+    "rb")
+      rubber --ps --pdf main.tex
 
-if [ $edit = 1 ]; then
-  vim
+      git commit -a -m "automatic commit"
+      git push
+      ;;
+    "vim")
+      vim
+
+      git commit -a -m "automatic commit"
+      git push
+      ;;
+  esac
 fi
-
-git commit -a -m "automatic commit"
-git push
