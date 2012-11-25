@@ -7,17 +7,21 @@ else
 fi
 cd $DIR
 
+test -f main.tex || return
+
 DropboxON=$(ps -A | grep -c dropbox)
 if [[ $DropboxON == "0" ]]; then
+  echo "dropbox started, pid:"
   dropboxd &
+  echo $!
 else
   echo "dropbox is already running"
 fi
+echo
 
 #sleep 5
 #git pull
 
-echo
 grep -r --exclude='TODO' "TODO" * > TODO
 wc -l TODO
 echo
