@@ -1,7 +1,7 @@
 PWD /home/hubi/studium/baArbeit/00-arbeit
 INPUT /usr/share/texmf/web2c/texmf.cnf
 INPUT /home/hubi/.texlive/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /home/hubi/studium/baArbeit/00-arbeit/main.tex
+INPUT main.tex
 OUTPUT main.log
 INPUT /usr/share/texmf-dist/tex/latex/koma-script/scrbook.cls
 INPUT /usr/share/texmf-dist/tex/latex/koma-script/scrbook.cls
