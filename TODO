@@ -1,5 +1,8 @@
 grundlagen/content.tex:\section{Weyl-Algebra und der Ring $\D$} %TODO: sabah-cimpa90.pdf  seite 3
-grundlagen/content.tex:%TODO: definition Filtrierung und Grad 
+grundlagen/content.tex:%TODO: vlt umsortieren
+grundlagen/content.tex:\begin{lem} %TODO: vervollständigen
+grundlagen/content.tex:%TODO: Beispiele??
+grundlagen/content.tex:%TODO: definition Filtrierung
 grundlagen/content.tex:\section{Lokalisierung eines $\C\{x\}$-Modules} %TODO: Modules or Moduls
 lemma2-4/content.tex:  \end{pmatrix} \mbox{\footnote{$(\xi^i)^p=1\forall i$}}\\ % TODO: correct footnote
 Übereinstimmungen in Binärdatei main.dvi.

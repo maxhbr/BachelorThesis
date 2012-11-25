@@ -1,5 +1,14 @@
 #!/bin/bash
 
+edit=1
+
+case "$1" in
+  "-f")
+      edit=0
+    shift
+    ;;
+esac
+
 if [ -L $0 ] ; then
   DIR=$(dirname $(readlink -f $0)) ;
 else
@@ -20,9 +29,11 @@ echo
 grep -r --exclude='TODO' "TODO" * > TODO
 wc -l TODO
 echo
-
 #work work work
-vim
+
+if [ $edit = 0 ]; then
+  vim
+fi
 
 git commit -a -m "automatic commit"
 git push
