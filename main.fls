@@ -296,9 +296,9 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/stmaryrd/stmary10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/stmaryrd/stmary8.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/stmaryrd/stmary6.tfm
 OUTPUT main.toc
+INPUT einleitung/content.tex
+INPUT einleitung/content.tex
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/ec-lmro10.tfm
-INPUT einleitung/content.tex
-INPUT einleitung/content.tex
 INPUT grundlagen/content.tex
 INPUT grundlagen/content.tex
 INPUT /usr/share/texmf-dist/tex/latex/lm/omslmr.fd
