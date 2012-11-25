@@ -32,7 +32,7 @@ echo
 #work work work
 
 if [ $edit = 1 ]; then
-  if ! [ -e $1 ] ; then
+  if [ -e $1 ] ; then
     vim $1
   else
     vim
