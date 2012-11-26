@@ -29,7 +29,18 @@
 \usepackage[automark]{scrpage2} % Headline styles
 \usepackage[square,numbers]{natbib}
 
-\pagestyle{scrheadings} % not found? usefull?
+\pagestyle{scrheadings}
+
+% Section Numbers moved left out
+%\usepackage{sectsty}
+%\makeatletter\def\@seccntformat#1{%
+  %\protect\makebox[0pt][r]{\csname the#1\endcsname\hspace{12pt}}}\makeatother
+
+% semibold instead of bold
+%\renewcommand{\bfdefault}{sb}
+
+%Zeilenhöhe, für bessere lesbarkeit
+\linespread{1.1}
 
 \chead{\today}
 
