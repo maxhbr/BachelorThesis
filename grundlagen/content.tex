@@ -60,7 +60,7 @@ wobei offensichtlich gilt $\C[x]\subset\C\{x\}\subset\C\llbracket x\rrbracket$.
 \begin{defn}[pull-back]
   Der \emph{pull-back} $\rho^{+}M$ ist der Vektorraum
   $\rho^{*}M=\C((u))\otimes_{\C((u))}M$ mit
-  der \emph{pull-back Verknüpfung(connection)} $\rho^*\nabla$ definiert durch
+  dem \emph{pull-back Zusammenhang} $\rho^*\nabla$ definiert durch
   $\partial_u(1\otimes m):=\rho'(u)\otimes\partial_tm$
 \end{defn}
 
@@ -91,7 +91,7 @@ sei nun $N$ ein $\C((u))$-VR mit Verknüpfung
 Ich werde hier die Weyl Algebra, wie in
 \cite[Chapter~1]{sabbah_cimpa90}, in einer Veränderlichen einführen.
 Sei $\frac{\partial}{\partial x}=\partial_x$ der Ableitungsoperator nach $x$
-und sei f $\in\C[x]$ (bzw. $\C\{x\}$ bzw. $\C\llbracket x\rrbracket$).
+und sei $f \in\C[x]$ (bzw. $\C\{x\}$ bzw. $\C\llbracket x\rrbracket$).
 Man hat die folgende Kommutations-Relation zwischen dem
 \emph{Ableitungsoperator}
 und dem \emph{Multiplikations Operator} $f$:
@@ -99,7 +99,7 @@ und dem \emph{Multiplikations Operator} $f$:
   [\frac{\partial}{\partial x},f]=\frac{\partial f}{\partial x}
 \end{equation}
 wobei die Rechte Seite die Multiplikation mit $\frac{\partial f}{\partial x}$
-darstellt. Dies bedeutet für alle $g\in\C[x]$ hat man:
+darstellt. Dies bedeutet, für alle $g\in\C[x]$ hat man:
 \[
   [\frac{\partial}{\partial x},f]\cdot g
   =\frac{\partial fg}{\partial x} - f\frac{\partial g}{\partial x}
@@ -139,15 +139,12 @@ $\hat{\D}:=\C\llbracket x\rrbracket<\partial_x>$) verwenden.
 
 \begin{lem}
   Es gelten die Formeln\\
-  %\begin{eqnarray*}
-    %[\partial_x,x^k] & = & kx^{k-1}\\
-    %[\partial_x^j,x] & = & j\partial_x^{j-1}\\
-    %[\partial_x^j,x^k] & = & \sum_{i\geq1}\frac{}{}x^{k-i}\partial_x^{j-i}\\
-  %\end{eqnarray*}
-  $ [\partial_x,x^k] = kx^{k-1} $\\
-  $ [\partial_x^j,x] = j\partial_x^{j-1} $\\
-  $ [\partial_x^j,x^k] = \sum_{i\geq1}\frac{k(k-1)\cdots(k-i+1)
-    \cdot j(j-1)\cdots(j-i+1)}{i!}x^{k-i}\partial_x^{j-i} $
+  \begin{align*}
+    [\partial_x,x^k] &= kx^{k-1}\\
+    [\partial_x^j,x] &= j\partial_x^{j-1}\\
+    [\partial_x^j,x^k] &= \sum_{i\geq1}\frac{k(k-1)\cdots(k-i+1)
+      \cdot j(j-1)\cdots(j-i+1)}{i!}x^{k-i}\partial_x^{j-i} \\
+  \end{align*}
 \end{lem}
 \begin{proof}
   Zula Barbara
