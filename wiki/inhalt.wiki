@@ -1,0 +1,10 @@
+Definitionen
+    * 
+
+Lemmas
+    * Lemma 2.4? von local fourier...
+
+Beispiele
+    * eines das formal zerfällt aber nicht konvergent
+        - Krasse reihe, die nirgendwo konvergent
+    *
