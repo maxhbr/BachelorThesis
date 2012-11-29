@@ -1,0 +1,22 @@
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{framed}
+
+\newenvironment{fshaded}{%
+\def\FrameCommand{\fcolorbox{framecolor}{shadecolor}}%
+\MakeFramed {\FrameRestore}}%
+{\endMakeFramed}
+
+%\newenvironment{comment}{\definecolor{shadecolor}{rgb}{1,.6,.6}%
+%\definecolor{framecolor}{rgb}{0,0,0}%
+%\begin{fshaded}}{\end{fshaded}}
+
+\renewcommand{\comment}{\definecolor{shadecolor}{rgb}{1,.6,.6}%
+\definecolor{framecolor}{rgb}{0,0,0}%
+\fshaded}
+\renewcommand{\endcomment}{\endfshaded}
+
+%Zeilenhöhe, für bessere lesbarkeit
+\linespread{1.3}
+
+%\usepackage{thmbox}

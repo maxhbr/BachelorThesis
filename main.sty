@@ -1,22 +1,8 @@
-\documentclass[ngerman
-  ,numbers=noenddot % obsolete
-  ,headsepline
-  ,parskip=half*
-  ,openany
-  ,DIV=12
-]{scrbook}
-  %,12pt
-  %,titelpage % unused
-  %,biblography=totoc  % unused
-  %,landscape,twocolumn
 \usepackage[ngerman]{babel}
 \usepackage[T1]{fontenc}
 %\usepackage[ansinew]{inputenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern} %Type1-Schriftart für nicht-englische Texte
-
-\setlength{\unitlength}{1mm}
-\emergencystretch 2em
 
 \usepackage{lscape} % alt: pdflscape
 \usepackage{amsmath,amsthm,amssymb}
@@ -32,11 +18,8 @@
 \usepackage[automark]{scrpage2} % Headline styles
 \usepackage[square,numbers]{natbib}
 
-
 \pagestyle{scrheadings}
 \chead{\today}
-%A better solution would be to use typearea package.
-
 
 % Section Numbers moved left out
 %\usepackage{sectsty}
@@ -93,43 +76,6 @@
 %\crefname{kor}{Korollar}{Korollare}
 
 %%%%  new Commands  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\def\bme{\boldsymbol{e}}
-
-\def\AA{\mathbb{A}}
-\def\CC{\mathbb{C}}
-\def\GG{\mathbb{G}}
-\def\NN{\mathbb{N}}
-\def\PP{\mathbb{P}}
-\def\RR{\mathbb{R}}
-\def\ZZ{\mathbb{Z}}
-
-\def\cA{\mathcal{A}}
-\def\cB{\mathcal{B}}
-\def\cC{\mathcal{C}}
-\def\cD{\mathcal{D}}
-\def\cE{\mathcal{E}}
-\def\cF{\mathcal{F}}
-\def\cG{\mathcal{G}}
-\def\cH{\mathcal{H}}
-\def\cI{\mathcal{I}}
-\def\cJ{\mathcal{J}}
-\def\cK{\mathcal{K}}
-\def\cL{\mathcal{L}}
-\def\cM{\mathcal{M}}
-\def\cN{\mathcal{N}}
-\def\cO{\mathcal{O}}
-\def\cP{\mathcal{P}}
-\def\cQ{\mathcal{Q}}
-\def\cR{\mathcal{R}}
-\def\cS{\mathcal{S}}
-\def\cT{\mathcal{T}}
-\def\cU{\mathcal{U}}
-\def\cV{\mathcal{V}}
-\def\cW{\mathcal{W}}
-\def\cX{\mathcal{X}}
-\def\cY{\mathcal{Y}}
-\def\cZ{\mathcal{Z}}
-
 %\renewcommand{\headrulewidth}{0.2pt}
 \renewcommand{\P}{{\mathbb P}}
 \newcommand{\R}{{\mathbb R}}
@@ -148,8 +94,8 @@
 \newcommand{\css}{\subset\subset}
 \newcommand{\myhr}{\rule{0.3\textwidth}{1pt}}
 
-\let\epsilon\varepsilon
-\let\phi\varphi
+\renewcommand{\phi}{\varphi}
+\renewcommand{\epsilon}{\varepsilon}
 
 \DeclareMathOperator{\modulo}{mod}
 \DeclareMathOperator{\conv}{conv}
@@ -174,55 +120,3 @@
 \newcommand{\Cfu}{{\mathbb C\rrbracket u\llbracket}}
 
 \makeatother
-
-\input{mydevelop.sty}
-
-\begin{document}
-%TODO: set titel variable??
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\frontmatter
-
-\input{titel/content.tex}
-
-%\begin{center}
-  %\today
-%\end{center}
-\tableofcontents{}
-%\newpage
-
-\input{einleitung/content.tex}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\mainmatter
-
-\part{Grundlagen}
-
-\input{grundlagen/content.tex}
-%\newpage
-
-\input{meromZsh/content.tex}
-%\newpage
-
-\chapter{Weiterführende Aussagen}
-\input{lemma2-4/content.tex}
-%\newpage
-
-\part{Beispiele}
-\section{Meromorpher zusammenhang der Formal zuerfällt aber nicht Konvergent}
-\begin{comment}
-  Quellen??
-\end{comment}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\appendix
-\addcontentsline{toc}{chapter}{Anhang}
-
-\input{lemma2-4/anhang.tex}
-
-\nocite{*}
-%\bibliographystyle{dinat}
-\bibliographystyle{plain}
-\bibliography{main}
-
-\end{document}
