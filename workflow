@@ -37,18 +37,21 @@ if [[ $# -gt 0 ]] ; then
     "mk")
       latexmk -pvc -pdf main.tex
 
+      echo
       git commit -a -m "automatic commit"
       git push
       ;;
     "rb")
       rubber --ps --pdf main.tex
 
+      echo
       git commit -a -m "automatic commit"
       git push
       ;;
     "vim")
       vim
 
+      echo
       git commit -a -m "automatic commit"
       git push
       ;;

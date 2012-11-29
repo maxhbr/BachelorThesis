@@ -15,21 +15,24 @@
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern} %Type1-Schriftart für nicht-englische Texte
 
-\usepackage{lscape} % pdflscape for turning the page
+\usepackage{lscape} % alt: pdflscape
 \usepackage{amsmath,amsthm,amssymb}
 \usepackage{latexsym}
 \usepackage{enumerate}
+
+\usepackage{verbatim}
 
 \allowdisplaybreaks
 
 %\usepackage{natbib}
 
-%\usepackage{thmbox}
+\usepackage{thmbox}
 
 \usepackage[automark]{scrpage2} % Headline styles
 \usepackage[square,numbers]{natbib}
 
 \pagestyle{scrheadings}
+\chead{\today}
 
 % Section Numbers moved left out
 %\usepackage{sectsty}
@@ -38,11 +41,6 @@
 
 % semibold instead of bold
 %\renewcommand{\bfdefault}{sb}
-
-%Zeilenhöhe, für bessere lesbarkeit
-%\linespread{1.1}
-
-\chead{\today}
 
 \renewcommand*{\thefootnote}{[\arabic{footnote}]}
 
@@ -78,24 +76,6 @@
 \newtheorem{rem}[thm]{Bemerkung}
 \newtheorem{note}[thm]{Notiz}
 \newtheorem{case}{Fall}
-
-%%%%  Comment Boxes  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\usepackage{verbatim}  %comment out for comments
-%\begin{comment}  %comment out for comments
-
-  \usepackage{xcolor}
-  \usepackage{color}
-  \usepackage{framed}
-
-  \newenvironment{fshaded}{%
-  \def\FrameCommand{\fcolorbox{framecolor}{shadecolor}}%
-  \MakeFramed {\FrameRestore}}%
-  {\endMakeFramed}
-  \newenvironment{comment}{\definecolor{shadecolor}{rgb}{1,.6,.6}%
-  \definecolor{framecolor}{rgb}{0,0,0}%
-  \begin{fshaded}}{\end{fshaded}}
-
-%\end{comment}  %comment out for comments
 
 \usepackage[german]{varioref}
 %\usepackage[nameinlink,german]{cleveref}
@@ -155,6 +135,8 @@
 \makeatother
 %}}}
 
+\input{mydevelop.sty}
+
 \begin{document}
 
 %TODO: set titel variable??
@@ -189,6 +171,9 @@
 
 \part{Beispiele}
 \section{Meromorpher zusammenhang der Formal zuerfällt aber nicht Konvergent}
+\begin{comment}
+  Quellen??
+\end{comment}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \appendix
