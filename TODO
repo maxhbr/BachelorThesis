@@ -16,3 +16,5 @@ meromZsh/content.tex:%TODO: differenz ist linear
 meromZsh/content.tex:%TODO: weitere Eigenschaften
 workflow:grep -r --exclude='TODO' "TODO" * > TODO
 workflow:wc -l TODO
+workflow-dev:grep -r --exclude='TODO' "TODO" * > TODO
+workflow-dev:wc -l TODO
