@@ -7,9 +7,9 @@ Hier werde ich mich auf \cite{sabbah_cimpa90} und \cite{coutinho1995primer} bezi
 In dieser Arbeit spielen die folgenden Ringe eine Große Rolle:
 \begin{itemize}
   \item $\C[x]:=\{ \sum^{N}_{i=1}a_ix^i | N\in \N \}$
-  \item $\C\llbracket x\rrbracket:=\{ \sum^{\infty}_{i=1}a_ix^i \}$
   \item $\C\{x\}:=\{ \sum^{\infty}_{i=1}a_ix^i | \mbox{pos.
         Konvergenzradius} \}$
+  \item $\C\llbracket x\rrbracket:=\{ \sum^{\infty}_{i=1}a_ix^i \}$
   \item $K:=\C(\{x\}):=\C\{x\}[x^{-1}]$
   \item $\hat{K}:=\C((x)):=\C\llbracket x\rrbracket[x^{-1}]$
 \end{itemize}
@@ -80,14 +80,7 @@ sei nun $N$ ein $\C((u))$-VR mit Verknüpfung
   \end{equation}
 \end{thm}
 
-\begin{comment}
-  TEST für ref\\
-  \ref{thm:Projektionsformel}\\
-  TEST für eqref\\
-  \eqref{eq:Projektionsformel}\\
-\end{comment}
-
-\section{Weyl-Algebra und der Ring $\D$} %TODO: sabah-cimpa90.pdf  seite 3
+\section{Weyl-Algebra und der Ring $\cD$} %TODO: sabah-cimpa90.pdf  seite 3
 Ich werde hier die Weyl Algebra, wie in
 \cite[Chapter~1]{sabbah_cimpa90}, in einer Veränderlichen einführen.
 Sei $\frac{\partial}{\partial x}=\partial_x$ der Ableitungsoperator nach $x$
@@ -106,16 +99,16 @@ darstellt. Dies bedeutet, für alle $g\in\C[x]$ hat man:
   =\frac{\partial f}{\partial x} \cdot g
 \]
 \begin{defn}[Weyl Algebra]
-  Definiere nun die Weyl Algebra $A_1(\C)$ (bzw. die Algebra $\D$ von
+  Definiere nun die Weyl Algebra $A_1(\C)$ (bzw. die Algebra $\cD$ von
   linearen Operatoren mit Koeffizienten in $\C\{x\}$ bzw. die Algebra
-  $\hat{\D}$ (Koeffizienten in $\C\llbracket x\rrbracket$)) als die
+  $\hat{\cD}$ (Koeffizienten in $\C\llbracket x\rrbracket$)) als die
   Quotientenalgebra der freien Algebra, welche von dem Koeffizientenring
   zusammen mit dem Element $\partial_x$, erzeugt wird, Modulo der Relation
   \eqref{eq:weyl_relation}.
 \end{defn}
 Wir werden die Notation $A_1(\C):=\C[x]<\partial_x>$ (bzw.
-$\D:=\C\{x\}<\partial_x>$ bzw. 
-$\hat{\D}:=\C\llbracket x\rrbracket<\partial_x>$) verwenden.
+$\cD:=\C\{x\}<\partial_x>$ bzw. 
+$\hat{\cD}:=\C\llbracket x\rrbracket<\partial_x>$) verwenden.
 
 %TODO: vlt umsortieren
 \begin{lem} %TODO: vervollständigen
@@ -134,7 +127,7 @@ $\hat{\D}:=\C\llbracket x\rrbracket<\partial_x>$) verwenden.
 \end{proof}
 
 \begin{rem}
-  $A_1(\C),~\D$ und $\hat\D$ sind nicht kommutative Algebren.
+  $A_1(\C),~\cD$ und $\hat\cD$ sind nicht kommutative Algebren.
 \end{rem}
 
 \begin{lem}
@@ -151,9 +144,9 @@ $\hat{\D}:=\C\llbracket x\rrbracket<\partial_x>$) verwenden.
 \end{proof}
 
 \begin{prop} \label{prop:weyl_eindeutige_schreibung}
-  Jedes Element in $A_1(\C)$ (bzw. $\D$ oder $\hat{\D}$) kann auf eindeutige
+  Jedes Element in $A_1(\C)$ (bzw. $\cD$ oder $\hat{\cD}$) kann auf eindeutige
   weiße als $P=\sum_{i=0}^na_i(x)\partial_x^i$, mit $a_i(x)\in A_1(\C)$ (bzw.
-  $\D$ oder $\hat{\D}$), geschrieben werden. 
+  $\cD$ oder $\hat{\cD}$), geschrieben werden. 
 \end{prop}
 \begin{proof}
   \cite[Proposition 1.2.3]{sabbah_cimpa90}
@@ -171,19 +164,20 @@ $\hat{\D}:=\C\llbracket x\rrbracket<\partial_x>$) verwenden.
   \[
     \deg P:=\max\{i|a_i\neq 0\}
   \]
-  In natürlicher Weise erhält man $F_N\D:=\{P\in\D|\deg P\leq N\}$ sowie die
+  In natürlicher Weise erhält man $F_N\cD:=\{P\in\cD|\deg P\leq N\}$ sowie die
   entsprechende aufsteigende Filtrierung
   \[
-    \cdots\subset F_{-1}\D\subset F_{0}\D\subset F_{1}\D\subset\cdots\subset\D
+    \cdots\subset F_{-1}\cD\subset F_{0}\cD\subset
+    F_{1}\cD\subset\cdots\subset\cD
   \]
-  und erhalte $gr_k^F\D\underset{\mbox{def}}{=}F_N\D\slash F_{N-1}\D
-  =\{P\in\D|\deg P=N\}\cong\C\{x\}$.
+  und erhalte $gr_k^F\cD\underset{\mbox{def}}{=}F_N\cD\slash F_{N-1}\cD
+  =\{P\in\cD|\deg P=N\}\cong\C\{x\}$.
 \end{defn}
 
 \begin{proof}
-  Sei $P\in F_N\D$ so betrachte den Isomorphismus:
+  Sei $P\in F_N\cD$ so betrachte den Isomorphismus:
   \[
-    F_N\D\slash F_{N-1}\D\rightarrow \C\{x\}; [P]=P+F_{N-1}\D\mapsto a_n(x)
+    F_N\cD\slash F_{N-1}\cD\rightarrow \C\{x\}; [P]=P+F_{N-1}\cD\mapsto a_n(x)
   \]
 \end{proof}
 
@@ -198,11 +192,11 @@ $\hat{\D}:=\C\llbracket x\rrbracket<\partial_x>$) verwenden.
       text height=1.5ex,
       text depth=0.25ex]
     {
-      gr^F\D &
+      gr^F\cD &
       := &
-      \bigoplus_{\N\in\Z}gr_N^F\D &
+      \bigoplus_{\N\in\Z}gr_N^F\cD &
       = &
-      \bigoplus_{\N\in\N_0}gr_N^F\D &
+      \bigoplus_{\N\in\N_0}gr_N^F\cD &
       \cong &
       \bigoplus_{\N\in\N_0}\C\{x\} &
       \cong &
@@ -231,10 +225,10 @@ $\hat{\D}:=\C\llbracket x\rrbracket<\partial_x>$) verwenden.
   Unabhängigkeit von Schreibung wird in Sabbah Script behauptet
 \end{comment}
 
-\section{Struktur von Links-Idealen auf $\D$}
+\section{Struktur von Links-Idealen auf $\cD$}
 
 \section{Lokalisierung eines $\C\{x\}$-Modules} %TODO: Modules or Moduls
 
-\section{Lokalisierung eines holonomen $\D$-Modules}
+\section{Lokalisierung eines holonomen $\cD$-Modules}
 
 % vim: set ft=tex :

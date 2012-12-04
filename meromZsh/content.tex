@@ -4,11 +4,11 @@ Quelle ist \cite{sabbah_cimpa90}
 
 \begin{defn}[Meromorpher Zusammenhang]
   Ein \emph{Meromorpher zusammenhang} (Bzw. besser \emph{Keim eines Meromorphen
-  Zusammenhangs}) $(\M_K,\partial)$ besteht aus folgenden Daten:
+  Zusammenhangs}) $(\cM_K,\partial)$ besteht aus folgenden Daten:
   \begin{itemize}
-    \item $\M_K$, ein endlich dimensionaler $K$-Vr
-    \item einer $\C$-linearen Abbildung $\partial:\M_K\rightarrow \M_K$, genannt
-      \emph{Derivation}. Wobei für alle $f\in K$ und $u\in \M_K$ die
+    \item $\cM_K$, ein endlich dimensionaler $K$-Vr
+    \item einer $\C$-linearen Abbildung $\partial:\cM_K\rightarrow \cM_K$, genannt
+      \emph{Derivation}. Wobei für alle $f\in K$ und $u\in \cM_K$ die
       \emph{Leibnitzregel}
       \begin{equation}\label{eq:Leibnitzregel}
         \partial(fu)=f'u+f\partial u
@@ -21,8 +21,9 @@ Quelle ist \cite{sabbah_cimpa90}
 Hier nun einige Eigenschaften von Meromorphen Zusammenhängen.
 
 \begin{lem}
-  Sei $(M,\partial)$ ein gegebener Meromorpher Zusammenhang, und $\phi$ ein
-  Basisisomorphismus von $K^r$ nach $\M$, also in der Situation
+  %TODO: hier $\cM ??
+  Sei $(\cM,\partial)$ ein gegebener Meromorpher Zusammenhang, und $\phi$ ein
+  Basisisomorphismus von $K^r$ nach $\cM$, also in der Situation
   \begin{center}
     \begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
     \matrix (m) [
@@ -33,7 +34,7 @@ Hier nun einige Eigenschaften von Meromorphen Zusammenhängen.
       %, text depth=0.25em
       ]
     {
-      \M & \M \\
+      \cM & \cM \\
       K^r & K^r \\
     };
       \path[->,font=\scriptsize,>=angle 90]
@@ -56,9 +57,9 @@ Hier nun einige Eigenschaften von Meromorphen Zusammenhängen.
   TODO, (3. Treffen)
 \end{proof}
 
-Sind $\partial_1$ und $\partial_2$ zwei Meromorphe Zusammenhänge auf $\M_K\cong
-K^r$. So betrachte $\partial_1-\partial_2:\M\rightarrow\M$ für alle $f\in K$ 
-und $u\in \M_K$ :
+Sind $\partial_1$ und $\partial_2$ zwei Meromorphe Zusammenhänge auf $\cM_K\cong
+K^r$. So betrachte $\partial_1-\partial_2:\cM\rightarrow\cM$ für alle $f\in K$ 
+und $u\in \cM_K$ :
 \begin{align*}
   (\partial_1-\partial_2)(fu) &= \partial_1(fu)-\partial_2(fu)\\
   &= f'u+f\partial_1u-f'u-f\partial_2u\\
@@ -132,19 +133,33 @@ ist $\partial=\frac{d}{dz}-A$.
   $1=T^{-1}T$ $\rightsquigarrow$ $(T^{-1})'T+T^{-1}T'=0$
 \end{comment}
 
-\section{Elementare Meromorphe Zusammenhänge}
+\section{Formale Meromorphe Zusammenhänge}
+
+\begin{defn}[Formaler Meromorpher Zusammenhang]
+  Ein \emph{Formaler Meromorpher zusammenhang} $(\cM_K,\partial)$ besteht aus 
+  folgenden Daten:
+  \begin{itemize}
+    \item $\cM_K$, ein endlich dimensionaler $\hat K$-Vr
+    \item eine \emph{Derivation} $\partial$, für die die \emph{Leibnitzregel} 
+      \eqref{eq:Leibnitzregel}, für alle $f\in \hat K$ und $u\in \cM_{\hat K}$,
+      erfüllt sein soll.
+  \end{itemize}
+\end{defn}
+
 \begin{comment}
-  Sabbah redet in \cite{sabbah_Fourier-local} von formal meromorphic
-  connenctions
+  Oder einfach ein Meromorpher Zshg. über anderes $K$ also $\hat K$
 \end{comment}
 
+\section{Elementare Meromorphe Zusammenhänge}
+
+%TODO: auch nicht formal
 \begin{defn}[Elementarer formaler Zusammenhang]
   Zu einem gegebenen $\rho\in u\C\llbracket u\rrbracket$, $\phi\in\C((u))$ und
   einem endlich dimensionalen $\C((u))$-Vektorraum $R$ mit regulärem 
   Zusammenhang $\nabla$, definieren wir den assoziierten Elementaren endlich
   dimensionalen $\C((t))$-Vektorraum mit Zusammenhang, durch:
   \[
-    El(\rho,\phi,R)=\rho_+(\E\otimes R)
+    El(\rho,\phi,R)=\rho_+(\sE\otimes R)
   \]
 \end{defn}
 

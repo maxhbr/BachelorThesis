@@ -2,18 +2,19 @@
   $\rho:u\mapsto u^p$,
   $\mu_\xi:u\mapsto\xi u$,
   für alle $\phi \in \C((u))$ gilt
-  $$ \rho^+\rho_+\E^\phi=\bigoplus_{\xi^p=1}\E^{\phi\circ\mu_\xi} $$
+  $$ \rho^+\rho_+\sE^\phi=\bigoplus_{\xi^p=1}\sE^{\phi\circ\mu_\xi} $$
 \end{lem}
 
+\begin{proof}
 
-Wir wählen eine $\C((u))$ Basis $\{e\}$ von $\E^\phi$ und zur
+Wir wählen eine $\C((u))$ Basis $\{e\}$ von $\sE^\phi$ und zur
 vereinfachung nehmen wir an, dass $\phi\in u^{-1}\C[u^{-1}]$
-\footnote{$\E^\phi=\E^\psi$ $\Leftrightarrow$ $\phi\equiv\psi\mod\C[[u]]$}.\\
+\footnote{$\sE^\phi=\sE^\psi$ $\Leftrightarrow$ $\phi\equiv\psi\mod\C[[u]]$}.\\
 Dann ist die Familie $e,ue,...,u^{p-1}e$ eine $\C((t))$-Basis von
-$\rho_+\E^\phi$.\\
+$\rho_+\sE^\phi$.\\
 Setze $e_k=u^{-k}\otimes_{\C((t))}u^ke$.
 Dann ist die Familie $\mathbf{e}=(e_0,...,e_{p-1})$ eine $\C((u))$-Basis von
-$\rho^+\rho_+\E^\phi$.\\
+$\rho^+\rho_+\sE^\phi$.\\
 Zerlege nun $u\phi'(u)=\sum_{j=0}^{p-1}u^j\psi_j(u^p)$ $\in u^{-2}\C[u^{-1}]$ 
 mit $\psi_j\in\C[t^{-1}]$ für alle $j>0$ und $\psi_0\in t^{-1}\C[u^{-1}]$
 (siehe: Anhang \ref{chap:aufteilung}).
@@ -33,7 +34,7 @@ denn:\\
   u\partial_ue_k &= u\partial_u(u^{-k}\otimes_{\C((t))}u^ke)\\
   &= u(-ku^{-k-1}\otimes_{\C((t))}u^ke +
     pu^{p-1}u^{-k}\otimes_{\C((t))}\partial_t
-    (\underset{\in\rho_+\E^\phi}{\underbrace{u^ke}}))\\
+    (\underset{\in\rho_+\sE^\phi}{\underbrace{u^ke}}))\\
   &= -ku^{-k}\otimes_{\C((t))}u^ke +
     pu^{p-1}u^{-k+1}\otimes_{\C((t))}(pu^{p-1})^{-1} (ku^{k-1}e 
     + u^k\phi'(u)e)\\
@@ -72,7 +73,7 @@ denn:\\
 \end{align*}
 
 
-Die Wirkung von $\partial_u$ auf die Basis von $\rho^+\rho_+\E^{\phi(u)}$ ist
+Die Wirkung von $\partial_u$ auf die Basis von $\rho^+\rho_+\sE^{\phi(u)}$ ist
 also Beschrieben durch:
 \[ \partial_u\mathbf{e}=\mathbf{e}[\sum_{j=0}^{p-1}u^{j-1}\psi_jP^j] \]
 
@@ -105,7 +106,7 @@ So dass gilt:\\
 \end{align*}
 
 Wie sieht dann die Wirkung auf die Basis von
-$\bigoplus_{\xi^p=1}\E^{\phi\circ\mu_\xi}$ aus?
+$\bigoplus_{\xi^p=1}\sE^{\phi\circ\mu_\xi}$ aus?
 
 %TODO: this
 
@@ -121,16 +122,16 @@ Also kommutiert das Diagram:
     %,text depth=0.25em
     ]
   {
-    \rho^+\rho_+\E^{\phi(u)} &
+    \rho^+\rho_+\sE^{\phi(u)} &
     \C((u))^p &
     \C((u))^p &
-    \bigoplus_{\xi^p=1}\E^{\phi\circ\mu_\xi} \\
+    \bigoplus_{\xi^p=1}\sE^{\phi\circ\mu_\xi} \\
     & \\
     & \\
-    \rho^+\rho_+\E^{\phi(u)} &
+    \rho^+\rho_+\sE^{\phi(u)} &
     \C((u))^p &
     \C((u))^p &
-    \bigoplus_{\xi^p=1}\E^{\phi\circ\mu_\xi} \\
+    \bigoplus_{\xi^p=1}\sE^{\phi\circ\mu_\xi} \\
   };
     \path[->,font=\scriptsize,>=angle 90]
     (m-1-2) edge node[below]{$\cong$} (m-1-1)
@@ -146,3 +147,5 @@ Also kommutiert das Diagram:
     ;
   \end{tikzpicture}
 \end{center}
+
+\end{proof}

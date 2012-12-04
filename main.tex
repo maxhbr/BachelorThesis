@@ -81,6 +81,13 @@
 \newtheorem{note}[thm]{Notiz}
 \newtheorem{case}{Fall}
 
+%custom pdf-metadata
+%\pdfinfo{
+%/Title (Title)
+%/Subject (Subject)
+%/Author (Maximilian Huber)
+%/Keywords (keywords) }
+
 \usepackage[german]{varioref}
 %\usepackage[nameinlink,german]{cleveref}
 \usepackage[colorlinks=true,linkcolor=black]{hyperref}
@@ -95,57 +102,89 @@
 %%%%  new Commands  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \def\bme{\boldsymbol{e}}
 
-\def\AA{\mathbb{A}}
-\def\CC{\mathbb{C}}
-\def\GG{\mathbb{G}}
-\def\NN{\mathbb{N}}
-\def\PP{\mathbb{P}}
-\def\RR{\mathbb{R}}
-\def\ZZ{\mathbb{Z}}
+\def\A{\mathbb{A}}
+%\def\B{\mathbb{B}}
+\def\C{\mathbb{C}}
+%\def\D{\mathbb{D}}
+%\def\E{\mathbb{E}}
+%\def\F{\mathbb{F}}
+%\def\G{\mathbb{G}}
+%\def\H{\mathbb{H}}
+\def\I{\mathbb{I}}
+%\def\J{\mathbb{J}}
+%\def\K{\mathbb{K}}
+%\def\L{\mathbb{L}}
+%\def\M{\mathbb{M}}
+\def\N{\mathbb{N}}
+%\def\O{\mathbb{O}}
+%\def\P{\mathbb{P}}
+%\def\Q{\mathbb{Q}}
+\def\R{\mathbb{R}}
+%\def\S{\mathbb{S}}
+%\def\T{\mathbb{T}}
+%\def\U{\mathbb{U}}
+%\def\V{\mathbb{V}}
+%\def\W{\mathbb{W}}
+%\def\X{\mathbb{X}}
+%\def\Y{\mathbb{Y}}
+\def\Z{\mathbb{Z}}
 
-\def\cA{\mathcal{A}}
-\def\cB{\mathcal{B}}
-\def\cC{\mathcal{C}}
+%\def\cA{\mathcal{A}}
+%\def\cB{\mathcal{B}}
+%\def\cC{\mathcal{C}}
 \def\cD{\mathcal{D}}
-\def\cE{\mathcal{E}}
-\def\cF{\mathcal{F}}
-\def\cG{\mathcal{G}}
-\def\cH{\mathcal{H}}
-\def\cI{\mathcal{I}}
-\def\cJ{\mathcal{J}}
-\def\cK{\mathcal{K}}
-\def\cL{\mathcal{L}}
+%\def\cE{\mathcal{E}}
+%\def\cF{\mathcal{F}}
+%\def\cG{\mathcal{G}}
+%\def\cH{\mathcal{H}}
+%\def\cI{\mathcal{I}}
+%\def\cJ{\mathcal{J}}
+%\def\cK{\mathcal{K}}
+%\def\cL{\mathcal{L}}
 \def\cM{\mathcal{M}}
-\def\cN{\mathcal{N}}
-\def\cO{\mathcal{O}}
-\def\cP{\mathcal{P}}
-\def\cQ{\mathcal{Q}}
-\def\cR{\mathcal{R}}
-\def\cS{\mathcal{S}}
-\def\cT{\mathcal{T}}
-\def\cU{\mathcal{U}}
-\def\cV{\mathcal{V}}
-\def\cW{\mathcal{W}}
-\def\cX{\mathcal{X}}
-\def\cY{\mathcal{Y}}
-\def\cZ{\mathcal{Z}}
+%\def\cN{\mathcal{N}}
+%\def\cO{\mathcal{O}}
+%\def\cP{\mathcal{P}}
+%\def\cQ{\mathcal{Q}}
+%\def\cR{\mathcal{R}}
+%\def\cS{\mathcal{S}}
+%\def\cT{\mathcal{T}}
+%\def\cU{\mathcal{U}}
+%\def\cV{\mathcal{V}}
+%\def\cW{\mathcal{W}}
+%\def\cX{\mathcal{X}}
+%\def\cY{\mathcal{Y}}
+%\def\cZ{\mathcal{Z}}
 
-%\renewcommand{\headrulewidth}{0.2pt}
-\renewcommand{\P}{{\mathbb P}}
-\newcommand{\R}{{\mathbb R}}
-\newcommand{\K}{{\mathbb K}}
-\newcommand{\N}{{\mathbb N}}
-\newcommand{\Z}{{\mathbb Z}}
-\renewcommand{\O}{{\mathbb O}}
-\newcommand{\A}{{\mathbb A}}
-\newcommand{\I}{{\mathbb I}}
-\newcommand{\T}{{\mathbb T}}
-\newcommand{\C}{{\mathbb C}}
-\newcommand{\Q}{{\mathbb Q}}
-\newcommand{\e}{\varepsilon}
-\newcommand{\wto}{\rightharpoonup}
-\newcommand{\wsto}{\stackrel{*}{\rightharpoonup}}
-\newcommand{\css}{\subset\subset}
+%\def\sA{\mathscr{A}}
+%\def\sB{\mathscr{B}}
+%\def\sC{\mathscr{C}}
+%\def\sD{\mathscr{D}}
+\def\sE{\mathscr{E}}
+%\def\sF{\mathscr{F}}
+%\def\sG{\mathscr{G}}
+%\def\sH{\mathscr{H}}
+%\def\sI{\mathscr{I}}
+%\def\sJ{\mathscr{J}}
+%\def\sK{\mathscr{K}}
+%\def\sL{\mathscr{L}}
+%\def\sM{\mathscr{M}}
+%\def\sN{\mathscr{N}}
+%\def\sO{\mathscr{O}}
+%\def\sP{\mathscr{P}}
+%\def\sQ{\mathscr{Q}}
+%\def\sR{\mathscr{R}}
+%\def\sS{\mathscr{S}}
+%\def\sT{\mathscr{T}}
+%\def\sU{\mathscr{U}}
+%\def\sV{\mathscr{V}}
+%\def\sW{\mathscr{W}}
+%\def\sX{\mathscr{X}}
+%\def\sY{\mathscr{Y}}
+%\def\sZ{\mathscr{Z}}
+
+\renewcommand{\headrulewidth}{0.2pt}
+
 \newcommand{\myhr}{\rule{0.3\textwidth}{1pt}}
 
 \let\epsilon\varepsilon
@@ -164,10 +203,7 @@
 \DeclareMathOperator{\slopes}{slopes}
 
 % specific:
-\newcommand{\D}{{\mathcal{D}}}
-\newcommand{\Dm}{{\mathcal{D}\mbox{-Modul}}}
-\newcommand{\M}{{\mathcal{M}}}
-\newcommand{\E}{{\mathscr E}}
+\newcommand{\Dm}{{\cD\mbox{-Modul}}}
 
 \newcommand{\Cfx}{{\mathbb C\rrbracket x\llbracket}}
 \newcommand{\Cft}{{\mathbb C\rrbracket t\llbracket}}
@@ -178,6 +214,7 @@
 \input{mydevelop.sty}
 
 \begin{document}
+
 %TODO: set titel variable??
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -196,7 +233,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \mainmatter
 
-\part{Grundlagen}
+%\part{Grundlagen}
 
 \input{grundlagen/content.tex}
 %\newpage
@@ -204,11 +241,12 @@
 \input{meromZsh/content.tex}
 %\newpage
 
-\chapter{Weiterführende Aussagen}
+\chapter{Levelt-Turittin-Theorem}
 \input{lemma2-4/content.tex}
 %\newpage
 
-\part{Beispiele}
+%\part{Beispiele}
+\chapter{Beispiele/Anwendung}
 \section{Meromorpher zusammenhang der Formal zuerfällt aber nicht Konvergent}
 \begin{comment}
   Quellen??
