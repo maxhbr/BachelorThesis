@@ -32,28 +32,11 @@ wc -l TODO
 echo
 
 
-if [[ $# -gt 0 ]] ; then
-  case "$1" in
-    "mk")
-      latexmk -pvc -pdf main.tex
+tmux new-session -d -s tex
+tmux new-window -t tex:2 -n 'latexmk' 'latexmk -pvc -pdf main.tex'
+tmux new-window -t tex:3 -n 'log' 'vim main.log'
+tmux select-window -t tex:1
+tmux attach-session -t tex
 
-      echo
-      git commit -a -m "automatic commit"
-      git push
-      ;;
-    "rb")
-      rubber --ps --pdf main.tex
-
-      echo
-      git commit -a -m "automatic commit"
-      git push
-      ;;
-    "vim")
-      vim
-
-      echo
-      git commit -a -m "automatic commit"
-      git push
-      ;;
-  esac
-fi
+git commit -a -m "automatic commit"
+git push

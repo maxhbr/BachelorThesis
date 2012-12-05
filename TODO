@@ -1,4 +1,4 @@
-grundlagen/content.tex:\section{Weyl-Algebra und der Ring $\D$} %TODO: sabah-cimpa90.pdf  seite 3
+grundlagen/content.tex:\section{Weyl-Algebra und der Ring $\cD$} %TODO: sabah-cimpa90.pdf  seite 3
 grundlagen/content.tex:%TODO: vlt umsortieren
 grundlagen/content.tex:\begin{lem} %TODO: vervollständigen
 grundlagen/content.tex:%TODO: Beispiele??
@@ -9,12 +9,14 @@ lemma2-4/content.tex:%TODO: this
 Übereinstimmungen in Binärdatei main.dvi.
 main.ps:w FJ(TODO,)30 b(\(3.)i(T)-8 b(re\033en\))p 3633 5576
 main.tex:%TODO: set titel variable??
+meromZsh/content.tex:  %TODO: hier $\cM ??
 meromZsh/content.tex:      %TODO: make this harpoon arrows
 meromZsh/content.tex:  TODO, (3. Treffen)
 meromZsh/content.tex:%TODO: beobachtung...
 meromZsh/content.tex:%TODO: differenz ist linear
+meromZsh/content.tex:%TODO: auch nicht formal
 meromZsh/content.tex:%TODO: weitere Eigenschaften
 workflow:grep -r --exclude='TODO' "TODO" * > TODO
 workflow:wc -l TODO
-workflow-dev:grep -r --exclude='TODO' "TODO" * > TODO
-workflow-dev:wc -l TODO
+workflow-bak:grep -r --exclude='TODO' "TODO" * > TODO
+workflow-bak:wc -l TODO
