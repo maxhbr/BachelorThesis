@@ -193,6 +193,8 @@ INPUT /usr/share/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
 INPUT /usr/share/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
 INPUT /usr/share/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 INPUT /usr/share/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+INPUT /usr/share/texmf-dist/tex/latex/oberdiek/auxhook.sty
+INPUT /usr/share/texmf-dist/tex/latex/oberdiek/auxhook.sty
 INPUT /usr/share/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 INPUT /usr/share/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 INPUT /usr/share/texmf-dist/tex/latex/hyperref/pd1enc.def
