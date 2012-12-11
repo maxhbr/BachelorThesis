@@ -35,6 +35,7 @@ echo
 tmux new-session -d -s tex
 tmux new-window -t tex:2 -n 'latexmk' 'latexmk -pvc -pdf main.tex'
 tmux new-window -t tex:3 -n 'log' 'vim main.log'
+tmux new-window -t tex:4 -n 'watch grep "[Ee]rror" -B3 -A 3 *.log'
 tmux select-window -t tex:1
 tmux attach-session -t tex
 
