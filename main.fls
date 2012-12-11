@@ -79,6 +79,8 @@ INPUT /usr/share/texmf-dist/tex/latex/tools/enumerate.sty
 INPUT /usr/share/texmf-dist/tex/latex/tools/enumerate.sty
 INPUT /usr/share/texmf-dist/tex/latex/tools/verbatim.sty
 INPUT /usr/share/texmf-dist/tex/latex/tools/verbatim.sty
+INPUT /usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT /usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
 INPUT /usr/share/texmf-dist/tex/latex/koma-script/scrpage2.sty
 INPUT /usr/share/texmf-dist/tex/latex/koma-script/scrpage2.sty
 INPUT /usr/share/texmf-dist/tex/latex/natbib/natbib.sty
@@ -105,8 +107,6 @@ INPUT /usr/share/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
 INPUT /usr/share/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
 INPUT /usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
 INPUT /usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
-INPUT /usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
-INPUT /usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
 INPUT /usr/share/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
 INPUT /usr/share/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
 INPUT /usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
@@ -374,6 +374,11 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/rm-lmbx8.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/rm-lmbx6.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/rm-lmbx9.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/rm-lmbx5.tfm
+INPUT beispiele/a.tex
+INPUT beispiele/a.tex
+INPUT beispiele/img/a.png
+INPUT ./beispiele/img/a.png
+INPUT ./beispiele/img/a.png
 INPUT lemma2-4/anhang.tex
 INPUT lemma2-4/anhang.tex
 INPUT main.bbl
