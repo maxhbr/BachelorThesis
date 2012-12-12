@@ -389,6 +389,11 @@ INPUT beispiele/c.tex
 INPUT beispiele/img/c.png
 INPUT ./beispiele/img/c.png
 INPUT ./beispiele/img/c.png
+INPUT beispiele/d.tex
+INPUT beispiele/d.tex
+INPUT beispiele/img/d.png
+INPUT ./beispiele/img/d.png
+INPUT ./beispiele/img/d.png
 INPUT lemma2-4/anhang.tex
 INPUT lemma2-4/anhang.tex
 INPUT main.bbl
