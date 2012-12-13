@@ -39,5 +39,6 @@ tmux new-window -t texBa:4 -n 'err' 'watch grep "[Ee]rror" -B3 -A 3 *.log'
 tmux select-window -t texBa:1
 tmux attach-session -t texBa
 
+git add .
 git commit -a
 git push
