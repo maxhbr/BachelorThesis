@@ -404,6 +404,9 @@ INPUT ./beispiele/img/e.png
 INPUT beispiele/img/bar_e.png
 INPUT ./beispiele/img/bar_e.png
 INPUT ./beispiele/img/bar_e.png
+INPUT beispiele/img/rho_e.png
+INPUT ./beispiele/img/rho_e.png
+INPUT ./beispiele/img/rho_e.png
 INPUT lemma2-4/anhang.tex
 INPUT lemma2-4/anhang.tex
 INPUT main.bbl
