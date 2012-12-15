@@ -407,6 +407,15 @@ INPUT ./beispiele/img/bar_e.png
 INPUT beispiele/img/rho_e.png
 INPUT ./beispiele/img/rho_e.png
 INPUT ./beispiele/img/rho_e.png
+INPUT beispiele/e_new.tex
+INPUT beispiele/e_new.tex
+INPUT beispiele/img/e.png
+INPUT ./beispiele/img/e.png
+INPUT beispiele/img/bar_e.png
+INPUT ./beispiele/img/bar_e.png
+INPUT beispiele/img/bar_e_times_x.png
+INPUT ./beispiele/img/bar_e_times_x.png
+INPUT ./beispiele/img/bar_e_times_x.png
 INPUT lemma2-4/anhang.tex
 INPUT lemma2-4/anhang.tex
 INPUT main.bbl
