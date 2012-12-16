@@ -2,16 +2,40 @@
 \subsection{Einfaches Beispiel}
 \paragraph{Neuer start (der Weg zu einem leichten Beispiel):}
 Beginne mit
-\[ t^4(t+1)\partial_t^4 + t\partial_t^2+\frac{1}{t}\partial_t+1 \]
-\begin{center} \includegraphics[width=3cm]{beispiele/img/e.png} \end{center}
+
+\begin{minipage}[hbt]{0,49\textwidth}
+  \[ t^4(t+1)\partial_t^4 + t\partial_t^2+\frac{1}{t}\partial_t+1 \]
+\end{minipage}
+\begin{minipage}[hbt]{0,49\textwidth}
+  \begin{center}
+    \includegraphics[width=3cm]{beispiele/img/e.png}
+  \end{center}
+\end{minipage}
+
 (von ZulaBarbara Seite 47)
 und ignoriere zuerst die Terme, die zum Newton Polygon keinen Beitrag Leisten
-\[ t^4\partial_t^4 +\frac{1}{t}\partial_t \]
-\begin{center} \includegraphics[width=3cm]{beispiele/img/bar_e.png} \end{center}
+
+\begin{minipage}[hbt]{0,49\textwidth}
+  \[ t^4\partial_t^4 +\frac{1}{t}\partial_t \]
+\end{minipage}
+\begin{minipage}[hbt]{0,49\textwidth}
+  \begin{center}
+    \includegraphics[width=3cm]{beispiele/img/bar_e.png}
+  \end{center}
+\end{minipage}
+
 multipliziere dieses mit $t$ und ändere aber dadurch den assoziierten
 Meromorphen Zusammenhang nicht \cite[Chapter 5.1]{sabbah_cimpa90}
-\[ P:=t^5\partial_t^4 +\partial_t \]
-\begin{center} \includegraphics[width=3cm]{beispiele/img/bar_e_times_x.png} \end{center}
+
+\begin{minipage}[hbt]{0,49\textwidth}
+  \[ P:=t^5\partial_t^4 +\partial_t \]
+\end{minipage}
+\begin{minipage}[hbt]{0,49\textwidth}
+  \begin{center} 
+    \includegraphics[width=3cm]{beispiele/img/bar_e_times_x.png} 
+  \end{center}
+\end{minipage}
+
 und es gilt $\slopes(P)=\{0,\frac{2}{3}\}$. Eliminiere als nächstes nun die
 Brüche in den Slopes mittels einem geeignetem Pullback. Da hier der Hauptnenner
 $3$ ist bietet sich $\rho:t\mapsto u^3$ für den Pullback an.
