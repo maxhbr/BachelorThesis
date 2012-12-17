@@ -10,6 +10,7 @@ lemma2-4/content.tex:%TODO: this
 main.ps:w FJ(TODO,)30 b(\(3.)i(T)-8 b(re\033en\))p 3633 5576
 main.tex:%TODO: set titel variable??
 meromZsh/content.tex:% TODO; wie darf ich einen Meromorphen verändern, (das P verändern) ohne das
+meromZsh/content.tex:% TODO: \cM = \cM_K ... replace
 meromZsh/content.tex:  %TODO: hier $\cM ??
 meromZsh/content.tex:      %TODO: make this harpoon arrows
 meromZsh/content.tex:  TODO, (3. Treffen)
@@ -17,6 +18,9 @@ meromZsh/content.tex:%TODO: beobachtung...
 meromZsh/content.tex:%TODO: differenz ist linear
 meromZsh/content.tex:%TODO: auch nicht formal
 meromZsh/content.tex:%TODO: weitere Eigenschaften
+meromZsh/content.tex:  %TODO: bessere formulierung
+meromZsh/content.tex:  %TODO: y-Achse korrekt?
+meromZsh/content.tex:      %TODO: wie sind die genau definiert? invariant?
 workflow:grep -r --exclude='TODO' "TODO" * > TODO
 workflow:wc -l TODO
 workflow-bak:grep -r --exclude='TODO' "TODO" * > TODO

@@ -21,8 +21,10 @@ Quelle ist \cite{sabbah_cimpa90}
   \end{itemize}
 \end{defn}
 
+% hier gleich definition für formale meromorphe Zusammenhänge??
+
 \begin{bem}
-  Später wird man auf die angabe von $\partial$ verichten und einfach $\cM$ als
+  Später wird man auf die Angabe von $\partial$ verichten und einfach $\cM_K$ als
   den Meromorphen Zusammenhang bezeichnen.
 \end{bem}
 
@@ -30,9 +32,14 @@ Quelle ist \cite{sabbah_cimpa90}
 Hier nun einige Eigenschaften Meromorpher Zusammenhänge.
 
 \begin{lem}
+  Sei $\cM_K$ ein Meromorpher Zusammenhang, dann existiert ein $P\in??$ so dass
+  $\cM_K\cong\cD/\cD\cdot P$.
+\end{lem}
+
+\begin{lem}
   %TODO: hier $\cM ??
-  Sei $(\cM,\partial)$ ein gegebener Meromorpher Zusammenhang, und $\phi$ ein
-  Basisisomorphismus von $K^r$ nach $\cM$, also in der Situation
+  Sei $(\cM_K,\partial)$ ein gegebener Meromorpher Zusammenhang, und $\phi$ ein
+  Basisisomorphismus von $K^r$ nach $\cM_K$, also in der Situation
   \begin{center}
     \begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
     \matrix (m) [
@@ -43,7 +50,7 @@ Hier nun einige Eigenschaften Meromorpher Zusammenhänge.
       %, text depth=0.25em
       ]
     {
-      \cM & \cM \\
+      \cM_K & \cM_K \\
       K^r & K^r \\
     };
       \path[->,font=\scriptsize,>=angle 90]
@@ -159,6 +166,11 @@ ist $\partial=\frac{d}{dz}-A$.
   Oder einfach ein Meromorpher Zshg. über anderes $K$ also $\hat K$
 \end{comment}
 
+\begin{bem}
+  alle bisher gegebenen Definitionen und Lemmata gelten für formale Meromorphe
+  Zusammenhänge analog wie für konvergente Meromorphe Zusammenhänge.
+\end{bem}
+
 \section{Elementare Meromorphe Zusammenhänge}
 
 %TODO: auch nicht formal
@@ -202,13 +214,13 @@ mit $\alpha_{kl}\in\C$ schreiben und betrachte das dazugehörige
       \begin{comment}
         alternativ: $:\Leftrightarrow$ wenn $\conv(H)$ ein Quadrant ist
       \end{comment}
-    \item Schreibe $\cP(\cM_K)$ für die zu $\cM_K$ gehörigen slopes
+    \item Schreibe $\cP(\cM_K)$ für die Menge der zu $\cM_K$ gehörigen slopes
       %TODO: wie sind die genau definiert? invariant?
     \item Ein meromorpher Zusammenhang $\cM_K$ heißt regulär singulär, falls
       $\cM_K\cong\cD/\cD\cdot P$ mit $P$ regulär singulär, sonst irregulär
       singulär
       \begin{comment}
-        alternativ $:\Leftrightarrow$ $\cP(cM_K)=\{0\}$
+        alternativ $:\Leftrightarrow$ $\cP(\cM_K)=\{0\}$
       \end{comment}
   \end{itemize}
 \end{defn}
