@@ -18,6 +18,8 @@
 \setlength{\unitlength}{1mm}
 \emergencystretch 2em
 
+\allowdisplaybreaks
+
 \usepackage{lscape} % alt: pdflscape
 \usepackage{amsmath,amsthm,amssymb}
 \usepackage{latexsym}
@@ -25,7 +27,7 @@
 \usepackage{verbatim}
 \usepackage{graphicx}
 
-\allowdisplaybreaks
+\usepackage{thmbox}
 
 %\usepackage{natbib}
 
@@ -145,7 +147,7 @@
 \def\cM{\mathcal{M}}
 %\def\cN{\mathcal{N}}
 %\def\cO{\mathcal{O}}
-%\def\cP{\mathcal{P}}
+\def\cP{\mathcal{P}}
 %\def\cQ{\mathcal{Q}}
 %\def\cR{\mathcal{R}}
 %\def\cS{\mathcal{S}}
@@ -243,6 +245,7 @@
 %\newpage
 
 \chapter{Levelt-Turittin-Theorem}
+\input{levelt-turittin/content.tex}
 \input{lemma2-4/content.tex}
 %\newpage
 

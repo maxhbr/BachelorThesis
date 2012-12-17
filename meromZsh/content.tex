@@ -1,5 +1,6 @@
 % TODO; wie darf ich einen Meromorphen verändern, (das P verändern) ohne das
-% sich effektiv was ändert?
+  % sich effektiv was ändert?
+% TODO: \cM = \cM_K ... replace
 
 \chapter{Der Meromorpher Zusammenhang}
 Quelle ist \cite{sabbah_cimpa90}
@@ -144,10 +145,10 @@ ist $\partial=\frac{d}{dz}-A$.
 \section{Formale Meromorphe Zusammenhänge}
 
 \begin{defn}[Formaler Meromorpher Zusammenhang]
-  Ein \emph{Formaler Meromorpher zusammenhang} $(\cM_K,\partial)$ besteht aus 
+  Ein \emph{Formaler Meromorpher zusammenhang} $(\cM_{\hat{K}},\partial)$ besteht aus 
   folgenden Daten:
   \begin{itemize}
-    \item $\cM_K$, ein endlich dimensionaler $\hat K$-Vr
+    \item $\cM_{\hat{K}}$, ein endlich dimensionaler $\hat K$-Vr
     \item eine \emph{Derivation} $\partial$, für die die \emph{Leibnitzregel} 
       \eqref{eq:Leibnitzregel}, für alle $f\in \hat K$ und $u\in \cM_{\hat K}$,
       erfüllt sein soll.
@@ -195,8 +196,21 @@ mit $\alpha_{kl}\in\C$ schreiben und betrachte das dazugehörige
   $N(P)$, die sich echt rechts von $\{0\}\times\R$ befinden.\\ % der $y$-Achse
   %TODO: bessere formulierung
   %TODO: y-Achse korrekt?
-  P heißt \emph{regulär singulär} $:\Leftrightarrow$ $\slopes{P}=\{0\}$, sonst
-  \emph{irregulär singulär}.
+  \begin{itemize}
+    \item P heißt \emph{regulär singulär} $:\Leftrightarrow$
+      $\slopes{P}=\{0\}$, sonst \emph{irregulär singulär}.
+      \begin{comment}
+        alternativ: $:\Leftrightarrow$ wenn $\conv(H)$ ein Quadrant ist
+      \end{comment}
+    \item Schreibe $\cP(\cM_K)$ für die zu $\cM_K$ gehörigen slopes
+      %TODO: wie sind die genau definiert? invariant?
+    \item Ein meromorpher Zusammenhang $\cM_K$ heißt regulär singulär, falls
+      $\cM_K\cong\cD/\cD\cdot P$ mit $P$ regulär singulär, sonst irregulär
+      singulär
+      \begin{comment}
+        alternativ $:\Leftrightarrow$ $\cP(cM_K)=\{0\}$
+      \end{comment}
+  \end{itemize}
 \end{defn}
 
 % vim: set ft=tex :
