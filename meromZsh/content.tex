@@ -173,4 +173,30 @@ ist $\partial=\frac{d}{dz}-A$.
 
 %TODO: weitere Eigenschaften
 
+\section{Newton Polygon} % ist dies eine Invariante??
+% gestohlen aus der ZulaBarbara Seite 46
+
+Jedes $P\in \cD$ lässt sich eindeutig schreiben als
+\[ P=\sum^{n}_{k=0}{\sum^{\infty}_{l=-N}{\alpha_{kl}t^l\partial_t^k}} \]
+mit $\alpha_{kl}\in\C$ schreiben und betrachte das dazugehörige
+\[ H:=\underset{k,l\mbox{ mit }\alpha_{kl}\neq0}{\bigcup}\{ (k,l-k) +
+  \R_{\leq 0}\times \R_{\geq 0} \}\subset \R^2 \,. \]
+\begin{comment}
+  bei sabbah: $H\subset \N\times\Z$ und dann konvexe hülle davon in $\R^2$
+\end{comment}
+
+\begin{defn} % aus der zula
+  Das Randpolygon von $\conv(H)$ heißt das \emph{Newton Polygon} von $P$ und
+  wird geschrieben als $N(P)$.
+\end{defn}
+
+\begin{defn} % aus der zula
+  Die \emph{Steigungen (engl. slopes)} sind die nicht-vertikalen Steigungen von
+  $N(P)$, die sich echt rechts von $\{0\}\times\R$ befinden.\\ % der $y$-Achse
+  %TODO: bessere formulierung
+  %TODO: y-Achse korrekt?
+  P heißt \emph{regulär singulär} $:\Leftrightarrow$ $\slopes{P}=\{0\}$, sonst
+  \emph{irregulär singulär}.
+\end{defn}
+
 % vim: set ft=tex :
