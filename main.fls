@@ -399,6 +399,11 @@ INPUT ./beispiele/img/bar_e_times_x.png
 INPUT ./beispiele/img/bar_e_times_x.png
 INPUT beispiele/formal_a.tex
 INPUT beispiele/formal_a.tex
+INPUT beispiele/formal_b.tex
+INPUT beispiele/formal_b.tex
+INPUT beispiele/img/formal_b.png
+INPUT ./beispiele/img/formal_b.png
+INPUT ./beispiele/img/formal_b.png
 INPUT lemma2-4/anhang.tex
 INPUT lemma2-4/anhang.tex
 INPUT main.bbl
