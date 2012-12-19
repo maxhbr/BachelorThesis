@@ -1,3 +1,6 @@
+beispiele/formal_b.tex:%TODO: besserer Titel
+beispiele/formal_b.tex:  %TODO: rightarrow oder mapsto?
+beispiele/formal_b.tex:        -\partial_t(f)\cdot t^2= %TODO: wegen klammerung?
 grundlagen/content.tex:\section{Weyl-Algebra und der Ring $\cD$} %TODO: sabah-cimpa90.pdf  seite 3
 grundlagen/content.tex:%TODO: vlt umsortieren
 grundlagen/content.tex:\begin{lem} %TODO: vervollständigen
