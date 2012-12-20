@@ -6,7 +6,6 @@ grundlagen/content.tex:%TODO: vlt umsortieren
 grundlagen/content.tex:\begin{lem} %TODO: vervollständigen
 grundlagen/content.tex:%TODO: Beispiele??
 grundlagen/content.tex:%TODO: definition Filtrierung
-grundlagen/content.tex:\section{Lokalisierung eines $\C\{x\}$-Modules} %TODO: Modules or Moduls
 lemma2-4/content.tex:  \end{pmatrix} \mbox{\footnote{$(\xi^i)^p=1\forall i$}}\\ % TODO: correct footnote
 lemma2-4/content.tex:%TODO: this
 Übereinstimmungen in Binärdatei main.dvi.
@@ -19,6 +18,7 @@ meromZsh/content.tex:      %TODO: make this harpoon arrows
 meromZsh/content.tex:  TODO, (3. Treffen)
 meromZsh/content.tex:%TODO: beobachtung...
 meromZsh/content.tex:%TODO: differenz ist linear
+meromZsh/content.tex:%TODO: titel: Operations on vector spaces with connection
 meromZsh/content.tex:%TODO: auch nicht formal
 meromZsh/content.tex:%TODO: weitere Eigenschaften
 meromZsh/content.tex:  %TODO: bessere formulierung
