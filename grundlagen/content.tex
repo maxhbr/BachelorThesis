@@ -49,6 +49,44 @@ wobei offensichtlich gilt $\C[x]\subset\C\{x\}\subset\C\llbracket x\rrbracket$.
   \end{lem}
 \end{comment}
 
+\section{Direkte Summe}
+\begin{defn}[Direkte Summe] \cite[4.5.1]{stacks-project}
+  Seien $x,y\in \Ob(\cC)$, eine \emph{Direkte Summe} oder das \emph{coprodukt}
+  von $x$ und $y$ ist ein Objekt $x\oplus y\in \Ob(\cC)$ zusammen mit
+  Morphismen $i\in\Mor_\cC(x,x\otimes y)$ und $j\in\Mor_\cC(y,x\otimes y)$ so
+  dass die folgende universelle Eigenschaft gilt: für jedes $w\in Ob(\cC)$ mit
+  Morphismen $\alpha\in\Mor_\cC(x,w)$ und $\beta\in\Mor_\cC(y,w)$ existiert ein
+  eindeutiges $\gamma\in\Mor_\cC(x\otimes y,w)$ so dass das Diagram
+  \begin{center}
+    \begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
+      \matrix (m) [
+        matrix of math nodes
+        , row sep=2em
+        , column sep=3em
+        %, text height=3em
+        %, text depth=0.25em
+      ]
+      {
+        & y          & & &   \\
+        x & x\otimes y & &   \\
+          &            & & w \\
+      };
+      %TODO: Pfeile
+      \path[->,font=\scriptsize,>=angle 90]
+      (m-1-2) edge node[left]{$j$} (m-2-2)
+      (m-2-1) edge node[above]{$i$} (m-2-2)
+      (m-1-2) edge node[right]{$\beta$} (m-3-4)
+      (m-2-1) edge node[below]{$\alpha$} (m-3-4)
+      ;
+      \path[->,font=\scriptsize,>=angle 90,dashed]
+      (m-2-2) edge node[above]{$\gamma$} (m-3-4)
+      ;
+    \end{tikzpicture}
+  \end{center}
+  kommutiert.
+\end{defn}
+
+
 \section{Weyl-Algebra und der Ring $\cD$} %TODO: sabah-cimpa90.pdf  seite 3
 Ich werde hier die Weyl Algebra, wie in
 \cite[Chapter~1]{sabbah_cimpa90}, in einer Veränderlichen einführen.
@@ -57,6 +95,7 @@ und sei $f \in\C[x]$ (bzw. $\C\{x\}$ bzw. $\C\llbracket x\rrbracket$).
 Man hat die folgende Kommutations-Relation zwischen dem
 \emph{Ableitungsoperator}
 und dem \emph{Multiplikations Operator} $f$:
+% TODO; ist das der Kommutator??
 \begin{equation}\label{eq:weyl_relation}
   [\frac{\partial}{\partial x},f]=\frac{\partial f}{\partial x}
 \end{equation}
@@ -130,7 +169,7 @@ $\hat{\cD}:=\C\llbracket x\rrbracket<\partial_x>$) verwenden.
   \end{enumerate}
 \end{prop}
 \begin{proof}
-  Zula Barbara
+  \cite{ZulaBarbara}
 \end{proof}
 
 \begin{prop} \label{prop:weyl_eindeutige_schreibung}
@@ -195,11 +234,16 @@ $\hat{\cD}:=\C\llbracket x\rrbracket<\partial_x>$) verwenden.
       \bigoplus_{\N\in\N_0}\C\{x\}\cdot \xi^N \\
     };
       \path[solid]
-      (m-1-1) edge [bend right=20] node[descr]{$\cong$}
-        node[below]{$\mbox{isomorph als grad. Ringen}$} (m-1-11);
+      (m-1-1) edge [bend right=15] node[descr]{$\cong$}
+        node[above]{$\mbox{isomorph als grad. Ringe}$} (m-1-11);
     \end{tikzpicture}
   \end{center}
 \end{prop}
+\begin{proof} TODO
+  \begin{comment}
+    Treffen?
+  \end{comment}
+\end{proof}
 
 \begin{comment}
   \subsection{Weyl Algebra als Graduierter Ring}
