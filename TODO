@@ -1,11 +1,14 @@
 beispiele/formal_b.tex:%TODO: besserer Titel
 beispiele/formal_b.tex:  %TODO: rightarrow oder mapsto?
 beispiele/formal_b.tex:        -\partial_t(f)\cdot t^2= %TODO: wegen klammerung?
+grundlagen/content.tex:      %TODO: Pfeile
 grundlagen/content.tex:\section{Weyl-Algebra und der Ring $\cD$} %TODO: sabah-cimpa90.pdf  seite 3
+grundlagen/content.tex:% TODO; ist das der Kommutator??
 grundlagen/content.tex:%TODO: vlt umsortieren
 grundlagen/content.tex:\begin{lem} %TODO: vervollständigen
 grundlagen/content.tex:%TODO: Beispiele??
 grundlagen/content.tex:%TODO: definition Filtrierung
+grundlagen/content.tex:\begin{proof} TODO
 lemma2-4/content.tex:  \end{pmatrix} \mbox{\footnote{$(\xi^i)^p=1\forall i$}}\\ % TODO: correct footnote
 lemma2-4/content.tex:%TODO: this
 Übereinstimmungen in Binärdatei main.dvi.

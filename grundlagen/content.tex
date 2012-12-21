@@ -50,13 +50,13 @@ wobei offensichtlich gilt $\C[x]\subset\C\{x\}\subset\C\llbracket x\rrbracket$.
 \end{comment}
 
 \section{Direkte Summe}
-\begin{defn}[Direkte Summe] \cite[4.5.1]{stacks-project}
+\begin{defn}[Direkte Summe] \cite[4(Categories).5.1]{stacks-project}
   Seien $x,y\in \Ob(\cC)$, eine \emph{Direkte Summe} oder das \emph{coprodukt}
   von $x$ und $y$ ist ein Objekt $x\oplus y\in \Ob(\cC)$ zusammen mit
-  Morphismen $i\in\Mor_\cC(x,x\otimes y)$ und $j\in\Mor_\cC(y,x\otimes y)$ so
+  Morphismen $i\in\Mor_\cC(x,x\oplus y)$ und $j\in\Mor_\cC(y,x\oplus y)$ so
   dass die folgende universelle Eigenschaft gilt: für jedes $w\in Ob(\cC)$ mit
   Morphismen $\alpha\in\Mor_\cC(x,w)$ und $\beta\in\Mor_\cC(y,w)$ existiert ein
-  eindeutiges $\gamma\in\Mor_\cC(x\otimes y,w)$ so dass das Diagram
+  eindeutiges $\gamma\in\Mor_\cC(x\oplus y,w)$ so dass das Diagram
   \begin{center}
     \begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
       \matrix (m) [
@@ -67,8 +67,8 @@ wobei offensichtlich gilt $\C[x]\subset\C\{x\}\subset\C\llbracket x\rrbracket$.
         %, text depth=0.25em
       ]
       {
-        & y          & & &   \\
-        x & x\otimes y & &   \\
+          & y          & &   \\
+        x & x\oplus y & &   \\
           &            & & w \\
       };
       %TODO: Pfeile
