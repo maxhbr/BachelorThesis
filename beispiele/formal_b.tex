@@ -44,12 +44,42 @@ Wir wollen nun den zum folgendem $P$ assoziierten Meromorphen Zusammenhang
 betrachten:\\
 \begin{minipage}[hbt]{0,39\textwidth}
   \[ P= t^3\partial_t^2-4t^2\partial_t-1 \]
+  mit $ \slopes(P)=\{\frac{1}{2}\} $
 \end{minipage}
 \begin{minipage}[hbt]{0,59\textwidth}
   \begin{center}
-    \includegraphics[width=6cm]{beispiele/img/formal_b.png}
+    \includegraphics[width=6cm]{img/formal_b.png}
   \end{center}
 \end{minipage}
-Es ist offensichtlich, dass $\slopes(P)=\{\frac{1}{2}\}$.
+%Es ist offensichtlich, dass $\slopes(P)=\{\frac{1}{2}\}$. 
+Wir wollen ganzzahlige slopes haben, also wernde den pull-back
+$\rho:t\rightarrow u^2$ an.
+
+Zunächst ein paar nebenrechnungen: 
+\begin{align*}
+  \partial_t   &= \frac{1}{\rho'}\partial_u=\frac{1}{2u}\partial_u \\
+  \partial_t^2 &= (\frac{1}{2u}\partial_u)^2\\
+               &= \frac{1}{2u}(-\frac{1}{2u^2}\partial_u + 
+                 \frac{1}{2u}\partial_u^2) \\
+               &= -\frac{1}{4u^3}\partial_u+\frac{1}{4u^2}\partial_u^2 \\
+\end{align*}
+also
+\begin{align*}
+  \rho^+P &= u^6(-\frac{1}{4u^3}\partial_u+\frac{1}{4u^2}\partial_u^2)- 
+            4u^{4}\frac{1}{2u}\partial_u-1\\
+          &= -u^3\frac{1}{4u^3}\partial_u+\frac{1}{4}u^4\partial_u^2-
+            4u^{3}\frac{1}{2}\partial_u-1\\
+          &= \frac{1}{4}u^4\partial_u^2 -2\frac{1}{4}u^3\partial_u-1
+\end{align*}
+
+\begin{minipage}[hbt]{0,39\textwidth}
+  \[ \rho^+P= \frac{1}{4}u^4\partial_u^2 -2\frac{1}{4}u^3\partial_u-1 \]
+  mit $ \slopes(\rho^+P)=\{1\} $
+\end{minipage}
+\begin{minipage}[hbt]{0,59\textwidth}
+  \begin{center}
+    \includegraphics[width=6cm]{img/formal_b_pb.png}
+  \end{center}
+\end{minipage}
 
 % vim: set ft=tex :

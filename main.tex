@@ -4,6 +4,7 @@
   ,parskip=half*
   ,openany
   ,DIV=12
+  ,fleqn % mv align to left
 ]{scrbook}
   %,12pt
   %,titelpage % unused
@@ -213,8 +214,15 @@
 \newcommand{\Cfx}{{\mathbb C\llbracket x\rrbracket}}
 \newcommand{\Cft}{{\mathbb C\llbracket t\rrbracket}}
 \newcommand{\Cfu}{{\mathbb C\llbracket u\rrbracket}}
+\newcommand{\Ckx}{{\mathbb C (\!(x)\!)}}
+\newcommand{\Ckt}{{\mathbb C (\!(t)\!)}}
+\newcommand{\Cku}{{\mathbb C (\!(u)\!)}}
 
 \makeatother
+
+\newcommand{\overbox}[2]{\ensuremath\begin{array}[b]{c}%
+\makebox[0pt]{\fbox{\scriptsize#2}}\\[-2pt]\text{\small$\downarrow$}\\[-3pt]%
+{\displaystyle#1}\end{array}}%
 
 \input{mydevelop.sty}
 
@@ -242,10 +250,13 @@
 \input{grundlagen/content.tex}
 %\newpage
 
+\input{d-modul/content.tex}
+%\newpage
+
 \input{meromZsh/content.tex}
 %\newpage
 
-\chapter{Levelt-Turittin-Theorem}
+\chapter{Levelt-\!Turittin-\!Theorem}
 \input{levelt-turittin/content.tex}
 \input{lemma2-4/content.tex}
 %\newpage
