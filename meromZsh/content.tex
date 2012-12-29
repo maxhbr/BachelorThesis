@@ -24,8 +24,8 @@ Quelle ist \cite{sabbah_cimpa90}
 % hier gleich definition für formale meromorphe Zusammenhänge??
 
 \begin{bem}
-  Später wird man auf die Angabe von $\partial$ verichten und einfach $\cM_K$ als
-  den Meromorphen Zusammenhang bezeichnen.
+  Später wird man auf die Angabe von $\partial$ verichten und einfach $\cM_K$
+  als den Meromorphen Zusammenhang bezeichnen.
 \end{bem}
 
 \begin{defn}
@@ -33,15 +33,20 @@ Quelle ist \cite{sabbah_cimpa90}
   Wir schreiben $\sE^\phi$ für den Rang 1 Vektorraum $\C(\!(u)\!)$ ausgestattet
   mit dem Zusammenhang $\nabla=\partial_u+\partial_u\phi$, so dass
   $\nabla_{\partial_u}1=\phi'$. Es gilt $\sE^\phi\cong\sE^\psi$ genau dann wenn
-  $\phi\equiv\psi\mbox{ mod }\Cfu$.
+  $\phi\equiv\psi\mbox{ mod }\C(\!(u)\!)$.%TODO: hier formal oder konvergent?
 \end{defn}
 
 \section{Eigenschaften}
 Hier nun einige Eigenschaften Meromorpher Zusammenhänge.
 
+\begin{comment}
+  \cite[4.2]{sabbah_cimpa90}
+  Let $\cM$ be a left $\cD$-module. First we consider it only as a
+  $\C\{x\}$-module and let $\cM[x^{-1}]$ be the localized module.
+\end{comment}
 \begin{thm} 
   \cite[Thm 4.3.2]{sabbah_cimpa90}
-  Ein Meromorpher Zusammenhang bestimmt ein holonom lokalisiertes $\cD$-Modul
+  Ein Meromorpher Zusammenhang bestimmt ein $\cD$-Modul
   und andersherum.
 \end{thm}
 \begin{proof}
@@ -58,7 +63,8 @@ Hier nun einige Eigenschaften Meromorpher Zusammenhänge.
 
 \begin{lem} 
   \cite[Satz 4.12]{ZulaBarbara}
-  Sei $\cM_K$ ein Meromorpher Zusammenhang, dann existiert ein $P\in\cD_K$ so dass
+  \cite[Thm 4.3.2]{sabbah_cimpa90}
+  Ist $\cM_K$ ein Meromorpher Zusammenhang, dann existiert ein $P\in\cD_K$ so dass
   $\cM_K\cong\cD_K/\cD_K\cdot P$.
 \end{lem}
 \begin{proof}
@@ -178,6 +184,10 @@ ist $\partial=\frac{d}{dz}-A$.
   $1=T^{-1}T$ $\rightsquigarrow$ $(T^{-1})'T+T^{-1}T'=0$
 \end{comment}
 
+\begin{comment}
+  TODO: Ab hier formal???
+\end{comment}
+
 %TODO: titel: Operations on vector spaces with connection
 %TODO: verzweigung statt pull-back?
 \section{pull-back und push-forward}
@@ -188,7 +198,7 @@ ist $\partial=\frac{d}{dz}-A$.
 
 nach \cite[1.a]{sabbah_Fourier-local}. Sei $\rho:\in u\Cfu$ mit Bewertung
 $p\geq1$ und sei $\cM$ ein endlich dimensionaler $\C(\!(t)\!)$ Vektorraum
-ausgestattet mit dem Zusammenhang $\nabla$.
+ausgestattet mit einem Zusammenhang $\nabla$.
 \begin{defn}[pull-back]
   Der \emph{pull-back} $\rho^{+}\cM$ ist der Vektorraum
   $\rho^{*}\cM=\C(\!(u)\!)\otimes_{\C(\!(u)\!)}\cM$ mit dem \emph{pull-back
@@ -221,6 +231,7 @@ Sei $\cN$ ein $\C(\!(u)\!)$-VR mit Verknüpfung, so definiere
                &= \hat\cD/\hat\cD\cdot (\partial_u+\frac{2}{u^3})
     \end{align*}
     also $P=\partial_u+\frac{2}{u^3}$ 
+    %TODO; slopes noch nicht erklärt!!
     mit $ \slopes(P)=\{2\} $
   \end{minipage}
   \begin{minipage}[hbt]{0,59\textwidth}
@@ -295,10 +306,11 @@ Sei $\cN$ ein $\C(\!(u)\!)$-VR mit Verknüpfung, so definiere
   %TODO: auch nicht formal
   \begin{defn}[Elementarer formaler Zusammenhang]
     \cite[Def 2.1]{sabbah_Fourier-local}
-    Zu einem gegebenen $\rho\in u\C\llbracket u\rrbracket$, $\phi\in\C(\!(u)\!)$ und
-    einem endlich dimensionalen $\C(\!(u)\!)$-Vektorraum $R$ mit regulärem 
-    Zusammenhang $\nabla$, definieren wir den assoziierten Elementaren endlich
-    dimensionalen $\C(\!(t)\!)$-Vektorraum mit Zusammenhang, durch:
+    Zu einem gegebenen $\rho\in u\C\llbracket u\rrbracket$,
+    $\phi\in\C(\!(u)\!)$ und einem endlich dimensionalen
+    $\C(\!(u)\!)$-Vektorraum $R$ mit regulärem Zusammenhang $\nabla$,
+    definieren wir den assoziierten Elementaren endlich dimensionalen
+    $\C(\!(t)\!)$-Vektorraum mit Zusammenhang, durch:
     \[
       El(\rho,\phi,R)=\rho_+(\sE^\phi\otimes R)
     \]
@@ -345,5 +357,19 @@ mit $\alpha_{kl}\in\C$ schreiben und betrachte das dazugehörige
       \end{comment}
   \end{itemize}
 \end{defn}
+
+\begin{comment}
+%TOTO: sabbah redet hier schon immer von \hat K, ist das nötig?
+  \begin{lem}
+    \cite[5.1]{sabbah_cimpa90} %TODO: genauer
+    \begin{enumerate}
+      \item $\cP(\cM_K)$ ist nicht Leer, wenn $\cM_K\neq\{0\}$
+      \item Wenn mann eine exacte Sequenz 
+        $0\rightarrow{\cM'}_K\rightarrow{\cM}_K\rightarrow{\cM''}_K\rightarrow0$
+        hat, so gilt $\cP(\cM_K)=\cP({\cM'}_K)\cup\cP({\cM''}_K)$.
+      % es gibt noch 2 weitere punkte
+    \end{enumerate}
+  \end{lem}
+\end{comment}
 
 % vim: set ft=tex :

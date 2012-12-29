@@ -2,7 +2,9 @@ beispiele/formal_b.tex:%TODO: besserer Titel
 beispiele/formal_b.tex:  %TODO: rightarrow oder mapsto?
 beispiele/formal_b.tex:        -\partial_t(f)\cdot t^2= %TODO: wegen klammerung?
 grundlagen/content.tex:      %TODO: Pfeile
-grundlagen/content.tex:\section{Weyl-Algebra und der Ring $\cD$} %TODO: sabah-cimpa90.pdf  seite 3
+grundlagen/content.tex:      %TODO: Pfeile
+grundlagen/content.tex:%TODO: tensorprodukt / faserprodukt zum basiswechsel
+grundlagen/content.tex:%TODO: sabah-cimpa90.pdf  seite 3
 grundlagen/content.tex:% TODO; ist das der Kommutator??
 grundlagen/content.tex:%TODO: vlt umsortieren
 grundlagen/content.tex:\begin{lem} %TODO: vervollständigen
@@ -12,21 +14,41 @@ grundlagen/content.tex:\begin{proof} TODO
 lemma2-4/content.tex:  \end{pmatrix} \mbox{\footnote{$(\xi^i)^p=1\forall i$}}\\ % TODO: correct footnote
 lemma2-4/content.tex:%TODO: this
 Übereinstimmungen in Binärdatei main.dvi.
+main.fdb_latexmk:  "img/TODO.png" 1356108547 19721 231b9e07f24e4073bb8f4f342447a2c9 ""
+main.fls:INPUT img/TODO.png
+main.fls:INPUT ./img/TODO.png
+main.fls:INPUT ./img/TODO.png
+main.fls:INPUT img/TODO.png
+main.fls:INPUT ./img/TODO.png
+main.log:[10] <img/TODO.png, id=276, 1003.75pt x 1003.75pt>
+main.log:File: img/TODO.png Graphic file (type png)
+main.log: <use img/TODO.png>
+main.log:Package pdftex.def Info: img/TODO.png used on input line 235.
+main.log:File: img/TODO.png Graphic file (type png)
+main.log:<use img/TODO.png>
+main.log:Package pdftex.def Info: img/TODO.png used on input line 254.
+main.log:[11 <./img/TODO.png>]
 main.ps:w FJ(TODO,)30 b(\(3.)i(T)-8 b(re\033en\))p 3633 5576
 main.tex:%TODO: set titel variable??
 meromZsh/content.tex:% TODO; wie darf ich einen Meromorphen verändern, (das P verändern) ohne das
 meromZsh/content.tex:% TODO: \cM = \cM_K ... replace
+meromZsh/content.tex:  $\phi\equiv\psi\mbox{ mod }\Cfu$.%TODO: hier formal oder konvergent?
 meromZsh/content.tex:  %TODO: hier $\cM ??
 meromZsh/content.tex:      %TODO: make this harpoon arrows
 meromZsh/content.tex:  TODO, (3. Treffen)
 meromZsh/content.tex:%TODO: beobachtung...
 meromZsh/content.tex:%TODO: differenz ist linear
 meromZsh/content.tex:%TODO: titel: Operations on vector spaces with connection
-meromZsh/content.tex:%TODO: auch nicht formal
+meromZsh/content.tex:%TODO: verzweigung statt pull-back?
+meromZsh/content.tex:    %TODO; slopes noch nicht erklärt!!
+meromZsh/content.tex:      \includegraphics[width=6cm]{img/TODO.png}
+meromZsh/content.tex:      \includegraphics[width=6cm]{img/TODO.png}
+meromZsh/content.tex:  %TODO: auch nicht formal
 meromZsh/content.tex:%TODO: weitere Eigenschaften
 meromZsh/content.tex:  %TODO: bessere formulierung
 meromZsh/content.tex:  %TODO: y-Achse korrekt?
 meromZsh/content.tex:      %TODO: wie sind die genau definiert? invariant?
+meromZsh/content.tex:    \cite[5.1]{sabbah_cimpa90} %TODO: genauer
 workflow:grep -r --exclude='TODO' "TODO" * > TODO
 workflow:wc -l TODO
 workflow-bak:grep -r --exclude='TODO' "TODO" * > TODO
