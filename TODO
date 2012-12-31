@@ -20,24 +20,25 @@ main.fls:INPUT ./img/TODO.png
 main.fls:INPUT ./img/TODO.png
 main.fls:INPUT img/TODO.png
 main.fls:INPUT ./img/TODO.png
-main.log:[10] <img/TODO.png, id=276, 1003.75pt x 1003.75pt>
+main.log:[10] <img/TODO.png, id=275, 1003.75pt x 1003.75pt>
 main.log:File: img/TODO.png Graphic file (type png)
 main.log: <use img/TODO.png>
-main.log:Package pdftex.def Info: img/TODO.png used on input line 235.
+main.log:Package pdftex.def Info: img/TODO.png used on input line 239.
 main.log:File: img/TODO.png Graphic file (type png)
 main.log:<use img/TODO.png>
-main.log:Package pdftex.def Info: img/TODO.png used on input line 254.
+main.log:Package pdftex.def Info: img/TODO.png used on input line 258.
 main.log:[11 <./img/TODO.png>]
 main.ps:w FJ(TODO,)30 b(\(3.)i(T)-8 b(re\033en\))p 3633 5576
 main.tex:%TODO: set titel variable??
 meromZsh/content.tex:% TODO; wie darf ich einen Meromorphen verändern, (das P verändern) ohne das
 meromZsh/content.tex:% TODO: \cM = \cM_K ... replace
-meromZsh/content.tex:  $\phi\equiv\psi\mbox{ mod }\Cfu$.%TODO: hier formal oder konvergent?
+meromZsh/content.tex:  $\phi\equiv\psi\mbox{ mod }\C(\!(u)\!)$.%TODO: hier formal oder konvergent?
 meromZsh/content.tex:  %TODO: hier $\cM ??
 meromZsh/content.tex:      %TODO: make this harpoon arrows
 meromZsh/content.tex:  TODO, (3. Treffen)
 meromZsh/content.tex:%TODO: beobachtung...
 meromZsh/content.tex:%TODO: differenz ist linear
+meromZsh/content.tex:  TODO: Ab hier formal???
 meromZsh/content.tex:%TODO: titel: Operations on vector spaces with connection
 meromZsh/content.tex:%TODO: verzweigung statt pull-back?
 meromZsh/content.tex:    %TODO; slopes noch nicht erklärt!!

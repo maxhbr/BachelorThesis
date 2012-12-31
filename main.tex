@@ -62,6 +62,21 @@
 \numberwithin{equation}{chapter}
 \numberwithin{figure}{chapter}
 
+%%%%  Abkürzungsverzeichnis  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{nomencl}
+% Befehl umbenennen in abk
+\let\abk\nomenclature
+% Deutsche Überschrift
+\renewcommand{\nomname}{Abkürzungsverzeichnis}
+% Punkte zw. Abkürzung und Erklärung
+\setlength{\nomlabelwidth}{.20\hsize}
+\renewcommand{\nomlabel}[1]{#1 \dotfill}
+% Zeilenabstände verkleinern
+\setlength{\nomitemsep}{-\parsep}
+\makenomenclature
+
+%% BASH: makeindex main.nlo -s nomencl.ist -o main.nls
+
 %%%%  Theoreme Styles  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \makeatletter
 
@@ -239,6 +254,8 @@
   %\today
 %\end{center}
 \tableofcontents{}
+%\printnomenclature
+
 %\newpage
 
 \input{einleitung/content.tex}

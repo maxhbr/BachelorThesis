@@ -31,6 +31,7 @@ grep -r --exclude='TODO' "TODO" * > TODO
 wc -l TODO
 echo
 
+#makeindex main.nlo -s nomencl.ist -o main.nls
 
 tmux new-session -d -s texBa
 tmux new-window -t texBa:2 -n 'latexmk' 'latexmk -pvc -pdf main.tex'

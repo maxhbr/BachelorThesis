@@ -184,6 +184,9 @@ INPUT /usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlib
 INPUT /usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex
 INPUT /usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
 INPUT /usr/share/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex
+INPUT /usr/share/texmf-dist/tex/latex/nomencl/nomencl.sty
+INPUT /usr/share/texmf-dist/tex/latex/nomencl/nomencl.sty
+OUTPUT main.nlo
 INPUT /usr/share/texmf-dist/tex/latex/tools/varioref.sty
 INPUT /usr/share/texmf-dist/tex/latex/tools/varioref.sty
 INPUT /usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
