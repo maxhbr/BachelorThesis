@@ -13,8 +13,12 @@ In dieser Arbeit spielen die folgenden Ringe eine Große Rolle:
   \item $K:=\C(\{x\}):=\C\{x\}[x^{-1}]$
   \item $\hat{K}:=\C((x)):=\C\llbracket x\rrbracket[x^{-1}]$
 \end{itemize}
+Wobei offensichtlich gilt $\C[x]\subset\C\{x\}\subset\Cfx$.
 
-wobei offensichtlich gilt $\C[x]\subset\C\{x\}\subset\C\llbracket x\rrbracket$.
+\begin{comment}
+  Es bezeichnet der Hut ($ \, \hat \,\, $) das jeweils formale äquivalent zu
+  einem konvergentem Objekt.
+\end{comment}
 
 \begin{comment}
   \begin{lem}[Seite 2]
@@ -66,8 +70,8 @@ wobei offensichtlich gilt $\C[x]\subset\C\{x\}\subset\C\llbracket x\rrbracket$.
         %, text depth=0.25em
       ]
       {
-          & y         &  & \\
-        x & x\oplus y &  & \\
+          & y         &  &   \\
+        x & x\oplus y &  &   \\
           &           &  & w \\
       };
       %TODO: Pfeile
@@ -78,7 +82,7 @@ wobei offensichtlich gilt $\C[x]\subset\C\{x\}\subset\C\llbracket x\rrbracket$.
       (m-2-1) edge node[below]{$\alpha$} (m-3-4)
       ;
       \path[->,font=\scriptsize,>=angle 90,dashed]
-      (m-2-2) edge node[above]{$\gamma$} (m-3-4)
+      (m-2-2) edge node[above]{$\exists!\gamma$} (m-3-4)
       ;
     \end{tikzpicture}
   \end{center}
@@ -290,6 +294,7 @@ $\hat{\cD}:=\C\llbracket x\rrbracket<\partial_x>$) verwenden.
   Unabhängigkeit von Schreibung wird in Sabbah Script behauptet
 \end{comment}
 
+%TODO: wofür?
 \subsection{Struktur von Links-Idealen auf $\cD$}
 
 % vim: set ft=tex :
