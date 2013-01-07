@@ -1,6 +1,7 @@
 beispiele/formal_b.tex:%TODO: besserer Titel
 beispiele/formal_b.tex:  %TODO: rightarrow oder mapsto?
 beispiele/formal_b.tex:        -\partial_t(f)\cdot t^2= %TODO: wegen klammerung?
+d-modul/content.tex:  %TODO: unsere sind bereits Lokalisiert?
 grundlagen/content.tex:      %TODO: Pfeile
 grundlagen/content.tex:      %TODO: Pfeile
 grundlagen/content.tex:%TODO: tensorprodukt / faserprodukt zum basiswechsel
@@ -11,6 +12,7 @@ grundlagen/content.tex:\begin{lem} %TODO: vervollständigen
 grundlagen/content.tex:%TODO: Beispiele??
 grundlagen/content.tex:%TODO: definition Filtrierung
 grundlagen/content.tex:\begin{proof} TODO
+grundlagen/content.tex:%TODO: wofür?
 lemma2-4/content.tex:  \end{pmatrix} \mbox{\footnote{$(\xi^i)^p=1\forall i$}}\\ % TODO: correct footnote
 lemma2-4/content.tex:%TODO: this
 Übereinstimmungen in Binärdatei main.dvi.
@@ -20,14 +22,14 @@ main.fls:INPUT ./img/TODO.png
 main.fls:INPUT ./img/TODO.png
 main.fls:INPUT img/TODO.png
 main.fls:INPUT ./img/TODO.png
-main.log:[10] <img/TODO.png, id=275, 1003.75pt x 1003.75pt>
+main.log:[9] <img/TODO.png, id=254, 1003.75pt x 1003.75pt>
 main.log:File: img/TODO.png Graphic file (type png)
 main.log: <use img/TODO.png>
 main.log:Package pdftex.def Info: img/TODO.png used on input line 239.
 main.log:File: img/TODO.png Graphic file (type png)
 main.log:<use img/TODO.png>
 main.log:Package pdftex.def Info: img/TODO.png used on input line 258.
-main.log:[11 <./img/TODO.png>]
+main.log:[10 <./img/TODO.png>]
 main.ps:w FJ(TODO,)30 b(\(3.)i(T)-8 b(re\033en\))p 3633 5576
 main.tex:%TODO: set titel variable??
 meromZsh/content.tex:% TODO; wie darf ich einen Meromorphen verändern, (das P verändern) ohne das

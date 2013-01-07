@@ -155,7 +155,7 @@ $\hat{\cD}:=\C\llbracket x\rrbracket<\partial_x>$) verwenden.
 
 %TODO: vlt umsortieren
 \begin{lem} %TODO: vervollständigen
-  Sei $A$ einder der 3 soeben eingeführten Objekten, die Addition 
+  Sei $A$ einer der 3 soeben eingeführten Objekten, so definieren die Addition 
   \[
     +:A\times A \rightarrow A
   \]
@@ -163,7 +163,7 @@ $\hat{\cD}:=\C\llbracket x\rrbracket<\partial_x>$) verwenden.
   \[
     \cdot:A\times A \rightarrow A
   \]
-  definieren auf $A$ eine Ringstruktur $(A,+,\cdot)$.
+  eine Ringstruktur auf $A$.
 \end{lem}
 \begin{proof}
   \cite[Kapittel 2 Section 1]{ZulaBarbara}
@@ -186,7 +186,7 @@ $\hat{\cD}:=\C\llbracket x\rrbracket<\partial_x>$) verwenden.
     \item Es gilt
       \[[ \partial_x,x] = \partial_xx-x\partial_x=1 \]
     \item Sei $f\in \C[x]$, so gilt:
-      \[ [\partial_x,f] = \frac{\partial,f}{\partial x} \,. \]
+      \[ [\partial_x,f] = \frac{\partialf}{\partial x} \,. \]
       Denn für $g\in \C[x]$ ist
       \[
         [\partial_x,f]\cdot g=\partial_x(fg)-f\partial_xg=
@@ -257,22 +257,17 @@ $\hat{\cD}:=\C\llbracket x\rrbracket<\partial_x>$) verwenden.
       text depth=0.25ex]
     {
       gr^F\cD &
-      := &
-      \bigoplus_{\N\in\Z}gr_N^F\cD &
-      = &
-      \bigoplus_{\N\in\N_0}gr_N^F\cD &
-      \cong &
-      \bigoplus_{\N\in\N_0}\C\{x\} &
-      \cong &
-      \C\{x\}[\xi] &
-      = &
-      \bigoplus_{\N\in\N_0}\C\{x\}\cdot \xi^N \\
+      := \bigoplus_{N\in\Z}gr_N^F\cD = \bigoplus_{N\in\N_0}gr_N^F\cD \cong
+      \bigoplus_{N\in\N_0}\C\{x\} \cong \C\{x\}[\xi] = &
+      \bigoplus_{N\in\N_0}\C\{x\}\cdot \xi^N \\
     };
       \path[solid]
       (m-1-1) edge [bend right=15] node[descr]{$\cong$}
-        node[above]{$\mbox{isomorph als grad. Ringe}$} (m-1-11);
+        node[above]{$\mbox{isomorph als grad. Ringe}$} (m-1-3);
     \end{tikzpicture}
   \end{center}
+  also
+  \[ gr^F\cD \cong \bigoplus_{N\in\N_0}\C\{x\}\cdot \xi^N \,. \]
 \end{prop}
 \begin{proof} TODO
   \begin{comment}
