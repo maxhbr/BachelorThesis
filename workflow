@@ -51,7 +51,6 @@ else
   else
     DIR=$(dirname $0) ;
   fi
-  echo $DIR
   cd $DIR
   grep -r --exclude='TODO' "TODO" * > TODO
   wc -l TODO

@@ -42,11 +42,10 @@ meromZsh.tex:    %TODO; slopes noch nicht erklärt!!
 meromZsh.tex:%TODO: auch nicht formal
 meromZsh.tex:%TODO: weitere Eigenschaften
 meromZsh.tex:%TODO: Dimension eines Meromorphen Zusammenhang
+titel.tex:%TODO; titelpage bitte nicht seitlich versetzt
 trash/d-modul.tex:  %TODO: unsere sind bereits Lokalisiert?
 trash/meromZsh.tex:  %TODO: auch nicht formal
 workflow:  grep -r --exclude='TODO' "TODO" * > TODO
 workflow:  wc -l TODO
 workflow:  grep -r --exclude='TODO' "TODO" * > TODO
 workflow:  wc -l TODO
-workflow-bak:grep -r --exclude='TODO' "TODO" * > TODO
-workflow-bak:wc -l TODO
