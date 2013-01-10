@@ -6,49 +6,47 @@
 Quelle ist \cite{sabbah_cimpa90}
 \section{Definition}
 
-\begin{defn}[Meromorpher Zusammenhang]
-  Ein (\emph{Keim eines}) \emph{Meromorpher Zusammenhang} (an $x=0$)
-  $(\cM_K,\partial)$ besteht aus folgenden Daten:
-  \begin{itemize}
-    \item $\cM_K$, ein endlich dimensionaler $K$-Vr
-    \item einer $\C$-linearen Abbildung $\partial:\cM_K\rightarrow \cM_K$,
-      genannt \emph{Derivation}, welche für alle $f\in K$ und $u\in \cM_K$ die
-      \emph{Leibnitzregel}
-      \begin{equation}\label{eq:Leibnitzregel}
-        \partial(fu)=f'u+f\partial u
-      \end{equation}
-      erfüllen soll.
-  \end{itemize}
-\end{defn}
-
 \begin{comment}
-  %Besser?
-  %Allgemeiner?
-  \begin{defn}[Meromorpher Zusammenhang über $k$]
-    Ein (\emph{Keim eines}) \emph{Meromorpher Zusammenhang über $k$} (an $x=0$)
-    $(\cM_k,\partial)$ besteht aus folgenden Daten:
+  \begin{defn}[Meromorpher Zusammenhang]
+    Ein (\emph{Keim eines}) \emph{Meromorpher Zusammenhang} (an $x=0$)
+    $(\cM_K,\partial)$ besteht aus folgenden Daten:
     \begin{itemize}
-      \item $\cM_k$, ein endlich dimensionaler $k$-Vr
-      \item einer $\C$-linearen Abbildung $\partial:\cM_K\rightarrow \cM_k$,
-        genannt \emph{Derivation}, welche für alle $f\in k$ und $u\in \cM_k$ die
+      \item $\cM_K$, ein endlich dimensionaler $K$-Vr
+      \item einer $\C$-linearen Abbildung $\partial:\cM_K\rightarrow \cM_K$,
+        genannt \emph{Derivation}, welche für alle $f\in K$ und $u\in \cM_K$ die
         \emph{Leibnitzregel}
         \begin{equation}\label{eq:Leibnitzregel}
           \partial(fu)=f'u+f\partial u
         \end{equation}
         erfüllen soll.
     \end{itemize}
-    Falls $k=K$ reden wir einfach nur von einem \emph{Meromorphen Zusammenhang}
-    und falls $k=\hat K$ reden wir von einem \emph{formalen Meromorphen
-    Zusammenhang}.
   \end{defn}
-  \begin{bem}
-    Sei $\cM_K$ ein Meromorphen Zusammenhang, so erhalte $\cM_{\hat K}$ durch:
-    ??? Tensor?
-    % was bleibt erhalten?
-  \end{bem}
 \end{comment}
 
-% hier gleich definition für formale meromorphe Zusammenhänge??
+%Besser?
+%Allgemeiner?
+\begin{defn}[Meromorpher Zusammenhang über $k$]
+  Ein (\emph{Keim eines}) \emph{Meromorpher Zusammenhang über $k$} (an $x=0$)
+  $(\cM_k,\partial)$ besteht aus folgenden Daten:
+  \begin{itemize}
+    \item $\cM_k$, ein endlich dimensionaler $k$-Vr
+    \item einer $\C$-linearen Abbildung $\partial:\cM_k\rightarrow \cM_k$,
+      genannt \emph{Derivation}, welche für alle $f\in k$ und $u\in \cM_k$ die
+      \emph{Leibnitzregel}
+      \begin{equation}\label{eq:Leibnitzregel}
+        \partial(fu)=f'u+f\partial u
+      \end{equation}
+      erfüllen soll.
+  \end{itemize}
+  Falls $k=K$ reden wir von einem \emph{Meromorphen Zusammenhang}
+  und falls $k=\hat K$ reden wir von einem \emph{formalen Meromorphen
+  Zusammenhang}.
+\end{defn}
+\begin{bem}
+  Sei $\cM_K$ ein Meromorphen Zusammenhang, so erhalte einen formalen
+  Meromorphen Zusammenhang durch
+  \[ \cM_{\hat K} = \cM_K\otimes_{\hat K}\hat K \,. \]
+\end{bem}
 
 \begin{bem}
   Später wird man auf die Angabe von $\partial$ verichten und einfach $\cM_K$
@@ -58,15 +56,23 @@ Quelle ist \cite{sabbah_cimpa90}
 \begin{defn}
   \cite[1.a]{sabbah_Fourier-local}
   Sei $\phi\in\C(\!(u)\!)$.
-  Wir schreiben $\sE^\phi$ für den Rang 1 Vektorraum $\C(\!(u)\!)$ ausgestattet
-  mit dem Zusammenhang $\nabla=\partial_u+\partial_u\phi$, so dass
-  $\nabla_{\partial_u}1=\phi'$. Es gilt $\sE^\phi\cong\sE^\psi$ genau dann wenn
-  $\phi\equiv\psi\mbox{ mod }\C(\!(u)\!)$.%TODO: hier formal oder konvergent?
+  Wir schreiben $\sE^\phi$ für den (formalen) Rang 1 Vektorraum $\C(\!(u)\!)$
+  ausgestattet mit dem Zusammenhang $\nabla=\partial_u+\partial_u\phi$, im
+  speziellen also $\nabla_{\partial_u}1=\partial_u1=\phi'$.\\
+  \begin{comment}
+    Also
+    \begin{align*}
+      \sE^\phi=\Cful & \overset{\partial_u}{\rightarrow} \Cful\\
+      1             & \mapsto \phi'(u)\\
+      f(u)          & \mapsto f'(u)+f(u)\phi'(u)\\
+    \end{align*}
+  \end{comment}
 \end{defn}
 
 \begin{bem}
   \cite[1.a]{sabbah_Fourier-local}
   Es gilt $\sE^\phi\cong\sE^\psi$ genau dann wenn $\phi\equiv\psi \mod \Cfu$.
+  %TODO: hier formal oder konvergent?
 \end{bem}
 
 \section{Eigenschaften}
@@ -77,6 +83,19 @@ Hier nun einige Eigenschaften Meromorpher Zusammenhänge.
   Let $\cM$ be a left $\cD$-module. First we consider it only as a
   $\C\{x\}$-module and let $\cM[x^{-1}]$ be the localized module.
 \end{comment}
+
+%TODO: reihenfolge bei sabbah anderst!!!
+\begin{lem}[Lemma vom zyklischen Vektor]
+  \cite[Thm 4.3.3]{sabbah_cimpa90}
+  \cite[Satz 4.8]{ZulaBarbara}
+  Sei $\cM_K$ ein Meromorpher Zusammenhang. Es Existiert ein Element
+  $m\in\cM_K$ und eine ganze Zahl $d$ so dass
+  $m,\partial_tm,\dots,\partial_t^{d-1}m$ eine $K$-Basis von $\cM_K$ ist.
+\end{lem}
+\begin{proof}
+  \cite[Satz 4.8]{ZulaBarbara}
+\end{proof}
+
 \begin{thm}
   \cite[Thm 4.3.2]{sabbah_cimpa90}
   Ein Meromorpher Zusammenhang bestimmt ein $\cD$-Modul
@@ -85,14 +104,6 @@ Hier nun einige Eigenschaften Meromorpher Zusammenhänge.
 \begin{proof}
   \cite[Thm 4.3.2]{sabbah_cimpa90}
 \end{proof}
-
-\begin{comment}
-  \begin{itemize}
-    \item Lemma vom zyklischen Vektor\\
-      \cite[Thm 4.3.3]{sabbah_cimpa90}\\
-      \cite[Satz 4.8]{ZulaBarbara}
-  \end{itemize}
-\end{comment}
 
 \begin{lem}
   \cite[Satz 4.12]{ZulaBarbara}
@@ -141,23 +152,26 @@ Hier nun einige Eigenschaften Meromorpher Zusammenhänge.
   TODO, (3. Treffen)
 \end{proof}
 
-Sind $\partial_1$ und $\partial_2$ zwei Meromorphe Zusammenhänge auf $\cM_K\cong
-K^r$. So betrachte $\partial_1-\partial_2:\cM\rightarrow\cM$ für alle $f\in K$
-und $u\in \cM_K$ :
+Seien $\partial_1$ und $\partial_2$ zwei Derivationen auf $\cM_K\cong
+K^r$. So betrachte $\partial_1-\partial_2:\cM_K\rightarrow\cM_K$ für alle $f\in
+K$ und $u\in \cM_K$ :
 \begin{align*}
   (\partial_1-\partial_2)(fu) &= \partial_1(fu)-\partial_2(fu)\\
   &= f'u+f\partial_1u-f'u-f\partial_2u\\
+  &= \underset{=0}{\underbrace{f'u-f'u}}+f\cdot(\partial_1u-\partial_2u)\\
   &= f\cdot(\partial_1-\partial_2)(u)\\
+  %TODO: korrekt??
 \end{align*}
 \begin{lem}
   Da $\partial_1-\partial_2$ $\C$-linear und, wie eben gezeigt,
-  $(\partial_1-\partial_2)(fu)=f\cdot(\partial_1-\partial_2)(u)$ allgemein,
-  gilt: Die differenz zweier Meromorpher Zusammenhäge ist $K$-linear.
+  $(\partial_1-\partial_2)(fu)=f\cdot(\partial_1-\partial_2)(u)$ $\forall f\in
+  K$ und $u\in\cM_K$ gilt: Die differenz zweier Derivationen ist
+  $K$-linear.\\
   %Differenz zweier Meromorpher Zshg. ist K-linear
+  Insbesondere ist $\frac{d}{dz}-\partial:K^r\rightarrow K^r$ $K$-linear, also
+  es existiert eine Matrix $A\in M(r\times r,K)$ mit $\frac{d}{dz}-\partial=A$,
+  also ist $\partial=\frac{d}{dz}-A$.
 \end{lem}
-Insbesondere ist $\frac{d}{dz}-\partial:K^r\rightarrow K^r$ $K$-linear, also es
-existiert eine Matrix $A\in M(r\times r,K)$ mit $\frac{d}{dz}-\partial=A$, also
-ist $\partial=\frac{d}{dz}-A$.
 
 %TODO: beobachtung...
 
@@ -221,99 +235,6 @@ ist $\partial=\frac{d}{dz}-A$.
   TODO: Ab hier formal???
 \end{comment}
 
-%TODO: titel: Operations on vector spaces with connection
-%TODO: verzweigung statt pull-back?
-\section{pull-back und push-forward}
-%QUELLE: hottaetal.pdf Seite 21
-\begin{comment}
-  \cite[1.3]{hotta2007d}
-\end{comment}
-
-Nach \cite[1.a]{sabbah_Fourier-local}. Sei $\rho\in u\Cfu$ mit Bewertung
-$p\geq1$ und sei $\cM$ ein endlich dimensionaler $\C(\!(t)\!)$ Vektorraum
-ausgestattet mit einem Zusammenhang $\nabla$.
-\begin{defn}[pull-back]
-  \cite[1.a]{sabbah_Fourier-local}
-  Der \emph{pull-back} $\rho^{+}\cM$ ist der Vektorraum
-  $\rho^{*}\cM=\C(\!(u)\!)\otimes_{\C(\!(u)\!)}\cM$ mit dem \emph{pull-back
-    Zusammenhang} $\rho^*\nabla$ definiert durch $\partial_u(1\otimes
-  m):=\rho'(u)\otimes\partial_tm$.
-\end{defn}
-
-\begin{comment}
-  wie sieht die wirkung vom pull-back zusammenhang aus?\\
-  $\partial_t(f(t))m)=...=\rho'(u)^{-1}\partial_uf(t)m$
-\end{comment}
-
-Sei $\cN$ ein $\C(\!(u)\!)$-VR mit Verknüpfung, so definiere den push-forward
-wie folgt.
-\begin{defn}[push-forward]
-  \cite[1.a]{sabbah_Fourier-local}
-  Der \emph{push-forward} $\rho_+\cN$ ist definiert durch:
-  \begin{itemize}
-    \item der $\C(\!(t)\!)$-VR $\rho_*\cN$ ist der $\C$-VR $\cN$ mit der
-      $\C(\!(t)\!)$ Struktur durch $f(t)\cdot m:=f(\rho(t))m$
-      % für alle m aus ???
-    \item die Wirkung von $\partial_t$ ist die von $\rho'(u)^{-1}\partial_u$
-  \end{itemize}
-\end{defn}
-
-\begin{exmp}[push-forward]
-  Für $\rho:t\rightarrow u^2$, $\phi=\frac{1}{u^2}$ betrachte:\\
-  \begin{minipage}[hbt]{0,39\textwidth}
-    \begin{align*}
-      \sE^\phi &\cong\hat\cD/\hat\cD\cdot(\partial_u+\partial_t\frac{1}{u^2})\\
-               &= \hat\cD/\hat\cD\cdot (\partial_u+\frac{2}{u^3})
-    \end{align*}
-    also $P=\partial_u+\frac{2}{u^3}$
-    %TODO; slopes noch nicht erklärt!!
-    mit $ \slopes(P)=\{2\} $
-  \end{minipage}
-  \begin{minipage}[hbt]{0,59\textwidth}
-    \begin{center}
-      \includegraphics[width=6cm]{img/TODO.png}
-    \end{center}
-  \end{minipage}
-  mache nun einen push-forward mittels $\rho$:
-  \begin{align*}
-    (\partial_u+\frac{2}{u^3}) &= 2u(\frac{1}{2u}\partial_u+\frac{1}{u^4}) \\
-                               &= 2u(\rho'(u)\partial_u+\frac{1}{u^4}) \\
-                               &= 2u(\partial_t+\frac{1}{t^2})\\
-  \end{align*}
-  \begin{minipage}[hbt]{0,39\textwidth}
-    Also ist
-    \begin{align*}
-      \rho_+\sE^\phi\cong \hat\cD/\hat\cD\cdot(\partial_t+\frac{1}{t^2})
-    \end{align*}
-    also $\rho_*P=\partial_t+\frac{1}{t^2}$
-    mit $ \slopes(P)=\{1\} $
-  \end{minipage}
-  \begin{minipage}[hbt]{0,59\textwidth}
-    \begin{center}
-      \includegraphics[width=6cm]{img/TODO.png}
-    \end{center}
-  \end{minipage}
-\end{exmp}
-
-\begin{thm} \label{thm:Projektionsformel}
-  \cite[1.a]{sabbah_Fourier-local}
-  Es gilt die Projektionsformel
-  \begin{equation} \label{eq:Projektionsformel}
-    \rho_+(\cN\otimes_{\C(\!(u)\!)}\rho^+\cM) \cong
-    \rho_+\cN\otimes_{\C(\!(t)\!)}\cM\,.
-  \end{equation}
-\end{thm}
-\begin{proof}
-  \begin{align*}
-    \rho_+(\cN\otimes_{\C(\!(u)\!)}\rho^+\cM) &=
-    \rho_+(\cN\otimes_{\C(\!(u)\!)}(\C(\!(u)\!)\otimes_{\C(\!(t)\!)}\cM)) \\
-    &\cong \rho_+((\cN\otimes_{\C(\!(u)\!)}\C(\!(u)\!))
-    \otimes_{\C(\!(t)\!)}\cM) \\
-    &\cong \rho_+(\cN\otimes_{\C(\!(t)\!)}\cM) \\
-    &= \rho_+\cN\otimes_{\C(\!(t)\!)}\cM \\
-  \end{align*}
-\end{proof}
-
 \section{Newton Polygon} % ist dies eine Invariante??
 % gestohlen aus der ZulaBarbara Seite 46
 
@@ -367,23 +288,211 @@ mit $\alpha_{kl}\in\C$ schreiben und betrachte das dazugehörige
   \end{lem}
 \end{comment}
 
+%TODO: titel: Operations on vector spaces with connection
+%TODO: verzweigung statt pull-back?
+\section{pull-back und push-forward}
+%QUELLE: hottaetal.pdf Seite 21
 \begin{comment}
-  \section{Elementare Meromorphe Zusammenhänge}
-
-  %TODO: auch nicht formal
-  \begin{defn}[Elementarer formaler Zusammenhang]
-    \cite[Def 2.1]{sabbah_Fourier-local}
-    Zu einem gegebenen $\rho\in u\C\llbracket u\rrbracket$,
-    $\phi\in\C(\!(u)\!)$ und einem endlich dimensionalen
-    $\C(\!(u)\!)$-Vektorraum $R$ mit regulärem Zusammenhang $\nabla$,
-    definieren wir den assoziierten Elementaren endlich dimensionalen
-    $\C(\!(t)\!)$-Vektorraum mit Zusammenhang, durch:
-    \[
-      El(\rho,\phi,R)=\rho_+(\sE^\phi\otimes R)
-    \]
-  \end{defn}
+  \cite[1.3]{hotta2007d}
 \end{comment}
 
+Nach \cite[1.a]{sabbah_Fourier-local}. Sei $\rho\in u\Cfu$ mit Bewertung
+$p\geq1$ und sei $\cM$ ein endlich dimensionaler $\C(\!(t)\!)$ Vektorraum
+ausgestattet mit einem Zusammenhang $\nabla$.
+\begin{defn}[pull-back]
+  \cite[1.a]{sabbah_Fourier-local}
+  Der \emph{pull-back} $\rho^{+}\cM$ ist der Vektorraum
+  $\rho^{*}\cM=\C(\!(u)\!)\otimes_{\C(\!(u)\!)}\cM$ mit dem \emph{pull-back
+    Zusammenhang} $\rho^*\nabla$ definiert durch $\partial_u(1\otimes
+  m):=\rho'(u)\otimes\partial_tm$.
+\end{defn}
+
+\begin{exmp}
+  %from beispil/formal_b.tex
+  \begin{comment}
+    Beginne mit
+    \[ \tilde P=\tau\partial_\tau^2+2\partial_\tau-1 \]
+    und gehe von $\tau$ über zu $t$ via $\tau\rightarrow\frac{1}{t}$:\\
+    %TODO: rightarrow oder mapsto?
+    \begin{itemize}
+      \item was passiert mit der Ableitung $\partial_\tau$? Es gilt:
+        \[
+          \partial_\tau (f(\frac{1}{\tau}))=
+          \partial_t(f)\cdot (-\frac{1}{\tau^2})=
+          -\partial_t(f)\cdot t^2= %TODO: wegen klammerung?
+          - t^2 \cdot \partial_t(f)
+        \]
+        also:
+        \[
+          \partial_\tau=-t^2\partial_t
+          % stimmt das VZ?
+        \]
+      \item was ist $\partial_t(t^2\partial_t)$?
+        \begin{align*}
+          \partial_tt^2\partial_t &= (\partial_tt)t\partial_t\\
+          &= (t\partial_t-1)t\partial_t\\
+          &= t(\partial_tt)\partial_t-t\partial_t\\
+          &= t(t\partial_t-1)\partial_t-t\partial_t\\
+          &= t^2\partial_t^2-2t\partial_t\\
+        \end{align*}
+      \item was passiert mit $ \tilde P=\tau\partial_\tau^2+2\partial_\tau-1 $?
+        \begin{align*}
+          \tilde P &= \tau\partial_\tau^2+2\partial_\tau-1\\
+          &\overset{\tau\rightarrow\frac{1}{t}}{\longrightarrow}
+            \frac{1}{t}(-t^2\partial_t)^2+2(-t^2\partial_t)-1\\
+          &= \frac{1}{t}t^2(\partial_t(t^2\partial_t))-2t^2\partial_t-1\\
+          &= t(\partial_t(t^2\partial_t))-2t^2\partial_t-1\\
+          &= t(t^2\partial_t^2-2t\partial_t)-2t^2\partial_t-1\\
+          &= t^3\partial_t^2-4t^2\partial_t-1 =: P\\
+        \end{align*}
+    \end{itemize}
+  \end{comment}
+
+  Wir wollen den zu $P= t^3\partial_t^2-4t^2\partial_t-1$ assoziierten
+  Meromorphen Zusammenhang
+  betrachten:\\
+  \begin{minipage}[hbt]{0,39\textwidth}
+    \[ P= t^3\partial_t^2-4t^2\partial_t-1 \]
+    mit $ \slopes(P)=\{\frac{1}{2}\} $
+  \end{minipage}
+  \begin{minipage}[hbt]{0,59\textwidth}
+    \begin{center}
+      \includegraphics[width=6cm]{img/formal_b.png}
+    \end{center}
+  \end{minipage}
+  %Es ist offensichtlich, dass $\slopes(P)=\{\frac{1}{2}\}$. 
+  Wir wollen ganzzahlige slopes haben, also wende den pull-back
+  $\rho:t\rightarrow u^2$, welcher alle slopes mit 2 Multipliziert,
+  an.
+  %TODO: wieso multipliziert dieser mit 2?
+  Zunächst ein paar Nebenrechnungen: 
+  \begin{align*}
+    \partial_t   &= \frac{1}{\rho'}\partial_u=\frac{1}{2u}\partial_u \\
+    \partial_t^2 &= (\frac{1}{2u}\partial_u)^2\\
+                 &= \frac{1}{2u}(-\frac{1}{2u^2}\partial_u + 
+                   \frac{1}{2u}\partial_u^2) \\
+                 &= \frac{1}{4u^2}\partial_u^2-\frac{1}{4u^3}\partial_u \\
+  \end{align*}
+  also
+  \begin{align*}
+    \rho^+P &= u^6(\frac{1}{4u^2}\partial_u^2-\frac{1}{4u^3}\partial_u)- 
+              4u^{4}\frac{1}{2u}\partial_u-1\\
+            &= \frac{1}{4}u^4\partial_u^2-u^3\frac{1}{4u^3}\partial_u-
+              4u^{3}\frac{1}{2}\partial_u-1\\
+            &= \frac{1}{4}u^4\partial_u^2 -2\frac{1}{4}u^3\partial_u-1
+  \end{align*}
+
+  \begin{minipage}[hbt]{0,39\textwidth}
+    \[ \rho^+P= \frac{1}{4}u^4\partial_u^2 -2\frac{1}{4}u^3\partial_u-1 \]
+    mit $ \slopes(\rho^+P)=\{1\} $
+  \end{minipage}
+  \begin{minipage}[hbt]{0,59\textwidth}
+    \begin{center}
+      \includegraphics[width=6cm]{img/formal_b_pb.png}
+    \end{center}
+  \end{minipage}
+\end{exmp}
+
+\begin{comment}
+  wie sieht die wirkung vom pull-back zusammenhang aus?\\
+  $\partial_t(f(t))m)=...=\rho'(u)^{-1}\partial_uf(t)m$
+\end{comment}
+
+Sei $\cN$ ein $\C(\!(u)\!)$-VR mit Verknüpfung, so definiere den push-forward
+wie folgt.
+\begin{defn}[push-forward]
+  \cite[1.a]{sabbah_Fourier-local}
+  Der \emph{push-forward} $\rho_+\cN$ ist definiert durch:
+  \begin{itemize}
+    \item der $\C(\!(t)\!)$-VR $\rho_*\cN$ ist der $\C$-Vektor Raum $\cN$ mit
+      der $\C(\!(t)\!)$-Vektor Raum Struktur durch $f(t)\cdot m:=f(\rho(t))m$
+      % für alle m aus ???
+    \item die Wirkung von $\partial_t$ ist die von $\rho'(u)^{-1}\partial_u$
+  \end{itemize}
+\end{defn}
+
+\begin{exmp}[push-forward]
+  Für $\rho:t\rightarrow u^2$, $\phi=\frac{1}{u^2}$ betrachte:\\
+  \begin{minipage}[hbt]{0,39\textwidth}
+    \begin{align*}
+      \sE^\phi &\cong\hat\cD/\hat\cD\cdot(\partial_u+\partial_t\frac{1}{u^2})\\
+               &= \hat\cD/\hat\cD\cdot (\partial_u+\frac{2}{u^3})
+    \end{align*}
+    also $P=\partial_u+\frac{2}{u^3}$
+    %TODO; slopes noch nicht erklärt!!
+    mit $ \slopes(P)=\{2\} $
+  \end{minipage}
+  \begin{minipage}[hbt]{0,59\textwidth}
+    \begin{center}
+      \includegraphics[width=6cm]{img/pf-start.png}
+    \end{center}
+  \end{minipage}
+  mache nun einen push-forward mittels $\rho$:
+  \begin{align*}
+    (\partial_u+\frac{2}{u^3}) &= 2u(\frac{1}{2u}\partial_u+\frac{1}{u^4}) \\
+                               &= 2u(\rho'(u)\partial_u+\frac{1}{u^4}) \\
+                               &= 2u(\partial_t+\frac{1}{t^2})\\
+  \end{align*}
+  \begin{minipage}[hbt]{0,39\textwidth}
+    Also ist
+    \begin{align*}
+      \rho_+\sE^\phi\cong \hat\cD/\hat\cD\cdot(\partial_t+\frac{1}{t^2})
+    \end{align*}
+    also $\rho_*P=\partial_t+\frac{1}{t^2}$
+    mit $ \slopes(P)=\{1\} $
+  \end{minipage}
+  \begin{minipage}[hbt]{0,59\textwidth}
+    \begin{center}
+      \includegraphics[width=6cm]{img/pf-end.png}
+    \end{center}
+  \end{minipage}
+\end{exmp}
+
+\begin{thm} \label{thm:Projektionsformel}
+  \cite[1.a]{sabbah_Fourier-local}
+  Es gilt die Projektionsformel
+  \begin{equation} \label{eq:Projektionsformel}
+    \rho_+(\cN\otimes_{\C(\!(u)\!)}\rho^+\cM) \cong
+    \rho_+\cN\otimes_{\C(\!(t)\!)}\cM\,.
+  \end{equation}
+\end{thm}
+\begin{proof}
+  \begin{align*}
+    \rho_+(\cN\otimes_{\C(\!(u)\!)}\rho^+\cM) &=
+    \rho_+(\cN\otimes_{\C(\!(u)\!)}(\C(\!(u)\!)\otimes_{\C(\!(t)\!)}\cM)) \\
+    &\cong \rho_+((\cN\otimes_{\C(\!(u)\!)}\C(\!(u)\!))
+    \otimes_{\C(\!(t)\!)}\cM) \\
+    &\cong \rho_+(\cN\otimes_{\C(\!(t)\!)}\cM) \\
+    &= \rho_+\cN\otimes_{\C(\!(t)\!)}\cM \\
+  \end{align*}
+\end{proof}
+
+\begin{comment}
+  %von treffen ? auf seite 1
+  Sei $\rho(u)=u^p=t$ und $\phi(t)$ gegeben.
+  \begin{align*}
+    \rho^+\sE^{\phi(t)}&=\sE^{\phi(\rho(u))}=\sE^{\phi(u^p)}\\
+    \rho^+\rho_+\sE^{\phi(u)}
+      &=\underset{\zeta\in\mu_p}{\bigoplus}\sE^{\phi(\zeta\cdot u)}\\
+  \end{align*}
+\end{comment}
+
+\section{Elementare Meromorphe Zusammenhänge}
+
+%TODO: auch nicht formal
+\begin{defn}[Elementarer formaler Zusammenhang]
+  \cite[Def 2.1]{sabbah_Fourier-local}
+  Zu einem gegebenen $\rho\in u\C\llbracket u\rrbracket$,
+  $\phi\in\C(\!(u)\!)$ und einem endlich dimensionalen
+  $\C(\!(u)\!)$-Vektorraum $R$ mit regulärem Zusammenhang $\nabla$,
+  definieren wir den assoziierten Elementaren endlich dimensionalen
+  $\C(\!(t)\!)$-Vektorraum mit Zusammenhang, durch:
+  \[
+    El(\rho,\phi,R)=\rho_+(\sE^\phi\otimes R)
+  \]
+\end{defn}
+
 %TODO: weitere Eigenschaften
+%TODO: Dimension eines Meromorphen Zusammenhang
 
 % vim: set ft=tex :

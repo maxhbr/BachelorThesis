@@ -230,9 +230,9 @@
 \newcommand{\Cfx}{{\mathbb C\llbracket x\rrbracket}}
 \newcommand{\Cft}{{\mathbb C\llbracket t\rrbracket}}
 \newcommand{\Cfu}{{\mathbb C\llbracket u\rrbracket}}
-\newcommand{\Ckx}{{\mathbb C (\!(x)\!)}}
-\newcommand{\Ckt}{{\mathbb C (\!(t)\!)}}
-\newcommand{\Cku}{{\mathbb C (\!(u)\!)}}
+\newcommand{\Cfxl}{{\mathbb C (\!(x)\!)}}
+\newcommand{\Cftl}{{\mathbb C (\!(t)\!)}}
+\newcommand{\Cful}{{\mathbb C (\!(u)\!)}}
 
 \makeatother
 
@@ -240,7 +240,7 @@
 \makebox[0pt]{\fbox{\scriptsize#2}}\\[-2pt]\text{\small$\downarrow$}\\[-3pt]%
 {\displaystyle#1}\end{array}}%
 
-%\input{mydevelop.sty}
+\input{mydevelop.sty}
 
 \begin{document}
 
@@ -263,7 +263,7 @@
 
 \mainmatter
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\part{Theorie}
+%\part{Theorie}
 
 \input{grundlagen.tex}
 %\newpage
@@ -277,11 +277,10 @@
 
 \chapter{Levelt-\!Turittin-\!Theorem}
 \input{levelt-turittin.tex}
-\input{lemma2-4.tex}
 %\newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\part{Beispiele}
+%\part{Beispiele}
 \input{beispiele.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -292,7 +291,8 @@
 
 \nocite{*}
 %\bibliographystyle{dinat}
-\bibliographystyle{plain}
+%\bibliographystyle{plain}
+\bibliographystyle{amsalpha}
 \bibliography{main}
 
 \end{document}
