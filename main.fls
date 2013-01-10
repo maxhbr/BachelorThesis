@@ -382,8 +382,8 @@ INPUT ./img/pf-start.png
 INPUT img/pf-end.png
 INPUT ./img/pf-end.png
 INPUT ./img/pf-end.png
-INPUT levelt-turittin.tex
-INPUT levelt-turittin.tex
+INPUT levelt-turrittin.tex
+INPUT levelt-turrittin.tex
 INPUT lemma2-4.tex
 INPUT lemma2-4.tex
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/ec-lmr9.tfm
