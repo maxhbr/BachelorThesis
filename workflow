@@ -45,11 +45,13 @@ if [[ ! -n "$TMUX" ]] ; then
   git commit -a
   git push
 else
+  #go to root folder
   if [ -L $0 ] ; then
     DIR=$(dirname $(readlink -f $0)) ;
   else
     DIR=$(dirname $0) ;
   fi
+  echo $DIR
   cd $DIR
   grep -r --exclude='TODO' "TODO" * > TODO
   wc -l TODO
