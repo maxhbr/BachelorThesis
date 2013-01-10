@@ -45,5 +45,7 @@ trash/d-modul.tex:  %TODO: unsere sind bereits Lokalisiert?
 trash/meromZsh.tex:  %TODO: auch nicht formal
 workflow:  grep -r --exclude='TODO' "TODO" * > TODO
 workflow:  wc -l TODO
+workflow:  grep -r --exclude='TODO' "TODO" * > TODO
+workflow:  wc -l TODO
 workflow-bak:grep -r --exclude='TODO' "TODO" * > TODO
 workflow-bak:wc -l TODO

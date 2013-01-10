@@ -1,8 +1,6 @@
 #!/bin/bash
 
-
-if [[ -n "$TMUX" ]] ; then
-
+if [[ ! -n "$TMUX" ]] ; then
   if [ -L $0 ] ; then
     DIR=$(dirname $(readlink -f $0)) ;
   else
@@ -46,5 +44,15 @@ if [[ -n "$TMUX" ]] ; then
   git add .
   git commit -a
   git push
-
+else
+  if [ -L $0 ] ; then
+    DIR=$(dirname $(readlink -f $0)) ;
+  else
+    DIR=$(dirname $0) ;
+  fi
+  cd $DIR
+  grep -r --exclude='TODO' "TODO" * > TODO
+  wc -l TODO
+  git commit -a
+  git push
 fi
