@@ -29,7 +29,7 @@ Quelle ist \cite{sabbah_cimpa90}
   Ein (\emph{Keim eines}) \emph{Meromorpher Zusammenhang über $k$} (an $x=0$)
   $(\cM_k,\partial)$ besteht aus folgenden Daten:
   \begin{itemize}
-    \item $\cM_k$, ein endlich dimensionaler $k$-Vr
+    \item $\cM_k$, ein endlich dimensionaler $k$-Vektor Raum
     \item einer $\C$-linearen Abbildung $\partial:\cM_k\rightarrow \cM_k$,
       genannt \emph{Derivation}, welche für alle $f\in k$ und $u\in \cM_k$ die
       \emph{Leibnitzregel}
@@ -152,26 +152,30 @@ Hier nun einige Eigenschaften Meromorpher Zusammenhänge.
   TODO, (3. Treffen)
 \end{proof}
 
-Seien $\partial_1$ und $\partial_2$ zwei Derivationen auf $\cM_K\cong
-K^r$. So betrachte $\partial_1-\partial_2:\cM_K\rightarrow\cM_K$ für alle $f\in
-K$ und $u\in \cM_K$ :
-\begin{align*}
-  (\partial_1-\partial_2)(fu) &= \partial_1(fu)-\partial_2(fu)\\
-  &= f'u+f\partial_1u-f'u-f\partial_2u\\
-  &= \underset{=0}{\underbrace{f'u-f'u}}+f\cdot(\partial_1u-\partial_2u)\\
-  &= f\cdot(\partial_1-\partial_2)(u)\\
-  %TODO: korrekt??
-\end{align*}
-\begin{lem}
-  Da $\partial_1-\partial_2$ $\C$-linear und, wie eben gezeigt,
-  $(\partial_1-\partial_2)(fu)=f\cdot(\partial_1-\partial_2)(u)$ $\forall f\in
-  K$ und $u\in\cM_K$ gilt: Die differenz zweier Derivationen ist
-  $K$-linear.\\
-  %Differenz zweier Meromorpher Zshg. ist K-linear
-  Insbesondere ist $\frac{d}{dz}-\partial:K^r\rightarrow K^r$ $K$-linear, also
-  es existiert eine Matrix $A\in M(r\times r,K)$ mit $\frac{d}{dz}-\partial=A$,
-  also ist $\partial=\frac{d}{dz}-A$.
+\begin{lem} Sei $\cM_K\cong K^r$ ein endlich dimensionaler $K$-Vektor Raum mit
+  $\partial_1$ und $\partial_2$ zwei darauf definierte Derivationen. So gilt,
+  die differenz zweier Derivationen ist $K$-linear.
 \end{lem}
+\begin{proof}
+  Seien $\partial_1$ und $\partial_2$ zwei Derivationen auf $\cM_K$.
+  Da $\partial_1$ und $\partial_2$ $\C$-linear, ist $\partial_1-\partial_2$
+  $\C$-linear, also muss nur noch gezeigt werden, dass
+  $(\partial_1-\partial_2)(fu)=f\cdot(\partial_1-\partial_2)(u)$ $\forall f\in
+  K$ und $u\in\cM_K$ gilt.\\
+  %TODO: wieso gilt das?
+  \begin{align*}
+    (\partial_1-\partial_2)(fu) &= \partial_1(fu)-\partial_2(fu)\\
+    &= f'u+f\partial_1u-f'u-f\partial_2u\\
+    &= \underset{=0}{\underbrace{f'u-f'u}}+f\cdot(\partial_1u-\partial_2u)\\
+    &= f\cdot(\partial_1-\partial_2)(u)\\
+  \end{align*}
+\end{proof}
+\begin{cor}
+  Es sei $(K^r,\partial)$ ein Meromorpher Zusammenhang.  So ist
+  $\frac{d}{dz}-\partial:K^r\rightarrow K^r$ $K$-linear, also es existiert eine
+  Matrix $A\in M(r\times r,K)$ mit $\frac{d}{dz}-\partial=A$, also ist
+  $\partial=\frac{d}{dz}-A$.
+\end{cor}
 
 %TODO: beobachtung...
 
@@ -221,9 +225,10 @@ K$ und $u\in \cM_K$ :
     \frac{d}{dz}+(T^{-1}\cdot T'+T^{-1}AT) = \frac{d}{dz}+B
   \]
 \end{defn}
-\begin{defn}
-  $A\sim B$ differenziell Äquivalent $:\Leftrightarrow$ $\exists T\in GL(r,K)$
-  mit $B=T^{-1}\cdot T'+T^{-1}AT$
+\begin{defn}[differenziell Äquivalent]
+  Man nennt $A$ und $B$ \emph{differenziell Äquivalent} ($A\sim B$) genau
+  dann, wenn es ein $T\in
+  GL(r,K)$ gibt, mit $B=T^{-1}\cdot T'+T^{-1}AT$.
 \end{defn}
 
 \begin{comment}
