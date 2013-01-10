@@ -26,7 +26,7 @@ Quelle ist \cite{sabbah_cimpa90}
 %Besser?
 %Allgemeiner?
 \begin{defn}[Meromorpher Zusammenhang über $k$]
-  Ein (\emph{Keim eines}) \emph{Meromorpher Zusammenhang über $k$} (an $x=0$)
+  Ein (\emph{Keim eines}) \emph{Meromorpher Zusammenhang über $k$}
   $(\cM_k,\partial)$ besteht aus folgenden Daten:
   \begin{itemize}
     \item $\cM_k$, ein endlich dimensionaler $k$-Vektor Raum
@@ -38,19 +38,23 @@ Quelle ist \cite{sabbah_cimpa90}
       \end{equation}
       erfüllen soll.
   \end{itemize}
-  Falls $k=K$ reden wir von einem \emph{Meromorphen Zusammenhang}
-  und falls $k=\hat K$ reden wir von einem \emph{formalen Meromorphen
+  Falls $k=K=\C(\{x\})$ reden wir von einem \emph{Meromorphen Zusammenhang}
+  und falls $k=\hat K=\Cful$ reden wir von einem \emph{formalen Meromorphen
   Zusammenhang}.
 \end{defn}
 \begin{bem}
-  Sei $\cM_K$ ein Meromorphen Zusammenhang, so erhalte einen formalen
+  Ist $\cM_K$ ein Meromorphen Zusammenhang, so erhalte einen formalen
   Meromorphen Zusammenhang durch
-  \[ \cM_{\hat K} = \cM_K\otimes_{\hat K}\hat K \,. \]
+  \[ \cM_K\otimes_{K}\hat K =: \cM_{\hat K} \,. \]
 \end{bem}
 
 \begin{bem}
-  Später wird man auf die Angabe von $\partial$ verichten und einfach $\cM_K$
-  als den Meromorphen Zusammenhang bezeichnen.
+  \begin{enumerate}
+    \item Später wird man auf die Angabe von $\partial$ verichten und einfach
+      $\cM_K$ als den Meromorphen Zusammenhang bezeichnen.
+    \item Wir betrachten hier Meromorphe Zusammenhänge an $x=0$ als
+      Singularität.
+  \end{enumerate}
 \end{bem}
 
 \begin{defn}
@@ -312,7 +316,7 @@ ausgestattet mit einem Zusammenhang $\nabla$.
   m):=\rho'(u)\otimes\partial_tm$.
 \end{defn}
 
-\begin{exmp}
+\begin{exmp}\label{exmp:pull-back}
   %from beispil/formal_b.tex
   \begin{comment}
     Beginne mit
@@ -399,7 +403,7 @@ ausgestattet mit einem Zusammenhang $\nabla$.
 \end{exmp}
 
 \begin{comment}
-  wie sieht die wirkung vom pull-back zusammenhang aus?\\
+  wie sieht die Wirkung vom pull-back zusammenhang aus?\\
   $\partial_t(f(t))m)=...=\rho'(u)^{-1}\partial_uf(t)m$
 \end{comment}
 
@@ -416,7 +420,7 @@ wie folgt.
   \end{itemize}
 \end{defn}
 
-\begin{exmp}[push-forward]
+\begin{exmp}[push-forward]\label{exmp:push-forward}
   Für $\rho:t\rightarrow u^2$, $\phi=\frac{1}{u^2}$ betrachte:\\
   \begin{minipage}[hbt]{0,39\textwidth}
     \begin{align*}
