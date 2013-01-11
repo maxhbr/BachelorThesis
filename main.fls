@@ -370,9 +370,6 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/stmaryrd/stmary10.tfm
 INPUT meromZsh.tex
 INPUT meromZsh.tex
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/ec-lmri8.tfm
-INPUT img/formal_b.png
-INPUT ./img/formal_b.png
-INPUT ./img/formal_b.png
 INPUT img/formal_b_pb.png
 INPUT ./img/formal_b_pb.png
 INPUT ./img/formal_b_pb.png

@@ -31,16 +31,17 @@ Quelle ist \cite{sabbah_cimpa90}
   \begin{itemize}
     \item $\cM_k$, ein endlich dimensionaler $k$-Vektor Raum
     \item einer $\C$-linearen Abbildung $\partial:\cM_k\rightarrow \cM_k$,
-      genannt \emph{Derivation}, welche für alle $f\in k$ und $u\in \cM_k$ die
+      genannt \emph{Derivation} oder \emph{Zusammenhang}, welche für alle $f\in k$ und $u\in \cM_k$ die
       \emph{Leibnitzregel}
       \begin{equation}\label{eq:Leibnitzregel}
         \partial(fu)=f'u+f\partial u
       \end{equation}
       erfüllen soll.
   \end{itemize}
-  Falls $k=K=\C(\{x\})$ reden wir von einem \emph{Meromorphen Zusammenhang}
-  und falls $k=\hat K=\Cful$ reden wir von einem \emph{formalen Meromorphen
-  Zusammenhang}.
+  Falls $k=K=\C(\{x\})$ reden wir von einem \emph{(konvergentem) Meromorphen
+  Zusammenhang} und falls $k=\hat K=\Cful$ reden wir von einem \emph{formalen
+  Meromorphen Zusammenhang}.
+  %TODO: korrekte benennung?
 \end{defn}
 \begin{bem}
   Ist $\cM_K$ ein Meromorphen Zusammenhang, so erhalte einen formalen
@@ -80,8 +81,7 @@ Quelle ist \cite{sabbah_cimpa90}
 \end{bem}
 
 \section{Eigenschaften}
-Hier nun einige Eigenschaften Meromorpher Zusammenhänge.
-
+%Hier nun einige Eigenschaften Meromorpher Zusammenhänge.
 \begin{comment}
   \cite[4.2]{sabbah_cimpa90}
   Let $\cM$ be a left $\cD$-module. First we consider it only as a
@@ -118,6 +118,15 @@ Hier nun einige Eigenschaften Meromorpher Zusammenhänge.
 \begin{proof}
   \cite[Satz 4.12]{ZulaBarbara}
 \end{proof}
+\begin{comment}
+  \begin{rem}
+    \cite[Proof of Theorem 5.4.7]{sabbah_cimpa90}
+    \[
+      \dim_{\hat K}\cM_{\hat K}
+      =\deg P \mbox{ wenn } \cM_{\hat K}=\cD/\cD\cdot P
+    \]
+  \end{rem}
+\end{comment}
 
 \begin{lem}
   %TODO: hier $\cM ??
@@ -246,40 +255,31 @@ Hier nun einige Eigenschaften Meromorpher Zusammenhänge.
 
 \section{Newton Polygon} % ist dies eine Invariante??
 % gestohlen aus der ZulaBarbara Seite 46
-
 Jedes $P\in \cD$ lässt sich eindeutig schreiben als
 \[ P=\sum^{n}_{k=0}{\sum^{\infty}_{l=-N}{\alpha_{kl}t^l\partial_t^k}} \]
-mit $\alpha_{kl}\in\C$ schreiben und betrachte das dazugehörige
-\[ H:=\underset{k,l\mbox{ mit }\alpha_{kl}\neq0}{\bigcup}\{ (k,l-k) +
-  \R_{\leq 0}\times \R_{\geq 0} \}\subset \R^2 \,. \]
+mit $\alpha_{kl}\in\C$ schreiben und betrachte das zu $P$ dazugehörige
+\[ H(P):=\underset{k,l\mbox{ mit }\alpha_{kl}\neq0}{\bigcup}\Big( (k,l-k) +
+\R_{\leq 0}\times \R_{\geq 0} \Big) \subset \R^2 \,. \]
 \begin{comment}
-  bei sabbah: $H\subset \N\times\Z$ und dann konvexe hülle davon in $\R^2$
+  Bei Sabbah: $H\subset \N\times\Z$ und dann konvexe Hülle davon in $\R^2$
 \end{comment}
 
 \begin{defn} % aus der zula
-  Das Randpolygon von $\conv(H)$ heißt das \emph{Newton Polygon} von $P$ und
+  Das Randpolygon von $\conv(H(P))$ heißt das \emph{Newton Polygon} von $P$ und
   wird geschrieben als $N(P)$.
 \end{defn}
 
 \begin{defn} % aus der zula
-  Die \emph{Steigungen (engl. slopes)} sind die nicht-vertikalen Steigungen von
-  $N(P)$, die sich echt rechts von $\{0\}\times\R$ befinden.\\ % der $y$-Achse
+  Die Menge $\slopes(P)$ sind die nicht-vertikalen Steigungen von $N(P)$, die
+  sich echt rechts von $\{0\}\times\R$ befinden.\\ % der $y$-Achse
   %TODO: bessere formulierung
-  %TODO: y-Achse korrekt?
   \begin{itemize}
     \item P heißt \emph{regulär singulär} $:\Leftrightarrow$
       $\slopes{P}=\{0\}$, sonst \emph{irregulär singulär}.
-      \begin{comment}
-        alternativ: $:\Leftrightarrow$ wenn $\conv(H)$ ein Quadrant ist
-      \end{comment}
     \item Schreibe $\cP(\cM_K)$ für die Menge der zu $\cM_K$ gehörigen slopes
       %TODO: wie sind die genau definiert? invariant?
-    \item Ein meromorpher Zusammenhang $\cM_K$ heißt regulär singulär, falls
-      $\cM_K\cong\cD/\cD\cdot P$ mit $P$ regulär singulär, sonst irregulär
-      singulär
-      \begin{comment}
-        alternativ $:\Leftrightarrow$ $\cP(\cM_K)=\{0\}$
-      \end{comment}
+    \item Ein meromorpher Zusammenhang $\cM_K$ heißt regulär singulär, falls es
+      ein regulär singuläres $P$ gibt, mit $\cM_K\cong\cD/\cD\cdot P$
   \end{itemize}
 \end{defn}
 
@@ -360,13 +360,29 @@ ausgestattet mit einem Zusammenhang $\nabla$.
   Wir wollen den zu $P= t^3\partial_t^2-4t^2\partial_t-1$ assoziierten
   Meromorphen Zusammenhang
   betrachten:\\
-  \begin{minipage}[hbt]{0,39\textwidth}
+  \begin{minipage}[hbt]{0,49\textwidth}
     \[ P= t^3\partial_t^2-4t^2\partial_t-1 \]
     mit $ \slopes(P)=\{\frac{1}{2}\} $
   \end{minipage}
-  \begin{minipage}[hbt]{0,59\textwidth}
+  \begin{minipage}[hbt]{0,49\textwidth}
+    %\begin{center}
+      %\includegraphics[width=6cm]{img/formal_b.png}
+    %\end{center}
+
     \begin{center}
-      \includegraphics[width=6cm]{img/formal_b.png}
+      \begin{tikzpicture}
+        %http://tex.stackexchange.com/questions/6364/how-to-plot-polygon-using-tikz
+        %\draw[very thin,color=gray] (-0.1,-0.1) grid (4.9,3.1);    
+        \draw[->] (-0.2,0) -- (2.7,0);
+        \draw[->] (0,-0.2) -- (0,3.2);
+
+        \draw[dashed,color=black,thick] (-0.2,0) -- (0,0) -- (2,1)
+          node[below] {$\frac{1}{2}$} -- node[right] {$N(P)$} (2,3.0);
+
+        \fill[blue,opacity=.3] (-0.2,3) rectangle (0,0);
+        \fill[blue,opacity=.3] (-0.2,3) rectangle (1,1);
+        \fill[blue,opacity=.3] (-0.2,3) rectangle (2,1);
+      \end{tikzpicture}
     \end{center}
   \end{minipage}
   %Es ist offensichtlich, dass $\slopes(P)=\{\frac{1}{2}\}$. 

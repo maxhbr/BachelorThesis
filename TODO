@@ -20,6 +20,7 @@ main.ps:w FJ(TODO,)30 b(\(3.)i(T)-8 b(re\033en\))p 3633 5576
 main.tex:%TODO: set titel variable??
 meromZsh.tex:% TODO; wie darf ich einen Meromorphen verändern, (das P verändern) ohne das
 meromZsh.tex:% TODO: \cM = \cM_K ... replace
+meromZsh.tex:  %TODO: korrekte benennung?
 meromZsh.tex:  %TODO: hier formal oder konvergent?
 meromZsh.tex:%TODO: reihenfolge bei sabbah anderst!!!
 meromZsh.tex:  %TODO: hier $\cM ??
@@ -30,7 +31,6 @@ meromZsh.tex:%TODO: beobachtung...
 meromZsh.tex:%TODO: differenz ist linear
 meromZsh.tex:  TODO: Ab hier formal???
 meromZsh.tex:  %TODO: bessere formulierung
-meromZsh.tex:  %TODO: y-Achse korrekt?
 meromZsh.tex:      %TODO: wie sind die genau definiert? invariant?
 meromZsh.tex:    \cite[5.1]{sabbah_cimpa90} %TODO: genauer
 meromZsh.tex:%TODO: titel: Operations on vector spaces with connection
