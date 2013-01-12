@@ -3,7 +3,13 @@
 % TODO: \cM = \cM_K ... replace
 
 \chapter{Der Meromorpher Zusammenhang}
-Quelle ist \cite{sabbah_cimpa90}
+%Quelle ist \cite{sabbah_cimpa90}
+\begin{comment}
+\begin{itemize}
+\item wofür sind die gut?
+\item wieso kommt man ursprünglich dazu
+\end{itemize}
+\end{comment}
 \section{Definition}
 
 \begin{comment}
@@ -284,33 +290,54 @@ ein regulär singuläres $P$ gibt, mit $\cM_K\cong\cD/\cD\cdot P$
 \end{defn}
 
 \begin{exmp}
-
 \label{exmp:Newton-Polygon}
-\cite[Bsp 5.3. 2.]{ZulaBarbara}
-Sei $P=t^4(t+1)\partial_t^4+t\partial_t^2+\frac{1}{t}\partial_t+1$ so kann
+\begin{enumerate}
+\item Ein besonders einfaches Beispiel ist $P_1=t\partial_t^2$.
+Es ist leicht abzulesen, dass
+\begin{align*}
+\textcolor{blue}k &= \textcolor{blue}2 
+& \textcolor{red}l &= \textcolor{red}1
+\end{align*}
+so dass
+\[
+H(P_1)=\Big( (\textcolor{blue}{2},\textcolor{red}{1}-\textcolor{blue}{2}) +
+\R_{\leq 0}\times \R_{\geq 0} \Big) =\{(u,v)\in\R^2|u\leq 2, v\geq -1\} \,.
+\]
+Dies führt zu dem Newton Polygon, welches in Abbildung
+\ref{fig:Newton-Polygon1} gezeichnet
+ist.
+\item \cite[Bsp 5.3. 2.]{ZulaBarbara}
+Sei $P_2=t^4(t+1)\partial_t^4+t\partial_t^2+\frac{1}{t}\partial_t+1$ so kann
 man daraus das entsprechende Newton Polygon konstruieren.
-Das Newton Polygon wurde in Abbildung \ref{fig:Newton-Polygon} visualisiert.
+Das Newton Polygon wurde in Abbildung \ref{fig:Newton-Polygon2} visualisiert.
+%
 \begin{figure}[h]
-\caption{Newton Polygon zu
-$P=t^4(t+1)\partial_t^4+t\partial_t^2+\frac{1}{t}\partial_t+1$}
+%TODO: nummer aus der referenz ist falsch
 \label{fig:Newton-Polygon}
+\caption{Zu Beispiel \ref{exmp:Newton-Polygon}}
 \begin{center}
+%\caption{Newton Polygon zu $P$ und $\rho^+P$}
+\subfloat[Newton Polygon zu $P_1$]{
+\label{fig:Newton-Polygon1}
 \begin{tikzpicture}
-%TODO: achsbeschriftung?
-%\draw[very thin,color=gray,opacity=.2] (-0.4,-2.1) grid (4.6,2.1);
-\draw[->] (-0.5,0) -- (4.7,0);
-\draw[->] (0,-2.2) -- (0,2.2);
-
-\draw[color=black,thick] (-0.5,-2) -- (1,-2) -- (4,0) --
-node[right] {$N(P)$} (4,2);
-
-\fill[blue,opacity=.3] (-0.5,2) rectangle (0,0);
-\fill[blue,opacity=.3] (-0.5,2) rectangle (4,0);
-\fill[blue,opacity=.3] (-0.5,2) rectangle (2,-1);
-\fill[blue,opacity=.3] (-0.5,2) rectangle (1,-2);
+\def\myPoints{{(2,-1)}}
+\def\myPath{(-.5,-1) -- (2,-1) -- (2,2)}
+\myNewtonPlot{\myPoints}{\myPath}{4}{-2}{2}{$N(P_1)$}
 \end{tikzpicture}
+}
+\quad
+\subfloat[Newton Polygon zu $P_2$]{
+\label{fig:Newton-Polygon2}
+\begin{tikzpicture} %[scale=1.5]
+\def\myPoints{{(0,0)}, {(1,-2)}, {(2,-1)}, {(4,0)}}
+\def\myPath{(-.5,-2) -- (1,-2) -- (4,0) -- (4,2)}
+\myNewtonPlot{\myPoints}{\myPath}{4}{-2}{2}{$N(P_2)$}
+\end{tikzpicture}
+}
 \end{center}
 \end{figure}
+%
+\end{enumerate}
 \end{exmp}
 
 \begin{comment}
@@ -424,34 +451,19 @@ $ \slopes(\rho^+P)=\{1\} $ (siehe Abbildung \ref{fig:Pull-Back2}).
 %\caption{Newton Polygon zu $P$ und $\rho^+P$}
 \subfloat[Newton Polygon zu $P$]{
   \label{fig:Pull-Back1}
-  \begin{tikzpicture}
-  %http://tex.stackexchange.com/questions/6364/how-to-plot-polygon-using-tikz
-  %\draw[very thin,color=gray] (-0.1,-0.1) grid (4.9,3.1);
-  \draw[->] (-0.5,0) -- (2.7,0);
-  \draw[->] (0,-0.2) -- (0,3.2);
-
-  \draw[color=black,thick] (-0.5,0) -- (0,0) -- (2,1) --
-  node[right] {$N(P)$} (2,3.0);
-
-  \fill[blue,opacity=.3] (-0.5,3) rectangle (0,0);
-  \fill[blue,opacity=.3] (-0.5,3) rectangle (1,1);
-  \fill[blue,opacity=.3] (-0.5,3) rectangle (2,1);
+  \begin{tikzpicture}[scale=1.5]
+  \def\myPoints{{(0,0)}, {(2,1)}}
+  \def\myPath{(-.5,0) -- (0,0) -- (2,1) -- (2,3)}
+  \myNewtonPlot{\myPoints}{\myPath}{2}{0}{3}{$N(P)$}
   \end{tikzpicture}
 }
 \quad
 \subfloat[Newton Polygon zu $\rho^+P$]{
   \label{fig:Pull-Back2}
-  \begin{tikzpicture}
-  %\draw[very thin,color=gray] (-0.1,-0.1) grid (4.9,3.1);
-  \draw[->] (-0.5,0) -- (2.7,0);
-  \draw[->] (0,-0.2) -- (0,3.2);
-
-  \draw[color=black,thick] (-0.5,0) -- (0,0) -- (2,2) --
-  node[right] {$N(\rho^+P)$} (2,3.0);
-
-  \fill[blue,opacity=.3] (-0.5,3) rectangle (0,0);
-  \fill[blue,opacity=.3] (-0.5,3) rectangle (1,2);
-  \fill[blue,opacity=.3] (-0.5,3) rectangle (2,2);
+  \begin{tikzpicture}[scale=1.5]
+  \def\myPoints{{(0,0)}, {(2,2)}}
+  \def\myPath{(-.5,0) -- (0,0) -- (2,2) -- (2,3)}
+  \myNewtonPlot{\myPoints}{\myPath}{2}{0}{3}{$N(\rho^+P)$}
   \end{tikzpicture}
 }
 \end{center}
@@ -504,31 +516,19 @@ Abbildung \ref{fig:Push-Forward2})
 %\caption{Newton Polygon zu $P$ und $\rho^+P$}
 \subfloat[Newton Polygon zu $P$]{
   \label{fig:Push-Forward1}
-  \begin{tikzpicture}
-  %\draw[very thin,color=gray] (-0.1,-0.1) grid (4.9,3.1);
-  \draw[->] (-0.5,0) -- (1.7,0);
-  \draw[->] (0,-3.2) -- (0,1.2);
-
-  \draw[color=black,thick] (-0.5,-3) -- (0,-3) -- (1,-1)
-  node[right] {$N(P)$} -- (1,1);
-
-  \fill[blue,opacity=.3] (-0.5,1) rectangle (0,-3);
-  \fill[blue,opacity=.3] (-0.5,1) rectangle (1,-1);
+  \begin{tikzpicture}[scale=1.5]
+  \def\myPoints{{(0,-3)}, {(1,-1)}}
+  \def\myPath{(-.5,-3) -- (0,-3) -- (1,-1) -- (1,1)}
+  \myNewtonPlot{\myPoints}{\myPath}{1}{-3}{1}{$N(P)$}
   \end{tikzpicture}
 }
 \quad
 \subfloat[Newton Polygon zu $\rho_+P$]{
   \label{fig:Push-Forward2}
-  \begin{tikzpicture}
-  %\draw[very thin,color=gray] (-0.1,-0.1) grid (4.9,3.1);
-  \draw[->] (-0.5,0) -- (1.7,0);
-  \draw[->] (0,-3.2) -- (0,1.2);
-
-  \draw[color=black,thick] (-0.5,-2) -- (0,-2) -- (1,-1)
-  node[right] {$N(\rho_+P)$} -- (1,1);
-
-  \fill[blue,opacity=.3] (-0.5,1) rectangle (0,-2);
-  \fill[blue,opacity=.3] (-0.5,1) rectangle (1,-1);
+  \begin{tikzpicture}[scale=1.5]
+  \def\myPoints{{(0,-2)}, {(1,-1)}}
+  \def\myPath{(-.5,-2) -- (0,-2) -- (1,-1) -- (1,1)}
+  \myNewtonPlot{\myPoints}{\myPath}{1}{-3}{1}{$N(\rho_+P)$}
   \end{tikzpicture}
 }
 \end{center}

@@ -26,6 +26,8 @@
 \usepackage{verbatim}
 \usepackage{graphicx}
 
+\usepackage{listings}
+
 \allowdisplaybreaks
 
 %\usepackage{thmbox}
@@ -60,6 +62,16 @@
 \usetikzlibrary{matrix,arrows,decorations.pathmorphing}
 \usepackage{subfig}
 
+\newcommand{\myNewtonPlot}[6]{
+  \draw[color=black,thick] #2;
+  \foreach \pos in #1 { \fill[blue,opacity=.2] (-.5,#5) rectangle \pos; }
+  \draw[->] (-.5,0) -- (#3+.7,0);
+  \draw[->] (0,#4-.2) -- (0,#5+.2);
+  \draw (1,0) -- (1,-.2);
+  \draw (0,1) -- (-.2,1);
+  \foreach \pos in #1 { \node[draw,circle,inner sep=1.5pt,fill=white] at \pos {}; }
+  \node [below right] at (#3,#5/2) {#6};
+}
 
 \numberwithin{equation}{chapter}
 \numberwithin{figure}{chapter}
@@ -242,7 +254,9 @@
 \makebox[0pt]{\fbox{\scriptsize#2}}\\[-2pt]\text{\small$\downarrow$}\\[-3pt]%
 {\displaystyle#1}\end{array}}%
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \input{mydevelop.sty}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
@@ -273,15 +287,15 @@
 
 \input{levelt-turrittin.tex}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\part{Beispiele}
-\input{beispiele.tex}
+%\input{beispiele.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \appendix
 \addcontentsline{toc}{chapter}{Anhang}
 
-\input{lemma2-4-anhang.tex}
+\input{anhang-lemma2-4.tex}
+\input{anhang-plot-newton-polygon.tex}
 
 \nocite{*}
 %\bibliographystyle{dinat}
