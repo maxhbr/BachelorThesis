@@ -1,5 +1,5 @@
 % TODO; wie darf ich einen Meromorphen verändern, (das P verändern) ohne das
-  % sich effektiv was ändert?
+% sich effektiv was ändert?
 % TODO: \cM = \cM_K ... replace
 
 \chapter{Der Meromorpher Zusammenhang}
@@ -7,187 +7,187 @@ Quelle ist \cite{sabbah_cimpa90}
 \section{Definition}
 
 \begin{comment}
-  \begin{defn}[Meromorpher Zusammenhang]
-    Ein (\emph{Keim eines}) \emph{Meromorpher Zusammenhang} (an $x=0$)
-    $(\cM_K,\partial)$ besteht aus folgenden Daten:
-    \begin{itemize}
-      \item $\cM_K$, ein endlich dimensionaler $K$-Vr
-      \item einer $\C$-linearen Abbildung $\partial:\cM_K\rightarrow \cM_K$,
-        genannt \emph{Derivation}, welche für alle $f\in K$ und $u\in \cM_K$ die
-        \emph{Leibnitzregel}
-        \begin{equation}\label{eq:Leibnitzregel}
-          \partial(fu)=f'u+f\partial u
-        \end{equation}
-        erfüllen soll.
-    \end{itemize}
-  \end{defn}
+\begin{defn}[Meromorpher Zusammenhang]
+Ein (\emph{Keim eines}) \emph{Meromorpher Zusammenhang} (an $x=0$)
+$(\cM_K,\partial)$ besteht aus folgenden Daten:
+\begin{itemize}
+\item $\cM_K$, ein endlich dimensionaler $K$-Vr
+\item einer $\C$-linearen Abbildung $\partial:\cM_K\rightarrow \cM_K$,
+genannt \emph{Derivation}, welche für alle $f\in K$ und $u\in \cM_K$ die
+\emph{Leibnitzregel}
+\begin{equation}\label{eq:Leibnitzregel}
+\partial(fu)=f'u+f\partial u
+\end{equation}
+erfüllen soll.
+\end{itemize}
+\end{defn}
 \end{comment}
 
 %Besser?
 %Allgemeiner?
 \begin{defn}[Meromorpher Zusammenhang über $k$]
-  Ein (\emph{Keim eines}) \emph{Meromorpher Zusammenhang über $k$}
-  $(\cM_k,\partial)$ besteht aus folgenden Daten:
-  \begin{itemize}
-    \item $\cM_k$, ein endlich dimensionaler $k$-Vektor Raum
-    \item einer $\C$-linearen Abbildung $\partial:\cM_k\rightarrow \cM_k$,
-      genannt \emph{Derivation} oder \emph{Zusammenhang}, welche für alle $f\in k$ und $u\in \cM_k$ die
-      \emph{Leibnitzregel}
-      \begin{equation}\label{eq:Leibnitzregel}
-        \partial(fu)=f'u+f\partial u
-      \end{equation}
-      erfüllen soll.
-  \end{itemize}
-  Falls $k=K=\C(\{x\})$ reden wir von einem \emph{(konvergentem) Meromorphen
-  Zusammenhang} und falls $k=\hat K=\Cful$ reden wir von einem \emph{formalen
-  Meromorphen Zusammenhang}.
-  %TODO: korrekte benennung?
+Ein (\emph{Keim eines}) \emph{Meromorpher Zusammenhang über $k$}
+$(\cM_k,\partial)$ besteht aus folgenden Daten:
+\begin{itemize}
+\item $\cM_k$, ein endlich dimensionaler $k$-Vektor Raum
+\item einer $\C$-linearen Abbildung $\partial:\cM_k\rightarrow \cM_k$,
+genannt \emph{Derivation} oder \emph{Zusammenhang}, welche für alle $f\in k$ und $u\in \cM_k$ die
+\emph{Leibnitzregel}
+\begin{equation}\label{eq:Leibnitzregel}
+\partial(fu)=f'u+f\partial u
+\end{equation}
+erfüllen soll.
+\end{itemize}
+Falls $k=K=\C(\{x\})$ reden wir von einem \emph{(konvergentem) Meromorphen
+Zusammenhang} und falls $k=\hat K=\Cful$ reden wir von einem \emph{formalen
+Meromorphen Zusammenhang}.
+%TODO: korrekte benennung?
 \end{defn}
 \begin{bem}
-  Ist $\cM_K$ ein Meromorphen Zusammenhang, so erhalte einen formalen
-  Meromorphen Zusammenhang durch
-  \[ \cM_K\otimes_{K}\hat K =: \cM_{\hat K} \,. \]
+Ist $\cM_K$ ein Meromorphen Zusammenhang, so erhalte einen formalen
+Meromorphen Zusammenhang durch
+\[ \cM_K\otimes_{K}\hat K =: \cM_{\hat K} \,. \]
 \end{bem}
 
 \begin{bem}
-  \begin{enumerate}
-    \item Später wird man auf die Angabe von $\partial$ verichten und einfach
-      $\cM_K$ als den Meromorphen Zusammenhang bezeichnen.
-    \item Wir betrachten hier Meromorphe Zusammenhänge an $x=0$ als
-      Singularität.
-  \end{enumerate}
+\begin{enumerate}
+\item Später wird man auf die Angabe von $\partial$ verichten und einfach
+$\cM_K$ als den Meromorphen Zusammenhang bezeichnen.
+\item Wir betrachten hier Meromorphe Zusammenhänge an $x=0$ als
+Singularität.
+\end{enumerate}
 \end{bem}
 
 \begin{defn}
-  \cite[1.a]{sabbah_Fourier-local}
-  Sei $\phi\in\C(\!(u)\!)$.
-  Wir schreiben $\sE^\phi$ für den (formalen) Rang 1 Vektorraum $\C(\!(u)\!)$
-  ausgestattet mit dem Zusammenhang $\nabla=\partial_u+\partial_u\phi$, im
-  speziellen also $\nabla_{\partial_u}1=\partial_u1=\phi'$.\\
-  \begin{comment}
-    Also
-    \begin{align*}
-      \sE^\phi=\Cful & \overset{\partial_u}{\rightarrow} \Cful\\
-      1             & \mapsto \phi'(u)\\
-      f(u)          & \mapsto f'(u)+f(u)\phi'(u)\\
-    \end{align*}
-  \end{comment}
+\cite[1.a]{sabbah_Fourier-local}
+Sei $\phi\in\C(\!(u)\!)$.
+Wir schreiben $\sE^\phi$ für den (formalen) Rang 1 Vektorraum $\C(\!(u)\!)$
+ausgestattet mit dem Zusammenhang $\nabla=\partial_u+\partial_u\phi$, im
+speziellen also $\nabla_{\partial_u}1=\partial_u1=\phi'$.\\
+\begin{comment}
+Also
+\begin{align*}
+\sE^\phi=\Cful & \overset{\partial_u}{\rightarrow} \Cful\\
+1              & \mapsto \phi'(u)\\
+f(u)           & \mapsto f'(u)+f(u)\phi'(u)\\
+\end{align*}
+\end{comment}
 \end{defn}
 
 \begin{bem}
-  \cite[1.a]{sabbah_Fourier-local}
-  Es gilt $\sE^\phi\cong\sE^\psi$ genau dann wenn $\phi\equiv\psi \mod \Cfu$.
-  %TODO: hier formal oder konvergent?
+\cite[1.a]{sabbah_Fourier-local}
+Es gilt $\sE^\phi\cong\sE^\psi$ genau dann wenn $\phi\equiv\psi \mod \Cfu$.
+%TODO: hier formal oder konvergent?
 \end{bem}
 
 \section{Eigenschaften}
 %Hier nun einige Eigenschaften Meromorpher Zusammenhänge.
 \begin{comment}
-  \cite[4.2]{sabbah_cimpa90}
-  Let $\cM$ be a left $\cD$-module. First we consider it only as a
-  $\C\{x\}$-module and let $\cM[x^{-1}]$ be the localized module.
+\cite[4.2]{sabbah_cimpa90}
+Let $\cM$ be a left $\cD$-module. First we consider it only as a
+$\C\{x\}$-module and let $\cM[x^{-1}]$ be the localized module.
 \end{comment}
 
 %TODO: reihenfolge bei sabbah anderst!!!
 \begin{lem}[Lemma vom zyklischen Vektor]
-  \cite[Thm 4.3.3]{sabbah_cimpa90}
-  \cite[Satz 4.8]{ZulaBarbara}
-  Sei $\cM_K$ ein Meromorpher Zusammenhang. Es Existiert ein Element
-  $m\in\cM_K$ und eine ganze Zahl $d$ so dass
-  $m,\partial_tm,\dots,\partial_t^{d-1}m$ eine $K$-Basis von $\cM_K$ ist.
+\cite[Thm 4.3.3]{sabbah_cimpa90}
+\cite[Satz 4.8]{ZulaBarbara}
+Sei $\cM_K$ ein Meromorpher Zusammenhang. Es Existiert ein Element
+$m\in\cM_K$ und eine ganze Zahl $d$ so dass
+$m,\partial_tm,\dots,\partial_t^{d-1}m$ eine $K$-Basis von $\cM_K$ ist.
 \end{lem}
 \begin{proof}
-  \cite[Satz 4.8]{ZulaBarbara}
+\cite[Satz 4.8]{ZulaBarbara}
 \end{proof}
 
 \begin{thm}
-  \cite[Thm 4.3.2]{sabbah_cimpa90}
-  Ein Meromorpher Zusammenhang bestimmt ein $\cD$-Modul
-  und andersherum.
+\cite[Thm 4.3.2]{sabbah_cimpa90}
+Ein Meromorpher Zusammenhang bestimmt ein $\cD$-Modul
+und andersherum.
 \end{thm}
 \begin{proof}
-  \cite[Thm 4.3.2]{sabbah_cimpa90}
+\cite[Thm 4.3.2]{sabbah_cimpa90}
 \end{proof}
 
 \begin{lem}
-  \cite[Satz 4.12]{ZulaBarbara}
-  \cite[Thm 4.3.2]{sabbah_cimpa90}
-  Ist $\cM_K$ ein Meromorpher Zusammenhang, dann existiert ein $P\in\cD_K$ so dass
-  $\cM_K\cong\cD_K/\cD_K\cdot P$.
+\cite[Satz 4.12]{ZulaBarbara}
+\cite[Thm 4.3.2]{sabbah_cimpa90}
+Ist $\cM_K$ ein Meromorpher Zusammenhang, dann existiert ein $P\in\cD_K$ so dass
+$\cM_K\cong\cD_K/\cD_K\cdot P$.
 \end{lem}
 \begin{proof}
-  \cite[Satz 4.12]{ZulaBarbara}
+\cite[Satz 4.12]{ZulaBarbara}
 \end{proof}
 \begin{comment}
-  \begin{rem}
-    \cite[Proof of Theorem 5.4.7]{sabbah_cimpa90}
-    \[
-      \dim_{\hat K}\cM_{\hat K}
-      =\deg P \mbox{ wenn } \cM_{\hat K}=\cD/\cD\cdot P
-    \]
-  \end{rem}
+\begin{rem}
+\cite[Proof of Theorem 5.4.7]{sabbah_cimpa90}
+\[
+\dim_{\hat K}\cM_{\hat K}
+=\deg P \mbox{ wenn } \cM_{\hat K}=\cD/\cD\cdot P
+\]
+\end{rem}
 \end{comment}
 
 \begin{lem}
-  %TODO: hier $\cM ??
-  Sei $(\cM_K,\partial)$ ein gegebener Meromorpher Zusammenhang, und $\phi$ ein
-  Basisisomorphismus von $K^r$ nach $\cM_K$, also in der Situation
-  \begin{center}
-    \begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
-    \matrix (m) [
-      matrix of math nodes
-      , row sep=3em
-      , column sep=3em
-      %, text height=3em
-      %, text depth=0.25em
-      ]
-    {
-      \cM_K & \cM_K \\
-      K^r & K^r \\
-    };
-      \path[->,font=\scriptsize,>=angle 90]
-      (m-1-1) edge node[above]{$\partial$} (m-1-2)
-      (m-2-1) edge node[above]{$\phi^{-1}\partial\phi$} (m-2-2)
-      ;
-      %TODO: make this harpoon arrows
-      \path[->,font=\scriptsize,>=angle 90]
-      (m-2-1) edge node[descr]{$\cong$} node[right]{$\phi$} (m-1-1)
-      (m-2-2) edge node[descr]{$\cong$} node[left]{$\phi$} (m-1-2)
-      ;
+%TODO: hier $\cM ??
+Sei $(\cM_K,\partial)$ ein gegebener Meromorpher Zusammenhang, und $\phi$ ein
+Basisisomorphismus von $K^r$ nach $\cM_K$, also in der Situation
+\begin{center}
+\begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
+\matrix (m) [
+  matrix of math nodes
+  , row sep=3em
+  , column sep=3em
+  %, text height=3em
+  %, text depth=0.25em
+]
+{
+  \cM_K & \cM_K \\
+  K^r   & K^r \\
+};
+\path[->,font=\scriptsize,>=angle 90]
+(m-1-1) edge node[above]{$\partial$} (m-1-2)
+(m-2-1) edge node[above]{$\phi^{-1}\partial\phi$} (m-2-2)
+;
+%TODO: make this harpoon arrows
+\path[->,font=\scriptsize,>=angle 90]
+(m-2-1) edge node[descr]{$\cong$} node[right]{$\phi$} (m-1-1)
+(m-2-2) edge node[descr]{$\cong$} node[left]{$\phi$} (m-1-2)
+;
 
-      \path[>=stealth,|->]
-      ;
-    \end{tikzpicture}
-  \end{center}
-  gilt: $(K^r,\phi^{-1}\partial\phi)$ ist ebenfalls ein Meromorpher Zusammenhang.
+\path[>=stealth,|->]
+;
+\end{tikzpicture}
+\end{center}
+gilt: $(K^r,\phi^{-1}\partial\phi)$ ist ebenfalls ein Meromorpher Zusammenhang.
 \end{lem}
 \begin{proof}
-  TODO, (3. Treffen)
+TODO, (3. Treffen)
 \end{proof}
 
 \begin{lem} Sei $\cM_K\cong K^r$ ein endlich dimensionaler $K$-Vektor Raum mit
-  $\partial_1$ und $\partial_2$ zwei darauf definierte Derivationen. So gilt,
-  die differenz zweier Derivationen ist $K$-linear.
+$\partial_1$ und $\partial_2$ zwei darauf definierte Derivationen. So gilt,
+die differenz zweier Derivationen ist $K$-linear.
 \end{lem}
 \begin{proof}
-  Seien $\partial_1$ und $\partial_2$ zwei Derivationen auf $\cM_K$.
-  Da $\partial_1$ und $\partial_2$ $\C$-linear, ist $\partial_1-\partial_2$
-  $\C$-linear, also muss nur noch gezeigt werden, dass
-  $(\partial_1-\partial_2)(fu)=f\cdot(\partial_1-\partial_2)(u)$ $\forall f\in
-  K$ und $u\in\cM_K$ gilt.\\
-  %TODO: wieso gilt das?
-  \begin{align*}
-    (\partial_1-\partial_2)(fu) &= \partial_1(fu)-\partial_2(fu)\\
-    &= f'u+f\partial_1u-f'u-f\partial_2u\\
-    &= \underset{=0}{\underbrace{f'u-f'u}}+f\cdot(\partial_1u-\partial_2u)\\
-    &= f\cdot(\partial_1-\partial_2)(u)\\
-  \end{align*}
+Seien $\partial_1$ und $\partial_2$ zwei Derivationen auf $\cM_K$.
+Da $\partial_1$ und $\partial_2$ $\C$-linear, ist $\partial_1-\partial_2$
+$\C$-linear, also muss nur noch gezeigt werden, dass
+$(\partial_1-\partial_2)(fu)=f\cdot(\partial_1-\partial_2)(u)$ $\forall f\in
+K$ und $u\in\cM_K$ gilt.\\
+%TODO: wieso gilt das?
+\begin{align*}
+(\partial_1-\partial_2)(fu) &= \partial_1(fu)-\partial_2(fu)\\
+&= f'u+f\partial_1u-f'u-f\partial_2u\\
+&= \underset{=0}{\underbrace{f'u-f'u}}+f\cdot(\partial_1u-\partial_2u)\\
+&= f\cdot(\partial_1-\partial_2)(u)\\
+\end{align*}
 \end{proof}
 \begin{cor}
-  Es sei $(K^r,\partial)$ ein Meromorpher Zusammenhang.  So ist
-  $\frac{d}{dz}-\partial:K^r\rightarrow K^r$ $K$-linear, also es existiert eine
-  Matrix $A\in M(r\times r,K)$ mit $\frac{d}{dz}-\partial=A$, also ist
-  $\partial=\frac{d}{dz}-A$.
+Es sei $(K^r,\partial)$ ein Meromorpher Zusammenhang.  So ist
+$\frac{d}{dz}-\partial:K^r\rightarrow K^r$ $K$-linear, also es existiert eine
+Matrix $A\in M(r\times r,K)$ mit $\frac{d}{dz}-\partial=A$, also ist
+$\partial=\frac{d}{dz}-A$.
 \end{cor}
 
 %TODO: beobachtung...
@@ -195,62 +195,62 @@ Quelle ist \cite{sabbah_cimpa90}
 %TODO: differenz ist linear
 
 \begin{defn}[Transformationsformel]
-  In der Situation
+In der Situation
 
-  \begin{center}
-    \begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
-    \matrix (m) [
-      matrix of math nodes
-      , row sep=3em
-      , column sep=3em
-      %, text height=3em
-      %, text depth=0.25em
-      ]
-    {
-      K^r & & & K^r \\
-       & M & M & \\
-      K^r & & & K^r \\
-    };
-      \path[->,font=\scriptsize,>=angle 90]
-      (m-1-1) edge node[descr]{$\cong$} node[above]{$\phi$} (m-2-2)
-      (m-3-1) edge node[descr]{$\cong$} node[above]{$\psi$} (m-2-2)
-      (m-1-4) edge node[descr]{$\cong$} node[above]{$\phi$} (m-2-3)
-      (m-3-4) edge node[descr]{$\cong$} node[above]{$\psi$} (m-2-3)
+\begin{center}
+\begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
+\matrix (m) [
+  matrix of math nodes
+  , row sep=3em
+  , column sep=3em
+  %, text height=3em
+  %, text depth=0.25em
+]
+{
+  K^r &   &   & K^r \\
+      & M & M & \\
+  K^r &   &   & K^r \\
+};
+\path[->,font=\scriptsize,>=angle 90]
+(m-1-1) edge node[descr]{$\cong$} node[above]{$\phi$} (m-2-2)
+(m-3-1) edge node[descr]{$\cong$} node[above]{$\psi$} (m-2-2)
+(m-1-4) edge node[descr]{$\cong$} node[above]{$\phi$} (m-2-3)
+(m-3-4) edge node[descr]{$\cong$} node[above]{$\psi$} (m-2-3)
 
-      (m-2-2) edge node[above]{$\partial$} (m-2-3)
+(m-2-2) edge node[above]{$\partial$} (m-2-3)
 
-      (m-1-1) edge node[above]{$\frac{d}{dz}+A$} (m-1-4)
-      (m-3-1) edge node[above]{$\frac{d}{dz}+B$} (m-3-4)
+(m-1-1) edge node[above]{$\frac{d}{dz}+A$} (m-1-4)
+(m-3-1) edge node[above]{$\frac{d}{dz}+B$} (m-3-4)
 
-      (m-3-1) edge node[descr]{$\cong$} node[right]{$T$} (m-1-1)
-      (m-3-4) edge node[descr]{$\cong$} node[left]{$T$} (m-1-4)
-      ;
+(m-3-1) edge node[descr]{$\cong$} node[right]{$T$} (m-1-1)
+(m-3-4) edge node[descr]{$\cong$} node[left]{$T$} (m-1-4)
+;
 
-      \path[>=stealth,|->]
-      ;
-    \end{tikzpicture}
-  \end{center}
-  mit $\phi,\psi$ und $T$ $K$-Linear und $\partial,(\frac{d}{dz}+A)$ und
-  $(\frac{d}{dz}+B)$ $\C$-Linear, gilt:\\
-  Der Merom. Zush. $\frac{d}{dz}+A$ auf $K^r$ wird durch Basiswechsel $T\in
-  GL(r,K)$ zu
-  \[
-    \frac{d}{dz}+(T^{-1}\cdot T'+T^{-1}AT) = \frac{d}{dz}+B
-  \]
+\path[>=stealth,|->]
+;
+\end{tikzpicture}
+\end{center}
+mit $\phi,\psi$ und $T$ $K$-Linear und $\partial,(\frac{d}{dz}+A)$ und
+$(\frac{d}{dz}+B)$ $\C$-Linear, gilt:\\
+Der Merom. Zush. $\frac{d}{dz}+A$ auf $K^r$ wird durch Basiswechsel $T\in
+GL(r,K)$ zu
+\[
+\frac{d}{dz}+(T^{-1}\cdot T'+T^{-1}AT) = \frac{d}{dz}+B
+\]
 \end{defn}
 \begin{defn}[Differenziell Äquivalent]
-  Man nennt $A$ und $B$ \emph{differenziell Äquivalent} ($A\sim B$) genau
-  dann, wenn es ein $T\in
-  GL(r,K)$ gibt, mit $B=T^{-1}\cdot T'+T^{-1}AT$.
+Man nennt $A$ und $B$ \emph{differenziell Äquivalent} ($A\sim B$) genau
+dann, wenn es ein $T\in
+GL(r,K)$ gibt, mit $B=T^{-1}\cdot T'+T^{-1}AT$.
 \end{defn}
 
 \begin{comment}
-  $1=TT^{-1}$ $\rightsquigarrow$ $T'T^{-1}+T(T^{-1})'=0$\\
-  $1=T^{-1}T$ $\rightsquigarrow$ $(T^{-1})'T+T^{-1}T'=0$
+$1=TT^{-1}$ $\rightsquigarrow$ $T'T^{-1}+T(T^{-1})'=0$\\
+$1=T^{-1}T$ $\rightsquigarrow$ $(T^{-1})'T+T^{-1}T'=0$
 \end{comment}
 
 \begin{comment}
-  TODO: Ab hier formal???
+TODO: Ab hier formal???
 \end{comment}
 
 \section{Newton Polygon} % ist dies eine Invariante??
@@ -261,68 +261,70 @@ mit $\alpha_{kl}\in\C$ schreiben und betrachte das zu $P$ dazugehörige
 \[ H(P):=\underset{k,l\mbox{ mit }\alpha_{kl}\neq0}{\bigcup}\Big( (k,l-k) +
 \R_{\leq 0}\times \R_{\geq 0} \Big) \subset \R^2 \,. \]
 \begin{comment}
-  Bei Sabbah: $H\subset \N\times\Z$ und dann konvexe Hülle davon in $\R^2$
+Bei Sabbah: $H\subset \N\times\Z$ und dann konvexe Hülle davon in $\R^2$
 \end{comment}
 
 \begin{defn} % aus der zula
-  Das Randpolygon von $\conv(H(P))$ heißt das \emph{Newton Polygon} von $P$ und
-  wird geschrieben als $N(P)$.
+Das Randpolygon von $\conv(H(P))$ heißt das \emph{Newton Polygon} von $P$ und
+wird geschrieben als $N(P)$.
 \end{defn}
 
 \begin{defn} % aus der zula
-  Die Menge $\slopes(P)$ sind die nicht-vertikalen Steigungen von $N(P)$, die
-  sich echt rechts von $\{0\}\times\R$ befinden.\\ % der $y$-Achse
-  %TODO: bessere formulierung
-  \begin{itemize}
-    \item P heißt \emph{regulär singulär} $:\Leftrightarrow$
-      $\slopes{P}=\{0\}$, sonst \emph{irregulär singulär}.
-    \item Schreibe $\cP(\cM_K)$ für die Menge der zu $\cM_K$ gehörigen slopes
-      %TODO: wie sind die genau definiert? invariant?
-    \item Ein meromorpher Zusammenhang $\cM_K$ heißt regulär singulär, falls es
-      ein regulär singuläres $P$ gibt, mit $\cM_K\cong\cD/\cD\cdot P$
-  \end{itemize}
+Die Menge $\slopes(P)$ sind die nicht-vertikalen Steigungen von $N(P)$, die
+sich echt rechts von $\{0\}\times\R$ befinden.\\ % der $y$-Achse
+%TODO: bessere formulierung
+\begin{itemize}
+\item P heißt \emph{regulär singulär} $:\Leftrightarrow$
+$\slopes{P}=\{0\}$, sonst \emph{irregulär singulär}.
+\item Schreibe $\cP(\cM_K)$ für die Menge der zu $\cM_K$ gehörigen slopes
+%TODO: wie sind die genau definiert? invariant?
+\item Ein meromorpher Zusammenhang $\cM_K$ heißt regulär singulär, falls es
+ein regulär singuläres $P$ gibt, mit $\cM_K\cong\cD/\cD\cdot P$
+\end{itemize}
 \end{defn}
 
 \begin{exmp}
-  \label{exmp:Newton-Polygon}
-  \cite[Bsp 5.3. 2.]{ZulaBarbara}
-  Sei $P=t^4(t+1)\partial_t^4+t\partial_t^2+\frac{1}{t}\partial_t+1$ so kann
-  man daraus das entsprechende Newton Polygon konstruieren.
-  Das Newton Polygon wurde in Abbildung \ref{fig:Newton-Polygon} visualisiert.
-  \begin{figure}[h]
-    \caption{Newton Polygon zu
-      $P=t^4(t+1)\partial_t^4+t\partial_t^2+\frac{1}{t}\partial_t+1$}
-    \label{fig:Newton-Polygon}
-    \begin{center}
-      \begin{tikzpicture}
-        %\draw[very thin,color=gray,opacity=.2] (-0.4,-2.1) grid (4.6,2.1);
-        \draw[->] (-0.5,0) -- (4.7,0);
-        \draw[->] (0,-2.2) -- (0,2.2);
 
-        \draw[color=black,thick] (-0.5,-2) -- (1,-2) -- (4,0) --
-        node[right] {$N(P)$} (4,2);
+\label{exmp:Newton-Polygon}
+\cite[Bsp 5.3. 2.]{ZulaBarbara}
+Sei $P=t^4(t+1)\partial_t^4+t\partial_t^2+\frac{1}{t}\partial_t+1$ so kann
+man daraus das entsprechende Newton Polygon konstruieren.
+Das Newton Polygon wurde in Abbildung \ref{fig:Newton-Polygon} visualisiert.
+\begin{figure}[h]
+\caption{Newton Polygon zu
+$P=t^4(t+1)\partial_t^4+t\partial_t^2+\frac{1}{t}\partial_t+1$}
+\label{fig:Newton-Polygon}
+\begin{center}
+\begin{tikzpicture}
+%TODO: achsbeschriftung?
+%\draw[very thin,color=gray,opacity=.2] (-0.4,-2.1) grid (4.6,2.1);
+\draw[->] (-0.5,0) -- (4.7,0);
+\draw[->] (0,-2.2) -- (0,2.2);
 
-        \fill[blue,opacity=.3] (-0.5,2) rectangle (0,0);
-        \fill[blue,opacity=.3] (-0.5,2) rectangle (4,0);
-        \fill[blue,opacity=.3] (-0.5,2) rectangle (2,-1);
-        \fill[blue,opacity=.3] (-0.5,2) rectangle (1,-2);
-      \end{tikzpicture}
-    \end{center}
-  \end{figure}
+\draw[color=black,thick] (-0.5,-2) -- (1,-2) -- (4,0) --
+node[right] {$N(P)$} (4,2);
+
+\fill[blue,opacity=.3] (-0.5,2) rectangle (0,0);
+\fill[blue,opacity=.3] (-0.5,2) rectangle (4,0);
+\fill[blue,opacity=.3] (-0.5,2) rectangle (2,-1);
+\fill[blue,opacity=.3] (-0.5,2) rectangle (1,-2);
+\end{tikzpicture}
+\end{center}
+\end{figure}
 \end{exmp}
 
 \begin{comment}
 %TOTO: sabbah redet hier schon immer von \hat K, ist das nötig?
-  \begin{lem}
-    \cite[5.1]{sabbah_cimpa90} %TODO: genauer
-    \begin{enumerate}
-      \item $\cP(\cM_K)$ ist nicht Leer, wenn $\cM_K\neq\{0\}$
-      \item Wenn mann eine exacte Sequenz
-        $0\rightarrow{\cM'}_K\rightarrow{\cM}_K\rightarrow{\cM''}_K\rightarrow0$
-        hat, so gilt $\cP(\cM_K)=\cP({\cM'}_K)\cup\cP({\cM''}_K)$.
-      % es gibt noch 2 weitere punkte
-    \end{enumerate}
-  \end{lem}
+\begin{lem}
+\cite[5.1]{sabbah_cimpa90} %TODO: genauer
+\begin{enumerate}
+\item $\cP(\cM_K)$ ist nicht Leer, wenn $\cM_K\neq\{0\}$
+\item Wenn mann eine exacte Sequenz
+$0\rightarrow{\cM'}_K\rightarrow{\cM}_K\rightarrow{\cM''}_K\rightarrow0$
+hat, so gilt $\cP(\cM_K)=\cP({\cM'}_K)\cup\cP({\cM''}_K)$.
+% es gibt noch 2 weitere punkte
+\end{enumerate}
+\end{lem}
 \end{comment}
 
 %TODO: titel: Operations on vector spaces with connection
@@ -330,251 +332,251 @@ mit $\alpha_{kl}\in\C$ schreiben und betrachte das zu $P$ dazugehörige
 \section{pull-back und push-forward}
 %QUELLE: hottaetal.pdf Seite 21
 \begin{comment}
-  \cite[1.3]{hotta2007d}
+\cite[1.3]{hotta2007d}
 \end{comment}
 
 Nach \cite[1.a]{sabbah_Fourier-local}. Sei $\rho\in u\Cfu$ mit Bewertung
 $p\geq1$ und sei $\cM$ ein endlich dimensionaler $\C(\!(t)\!)$ Vektorraum
 ausgestattet mit einem Zusammenhang $\nabla$.
 \begin{defn}[pull-back]
-  \cite[1.a]{sabbah_Fourier-local}
-  Der \emph{pull-back (Inverses Bild)} $\rho^{+}\cM$ ist der Vektorraum
-  $\rho^{*}\cM=\C(\!(u)\!)\otimes_{\C(\!(t)\!)}\cM$ mit dem \emph{pull-back
-    Zusammenhang} $\rho^*\nabla$ definiert durch $\partial_u(1\otimes
-  m):=\rho'(u)\otimes\partial_tm$.
+\cite[1.a]{sabbah_Fourier-local}
+Der \emph{pull-back (Inverses Bild)} $\rho^{+}\cM$ ist der Vektorraum
+$\rho^{*}\cM=\C(\!(u)\!)\otimes_{\C(\!(t)\!)}\cM$ mit dem \emph{pull-back
+Zusammenhang} $\rho^*\nabla$ definiert durch $\partial_u(1\otimes
+m):=\rho'(u)\otimes\partial_tm$.
 \end{defn}
 
 \begin{exmp}\label{exmp:Pull-Back}
-  %from beispil/formal_b.tex
-  \begin{comment}
-    Beginne mit
-    \[ \tilde P=\tau\partial_\tau^2+2\partial_\tau-1 \]
-    und gehe von $\tau$ über zu $t$ via $\tau\rightarrow\frac{1}{t}$:\\
-    %TODO: rightarrow oder mapsto?
-    \begin{itemize}
-      \item was passiert mit der Ableitung $\partial_\tau$? Es gilt:
-        \[
-          \partial_\tau (f(\frac{1}{\tau}))=
-          \partial_t(f)\cdot (-\frac{1}{\tau^2})=
-          -\partial_t(f)\cdot t^2= %TODO: wegen klammerung?
-          - t^2 \cdot \partial_t(f)
-        \]
-        also:
-        \[
-          \partial_\tau=-t^2\partial_t
-          % stimmt das VZ?
-        \]
-      \item was ist $\partial_t(t^2\partial_t)$?
-        \begin{align*}
-          \partial_tt^2\partial_t &= (\partial_tt)t\partial_t\\
-          &= (t\partial_t-1)t\partial_t\\
-          &= t(\partial_tt)\partial_t-t\partial_t\\
-          &= t(t\partial_t-1)\partial_t-t\partial_t\\
-          &= t^2\partial_t^2-2t\partial_t\\
-        \end{align*}
-      \item was passiert mit $ \tilde P=\tau\partial_\tau^2+2\partial_\tau-1 $?
-        \begin{align*}
-          \tilde P &= \tau\partial_\tau^2+2\partial_\tau-1\\
-          &\overset{\tau\rightarrow\frac{1}{t}}{\longrightarrow}
-            \frac{1}{t}(-t^2\partial_t)^2+2(-t^2\partial_t)-1\\
-          &= \frac{1}{t}t^2(\partial_t(t^2\partial_t))-2t^2\partial_t-1\\
-          &= t(\partial_t(t^2\partial_t))-2t^2\partial_t-1\\
-          &= t(t^2\partial_t^2-2t\partial_t)-2t^2\partial_t-1\\
-          &= t^3\partial_t^2-4t^2\partial_t-1 =: P\\
-        \end{align*}
-    \end{itemize}
-  \end{comment}
+%from beispil/formal_b.tex
+\begin{comment}
+Beginne mit
+\[ \tilde P=\tau\partial_\tau^2+2\partial_\tau-1 \]
+und gehe von $\tau$ über zu $t$ via $\tau\rightarrow\frac{1}{t}$:\\
+%TODO: rightarrow oder mapsto?
+\begin{itemize}
+\item was passiert mit der Ableitung $\partial_\tau$? Es gilt:
+\[
+\partial_\tau (f(\frac{1}{\tau}))=
+\partial_t(f)\cdot (-\frac{1}{\tau^2})=
+-\partial_t(f)\cdot t^2= %TODO: wegen klammerung?
+- t^2 \cdot \partial_t(f)
+\]
+also:
+\[
+\partial_\tau=-t^2\partial_t
+% stimmt das VZ?
+\]
+\item was ist $\partial_t(t^2\partial_t)$?
+\begin{align*}
+\partial_tt^2\partial_t &= (\partial_tt)t\partial_t\\
+&= (t\partial_t-1)t\partial_t\\
+&= t(\partial_tt)\partial_t-t\partial_t\\
+&= t(t\partial_t-1)\partial_t-t\partial_t\\
+&= t^2\partial_t^2-2t\partial_t\\
+\end{align*}
+\item was passiert mit $ \tilde P=\tau\partial_\tau^2+2\partial_\tau-1 $?
+\begin{align*}
+\tilde P &= \tau\partial_\tau^2+2\partial_\tau-1\\
+&\overset{\tau\rightarrow\frac{1}{t}}{\longrightarrow}
+\frac{1}{t}(-t^2\partial_t)^2+2(-t^2\partial_t)-1\\
+&= \frac{1}{t}t^2(\partial_t(t^2\partial_t))-2t^2\partial_t-1\\
+&= t(\partial_t(t^2\partial_t))-2t^2\partial_t-1\\
+&= t(t^2\partial_t^2-2t\partial_t)-2t^2\partial_t-1\\
+&= t^3\partial_t^2-4t^2\partial_t-1 =: P\\
+\end{align*}
+\end{itemize}
+\end{comment}
 
-  Wir wollen den zu $P= t^3\partial_t^2-4t^2\partial_t-1$ assoziierten
-  Meromorphen Zusammenhang
-  betrachten.
-    Es gilt $ \slopes(P)=\{\frac{1}{2}\} $ (siehe Abbildung
-    \ref{fig:Pull-Back1}).
-  %Es ist offensichtlich, dass $\slopes(P)=\{\frac{1}{2}\}$.
-  Wir wollen ganzzahlige slopes haben, also wende den pull-back
-  $\rho:t\rightarrow u^2$, welcher alle slopes mit 2 Multipliziert,
-  an.
-  %TODO: wieso multipliziert dieser mit 2?
-  Zunächst ein paar Nebenrechnungen:
-  \begin{align*}
-    \partial_t   &= \frac{1}{\rho'}\partial_u=\frac{1}{2u}\partial_u \\
-    \partial_t^2 &= (\frac{1}{2u}\partial_u)^2\\
-                 &= \frac{1}{2u}(-\frac{1}{2u^2}\partial_u +
-                   \frac{1}{2u}\partial_u^2) \\
-                 &= \frac{1}{4u^2}\partial_u^2-\frac{1}{4u^3}\partial_u \\
-  \end{align*}
-  also ergibt einsetzen
-  \begin{align*}
-    \rho^+P &= u^6(\frac{1}{4u^2}\partial_u^2-\frac{1}{4u^3}\partial_u)-
-              4u^{4}\frac{1}{2u}\partial_u-1\\
-            &= \frac{1}{4}u^4\partial_u^2-u^3\frac{1}{4u^3}\partial_u-
-              4u^{3}\frac{1}{2}\partial_u-1\\
-            &= \frac{1}{4}u^4\partial_u^2 -2\frac{1}{4}u^3\partial_u-1
-  \end{align*}
+Wir wollen den zu $P= t^3\partial_t^2-4t^2\partial_t-1$ assoziierten
+Meromorphen Zusammenhang
+betrachten.
+Es gilt $ \slopes(P)=\{\frac{1}{2}\} $ (siehe Abbildung
+\ref{fig:Pull-Back1}).
+%Es ist offensichtlich, dass $\slopes(P)=\{\frac{1}{2}\}$.
+Wir wollen ganzzahlige slopes haben, also wende den pull-back
+$\rho:t\rightarrow u^2$, welcher alle slopes mit 2 Multipliziert,
+an.
+%TODO: wieso multipliziert dieser mit 2?
+Zunächst ein paar Nebenrechnungen:
+\begin{align*}
+\partial_t   &= \frac{1}{\rho'}\partial_u=\frac{1}{2u}\partial_u \\
+\partial_t^2 &= (\frac{1}{2u}\partial_u)^2\\
+&= \frac{1}{2u}(-\frac{1}{2u^2}\partial_u +
+\frac{1}{2u}\partial_u^2) \\
+&= \frac{1}{4u^2}\partial_u^2-\frac{1}{4u^3}\partial_u \\
+\end{align*}
+also ergibt einsetzen
+\begin{align*}
+\rho^+P &= u^6(\frac{1}{4u^2}\partial_u^2-\frac{1}{4u^3}\partial_u)-
+4u^{4}\frac{1}{2u}\partial_u-1\\
+&= \frac{1}{4}u^4\partial_u^2-u^3\frac{1}{4u^3}\partial_u-
+4u^{3}\frac{1}{2}\partial_u-1\\
+&= \frac{1}{4}u^4\partial_u^2 -2\frac{1}{4}u^3\partial_u-1
+\end{align*}
 
-  Also ist$\rho^+P= \frac{1}{4}u^4\partial_u^2 -\frac{1}{2}u^3\partial_u-1$ mit
-  $ \slopes(\rho^+P)=\{1\} $ (siehe Abbildung \ref{fig:Pull-Back2}).
-  \begin{figure}[h]
-    %TODO: nummer aus der referenz ist falsch
-    \label{fig:Pull-Back}
-    \caption{Zu Beispiel \ref{exmp:Pull-Back}}
-    \begin{center}
-      %\caption{Newton Polygon zu $P$ und $\rho^+P$}
-      \subfloat[Newton Polygon zu $P$]{
-        \label{fig:Pull-Back1}
-        \begin{tikzpicture}
-          %http://tex.stackexchange.com/questions/6364/how-to-plot-polygon-using-tikz
-          %\draw[very thin,color=gray] (-0.1,-0.1) grid (4.9,3.1);
-          \draw[->] (-0.5,0) -- (2.7,0);
-          \draw[->] (0,-0.2) -- (0,3.2);
+Also ist$\rho^+P= \frac{1}{4}u^4\partial_u^2 -\frac{1}{2}u^3\partial_u-1$ mit
+$ \slopes(\rho^+P)=\{1\} $ (siehe Abbildung \ref{fig:Pull-Back2}).
+\begin{figure}[h]
+%TODO: nummer aus der referenz ist falsch
+\label{fig:Pull-Back}
+\caption{Zu Beispiel \ref{exmp:Pull-Back}}
+\begin{center}
+%\caption{Newton Polygon zu $P$ und $\rho^+P$}
+\subfloat[Newton Polygon zu $P$]{
+  \label{fig:Pull-Back1}
+  \begin{tikzpicture}
+  %http://tex.stackexchange.com/questions/6364/how-to-plot-polygon-using-tikz
+  %\draw[very thin,color=gray] (-0.1,-0.1) grid (4.9,3.1);
+  \draw[->] (-0.5,0) -- (2.7,0);
+  \draw[->] (0,-0.2) -- (0,3.2);
 
-          \draw[color=black,thick] (-0.5,0) -- (0,0) -- (2,1) --
-          node[right] {$N(P)$} (2,3.0);
+  \draw[color=black,thick] (-0.5,0) -- (0,0) -- (2,1) --
+  node[right] {$N(P)$} (2,3.0);
 
-          \fill[blue,opacity=.3] (-0.5,3) rectangle (0,0);
-          \fill[blue,opacity=.3] (-0.5,3) rectangle (1,1);
-          \fill[blue,opacity=.3] (-0.5,3) rectangle (2,1);
-        \end{tikzpicture}
-      }
-      \quad
-      \subfloat[Newton Polygon zu $\rho^+P$]{
-        \label{fig:Pull-Back2}
-        \begin{tikzpicture}
-          %\draw[very thin,color=gray] (-0.1,-0.1) grid (4.9,3.1);
-          \draw[->] (-0.5,0) -- (2.7,0);
-          \draw[->] (0,-0.2) -- (0,3.2);
+  \fill[blue,opacity=.3] (-0.5,3) rectangle (0,0);
+  \fill[blue,opacity=.3] (-0.5,3) rectangle (1,1);
+  \fill[blue,opacity=.3] (-0.5,3) rectangle (2,1);
+  \end{tikzpicture}
+}
+\quad
+\subfloat[Newton Polygon zu $\rho^+P$]{
+  \label{fig:Pull-Back2}
+  \begin{tikzpicture}
+  %\draw[very thin,color=gray] (-0.1,-0.1) grid (4.9,3.1);
+  \draw[->] (-0.5,0) -- (2.7,0);
+  \draw[->] (0,-0.2) -- (0,3.2);
 
-          \draw[color=black,thick] (-0.5,0) -- (0,0) -- (2,2) --
-          node[right] {$N(\rho^+P)$} (2,3.0);
+  \draw[color=black,thick] (-0.5,0) -- (0,0) -- (2,2) --
+  node[right] {$N(\rho^+P)$} (2,3.0);
 
-          \fill[blue,opacity=.3] (-0.5,3) rectangle (0,0);
-          \fill[blue,opacity=.3] (-0.5,3) rectangle (1,2);
-          \fill[blue,opacity=.3] (-0.5,3) rectangle (2,2);
-        \end{tikzpicture}
-      }
-    \end{center}
-  \end{figure}
+  \fill[blue,opacity=.3] (-0.5,3) rectangle (0,0);
+  \fill[blue,opacity=.3] (-0.5,3) rectangle (1,2);
+  \fill[blue,opacity=.3] (-0.5,3) rectangle (2,2);
+  \end{tikzpicture}
+}
+\end{center}
+\end{figure}
 \end{exmp}
 
 \begin{comment}
-  wie sieht die Wirkung vom pull-back zusammenhang aus?\\
-  $\partial_t(f(t))m)=...=\rho'(u)^{-1}\partial_uf(t)m$
+wie sieht die Wirkung vom pull-back zusammenhang aus?\\
+$\partial_t(f(t))m)=...=\rho'(u)^{-1}\partial_uf(t)m$
 \end{comment}
 
 Sei $\cN$ ein $\C(\!(u)\!)$-VR mit Verknüpfung, so definiere den push-forward
 wie folgt.
 \begin{defn}[push-forward]
-  \cite[1.a]{sabbah_Fourier-local}
-  Der \emph{push-forward (Direktes Bild)} $\rho_+\cN$ ist
-  \begin{itemize}
-    \item der $\C(\!(t)\!)$-VR $\rho_*\cN$ ist der $\C$-Vektor Raum $\cN$ mit
-      der $\C(\!(t)\!)$-Vektor Raum Struktur durch $f(t)\cdot m:=f(\rho(t))m$
-      % für alle m aus ???
-    \item mit der Wirkung $\partial_t$ beschrieben durch
-      $\rho'(u)^{-1}\partial_u$.
-  \end{itemize}
+\cite[1.a]{sabbah_Fourier-local}
+Der \emph{push-forward (Direktes Bild)} $\rho_+\cN$ ist
+\begin{itemize}
+\item der $\C(\!(t)\!)$-VR $\rho_*\cN$ ist der $\C$-Vektor Raum $\cN$ mit
+der $\C(\!(t)\!)$-Vektor Raum Struktur durch $f(t)\cdot m:=f(\rho(t))m$
+% für alle m aus ???
+\item mit der Wirkung $\partial_t$ beschrieben durch
+$\rho'(u)^{-1}\partial_u$.
+\end{itemize}
 \end{defn}
 
 \begin{exmp}[push-forward]\label{exmp:Push-Forward}
-  Für $\rho:t\rightarrow u^2$, $\phi=\frac{1}{u^2}$ betrachte
-  \begin{align*}
-    \sE^\phi &\cong\hat\cD/\hat\cD\cdot(\partial_u+\partial_t\frac{1}{u^2})\\
-    &= \hat\cD/\hat\cD\cdot
-    (\underset{=:P}{\underbrace{\partial_u+\frac{2}{u^3}}})
-  \end{align*}
-  %also $P=\partial_u+\frac{2}{u^3}$
-  mit $ \slopes(P)=\{2\} $ (siehe Abbildung \ref{fig:Push-Forward1}).
-  Bilde nun das Direkte Bild über $\rho$, betrachte dazu
-  \begin{align*}
-    \partial_u+\frac{2}{u^3} &= 2u(\frac{1}{2u}\partial_u+\frac{1}{u^4}) \\
-    &= 2u(\rho'(u)^{-1}\partial_u+\frac{1}{u^4}) \\
-    &= 2u(\partial_t+\frac{1}{t^2})\\
-  \end{align*}
-  Also ist
-    $\rho_+\sE^\phi\cong \hat\cD/\hat\cD\cdot(\partial_t+\frac{1}{t^2})$
-  mit $\rho_+P=\partial_t+\frac{1}{t^2}$ und $ \slopes(\rho_+P)=\{1\} $ (siehe
-  Abbildung \ref{fig:Push-Forward2})
-  \begin{figure}[h]
-    %TODO: nummer aus der referenz ist falsch
-    \label{fig:Push-Forward}
-    \caption{Zu Beispiel \ref{exmp:Push-Forward}}
-    \begin{center}
-      %\caption{Newton Polygon zu $P$ und $\rho^+P$}
-      \subfloat[Newton Polygon zu $P$]{
-        \label{fig:Push-Forward1}
-        \begin{tikzpicture}
-          %\draw[very thin,color=gray] (-0.1,-0.1) grid (4.9,3.1);
-          \draw[->] (-0.5,0) -- (1.7,0);
-          \draw[->] (0,-3.2) -- (0,1.2);
+Für $\rho:t\rightarrow u^2$, $\phi=\frac{1}{u^2}$ betrachte
+\begin{align*}
+\sE^\phi &\cong\hat\cD/\hat\cD\cdot(\partial_u+\partial_t\frac{1}{u^2})\\
+&= \hat\cD/\hat\cD\cdot
+(\underset{=:P}{\underbrace{\partial_u+\frac{2}{u^3}}})
+\end{align*}
+%also $P=\partial_u+\frac{2}{u^3}$
+mit $ \slopes(P)=\{2\} $ (siehe Abbildung \ref{fig:Push-Forward1}).
+Bilde nun das Direkte Bild über $\rho$, betrachte dazu
+\begin{align*}
+\partial_u+\frac{2}{u^3} &= 2u(\frac{1}{2u}\partial_u+\frac{1}{u^4}) \\
+&= 2u(\rho'(u)^{-1}\partial_u+\frac{1}{u^4}) \\
+&= 2u(\partial_t+\frac{1}{t^2})\\
+\end{align*}
+Also ist
+$\rho_+\sE^\phi\cong \hat\cD/\hat\cD\cdot(\partial_t+\frac{1}{t^2})$
+mit $\rho_+P=\partial_t+\frac{1}{t^2}$ und $ \slopes(\rho_+P)=\{1\} $ (siehe
+Abbildung \ref{fig:Push-Forward2})
+\begin{figure}[h]
+%TODO: nummer aus der referenz ist falsch
+\label{fig:Push-Forward}
+\caption{Zu Beispiel \ref{exmp:Push-Forward}}
+\begin{center}
+%\caption{Newton Polygon zu $P$ und $\rho^+P$}
+\subfloat[Newton Polygon zu $P$]{
+  \label{fig:Push-Forward1}
+  \begin{tikzpicture}
+  %\draw[very thin,color=gray] (-0.1,-0.1) grid (4.9,3.1);
+  \draw[->] (-0.5,0) -- (1.7,0);
+  \draw[->] (0,-3.2) -- (0,1.2);
 
-          \draw[color=black,thick] (-0.5,-3) -- (0,-3) -- (1,-1)
-          node[right] {$N(P)$} -- (1,1);
+  \draw[color=black,thick] (-0.5,-3) -- (0,-3) -- (1,-1)
+  node[right] {$N(P)$} -- (1,1);
 
-          \fill[blue,opacity=.3] (-0.5,1) rectangle (0,-3);
-          \fill[blue,opacity=.3] (-0.5,1) rectangle (1,-1);
-        \end{tikzpicture}
-      }
-      \quad
-      \subfloat[Newton Polygon zu $\rho_+P$]{
-        \label{fig:Push-Forward2}
-        \begin{tikzpicture}
-          %\draw[very thin,color=gray] (-0.1,-0.1) grid (4.9,3.1);
-          \draw[->] (-0.5,0) -- (1.7,0);
-          \draw[->] (0,-3.2) -- (0,1.2);
+  \fill[blue,opacity=.3] (-0.5,1) rectangle (0,-3);
+  \fill[blue,opacity=.3] (-0.5,1) rectangle (1,-1);
+  \end{tikzpicture}
+}
+\quad
+\subfloat[Newton Polygon zu $\rho_+P$]{
+  \label{fig:Push-Forward2}
+  \begin{tikzpicture}
+  %\draw[very thin,color=gray] (-0.1,-0.1) grid (4.9,3.1);
+  \draw[->] (-0.5,0) -- (1.7,0);
+  \draw[->] (0,-3.2) -- (0,1.2);
 
-          \draw[color=black,thick] (-0.5,-2) -- (0,-2) -- (1,-1)
-          node[right] {$N(\rho_+P)$} -- (1,1);
+  \draw[color=black,thick] (-0.5,-2) -- (0,-2) -- (1,-1)
+  node[right] {$N(\rho_+P)$} -- (1,1);
 
-          \fill[blue,opacity=.3] (-0.5,1) rectangle (0,-2);
-          \fill[blue,opacity=.3] (-0.5,1) rectangle (1,-1);
-        \end{tikzpicture}
-      }
-    \end{center}
-  \end{figure}
+  \fill[blue,opacity=.3] (-0.5,1) rectangle (0,-2);
+  \fill[blue,opacity=.3] (-0.5,1) rectangle (1,-1);
+  \end{tikzpicture}
+}
+\end{center}
+\end{figure}
 \end{exmp}
 
 \begin{thm} \label{thm:Projektionsformel}
-  \cite[1.a]{sabbah_Fourier-local}
-  Es gilt die Projektionsformel
-  \begin{equation} \label{eq:Projektionsformel}
-    \rho_+(\cN\otimes_{\C(\!(u)\!)}\rho^+\cM) \cong
-    \rho_+\cN\otimes_{\C(\!(t)\!)}\cM\,.
-  \end{equation}
+\cite[1.a]{sabbah_Fourier-local}
+Es gilt die Projektionsformel
+\begin{equation} \label{eq:Projektionsformel}
+\rho_+(\cN\otimes_{\C(\!(u)\!)}\rho^+\cM) \cong
+\rho_+\cN\otimes_{\C(\!(t)\!)}\cM\,.
+\end{equation}
 \end{thm}
 \begin{proof}
-  \begin{align*}
-    \rho_+(\cN\otimes_{\C(\!(u)\!)}\rho^+\cM) &=
-    \rho_+(\cN\otimes_{\C(\!(u)\!)}(\C(\!(u)\!)\otimes_{\C(\!(t)\!)}\cM)) \\
-    &\cong \rho_+((\cN\otimes_{\C(\!(u)\!)}\C(\!(u)\!))
-    \otimes_{\C(\!(t)\!)}\cM) \\
-    &\cong \rho_+(\cN\otimes_{\C(\!(t)\!)}\cM) \\
-    &= \rho_+\cN\otimes_{\C(\!(t)\!)}\cM \\
-  \end{align*}
+\begin{align*}
+\rho_+(\cN\otimes_{\C(\!(u)\!)}\rho^+\cM) &=
+\rho_+(\cN\otimes_{\C(\!(u)\!)}(\C(\!(u)\!)\otimes_{\C(\!(t)\!)}\cM)) \\
+&\cong \rho_+((\cN\otimes_{\C(\!(u)\!)}\C(\!(u)\!))
+\otimes_{\C(\!(t)\!)}\cM) \\
+&\cong \rho_+(\cN\otimes_{\C(\!(t)\!)}\cM) \\
+&= \rho_+\cN\otimes_{\C(\!(t)\!)}\cM \\
+\end{align*}
 \end{proof}
 
 \begin{comment}
-  %von treffen ? auf seite 1
-  Sei $\rho(u)=u^p=t$ und $\phi(t)$ gegeben.
-  \begin{align*}
-    \rho^+\sE^{\phi(t)}&=\sE^{\phi(\rho(u))}=\sE^{\phi(u^p)}\\
-    \rho^+\rho_+\sE^{\phi(u)}
-      &=\underset{\zeta\in\mu_p}{\bigoplus}\sE^{\phi(\zeta\cdot u)}\\
-  \end{align*}
+%von treffen ? auf seite 1
+Sei $\rho(u)=u^p=t$ und $\phi(t)$ gegeben.
+\begin{align*}
+\rho^+\sE^{\phi(t)}&=\sE^{\phi(\rho(u))}=\sE^{\phi(u^p)}\\
+\rho^+\rho_+\sE^{\phi(u)}
+&=\underset{\zeta\in\mu_p}{\bigoplus}\sE^{\phi(\zeta\cdot u)}\\
+\end{align*}
 \end{comment}
 
 \section{Elementare Meromorphe Zusammenhänge}
 
 %TODO: auch nicht formal
 \begin{defn}[Elementarer formaler Zusammenhang]
-  \cite[Def 2.1]{sabbah_Fourier-local}
-  Zu einem gegebenen $\rho\in u\C\llbracket u\rrbracket$,
-  $\phi\in\C(\!(u)\!)$ und einem endlich dimensionalen
-  $\C(\!(u)\!)$-Vektorraum $R$ mit regulärem Zusammenhang $\nabla$,
-  definieren wir den assoziierten Elementaren endlich dimensionalen
-  $\C(\!(t)\!)$-Vektorraum mit Zusammenhang, durch:
-  \[
-    El(\rho,\phi,R)=\rho_+(\sE^\phi\otimes R)
-  \]
+\cite[Def 2.1]{sabbah_Fourier-local}
+Zu einem gegebenen $\rho\in u\C\llbracket u\rrbracket$,
+$\phi\in\C(\!(u)\!)$ und einem endlich dimensionalen
+$\C(\!(u)\!)$-Vektorraum $R$ mit regulärem Zusammenhang $\nabla$,
+definieren wir den assoziierten Elementaren endlich dimensionalen
+$\C(\!(t)\!)$-Vektorraum mit Zusammenhang, durch:
+\[
+El(\rho,\phi,R)=\rho_+(\sE^\phi\otimes R)
+\]
 \end{defn}
 
 %TODO: weitere Eigenschaften

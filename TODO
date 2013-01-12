@@ -20,26 +20,27 @@ main.ps:w FJ(TODO,)30 b(\(3.)i(T)-8 b(re\033en\))p 3633 5576
 main.tex:%TODO: set titel variable??
 meromZsh.tex:% TODO; wie darf ich einen Meromorphen verändern, (das P verändern) ohne das
 meromZsh.tex:% TODO: \cM = \cM_K ... replace
-meromZsh.tex:  %TODO: korrekte benennung?
-meromZsh.tex:  %TODO: hier formal oder konvergent?
+meromZsh.tex:%TODO: korrekte benennung?
+meromZsh.tex:%TODO: hier formal oder konvergent?
 meromZsh.tex:%TODO: reihenfolge bei sabbah anderst!!!
-meromZsh.tex:  %TODO: hier $\cM ??
-meromZsh.tex:      %TODO: make this harpoon arrows
-meromZsh.tex:  TODO, (3. Treffen)
-meromZsh.tex:  %TODO: wieso gilt das?
+meromZsh.tex:%TODO: hier $\cM ??
+meromZsh.tex:%TODO: make this harpoon arrows
+meromZsh.tex:TODO, (3. Treffen)
+meromZsh.tex:%TODO: wieso gilt das?
 meromZsh.tex:%TODO: beobachtung...
 meromZsh.tex:%TODO: differenz ist linear
-meromZsh.tex:  TODO: Ab hier formal???
-meromZsh.tex:  %TODO: bessere formulierung
-meromZsh.tex:      %TODO: wie sind die genau definiert? invariant?
-meromZsh.tex:    \cite[5.1]{sabbah_cimpa90} %TODO: genauer
+meromZsh.tex:TODO: Ab hier formal???
+meromZsh.tex:%TODO: bessere formulierung
+meromZsh.tex:%TODO: wie sind die genau definiert? invariant?
+meromZsh.tex:%TODO: achsbeschriftung?
+meromZsh.tex:\cite[5.1]{sabbah_cimpa90} %TODO: genauer
 meromZsh.tex:%TODO: titel: Operations on vector spaces with connection
 meromZsh.tex:%TODO: verzweigung statt pull-back?
-meromZsh.tex:    %TODO: rightarrow oder mapsto?
-meromZsh.tex:          -\partial_t(f)\cdot t^2= %TODO: wegen klammerung?
-meromZsh.tex:  %TODO: wieso multipliziert dieser mit 2?
-meromZsh.tex:    %TODO: nummer aus der referenz ist falsch
-meromZsh.tex:    %TODO: nummer aus der referenz ist falsch
+meromZsh.tex:%TODO: rightarrow oder mapsto?
+meromZsh.tex:-\partial_t(f)\cdot t^2= %TODO: wegen klammerung?
+meromZsh.tex:%TODO: wieso multipliziert dieser mit 2?
+meromZsh.tex:%TODO: nummer aus der referenz ist falsch
+meromZsh.tex:%TODO: nummer aus der referenz ist falsch
 meromZsh.tex:%TODO: auch nicht formal
 meromZsh.tex:%TODO: weitere Eigenschaften
 meromZsh.tex:%TODO: Dimension eines Meromorphen Zusammenhang
