@@ -65,6 +65,7 @@
 \newcommand{\myNewtonPlot}[6]{
   \draw[color=black,thick] #2;
   \foreach \pos in #1 { \fill[blue,opacity=.2] (-.5,#5) rectangle \pos; }
+  %\clip (-.5,#4) rectangle (#3,#5);
   \draw[->] (-.5,0) -- (#3+.7,0);
   \draw[->] (0,#4-.2) -- (0,#5+.2);
   \draw (1,0) -- (1,-.2);
