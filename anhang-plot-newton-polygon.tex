@@ -1,5 +1,7 @@
+\chapter{Wie ich Newton Polygone zeichne}
 \lstdefinestyle{myLatex} { 
-  language=[LaTeX]TeX
+  %language=[LaTeX]TeX
+  language=LaTeX
   , texcsstyle=*\bf\color{blue} 
   , basicstyle=\ttfamily
   , numbers=none
@@ -12,30 +14,43 @@
   %, caption=LaTeX example
 }
 
-\chapter{Wie ich Newton Polygone zeichne}
-Der code
+Ich benutze tikz
+\begin{lstlisting}[style=myLatex]
+\usepackage{tikz}
+\usetikzlibrary{matrix,arrows,decorations.pathmorphing}
+\end{lstlisting}
+und ein eigenes Kommando
 \begin{lstlisting}[style=myLatex]
 \newcommand{\myNewtonPlot}[6]{
   \draw[color=black,thick] #2;
   \foreach \pos in #1 { \fill[blue,opacity=.2] (-.5,#5) rectangle \pos; }
   \draw[->] (-.5,0) -- (#3+.7,0);
   \draw[->] (0,#4-.2) -- (0,#5+.2);
-  \draw (1,0) -- (1,-.2);
-  \draw (0,1) -- (-.2,1);
+  \draw (1,0) -- (1,-.1);
+  \draw (0,1) -- (-.1,1);
   \foreach \pos in #1 { \node[draw,circle,inner sep=1.5pt,fill=white] at \pos {}; }
   \node [below right] at (#3,#5/2) {#6};
 }
-\begin{tikzpicture}[scale=0.7]
+\end{lstlisting}
+welche 6 Parameter verlangt:
+\begin{enumerate}
+\item ein array der Punkte
+\item einen Pfad, der das Newton Polygon beschreibt
+\item den maximalen x Wert
+\item den minimalen y Wert
+\item den maximalen y Wert
+\end{enumerate}
+Ein Aufruf
+\begin{lstlisting}[style=myLatex]
+\begin{tikzpicture}[scale=1.5]
 \def\myPoints{{(0,0)}, {(1,-2)}, {(2,-1)}, {(4,0)}}
 \def\myPath{(-.5,-2) -- (1,-2) -- (4,0) -- (4,2)}
 \myNewtonPlot{\myPoints}{\myPath}{4}{-2}{2}{$N(P)$}
 \end{tikzpicture}
 \end{lstlisting}
-
-ergibt
-
+ergibt dann
 \begin{center}
-\begin{tikzpicture}[scale=0.7]
+\begin{tikzpicture}[scale=1.5]
 \def\myPoints{{(0,0)}, {(1,-2)}, {(2,-1)}, {(4,0)}}
 \def\myPath{(-.5,-2) -- (1,-2) -- (4,0) -- (4,2)}
 \myNewtonPlot{\myPoints}{\myPath}{4}{-2}{2}{$N(P)$}
