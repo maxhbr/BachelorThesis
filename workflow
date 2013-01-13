@@ -36,8 +36,8 @@ if [[ ! -n "$TMUX" ]] ; then
 
   tmux new-session -d -s texBa
   tmux new-window -t texBa:2 -n 'latexmk' 'latexmk -pvc -pdf main.tex'
-  tmux new-window -t texBa:3 -n 'log' 'vim main.log'
-  tmux new-window -t texBa:4 -n 'err' 'watch grep "[Ee]rror" -B3 -A 3 *.log'
+  #tmux new-window -t texBa:3 -n 'log' 'vim main.log'
+  #tmux new-window -t texBa:4 -n 'err' 'watch grep "[Ee]rror" -B3 -A 3 *.log'
   tmux select-window -t texBa:1
   tmux attach-session -t texBa
 
