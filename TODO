@@ -1,6 +1,7 @@
 beispiele/formal_b.tex:%TODO: besserer Titel
 beispiele/formal_b.tex:  %TODO: rightarrow oder mapsto?
 beispiele/formal_b.tex:        -\partial_t(f)\cdot t^2= %TODO: wegen klammerung?
+d-modul.tex:  %TODO: unsere sind bereits Lokalisiert?
 grundlagen.tex:      %TODO: Pfeile
 grundlagen.tex:      %TODO: Pfeile
 grundlagen.tex:%TODO: tensorprodukt / faserprodukt zum basiswechsel
@@ -11,7 +12,6 @@ grundlagen.tex:\begin{lem} %TODO: vervollständigen
 grundlagen.tex:%TODO: Beispiele??
 grundlagen.tex:%TODO: definition Filtrierung
 grundlagen.tex:\begin{proof} TODO
-grundlagen.tex:%TODO: wofür?
 lemma2-4.tex:  \end{pmatrix} \mbox{\footnote{$(\xi^i)^p=1\forall i$}}\\ % TODO: correct footnote
 lemma2-4.tex:%TODO: this
 levelt-turrittin.tex:  %TODO: all
@@ -40,12 +40,12 @@ meromZsh.tex:%TODO: rightarrow oder mapsto?
 meromZsh.tex:-\partial_t(f)\cdot t^2= %TODO: wegen klammerung?
 meromZsh.tex:%TODO: wieso multipliziert dieser mit 2?
 meromZsh.tex:%TODO: nummer aus der referenz ist falsch
+meromZsh.tex:%TODO: wofür das m??
 meromZsh.tex:%TODO: nummer aus der referenz ist falsch
 meromZsh.tex:%TODO: auch nicht formal
 meromZsh.tex:%TODO: weitere Eigenschaften
 meromZsh.tex:%TODO: Dimension eines Meromorphen Zusammenhang
 titel.tex:%TODO; titelpage bitte nicht seitlich versetzt
-trash/d-modul.tex:  %TODO: unsere sind bereits Lokalisiert?
 trash/meromZsh.tex:  %TODO: auch nicht formal
 workflow:  grep -r --exclude='TODO' "TODO" * > TODO
 workflow:  wc -l TODO

@@ -341,19 +341,17 @@ Das Newton Polygon wurde in Abbildung \ref{fig:Newton-Polygon2} visualisiert.
 \end{enumerate}
 \end{exmp}
 
-\begin{comment}
-%TOTO: sabbah redet hier schon immer von \hat K, ist das nötig?
 \begin{lem}
+%TOTO: sabbah redet hier schon immer von \hat K, ist das nötig?
 \cite[5.1]{sabbah_cimpa90} %TODO: genauer
 \begin{enumerate}
 \item $\cP(\cM_K)$ ist nicht Leer, wenn $\cM_K\neq\{0\}$
-\item Wenn mann eine exacte Sequenz
+\item Wenn man eine exacte Sequenz
 $0\rightarrow{\cM'}_K\rightarrow{\cM}_K\rightarrow{\cM''}_K\rightarrow0$
 hat, so gilt $\cP(\cM_K)=\cP({\cM'}_K)\cup\cP({\cM''}_K)$.
 % es gibt noch 2 weitere punkte
 \end{enumerate}
 \end{lem}
-\end{comment}
 
 %TODO: titel: Operations on vector spaces with connection
 %TODO: verzweigung statt pull-back?
@@ -379,6 +377,17 @@ m):=\rho'(u)\otimes\partial_tm$.
 \begin{comment}
 Beginne mit
 \[ \tilde P=\tau\partial_\tau^2+2\partial_\tau-1 \]
+
+\begin{center}
+\begin{tikzpicture}[scale=1.5]
+\def\myPoints{{(0,0)}, {(1,-1)}, {(2,-1)}}
+\def\myPath{(-.5,-1) -- (2,-1) -- (2,1)}
+\myNewtonPlot{\myPoints}{\myPath}{2}{-1}{1}{
+  $N(P) =N(\tau\partial_\tau^2+2\partial_\tau-1)$
+}
+\end{tikzpicture}
+\end{center}
+
 und gehe von $\tau$ über zu $t$ via $\tau\rightarrow\frac{1}{t}$:\\
 %TODO: rightarrow oder mapsto?
 \begin{itemize}
@@ -415,13 +424,12 @@ also:
 \end{itemize}
 \end{comment}
 
-Wir wollen den zu $P= t^3\partial_t^2-4t^2\partial_t-1$ assoziierten
-Meromorphen Zusammenhang
+Wir wollen $\cD/\cD\cdot P$ bzgl. $P= t^3\partial_t^2-4t^2\partial_t-1$
 betrachten.
-Es gilt $ \slopes(P)=\{\frac{1}{2}\} $ (siehe Abbildung
-\ref{fig:Pull-Back1}).
-%Es ist offensichtlich, dass $\slopes(P)=\{\frac{1}{2}\}$.
-Wir wollen ganzzahlige slopes haben, also wende den pull-back
+Unser Ziel ist es hier ganzzahlige slopes erhalte
+Es gilt $ \slopes(P)=\{\frac{1}{2}\} $ (siehe Abbildung \ref{fig:Pull-Back1})
+und es ist $2$ der Hauptnenner aller Slopes.
+Wende den pull-back
 $\rho:t\rightarrow u^2$, welcher alle slopes mit 2 Multipliziert,
 an.
 %TODO: wieso multipliziert dieser mit 2?
@@ -429,17 +437,17 @@ Zunächst ein paar Nebenrechnungen:
 \begin{align*}
 \partial_t   &= \frac{1}{\rho'}\partial_u=\frac{1}{2u}\partial_u \\
 \partial_t^2 &= (\frac{1}{2u}\partial_u)^2\\
-&= \frac{1}{2u}(-\frac{1}{2u^2}\partial_u +
-\frac{1}{2u}\partial_u^2) \\
-&= \frac{1}{4u^2}\partial_u^2-\frac{1}{4u^3}\partial_u \\
+             &= \frac{1}{2u}(-\frac{1}{2u^2}\partial_u +
+               \frac{1}{2u}\partial_u^2) \\
+             &= \frac{1}{4u^2}\partial_u^2-\frac{1}{4u^3}\partial_u \\
 \end{align*}
 also ergibt einsetzen
 \begin{align*}
 \rho^+P &= u^6(\frac{1}{4u^2}\partial_u^2-\frac{1}{4u^3}\partial_u)-
-4u^{4}\frac{1}{2u}\partial_u-1\\
-&= \frac{1}{4}u^4\partial_u^2-u^3\frac{1}{4u^3}\partial_u-
-4u^{3}\frac{1}{2}\partial_u-1\\
-&= \frac{1}{4}u^4\partial_u^2 -2\frac{1}{4}u^3\partial_u-1
+          4u^{4}\frac{1}{2u}\partial_u-1\\
+        &= \frac{1}{4}u^4\partial_u^2-u^3\frac{1}{4u^3}\partial_u-
+          4u^{3}\frac{1}{2}\partial_u-1\\
+        &= \frac{1}{4}u^4\partial_u^2 -2\frac{1}{4}u^3\partial_u-1
 \end{align*}
 
 Also ist$\rho^+P= \frac{1}{4}u^4\partial_u^2 -\frac{1}{2}u^3\partial_u-1$ mit
@@ -450,19 +458,23 @@ $ \slopes(\rho^+P)=\{1\} $ (siehe Abbildung \ref{fig:Pull-Back2}).
 \caption{Zu Beispiel \ref{exmp:Pull-Back}}
 \begin{center}
 %\caption{Newton Polygon zu $P$ und $\rho^+P$}
-\subfloat[Newton Polygon zu $P$]{
+\subfloat[Newton Polygon zu\\ $P=t^3\partial_t^2-4t^2\partial_t-1$]{
   \label{fig:Pull-Back1}
   \begin{tikzpicture}[scale=1.5]
-  \def\myPoints{{(0,0)}, {(2,1)}}
+  \def\myPoints{{(0,0)}, {(1,1)}, {(2,1)}}
   \def\myPath{(-.5,0) -- (0,0) -- (2,1) -- (2,3)}
-  \myNewtonPlot{\myPoints}{\myPath}{2}{0}{3}{$N(P)$}
+  \myNewtonPlot{\myPoints}{\myPath}{2}{0}{3}{
+    $N(P)$
+  }
   \end{tikzpicture}
 }
 \quad
-\subfloat[Newton Polygon zu $\rho^+P$]{
+\subfloat[Newton Polygon zu\\ $\rho^+P=\frac{1}{4}u^4\partial_u^2
+  -\frac{1}{2}u^3\partial_u-1$]
+{
   \label{fig:Pull-Back2}
   \begin{tikzpicture}[scale=1.5]
-  \def\myPoints{{(0,0)}, {(2,2)}}
+  \def\myPoints{{(0,0)}, {(1,2)}, {(2,2)}}
   \def\myPath{(-.5,0) -- (0,0) -- (2,2) -- (2,3)}
   \myNewtonPlot{\myPoints}{\myPath}{2}{0}{3}{$N(\rho^+P)$}
   \end{tikzpicture}
@@ -470,11 +482,6 @@ $ \slopes(\rho^+P)=\{1\} $ (siehe Abbildung \ref{fig:Pull-Back2}).
 \end{center}
 \end{figure}
 \end{exmp}
-
-\begin{comment}
-wie sieht die Wirkung vom pull-back zusammenhang aus?\\
-$\partial_t(f(t))m)=...=\rho'(u)^{-1}\partial_uf(t)m$
-\end{comment}
 
 Sei $\cN$ ein $\C(\!(u)\!)$-VR mit Verknüpfung, so definiere den push-forward
 wie folgt.
@@ -489,6 +496,26 @@ der $\C(\!(t)\!)$-Vektor Raum Struktur durch $f(t)\cdot m:=f(\rho(t))m$
 $\rho'(u)^{-1}\partial_u$.
 \end{itemize}
 \end{defn}
+
+\begin{bem} % von Robert
+Wieso sieht die Wirkung auf dem push-forward Zusammenhang so aus?\\
+Betrachte ein Element der Form $f(t)m=f(\rho(u))m\in\rho_+\cN$.
+%TODO: wofür das m??
+\begin{align*}
+\partial_t(f(t)m) &= \partial_{\rho(u)}(f(\rho(u))m) \\
+                  &= f'(\rho(u))\cdot \underset{=1}
+                    {\underbrace{\frac{\partial(f(u))}{\partial(f(u))}}}m +
+                    f(\rho(u))\underset{=\partial_t}
+                    {\underbrace{\partial_{\rho(u)}}}m = (\star)\\
+\end{align*}
+\begin{align*}
+\rho'(u)^{-1}\partial_u(f(t)m) &= \frac{1}{pu^{p-1}}\partial_u(f(u^p)m) \\
+                               &= f'(u^p)m+f(u^p)\frac{1}{pu^{p-1}}\partial_u m
+                                 = (\star) \\
+\end{align*}
+Also gilt $\partial_t(f(t)m) = \rho'(u)^{-1}\partial_u(f(t)m)$ und somit ist
+die Wirkung von $\partial_t$ gleich der Wirkung von $\rho'(u)^{-1}\partial_u$.
+\end{bem}
 
 \begin{exmp}[push-forward]\label{exmp:Push-Forward}
 Für $\rho:t\rightarrow u^2$, $\phi=\frac{1}{u^2}$ betrachte
