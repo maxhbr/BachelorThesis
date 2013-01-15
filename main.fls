@@ -473,3 +473,4 @@ INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/stmaryrd/stmary10.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/stmaryrd/stmary8.pfb

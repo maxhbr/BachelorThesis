@@ -11,6 +11,7 @@
 \end{itemize}
 \end{comment}
 
+\begin{comment}
 %\section{Lokalisierung eines $\C\{x\}$-Moduls}
 %\begin{defn} \cite[Chap 4.1.]{sabbah_cimpa90}
 %Sei $M$ ein $\C\{x\}$-Modul und $K=\C\{x\}[x^{-1}]$, dann ist die
@@ -19,7 +20,7 @@
 %\end{defn}
 
 \section{Lokalisierung eines (holonomen) $\cD$-Moduls}
-Sei $\cM$ ein links $\cD$-Modul. Betrachte $\cM$ als $\c\{x\}$-Modul und
+Sei $\cM$ ein links $\cD$-Modul. Betrachte $\cM$ als $\C\{x\}$-Modul und
 definiere darauf
 \[ M[x^{-1}]:=M\otimes_{\C\{x\}}K \]
 als die Lokalisierung von $\cM$.
@@ -32,44 +33,29 @@ mit:
 \partial_x(m\otimes x^{-k})=((\partial_xm)\otimes x^{-k})-km\otimes x^{-k-1}
 \]
 \end{proof}
+\end{comment}
 
 \section{Meromorpher Zusammenhang (Definition)}
 
-\begin{comment}
-\begin{defn}[Meromorpher Zusammenhang]
-Ein (\emph{Keim eines}) \emph{Meromorpher Zusammenhang} (an $x=0$)
-$(\cM_K,\partial)$ besteht aus folgenden Daten:
-\begin{itemize}
-\item $\cM_K$, ein endlich dimensionaler $K$-Vr
-\item einer $\C$-linearen Abbildung $\partial:\cM_K\rightarrow \cM_K$,
-genannt \emph{Derivation}, welche für alle $f\in K$ und $u\in \cM_K$ die
-\emph{Leibnitzregel}
-\begin{equation}\label{eq:Leibnitzregel}
-\partial(fu)=f'u+f\partial u
-\end{equation}
-erfüllen soll.
-\end{itemize}
-\end{defn}
-\end{comment}
-
 %Besser?
 %Allgemeiner?
-\begin{defn}[Meromorpher Zusammenhang über $k$]
-Ein (\emph{Keim eines}) \emph{Meromorpher Zusammenhang über $k$}
-$(\cM_k,\partial)$ besteht aus folgenden Daten:
+\begin{defn}[Meromorpher Zusammenhang]
+Ein \emph{Meromorpher Zusammenhang}
+$(\cM_K,\partial)$ besteht aus folgenden Daten:
 \begin{itemize}
-\item $\cM_k$, ein endlich dimensionaler $k$-Vektor Raum
-\item einer $\C$-linearen Abbildung $\partial:\cM_k\rightarrow \cM_k$,
-genannt \emph{Derivation} oder \emph{Zusammenhang}, welche für alle $f\in k$ und $u\in \cM_k$ die
+\item $\cM_K$, ein endlich dimensionaler $K$-Vektor Raum
+\item einer $\C$-linearen Abbildung $\partial:\cM_K\rightarrow \cM_K$,
+genannt \emph{Derivation} oder \emph{Zusammenhang}, welche für alle $f\in K$
+und $u\in \cM_K$ die
 \emph{Leibnitzregel}
 \begin{equation}\label{eq:Leibnitzregel}
 \partial(fu)=f'u+f\partial u
 \end{equation}
 erfüllen soll.
 \end{itemize}
-Falls $k=K=\C(\{x\})$ reden wir von einem \emph{(konvergentem) Meromorphen
-Zusammenhang} und falls $k=\hat K=\Cful$ reden wir von einem \emph{formalen
-Meromorphen Zusammenhang}.
+%Falls $k=K=\C(\{x\})$ reden wir von einem \emph{(konvergentem) Meromorphen
+%Zusammenhang} und falls $k=\hat K=\Cful$ reden wir von einem \emph{formalen
+%Meromorphen Zusammenhang}.
 %TODO: korrekte benennung?
 \end{defn}
 
@@ -278,6 +264,12 @@ TODO: Ab hier formal???
 \end{comment}
 
 \section{formale Meromorphe Zusammenhänge}
+
+\begin{defn}
+Definiere
+\[ \hat\cD[u^{-1}]=\hat K<\partial_u>=:\cD_{\hat K} \]
+wobei $\hat K=\Cfu[u^{-1}]
+\end{defn}
 
 \section{Newton Polygon} % ist dies eine Invariante??
 % gestohlen aus der ZulaBarbara Seite 46
