@@ -10,7 +10,30 @@
 \item wieso kommt man ursprünglich dazu
 \end{itemize}
 \end{comment}
-\section{Definition}
+
+%\section{Lokalisierung eines $\C\{x\}$-Moduls}
+%\begin{defn} \cite[Chap 4.1.]{sabbah_cimpa90}
+%Sei $M$ ein $\C\{x\}$-Modul und $K=\C\{x\}[x^{-1}]$, dann ist die
+%Lokalisierung
+%\[ M[x^{-1}]:=M\otimes_{\C\{x\}}K \,. \]
+%\end{defn}
+
+\section{Lokalisierung eines (holonomen) $\cD$-Moduls}
+Sei $\cM$ ein links $\cD$-Modul. Betrachte $\cM$ als $\c\{x\}$-Modul und
+definiere darauf
+\[ M[x^{-1}]:=M\otimes_{\C\{x\}}K \]
+als die Lokalisierung von $\cM$.
+\begin{prop} \cite[Prop 4.2.1.]{sabbah_cimpa90}
+$\cM[x^{-1}]$ bekommt in natürlicher weiße eine $\cD$-Modul Struktur.
+\end{prop}
+\begin{proof} \cite[Prop 4.2.1.]{sabbah_cimpa90}
+mit:
+\[
+\partial_x(m\otimes x^{-k})=((\partial_xm)\otimes x^{-k})-km\otimes x^{-k-1}
+\]
+\end{proof}
+
+\section{Meromorpher Zusammenhang (Definition)}
 
 \begin{comment}
 \begin{defn}[Meromorpher Zusammenhang]
@@ -49,11 +72,6 @@ Zusammenhang} und falls $k=\hat K=\Cful$ reden wir von einem \emph{formalen
 Meromorphen Zusammenhang}.
 %TODO: korrekte benennung?
 \end{defn}
-\begin{bem}
-Ist $\cM_K$ ein Meromorphen Zusammenhang, so erhalte einen formalen
-Meromorphen Zusammenhang durch
-\[ \cM_K\otimes_{K}\hat K =: \cM_{\hat K} \,. \]
-\end{bem}
 
 \begin{bem}
 \begin{enumerate}
@@ -259,6 +277,8 @@ $1=T^{-1}T$ $\rightsquigarrow$ $(T^{-1})'T+T^{-1}T'=0$
 TODO: Ab hier formal???
 \end{comment}
 
+\section{formale Meromorphe Zusammenhänge}
+
 \section{Newton Polygon} % ist dies eine Invariante??
 % gestohlen aus der ZulaBarbara Seite 46
 Jedes $P\in \cD$ lässt sich eindeutig schreiben als
@@ -453,7 +473,7 @@ f\otimes m(t,\partial_t) & f(u)m(\rho(u),\rho'(u)^{-1}\partial_u) \\
 \end{center}
 mit:
 \begin{align*}
-\partial_u(1\otimes m) &\underset{\mbox{def}}{=} \rho'(u)\otimes\partial_t m
+\partial_u(1\otimes m) &\overset{\mbox{def}}{=} \rho'(u)\otimes\partial_t m
   \\
 &\overset{\Phi}{\mapsto} \underset{=1}{\underbrace{\rho'(u)\rho'(u)^{-1}}}
   \partial_u m(\rho(u),\rho'(u)^{-1}\partial_u) \\
@@ -477,7 +497,7 @@ wie gewollt. Also
 (m-1-1) edge node[above]{$\id\otimes\_\cdot P(t,\partial_t)$} (m-1-2)
 (m-1-1) edge node[left]{$\cong$} (m-2-1)
 (m-1-2) edge node[right]{$\cong$} (m-2-2)
-(m-2-1) edge node[above]{$\_P(\rho(u),\rho'(u)^{-1}\partial_u)$} (m-2-2)
+(m-2-1) edge node[above]{$\_\cdot P(\rho(u),\rho'(u)^{-1}\partial_u)$} (m-2-2)
 ;
 \end{tikzpicture}
 \end{center}
@@ -515,6 +535,7 @@ die Wirkung von $\partial_t$ gleich der Wirkung von $\rho'(u)^{-1}\partial_u$.
 
 \begin{exmp}[pull-back]\label{exmp:Pull-Back}
 %from beispil/formal_b.tex
+Hier nun ein explizit berechneter pull-back.
 \begin{comment}
 Beginne mit
 \[ \tilde P=\tau\partial_\tau^2+2\partial_\tau-1 \]
