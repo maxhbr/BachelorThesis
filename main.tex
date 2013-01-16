@@ -61,15 +61,16 @@
 \usepackage{tikz}
 \usetikzlibrary{matrix,arrows,decorations.pathmorphing}
 \usepackage{subfig}
+\usepackage{float}
 
 \newcommand{\myNewtonPlot}[6]{
   \draw[color=black,thick] #2;
   \foreach \pos in #1 { \fill[blue,opacity=.2] (-.5,#5) rectangle \pos; }
   %\clip (-.5,#4) rectangle (#3,#5);
-  \draw[->] (-.5,0) -- (#3+.7,0);
-  \draw[->] (0,#4-.2) -- (0,#5+.2);
-  \draw (1,0) -- (1,-.1);
-  \draw (0,1) -- (-.1,1);
+  \draw[->] (-.5,0) -- (#3+.7,0) node[below]{$u$};
+  \draw[->] (0,#4-.2) -- (0,#5+.2) node[left]{$v$};
+  \draw (1,0) -- (1,-.1); % node[below]{$1$};
+  \draw (0,1) -- (-.1,1); % node[left]{$1$};
   \foreach \pos in #1 { \node[draw,circle,inner sep=1.5pt,fill=white] at \pos {}; }
   \node [below right] at (#3,#5/2) {#6};
 }
@@ -261,7 +262,7 @@
 {\displaystyle#1}\end{array}}%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\input{mydevelop.sty}
+\input{mydevelop.sty}
 \cfoot{\today}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
