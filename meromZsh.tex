@@ -1,6 +1,7 @@
 % TODO; wie darf ich einen Meromorphen verändern, (das P verändern) ohne das
 % sich effektiv was ändert?
 % TODO: \cM = \cM_K ... replace
+%TODO: Dimension eines Meromorphen Zusammenhang
 
 \chapter{Der Meromorphe Zusammenhang}
 %Quelle ist \cite{sabbah_cimpa90}
@@ -300,11 +301,9 @@ $1=T^{-1}T$ $\rightsquigarrow$ $(T^{-1})'T+T^{-1}T'=0$
 TODO: Ab hier formal???
 \end{comment}
 
-\section{formale Meromorphe Zusammenhänge}
-
-\begin{defn}
-Definiere
-\[ \hat\cD[x^{-1}]=\cD_\Cfx[x^{-1}]=\hat K<\partial_x>=:\cD_{\hat K} \]
+\section{Formale Meromorphe Zusammenhänge}
+%
+Definiere $ \hat\cD[x^{-1}]=\cD_\Cfx[x^{-1}]=\hat K<\partial_x>=:\cD_{\hat K} $
 wobei $\hat K=\Cfu[x^{-1}]$
 \end{defn}
 \begin{defn}[Meromorpher Zusammenhang]
@@ -956,8 +955,11 @@ $\C(\!(t)\!)$-Vektorraum mit Zusammenhang, durch:
 El(\rho,\phi,R)=\rho_+(\sE^\phi\otimes R)
 \]
 \end{defn}
+\cite[nach Def 2.1]{sabbah_Fourier-local}
+Bis auf isomorphismus hängt $El(\rho,\phi,R)$ nur von $\phi\mod\Cfu$ ab.
+\begin{lem}
+\cite[Lem 2.2]{sabbah_Fourier-local}
+\end{lem}
 
-%TODO: weitere Eigenschaften
-%TODO: Dimension eines Meromorphen Zusammenhang
 
 % vim: set ft=tex :
