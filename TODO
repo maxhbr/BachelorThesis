@@ -24,7 +24,8 @@ meromZsh.tex:% TODO: \cM = \cM_K ... replace
 meromZsh.tex:%TODO: korrekte benennung?
 meromZsh.tex:%TODO: hier formal oder konvergent?
 meromZsh.tex:%TODO: reihenfolge bei sabbah anderst!!!
-meromZsh.tex:%TODO: hier $\cM ??
+meromZsh.tex:%TODO: make this harpoon arrows
+meromZsh.tex:TODO, (3. Treffen)
 meromZsh.tex:%TODO: make this harpoon arrows
 meromZsh.tex:TODO, (3. Treffen)
 meromZsh.tex:%TODO: wieso gilt das?
@@ -37,12 +38,13 @@ meromZsh.tex:%TODO: nummer aus der referenz ist falsch
 meromZsh.tex:\cite[5.1]{sabbah_cimpa90} %TODO: genauer
 meromZsh.tex:%TODO: titel: Operations on vector spaces with connection
 meromZsh.tex:%TODO: verzweigung statt pull-back?
+meromZsh.tex:  %TODO: Pfeile
+meromZsh.tex:  %TODO: Pfeile
 meromZsh.tex:%TODO: warum hier alles Lokalisiert?
-meromZsh.tex:%TODO: Pfeile
-meromZsh.tex:%TODO: Pfeile
-meromZsh.tex:%TODO: Pfeile
-meromZsh.tex:%TODO: Pfeile
-meromZsh.tex:%TODO: Pfeile
+meromZsh.tex:  %TODO: Pfeile
+meromZsh.tex:  %TODO: Pfeile
+meromZsh.tex:  %TODO: Pfeile
+meromZsh.tex:  %TODO: Pfeile
 meromZsh.tex:%TODO: wofür das m??
 meromZsh.tex:%TODO: rightarrow oder mapsto?
 meromZsh.tex:-\partial_t(f)\cdot t^2= %TODO: wegen klammerung?
