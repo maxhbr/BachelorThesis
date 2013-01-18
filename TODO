@@ -21,6 +21,7 @@ main.ps:w FJ(TODO,)30 b(\(3.)i(T)-8 b(re\033en\))p 3633 5576
 main.tex:%TODO: set titel variable??
 meromZsh.tex:% TODO; wie darf ich einen Meromorphen verändern, (das P verändern) ohne das
 meromZsh.tex:% TODO: \cM = \cM_K ... replace
+meromZsh.tex:%TODO: Dimension eines Meromorphen Zusammenhang
 meromZsh.tex:%TODO: korrekte benennung?
 meromZsh.tex:%TODO: hier formal oder konvergent?
 meromZsh.tex:%TODO: reihenfolge bei sabbah anderst!!!
@@ -52,8 +53,6 @@ meromZsh.tex:%TODO: wieso multipliziert dieser mit 2?
 meromZsh.tex:%TODO: nummer aus der referenz ist falsch
 meromZsh.tex:%TODO: nummer aus der referenz ist falsch
 meromZsh.tex:%TODO: auch nicht formal
-meromZsh.tex:%TODO: weitere Eigenschaften
-meromZsh.tex:%TODO: Dimension eines Meromorphen Zusammenhang
 titel.tex:%TODO; titelpage bitte nicht seitlich versetzt
 trash/meromZsh.tex:  %TODO: auch nicht formal
 workflow:  grep -r --exclude='TODO' "TODO" * > TODO
