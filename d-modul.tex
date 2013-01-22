@@ -25,20 +25,18 @@ darstellt. Dies bedeutet, für alle $g\in\C[x]$ hat man:
 \]
 \begin{defn}[Weyl Algebra, $\cD$]
 %TODO: eigentlich ist \cD ja das wichtigste!
-Definiere nun die Weyl Algebra $A_1(\C)$ (bzw. die Algebra $\cD$ von
-linearen Operatoren mit Koeffizienten in $\C\{x\}$ bzw. die Algebra
-$\hat{\cD}$ (Koeffizienten in $\C\llbracket x\rrbracket$)) als die
-Quotientenalgebra der freien Algebra, welche von dem Koeffizientenring
-zusammen mit dem Element $\partial_x$, erzeugt wird, Modulo der Relation
-\eqref{eq:weyl_relation}.
+Definiere nun die Weyl Algebra $A_1(\C)$ (bzw. die Algebra $\cD$ von linearen
+Operatoren mit Koeffizienten in $\C\{x\}$ bzw. die Algebra $\hat{\cD}$
+(Koeffizienten in $\C\llbracket x\rrbracket$)) als die Quotientenalgebra der
+freien Algebra, welche von dem Koeffizientenring zusammen mit dem Element
+$\partial_x$, erzeugt wird, Modulo der Relation \eqref{eq:weyl_relation}.
 \end{defn}
 \begin{comment}
 \begin{defn}
-Definiere nun den Ring $\cD_k$ als die
-Quotientenalgebra der freien Algebra, welche von dem Koeffizientenring
-zusammen mit dem Element $\partial_x$, erzeugt wird, Modulo der Relation
-\eqref{eq:weyl_relation}.
-Wir schreiben diesen Ring als
+Definiere nun den Ring $\cD_k$ als die Quotientenalgebra der freien Algebra,
+welche von dem Koeffizientenring in $k$ zusammen mit dem Element $\partial_x$,
+erzeugt wird, Modulo der Relation \eqref{eq:weyl_relation}.  Wir schreiben
+diesen Ring als
 \begin{itemize}
 \item $A_1(\C)=\C[x]<\partial_x>$ falls $k=\C[x]$, und nennen ihn die
 \emph{Weyl Algebra}
@@ -64,6 +62,7 @@ Sergey-Arkhipov-MAT1191\_Lecture\_Notes.pdf Chapter 2.1
 \end{comment}
 
 %TODO: vlt umsortieren
+\begin{comment}
 \begin{lem} %TODO: vervollständigen
 Sei $A$ einer der 3 soeben eingeführten Objekten, so definieren die Addition 
 \[ +:A\times A \rightarrow A \]
@@ -74,6 +73,7 @@ eine Ringstruktur auf $A$.
 \begin{proof}
 \cite[Kapittel 2 Section 1]{ZulaBarbara}
 \end{proof}
+\end{comment}
 
 \begin{rem}
 %TODO: alle sind
@@ -127,12 +127,14 @@ ein teil des Beweises ist "left as an exersice"
 \end{comment}
 \end{proof}
 
-%TODO: Beispiele??
-
 %TODO: definition Filtrierung
-
+\begin{comment}
+Besser?:\\
+erst Filtrierung definieren und dadurch dann den Grad?
+\end{comment}
 \begin{defn}
-Sei $P=\sum_{i=0}^na_i(x)\partial_x^i$ gegeben, so definiere 
+Sei $P=\sum_{i=0}^na_i(x)\partial_x^i$, wie in Proposition
+\ref{prop:weyl_eindeutige_schreibung}, gegeben, so definiere 
 \[
 \deg P:=\max\{i|a_i\neq 0\}
 \]
@@ -171,11 +173,11 @@ Es gilt:
 };
 \path[solid]
 (m-1-1) edge [bend right=15] node[descr]{$\cong$}
-  node[above]{$\mbox{isomorph als grad. Ringe}$} (m-1-3);
+  node[below]{$\mbox{isomorph als grad. Ringe}$} (m-1-3);
 \end{tikzpicture}
 \end{center}
-also
-\[ gr^F\cD \cong \bigoplus_{N\in\N_0}\C\{x\}\cdot \xi^N \,. \]
+also $gr^F\cD \cong \bigoplus_{N\in\N_0}\C\{x\}\cdot \xi^N$ als graduierte
+Ringe.
 \end{prop}
 \begin{proof} TODO
 \begin{comment}
@@ -183,31 +185,31 @@ Treffen?
 \end{comment}
 \end{proof}
 
-\begin{comment}
-\subsection{Weyl Algebra als Graduierter Ring}
-% Treffen 2
-Sei $A$ nun einer der drei Koeffizienten Ringe, welche zuvor behandelt
-wurden.  Der Ring $A<\partial_x>$ kommt zusammen mit einer aufsteigenden
-Filtrierung, welche wir mit $F(A<\partial_x)$ bezeichen werden.  Sei $P$ ein
-bzgl. \ref{prop:weyl_eindeutige_schreibung} minimal geschriebener Operator,
-so ist $P$ in $F_k$ falls der maximale Grad von $\partial_x$ in $P$ kleiner
-oder gleich $k$. So definiere den Grad $deg P$ von $P$ als die Eindeutige
-ganze Zahl $k$ mit $P\in F_kA<\partial_x>\slash F_{k-1}<\partial_x>$
+%\begin{comment}
+%\subsection{Weyl Algebra als Graduierter Ring}
+%% Treffen 2
+%Sei $A$ nun einer der drei Koeffizienten Ringe, welche zuvor behandelt
+%wurden.  Der Ring $A<\partial_x>$ kommt zusammen mit einer aufsteigenden
+%Filtrierung, welche wir mit $F(A<\partial_x)$ bezeichen werden.  Sei $P$ ein
+%bzgl. \ref{prop:weyl_eindeutige_schreibung} minimal geschriebener Operator,
+%so ist $P$ in $F_k$ falls der maximale Grad von $\partial_x$ in $P$ kleiner
+%oder gleich $k$. So definiere den Grad $deg P$ von $P$ als die Eindeutige
+%ganze Zahl $k$ mit $P\in F_kA<\partial_x>\slash F_{k-1}<\partial_x>$
 
-Unabhängigkeit von Schreibung wird in Sabbah Script behauptet
-\end{comment}
+%Unabhängigkeit von Schreibung wird in Sabbah Script behauptet
+%\end{comment}
 
 \section{(Links) $\cD$-Moduln}
-\cite[Chapter 1.6.]{arapuraNotes}
 Da $\cD$ ein nichtkommutativer Ring ist, muss man vorsichtig sein und zwischen
 links unr rechts $\cD$-Moduln unterschiden. Wenn ich im folgendem von
-$\cD$-Moduln rede, werde ich mich immer auf links $\cD$-Moduln beziehen.
+$\cD$-Moduln rede, werde ich mich immer, wie auch \cite[Chapter
+1.6.]{arapuraNotes}, auf links $\cD$-Moduln beziehen.
 
 \begin{exmp}[Einfachste links $\cD$-Moduln]
 % Sergey-Arkhipov-MAT1191_Lecture_Notes.pdf Chapter 2.1
 Sei $X=\A^1$ und $\sO_X=\C[t]$.
 \begin{enumerate}
-\item $\cD$ ist ein $\cD$-Modul
+\item $\cD$ ist ein links und rechts $\cD$-Modul
 \item $\cM=\sO_X$ durch
 \begin{itemize}
 \item $\partial(f(t))=\frac{\partial f}{\partial t}$ und

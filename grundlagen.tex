@@ -1,126 +1,172 @@
 \chapter{Mathematische Grundlagen}
 
+\begin{comment}
 Hier werde ich mich auf \cite{sabbah_cimpa90} und \cite{coutinho1995primer}
 beziehen.
+\end{comment}
 
 %\section{Einige Ergebnise aus der Kommutativen Algebra}~
 
-In dieser Arbeit spielen die folgenden Ringe eine Große Rolle:
+In dieser Arbeit spielen die folgenden Ringe eine große Rolle:
 \begin{itemize}
-  \item $\C[x]:=\{ \sum^{N}_{i=1}a_ix^i | N\in \N \}$
-  \item $\C\{x\}:=\{ \sum^{\infty}_{i=1}a_ix^i | \mbox{pos.
-        Konvergenzradius} \}$
-  \item $\C\llbracket x\rrbracket:=\{ \sum^{\infty}_{i=1}a_ix^i \}$
-  \item $K:=\C(\{x\}):=\C\{x\}[x^{-1}]$
-  \item $\hat{K}:=\C((x)):=\C\llbracket x\rrbracket[x^{-1}]$
+\item $\C[x]:=\{ \sum^{N}_{i=1}a_ix^i | N\in \N \}$
+\item $\C\{x\}:=\{ \sum^{\infty}_{i=1}a_ix^i | \mbox{pos.
+  Konvergenzradius} \}$
+\item $\C\llbracket x\rrbracket:=\{ \sum^{\infty}_{i=1}a_ix^i \}$
+\item $K:=\C(\{x\}):=\C\{x\}[x^{-1}]$
+\item $\hat{K}:=\C((x)):=\C\llbracket x\rrbracket[x^{-1}]$
 \end{itemize}
-Wobei offensichtlich gilt $\C[x]\subset\C\{x\}\subset\Cfx$.
+Wobei offensichtlich $\C[x]\subset\C\{x\}\subset\Cfx$  gilt.
 
 \begin{comment}
-  Es bezeichnet der Hut ($ \, \hat \,\, $) das jeweils formale äquivalent zu
-  einem konvergentem Objekt.
+Es bezeichnet der Hut ($ \, \hat \,\, $) das jeweils formale äquivalent zu
+einem konvergentem Objekt.
 \end{comment}
 
 \begin{comment}
-  \begin{lem}[Seite 2]
-    ein paar eigenschaften
-    \begin{enumerate}
-      \item $\C[x]$ ist ein graduierter Ring, durch die Grad der
-        Polynome. Diese graduierung induziert eine aufsteigende Filtrierung.
+\begin{lem}[Seite 2]
+ein paar eigenschaften
+\begin{enumerate}
+\item $\C[x]$ ist ein graduierter Ring, durch die Grad der
+Polynome. Diese graduierung induziert eine aufsteigende Filtrierung.
 
-        alle Ideale haben die form $(x-a)$ mit $a\in \C$
-      \item wenn $\mathfrak{m}$ das maximale Ideal von $\C[x]$ (erzeugt von
-        $x$ ist), so ist
-        \[
-          \C[[x]]=
-          \underset{k}{\underleftarrow{\lim}} \C[X]\backslash\mathfrak{m}^k
-        \]
-        The ring $\C[[x]]$ ist ein nöterscher lokaler Ring:
-        jede Potenzreihe mit konstantem term $\neq 0$ ist invertierbar.
+alle Ideale haben die form $(x-a)$ mit $a\in \C$
+\item wenn $\mathfrak{m}$ das maximale Ideal von $\C[x]$ (erzeugt von
+$x$ ist), so ist
+\[
+  \C[[x]]=
+  \underset{k}{\underleftarrow{\lim}} \C[X]\backslash\mathfrak{m}^k
+\]
+The ring $\C[[x]]$ ist ein nöterscher lokaler Ring:
+jede Potenzreihe mit konstantem term $\neq 0$ ist invertierbar.
 
-        Der ring ist ebenfalls ein diskreter ??? Ring (discrete valuation
-        ring)
+Der ring ist ebenfalls ein diskreter ??? Ring (discrete valuation
+ring)
 
-        Die Filtrierung nach grad des Maximalen Ideals, genannt
-        $\mathfrak{m}$-adische Fitration, ist die Filtrierung
-        $\mathfrak{m}^k=\{f\in \C[[x]]|v(f)\geq k\}$
+Die Filtrierung nach grad des Maximalen Ideals, genannt
+$\mathfrak{m}$-adische Fitration, ist die Filtrierung
+$\mathfrak{m}^k=\{f\in \C[[x]]|v(f)\geq k\}$
 
-        und es gilt $gr_\mathfrak{m}(\C[[x]])=\C[x]$
-    \end{enumerate}
-  \end{lem}
+und es gilt $gr_\mathfrak{m}(\C[[x]])=\C[x]$
+\end{enumerate}
+\end{lem}
 \end{comment}
 
 \begin{defn}[Direkte Summe] \cite[4(Categories).5.1]{stacks-project}
-  Seien $x,y\in \Ob(\cC)$, eine \emph{Direkte Summe} oder das \emph{coprodukt}
-  von $x$ und $y$ ist ein Objekt $x\oplus y\in \Ob(\cC)$ zusammen mit
-  Morphismen $i\in\Mor_\cC(x,x\oplus y)$ und $j\in\Mor_\cC(y,x\oplus y)$ so
-  dass die folgende universelle Eigenschaft gilt: für jedes $w\in Ob(\cC)$ mit
-  Morphismen $\alpha\in\Mor_\cC(x,w)$ und $\beta\in\Mor_\cC(y,w)$ existiert ein
-  eindeutiges $\gamma\in\Mor_\cC(x\oplus y,w)$ so dass das Diagram
-  \begin{center}
-    \begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
-      \matrix (m) [
-        matrix of math nodes
-        , row sep=2em
-        , column sep=3em
-        %, text height=3em
-        %, text depth=0.25em
-      ]
-      {
-          & y         &  &   \\
-        x & x\oplus y &  &   \\
-          &           &  & w \\
-      };
-      %TODO: Pfeile
-      \path[->,font=\scriptsize,>=angle 90]
-      (m-1-2) edge node[left]{$j$} (m-2-2)
-      (m-2-1) edge node[above]{$i$} (m-2-2)
-      (m-1-2) edge node[right]{$\beta$} (m-3-4)
-      (m-2-1) edge node[below]{$\alpha$} (m-3-4)
-      ;
-      \path[->,font=\scriptsize,>=angle 90,dashed]
-      (m-2-2) edge node[above]{$\exists!\gamma$} (m-3-4)
-      ;
-    \end{tikzpicture}
-  \end{center}
-  kommutiert.
+Seien $x,y\in \Ob(\cC)$, eine \emph{Direkte Summe} oder das \emph{coprodukt}
+von $x$ und $y$ ist ein Objekt $x\oplus y\in \Ob(\cC)$ zusammen mit
+Morphismen $i\in\Mor_\cC(x,x\oplus y)$ und $j\in\Mor_\cC(y,x\oplus y)$ so
+dass die folgende universelle Eigenschaft gilt: für jedes $w\in Ob(\cC)$ mit
+Morphismen $\alpha\in\Mor_\cC(x,w)$ und $\beta\in\Mor_\cC(y,w)$ existiert ein
+eindeutiges $\gamma\in\Mor_\cC(x\oplus y,w)$ so dass das Diagram
+\begin{center}
+\begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
+\matrix (m) [
+  matrix of math nodes
+  , row sep=2em
+  , column sep=3em
+  %, text height=3em
+  %, text depth=0.25em
+]{
+    & y         &  &   \\
+  x & x\oplus y &  &   \\
+    &           &  & w \\
+};
+%TODO: Pfeile
+\path[->,font=\scriptsize,>=angle 90]
+(m-1-2) edge node[left]{$j$} (m-2-2)
+(m-2-1) edge node[above]{$i$} (m-2-2)
+(m-1-2) edge node[right]{$\beta$} (m-3-4)
+(m-2-1) edge node[below]{$\alpha$} (m-3-4)
+;
+\path[->,font=\scriptsize,>=angle 90,dashed]
+(m-2-2) edge node[above]{$\exists!\gamma$} (m-3-4)
+;
+\end{tikzpicture}
+\end{center}
+kommutiert.
 \end{defn}
 
-\begin{defn}[Tensorprodukt] 
-  \cite[3(Algebra).11.21]{stacks-project}
-  \begin{comment}
-    Faserprodukt: \cite[4(Categories).6.1]{stacks-project} 
-  \end{comment}
-  % von Vorlesung Algebra 2
+\begin{defn}[Tensorprodukt]
+\cite[3(Algebra).11.21]{stacks-project}
+\begin{comment}
+Faserprodukt: \cite[4(Categories).6.1]{stacks-project}
+\end{comment}
+% von Vorlesung Algebra 2
 
-  \begin{center}
-    \begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
-      \matrix (m) [
-        matrix of math nodes
-        , row sep=2em
-        , column sep=3em
-        %, text height=3em
-        %, text depth=0.25em
-      ]
-      {
-        M\times N & M\otimes_RN \\
-                  & T \\
-      };
-      %TODO: Pfeile
-      \path[->,font=\scriptsize,>=angle 90]
-      (m-1-1) edge node[above]{$  $} (m-1-2)
-      (m-1-1) edge node[below]{$f$} (m-2-2)
-      ;
-      \path[->,font=\scriptsize,>=angle 90,dashed]
-      (m-1-2) edge node[right]{$\exists!\gamma$} (m-2-2)
-      ;
-    \end{tikzpicture}
-  \end{center}
+\begin{center}
+\begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
+\matrix (m) [
+  matrix of math nodes
+  , row sep=2em
+  , column sep=3em
+  %, text height=3em
+  %, text depth=0.25em
+]{
+  M\times N & M\otimes_RN \\
+            & T \\
+};
+%TODO: Pfeile
+\path[->,font=\scriptsize,>=angle 90]
+(m-1-1) edge node[above]{$  $} (m-1-2)
+(m-1-1) edge node[below]{$f$} (m-2-2)
+;
+\path[->,font=\scriptsize,>=angle 90,dashed]
+(m-1-2) edge node[right]{$\exists!\gamma$} (m-2-2)
+;
+\end{tikzpicture}
+\end{center}
 \end{defn}
 %TODO: tensorprodukt / faserprodukt zum basiswechsel
 
+\begin{defn}[Exacte Sequenz]
+Eine Sequenz
+\begin{center}
+\begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
+\matrix (m) [
+  matrix of math nodes
+  , row sep=2em
+  , column sep=3em
+  %, text height=3em
+  %, text depth=0.25em
+]{
+  \cdots & M_{i-1} & M_i & M_{i+1} & \cdots \\
+};
+%TODO: Pfeile
+\path[->,font=\scriptsize,>=angle 90]
+(m-1-1) edge node[above]{$  $} (m-1-2)
+(m-1-2) edge node[above]{$f_{i-1}$} (m-1-3)
+(m-1-3) edge node[above]{$f_i$} (m-1-4)
+(m-1-4) edge node[above]{$  $} (m-1-5)
+;
+\end{tikzpicture}
+\end{center}
+heißt exact, wenn für alle $i$ gilt, dass
+$\im(f_{i-1})=\ker{f_i}$.
+\end{defn}
 \begin{defn}[Kurze exacte Sequenz]
-    
+Eine kurze exacte Sequenz ist eine Sequenz
+\begin{center}
+\begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
+\matrix (m) [
+  matrix of math nodes
+  , row sep=2em
+  , column sep=3em
+  %, text height=3em
+  %, text depth=0.25em
+]{
+  0 & M' & M & M'' & 0 \\
+};
+%TODO: Pfeile
+\path[->,font=\scriptsize,>=angle 90]
+(m-1-1) edge node[above]{$  $} (m-1-2)
+(m-1-2) edge node[above]{$f$} (m-1-3)
+(m-1-3) edge node[above]{$g$} (m-1-4)
+(m-1-4) edge node[above]{$  $} (m-1-5)
+;
+\end{tikzpicture}
+\end{center}
+welche exact ist.
 \end{defn}
 
 % vim: set ft=tex :

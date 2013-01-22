@@ -16,8 +16,14 @@
 %\usepackage[ansinew]{inputenc}
 \usepackage{lmodern} %Type1-Schriftart für nicht-englische Texte
 
+%%schrift enger:
+%\usepackage{mathptmx}
+%\usepackage[scaled=.92]{helvet}
+%\usepackage{courier}
+
+
 \setlength{\unitlength}{1mm}
-\emergencystretch 2em
+%\emergencystretch 2em
 
 \usepackage{lscape} % alt: pdflscape
 \usepackage{amsmath,amsthm,amssymb}
@@ -60,8 +66,11 @@
 
 \usepackage{tikz}
 \usetikzlibrary{matrix,arrows,decorations.pathmorphing}
-\usepackage{subfig}
 \usepackage{float}
+\usepackage{subfig}
+%%besser als subfig:
+%\usepackage{caption}
+%\usepackage{subcaption}
 
 \newcommand{\myNewtonPlot}[6]{
   \draw[color=black,thick] #2;
@@ -89,6 +98,7 @@
 \renewcommand{\nomlabel}[1]{#1 \dotfill}
 % Zeilenabstände verkleinern
 \setlength{\nomitemsep}{-\parsep}
+\setlength{\parindent}{0pt}
 \makenomenclature
 
 %% BASH: makeindex main.nlo -s nomencl.ist -o main.nls
@@ -136,6 +146,7 @@
 %\crefname{kor}{Korollar}{Korollare}
 
 %%%%  new Commands  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TODO: replace def --> newcommand
 \def\bme{\boldsymbol{e}}
 
 \def\A{\ensuremath \mathbb{A}}
@@ -226,7 +237,7 @@
 \let\epsilon\varepsilon
 \let\phi\varphi
 
-\DeclareMathOperator{\def}{def}
+%\DeclareMathOperator{\defn}{def}
 \DeclareMathOperator{\modulo}{mod}
 \DeclareMathOperator{\conv}{conv}
 \DeclareMathOperator{\Cof}{Cof}
@@ -241,6 +252,7 @@
 \DeclareMathOperator{\slopes}{slopes}
 \DeclareMathOperator{\Ob}{Ob}
 \DeclareMathOperator{\Mor}{Mor}
+\DeclareMathOperator{\im}{im}
 
 % specific:
 \newcommand{\Dm}{{\cD\mbox{-Modul}}}
@@ -283,7 +295,7 @@
 
 %\newpage
 
-\input{einleitung.tex}
+%\input{einleitung.tex}
 
 \mainmatter
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -305,7 +317,8 @@
 \addcontentsline{toc}{chapter}{Anhang}
 
 \input{anhang-lemma2-4.tex}
-\input{anhang-plot-newton-polygon.tex}
+
+%\input{anhang-plot-newton-polygon.tex}
 
 \nocite{*}
 %\bibliographystyle{dinat}

@@ -7,17 +7,19 @@ d-modul.tex:%TODO: eigentlich ist \cD ja das wichtigste!
 d-modul.tex:%TODO: vlt umsortieren
 d-modul.tex:\begin{lem} %TODO: vervollständigen
 d-modul.tex:%TODO: alle sind
-d-modul.tex:%TODO: Beispiele??
 d-modul.tex:%TODO: definition Filtrierung
 d-modul.tex:\begin{proof} TODO
-grundlagen.tex:      %TODO: Pfeile
-grundlagen.tex:      %TODO: Pfeile
+grundlagen.tex:%TODO: Pfeile
+grundlagen.tex:%TODO: Pfeile
 grundlagen.tex:%TODO: tensorprodukt / faserprodukt zum basiswechsel
+grundlagen.tex:%TODO: Pfeile
+grundlagen.tex:%TODO: Pfeile
 lemma2-4.tex:  \end{pmatrix} \mbox{\footnote{$(\xi^i)^p=1\forall i$}}\\ % TODO: correct footnote
 lemma2-4.tex:%TODO: this
-levelt-turrittin.tex:  %TODO: all
+levelt-turrittin.tex:%TODO: all
 Übereinstimmungen in Binärdatei main.dvi.
 main.ps:w FJ(TODO,)30 b(\(3.)i(T)-8 b(re\033en\))p 3633 5576
+main.tex:%TODO: replace def --> newcommand
 main.tex:%TODO: set titel variable??
 meromZsh.tex:% TODO; wie darf ich einen Meromorphen verändern, (das P verändern) ohne das
 meromZsh.tex:% TODO: \cM = \cM_K ... replace
@@ -32,15 +34,15 @@ meromZsh.tex:TODO, (3. Treffen)
 meromZsh.tex:%TODO: wieso gilt das?
 meromZsh.tex:%TODO: beobachtung...
 meromZsh.tex:%TODO: differenz ist linear
-meromZsh.tex:TODO: Ab hier formal???
 meromZsh.tex:%TODO: bessere formulierung
 meromZsh.tex:%TODO: wie sind die genau definiert? invariant?
 meromZsh.tex:%TODO: nummer aus der referenz ist falsch
 meromZsh.tex:\cite[5.1]{sabbah_cimpa90} %TODO: genauer
 meromZsh.tex:%TODO: titel: Operations on vector spaces with connection
 meromZsh.tex:%TODO: verzweigung statt pull-back?
-meromZsh.tex:  %TODO: Pfeile
-meromZsh.tex:  %TODO: Pfeile
+meromZsh.tex:%TODO: Pfeile
+meromZsh.tex:%TODO: Pfeile
+meromZsh.tex:%%TODO: Pfeile
 meromZsh.tex:%TODO: warum hier alles Lokalisiert?
 meromZsh.tex:  %TODO: Pfeile
 meromZsh.tex:  %TODO: Pfeile

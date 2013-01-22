@@ -57,3 +57,4 @@ else
   git commit -a
   git push
 fi
+# while true; do zathura *.pdf; done
