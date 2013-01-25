@@ -194,4 +194,34 @@ $\partial(t^m)=mt^{m-1}$
 \end{enumerate}
 \end{exmp}
 
+\begin{comment}
+\section{Lokalisierung von $\Ckx$-Moduln}
+\cite[Chap 4.1.]{sabbah_cimpa90}
+Sei $M$ ein $\Ckx$-Modul. Wir schreiben $M[x^{-1}]$ für den $K$-Vektor Raum
+$M\otimes_{\Ckx}K$. Im allgemeinen gilt, falls $M$ von andlichen Typ über
+$\Ckx$ ist, so ist $C[x^{-1}]$ von endlichem Typ über $K$. Bemerke aber, dass
+$M[x^{-1}]$ generell nicht von endlichem Typ über $\Ckx$ ist.
+\end{comment}
+
+\section{Lokalisierung eines (holonomen) $\cD$-Moduls}
+\cite[Chap 4.2.]{sabbah_cimpa90}
+%TODO: was heißt holonom (holonomic)
+Sei $\cM$ ein links $\cD$-Modul. Betrachte $\cM$ als $\C\{x\}$-Modul und
+definiere darauf
+\[ \cM[x^{-1}]:=\cM\otimes_{\C\{x\}}K \]
+als die Lokalisierung von $\cM$.
+\begin{prop} \cite[Prop 4.2.1.]{sabbah_cimpa90}
+$\cM[x^{-1}]$ bekommt in natürlicher weiße eine $\cD$-Modul Struktur.
+\end{prop}
+\begin{proof} \cite[Prop 4.2.1.]{sabbah_cimpa90}
+mit:
+\[
+\partial_x(m\otimes x^{-k})=((\partial_xm)\otimes x^{-k})-km\otimes x^{-k-1}
+\]
+\begin{comment}
+beweis der $\cD$-linearität ist als übung gelassen
+\end{comment}
+\end{proof}
+
+
 %vim: set ft=tex :
