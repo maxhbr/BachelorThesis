@@ -1,3 +1,4 @@
+%!TeX root = main.tex
 % TODO; wie darf ich einen Meromorphen verändern, (das P verändern) ohne das
 % sich effektiv was ändert?
 % TODO: \cM = \cM_K ... replace
@@ -67,28 +68,6 @@ $\cM_K$ als den Meromorphen Zusammenhang bezeichnen.
 \item Wir betrachten hier Meromorphe Zusammenhänge an $x=0$ als
 Singularität.
 \end{enumerate}
-\end{bem}
-
-\begin{defn}
-\cite[1.a]{sabbah_Fourier-local}
-Sei $\phi\in\C(\!(u)\!)$.
-Wir schreiben $\sE^\phi$ für den (formalen) Rang 1 Vektorraum $\C(\!(u)\!)$
-ausgestattet mit dem Zusammenhang $\nabla=\partial_u+\partial_u\phi$, im
-speziellen also $\nabla_{\partial_u}1=\partial_u1=\phi'$.\\
-\begin{comment}
-Also
-\begin{align*}
-\sE^\phi=\Cful & \overset{\partial_u}{\rightarrow} \Cful\\
-1              & \mapsto \phi'(u)\\
-f(u)           & \mapsto f'(u)+f(u)\phi'(u)\\
-\end{align*}
-\end{comment}
-\end{defn}
-
-\begin{bem}
-\cite[1.a]{sabbah_Fourier-local}
-Es gilt $\sE^\phi\cong\sE^\psi$ genau dann wenn $\phi\equiv\psi \mod \Cfu$.
-%TODO: hier formal oder konvergent?
 \end{bem}
 
 \section{Eigenschaften}
@@ -299,7 +278,8 @@ $1=T^{-1}T$ $\rightsquigarrow$ $(T^{-1})'T+T^{-1}T'=0$
 \section{Newton Polygon} % ist dies eine Invariante??
 % gestohlen aus der ZulaBarbara Seite 46
 \begin{comment}
-Quelle: sabba?
+Quelle: sabba?\\
+sabbah mach alles formal, barbara mach alles konvergent
 \end{comment}
 Jedes $P\in \cD$ lässt sich eindeutig als
 \[ P=\sum^{n}_{k=0}{\sum^{\infty}_{l=-N}{\alpha_{kl}t^l\partial_t^k}} \]
@@ -311,8 +291,8 @@ Bei Sabbah: $H\subset \N\times\Z$ und dann konvexe Hülle davon in $\R^2$
 \end{comment}
 
 \begin{defn} % aus der zula
-Das Randpolygon von $\conv(H(P))$ heißt das \emph{Newton Polygon} von $P$ und
-wird geschrieben als $N(P)$.
+Das Randpolygon der konvexen Hülle $\conv(H(P))$ von $H(P)$ heißt das
+\emph{Newton Polygon} von $P$ und wird als $N(P)$ geschrieben.
 \end{defn}
 
 \begin{defn} % aus der zula
@@ -393,8 +373,8 @@ hat, so gilt $\cP(\cM_K)=\cP({\cM'}_K)\cup\cP({\cM''}_K)$.
 
 \section{Formale Meromorphe Zusammenhänge}
 %
-Definiere $ \hat\cD[x^{-1}]=\cD_\Cfx[x^{-1}]=\hat K<\partial_x>=:\cD_{\hat K} $
-wobei $\hat K=\Cfu[x^{-1}]$.
+%Definiere $ \hat\cD[x^{-1}]=\cD_\Cfx[x^{-1}]=\hat K<\partial_x>=:\cD_{\hat K}
+%$ wobei $\hat K=\Cfu[x^{-1}]$.
 \begin{comment}
 bei ZulaBarbara ist $\hat \cD_{\hat K}=\Cful<\partial_u>$ hier $=\cD_{\hat K}$
 \end{comment}
@@ -413,6 +393,28 @@ erfüllen soll.
 Alle bisher getroffene Aussagen stimmen auch für formale Meromorphe
 Zusammenhänge. Im besonderen existiert für jedes $\cM_{\hat K}$ ein ein $P\in
 \cD_{\hat K}$ mit $\cM_{\hat K}=\cD_{\hat K}/\cD_{\hat K}\cdot P$.
+\end{bem}
+
+\begin{defn}
+\cite[1.a]{sabbah_Fourier-local}
+Sei $\phi\in\C(\!(u)\!)$.
+Wir schreiben $\sE^\phi$ für den (formalen) Rang 1 Vektorraum $\C(\!(u)\!)$
+ausgestattet mit dem Zusammenhang $\nabla=\partial_u+\partial_u\phi$, im
+speziellen also $\nabla_{\partial_u}1=\partial_u1=\phi'$.\\
+\begin{comment}
+Also
+\begin{align*}
+\sE^\phi=\Cful & \overset{\partial_u}{\rightarrow} \Cful\\
+1              & \mapsto \phi'(u)\\
+f(u)           & \mapsto f'(u)+f(u)\phi'(u)\\
+\end{align*}
+\end{comment}
+\end{defn}
+
+\begin{bem}
+\cite[1.a]{sabbah_Fourier-local}
+Es gilt $\sE^\phi\cong\sE^\psi$ genau dann wenn $\phi\equiv\psi \mod \Cfu$.
+%TODO: hier formal oder konvergent?
 \end{bem}
 
 %TODO: titel: Operations on vector spaces with connection

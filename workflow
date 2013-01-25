@@ -58,3 +58,4 @@ else
   git push
 fi
 # while true; do zathura *.pdf; done
+#while true; do zathura -l error *.pdf; sleep 1; done

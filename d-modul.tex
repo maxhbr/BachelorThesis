@@ -1,18 +1,19 @@
+%!TeX root = main.tex
 % das gleiche wie Meromorphe zusammenhänge?
 
 \chapter{Der Ring $\cD$}
+Ich werde hier die Weyl Algebra, wie in \cite[Chapter~1]{sabbah_cimpa90}, in
+einer Veränderlichen einführen. 
+Ab hier sei $k\in \{ \C[x],\Ckx,\Cfx,K,\hat K \}$.
 
 \section{Weyl-Algebra und der Ring $\cD$} 
 %TODO: sabah-cimpa90.pdf  seite 3
 %script ginzburg.pdf seite 34 als garbe definiert
-Ich werde hier die Weyl Algebra, wie in
-\cite[Chapter~1]{sabbah_cimpa90}, in einer Veränderlichen einführen.
-Sei $\frac{\partial}{\partial x}=\partial_x$ der Ableitungsoperator nach $x$
-und sei $f \in\C[x]$ (bzw. $\C\{x\}$ bzw. $\C\llbracket x\rrbracket$).
-Man hat die folgende Kommutations-Relation zwischen dem
-\emph{Ableitungsoperator}
-und dem \emph{Multiplikations Operator} $f$:
-% TODO; ist das der Kommutator??
+Sei dazu $\frac{\partial}{\partial x}=\partial_x$ der Ableitungsoperator nach
+$x$ und sei $f \in k$.
+Man hat die folgende
+Kommutations-Relation zwischen dem \emph{Ableitungsoperator} und dem
+\emph{Multiplikations Operator} $f$:
 \begin{equation}\label{eq:weyl_relation}
 [\frac{\partial}{\partial x},f]=\frac{\partial f}{\partial x}
 \end{equation}
@@ -77,41 +78,6 @@ eine Ringstruktur auf $A$.
 %%TODO: alle sind
 %$A_1(\C),~\cD$ und $\hat\cD$ sind nicht kommutative Algebren.
 %\end{rem}
-
-\begin{defn}[Kommutator]%zula seite 15
-Sei $R$ ein Ring. Für $a,b\in R$ wird
-\[[a,b]=a\cdot b-b\cdot a\]
-als der \emph{Kommutator von a und b} definiert.
-\end{defn}
-% komutativ, dann immer kommutator gleich 0
-
-\begin{prop} \label{prop:d-modul-komutator-regeln}
-% geklaut aus Zula Barbara
-\begin{enumerate}
-\item Es gilt
-\[[ \partial_x,x] = \partial_xx-x\partial_x=1 \]
-und damit ist $\cD_k$ insbesondere nicht kommutativ.
-\item Sei $f\in \C[x]$, so gilt:
-\[ [\partial_x,f] = \frac{\partial f}{\partial x} \,. \]
-Denn für $g\in \C[x]$ ist
-\[
-[\partial_x,f]\cdot g=\partial_x(fg)-f\partial_xg=
-  (\partial_xf)g+\underset{=0}{\underbrace{ 
-  f(\partial_xg)-f(\partial_xg)}}=
-  (\partial_xf)g
-\]
-\item Es gelten die Formeln\\
-\begin{align*}
-[\partial_x,x^k]   &= kx^{k-1}\\
-[\partial_x^j,x]   &= j\partial_x^{j-1}\\
-[\partial_x^j,x^k] &= \sum_{i\geq1}\frac{k(k-1)\cdots(k-i+1)
-  \cdot j(j-1)\cdots(j-i+1)}{i!}x^{k-i}\partial_x^{j-i} \\
-\end{align*}
-\end{enumerate}
-\end{prop}
-\begin{proof}
-Siehe \cite{ZulaBarbara}
-\end{proof}
 
 %\begin{prop} \label{prop:weyl_eindeutige_schreibung}
 %\cite[Proposition 1.2.3]{sabbah_cimpa90}

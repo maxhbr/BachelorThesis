@@ -1,3 +1,4 @@
+%!TeX root = main.tex
 \chapter{Mathematische Grundlagen}
 
 \begin{comment}
@@ -5,18 +6,18 @@ Hier werde ich mich auf \cite{sabbah_cimpa90} und \cite{coutinho1995primer}
 beziehen.
 \end{comment}
 
-%\section{Einige Ergebnise aus der Kommutativen Algebra}~
-
 In dieser Arbeit spielen die folgenden Ringe eine große Rolle:
 \begin{itemize}
 \item $\C[x]:=\{ \sum^{N}_{i=1}a_ix^i | N\in \N \}$
 \item $\C\{x\}:=\{ \sum^{\infty}_{i=1}a_ix^i | \mbox{pos.
   Konvergenzradius} \}$
 \item $\C\llbracket x\rrbracket:=\{ \sum^{\infty}_{i=1}a_ix^i \}$
-\item $K:=\C(\{x\}):=\C\{x\}[x^{-1}]$
-\item $\hat{K}:=\C((x)):=\C\llbracket x\rrbracket[x^{-1}]$
+\item $K:=\C(\{x\}):=\C\{x\}[x^{-1}]$ der Ring der Laurent Reihen.
+\item $\hat{K}:=\C((x)):=\C\llbracket x\rrbracket[x^{-1}]$ der Ring der
+formalen Laurent Reihen.
 \end{itemize}
-Wobei offensichtlich $\C[x]\subset\C\{x\}\subset\Cfx$  gilt.
+Wobei offensichtlich $\C[x]\subsetneq\C\{x\}\subsetneq\Cfx$ und
+$K\subsetneq\hat K$ gilt.
 
 \begin{comment}
 Es bezeichnet der Hut ($ \, \hat \,\, $) das jeweils formale äquivalent zu
@@ -181,12 +182,59 @@ welche exact ist.
 \begin{defn}[Filtrierung] \label{defn:Filtrierung}
 \cite[Def 10.13.1.]{stacks-project}
 Eine \emph{aufsteigende Filtrierung $F$} von einem Objekt (Ring) $A$ ist eine
-Familie von $(F_nA)_{n\in\Z}$ von Unterobjekten (Unterring), so dass 
-\[ 0\subset\cdots\subset F_n\subset F_{n+1} \subset \cdots \subset A \]
-und definiere weiter $gr_k^FA:=F_kA\slash F_{k-1}A$.
+Familie von $(F_iA)_{i\in\Z}$ von Unterobjekten (Unterring), so dass 
+\[ 0\subset\cdots\subset F_i\subset F_{i+1} \subset \cdots \subset A \]
+und definiere weiter $gr_i^FA:=F_iA\slash F_{k-1}A$ und damit
+$gr^FA:=\bigoplus_{k\in\Z}gr_i^FA$.
 \begin{comment}
-$gr_k^F$ als was??
+$gr_i^F$ als was??
 \end{comment}
 \end{defn}
+
+\begin{defn}
+\cite{ayoubIntro}
+\cite[Def 3.2.1]{sabbah_cimpa90}
+Eine Filtrierung heißt \emph{gut}, falls ...
+\end{defn}
+
+\begin{defn}[Kommutator]%zula seite 15
+Sei $R$ ein Ring. Für $a,b\in R$ wird
+\[[a,b]=a\cdot b-b\cdot a\]
+als der \emph{Kommutator von a und b} definiert.
+\end{defn}
+% komutativ, dann immer kommutator gleich 0
+
+\begin{prop} \label{prop:d-modul-komutator-regeln}
+Sei $k\in \{ \C[x],\Ckx,\Cfx,K,\hat K \}$.
+Sei $\partial_x:k\rightarrow k$ der gewohnte Ableitungsoperator
+nach $x$, so gilt 
+% geklaut aus Zula Barbara
+\begin{enumerate}
+\item $[ \partial_x,x] = \partial_xx-x\partial_x=1 $
+%und damit ist $\cD_k$ insbesondere nicht kommutativ.
+\item für $f\in k$ ist
+\[ [\partial_x,f] = \frac{\partial f}{\partial x} \,. \]
+\item Es gelten die Formeln\\
+\begin{align*}
+[\partial_x,x^k]   &= kx^{k-1}\\
+[\partial_x^j,x]   &= j\partial_x^{j-1}\\
+[\partial_x^j,x^k] &= \sum_{i\geq1}\frac{k(k-1)\cdots(k-i+1)
+  \cdot j(j-1)\cdots(j-i+1)}{i!}x^{k-i}\partial_x^{j-i} \\
+\end{align*}
+\end{enumerate}
+\end{prop}
+\begin{proof}
+\begin{enumerate}
+\item Klar.
+\item Für ein Testobjekt $g\in k$ ist
+\[
+[\partial_x,f]\cdot g=\partial_x(fg)-f\partial_xg=
+  (\partial_xf)g+\underset{=0}{\underbrace{ 
+  f(\partial_xg)-f(\partial_xg)}}=
+  (\partial_xf)g
+\]
+\item Siehe \cite[???]{ZulaBarbara}
+\end{enumerate}
+\end{proof}
 
 % vim: set ft=tex :
