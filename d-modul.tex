@@ -178,6 +178,7 @@ $\cD$-Moduln rede, werde ich mich immer, wie auch \cite[Chapter
 
 \begin{exmp}[Einfachste links $\cD$-Moduln]
 % Sergey-Arkhipov-MAT1191_Lecture_Notes.pdf Chapter 2.1
+\cite[Exmp 2.2]{ArkhipovDmod}
 Sei $X=\A^1$ und $\sO_X=\C[t]$.
 \begin{enumerate}
 \item $\cD$ ist ein links und rechts $\cD$-Modul
@@ -187,11 +188,27 @@ Sei $X=\A^1$ und $\sO_X=\C[t]$.
 $t\cdot f(t)=tf$
 \item oder \cite[Exmp 3.1.2]{ginzburg} $\sO_X=\cD\cdot1=\cD/\cD\cdot\partial$.
 \end{itemize}
-\item $\cM=\sO_X\exp(\lambda t)$ mit $\partial(f(t)\exp(\lambda
-t))=\frac{\partial f}{\partial t}\exp(\lambda t)+f\lambda\exp(\lambda t)$
 \item $\cM=\C[t,t^{-1}]$ mit $t\cdot t^{m}=t^{m+1}$ und
 $\partial(t^m)=mt^{m-1}$
 \end{enumerate}
+\end{exmp}
+\begin{exmp}[Weiter $\cD$-Moduln] 
+\begin{enumerate}
+\item \cite[Exmp 2.2]{ArkhipovDmod}
+führe formal ein Symbol $\exp(\lambda t)$ ein, mit
+$\partial(f(t)\exp(\lambda t))=\frac{\partial f}{\partial t}\exp(\lambda
+t)+f\lambda\exp(\lambda t)$.  So ist $\cM=\sO_X\exp(\lambda t)$ ein
+$\cD$-Modul.
+\item \cite[Exmp 3.1.4]{ginzburg}
+Führe formal ein Symbol $\log(x)$ mit den Eigenschaften
+$\partial\cdot\log(x)=\frac{1}{x}$ ein. Erhalte nun das $\cD$-Modul
+$\C[x]\log(x)+\C[x,x^{-1}]$. Dieses Modul ist über $\cD$ erzeugt durch
+$\log(x)$ und man hat
+\[
+\C[x]\log(x)+\C[x,x^{-1}]=\cD\cdot\log(x)=\cD\slash\cD(\partial x\partial) \,.
+\]
+\end{enumerate}
+%TODO: Variable zu t machen?
 \end{exmp}
 
 \begin{comment}
