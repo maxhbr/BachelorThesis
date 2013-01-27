@@ -5,31 +5,39 @@
 %TODO: Dimension eines Meromorphen Zusammenhang
 
 \chapter{Der Meromorphe Zusammenhang}
+\section{Systeme von ODEs und Meromorphe Zusammenhänge}
 \cite[Chap 5.1.1]{hotta2007d} %abgeschrieben
-Wir beginnen mit einer gewöhnlichen Differentialgleichung (kurz ODE). Wir
-werden dieses Problem immer in einer Umgebung um $x=0\in\C$ betrachten.
 Für eine Matrix $A(x)=(a_{ij}(x))_{ij}\in M(K,n\times n)$ betrachte des System
-von ODEs
+von gewöhnlichen Differentialgleichungen (kurz ODEs)
 \begin{equation}
 \label{eq:KlassischesODE}
 %TODO: partial oder d
 \frac{d}{dx}u(x)=A(x)u(x)
 \end{equation}
 wobei $u(x)=\,^t(u_1(x),\dots,u_n(x))$ ein Spaltenvektor von unbekannten
-Funktionen. Als Lösungen von (\ref{eq:KlassischesODE}) betrachten wir holomorphe
-(but possibly multivalued) %TODO: was ist damit gemeint?
-Lösungen auf der punktierten Scheibe $B_\epsilon^*={x\in\C|0<|x|<\epsilon}$,
-wobei $\epsilon>0$ klein genug sei. Wir sagen $v(x)=\,^t(v_1(x),\dots,v_n(x))$
-ist eine Lösung von (\ref{eq:KlassischesODE}), falls für alle
-$i\in\{1,\dots,n\}$ gilt $ v_i$ eine holomorphe aber möglicherweise
+Funktionen.  Wir werden dieses Problem immer in einer Umgebung um $x=0\in\C$
+betrachten.  Als Lösungen von (\ref{eq:KlassischesODE}) betrachten wir
+holomorphe (but possibly multivalued) %TODO: was ist damit gemeint?  Lösungen
+auf der punktierten Scheibe $B_\epsilon^*={x\in\C|0<|x|<\epsilon}$, wobei
+$\epsilon>0$ klein genug sei. Wir sagen $v(x)=\,^t(v_1(x),\dots,v_n(x))$ ist
+eine Lösung von (\ref{eq:KlassischesODE}), falls für alle $i\in\{1,\dots,n\}$
+gilt $ v_i$ eine holomorphe aber möglicherweise
 multivalued %TODO: ???
-Funktion von $B_\epsilon^*$ nach $\C$ ist und es (\ref{eq:KlassischesODE})
+Funktion von $B_\epsilon^*$ nach $\C$ ist (diese Menge werde ich im folgendem
+wie \cite{hotta2007d} mit $\tilde K$
+bezeichnen) und es (\ref{eq:KlassischesODE})
 erfüllt.
+\begin{bem}
+Die Menge der holomorphen aber möglicherweise 
+multivalued % ????
+Funktionen von $B_\epsilon^*$ nach $\C$ werde ich im folgendem, wie auch
+\cite{hotta2007d}, mit $\tilde K$ bezeichnen.
+\end{bem}
 
 Nun wollen wir dieses Klasische Gebilde in die moderne Sprache der Meromorphen
 Zusammenhänge übersetzen.
 
-\section{Meromorpher Zusammenhang (Definition)}
+%\section{Meromorpher Zusammenhang (Definition)}
 %Quelle ist \cite{sabbah_cimpa90}
 \begin{defn}[Meromorpher Zusammenhang] \label{def:merom-zush}
 Ein \emph{Meromorpher Zusammenhang} (bei $x=0$) ist ein Tuppel
@@ -62,7 +70,8 @@ wir auch $\phi:(\cM_K,\partial_\cM)\rightarrow(\cN_K,\partial_\cN)$.
 \begin{bem}
 \begin{enumerate}
 \item Später wird man auf die Angabe von $\partial$ verichten und einfach
-$\cM_K$ als den Meromorphen Zusammenhang bezeichnen.
+$\cM_K$ als den Meromorphen Zusammenhang bezeichnen, auch wird manchmal auf die
+Angabe von $K$ verzichtet.
 %\item Wir betrachten hier Meromorphe Zusammenhänge an $x=0$.
 \item \cite[Rem 5.1.2.]{hotta2007d}
 Die Bedingung (\ref{eq:Leibnitzregel}) ist zur schwächeren Bedingung
@@ -73,6 +82,37 @@ welche für alle $f\in K$ aber nur für alle $u\in \Ckx$ erfüllt sein muss,
 äquivalent.
 \end{enumerate}
 \end{bem}
+
+\begin{defn}[Zusammenhangsmatrix] \cite[Seite 129]{hotta2007d}
+Sei $(\cM_K,\partial)$ ein Meromorpher Zusammenhang so wähle eine $K$-Basis
+$\{e_i\}_{i\in\{1,\dots,n\}}$ von $\cM$. Dann ist die
+\emph{Zusammenhangsmatrix bzgl. der Basis $\{e_i\}_{i\in\{1,\dots,n\}}$} die
+Matrix $A(x)=(a_{ij}(x))\in M(K,n\times n)$ definiert durch 
+%\[ \partial e_j=-\sum_{i=1}^na_{ij}(x)e_i \,. \]
+\[ a_{ij}(x) = -^te_i \partial e_j \,. \]
+\end{defn}
+
+Also ist, bezüglich der Basis $\{e_i\}_{i\in\{1,\dots,n\}}$, die Wirkung von
+$\partial$ beschrieben durch 
+\[
+\partial(u) = \partial \Big( \sum_{i=1}^nu_i(x)e_i \Big) 
+=\sum_{i=1}^n \Big( u_i'(x)- \sum_{j=1}^na_{ij}u_j(x) \Big)e_i \,.
+\]
+Also ist die Bedingung $\partial u(x)=0$, für $u(x)\in \sum_{i=1}^n u_ie_i\in
+\tilde K \otimes_K\cM$, äquivalent zu der Gleichung
+\begin{equation}
+u'(x)=A(x)u(x)
+\end{equation}
+für $u(x)=\,^t(u_1(x),\dots,u_n(x))\in\tilde K^n$. Damit haben wir gesehen,
+dass jeder Meromorphe Zusammanhang $(\cM,\partial)$ ausgestattet mit einer
+$K$-Basis $\{e_i\}_{i\in\{1,\dots,n\}}$ von $\cM$ zu einem ODE zugeordnet
+werden kann. Umgekehrt können wir für jede Matrix $A(x)=(a_{ij}(x))$ den
+assoziierten Meromorphen Zusammenhang $(\cM_A,\partial_A)$ %TODO: improve notation
+angeben, durch
+\begin{align*}
+\cM_A & :=\bigoplus_{i=1}^n Ke_i \,, & \partial_A e_i &:=
+-\sum_{i=1}^na_{ij}(x)e_i \,.
+\end{align*}
 
 \section{Eigenschaften}
 %Hier nun einige Eigenschaften Meromorpher Zusammenhänge.

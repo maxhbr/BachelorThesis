@@ -25,9 +25,10 @@ meromZsh.tex:% TODO; wie darf ich einen Meromorphen verändern, (das P veränder
 meromZsh.tex:% TODO: \cM = \cM_K ... replace
 meromZsh.tex:%TODO: Dimension eines Meromorphen Zusammenhang
 meromZsh.tex:%TODO: partial oder d
-meromZsh.tex:(but possibly multivalued) %TODO: was ist damit gemeint?
+meromZsh.tex:holomorphe (but possibly multivalued) %TODO: was ist damit gemeint?  Lösungen
 meromZsh.tex:multivalued %TODO: ???
 meromZsh.tex:%TODO: korrekte benennung?
+meromZsh.tex:assoziierten Meromorphen Zusammenhang $(\cM_A,\partial_A)$ %TODO: improve notation
 meromZsh.tex:%TODO: reihenfolge bei sabbah anderst!!!
 meromZsh.tex:%TODO: make this harpoon arrows
 meromZsh.tex:TODO, (3. Treffen)
