@@ -17,7 +17,7 @@
 \usepackage{lmodern} %Type1-Schriftart für nicht-englische Texte
 %\linespread{1.5}
 
-%%schrift enger:
+%schrift enger:
 %\usepackage{mathptmx}
 %\usepackage[scaled=.92]{helvet}
 %\usepackage{courier}
@@ -150,6 +150,7 @@
 %TODO: replace def --> newcommand
 \def\bme{\boldsymbol{e}}
 
+%{{{
 \def\A{\ensuremath \mathbb{A}}
 %\def\B{\ensuremath \mathbb{B}}
 \def\C{\ensuremath \mathbb{C}}
@@ -176,7 +177,9 @@
 %\def\X{\ensuremath \mathbb{X}}
 %\def\Y{\ensuremath \mathbb{Y}}
 \def\Z{\ensuremath \mathbb{Z}}
+%}}}
 
+%{{{
 %\def\cA{\ensuremath \mathcal{A}}
 %\def\cB{\ensuremath \mathcal{B}}
 \def\cC{\ensuremath \mathcal{C}}
@@ -203,7 +206,9 @@
 %\def\cX{\ensuremath \mathcal{X}}
 %\def\cY{\ensuremath \mathcal{Y}}
 %\def\cZ{\ensuremath \mathcal{Z}}
+%}}}
 
+%{{{
 %\def\sA{\ensuremath \mathscr{A}}
 %\def\sB{\ensuremath \mathscr{B}}
 %\def\sC{\ensuremath \mathscr{C}}
@@ -230,6 +235,7 @@
 %\def\sX{\ensuremath \mathscr{X}}
 %\def\sY{\ensuremath \mathscr{Y}}
 %\def\sZ{\ensuremath \mathscr{Z}}
+%}}}
 
 %\renewcommand{\headrulewidth}{0.2pt}
 
@@ -238,6 +244,7 @@
 \let\epsilon\varepsilon
 \let\phi\varphi
 
+%{{{
 %\DeclareMathOperator{\defn}{def}
 \DeclareMathOperator{\modulo}{mod}
 \DeclareMathOperator{\conv}{conv}
@@ -254,10 +261,11 @@
 \DeclareMathOperator{\Ob}{Ob}
 \DeclareMathOperator{\Mor}{Mor}
 \DeclareMathOperator{\im}{im}
-
-% specific:
+\DeclareMathOperator{\Car}{Car}
 \newcommand{\Dm}{{\cD\mbox{-Modul}}}
+%}}}
 
+%{{{
 \newcommand{\Cfx}{{\mathbb C\llbracket x\rrbracket}}
 \newcommand{\Cft}{{\mathbb C\llbracket t\rrbracket}}
 \newcommand{\Cfu}{{\mathbb C\llbracket u\rrbracket}}
@@ -270,6 +278,7 @@
 \newcommand{\Ckxl}{{\mathbb C (\!\{x\}\!)}}
 \newcommand{\Cktl}{{\mathbb C (\!\{t\}\!)}}
 \newcommand{\Ckul}{{\mathbb C (\!\{u\}\!)}}
+%}}}
 
 \makeatother
 
@@ -278,7 +287,7 @@
 {\displaystyle#1}\end{array}}%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\input{mydevelop.sty}
+\input{mydevelop.sty}
 \cfoot{\today}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

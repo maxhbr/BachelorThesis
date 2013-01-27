@@ -1,12 +1,12 @@
 %!TeX root = main.tex
 % das gleiche wie Meromorphe zusammenhänge?
 
-\chapter{Der Ring $\cD$}
+\chapter{Moduln über $\cD_k$}
 Ich werde hier die Weyl Algebra, wie in \cite[Chapter~1]{sabbah_cimpa90}, in
 einer Veränderlichen einführen. 
 Ab hier sei $k\in \{ \C[x],\Ckx,\Cfx,K,\hat K \}$.
 
-\section{Weyl-Algebra und der Ring $\cD$} 
+\section{Weyl-Algebra und der Ring $\cD_k$} 
 %TODO: sabah-cimpa90.pdf  seite 3
 %script ginzburg.pdf seite 34 als garbe definiert
 Sei dazu $\frac{\partial}{\partial x}=\partial_x$ der Ableitungsoperator nach
@@ -36,7 +36,7 @@ darstellt. Dies bedeutet, für alle $g\in\C[x]$ hat man
 Definiere nun den Ring $\cD_k$ als die Quotientenalgebra der freien Algebra,
 welche von dem Koeffizientenring in $k$ zusammen mit dem Element $\partial_x$,
 erzeugt wird, Modulo der Relation \eqref{eq:weyl_relation}.  Wir schreiben
-diesen Ring als
+diesen Ring auch als
 \begin{itemize}
 \item $A_1(\C):=\C[x]<\partial_x>$ falls $k=\C[x]$, und nennen ihn die
 \emph{Weyl Algebra}
@@ -49,16 +49,11 @@ K\overset{\mbox{def}}{=}\Cfx[x^{-1}]$
 \end{itemize}
 \end{defn}
 \begin{bem}
-Es gilt $\hat \cD[x^{-1}]=\cD_{\hat K}$
+Es gilt $\cD[x^{-1}]=\cD_K$ und $\hat \cD[x^{-1}]=\cD_{\hat K}$.
 \end{bem}
 %Wir werden die Notation $A_1(\C):=\C[x]<\partial_x>$ (bzw.
 %$\cD:=\C\{x\}<\partial_x>$ bzw. 
 %$\hat{\cD}:=\C\llbracket x\rrbracket<\partial_x>$) verwenden.
-
-\begin{comment}
-Beispiele und Alternative Definition:\\
-Sergey-Arkhipov-MAT1191\_Lecture\_Notes.pdf Chapter 2.1
-\end{comment}
 
 %TODO: vlt umsortieren
 \begin{comment}
@@ -170,7 +165,7 @@ Treffen?
 %Unabhängigkeit von Schreibung wird in Sabbah Script behauptet
 %\end{comment}
 
-\section{Alternative Definition / Herangehensweise}
+\subsection{Alternative Definition / Sichtweise}
 %Nur abgeschrieben
 \cite[Chap 1.1.]{kashiwara2003d}
 Sei $X$ eine $1$-Dimensionale Complexe Mannigfaltigkeit und $\cO_X$ die Garbe
@@ -199,6 +194,14 @@ als $\partial(t^n)=nt^{n-1}$ wirkt. Dann sind die Differentialoperatoren
 \end{align*}
 Somit stimmt die Alternative Definition schon mal mit der Einfachen überein.
 \end{prop}
+
+\begin{comment}
+\begin{defn} \cite[Defn 2.1]{ArkhipovDmod}
+Sei $X=\A^1$, $\cO_X=\C[t]$ und $\cD_X=[t,\partial]$ mit der Relation
+$[\partial,t]=1$. Dann definieren wir die links $\cD$-Moduln über $\A^1$ als
+die $\C[t,\partial]$-Moduln. Sie werden geschrieben als $\cD-mod(\A^1)$
+\end{defn}
+\end{comment}
 
 \section{(Links) $\cD$-Moduln}
 Da $\cD$ ein nichtkommutativer Ring ist, muss man vorsichtig sein und zwischen
@@ -240,6 +243,35 @@ $\log(x)$ und man hat
 \end{enumerate}
 %TODO: Variable zu t machen?
 \end{exmp}
+
+\begin{lem}\cite[Lem 2.3.3.]{sabbah_cimpa90}
+Sei $\cM$ ein links $\cD$-Modul von endlichem Typ, welches auch von endlichem
+Typ über $\Ckx$ ist. Dann ist $\cM$ bereits ein freies $\C\{x\}$-Modul.
+\end{lem}
+\begin{proof}
+Siehe \cite[Lem 2.3.3.]{sabbah_cimpa90}.
+\end{proof}
+\begin{cor} \cite[Cor 2.3.4.]{sabbah_cimpa90}
+Falls $\cM$ ein links $\cD$-Modul von endlichem typ, welches außerdem ein
+endich dimensionaler Vektorraum ist, so ist schon $\cM=\{0\}$.
+\end{cor}
+
+\subsection{Holonome $\cD$-Moduln}
+\begin{comment}
+TODO: defn of Car als Charakteristische Varietät
+\end{comment}
+\begin{defn} \cite[Def 3.3.1.]{sabbah_cimpa90}
+Sei $\cM$ lineares Differentialsystem 
+(linear differential system) %TODO: defn
+.  Man sagt, $\cM$ ist holonom, falls $\cM=0$ oder falls $\Car\cM\subset
+\{x=0\}\cup{\xi=0}$.
+\end{defn}
+\begin{lem} \cite[Lem 3.3.8.]{sabbah_cimpa90}
+Ein $\cD$-Modul ist holonom genau dann, wenn $\dim_{gr^F\cD,0}gr^F\cM=1$.
+\end{lem}
+\begin{proof}
+Siehe \cite[Lem 3.3.8.]{sabbah_cimpa90}
+\end{proof}
 
 \begin{comment}
 \section{Lokalisierung von $\Ckx$-Moduln}

@@ -3,11 +3,15 @@
 % sich effektiv was ändert?
 % TODO: \cM = \cM_K ... replace
 %TODO: Dimension eines Meromorphen Zusammenhang
+\begin{comment}
+Alle MeromZsh sind $\cD$-Moduln aber nicht andersherum?
+\end{comment}
 
 \chapter{Der Meromorphe Zusammenhang}
 \section{Systeme von ODEs und Meromorphe Zusammenhänge}
+%TODO: \tilde cO --> \tilde \cO
 \cite[Chap 5.1.1]{hotta2007d} %abgeschrieben
-Für eine Matrix $A(x)=(a_{ij}(x))_{ij}\in M(K,n\times n)$ betrachte des System
+Für eine Matrix $A(x)=(a_{ij}(x))_{ij}\in M(n\times n,K)$ betrachte des System
 von gewöhnlichen Differentialgleichungen (kurz ODEs)
 \begin{equation}
 \label{eq:KlassischesODE}
@@ -20,19 +24,8 @@ betrachten.  Als Lösungen von (\ref{eq:KlassischesODE}) betrachten wir
 holomorphe (but possibly multivalued) %TODO: was ist damit gemeint?  Lösungen
 auf der punktierten Scheibe $B_\epsilon^*={x\in\C|0<|x|<\epsilon}$, wobei
 $\epsilon>0$ klein genug sei. Wir sagen $v(x)=\,^t(v_1(x),\dots,v_n(x))$ ist
-eine Lösung von (\ref{eq:KlassischesODE}), falls für alle $i\in\{1,\dots,n\}$
-gilt $ v_i$ eine holomorphe aber möglicherweise
-multivalued %TODO: ???
-Funktion von $B_\epsilon^*$ nach $\C$ ist (diese Menge werde ich im folgendem
-wie \cite{hotta2007d} mit $\tilde K$
-bezeichnen) und es (\ref{eq:KlassischesODE})
-erfüllt.
-\begin{bem}
-Die Menge der holomorphen aber möglicherweise 
-multivalued % ????
-Funktionen von $B_\epsilon^*$ nach $\C$ werde ich im folgendem, wie auch
-\cite{hotta2007d}, mit $\tilde K$ bezeichnen.
-\end{bem}
+eine Lösung von (\ref{eq:KlassischesODE}), falls $ v_i\in\tilde \cO$ für alle
+$i\in\{1,\dots,n\}$ und $v$ die Gleichung (\ref{eq:KlassischesODE}) erfüllt.
 
 Nun wollen wir dieses Klasische Gebilde in die moderne Sprache der Meromorphen
 Zusammenhänge übersetzen.
@@ -87,7 +80,7 @@ welche für alle $f\in K$ aber nur für alle $u\in \Ckx$ erfüllt sein muss,
 Sei $(\cM_K,\partial)$ ein Meromorpher Zusammenhang so wähle eine $K$-Basis
 $\{e_i\}_{i\in\{1,\dots,n\}}$ von $\cM$. Dann ist die
 \emph{Zusammenhangsmatrix bzgl. der Basis $\{e_i\}_{i\in\{1,\dots,n\}}$} die
-Matrix $A(x)=(a_{ij}(x))\in M(K,n\times n)$ definiert durch 
+Matrix $A(x)=(a_{ij}(x))\in M(n\times n,K)$ definiert durch 
 %\[ \partial e_j=-\sum_{i=1}^na_{ij}(x)e_i \,. \]
 \[ a_{ij}(x) = -^te_i \partial e_j \,. \]
 \end{defn}
@@ -99,11 +92,11 @@ $\partial$ beschrieben durch
 =\sum_{i=1}^n \Big( u_i'(x)- \sum_{j=1}^na_{ij}u_j(x) \Big)e_i \,.
 \]
 Also ist die Bedingung $\partial u(x)=0$, für $u(x)\in \sum_{i=1}^n u_ie_i\in
-\tilde K \otimes_K\cM$, äquivalent zu der Gleichung
+\tilde \cO \otimes_K\cM$, äquivalent zu der Gleichung
 \begin{equation}
 u'(x)=A(x)u(x)
 \end{equation}
-für $u(x)=\,^t(u_1(x),\dots,u_n(x))\in\tilde K^n$. Damit haben wir gesehen,
+für $u(x)=\,^t(u_1(x),\dots,u_n(x))\in\tilde \cO^n$. Damit haben wir gesehen,
 dass jeder Meromorphe Zusammanhang $(\cM,\partial)$ ausgestattet mit einer
 $K$-Basis $\{e_i\}_{i\in\{1,\dots,n\}}$ von $\cM$ zu einem ODE zugeordnet
 werden kann. Umgekehrt können wir für jede Matrix $A(x)=(a_{ij}(x))$ den

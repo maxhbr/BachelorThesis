@@ -8,7 +8,7 @@ beziehen.
 
 Wir betrachten $\C$ hier als Complexe Mannigfaltigkeit mit der Klassischen
 Topologie.
-In dieser Arbeit spielen die folgenden Ringe eine große Rolle:
+In dieser Arbeit spielen die folgenden Funktionenräume eine große Rolle:
 \begin{itemize}
 \item $\C[x]:=\{ \sum^{N}_{i=1}a_ix^i | N\in \N \}$ die einfachen Potenzreihen
 \item $\C\{x\}:=\{ \sum^{\infty}_{i=1}a_ix^i | \mbox{pos.
@@ -19,6 +19,9 @@ Potenzreihen
 \item $K:=\Ckxl:=\C\{x\}[x^{-1}]$ der Ring der Laurent Reihen.
 \item $\hat{K}:=\Cfxl:=\C\llbracket x\rrbracket[x^{-1}]$ der Ring der
 formalen Laurent Reihen.
+\item $\tilde\cO$ als der Raum der Keime aller 
+multivalued % TODO: ???
+Funktionen. (bei \cite{hotta2007d} mit $\tilde K$ bezeichnet)
 \end{itemize}
 Wobei offensichtlich die Inclulsionen $\C[x]\subsetneq\C\{x\}\subsetneq\Cfx$ und
 $K\subsetneq\hat K$ gelten.
@@ -65,7 +68,8 @@ Für $v=(v_1,\dots,v_n)$ ein Vektor, bezeichnet
   v_{n}
 \end{pmatrix}
 \]
-den Transponierten Vektor.
+den Transponierten Vektor. Es bezeichnet $M(n\times m,k)$ die Menge der $n$ mal
+$m$ Dimensionalen Matritzen mit einträgen in $k$.
 
 \begin{defn}[Direkte Summe] \cite[4(Categories).5.1]{stacks-project}
 Seien $x,y\in \Ob(\cC)$, eine \emph{Direkte Summe} oder das \emph{coprodukt}
