@@ -6,12 +6,16 @@ Hier werde ich mich auf \cite{sabbah_cimpa90} und \cite{coutinho1995primer}
 beziehen.
 \end{comment}
 
+Wir betrachten $\C$ hier als Complexe Mannigfaltigkeit mit der Klassischen
+Topologie.
 In dieser Arbeit spielen die folgenden Ringe eine große Rolle:
 \begin{itemize}
-\item $\C[x]:=\{ \sum^{N}_{i=1}a_ix^i | N\in \N \}$
+\item $\C[x]:=\{ \sum^{N}_{i=1}a_ix^i | N\in \N \}$ die einfachen Potenzreihen
 \item $\C\{x\}:=\{ \sum^{\infty}_{i=1}a_ix^i | \mbox{pos.
-  Konvergenzradius} \}$
-\item $\C\llbracket x\rrbracket:=\{ \sum^{\infty}_{i=1}a_ix^i \}$
+  Konvergenzradius} \}=(\cO_{\C})_0$ die formalen Potenzreihen mit positivem
+Konvergenzradius (\cite[Chap 5.1.1]{hotta2007d})
+\item $\C\llbracket x\rrbracket:=\{ \sum^{\infty}_{i=1}a_ix^i \}$ die formalen
+Potenzreihen
 \item $K:=\Ckxl:=\C\{x\}[x^{-1}]$ der Ring der Laurent Reihen.
 \item $\hat{K}:=\Cfxl:=\C\llbracket x\rrbracket[x^{-1}]$ der Ring der
 formalen Laurent Reihen.
@@ -52,6 +56,16 @@ und es gilt $gr_\mathfrak{m}(\C[[x]])=\C[x]$
 \end{enumerate}
 \end{lem}
 \end{comment}
+
+Für $v=(v_1,\dots,v_n)$ ein Vektor, bezeichnet 
+\[
+\,^tv:= \begin{pmatrix}
+  v_{1}\\
+  \vdots\\
+  v_{n}
+\end{pmatrix}
+\]
+den Transponierten Vektor.
 
 \begin{defn}[Direkte Summe] \cite[4(Categories).5.1]{stacks-project}
 Seien $x,y\in \Ob(\cC)$, eine \emph{Direkte Summe} oder das \emph{coprodukt}

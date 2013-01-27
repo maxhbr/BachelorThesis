@@ -170,6 +170,36 @@ Treffen?
 %Unabhängigkeit von Schreibung wird in Sabbah Script behauptet
 %\end{comment}
 
+\section{Alternative Definition / Herangehensweise}
+%Nur abgeschrieben
+\cite[Chap 1.1.]{kashiwara2003d}
+Sei $X$ eine $1$-Dimensionale Complexe Mannigfaltigkeit und $\cO_X$ die Garbe
+der holomorphen Funktionen auf $X$. Ein (holomorpher) \emph{differential
+Operator} auf $X$ ist ein Garben-Morphismus $P:\cO_X\rightarrow \cO_X$, lokal
+in der Koordinate $x$ und mit holomorphen Funktionen $a_n(x)$ als
+\[
+(Pu)(x)=\sum_{n\geq0}a_n(x)\partial_x^nu(x)
+\]
+geschrieben (für $u\in\cO_X$). Zusätzlich nehmen wir an, dass $a_n(x)\equiv 0$
+für fast alle $n\in \N$ gilt. Wir setzten
+$\partial_x^nu(x)=\frac{\partial^nu}{\partial x^n}(x)$. Wir sagen ein Operator
+hat Ordnung $m$, falls $\forall n\geq m: \alpha_n(x)\equiv0$.  Mit $\cD_X$
+bezeichnen wir die Garbe von Differentialoperatoren auf $X$. Die Garbe $\cD_X$
+hat eine Ring Struktur mittels der Komposition als Multiplikation und $\cO_X$
+ist ein Unterring von $\cD_X$. Sei $\Theta_X$ die Garbe der Vektorfelder über
+über $X$. Es gilt, dass $\Theta_X$ in $\cD_X$ enthalten ist. Bemerke auch, dass
+$\Theta_X$ ein links $\cO_X$-Untermodul, aber kein rechts $\cO_X$-Untermodul ist.
+
+\begin{prop}
+\cite[Exmp 1.1]{ArkhipovDmod}
+Sei $X=\A^1=\C$, $\cO_X=\C[t]$ und $\Theta_X=\C[t]\partial$. Wobei $\partial$
+als $\partial(t^n)=nt^{n-1}$ wirkt. Dann sind die Differentialoperatoren 
+\begin{align*}
+\cD_X &= \C[t,\partial], & \mbox{mit} & & \partial t-t\partial & =1.
+\end{align*}
+Somit stimmt die Alternative Definition schon mal mit der Einfachen überein.
+\end{prop}
+
 \section{(Links) $\cD$-Moduln}
 Da $\cD$ ein nichtkommutativer Ring ist, muss man vorsichtig sein und zwischen
 links unr rechts $\cD$-Moduln unterschiden. Wenn ich im folgendem von
@@ -179,14 +209,14 @@ $\cD$-Moduln rede, werde ich mich immer, wie auch \cite[Chapter
 \begin{exmp}[Einfachste links $\cD$-Moduln]
 % Sergey-Arkhipov-MAT1191_Lecture_Notes.pdf Chapter 2.1
 \cite[Exmp 2.2]{ArkhipovDmod}
-Sei $X=\A^1$ und $\sO_X=\C[t]$.
+%Sei $X=\A^1$ und $\sO_X=\C[t]$.
 \begin{enumerate}
 \item $\cD$ ist ein links und rechts $\cD$-Modul
-\item $\cM=\sO_X$ durch
+\item $\cM=\C[t]$ durch
 \begin{itemize}
 \item $\partial(f(t))=\frac{\partial f}{\partial t}$ und
 $t\cdot f(t)=tf$
-\item oder \cite[Exmp 3.1.2]{ginzburg} $\sO_X=\cD\cdot1=\cD/\cD\cdot\partial$.
+\item oder \cite[Exmp 3.1.2]{ginzburg} $\C[t]=\cD\cdot1=\cD/\cD\cdot\partial$.
 \end{itemize}
 \item $\cM=\C[t,t^{-1}]$ mit $t\cdot t^{m}=t^{m+1}$ und
 $\partial(t^m)=mt^{m-1}$
@@ -195,10 +225,10 @@ $\partial(t^m)=mt^{m-1}$
 \begin{exmp}[Weiter $\cD$-Moduln] 
 \begin{enumerate}
 \item \cite[Exmp 2.2]{ArkhipovDmod}
-führe formal ein Symbol $\exp(\lambda t)$ ein, mit
-$\partial(f(t)\exp(\lambda t))=\frac{\partial f}{\partial t}\exp(\lambda
-t)+f\lambda\exp(\lambda t)$.  So ist $\cM=\sO_X\exp(\lambda t)$ ein
-$\cD$-Modul.
+Führe formal, also ohne jeglichen analytischen Hintergurnd, ein Symbol
+$\exp(\lambda t)$ ein, mit $\partial(f(t)\exp(\lambda t))=\frac{\partial
+f}{\partial t}\exp(\lambda t)+f\lambda\exp(\lambda t)$.  So ist
+$\cM=\sO_X\exp(\lambda t)$ ein $\cD$-Modul.
 \item \cite[Exmp 3.1.4]{ginzburg}
 Führe formal ein Symbol $\log(x)$ mit den Eigenschaften
 $\partial\cdot\log(x)=\frac{1}{x}$ ein. Erhalte nun das $\cD$-Modul

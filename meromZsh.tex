@@ -5,21 +5,35 @@
 %TODO: Dimension eines Meromorphen Zusammenhang
 
 \chapter{Der Meromorphe Zusammenhang}
-%Quelle ist \cite{sabbah_cimpa90}
-\begin{comment}
-\begin{itemize}
-\item wofür sind die gut?
-\item wieso kommt man ursprünglich dazu
-\end{itemize}
-\end{comment}
+\cite[Chap 5.1.1]{hotta2007d} %abgeschrieben
+Wir beginnen mit einer gewöhnlichen Differentialgleichung (kurz ODE). Wir
+werden dieses Problem immer in einer Umgebung um $x=0\in\C$ betrachten.
+Für eine Matrix $A(x)=(a_{ij}(x))_{ij}\in M(K,n\times n)$ betrachte des System
+von ODEs
+\begin{equation}
+\label{eq:KlassischesODE}
+%TODO: partial oder d
+\frac{d}{dx}u(x)=A(x)u(x)
+\end{equation}
+wobei $u(x)=\,^t(u_1(x),\dots,u_n(x))$ ein Spaltenvektor von unbekannten
+Funktionen. Als Lösungen von (\ref{eq:KlassischesODE}) betrachten wir holomorphe
+(but possibly multivalued) %TODO: was ist damit gemeint?
+Lösungen auf der punktierten Scheibe $B_\epsilon^*={x\in\C|0<|x|<\epsilon}$,
+wobei $\epsilon>0$ klein genug sei. Wir sagen $v(x)=\,^t(v_1(x),\dots,v_n(x))$
+ist eine Lösung von (\ref{eq:KlassischesODE}), falls für alle
+$i\in\{1,\dots,n\}$ gilt $ v_i$ eine holomorphe aber möglicherweise
+multivalued %TODO: ???
+Funktion von $B_\epsilon^*$ nach $\C$ ist und es (\ref{eq:KlassischesODE})
+erfüllt.
+
+Nun wollen wir dieses Klasische Gebilde in die moderne Sprache der Meromorphen
+Zusammenhänge übersetzen.
 
 \section{Meromorpher Zusammenhang (Definition)}
-
-%Besser?
-%Allgemeiner?
+%Quelle ist \cite{sabbah_cimpa90}
 \begin{defn}[Meromorpher Zusammenhang] \label{def:merom-zush}
-Ein \emph{Meromorpher Zusammenhang}
-$(\cM_K,\partial)$ besteht aus folgenden Daten:
+Ein \emph{Meromorpher Zusammenhang} (bei $x=0$) ist ein Tuppel
+$(\cM_K,\partial)$ und besteht aus folgenden Daten:
 \begin{itemize}
 \item $\cM_K$, ein endlich dimensionaler $K$-Vektor Raum
 \item einer $\C$-linearen Abbildung $\partial:\cM_K\rightarrow \cM_K$,
@@ -37,12 +51,26 @@ erfüllen soll.
 %TODO: korrekte benennung?
 \end{defn}
 
+\begin{defn}
+Seien $(\cM_K,\partial_\cM)$ und $(\cN_K,\partial_\cN)$ zwei Meromorphe
+Zusammenhänge. Eine $K$-lineare Abbildung $\phi:\cM\rightarrow\cN$ heißt
+Morphismus von Meromorphen Zusammenhängen, falls sie
+$\phi\circ\partial_\cM=\phi\circ\partial_\cN$ erfüllt. In diesem Fall schreiben
+wir auch $\phi:(\cM_K,\partial_\cM)\rightarrow(\cN_K,\partial_\cN)$.
+\end{defn}
+
 \begin{bem}
 \begin{enumerate}
 \item Später wird man auf die Angabe von $\partial$ verichten und einfach
 $\cM_K$ als den Meromorphen Zusammenhang bezeichnen.
-\item Wir betrachten hier Meromorphe Zusammenhänge an $x=0$ als
-Singularität.
+%\item Wir betrachten hier Meromorphe Zusammenhänge an $x=0$.
+\item \cite[Rem 5.1.2.]{hotta2007d}
+Die Bedingung (\ref{eq:Leibnitzregel}) ist zur schwächeren Bedingung
+\[
+\partial(fu)=f'u+f\partial u \,,
+\]
+welche für alle $f\in K$ aber nur für alle $u\in \Ckx$ erfüllt sein muss,
+äquivalent.
 \end{enumerate}
 \end{bem}
 
@@ -196,7 +224,7 @@ $\partial=\frac{d}{dz}-A$.
 
 %TODO: differenz ist linear
 
-\begin{defn}[Transformationsformel]
+\begin{defn}[Transformationsformel] \cite[Chap 5.1.1]{hotta2007d}
 In der Situation
 
 \begin{center}
@@ -252,11 +280,16 @@ $1=T^{-1}T$ $\rightsquigarrow$ $(T^{-1})'T+T^{-1}T'=0$
 \end{comment}
 
 \begin{prop} \cite[Prop 4.1.1]{SchneidersDmod}
-Seien $\cM$ und $\cN$ $\cD_k$-Moduln.
-\begin{enumerate}
-\item 
-\end{enumerate}
+Seien $(\cM,\partial_\cM)$ und $(\cN,\partial_\cN)$ Meromorphe Zusammenhänge.
+Durch setzten von 
+\[
+\partial(m\otimes n)=\partial_\cM(m)\otimes n +m\otimes \partial_\cN(n)
+\]
+als die Wirkung von $\partial$ auf das $K$-Modul $\cM\otimes_K\cN$, wird
+$(\cM\otimes_K\cN,\partial)$ zu einem Meromorphen Zusammenhang.
 \end{prop}
+
+
 
 \section{Newton Polygon} % ist dies eine Invariante??
 % gestohlen aus der ZulaBarbara Seite 46
