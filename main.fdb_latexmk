@@ -1,5 +1,5 @@
 # Fdb version 3
-["bibtex main"] 1359382578 "main.aux" "main.bbl" "main" 1359382580
+["bibtex main"] 1359382578 "main.aux" "main.bbl" "main" 1359403492
   "/usr/share/texmf-dist/bibtex/bst/amscls/amsalpha.bst" 1353286976 29978 76822b3d94e27e00dcc6ee8391cdceaf ""
   "main.aux" 1359382580 13096 291e371162979f85fa1cafbf48392992 ""
   "main.bcf" 0 -1 0 ""
@@ -251,10 +251,10 @@
   "main.out"
   "main.log"
   "main.dvi"
-  "main.toc"
-  "main.aux"
   "main.nlo"
-["pdflatex"] 1359382578 "main.tex" "main.pdf" "main" 1359382580
+  "main.aux"
+  "main.toc"
+["pdflatex"] 1359382578 "main.tex" "main.pdf" "main" 1359403492
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1353286984 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1353286984 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1353286984 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -532,6 +532,6 @@
   "main.out"
   "main.log"
   "main.pdf"
-  "main.nlo"
-  "main.aux"
   "main.toc"
+  "main.aux"
+  "main.nlo"
