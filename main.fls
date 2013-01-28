@@ -407,8 +407,8 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/ec-lmri7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/ec-lmri7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/ec-lmr6.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/ec-lmr5.tfm
-INPUT levelt-turrittin.tex
-INPUT levelt-turrittin.tex
+INPUT elem-mer-zsh.tex
+INPUT elem-mer-zsh.tex
 INPUT lemma2-4.tex
 INPUT lemma2-4.tex
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/rm-lmbx10.tfm
@@ -416,6 +416,10 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/rm-lmbx8.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/rm-lmbx6.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/rm-lmbx9.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/rm-lmbx5.tfm
+INPUT levelt-turrittin.tex
+INPUT levelt-turrittin.tex
+INPUT exmp.tex
+INPUT exmp.tex
 INPUT anhang-lemma2-4.tex
 INPUT anhang-lemma2-4.tex
 INPUT main.bbl
