@@ -640,51 +640,6 @@ kommutativ.
 \begin{proof}
 \end{proof}
 %
-\begin{lem} \label{lem:pull-back-hilfslemma-surj}
-Sie $Q\in\cD_\Cful\backslash \{0\}$.  Eine Abbildung der Form
-$\cD_\Cful\overset{\_\cdot  Q}{\longrightarrow}\cD_\Cful$ 
-%\begin{center}
-%\begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
-%\matrix (m) [
-  %matrix of math nodes
-  %, row sep=2.5em
-  %, column sep=5em
-  %%, text height=3em
-  %%, text depth=0.25em
-%]{
-%\cD_\Cful & \cD_\Cful\\
-%};
-%%TODO: Pfeile
-%%\path (m-1-1) edge[white] node{$\%$} (m-2-2);
-%\path[->,font=\scriptsize,>=angle 90]
-%(m-1-1) edge node[above]{$\_\cdot  Q$} (m-1-2)
-%;
-%\end{tikzpicture}
-%\end{cen}
-ist immer surjectiv.
-\end{lem}
-\begin{proof}
-\begin{comment}
-GEGENBEISPIEL:\\
-$Q:=\partial_u$, $u\in\cD_\Cful$\\
-suche ein $y$ so dass $y\partial_u=u$\\
-\begin{align*}
-\_\!\cdot\!  Q(y) &= u \\
-y\partial_u       &= u \\
-y\partial_u u     &= u u & \mbox{\cite[Chap. 4.]{sabbah_cimpa90} links
-multiplikation mit $u$ ist nicht bijektiv} \\
-y                 &= u^2 \\
-\end{align*}
-aber
-\begin{align*}
-u^2\partial_u &= u\cdot u\cdot \partial_u \\
-  &=u\cdot (\partial_u\cdot u -1) \\
-  &=u\cdot (1 -1) \\
-  &=0 \\
-\end{align*}
-\end{comment}
-\end{proof}
-%
 \begin{lem} \label{lem:pull-back-hilfslemma3}
 %Wie erhält man den pull-back Zusammenhang bzw. wie ist er berechenbar? 
 In der Situation von Lemma \ref{defn:pull-back}, mit
@@ -794,8 +749,7 @@ ergibt sich
 \end{tikzpicture}
 \end{center}
 wobei das Diagram kommutiert. Nun lässt sich die untere Zeile zu einer exacten
-Sequenz fortsetzen (weil $\_\!\cdot\! Q$ surjectiv, nach Lemma
-\ref{lem:pull-back-hilfslemma-surj})
+Sequenz fortsetzen (weil $\_\!\cdot\! Q$ Injektiv)
 \begin{center}
 \begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
   \matrix (m) [
@@ -832,11 +786,17 @@ Sequenz fortsetzen (weil $\_\!\cdot\! Q$ surjectiv, nach Lemma
   ;
 \end{tikzpicture}
 \end{center}
-und damit gilt dann
+und damit gilt dann nach dem (kurzem) Fünfer-Lemma
 \begin{align*}
 \rho^*\cM &\overset{\phi}{\cong} \myU/\myU\cdot Q \\
-          &= \myU\Big/\myU\cdot P(\rho(u),\rho'(u)^{-1}\partial_u) \,. \\
+          &= \myU\Big/\myU\cdot P(\rho(u),\rho'(u)^{-1}\partial_u) \,, \\
 \end{align*}
+falls es einen Morphismus $\phi$ überhaupt gibt.
+\begin{comment}
+kurzes 5er-lemma sagt nur (für den mittleren) das isomorph, falls oben und
+unten exact, rechts und links isomorphisman, und ein möglicher morphismus für
+die mitte bereits existent. Muss auch alles Kommutieren.
+\end{comment}
 \begin{comment}
 \begin{itemize}
 \item warum sind die schon zusammenhänge isomorph?\\
