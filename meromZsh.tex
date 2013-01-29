@@ -116,7 +116,7 @@ $\C\{x\}$-module and let $\cM[x^{-1}]$ be the localized module.
 \end{comment}
 
 %TODO: reihenfolge bei sabbah anderst!!!
-\begin{lem}[Lemma vom zyklischen Vektor]
+\begin{lem}[Lemma vom zyklischen Vektor] \label{lem:Zyklischer-Vektor}
 \cite[Thm 4.3.3]{sabbah_cimpa90}
 \cite[Satz 4.8]{ZulaBarbara}
 Sei $\cM_K$ ein Meromorpher Zusammenhang. Es Existiert ein Element
@@ -466,6 +466,83 @@ Es gilt $\sE^\phi\cong\sE^\psi$ genau dann wenn $\phi\equiv\psi \mod \Cfu$.
 %TODO: hier formal oder konvergent?
 \end{bem}
 
+\begin{thm}
+\cite[Thm 5.3.1]{sabbah_cimpa90}
+Sei $\cM_{\hat{K}}$ ein formaler Meromorpher Zusammenhang und sei
+$\cP(\cM_{\hat K})=\{L^{(1)},\dots,L^{(r)}\}$ die Menge seiner slopes. Es
+exisitiert eine (bis auf Permutation) eindutige Aufteilung $\cM_{\hat
+K}=\bigoplus_{i=1}^r\cM_{\hat K}^{(i)}$ in formale Meromorphe Zusammenhänge
+mit $\cP(\cM_{\hat K}^{(i)})=\{L^{(i)}\}$.
+\end{thm}
+\begin{proof}
+\cite[Thm 5.3.1]{sabbah_cimpa90}
+\end{proof}
+\begin{comment}
+Aussagen, die aus dem Beweis entstehen:\\
+Wir erhalten die Exacte Sequenz
+\[
+0 \rightarrow \cD_{\hat K}/\cD_{\hat K} \cdot P_1
+  \rightarrow \cD_{\hat K}/\cD_{\hat K} \cdot P
+  \rightarrow \cD_{\hat K}/\cD_{\hat K} \cdot P_2
+  \rightarrow 0
+\]
+\begin{cor}
+\cite[Thm 5.3.4]{sabbah_cimpa90}
+$\cP(P)=\cP(P_1)\cup\cP(P_2)$ und $\cP(P_1)\cap\cP(P_2)=\emptyset$
+\end{cor}
+\end{comment}
+
+\section{Formale Struktur regulärer Zusammenhänge}
+\cite[Chap 5.2]{sabbah_cimpa90}
+Sei $\cM_{\hat K}$ ein regulärer Formaler Meromorpher Zusammenhang, also
+$#\slopes(\cM_{\hat K})=1$. Das nun folgende Kapittel wird sich mit der
+Struktur solcher Zusammenhänge genauer auseinandersetzen.
+
+\begin{lem}
+\cite[Def 5.1.1 Remarks 3.]{sabbah_cimpa90}
+Ein $P=\sum a_i(x)(x\partial_x)^i$ mit $a_i\in\Cfx$ ist regulär, genau dann
+wenn der Koeffizient $a_d$ vor dem dominanten Term eine Einheit ist.
+\end{lem}
+\begin{proof}
+
+\end{proof}
+
+Dank diesem Satz ist es berechtigt, reguläre Zusammenhänge genauer zu
+betrachten.
+
+\begin{lem}
+\cite[Lem 5.2.1.]{sabbah_cimpa90}
+Es existiert eine Basis von $\cM_\hat K$ über $\hat K$ mit der Eigenschaften,
+dass die Matrix, die $x\partial_x$ beschreibt, nur Einträge in $\Cfx$ hat.
+\end{lem}
+\begin{proof}
+Wähle einen zyklischen Vektor $m\in\cM_\hat K$ % TODO: richtiger Raum?
+ und betrachte die Basis $m,\partial_x m,\dots,\partial_x^{d-1}m$ (siehe Lemma
+\ref{lem:Zyklischer-Vektor}).
+Schreibe $\partial_x^dm=\sum_{i=0}^{d-1}(-b_i(x))\partial_x^im$ in
+Basisdarstellung mit Koeffizienten $b_i\in\hat K$.
+Also erfüllt $m$ die Gleichung
+$\partial_x^dm+\sum_{i=0}^{d-1}b_i(x)\partial_x^im=0$.
+
+\begin{comment} bis hier schon klar \end{comment}
+
+
+Tatsächlich werden wir $b_i(x)=x^ib_i'(x)$ mit $b_i'\in \Cfx$ schreiben (wegen
+Regularität).
+
+Dies impliziert, dass $m,x\partial_xm,\dots,(x\partial_x)^{d-1}m$ ebenfalls
+eine Basis von $\cM_\hat K$ ist.
+
+Die Matrix von $x\partial_x$ zu dieser neuen Basis hat nur Einträge in $\Cfx$.
+\end{proof}
+\begin{lem}
+\cite[Lem 5.2.2.]{sabbah_cimpa90}
+Es existiert sogar eine Basis von $\cM_\hat K$ über $\hat K$ so dass die
+Matrix zu $x\partial_x$ konstant ist.
+\end{lem}
+\begin{proof}
+    
+\end{proof}
 %TODO: titel: Operations on vector spaces with connection
 %TODO: verzweigung statt pull-back?
 \section{pull-back und push-forward}

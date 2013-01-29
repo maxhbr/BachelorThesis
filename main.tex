@@ -85,9 +85,6 @@
   \node [below right] at (#3,#5/2) {#6};
 }
 
-\numberwithin{equation}{chapter}
-\numberwithin{figure}{chapter}
-
 %%%%  Abkürzungsverzeichnis  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{nomencl}
 % Befehl umbenennen in abk
@@ -127,6 +124,9 @@
 \newtheorem{bem}[thm]{Bemerkung}
 \newtheorem{note}[thm]{Notiz}
 \newtheorem{case}{Fall}
+
+\numberwithin{equation}{chapter}
+\numberwithin{figure}{chapter}
 
 %custom pdf-metadata
 %\pdfinfo{
