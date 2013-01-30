@@ -1,14 +1,14 @@
 \chapter{Wie ich Newton Polygone zeichne}
-\lstdefinestyle{myLatex} { 
+\lstdefinestyle{myLatex} {
   %language=[LaTeX]TeX
   language=LaTeX
-  , texcsstyle=*\bf\color{blue} 
+  , texcsstyle=*\bf\color{blue}
   , basicstyle=\ttfamily
   , numbers=none
   , breaklines=true
   , commentstyle=\color{red}
-  %, otherkeywords={$, \{, \}, \[, \]} 
-  %, frame=lines 
+  %, otherkeywords={$, \{, \}, \[, \]}
+  %, frame=lines
   , xleftmargin=30pt          % linker Abstand vom Rand (framesep+framrule)
   , tabsize=2
   %, caption=LaTeX example
@@ -61,43 +61,99 @@ ergibt dann
 BEGIN
 
 \begin{center}
-%\begin{python}
-%print r"Hello \LaTeX!"
-%\end{python}
-%\begin{tikzpicture}[scale=1.5]
-%\def\myPoints{{{(0,0)}, {(1,1)}, {(2,1)}}}
-%\def\myXArr{0,1,2,3}
-%\def\myYArr{{0,1,1,4}}
-%\def\maxY{4}
-%\def\minY{0}
+\begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
+
+\def\myPoints{0/0,1/1,2/1,3/4}
+
+\foreach \x/\y [count=\ii] in \myPoints{
+  \ifnum\ii=1
+    \xdef\myMinY{\y}
+    \xdef\myMaxY{\y}
+    \xdef\myMaxX{\x}
+  \else
+    \ifnum\myMinY>\y
+      \xdef\myMinY{\y}
+    \fi
+    \ifnum\myMaxY<\y
+      \xdef\myMaxY{\y}
+    \fi
+    \ifnum\myMaxX<\x
+      \xdef\myMaxX{\x}
+    \fi
+  \fi
+}
+\ifnum\myMaxY<1
+  \xdef\myMaxY{1}
+\fi
+
+%%axis
+\draw[->] (-.5,0) -- (\myMaxX+.2,0);
+\draw[->] (0,\myMinY-.2) -- (0,\myMaxY+.7);
+\draw (1,0) -- (1,-.1);
+\draw (0,1) -- (-.1,1);
 
 %%rectangle
-%\foreach \x [count=\xi] in \myXArr {
-  %\pgfmathparse{\myYArr[\xi-1]}
-  %\def\y{\pgfmathresult}
-
-  %\fill[blue,opacity=.2] (-.5,\maxY+.5) rectangle (\x,\y);
-%}
+\foreach \x/\y in \myPoints
+  { \fill[blue,opacity=.2] (-.5,\myMaxY+.5) rectangle (\x,\y); }
 
 %%path
-%\foreach \x [count=\xi] in \myXArr {
-  %\pgfmathparse{\myYArr[\xi-1]}
-  %\def\y{\pgfmathresult}
-  
-  
-%}
+\xdef\myLastX{0}
+\xdef\myLastY{\myMinY}
+\draw (-.5,\myMinY) -- (\myLastX,\myLastY);
+\foreach \x/\y [count=\ii] in \myPoints {
+  \xdef\myAuslassen{0} % nicht auslassen
+  \foreach \xx/\yy [count=\iii] in \myPoints {
+    \ifnum\iii > \ii
+      \pgfmathparse{add(\ii,1)}
+      \ifnum\iii=\pgfmathresult
+        \xdef\myNextX{\xx}
+        \xdef\myNextY{\yy}
+        \pgfmathparse{divide(subtract(\yy,\myLastY),subtract(\xx,\myLastX))}
+        \xdef\mySteigung{\pgfmathresult}
+        %\node[below] at (\xx,\yy) {\mySteigung (\myAuslassen)};
+        %\node[below] at (\x,-\xx) {\mySteigung};
+      \else
+
+        \xdef\myNextX{\xx}
+        \xdef\myNextY{\yy}
+        %\pgfmathparse{subtract(\mySteigung,divide(subtract(\yy,\myLastY),subtract(\xx,\myLastX)))}
+        \pgfmathparse{\yy-\myLastY}
+        \node[below] at (\x-.2,-\xx+.7) {\pgfmathresult = \yy - \myLastY};
+        \pgfmathparse{divide(\pgfmathresult,subtract(\xx,\myLastX))}
+        %\node[below] at (\x-.1,-\xx+.3) {\pgfmathresult};
+        \pgfmathparse{subtract(\mySteigung,\pgfmathresult)}
+        %\node[below] at (\x,-\xx) {\pgfmathresult};
+
+        %\ifnum\pgfmathresult<0
+          %\xdef\myAuslassen{1}
+        %\fi
+
+        %\node[below] at (2*\x,-\xx)
+          %{\mySteigung<\pgfmathresult(\myAuslassen)};
+      \fi
+    \fi
+  }
+
+  \ifnum\myAuslassen=0
+    \draw (\myLastX,\myLastY) -- 
+      %node[descr]{$\ii$} 
+      (\myNextX,\myNextY);
+    \xdef\myLastX{\myNextX}
+    \xdef\myLastY{\myNextY}
+  \fi
+}
+\draw (\myLastX,\myLastY) -- (\myMaxX,\myMaxY+.5);
 
 %%nodes
-%\foreach \x [count=\xi] in \myXArr {
-  %\pgfmathparse{\myYArr[\xi-1]}
-  %\def\y{\pgfmathresult}
+\foreach \x/\y in \myPoints
+  { \node[draw,circle,inner sep=1.5pt,fill=white] at (\x,\y) {}; }
 
-  %\node[draw,circle,inner sep=1.5pt,fill=white] at (\x,\y) {};
-%}
-%\end{tikzpicture}
+\end{tikzpicture}
 \end{center}
 
 END
+
+\myMaxY
 
 
 % vim: set ft=tex :
