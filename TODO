@@ -24,8 +24,6 @@ lemma2-4.tex:  \end{pmatrix} \mbox{\footnote{$(\xi^i)^p=1\forall i$}}\\ % TODO: 
 lemma2-4.tex:%TODO: this
 levelt-turrittin.tex:%TODO: all
 Übereinstimmungen in Binärdatei main.dvi.
-main.log:                                                  $ % TODO: richtiger Raum?
-main.log:                                                   % TODO: richtiger Raum?
 main.ps:w FJ(TODO,)30 b(\(3.)i(T)-8 b(re\033en\))p 3633 5576
 main.tex:  ,fontsize=10pt % TODO: to small?
 main.tex:%TODO: replace def --> newcommand

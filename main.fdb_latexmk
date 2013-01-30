@@ -251,10 +251,10 @@
   "main.out"
   "main.log"
   "main.dvi"
-  "main.toc"
-  "main.aux"
   "main.nlo"
-["pdflatex"] 1359573555 "main.tex" "main.pdf" "main" 1359573555
+  "main.aux"
+  "main.toc"
+["pdflatex"] 1359573555 "main.tex" "main.pdf" "main" 1359573819
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1353286999 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ecrm1000.tfm" 1353286979 3584 adb004a0c8e7c46ee66cad73671f37b4 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1353286976 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -379,9 +379,9 @@
   (generated)
   "latex.py"
   "main.py"
-  "main.nlo"
-  "main.aux"
   "main.toc"
+  "main.aux"
+  "main.nlo"
   "main1.py"
   "main.pdf"
   "main.log"

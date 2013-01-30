@@ -113,16 +113,15 @@ BEGIN
         %\node[below] at (\xx,\yy) {\mySteigung (\myAuslassen)};
         %\node[below] at (\x,-\xx) {\mySteigung};
       \else
-
         \xdef\myNextX{\xx}
         \xdef\myNextY{\yy}
         %\pgfmathparse{subtract(\mySteigung,divide(subtract(\yy,\myLastY),subtract(\xx,\myLastX)))}
         \pgfmathparse{\yy-\myLastY}
         \node[below] at (\x-.2,-\xx+.7) {\pgfmathresult = \yy - \myLastY};
         \pgfmathparse{divide(\pgfmathresult,subtract(\xx,\myLastX))}
-        %\node[below] at (\x-.1,-\xx+.3) {\pgfmathresult};
+        \node[below] at (\x-.1,-\xx+.3) {\pgfmathresult};
         \pgfmathparse{subtract(\mySteigung,\pgfmathresult)}
-        %\node[below] at (\x,-\xx) {\pgfmathresult};
+        \node[below] at (\x,-\xx) {\pgfmathresult};
 
         %\ifnum\pgfmathresult<0
           %\xdef\myAuslassen{1}
