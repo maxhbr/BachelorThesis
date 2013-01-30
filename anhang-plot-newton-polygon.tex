@@ -57,4 +57,47 @@ ergibt dann
 \end{tikzpicture}
 \end{center}
 
+\newpage
+BEGIN
+
+\begin{center}
+\begin{python}
+print r"Hello \LaTeX!"
+\end{python}
+\begin{tikzpicture}[scale=1.5]
+\def\myPoints{{{(0,0)}, {(1,1)}, {(2,1)}}}
+\def\myXArr{0,1,2,3}
+\def\myYArr{{0,1,1,4}}
+\def\maxY{4}
+\def\minY{0}
+
+%rectangle
+\foreach \x [count=\xi] in \myXArr {
+  \pgfmathparse{\myYArr[\xi-1]}
+  \def\y{\pgfmathresult}
+
+  \fill[blue,opacity=.2] (-.5,\maxY+.5) rectangle (\x,\y);
+}
+
+%path
+\foreach \x [count=\xi] in \myXArr {
+  \pgfmathparse{\myYArr[\xi-1]}
+  \def\y{\pgfmathresult}
+  
+  
+}
+
+%nodes
+\foreach \x [count=\xi] in \myXArr {
+  \pgfmathparse{\myYArr[\xi-1]}
+  \def\y{\pgfmathresult}
+
+  \node[draw,circle,inner sep=1.5pt,fill=white] at (\x,\y) {};
+}
+\end{tikzpicture}
+\end{center}
+
+END
+
+
 % vim: set ft=tex :
