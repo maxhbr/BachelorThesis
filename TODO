@@ -15,10 +15,11 @@ elem-mer-zsh.tex:%TODO: auch nicht formal
 elem-mer-zsh.tex:%TODO: verwendet hier schon das klassische Levelt-Turittin
 grundlagen.tex:multivalued % TODO: ???
 grundlagen.tex:%TODO: Pfeile
-grundlagen.tex:%TODO: Pfeile
+grundlagen.tex:  %TODO: Pfeile
 grundlagen.tex:%TODO: tensorprodukt / faserprodukt zum basiswechsel
-grundlagen.tex:%TODO: Pfeile
-grundlagen.tex:%TODO: Pfeile
+grundlagen.tex:  %TODO: Pfeile
+grundlagen.tex:  %TODO: Pfeile
+grundlagen.tex:  %TODO: Pfeile
 lemma2-4.tex:  \end{pmatrix} \mbox{\footnote{$(\xi^i)^p=1\forall i$}}\\ % TODO: correct footnote
 lemma2-4.tex:%TODO: this
 levelt-turrittin.tex:%TODO: all
@@ -26,6 +27,7 @@ levelt-turrittin.tex:%TODO: all
 main.log:                                                  $ % TODO: richtiger Raum?
 main.log:                                                   % TODO: richtiger Raum?
 main.ps:w FJ(TODO,)30 b(\(3.)i(T)-8 b(re\033en\))p 3633 5576
+main.tex:  ,fontsize=10pt % TODO: to small?
 main.tex:%TODO: replace def --> newcommand
 main.tex:%TODO: set titel variable??
 meromZsh.tex:% TODO; wie darf ich einen Meromorphen verändern, (das P verändern) ohne das
@@ -56,6 +58,8 @@ meromZsh.tex:%TODO: Pfeile
 meromZsh.tex:%TODO: Pfeile
 meromZsh.tex:%TODO: warum hier alles Lokalisiert?
 meromZsh.tex:  %TODO: Pfeile
+meromZsh.tex:%TODO: quelle? falsch?
+meromZsh.tex:%TODO: Funktorialität von Pull-Back? NEIN: Funktorialität von tensor
 meromZsh.tex:  %TODO: Pfeile
 meromZsh.tex:  %TODO: Pfeile
 meromZsh.tex:  %TODO: Pfeile
