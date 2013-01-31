@@ -5,10 +5,12 @@
   \begin{center}\sffamily\bfseries
     \LARGE Bachelorarbeit
     \vfill
-    \Rule\vspace{5mm}
+    \Rule
+    \vspace{5mm}
     \Huge
     mein thema
-    \vspace{1mm}\Rule
+    \vspace{1mm}
+    \Rule
     \vfill
     \normalfont\sffamily\large vorgelegt von\par
     \bfseries\LARGE Maximilian Huber
@@ -24,10 +26,10 @@
     \normalfont\sffamily\large abgegeben am \\
     \bfseries\Large noch nicht\\
   \end{center}
-\begin{comment}
-  \begin{center}
-    stand: \today
-  \end{center}
-\end{comment}
+  \ifnum\myDevelopVariable=1
+    \begin{center}
+      stand: \today
+    \end{center}
+  \fi
 \end{titlepage}
 % vim: set ft=tex :

@@ -1,11 +1,12 @@
 \documentclass[ngerman
-  ,fontsize=10pt % TODO: to small?
+  ,fontsize=12pt % TODO: to small?
   ,numbers=noenddot % obsolete
   ,headsepline
   ,parskip=half*
   ,openany
   ,DIV=12
   ,fleqn % mv align to left
+  %,oneside
 ]{scrbook}
   %,12pt
   %,titelpage % unused
@@ -57,9 +58,6 @@
 %\makeatletter\def\@seccntformat#1{%
   %\protect\makebox[0pt][r]{\csname the#1\endcsname\hspace{12pt}}}\makeatother
 
-% semibold instead of bold
-%\renewcommand{\bfdefault}{sb}
-
 \renewcommand*{\thefootnote}{[\arabic{footnote}]}
 
 % Zeichen
@@ -68,42 +66,53 @@
 \usepackage{stmaryrd}
 %simplewick
 
-\usepackage{pgfmath}
 \usepackage{tikz}
 \usetikzlibrary{matrix,arrows,decorations.pathmorphing,calc}
 \usepackage{float}
 \usepackage{subfig}
+
+\usepackage{fp}
+\usepackage{ifthen}
+
 %%besser als subfig:
 %\usepackage{caption}
 %\usepackage{subcaption}
 
-\newcommand{\myNewtonPlot}[6]{
-  \draw[color=black,thick] #2;
-  \foreach \pos in #1 { \fill[blue,opacity=.2] (-.5,#5) rectangle \pos; }
-  %\clip (-.5,#4) rectangle (#3,#5);
-  \draw[->] (-.5,0) -- (#3+.7,0) node[below]{$u$};
-  \draw[->] (0,#4-.2) -- (0,#5+.2) node[left]{$v$};
-  \draw (1,0) -- (1,-.1); % node[below]{$1$};
-  \draw (0,1) -- (-.1,1); % node[left]{$1$};
-  \foreach \pos in #1 { \node[draw,circle,inner sep=1.5pt,fill=white] at \pos {}; }
-  \node [below right] at (#3,#5/2) {#6};
-}
+\iftrue
+  \newcommand{\myNewtonPlot}[6]{
+    \draw[color=black,thick] #2;
+    \foreach \pos in #1 { \fill[blue,opacity=.2] (-.5,#5) rectangle \pos; }
+    %\clip (-.5,#4) rectangle (#3,#5);
+    \draw[->] (-.5,0) -- (#3+.7,0) node[below]{$u$};
+    \draw[->] (0,#4-.2) -- (0,#5+.2) node[left]{$v$};
+    \draw (1,0) -- (1,-.1); % node[below]{$1$};
+    \draw (0,1) -- (-.1,1); % node[left]{$1$};
+    \foreach \pos in #1 
+      { \node[draw,circle,inner sep=1.5pt,fill=white] at \pos {}; }
+    \node [below right] at (#3,#5/2) {#6};
+  }
+\else
+  \input{myNewtonPlot.sty}
+\fi
 
 %%%%  Abkürzungsverzeichnis  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{nomencl}
-% Befehl umbenennen in abk
-\let\abk\nomenclature
-% Deutsche Überschrift
-\renewcommand{\nomname}{Abkürzungsverzeichnis}
-% Punkte zw. Abkürzung und Erklärung
-\setlength{\nomlabelwidth}{.20\hsize}
-\renewcommand{\nomlabel}[1]{#1 \dotfill}
-% Zeilenabstände verkleinern
-\setlength{\nomitemsep}{-\parsep}
-\setlength{\parindent}{0pt}
-\makenomenclature
+\iffalse
+  \usepackage{nomencl}
+  % Befehl umbenennen in abk
+  \let\abk\nomenclature
+  % Deutsche Überschrift
+  \renewcommand{\nomname}{Abkürzungsverzeichnis}
+  % Punkte zw. Abkürzung und Erklärung
+  \setlength{\nomlabelwidth}{.20\hsize}
+  \renewcommand{\nomlabel}[1]{#1 \dotfill}
+  % Zeilenabstände verkleinern
+  \setlength{\nomitemsep}{-\parsep}
+  \setlength{\parindent}{0pt}
+  \makenomenclature
 
-%% BASH: makeindex main.nlo -s nomencl.ist -o main.nls
+  %% BASH: makeindex main.nlo -s nomencl.ist -o main.nls
+  %% BASH: makeindex main.nlo -s main.sty -o main.nls
+\fi
 
 %%%%  Theoreme Styles  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \makeatletter
@@ -132,13 +141,7 @@
 \numberwithin{equation}{chapter}
 \numberwithin{figure}{chapter}
 
-\newcommand {\abschnitt} [2]		% "Uberschriftenbefehl f"ur eigene Nummerierungen
-{\setcounter{section}{#1}
- \setcounter{theorem}{0}
- \setcounter{equation}{0} 
- \vspace{4ex} 
- {\large \bf #1. #2}
-\vspace{1ex}}
+\setcounter{chapter}{-1}
 
 %custom pdf-metadata
 %\pdfinfo{
@@ -162,7 +165,7 @@
 %TODO: replace def --> newcommand
 \def\bme{\boldsymbol{e}}
 
-%{{{
+% {{{
 \def\A{\ensuremath \mathbb{A}}
 %\def\B{\ensuremath \mathbb{B}}
 \def\C{\ensuremath \mathbb{C}}
@@ -189,15 +192,15 @@
 %\def\X{\ensuremath \mathbb{X}}
 %\def\Y{\ensuremath \mathbb{Y}}
 \def\Z{\ensuremath \mathbb{Z}}
-%}}}
+% }}}
 
-%{{{
+% {{{
 %\def\cA{\ensuremath \mathcal{A}}
 %\def\cB{\ensuremath \mathcal{B}}
 \def\cC{\ensuremath \mathcal{C}}
 \def\cD{\ensuremath \mathcal{D}}
 %\def\cE{\ensuremath \mathcal{E}}
-%\def\cF{\ensuremath \mathcal{F}}
+\def\cF{\ensuremath \mathcal{F}}
 %\def\cG{\ensuremath \mathcal{G}}
 %\def\cH{\ensuremath \mathcal{H}}
 %\def\cI{\ensuremath \mathcal{I}}
@@ -218,9 +221,9 @@
 %\def\cX{\ensuremath \mathcal{X}}
 %\def\cY{\ensuremath \mathcal{Y}}
 %\def\cZ{\ensuremath \mathcal{Z}}
-%}}}
+% }}}
 
-%{{{
+% {{{
 %\def\sA{\ensuremath \mathscr{A}}
 %\def\sB{\ensuremath \mathscr{B}}
 %\def\sC{\ensuremath \mathscr{C}}
@@ -247,7 +250,7 @@
 %\def\sX{\ensuremath \mathscr{X}}
 %\def\sY{\ensuremath \mathscr{Y}}
 %\def\sZ{\ensuremath \mathscr{Z}}
-%}}}
+% }}}
 
 %\renewcommand{\headrulewidth}{0.2pt}
 
@@ -256,7 +259,7 @@
 \let\epsilon\varepsilon
 \let\phi\varphi
 
-%{{{
+% {{{
 %\DeclareMathOperator{\defn}{def}
 \DeclareMathOperator{\modulo}{mod}
 \DeclareMathOperator{\conv}{conv}
@@ -275,10 +278,9 @@
 \DeclareMathOperator{\im}{im}
 \DeclareMathOperator{\Car}{Car}
 \DeclareMathOperator{\coker}{coker}
-\newcommand{\Dm}{{\cD\mbox{-Modul}}}
-%}}}
+% }}}
 
-%{{{
+% {{{
 \newcommand{\Cfx}{{\mathbb C\llbracket x\rrbracket}}
 \newcommand{\Cft}{{\mathbb C\llbracket t\rrbracket}}
 \newcommand{\Cfu}{{\mathbb C\llbracket u\rrbracket}}
@@ -291,7 +293,11 @@
 \newcommand{\Ckxl}{{\mathbb C (\!\{x\}\!)}}
 \newcommand{\Cktl}{{\mathbb C (\!\{t\}\!)}}
 \newcommand{\Ckul}{{\mathbb C (\!\{u\}\!)}}
-%}}}
+
+\newcommand{\bydef}{\overset{\tiny\mbox{def}}{=}}
+
+\newcommand{\Dm}{{\cD\mbox{-Modul}}}
+% }}}
 
 \makeatother
 
@@ -300,12 +306,12 @@
 {\displaystyle#1}\end{array}}%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\input{mydevelop.sty}
+\xdef\myDevelopVariable{0}
 \cfoot{\today}
+\input{mydevelop.sty}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
-
 %TODO: set titel variable??
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -313,19 +319,12 @@
 
 \input{titel.tex}
 
-%\begin{center}
-  %\today
-%\end{center}
 \tableofcontents{}
-%\printnomenclature
-
-%\newpage
 
 %\input{einleitung.tex}
 
 \mainmatter
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\part{Theorie}
 
 \input{grundlagen.tex}
 
@@ -339,16 +338,13 @@
 
 \input{exmp.tex}
 
-%\part{Beispiele}
-%\input{beispiele.tex}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \appendix
 \addcontentsline{toc}{chapter}{Anhang}
 
 \input{anhang-lemma2-4.tex}
 
-\input{anhang-plot-newton-polygon.tex}
+%\input{anhang-plot-newton-polygon.tex}
 
 \nocite{*}
 %\bibliographystyle{dinat}

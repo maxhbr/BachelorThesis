@@ -1,3 +1,5 @@
+anhang-plot-newton-polygon.tex:          %TODO
+anhang-plot-newton-polygon.tex:          %TODO
 beispiele/formal_b.tex:%TODO: besserer Titel
 beispiele/formal_b.tex:  %TODO: rightarrow oder mapsto?
 beispiele/formal_b.tex:        -\partial_t(f)\cdot t^2= %TODO: wegen klammerung?
@@ -13,19 +15,20 @@ d-modul.tex:(linear differential system) %TODO: defn
 d-modul.tex:%TODO: was heißt holonom (holonomic)
 elem-mer-zsh.tex:%TODO: auch nicht formal
 elem-mer-zsh.tex:%TODO: verwendet hier schon das klassische Levelt-Turittin
-grundlagen.tex:multivalued % TODO: ???
 grundlagen.tex:%TODO: Pfeile
 grundlagen.tex:  %TODO: Pfeile
 grundlagen.tex:%TODO: tensorprodukt / faserprodukt zum basiswechsel
 grundlagen.tex:  %TODO: Pfeile
 grundlagen.tex:  %TODO: Pfeile
 grundlagen.tex:  %TODO: Pfeile
-lemma2-4.tex:  \end{pmatrix} \mbox{\footnote{$(\xi^i)^p=1\forall i$}}\\ % TODO: correct footnote
+lemma2-4.tex:  \end{pmatrix} \mbox{\footnote{$(\xi^i)^p=1\forall i$}} % TODO: correct footnote
 lemma2-4.tex:%TODO: this
 levelt-turrittin.tex:%TODO: all
 Übereinstimmungen in Binärdatei main.dvi.
+main.log:                                                  $ % TODO: richtiger Raum?
+main.log:                                                   % TODO: richtiger Raum?
 main.ps:w FJ(TODO,)30 b(\(3.)i(T)-8 b(re\033en\))p 3633 5576
-main.tex:  ,fontsize=10pt % TODO: to small?
+main.tex:  ,fontsize=12pt % TODO: to small?
 main.tex:%TODO: replace def --> newcommand
 main.tex:%TODO: set titel variable??
 meromZsh.tex:% TODO; wie darf ich einen Meromorphen verändern, (das P verändern) ohne das
@@ -33,9 +36,9 @@ meromZsh.tex:% TODO: \cM = \cM_K ... replace
 meromZsh.tex:%TODO: Dimension eines Meromorphen Zusammenhang
 meromZsh.tex:%TODO: \tilde cO --> \tilde \cO
 meromZsh.tex:%TODO: partial oder d
-meromZsh.tex:holomorphe (but possibly multivalued) %TODO: was ist damit gemeint?  Lösungen
 meromZsh.tex:%TODO: korrekte benennung?
 meromZsh.tex:assoziierten Meromorphen Zusammenhang $(\cM_A,\partial_A)$ %TODO: improve notation
+meromZsh.tex:Lösungen in $\C\{t\}$. %TODO: oder \tilde\cO
 meromZsh.tex:%TODO: reihenfolge bei sabbah anderst!!!
 meromZsh.tex:%TODO: make this harpoon arrows
 meromZsh.tex:TODO, (3. Treffen)
@@ -67,6 +70,9 @@ meromZsh.tex:-\partial_t(f)\cdot t^2= %TODO: wegen klammerung?
 meromZsh.tex:%TODO: wieso multipliziert dieser mit 2?
 meromZsh.tex:%TODO: nummer aus der referenz ist falsch
 meromZsh.tex:%TODO: nummer aus der referenz ist falsch
+meromZsh.tex:  & \mbox{(Rechenregeln Tensorprodukt)}\\ %TODO: hinzufügen
+myNewtonPlot.sty:            %TODO
+myNewtonPlot.sty:            %TODO
 titel.tex:%TODO; titelpage bitte nicht seitlich versetzt
 trash/meromZsh.tex:  %TODO: auch nicht formal
 workflow:  grep -r --exclude='TODO' "TODO" * > TODO

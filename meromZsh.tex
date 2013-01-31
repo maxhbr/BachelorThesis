@@ -11,24 +11,28 @@ Alle MeromZsh sind $\cD$-Moduln aber nicht andersherum?
 \section{Systeme von ODEs und Meromorphe Zusammenhänge}
 %TODO: \tilde cO --> \tilde \cO
 \cite[Chap 5.1.1]{hotta2007d} %abgeschrieben
-Für eine Matrix $A(x)=(a_{ij}(x))_{ij}\in M(n\times n,K)$ betrachte des System
-von gewöhnlichen Differentialgleichungen (kurz ODEs)
+Für eine Matrix $A(x)=(a_{ij}(x))_{ij}\in M(n\times n,K)$ betrachten wir das
+System von gewöhnlichen Differentialgleichungen (kurz ODEs)
 \begin{equation}
 \label{eq:KlassischesODE}
 %TODO: partial oder d
 \frac{d}{dx}u(x)=A(x)u(x)
 \end{equation}
 wobei $u(x)=\,^t(u_1(x),\dots,u_n(x))$ ein Spaltenvektor von unbekannten
-Funktionen. Wir werden dieses Problem immer in einer Umgebung um $x=0\in\C$
-betrachten. Als Lösungen von (\ref{eq:KlassischesODE}) betrachten wir
-holomorphe (but possibly multivalued) %TODO: was ist damit gemeint?  Lösungen
-auf der punktierten Scheibe $B_\epsilon^*=\{x\in\C|0<|x|<\epsilon\}$, wobei
-$\epsilon>0$ klein genug sei. Wir sagen $v(x)=\,^t(v_1(x),\dots,v_n(x))$ ist
+Funktionen. Wir werden (\ref{eq:KlassischesODE}) immer in einer Umgebung um
+$x=0\in\C$ betrachten. Als Lösungen von (\ref{eq:KlassischesODE}) betrachten
+wir Keime von holomorphen (aber möglicherweise mehrdeutigen)
+ %but possibly multivalued auf
+Funktionen an $x=0$ (geschrieben als $\tilde\cO$).
+%auf der punktierten Scheibe
+%$B_\epsilon^*=\{x\in\C|0<|x|<\epsilon\}$, wobei $\epsilon>0$ klein genug sei.
+ Wir sagen $v(x)=\,^t(v_1(x),\dots,v_n(x))$ ist
 eine Lösung von (\ref{eq:KlassischesODE}), falls $ v_i\in\tilde \cO$ für alle
-$i\in\{1,\dots,n\}$ und $v$ die Gleichung (\ref{eq:KlassischesODE}) erfüllt.
+$i\in\{1,\dots,n\}$ und $v$ die Gleichung (\ref{eq:KlassischesODE}),
+auf einer Umgebung um die $0$, erfüllt.
 
-Nun wollen wir dieses Klasische Gebilde in die moderne Sprache der Meromorphen
-Zusammenhänge übersetzen.
+Nun wollen wir dieses Klasische Gebilde nun in die moderne Sprache der
+Meromorphen Zusammenhänge übersetzen.
 
 %\section{Meromorpher Zusammenhang (Definition)}
 %Quelle ist \cite{sabbah_cimpa90}
@@ -38,7 +42,7 @@ $(\cM_K,\partial)$ und besteht aus folgenden Daten:
 \begin{itemize}
 \item $\cM_K$, ein endlich dimensionaler $K$-Vektor Raum
 \item einer $\C$-linearen Abbildung $\partial:\cM_K\rightarrow \cM_K$,
-genannt \emph{Derivation} oder \emph{Zusammenhang}, welche für alle $f\in K$
+genannt \emph{Derivation} oder \emph{Zusammenhvolksumfrageang}, welche für alle $f\in K$
 und $u\in \cM_K$ die
 \emph{Leibnitzregel}
 \begin{equation}\label{eq:Leibnitzregel}
@@ -71,7 +75,7 @@ Die Bedingung (\ref{eq:Leibnitzregel}) ist zur schwächeren Bedingung
 \[
 \partial(fu)=f'u+f\partial u \,,
 \]
-welche für alle $f\in K$ aber nur für alle $u\in \Ckx$ erfüllt sein muss,
+welche für alle $f\in \tilde\cO$ und für alle $u\in \cM_K$ erfüllt sein muss,
 äquivalent.
 \end{enumerate}
 \end{bem}
@@ -86,26 +90,49 @@ Matrix $A(x)=(a_{ij}(x))\in M(n\times n,K)$ definiert durch
 \end{defn}
 
 Also ist, bezüglich der Basis $\{e_i\}_{i\in\{1,\dots,n\}}$, die Wirkung von
-$\partial$ beschrieben durch
+$\partial$ auf $u=:\,^t(u_1,\dots,u_n)$ beschrieben durch
 \[
 \partial(u) = \partial \Big( \sum_{i=1}^nu_i(x)e_i \Big)
-=\sum_{i=1}^n \Big( u_i'(x)- \sum_{j=1}^na_{ij}u_j(x) \Big)e_i \,.
+\overbox{=}{??}\sum_{i=1}^n \Big( u_i'(x)-
+\sum_{j=1}^na_{ij}u_j(x) \Big)e_i \,.
 \]
-Also ist die Bedingung $\partial u(x)=0$, für $u(x)\in \sum_{i=1}^n u_ie_i\in
-\tilde \cO \otimes_K\cM$, äquivalent zu der Gleichung
-\begin{equation}
+Einfache Umformungen zeigen, dass die Bedingung $\partial u(x)=0$, für
+$u(x)\in \sum_{i=1}^n u_ie_i\in \tilde \cO \otimes_K\cM$, äquivalent zu der
+Gleichung
+\begin{equation*}
 u'(x)=A(x)u(x)
-\end{equation}
+\end{equation*}
 für $u(x)=\,^t(u_1(x),\dots,u_n(x))\in\tilde \cO^n$. Damit haben wir gesehen,
 dass jeder Meromorphe Zusammanhang $(\cM,\partial)$ ausgestattet mit einer
 $K$-Basis $\{e_i\}_{i\in\{1,\dots,n\}}$ von $\cM$ zu einem ODE zugeordnet
-werden kann. Umgekehrt können wir für jede Matrix $A(x)=(a_{ij}(x))$ den
+werden kann. 
+
+Umgekehrt können wir für jede Matrix $A(x)=(a_{ij}(x))$ den
 assoziierten Meromorphen Zusammenhang $(\cM_A,\partial_A)$ %TODO: improve notation
 angeben, durch
 \begin{align*}
 \cM_A & :=\bigoplus_{i=1}^n Ke_i \,, & \partial_A e_i &:=
 -\sum_{i=1}^na_{ij}(x)e_i \,.
 \end{align*}
+
+\begin{comment}
+\section{Alternativer Zugang}
+Hier wird nun ein alternativer Zugang, wie in \cite[3.1.1]{sabbah_cimpa90}, 
+präsentiert. Sei $\cF$ ein Funktionenraum, auf dem die Differentialoperatoren
+$\cD$ wirken.
+
+Sei $P$ ein linearer Differentialoperator mit Koeffizienten in $a_i(t)\in\Ckx$
+geschrieben als $P=\sum^{d}_{i=0}{a_{i}(t)\partial_t^i}}$.
+Man sagt eine Funktion $u\in\cF$ ist Lösung von $P$, falls $u$ die Gleichung
+$Pu=0$ erfüllt.
+Man sagt $0$ ist ein singulärer Punkt falls $a_d(0)=0$.
+Falls $0$ kein singulärer Punkt ist, hat $P$ genau $d$ über $\C$ Unabhängige
+Lösungen in $\C\{t\}$. %TODO: oder \tilde\cO
+
+Falls $u$ ein Lösung von $P$ ist, so ist $u$ auch Lösung von $Q\cdot P$ mit
+$Q\in \cD$. Also hängt die Lösung nur vom Links Ideal $I$ von $\cD$, welches
+von $P$ erzeugt wird.
+\end{comment}
 
 \section{Eigenschaften}
 %Hier nun einige Eigenschaften Meromorpher Zusammenhänge.
@@ -1077,11 +1104,15 @@ Es gilt die Projektionsformel
 \begin{proof}
 \begin{align*}
 \rho_+(\cN\otimes_{\C(\!(u)\!)}\rho^+\cM) &=
-\rho_+(\cN\otimes_{\C(\!(u)\!)}(\C(\!(u)\!)\otimes_{\C(\!(t)\!)}\cM)) \\
+\rho_+(\cN\otimes_{\C(\!(u)\!)}(\C(\!(u)\!)\otimes_{\C(\!(t)\!)}\cM)) 
+  & \mbox{(def von $\rho^+\cM$)}\\
 &\cong \rho_+((\cN\otimes_{\C(\!(u)\!)}\C(\!(u)\!))
-\otimes_{\C(\!(t)\!)}\cM) \\
-&\cong \rho_+(\cN\otimes_{\C(\!(t)\!)}\cM) \\
-&= \rho_+\cN\otimes_{\C(\!(t)\!)}\cM \\
+\otimes_{\C(\!(t)\!)}\cM) 
+  & \mbox{(Rechenregeln Tensorprodukt)}\\ %TODO: hinzufügen
+&\cong \rho_+(\cN\otimes_{\C(\!(t)\!)}\cM) 
+  & \mbox{(Rechenregeln Tensorprodukt)}\\
+&= \rho_+\cN\otimes_{\C(\!(t)\!)}\cM 
+  & \mbox{(?)}\\
 \end{align*}
 \end{proof}
 

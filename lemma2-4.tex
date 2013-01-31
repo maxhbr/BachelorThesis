@@ -67,6 +67,8 @@ denn:\\
   &= \Bigg(\sum_{i=0}^{p-1-k}u^i\psi_i(u^p)e_{k+1} +
     \sum_{i=p-k}^{p-1}u^i\psi_i(u^p)e_{k+i-p}\Bigg)_{k\in\{0,..,p-1\}}\\
   &= \mathbf{e}
+{ %\small
+  \footnotesize
   \begin{pmatrix}u^{p-1}\psi_{p-1}(u^p) &  & \cdots & u^{3}\psi_{3}(u^p) & u^{2}
     \psi_{2}(u^p) & u^{1}\psi_{1}(u^p)\\
     u^{1}\psi_{1}(u^p) & u^{p-1}\psi_{p-1}(u^p) &  &
@@ -76,7 +78,8 @@ denn:\\
     \vdots &  & \ddots & u^{1}\psi_{1}(u^p) & u^{p-1}\psi_{p-1}(u^p)\\
     u^{p-2}\psi_{p-2}(u^p) & \cdots & u^{3}\psi_{3}(u^p) & u^{2}\psi_{2}(u^p) &
     u^{1}\psi_{1}(u^p) & u^{p-1}\psi_{p-1}(u^p)
-  \end{pmatrix}\\
+  \end{pmatrix}
+} \\
   &= \mathbf{e}[\sum_{j=0}^{p-1}u^j\psi_j(u^p)P^j]
 \end{align*}
 
@@ -96,16 +99,24 @@ So dass gilt:\\
   T[\sum_{j=0}^{p-1}u^{j-1}\psi_j(u^p)P^j]T^{-1} &=
     [\sum_{j=0}^{p-1}u^{j-1}\psi_j(u^p) (TPT^{-1})^j]\\
   &= [\sum_{j=0}^{p-1}u^{j-1}\psi_j(u^p)D^j]\\
-  &= \begin{pmatrix}\sum_{j=0}^{p-1}u^{j-1}\psi_{j}\\
+  &= 
+{
+  \footnotesize
+  \begin{pmatrix}\sum_{j=0}^{p-1}u^{j-1}\psi_{j}\\
     & \sum_{j=0}^{p-1}u^{j-1}\psi_{j}\left(\xi^{1}\right)^{j}\\
     & & \ddots\\
     &  &  & \sum_{j=0}^{p-1}u^{j-1}\psi_{j}\left(\xi^{p-1}\right)^{j}
-  \end{pmatrix}\\
-  &= \begin{pmatrix}\sum_{j=0}^{p-1}u^{j-1}\psi_{j}\\
+  \end{pmatrix}
+}\\
+  &= 
+{
+  \footnotesize
+  \begin{pmatrix}\sum_{j=0}^{p-1}u^{j-1}\psi_{j}\\
     & \sum_{j=0}^{p-1}(u\xi^1)^{j-1}\psi_{j}\xi^{1}\\
     & & \ddots\\
     &  &  & \sum_{j=0}^{p-1}(u\xi^{p-1})^{j-1}\psi_{j}\xi^{p-1}
-  \end{pmatrix} \mbox{\footnote{$(\xi^i)^p=1\forall i$}}\\ % TODO: correct footnote
+  \end{pmatrix} \mbox{\footnote{$(\xi^i)^p=1\forall i$}} % TODO: correct footnote
+}\\
   &= \begin{pmatrix}\phi'(u)\\
     & \phi'(\xi u)\xi^{1}\\
     & & \ddots\\
