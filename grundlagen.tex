@@ -146,11 +146,17 @@ n\otimes m & \mapsto & n\otimes f(m)
 \]
 \end{comment}
 \end{defn}
-\begin{bem}
+\begin{bem} \label{bem:Rechenregeln-Tensorprodukt}
 Hier ein paar Rechenregeln für das Tensorprodukt,
+\begin{align}
+(M\otimes_R N)\otimes_S L &\cong M\otimes_R (N \otimes_S L)
+  \label{bem:Rechenregeln-Tensorprodukt1}\\
+M\otimes_R R &\cong M \label{bem:Rechenregeln-Tensorprodukt2}
+\end{align}
 Sei $f:M'\rightarrow M$ eine Abbildung, so gilt
 \begin{align}
 N\otimes_R(M/\im(f)) &\cong N\otimes_R M / \im(\id_{R}\otimes f)
+\label{bem:Rechenregeln-Tensorprodukt3}
 \end{align}
 \end{bem}
 %TODO: tensorprodukt / faserprodukt zum basiswechsel

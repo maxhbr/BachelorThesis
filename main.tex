@@ -19,6 +19,8 @@
 \usepackage{lmodern} %Type1-Schriftart für nicht-englische Texte
 %\linespread{1.5}
 
+\xdef\myDevelopVariable{1}
+
 %\usepackage{python} %!!!
 
 %schrift enger:
@@ -306,9 +308,10 @@
 {\displaystyle#1}\end{array}}%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\xdef\myDevelopVariable{0}
 \cfoot{\today}
-\input{mydevelop.sty}
+\ifnum\myDevelopVariable=1
+  \input{mydevelop.sty}
+\fi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}

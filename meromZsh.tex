@@ -654,8 +654,8 @@ In der Situation
 %\path (m-1-1) edge[white] node{$\%$} (m-2-2);
 \path[->,font=\scriptsize,>=angle 90]
 (m-1-1) edge node[above]{$\id\otimes\_\!\cdot\! P(t,\partial_t)$} (m-1-2)
-(m-1-1) edge node[left]{$\cong$} node[right]{$\Phi$} (m-2-1)
-(m-1-2) edge node[left]{$\cong$} node[right]{$\Phi$} (m-2-2)
+(m-1-1) edge node[descr]{$\cong$} node[right]{$\Phi$} (m-2-1)
+(m-1-2) edge node[descr]{$\cong$} node[right]{$\Phi$} (m-2-2)
 (m-2-1) edge node[above]{$\alpha$} (m-2-2)
 ;
 \end{tikzpicture}
@@ -697,7 +697,7 @@ Betrachte dazu die kurze Sequenz
 \begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
   \matrix (m) [
     matrix of math nodes
-    , row sep=2em
+    %, row sep=2em
     , column sep=2.7em
     %, text height=3em
     %, text depth=0.25em
@@ -706,24 +706,25 @@ Betrachte dazu die kurze Sequenz
     & \myT
     & \cM
     & 0\\
+    & u & u\cdot P \\
+    & & u & u\mod\cD_\Cftl\cdot P \\
   };
   %TODO: Pfeile
   \path[->,font=\scriptsize,>=angle 90]
-  (m-1-1) edge node[above]{$  $} (m-1-2)
+  (m-1-1) edge (m-1-2)
   (m-1-2) edge node[above]{$\_\!\cdot\! P$} (m-1-3)
-  (m-1-3) edge node[above]{$  $} (m-1-4)
-  (m-1-4) edge node[above]{$  $} (m-1-5)
+  (m-1-3) edge node[above]{$\pi$} (m-1-4)
+  (m-1-4) edge (m-1-5)
+  ;
+  \path[|->,font=\scriptsize,>=angle 90]
+  (m-2-2) edge (m-2-3)
+  (m-3-3) edge (m-3-4)
   ;
 \end{tikzpicture}
 \end{center}
-ist
-\begin{itemize}
-\item \textbf{exact}, weil $\cM\cong\myT\Big/\myT\cdot P=\coker(\_\cdot P)$
-und
-\item \textbf{flach}, da es Moduln über Körper, also Vektorräume, sind.
-%TODO: quelle? falsch?
-\end{itemize}
-Deshalb ist auch, nach anwenden von $\Cful\otimes_\Cftl\_$, die Sequenz
+ist \textbf{exact}, weil $\cM\cong\myT\Big/\myT\cdot P=\coker(\_\cdot P)$.
+Weil $\Cful$ \textbf{flach} ist, da  Körper, ist auch, nach anwenden von
+$\Cful\otimes_\Cftl\_$, die Sequenz
 %TODO: Funktorialität von Pull-Back? NEIN: Funktorialität von tensor
 \begin{center}
 \begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
@@ -747,10 +748,10 @@ Deshalb ist auch, nach anwenden von $\Cful\otimes_\Cftl\_$, die Sequenz
   };
   %TODO: Pfeile
   \path[->,font=\scriptsize,>=angle 90]
-  (m-1-1) edge node[above]{$  $} (m-1-2)
+  (m-1-1) edge (m-1-2)
   (m-1-2) edge node[above]{$\id\otimes\_\!\cdot\! P$} (m-1-3)
-  (m-1-3) edge node[above]{$  $} (m-1-4)
-  (m-1-4) edge node[above]{$  $} (m-1-5)
+  (m-1-3) edge node[above]{$\id\otimes\pi$} (m-1-4)
+  (m-1-4) edge (m-1-5)
   ;
 \end{tikzpicture}
 \end{center}
@@ -792,8 +793,8 @@ ergibt sich
   (m-1-3) edge node[above]{$  $} (m-1-4)
   (m-1-4) edge node[above]{$  $} (m-1-5)
 
-  (m-1-2) edge node[left]{$\cong$} node[right]{$\Phi$} (m-2-2)
-  (m-1-3) edge node[left]{$\cong$} node[right]{$\Phi$} (m-2-3)
+  (m-1-2) edge node[descr]{$\cong$} node[right]{$\Phi$} (m-2-2)
+  (m-1-3) edge node[descr]{$\cong$} node[right]{$\Phi$} (m-2-3)
 
   (m-2-2) edge node[above]{$\_\!\cdot\! Q$} (m-2-3)
   ;
@@ -821,19 +822,19 @@ Sequenz fortsetzen (weil $\_\!\cdot\! Q$ injektiv)
   };
   %TODO: Pfeile
   \path[->,font=\scriptsize,>=angle 90]
-  (m-1-1) edge node[above]{$  $} (m-1-2)
+  (m-1-1) edge (m-1-2)
   (m-1-2) edge node[above]{$\id\otimes\_\!\cdot\! P$} (m-1-3)
-  (m-1-3) edge node[above]{$ $} (m-1-4)
-  (m-1-4) edge node[above]{$  $} (m-1-5)
+  (m-1-3) edge node[above]{$\id\otimes\pi$} (m-1-4)
+  (m-1-4) edge (m-1-5)
 
-  (m-1-2) edge node[left]{$\cong$} node[right]{$\Phi$} (m-2-2)
-  (m-1-3) edge node[left]{$\cong$} node[right]{$\Phi$} (m-2-3)
+  (m-1-2) edge node[descr]{$\cong$} node[right]{$\Phi$} (m-2-2)
+  (m-1-3) edge node[descr]{$\cong$} node[right]{$\Phi$} (m-2-3)
   %(m-1-4) edge[dashed] node[left]{$\cong$} node[right]{$\phi$} (m-2-4)
 
-  (m-2-1) edge node[above]{$  $} (m-2-2)
+  (m-2-1) edge (m-2-2)
   (m-2-2) edge node[above]{$\_\!\cdot\! Q$} (m-2-3)
-  (m-2-3) edge node[above]{$  $} (m-2-4)
-  (m-2-4) edge node[above]{$  $} (m-2-5)
+  (m-2-3) edge (m-2-4)
+  (m-2-4) edge (m-2-5)
   ;
 \end{tikzpicture}
 \end{center}
@@ -859,8 +860,12 @@ tatsächlich nicht nachweisen -- wenn man weiß, wie man intern in Topoi
 Mathematik betreiben kann. :-))
 \end{comment}
 Nun wollen wir mittels Diagrammjagd einen Isomorphismus
-$\phi:\rho^*\cM\rightarrow \myU\Big/\myU\cdot Q$ finden. Sei dazu
-$x\in\rho^*\cM$
+\[
+\phi:\rho^*\cM = \Cful\otimes_\Cftl(\cD_\Cftl\slash\cD_\Cftl\cdot P)\rightarrow \myU\Big/\myU\cdot Q
+\]
+ finden. Sei dazu
+$x\in\rho^*\cM$, weil die Abbildung $\pi$ surjektiv ist, existiert ein
+$y\in\Cful\otimes_{\Cftl}\myT$ mit $\pi(x)=y$.
 \begin{comment}
 leider kann man hier NICHT das (kurzem) Fünfer-Lemma anweinden\\
 und damit gilt dann nach dem (kurzem) Fünfer-Lemma
@@ -1112,7 +1117,7 @@ Es gilt die Projektionsformel
 &\cong \rho_+(\cN\otimes_{\C(\!(t)\!)}\cM) 
   & \mbox{(Rechenregeln Tensorprodukt)}\\
 &= \rho_+\cN\otimes_{\C(\!(t)\!)}\cM 
-  & \mbox{(?)}\\
+  & \mbox{(?)}
 \end{align*}
 \end{proof}
 
