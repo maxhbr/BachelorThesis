@@ -1,11 +1,11 @@
 #!/bin/bash
+if [ -L $0 ] ; then
+  DIR=$(dirname $(readlink -f $0)) ;
+else
+  DIR=$(dirname $0) ;
+fi
 
 if [[ ! -n "$TMUX" ]] ; then
-  if [ -L $0 ] ; then
-    DIR=$(dirname $(readlink -f $0)) ;
-  else
-    DIR=$(dirname $0) ;
-  fi
   cd $DIR
 
   test -f main.tex || return
@@ -45,17 +45,43 @@ if [[ ! -n "$TMUX" ]] ; then
   git commit -a
   git push
 else
-  #go to root folder
-  if [ -L $0 ] ; then
-    DIR=$(dirname $(readlink -f $0)) ;
-  else
-    DIR=$(dirname $0) ;
-  fi
   cd $DIR
-  grep -r --exclude='TODO' "TODO" * > TODO
-  wc -l TODO
-  git commit -a
-  git push
+
+  DIALOG=${DIALOG=dialog}
+  tempfile=`tempfile 2>/dev/null` || tempfile=/tmp/mymenudialog$$
+  trap "rm -f $tempfile" 0 1 2 5 15
+
+  $DIALOG --title "menu" \
+    --menu "Please choose:" 15 55 5 \
+    1 "commit" \
+    2 "zathura" \
+    3 "latexmk" \
+    4 "dropbox" 2> $tempfile
+
+  retval=$?
+  [ $retval -eq 1 -o $retval -eq 255 ] && exit
+  choice=$(cat $tempfile)
+
+
+  case $choice in
+    1) #commit
+      grep -r --exclude='TODO' "TODO" * > TODO
+      wc -l TODO
+      git commit -a
+      git push
+      ;;
+    2) { while true; do zathura -l error main.pdf; sleep 1; done } &
+      ;;
+    3) latexmk -pvc -pdf main.tex
+      ;;
+    4) DropboxON=$(ps -A | grep -c dropbox)
+      if [[ $DropboxON == "0" ]]; then
+        echo "dropbox started, pid:"
+        dropboxd &
+        echo $!
+      else
+        echo "dropbox is already running"
+      fi
+      ;;
+  esac
 fi
-# while true; do zathura *.pdf; done
-#while true; do zathura -l error *.pdf; sleep 1; done
