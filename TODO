@@ -21,7 +21,7 @@ grundlagen.tex:%TODO: tensorprodukt / faserprodukt zum basiswechsel
 grundlagen.tex:  %TODO: Pfeile
 grundlagen.tex:  %TODO: Pfeile
 grundlagen.tex:  %TODO: Pfeile
-lemma2-4.tex:  \end{pmatrix} \mbox{\footnote{$(\xi^i)^p=1\forall i$}} % TODO: correct footnote
+lemma2-4.tex:  %\mbox{\footnote{$(\xi^i)^p=1\forall i$}} % TODO: correct footnote
 lemma2-4.tex:%TODO: this
 levelt-turrittin.tex:%TODO: all
 Übereinstimmungen in Binärdatei main.dvi.

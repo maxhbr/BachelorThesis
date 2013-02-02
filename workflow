@@ -47,20 +47,24 @@ if [[ ! -n "$TMUX" ]] ; then
 else
   cd $DIR
 
-  DIALOG=${DIALOG=dialog}
-  tempfile=`tempfile 2>/dev/null` || tempfile=/tmp/mymenudialog$$
-  trap "rm -f $tempfile" 0 1 2 5 15
+  if [ $# -eq 0 ]; then
+    DIALOG=${DIALOG=dialog}
+    tempfile=`tempfile 2>/dev/null` || tempfile=/tmp/mymenudialog$$
+    trap "rm -f $tempfile" 0 1 2 5 15
 
-  $DIALOG --title "menu" \
-    --menu "Please choose:" 15 55 5 \
-    1 "commit" \
-    2 "zathura" \
-    3 "latexmk" \
-    4 "dropbox" 2> $tempfile
+    $DIALOG --title "menu" \
+      --menu "Please choose:" 15 55 5 \
+      1 "commit" \
+      2 "zathura" \
+      3 "latexmk" \
+      4 "dropbox" 2> $tempfile
 
-  retval=$?
-  [ $retval -eq 1 -o $retval -eq 255 ] && exit
-  choice=$(cat $tempfile)
+    retval=$?
+    [ $retval -eq 1 -o $retval -eq 255 ] && exit
+    choice=$(cat $tempfile)
+  else
+    choice=$1
+  fi
 
 
   case $choice in
@@ -70,7 +74,7 @@ else
       git commit -a
       git push
       ;;
-    2) { while true; do zathura -l error main.pdf; sleep 1; done } &
+    2) while true; do zathura -l error main.pdf; sleep 1; done
       ;;
     3) latexmk -pvc -pdf main.tex
       ;;

@@ -376,9 +376,9 @@ Die Menge $\slopes(P)$ sind die nicht-vertikalen Steigungen von $N(P)$, die
 sich echt rechts von $\{0\}\times\R$ befinden.\\ % der $y$-Achse
 %TODO: bessere formulierung
 \begin{itemize}
-\item P heißt \emph{regulär singulär} $:\Leftrightarrow$
+\item P heißt \emph{regulär} (oder \emph{regulär singulär}) $:\Leftrightarrow$
 $\slopes(P)=\{0\}$, sonst \emph{irregulär singulär}.
-\item Schreibe $\cP(\cM_K)$ für die Menge der zu $\cM_K$ gehörigen slopes
+\item Schreibe $\cP(\cM_K)$ für die Menge der zu $\cM_K$ gehörigen slopes.
 %TODO: wie sind die genau definiert? invariant?
 \item Ein meromorpher Zusammenhang $\cM_K$ heißt regulär singulär, falls es
 ein regulär singuläres $P$ gibt, mit $\cM_K\cong\cD/\cD\cdot P$
@@ -404,7 +404,7 @@ Polygon eingezeichnet. Offensichtlich ist $\slopes(P_1)=\{0\}$ und damit ist
 $P_1$ regulär singulär.
 \item \cite[Bsp 5.3. 2.]{ZulaBarbara}
 Sei $P_2=t^4(t+1)\partial_t^4+t\partial_t^2+\frac{1}{t}\partial_t+1$ so kann
-man daraus das entsprechende Newton Polygon konstruieren.
+man das entsprechende Newton Polygon konstruieren.
 Das Newton Polygon wurde in Abbildung \ref{fig:Newton-Polygon2} visualisiert.
 \end{enumerate}
 \end{exmp}
@@ -527,8 +527,8 @@ Struktur solcher Zusammenhänge genauer auseinandersetzen.
 
 \begin{lem}
 \cite[Def 5.1.1 Remarks 3.]{sabbah_cimpa90}
-Ein $P=\sum a_i(x)(x\partial_x)^i$ mit $a_i\in\Cfx$ ist regulär, genau dann
-wenn der Koeffizient $a_d$ vor dem dominanten Term eine Einheit ist.
+Ein $P=\sum_{i=0}^d a_i(x)(x\partial_x)^i$ mit $a_i\in\Cfx$ ist regulär, genau
+dann wenn der Koeffizient $a_d$ vor dem dominanten Term eine Einheit ist.
 \end{lem}
 \begin{proof}
 
@@ -624,7 +624,7 @@ f(u)\otimes m(t,\partial_t) & f(u)m(\rho(u),\rho'(u)^{-1}\partial_u) \\
 \end{proof}
 \begin{bem}
 Das soeben, in Lemma \ref{lem:pull-back-hilfslemma1}, definierte $\Phi$ erfüllt
-für $1\otimes m\in \Cful\otimes_{\Cftl}\myT$
+für $1\otimes m\in \Cful\otimes_{\Cftl}\cD_{\Cftl}$
 \begin{align*}
 \partial_u(1\otimes m) &\overset{\mbox{def}}{=} \rho'(u)\otimes\partial_t m \\
 &\overset{\Phi}{\mapsto} \underset{=1}{\underbrace{\rho'(u)\rho'(u)^{-1}}}
