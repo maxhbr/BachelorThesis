@@ -1,5 +1,0 @@
-PWD /home/hubi/studium/baArbeit/00-arbeit
-INPUT /usr/share/texmf/web2c/texmf.cnf
-INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
-INPUT main/main.tex
-OUTPUT main.log
