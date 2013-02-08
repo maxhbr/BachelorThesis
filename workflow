@@ -41,6 +41,8 @@ if [[ ! -n "$TMUX" ]] ; then
   tmux select-window -t texBa:1
   tmux attach-session -t texBa
 
+  cp main/main.pdf ./
+
   git add .
   git commit -a
   git push
