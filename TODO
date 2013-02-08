@@ -24,10 +24,8 @@ grundlagen.tex:  %TODO: Pfeile
 lemma2-4.tex:  %\mbox{\footnote{$(\xi^i)^p=1\forall i$}} % TODO: correct footnote
 lemma2-4.tex:%TODO: this
 levelt-turrittin.tex:%TODO: all
-Übereinstimmungen in Binärdatei main.dvi.
-main.log:                                                  $ % TODO: richtiger Raum?
-main.log:                                                   % TODO: richtiger Raum?
-main.ps:w FJ(TODO,)30 b(\(3.)i(T)-8 b(re\033en\))p 3633 5576
+main/main.ps:w FJ(TODO,)30 b(\(3.)i(T)-8 b(re\033en\))p 3633 5576
+Übereinstimmungen in Binärdatei main/main.dvi.
 main.tex:  ,fontsize=12pt % TODO: to small?
 main.tex:%TODO: replace def --> newcommand
 main.tex:%TODO: set titel variable??
@@ -52,7 +50,7 @@ meromZsh.tex:%TODO: wie sind die genau definiert? invariant?
 meromZsh.tex:%TODO: nummer aus der referenz ist falsch
 meromZsh.tex:\cite[5.1]{sabbah_cimpa90} %TODO: genauer
 meromZsh.tex:%TODO: hier formal oder konvergent?
-meromZsh.tex:Wähle einen zyklischen Vektor $m\in\cM_\hat K$ % TODO: richtiger Raum?
+meromZsh.tex:Wähle einen zyklischen Vektor $m\in\cM_{\hat K}$ % TODO: richtiger Raum?
 meromZsh.tex:%TODO: titel: Operations on vector spaces with connection
 meromZsh.tex:%TODO: verzweigung statt pull-back?
 meromZsh.tex:%TODO: Pfeile

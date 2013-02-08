@@ -35,7 +35,7 @@ if [[ ! -n "$TMUX" ]] ; then
   #makeindex main.nlo -s nomencl.ist -o main.nls
 
   tmux new-session -d -s texBa
-  tmux new-window -t texBa:2 -n 'latexmk' 'latexmk -pvc -pdf main.tex'
+  tmux new-window -t texBa:2 -n 'latexmk' 'cd main; latexmk -pvc -pdf main.tex'
   #tmux new-window -t texBa:3 -n 'log' 'vim main.log'
   #tmux new-window -t texBa:4 -n 'err' 'watch grep "[Ee]rror" -B3 -A 3 *.log'
   tmux select-window -t texBa:1

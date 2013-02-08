@@ -94,7 +94,7 @@
     \node [below right] at (#3,#5/2) {#6};
   }
 \else
-  \input{myNewtonPlot.sty}
+  \myinput{myNewtonPlot.sty}
 \fi
 
 %%%%  Abkürzungsverzeichnis  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -309,7 +309,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \ifnum\myDevelopVariable=1
-  \input{mydevelop.sty}
+  \myinput{mydevelop.sty}
 \else
   \cfoot{\today}
 \fi
@@ -321,34 +321,34 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \frontmatter
 
-\input{titel.tex}
+\myinput{titel.tex}
 
 \tableofcontents{}
 
-%\input{einleitung.tex}
+%\myinput{einleitung.tex}
 
 \mainmatter
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\input{grundlagen.tex}
+\myinput{grundlagen.tex}
 
-\input{d-modul.tex}
+\myinput{d-modul.tex}
 
-\input{meromZsh.tex}
+\myinput{meromZsh.tex}
 
-\input{elem-mer-zsh.tex}
+\myinput{elem-mer-zsh.tex}
 
-\input{levelt-turrittin.tex}
+\myinput{levelt-turrittin.tex}
 
-\input{exmp.tex}
+\myinput{exmp.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \appendix
 \addcontentsline{toc}{chapter}{Anhang}
 
-\input{anhang-lemma2-4.tex}
+\myinput{anhang-lemma2-4.tex}
 
-%\input{anhang-plot-newton-polygon.tex}
+%\myinput{anhang-plot-newton-polygon.tex}
 
 \nocite{*}
 %\bibliographystyle{dinat}
