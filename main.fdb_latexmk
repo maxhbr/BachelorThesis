@@ -1,5 +1,5 @@
 # Fdb version 3
-["bibtex main"] 1359751868 "main.aux" "main.bbl" "main" 1359911133
+["bibtex main"] 1359751868 "main.aux" "main.bbl" "main" 1360322307
   "/usr/share/texmf-dist/bibtex/bst/amscls/amsalpha.bst" 1353286976 29978 76822b3d94e27e00dcc6ee8391cdceaf ""
   "main.aux" 1359801603 13717 6a1bcc931373aa5d7621cdf0a8664cbb ""
   "main.bcf" 0 -1 0 ""
@@ -251,10 +251,10 @@
   "main.out"
   "main.log"
   "main.dvi"
-  "main.nlo"
-  "main.aux"
   "main.toc"
-["pdflatex"] 1359801602 "main.tex" "main.pdf" "main" 1359911133
+  "main.aux"
+  "main.nlo"
+["pdflatex"] 1359801602 "main.tex" "main.pdf" "main" 1360322307
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1353286984 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1353286984 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1353286984 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -539,9 +539,9 @@
   (generated)
   "latex.py"
   "main.py"
-  "main.toc"
-  "main.aux"
   "main.nlo"
+  "main.aux"
+  "main.toc"
   "main1.py"
   "main.pdf"
   "main.log"
