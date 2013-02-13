@@ -17,6 +17,38 @@ Q(x,\partial_x):=F_P(x^{-1},-x^2\partial_x)\cdot \mbox{Hauptnenner
 \end{enumerate}
 \end{comment}
 
+Hier wollen wir nun eine Spezielle Klasse von Meromorphen Zusammenhängen, die
+die durch das folgende Rezept entstehen.
+\begin{enumerate}
+\item Wähle ein $\phi$ zB. aus
+$\{\frac{1}{t^k},\frac{1}{t^2}+\frac{1}{t^3},\dots\}$
+\item und beginne dann mit
+\[
+\tilde P(t,\partial_t):=(\partial_t-\frac{d}{dt}\phi(t))
+\]
+\item Multipliziere mit Hauptnenner
+\[
+P(t,\partial_t):=(\partial_t-\frac{d}{dt}\phi(t)) \cdot
+\mbox{Hauptnenner }\in\C[t]<\partial_t>
+\]
+\item wende auf $P$ die Fouriertransformation 
+$F_P(z,\partial_z)=P(\partial_z,-z)$ an und erhalte ein Element
+in $\C[z]<\partial_z>$
+\item Wende die Übergänge $x=z^{-1}$ und $\partial_x=-z^2\partial_z$ an 
+\[
+\tilde Q(x,\partial_x):=F_P(x^{-1},-x^2\partial_x)
+\]
+\item Multipliziere mit Hauptnenner
+\[
+Q(x,\partial_x):=F_P(x^{-1},-x^2\partial_x)\cdot \mbox{Hauptnenner
+}\in\C[x]<\partial_x>
+\]
+\end{enumerate}
+
+\begin{comment}
+warum sind diese wichtig??
+\end{comment}
+
 \section{Explizit}
 Betrachte nun Spezialfälle von \ref{sec:allgemeinProblem}.
 
