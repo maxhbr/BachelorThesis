@@ -1,28 +1,3 @@
-\chapter{Wie ich Newton Polygone zeichne}
-\lstdefinestyle{myLatex} {
-  %language=[LaTeX]TeX
-  language=LaTeX
-  , texcsstyle=*\bf\color{blue}
-  , basicstyle=\ttfamily
-  , numbers=none
-  , breaklines=true
-  , commentstyle=\color{red}
-  %, otherkeywords={$, \{, \}, \[, \]}
-  %, frame=lines
-  , xleftmargin=30pt          % linker Abstand vom Rand (framesep+framrule)
-  , tabsize=2
-  %, caption=LaTeX example
-}
-
-\begin{lstlisting}[style=myLatex]
-\myinput{myNewtonPoly.sty}
-\end{lstlisting}
-
-\begin{center}
-\begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
-
-\def\myPoints{0/-1,1/0,2/0,3/3,3/4,4/3}
-
 \foreach \x/\y [count=\ii] in \myPoints{
   \ifnum\ii=1
     \xdef\myMinY{\y}
@@ -129,20 +104,3 @@
 %%nodes
 \foreach \x/\y in \myPoints
   { \node[draw,circle,inner sep=1.5pt,fill=white] at (\x,\y) {}; }
-
-
-
-\end{tikzpicture}
-\end{center}
-
-
-\begin{center}
-\begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
-
-\def\myPoints{0/-1,1/0,2/0,3/3,3/4,4/3}
-\myinput{myNewtonPoly.sty}
-
-\end{tikzpicture}
-\end{center}
-
-% vim: set ft=tex :
