@@ -1,7 +1,7 @@
 %!TeX root = main.tex
 \chapter{Beispiel}
 
-\section{Allgemein} \label{sec:allgemeinProblem}
+\section{Rezept} \label{sec:allgemeinProblem}
 
 \begin{comment}
 siehe: \cite[5.b]{sabbah_Fourier-local}
@@ -18,6 +18,8 @@ sei $\phi\in\{\frac{1}{t^k},\frac{1}{t^2}+\frac{1}{t^3},\dots\}$
 Q(x,\partial_x):=F_P(x^{-1},-x^2\partial_x)\cdot \mbox{Hauptnenner
 }\in\C[x]<\partial_x>
 \]
+
+\textbf{Hauptnenner unnötig?!?}
 \item Berechne für $Q$ das NP usw...
 \end{enumerate}
 \end{comment}
@@ -25,20 +27,24 @@ Q(x,\partial_x):=F_P(x^{-1},-x^2\partial_x)\cdot \mbox{Hauptnenner
 Hier wollen wir nun eine Spezielle Klasse von Meromorphen Zusammenhängen, die
 die durch das folgende Rezept entstehen.
 \begin{enumerate}
-\item Wähle zunächst ein $\phi$ zB. aus
-$\{\frac{1}{t^k},\frac{1}{t^2}+\frac{1}{t^3},\dots\}$
+\item Wähle zunächst ein $\phi$ 
+$\in\{\frac{1}{t^k},\frac{1}{t^2}+\frac{1}{t^3},\dots\}
+=\{\phi=\sum_{i\in I}\frac{1}{t^{k_i}}|I \mbox{ endlich}, k_i\in\N\}$ aus
 \item und definiere dann 
-$ \tilde P(t,\partial_t):=\partial_t-\frac{d}{dt}\phi(t)$
+$ \tilde Q(t,\partial_t):=\partial_t-\frac{d}{dt}\phi(t)$
 $\in\C[t][t^{-1}]<\partial_t>$
 \item Wir wollen aber, weil es schöner ist, ein Element in $\C[t]<\partial_t>$,
 deshalb multipliziere mit Hauptnenner und erhalte
 \[
-P(t,\partial_t):=(\partial_t-\frac{d}{dt}\phi(t)) \cdot
+Q(t,\partial_t):=(\partial_t-\frac{d}{dt}\phi(t)) \cdot
 \mbox{Hauptnenner }\in\C[t]<\partial_t>
 \]
 Dies ändert den Assozierten Meromorphen Zusammenhang nicht.
-\item Fouriertransformiere $P$ und erhalte 
-$\cF_P(z,\partial_z)=P(\partial_z,-z)$ in $\C[z]<\partial_z>$
+\begin{comment}
+Lemma?
+\end{comment}
+\item Fouriertransformiere $Q$ und erhalte 
+$\cF_Q(z,\partial_z)=Q(\partial_z,-z)$ in $\C[z]<\partial_z>$
 \item Wende den Übergang $x\rightsquigarrow z^{-1}$ an.
 
 Was passiert mit der Ableitung $\partial_x$? Es gilt
@@ -50,12 +56,7 @@ Was passiert mit der Ableitung $\partial_x$? Es gilt
 \]
 also $ \partial_x\rightsquigarrow-z^2\partial_z $.
 \[
-\tilde Q(x,\partial_x):=F_P(x^{-1},-x^2\partial_x)
-\]
-\item Multipliziere erneut mit Hauptnenner
-\[
-Q(x,\partial_x):=F_P(x^{-1},-x^2\partial_x)\cdot \mbox{Hauptnenner
-}\in\C[x]<\partial_x>
+P(x,\partial_x):=F_Q(x^{-1},-x^2\partial_x) \in \C[t]<\partial_t>
 \]
 \end{enumerate}
 
@@ -63,18 +64,46 @@ Q(x,\partial_x):=F_P(x^{-1},-x^2\partial_x)\cdot \mbox{Hauptnenner
 warum sind diese wichtig??
 \end{comment}
 
-wende das Rezept allgemein für $\phi=\frac{1}{t^k}$ an.
-so ist 
+\begin{comment}
+\paragraph{Wende das Rezept allgemein für $\phi=\frac{1}{t^k}$ an.}
+So ist 
 \begin{align*}
 \frac{d}{dt}\phi(t)    &=-k\frac{1}{t^{k+1}}\\
-\tilde P(t,\partial_t) &=\partial_t+k\frac{1}{t^{k+1}} \\
-P(t,\partial_t)        &=\partial_tt^{k+1}+k \\
-F_P(z,\partial_z)      &=P(\partial_z,-z)\\
+\tilde Q(t,\partial_t) &=\partial_t+k\frac{1}{t^{k+1}} \\
+Q(t,\partial_t)        &=\partial_tt^{k+1}+k \\
+\cF_Q(z,\partial_z)    &=Q(\partial_z,-z)\\
                        &=-z\partial_z^{k+1}+k\\
-\tilde Q(x,\partial_x) &=F_P(x^{-1},-x^2\partial_x) \\
+P(x,\partial_x)        &=F_Q(x^{-1},-x^2\partial_x) \\
                        &=-\frac{1}{x}(-x^2\partial_x)^{k+1}+k\\
                        &=k+(-1)^{k}\frac{1}{x}(x^2\partial_x)^{k+1}\\
-                       &=:Q(x,\partial_x)
+\end{align*}
+\end{comment}
+
+\paragraph{Wende das Rezept allgemein für 
+$\phi=\sum_{i\in I}\frac{1}{t^{k_i}}$ an.}
+So ist 
+\begin{align*}
+\tilde Q(t,\partial_t) &=\partial_t-\frac{d}{dt}\phi(t) \\
+                       &=\partial_t+\sum_{i\in I} k_i\frac{1}{t^{k_i+1}} 
+                       & &\in \C[t][t^{-1}]<\partial_t>\\
+Q(t,\partial_t)        &=\partial_tt^{\max_j(k_j)+1}
+                         +\sum_{i\in I} k_i\frac{1}{t^{k_i-\max_j(k_j)}} \\
+                       &=\partial_tt^{\max_j(k_j)+1}
+                         +\sum_{i\in I} k_it^{\max_j(k_j)-k_i} 
+                       & &\in \C[t]<\partial_t>\\
+\cF_Q(z,\partial_z)    &=Q(\partial_z,-z)\\
+                       &=-z\partial_z^{\max_j(k_j)+1}
+                         +\sum_{i\in I} k_i\partial_z^{\max_j(k_j)-k_i} \\
+P(x,\partial_x)        &=F_Q(x^{-1},-x^2\partial_x) \\
+                       &=-\frac{1}{x}(-x^2\partial_x)^{\max_j(k_j)+1}
+                         +\sum_{i\in I} k_i(-x^2\partial_x)^{\max_j(k_j)-k_i}\\
+                       &=-\frac{1}{x}(-x^2\partial_x)^{\max_j(k_j)+1}
+                         +\sum_{i\in I} k_i(-x^2\partial_x)^{\max_j(k_j)-k_i}\\
+                       &=-\frac{1}{x}(-x^2\partial_x)^{\max_j(k_j)+1}
+                         +\sum_{i\in I} k_i(-x^2\partial_x)^{\max_j(k_j)-k_i}\\
+                       &=x\partial_x(-x^2\partial_x)^{\max_j(k_j)}
+                         +\sum_{i\in I} k_i(-x^2\partial_x)^{\max_j(k_j)-k_i}
+                       & &\in \C[x]<\partial_x>
 \end{align*}
 
 Nun müssen wir noch $(x^2\partial_x)^{k+1}$ besser verstehen.
@@ -101,22 +130,6 @@ Nun müssen wir noch $(x^2\partial_x)^{k+1}$ besser verstehen.
                       &=(5x^4\partial_x+4x^{5}\partial_x^2
                         +x^6\partial_x^3)
                         (x^2\partial_x)^{k-2}\\
-%\\
-%\\
-                      %&=(2x^3\partial_x+x^{4}\partial_x^2)
-                        %(2x^3\partial_x+x^{4}\partial_x^2)
-                        %(x^2\partial_x)^{k-3}\\
-                      %&=((2x^3\partial_x)^2+2(2x^3\partial_xx^{4}\partial_x^2)
-                        %+(x^{4}\partial_x^2)^2)
-                        %(x^2\partial_x)^{k-3}\\
-                      %&=(4x^3\underbracket{\partial_xx^3}\partial_x
-                        %+4x^3\underbracket{\partial_xx^{4}}\partial_x^2
-                        %+x^{4}\underbracket{\partial_x^2x^{4}}\partial_x^2)
-                        %(x^2\partial_x)^{k-3}\\
-                      %&=(4x^3((3x^2+x^3\partial_x)\partial_x
-                        %+(???+x^{4}\partial_x)\partial_x^2)
-                        %+x^{4}(???+x^{4}\partial_x^2)\partial_x^2)
-                        %(x^2\partial_x)^{k-3}\\
                       &=\dots \mbox{geschlossene Formel??}
 %TODO: induktion
 \end{align*}
@@ -125,34 +138,52 @@ also gilt für spezielle $k$
 (x^2\partial_x)^{k+1}=
 \begin{cases}
 2x^3\partial_x+x^{4}\partial_x^2 & \mbox{ falls } k=1\\
-5x^4\partial_x+4x^{5}\partial_x^2 +x^6\partial_x^3 & \mbox{ falls } k=2
+5x^4\partial_x+4x^{5}\partial_x^2 +x^6\partial_x^3 & \mbox{ falls } k=2\\
+\dots
 \end{cases}
 \]
-also für $\phi=\frac{1}{x}$ ist 
-$Q=1-\frac{1}{x}(x^2\partial_x)^{2}=1-2x^2\partial_x-x^{3}\partial_x^2$
+\textbf{also für $\phi=\frac{1}{x}$} ist 
+$P=1-\frac{1}{x}(x^2\partial_x)^{2}=1-2x^2\partial_x-x^{3}\partial_x^2$
 \begin{center}
 \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
-%\def\myPoints{{(0,0)}, {(1,1)}, {(2,1)}}
-%\def\myPath{(-.5,0) -- (0,0) -- (2,1) -- (2,2)}
-%\myNewtonPlot{\myPoints}{\myPath}{2}{0}{2}{
-  %$N(x-2x^3\partial_x-x^{4}\partial_x^2)$
-%}
 \def\myPoints{0/0,1/1,2/1}
 \myinput{myNewtonPoly.sty}
 \end{tikzpicture}
 \end{center}
 
-also für $\phi=\frac{1}{x^2}$ ist 
-$Q=2-\frac{1}{x}(x^2\partial_x)^{3}
-=2-5x^3\partial_x-4x^{4}\partial_x^2-x^5\partial_x^3$
+\textbf{also für $\phi=\frac{1}{x^2}$} ist 
+$P=2+\frac{1}{x}(x^2\partial_x)^{3}
+=2+5x^3\partial_x+4x^{4}\partial_x^2+x^5\partial_x^3$
 \begin{center}
 \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
-%\def\myPoints{{(0,0)}, {(1,2)}, {(2,2)}, {(3,2)}}
-%\def\myPath{(-.5,0) -- (0,0) -- (3,2) -- (3,3)}
-%\myNewtonPlot{\myPoints}{\myPath}{3}{0}{3}{
-  %$N(x-5x^4\partial_x-4x^{5}\partial_x^2-x^6\partial_x^3)$
-%}
 \def\myPoints{0/0,1/2,2/2,3/2}
+\myinput{myNewtonPoly.sty}
+\end{tikzpicture}
+\end{center}
+
+\textbf{also für
+$\phi=\frac{1}{x}+\frac{1}{x^2}=\sum_{i\in\{1,2\}}\frac{1}{x^i}$} ist 
+\begin{align*}
+P &=x\partial_x(-x^2\partial_x)^{\max_j(k_j)}
+    +\sum_{i\in I} k_i(-x^2\partial_x)^{\max_j(k_j)-k_i}\\
+  &=x\partial_x\underbracket{(x^2\partial_x)^{2}}
+    +1(-x^2\partial_x)^{1}+2(-x^2\partial_x)^{0}\\
+  &=x\partial_x \overbracket{(2x^3\partial_x+x^4\partial_x^2)}
+    -x^2\partial_x+2\\
+  &=2x\underbracket{\partial_xx^3}\partial_x
+    +x\underbracket{\partial_xx^4}\partial_x^2
+    -x^2\partial_x+2\\
+  &=\underbracket{2x\overbracket{(3x^2+x^3\partial_x)}\partial_x}
+    +\underbracket{x\overbracket{(4x^3+x^4\partial_x)}\partial_x^2}
+    -x^2\partial_x+2\\
+  &=\overbracket{6x^3\partial_x+2x^4\partial_x^2}
+    +\overbracket{4x^4\partial_x^2+x^5\partial_x^3}
+    -x^2\partial_x+2\\
+  &= x^5\partial_x^3+6x^4\partial_x^2+(6x^3-x^2)\partial_x+2
+\end{align*}
+\begin{center}
+\begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
+\def\myPoints{0/0,1/1,1/2,2/2,3/2}
 \myinput{myNewtonPoly.sty}
 \end{tikzpicture}
 \end{center}

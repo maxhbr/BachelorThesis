@@ -15,9 +15,8 @@ d-modul.tex:(linear differential system) %TODO: defn
 d-modul.tex:%TODO: was heißt holonom (holonomic)
 elem-mer-zsh.tex:%TODO: auch nicht formal
 elem-mer-zsh.tex:%TODO: verwendet hier schon das klassische Levelt-Turittin
+exmp.tex:-\partial_z(f)\cdot z^2= %TODO: wegen klammerung?
 exmp.tex:%TODO: induktion
-exmp.tex:%TODO: rightarrow oder mapsto?
-exmp.tex:-\partial_t(f)\cdot t^2= %TODO: wegen klammerung?
 grundlagen.tex:%TODO: Pfeile
 grundlagen.tex:  %TODO: Pfeile
 grundlagen.tex:%TODO: tensorprodukt / faserprodukt zum basiswechsel
@@ -73,6 +72,8 @@ meromZsh.tex:%TODO: nummer aus der referenz ist falsch
 meromZsh.tex:  & \mbox{(Rechenregeln Tensorprodukt)}\\ %TODO: hinzufügen
 myNewtonPlot.sty:            %TODO
 myNewtonPlot.sty:            %TODO
+myNewtonPoly.sty:          %TODO
+myNewtonPoly.sty:          %TODO
 titel.tex:%TODO; titelpage bitte nicht seitlich versetzt
 trash/meromZsh.tex:  %TODO: auch nicht formal
 workflow:  grep -r --exclude='TODO' "TODO" * > TODO
