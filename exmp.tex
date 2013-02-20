@@ -27,10 +27,10 @@ Q(x,\partial_x):=F_P(x^{-1},-x^2\partial_x)\cdot \mbox{Hauptnenner
 Hier wollen wir nun eine Spezielle Klasse von Meromorphen Zusammenhängen, die
 die durch das folgende Rezept entstehen.
 \begin{enumerate}
-\item Wähle zunächst ein $\phi$ 
+\item Wähle zunächst ein $\phi$
 $\in\{\frac{1}{t^k},\frac{1}{t^2}+\frac{1}{t^3},\dots\}
 =\{\phi=\sum_{i\in I}\frac{1}{t^{k_i}}|I \mbox{ endlich}, k_i\in\N\}$ aus
-\item und definiere dann 
+\item und definiere dann
 $ \tilde Q(t,\partial_t):=\partial_t-\frac{d}{dt}\phi(t)$
 $\in\C[t][t^{-1}]<\partial_t>$
 \item Wir wollen aber, weil es schöner ist, ein Element in $\C[t]<\partial_t>$,
@@ -43,7 +43,7 @@ Dies ändert den Assozierten Meromorphen Zusammenhang nicht.
 \begin{comment}
 Lemma?
 \end{comment}
-\item Fouriertransformiere $Q$ und erhalte 
+\item Fouriertransformiere $Q$ und erhalte
 $\cF_Q(z,\partial_z)=Q(\partial_z,-z)$ in $\C[z]<\partial_z>$
 \item Wende den Übergang $x\rightsquigarrow z^{-1}$ an.
 
@@ -64,43 +64,22 @@ P(x,\partial_x):=F_Q(x^{-1},-x^2\partial_x) \in \C[t]<\partial_t>
 warum sind diese wichtig??
 \end{comment}
 
-\begin{comment}
-\paragraph{Wende das Rezept allgemein für $\phi=\frac{1}{t^k}$ an.}
-So ist 
-\begin{align*}
-\frac{d}{dt}\phi(t)    &=-k\frac{1}{t^{k+1}}\\
-\tilde Q(t,\partial_t) &=\partial_t+k\frac{1}{t^{k+1}} \\
-Q(t,\partial_t)        &=\partial_tt^{k+1}+k \\
-\cF_Q(z,\partial_z)    &=Q(\partial_z,-z)\\
-                       &=-z\partial_z^{k+1}+k\\
-P(x,\partial_x)        &=F_Q(x^{-1},-x^2\partial_x) \\
-                       &=-\frac{1}{x}(-x^2\partial_x)^{k+1}+k\\
-                       &=k+(-1)^{k}\frac{1}{x}(x^2\partial_x)^{k+1}\\
-\end{align*}
-\end{comment}
-
-\paragraph{Wende das Rezept allgemein für 
+\paragraph{Wende das Rezept allgemein für
 $\phi=\sum_{i\in I}\frac{1}{t^{k_i}}$ an.}
-So ist 
+So ist
 \begin{align*}
 \tilde Q(t,\partial_t) &=\partial_t-\frac{d}{dt}\phi(t) \\
-                       &=\partial_t+\sum_{i\in I} k_i\frac{1}{t^{k_i+1}} 
+                       &=\partial_t+\sum_{i\in I} k_i\frac{1}{t^{k_i+1}}
                        & &\in \C[t][t^{-1}]<\partial_t>\\
 Q(t,\partial_t)        &=\partial_tt^{\max_j(k_j)+1}
                          +\sum_{i\in I} k_i\frac{1}{t^{k_i-\max_j(k_j)}} \\
                        &=\partial_tt^{\max_j(k_j)+1}
-                         +\sum_{i\in I} k_it^{\max_j(k_j)-k_i} 
+                         +\sum_{i\in I} k_it^{\max_j(k_j)-k_i}
                        & &\in \C[t]<\partial_t>\\
 \cF_Q(z,\partial_z)    &=Q(\partial_z,-z)\\
                        &=-z\partial_z^{\max_j(k_j)+1}
                          +\sum_{i\in I} k_i\partial_z^{\max_j(k_j)-k_i} \\
-P(x,\partial_x)        &=F_Q(x^{-1},-x^2\partial_x) \\
-                       &=-\frac{1}{x}(-x^2\partial_x)^{\max_j(k_j)+1}
-                         +\sum_{i\in I} k_i(-x^2\partial_x)^{\max_j(k_j)-k_i}\\
-                       &=-\frac{1}{x}(-x^2\partial_x)^{\max_j(k_j)+1}
-                         +\sum_{i\in I} k_i(-x^2\partial_x)^{\max_j(k_j)-k_i}\\
-                       &=-\frac{1}{x}(-x^2\partial_x)^{\max_j(k_j)+1}
-                         +\sum_{i\in I} k_i(-x^2\partial_x)^{\max_j(k_j)-k_i}\\
+P_{\phi}(x,\partial_x) &=F_Q(x^{-1},-x^2\partial_x) \\
                        &=x\partial_x(-x^2\partial_x)^{\max_j(k_j)}
                          +\sum_{i\in I} k_i(-x^2\partial_x)^{\max_j(k_j)-k_i}
                        & &\in \C[x]<\partial_x>
@@ -142,29 +121,39 @@ also gilt für spezielle $k$
 \dots
 \end{cases}
 \]
-\textbf{also für $\phi=\frac{1}{x}$} ist 
-$P=1-\frac{1}{x}(x^2\partial_x)^{2}=1-2x^2\partial_x-x^{3}\partial_x^2$
+\textbf{also für $\phi_1:=\frac{1}{x}$} ist
+$P_{\phi_1}=1-\frac{1}{x}(x^2\partial_x)^{2}=1-2x^2\partial_x-x^{3}\partial_x^2$
+\begin{figure}[H]
+\caption{Newton Polygon zu $P_{\phi_1}$}
 \begin{center}
-\begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
-\def\myPoints{0/0,1/1,2/1}
-\myinput{myNewtonPoly.sty}
-\end{tikzpicture}
+\fbox{
+  \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
+  \def\myPoints{0/0,1/1,2/1}
+  \myinput{myNewtonPoly.sty}
+  \end{tikzpicture}
+}
 \end{center}
+\end{figure}
 
-\textbf{also für $\phi=\frac{1}{x^2}$} ist 
-$P=2+\frac{1}{x}(x^2\partial_x)^{3}
+\textbf{also für $\phi_2:=\frac{1}{x^2}$} ist
+$P_{\phi_2}=2+\frac{1}{x}(x^2\partial_x)^{3}
 =2+5x^3\partial_x+4x^{4}\partial_x^2+x^5\partial_x^3$
+\begin{figure}[H]
+\caption{Newton Polygon zu $P_{\phi_2}$}
 \begin{center}
-\begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
-\def\myPoints{0/0,1/2,2/2,3/2}
-\myinput{myNewtonPoly.sty}
-\end{tikzpicture}
+\fbox{
+  \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
+  \def\myPoints{0/0,1/2,2/2,3/2}
+  \myinput{myNewtonPoly.sty}
+  \end{tikzpicture}
+}
 \end{center}
+\end{figure}
 
 \textbf{also für
-$\phi=\frac{1}{x}+\frac{1}{x^2}=\sum_{i\in\{1,2\}}\frac{1}{x^i}$} ist 
+$\phi_3:=\frac{1}{x}+\frac{1}{x^2}$} ist
 \begin{align*}
-P &=x\partial_x(-x^2\partial_x)^{\max_j(k_j)}
+P_{\phi_3} &=x\partial_x(-x^2\partial_x)^{\max_j(k_j)}
     +\sum_{i\in I} k_i(-x^2\partial_x)^{\max_j(k_j)-k_i}\\
   &=x\partial_x\underbracket{(x^2\partial_x)^{2}}
     +1(-x^2\partial_x)^{1}+2(-x^2\partial_x)^{0}\\
@@ -181,44 +170,50 @@ P &=x\partial_x(-x^2\partial_x)^{\max_j(k_j)}
     -x^2\partial_x+2\\
   &= x^5\partial_x^3+6x^4\partial_x^2+(6x^3-x^2)\partial_x+2
 \end{align*}
-\begin{center}
-\begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
-\def\myPoints{0/0,1/1,1/2,2/2,3/2}
-\myinput{myNewtonPoly.sty}
-\end{tikzpicture}
-\end{center}
-
-\section{Explizit}
-Betrachte nun Spezialfälle von \ref{sec:allgemeinProblem}.
-
-Im besonderen zunächst $\cD/\cD(x^3\partial_x^2+1)$ also mit
-$P=x^3\partial_x^2+1$
-
 \begin{figure}[H]
-\label{fig:Exmp-A}
-%\caption{Zu Beispiel \ref{exmp:Exmp-A}}
+\caption{Newton Polygon zu $P_{\phi_3}$}
 \begin{center}
 \fbox{
-  \subfloat[Newton Polygon zu\\ $P=x^3\partial_x^2+1$]{
-    \label{fig:Exmp-A-1}
-    \begin{tikzpicture}[scale=1.5]
-    \def\myPoints{{(0,0)}, {(2,1)}}
-    \def\myPath{(-.5,0) -- (0,0) -- (2,1) -- (2,3)}
-    \myNewtonPlot{\myPoints}{\myPath}{2}{0}{3}{
-      $N(P)$
-    }
-    \end{tikzpicture}
-  }
-  \quad
-  \subfloat[Newton Polygon zu\\ $\rho^+P$]
-  {
-    \label{fig:Exmp-A-2}
-    \begin{tikzpicture}[scale=1.5]
-    \def\myPoints{{(0,0)}, {(2,2)}}
-    \def\myPath{(-.5,0) -- (0,0) -- (2,2) -- (2,3)}
-    \myNewtonPlot{\myPoints}{\myPath}{2}{0}{3}{$N(\rho^+P)$}
-    \end{tikzpicture}
-  }
+  \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
+  \def\myPoints{0/0,1/1,1/2,2/2,3/2}
+  \myinput{myNewtonPoly.sty}
+  \end{tikzpicture}
+}
+\end{center}
+\end{figure}
+
+\textbf{also für
+$\phi_4:=\frac{1}{x^2}+\frac{1}{x^3}$} ist
+\begin{align*}
+P_{\phi_4} &=x\partial_x(-x^2\partial_x)^{\max_j(k_j)}
+             +\sum_{i\in I} k_i(-x^2\partial_x)^{\max_j(k_j)-k_i}\\
+           &=-x\partial_x\underbracket{(x^2\partial_x)^{3}}
+             -2x^2\partial_x +3\\
+           &=-x\partial_x\overbracket{(5x^4\partial_x+4x^{5}\partial_x^2
+             +x^6\partial_x^3)}-2x^2\partial_x +3\\
+           &=-5x\underbracket{\partial_xx^4}\partial_x
+             -4x\underbracket{\partial_xx^{5}}\partial_x^2
+             -x\underbracket{\partial_xx^6}\partial_x^3
+             -2x^2\partial_x +3\\
+           &=-5x\overbracket{(4x^3+x^4\partial_x)}\partial_x
+             -4x\overbracket{(5x^4+x^{5}\partial_x)}\partial_x^2
+             -x\overbracket{(6x^5+x^6\partial_x)}\partial_x^3
+             -2x^2\partial_x+3\\
+           &=-20x^4\partial_x-5x^5\partial_x^2
+             -20x^5\partial_x^2-4x^{6}\partial_x^3
+             -6x^6\partial_x^3-x^7\partial_x^4
+             -2x^2\partial_x +3\\
+           &=-x^7\partial_x^4-10x^6\partial_x^3-25x^5\partial_x^2
+             -(20x^4+2x^2)\partial_x+3\\
+\end{align*}
+\begin{figure}[H]
+\caption{Newton Polygon zu $P_{\phi_4}$}
+\begin{center}
+\fbox{
+  \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
+  \def\myPoints{0/0,1/1,1/3,2/3,3/3,4/3}
+  \myinput{myNewtonPoly.sty}
+  \end{tikzpicture}
 }
 \end{center}
 \end{figure}
