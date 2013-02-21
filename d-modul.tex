@@ -24,14 +24,6 @@ darstellt. Dies bedeutet, für alle $g\in\C[x]$ hat man
 =\frac{\partial fg}{\partial x} - f\frac{\partial g}{\partial x}
 =\frac{\partial f}{\partial x} \cdot g \,.
 \]
-%\begin{defn}[Weyl Algebra, $\cD$]
-%%TODO: eigentlich ist \cD ja das wichtigste!
-%Definiere nun die Weyl Algebra $A_1(\C)$ (bzw. die Algebra $\cD$ von linearen
-%Operatoren mit Koeffizienten in $\C\{x\}$ bzw. die Algebra $\hat{\cD}$
-%(Koeffizienten in $\C\llbracket x\rrbracket$)) als die Quotientenalgebra der
-%freien Algebra, welche von dem Koeffizientenring zusammen mit dem Element
-%$\partial_x$, erzeugt wird, Modulo der Relation \eqref{eq:weyl_relation}.
-%\end{defn}
 \begin{defn}
 Definiere nun den Ring $\cD_k$ als die Quotientenalgebra der freien Algebra,
 welche von dem Koeffizientenring in $k$ zusammen mit dem Element $\partial_x$,
@@ -49,37 +41,14 @@ K\bydef\Cfx[x^{-1}]$
 \end{itemize}
 \end{defn}
 \begin{bem}
-Es gilt $\cD[x^{-1}]=\cD_K$ und $\hat \cD[x^{-1}]=\cD_{\hat K}$.
+\begin{itemize}
+\item Es gilt $\cD[x^{-1}]=\cD_K$ und $\hat \cD[x^{-1}]=\cD_{\hat K}$.
+\item Offensichtlich erhält $\cD_k$ in kanonischer weiße eine Ringstruktur,
+dies ist in \cite[Kapittel 2 Section 1]{ZulaBarbara} genauer ausgeführt.
+\item $\cD_k$ ist offensichtlich nichtkommutativ.
+\end{itemize}
 \end{bem}
-%Wir werden die Notation $A_1(\C):=\C[x]<\partial_x>$ (bzw.
-%$\cD:=\C\{x\}<\partial_x>$ bzw. 
-%$\hat{\cD}:=\C\llbracket x\rrbracket<\partial_x>$) verwenden.
 
-%TODO: vlt umsortieren
-\begin{comment}
-\begin{lem} %TODO: vervollständigen
-Sei $A$ einer der 3 soeben eingeführten Objekten, so definieren die Addition 
-\[ +:A\times A \rightarrow A \]
-und die Multiplikation
-\[ \cdot:A\times A \rightarrow A \]
-eine Ringstruktur auf $A$.
-\end{lem}
-\begin{proof}
-\cite[Kapittel 2 Section 1]{ZulaBarbara}
-\end{proof}
-\end{comment}
-
-%\begin{rem}
-%%TODO: alle sind
-%$A_1(\C),~\cD$ und $\hat\cD$ sind nicht kommutative Algebren.
-%\end{rem}
-
-%\begin{prop} \label{prop:weyl_eindeutige_schreibung}
-%\cite[Proposition 1.2.3]{sabbah_cimpa90}
-%Jedes Element in $A_1(\C)$ (bzw. $\cD$ oder $\hat{\cD}$) kann auf eindeutige
-%weiße als $P=\sum_{i=0}^na_i(x)\partial_x^i$, mit $a_i(x)\in A_1(\C)$ (bzw.
-%$\cD$ oder $\hat{\cD}$), geschrieben werden. 
-%\end{prop}
 \begin{prop} \label{prop:weyl_eindeutige_schreibung}
 \cite[Proposition 1.2.3]{sabbah_cimpa90}
 Jedes Element in $\cD_k$ kann auf eindeutige
@@ -105,6 +74,9 @@ Sei $P=\sum_{i=0}^na_i(x)\partial_x^i$, wie in Proposition
 \]
 als den \emph{Grad} von $P$.
 \end{defn}
+\begin{comment}
+Unabhängigkeit von Schreibung? Sabbah script!
+\end{comment}
 In natürlicher Weise erhält man die aufsteigende Filtrierung
 $F_N\cD:=\{P\in\cD|\deg P\leq N\}$ mit
 \[
@@ -151,22 +123,10 @@ Treffen?
 \end{comment}
 \end{proof}
 
-%\begin{comment}
-%\subsection{Weyl Algebra als Graduierter Ring}
-%% Treffen 2
-%Sei $A$ nun einer der drei Koeffizienten Ringe, welche zuvor behandelt
-%wurden.  Der Ring $A<\partial_x>$ kommt zusammen mit einer aufsteigenden
-%Filtrierung, welche wir mit $F(A<\partial_x)$ bezeichen werden.  Sei $P$ ein
-%bzgl. \ref{prop:weyl_eindeutige_schreibung} minimal geschriebener Operator,
-%so ist $P$ in $F_k$ falls der maximale Grad von $\partial_x$ in $P$ kleiner
-%oder gleich $k$. So definiere den Grad $deg P$ von $P$ als die Eindeutige
-%ganze Zahl $k$ mit $P\in F_kA<\partial_x>\slash F_{k-1}<\partial_x>$
-
-%Unabhängigkeit von Schreibung wird in Sabbah Script behauptet
-%\end{comment}
-
 \subsection{Alternative Definition / Sichtweise}
-%Nur abgeschrieben
+\begin{comment}
+Nur abgeschrieben
+\end{comment}
 \cite[Chap 1.1.]{kashiwara2003d}
 Sei $X$ eine $1$-Dimensionale Complexe Mannigfaltigkeit und $\cO_X$ die Garbe
 der holomorphen Funktionen auf $X$. Ein (holomorpher) \emph{differential
@@ -204,42 +164,39 @@ die $\C[t,\partial]$-Moduln. Sie werden geschrieben als $\cD-mod(\A^1)$
 \end{comment}
 
 \section{(Links) $\cD$-Moduln}
+Sei $\cD:=\cD_k$ für eines der oben genannten $k$.
 Da $\cD$ ein nichtkommutativer Ring ist, muss man vorsichtig sein und zwischen
 links unr rechts $\cD$-Moduln unterschiden. Wenn ich im folgendem von
-$\cD$-Moduln rede, werde ich mich immer, wie auch \cite[Chapter
-1.6.]{arapuraNotes}, auf links $\cD$-Moduln beziehen.
+$\cD$-Moduln rede, werde ich mich immer
+%, wie auch \cite[Chapter 1.6.]{arapuraNotes}, 
+auf links $\cD$-Moduln beziehen.
 
-\begin{exmp}[Einfachste links $\cD$-Moduln]
+\begin{exmp}[links $\cD$-Moduln]
 % Sergey-Arkhipov-MAT1191_Lecture_Notes.pdf Chapter 2.1
 \cite[Exmp 2.2]{ArkhipovDmod}
 %Sei $X=\A^1$ und $\sO_X=\C[t]$.
 \begin{enumerate}
+%
 \item $\cD$ ist ein links und rechts $\cD$-Modul
-\item $\cM=\C[t]$ durch
-\begin{itemize}
-\item $\partial(f(t))=\frac{\partial f}{\partial t}$ und
-$t\cdot f(t)=tf$
-\item oder \cite[Exmp 3.1.2]{ginzburg} $\C[t]=\cD\cdot1=\cD/\cD\cdot\partial$.
-\end{itemize}
-\item $\cM=\C[t,t^{-1}]$ mit $t\cdot t^{m}=t^{m+1}$ und
-$\partial(t^m)=mt^{m-1}$
-\end{enumerate}
-\end{exmp}
-\begin{exmp}[Weiter $\cD$-Moduln] 
-\begin{enumerate}
+%
+\item $\cM=\C[t]$ oder $\cM=\C[t,t^{-1}]$ jeweils durch $t\cdot t^{m}=t^{m+1}$
+und $\partial(t^m)=mt^{m-1}$
+%
 \item \cite[Exmp 2.2]{ArkhipovDmod}
-Führe formal, also ohne jeglichen analytischen Hintergurnd, ein Symbol
+Führe formal, also ohne analytischen Hintergurnd, ein Symbol
 $\exp(\lambda t)$ ein, mit $\partial(f(t)\exp(\lambda t))=\frac{\partial
 f}{\partial t}\exp(\lambda t)+f\lambda\exp(\lambda t)$.  So ist
 $\cM=\sO_X\exp(\lambda t)$ ein $\cD$-Modul.
+%
 \item \cite[Exmp 3.1.4]{ginzburg}
-Führe formal ein Symbol $\log(x)$ mit den Eigenschaften
-$\partial\cdot\log(x)=\frac{1}{x}$ ein. Erhalte nun das $\cD$-Modul
-$\C[x]\log(x)+\C[x,x^{-1}]$. Dieses Modul ist über $\cD$ erzeugt durch
-$\log(x)$ und man hat
+Führe formal ein Symbol $\log(t)$ mit den Eigenschaften
+$\partial\cdot\log(t)=\frac{1}{t}$ ein. Erhalte nun das $\cD$-Modul
+$\C[t]\log(t)+\C[t,t^{-1}]$. Dieses Modul ist über $\cD$ erzeugt durch
+$\log(t)$ und man hat
 \[
-\C[x]\log(x)+\C[x,x^{-1}]=\cD\cdot\log(x)=\cD\slash\cD(\partial x\partial) \,.
+\C[t]\log(t)+\C[t,t^{-1}]=\cD\cdot\log(t)=\cD\slash\cD(\partial t\partial) \,.
 \]
+%
 \end{enumerate}
 %TODO: Variable zu t machen?
 \end{exmp}
@@ -292,7 +249,7 @@ definiere darauf
 \[ \cM[x^{-1}]:=\cM\otimes_{\C\{x\}}K \]
 als die Lokalisierung von $\cM$.
 \begin{prop} \cite[Prop 4.2.1.]{sabbah_cimpa90}
-$\cM[x^{-1}]$ bekommt in natürlicher weiße eine $\cD$-Modul Struktur.
+$\cM[x^{-1}]$ erhält in natürlicher Weise eine $\cD$-Modul Struktur.
 \end{prop}
 \begin{proof} \cite[Prop 4.2.1.]{sabbah_cimpa90}
 mit:

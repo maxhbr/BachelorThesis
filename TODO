@@ -4,10 +4,6 @@ beispiele/formal_b.tex:%TODO: besserer Titel
 beispiele/formal_b.tex:  %TODO: rightarrow oder mapsto?
 beispiele/formal_b.tex:        -\partial_t(f)\cdot t^2= %TODO: wegen klammerung?
 d-modul.tex:%TODO: sabah-cimpa90.pdf  seite 3
-d-modul.tex:%%TODO: eigentlich ist \cD ja das wichtigste!
-d-modul.tex:%TODO: vlt umsortieren
-d-modul.tex:\begin{lem} %TODO: vervollständigen
-d-modul.tex:%%TODO: alle sind
 d-modul.tex:\begin{proof} TODO
 d-modul.tex:%TODO: Variable zu t machen?
 d-modul.tex:TODO: defn of Car als Charakteristische Varietät
@@ -36,6 +32,7 @@ meromZsh.tex:% TODO: \cM = \cM_K ... replace
 meromZsh.tex:%TODO: Dimension eines Meromorphen Zusammenhang
 meromZsh.tex:%TODO: \tilde cO --> \tilde \cO
 meromZsh.tex:%TODO: partial oder d
+meromZsh.tex:TODO: zeige, das der lösungsraum die eigenschaften von $\cD$-Moduln erfüllt\\
 meromZsh.tex:%TODO: korrekte benennung?
 meromZsh.tex:assoziierten Meromorphen Zusammenhang $(\cM_A,\partial_A)$ %TODO: improve notation
 meromZsh.tex:Lösungen in $\C\{t\}$. %TODO: oder \tilde\cO
