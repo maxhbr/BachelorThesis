@@ -279,17 +279,21 @@ K$ und $u\in\cM_K$ gilt.\\
 \end{align*}
 \end{proof}
 \begin{cor}
+Für $(K^r,\partial)$ ein Meromorpher Zusammenhang existiert ein $a\in M(r\times
+r,K)$, so dass $\partial=\frac{d}{dz}-A$.
+\end{cor}
+\begin{proof}
 Es sei $(K^r,\partial)$ ein Meromorpher Zusammenhang.  So ist
 $\frac{d}{dz}-\partial:K^r\rightarrow K^r$ $K$-linear, also es existiert eine
-Matrix $A\in M(r\times r,K)$ mit $\frac{d}{dz}-\partial=A$, also ist
-$\partial=\frac{d}{dz}-A$.
-\end{cor}
+Matrix $A\in M(r\times r,K)$ mit $\frac{d}{dz}-\partial=A$, also ist, wie
+behauptet, $\partial=\frac{d}{dz}-A$.
+\end{proof}
 
 %TODO: beobachtung...
 
 %TODO: differenz ist linear
 
-\begin{defn}[Transformationsformel] \cite[Chap 5.1.1]{hotta2007d}
+\begin{prop}[Transformationsformel] \cite[Chap 5.1.1]{hotta2007d}
 In der Situation
 
 \begin{center}
@@ -327,12 +331,12 @@ In der Situation
 \end{center}
 mit $\phi,\psi$ und $T$ $K$-Linear und $\partial,(\frac{d}{dz}+A)$ und
 $(\frac{d}{dz}+B)$ $\C$-Linear, gilt:\\
-Der Merom. Zush. $\frac{d}{dz}+A$ auf $K^r$ wird durch Basiswechsel $T\in
-GL(r,K)$ zu
+Der Meromorphe Zusammenhang. $\frac{d}{dz}+A$ auf $K^r$ wird durch Basiswechsel
+$T\in GL(r,K)$ zu
 \[
 \frac{d}{dz}+(T^{-1}\cdot T'+T^{-1}AT) = \frac{d}{dz}+B
 \]
-\end{defn}
+\end{prop}
 \begin{defn}[Differenziell Äquivalent]
 Man nennt $A$ und $B$ \emph{differenziell Äquivalent} ($A\sim B$) genau
 dann, wenn es ein $T\in
@@ -353,8 +357,9 @@ Durch setzten von
 als die Wirkung von $\partial$ auf das $K$-Modul $\cM\otimes_K\cN$, wird
 $(\cM\otimes_K\cN,\partial)$ zu einem Meromorphen Zusammenhang.
 \end{prop}
-
-
+\begin{proof}
+Klar
+\end{proof}
 
 \section{Newton Polygon} % ist dies eine Invariante??
 % gestohlen aus der ZulaBarbara Seite 46
@@ -727,9 +732,10 @@ Betrachte dazu die kurze Sequenz
   ;
 \end{tikzpicture}
 \end{center}
+%TODO: muss \Cful oder \Cftl flach sein???
 ist \textbf{exact}, weil $\cM\cong\myT\Big/\myT\cdot P=\coker(\_\cdot P)$.
-Weil $\Cful$ \textbf{flach} ist, da  Körper, ist auch, nach anwenden von
-$\Cful\otimes_\Cftl\_$, die Sequenz
+Weil $\Cful$ \textbf{flach} ist, da  Körper, ist auch, nach anwenden des
+exacten Funktors $\Cful\otimes_\Cftl\_$, die Sequenz
 %TODO: Funktorialität von Pull-Back? NEIN: Funktorialität von tensor
 \begin{center}
 \begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]

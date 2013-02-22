@@ -29,11 +29,11 @@ die durch das folgende Rezept entstehen.
 \begin{enumerate}
 \item Wähle zunächst ein $\phi$
 $\in\{\frac{1}{t^k},\frac{1}{t^2}+\frac{1}{t^3},\dots\}
-=\{\phi=\sum_{i\in I}\frac{1}{t^{k_i}}|I \mbox{ endlich}, k_i\in\N\}$ aus
+=\{\phi=\sum_{k\in I}\frac{1}{t^{k}}|I\subset\N\mbox{ endlich}\}$ aus
 \item und definiere dann
 $ \tilde Q(t,\partial_t):=\partial_t-\frac{d}{dt}\phi(t)$
 $\in\C[t][t^{-1}]<\partial_t>$
-\item Wir wollen aber, weil es schöner ist, ein Element in $\C[t]<\partial_t>$,
+\item Wir wollen aber ein Element in $\C[t]<\partial_t>$,
 deshalb multipliziere mit Hauptnenner und erhalte
 \[
 Q(t,\partial_t):=(\partial_t-\frac{d}{dt}\phi(t)) \cdot
@@ -65,23 +65,23 @@ warum sind diese wichtig??
 \end{comment}
 
 \paragraph{Wende das Rezept allgemein für
-$\phi=\sum_{i\in I}\frac{1}{t^{k_i}}$ an.}
+$\phi=\sum_{k\in I}\frac{1}{t^{k}}$ an.}
 So ist
 \begin{align*}
 \tilde Q(t,\partial_t) &=\partial_t-\frac{d}{dt}\phi(t) \\
-                       &=\partial_t+\sum_{i\in I} k_i\frac{1}{t^{k_i+1}}
+                       &=\partial_t+\sum_{k\in I} k\frac{1}{t^{k+1}}
                        & &\in \C[t][t^{-1}]<\partial_t>\\
-Q(t,\partial_t)        &=\partial_tt^{\max_j(k_j)+1}
-                         +\sum_{i\in I} k_i\frac{1}{t^{k_i-\max_j(k_j)}} \\
-                       &=\partial_tt^{\max_j(k_j)+1}
-                         +\sum_{i\in I} k_it^{\max_j(k_j)-k_i}
+Q(t,\partial_t)        &=\partial_tt^{\max(I)+1}
+                         +\sum_{k\in I} k\frac{1}{t^{k-\max(I)}} \\
+                       &=\partial_tt^{\max(I)+1}
+                         +\sum_{k\in I} kt^{\max(I)-k}
                        & &\in \C[t]<\partial_t>\\
 \cF_Q(z,\partial_z)    &=Q(\partial_z,-z)\\
-                       &=-z\partial_z^{\max_j(k_j)+1}
-                         +\sum_{i\in I} k_i\partial_z^{\max_j(k_j)-k_i} \\
+                       &=-z\partial_z^{\max(I)+1}
+                         +\sum_{k\in I} k\partial_z^{\max(I)-k} \\
 P_{\phi}(x,\partial_x) &=F_Q(x^{-1},-x^2\partial_x) \\
-                       &=x\partial_x(-x^2\partial_x)^{\max_j(k_j)}
-                         +\sum_{i\in I} k_i(-x^2\partial_x)^{\max_j(k_j)-k_i}
+                       &=x\partial_x(-x^2\partial_x)^{\max(I)}
+                         +\sum_{k\in I} k(-x^2\partial_x)^{\max(I)-k}
                        & &\in \C[x]<\partial_x>
 \end{align*}
 
@@ -113,16 +113,21 @@ Nun müssen wir noch $(x^2\partial_x)^{k+1}$ besser verstehen.
 %TODO: induktion
 \end{align*}
 also gilt für spezielle $k$
-\[
+\begin{equation} \label{eq:rezeptNeben1}
 (x^2\partial_x)^{k+1}=
 \begin{cases}
 2x^3\partial_x+x^{4}\partial_x^2 & \mbox{ falls } k=1\\
 5x^4\partial_x+4x^{5}\partial_x^2 +x^6\partial_x^3 & \mbox{ falls } k=2\\
 \dots
 \end{cases}
-\]
+\end{equation}
 \textbf{also für $\phi_1:=\frac{1}{x}$} ist
-$P_{\phi_1}=1-\frac{1}{x}(x^2\partial_x)^{2}=1-2x^2\partial_x-x^{3}\partial_x^2$
+\begin{align*}
+P_{\phi_1} &=1-\frac{1}{x}\underbracket{(x^2\partial_x)^{2}}\\
+           &\overbox{=}{(\ref{eq:rezeptNeben1})}1+\frac{1}{x}
+             \overbracket{(2x^3\partial_x-x^4\partial_x^2)}\\
+           &=1-2x^2\partial_x-x^{3}\partial_x^2
+\end{align*}
 \begin{figure}[H]
 \caption{Newton Polygon zu $P_{\phi_1}$}
 \begin{center}
@@ -136,8 +141,12 @@ $P_{\phi_1}=1-\frac{1}{x}(x^2\partial_x)^{2}=1-2x^2\partial_x-x^{3}\partial_x^2$
 \end{figure}
 
 \textbf{also für $\phi_2:=\frac{1}{x^2}$} ist
-$P_{\phi_2}=2+\frac{1}{x}(x^2\partial_x)^{3}
-=2+5x^3\partial_x+4x^{4}\partial_x^2+x^5\partial_x^3$
+\begin{align*}
+P_{\phi_2} &=2+\frac{1}{x}\underbracket{(x^2\partial_x)^{3}}\\
+           &\overbox{=}{(\ref{eq:rezeptNeben1})}2+\frac{1}{x}
+             \overbracket{(5x^4\partial_x+4x^5\partial_x^2+x^6\partial_x^3)}\\
+           &=2+5x^3\partial_x+4x^{4}\partial_x^2+x^5\partial_x^3
+\end{align*}
 \begin{figure}[H]
 \caption{Newton Polygon zu $P_{\phi_2}$}
 \begin{center}
