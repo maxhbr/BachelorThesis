@@ -11,8 +11,6 @@ d-modul.tex:(linear differential system) %TODO: defn
 d-modul.tex:%TODO: was heißt holonom (holonomic)
 elem-mer-zsh.tex:%TODO: auch nicht formal
 elem-mer-zsh.tex:%TODO: verwendet hier schon das klassische Levelt-Turittin
-exmp.tex:-\partial_z(f)\cdot z^2= %TODO: wegen klammerung?
-exmp.tex:%TODO: induktion
 grundlagen.tex:%TODO: Pfeile
 grundlagen.tex:  %TODO: Pfeile
 grundlagen.tex:%TODO: tensorprodukt / faserprodukt zum basiswechsel
@@ -24,7 +22,7 @@ lemma2-4.tex:%TODO: this
 levelt-turrittin.tex:%TODO: all
 main/main.ps:w FJ(TODO,)30 b(\(3.)i(T)-8 b(re\033en\))p 3633 5576
 Übereinstimmungen in Binärdatei main/main.dvi.
-main.tex:  ,fontsize=12pt % TODO: to small?
+main.tex:  ,fontsize=12pt % TODO
 main.tex:%TODO: replace def --> newcommand
 main.tex:%TODO: set titel variable??
 meromZsh.tex:% TODO; wie darf ich einen Meromorphen verändern, (das P verändern) ohne das
@@ -72,6 +70,8 @@ myNewtonPlot.sty:            %TODO
 myNewtonPlot.sty:            %TODO
 myNewtonPoly.sty:          %TODO
 myNewtonPoly.sty:          %TODO
+rezept.tex:-\partial_z(f)\cdot z^2= %TODO: wegen klammerung?
+rezept.tex:%TODO: induktion
 titel.tex:%TODO; titelpage bitte nicht seitlich versetzt
 trash/meromZsh.tex:  %TODO: auch nicht formal
 workflow:  grep -r --exclude='TODO' "TODO" * > TODO

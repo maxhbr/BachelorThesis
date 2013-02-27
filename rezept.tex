@@ -1,5 +1,5 @@
 %!TeX root = main.tex
-\chapter{Beispiel}
+\chapter{DIE Klasse der Fourier-Transformationen}
 
 \section{Rezept} \label{sec:allgemeinProblem}
 
@@ -30,16 +30,17 @@ Hier wollen wir nun eine Spezielle Klasse von Meromorphen Zusammenhängen, die
 die durch das folgende Rezept entstehen.
 \begin{enumerate}
 \item Wähle zunächst ein $\phi$
-$\in\{\frac{1}{t^k},\frac{1}{t^2}+\frac{1}{t^3},\dots\}
-=\{\phi=\sum_{k\in I}\frac{1}{t^{k}}|I\subset\N\mbox{ endlich}\}$ aus
+$\in=
+  \{\phi=\sum_{k\in I}\frac{a_k}{t^{k}}|I\subset\N\mbox{ endlich},a_k\in \C\}$ 
+aus 
 \item und definiere dann
 $ \tilde Q(t,\partial_t):=\partial_t-\frac{d}{dt}\phi(t)$
-$\in\C[t][t^{-1}]<\partial_t>$
+$\in\C[t][t^{-1}]<\partial_t>$.
 \item Wir wollen aber ein Element in $\C[t]<\partial_t>$,
 deshalb multipliziere mit Hauptnenner und erhalte
 \[
 Q(t,\partial_t):=(\partial_t-\frac{d}{dt}\phi(t)) \cdot
-\mbox{Hauptnenner }\in\C[t]<\partial_t>
+\underset{\in\C[t]}{\underbrace{\mbox{Hauptnenner }}}\in\C[t]<\partial_t>
 \]
 Dies ändert den Assozierten Meromorphen Zusammenhang nicht.
 \begin{comment}
@@ -47,8 +48,7 @@ Lemma?
 \end{comment}
 \item Fouriertransformiere $Q$ und erhalte
 $\cF_Q(z,\partial_z)=Q(\partial_z,-z)$ in $\C[z]<\partial_z>$
-\item Wende den Übergang $x\rightsquigarrow z^{-1}$ an.
-
+\item Wende den Übergang $x\rightsquigarrow z^{-1}$ an.\\
 Was passiert mit der Ableitung $\partial_x$? Es gilt
 \[
 \partial_x (f(\frac{1}{x}))=
@@ -58,8 +58,9 @@ Was passiert mit der Ableitung $\partial_x$? Es gilt
 \]
 also $ \partial_x\rightsquigarrow-z^2\partial_z $.
 \[
-P(x,\partial_x):=F_Q(x^{-1},-x^2\partial_x) \in \C[t]<\partial_t>
+P_\phi(x,\partial_x):=F_Q(x^{-1},-x^2\partial_x) \in \C[t]<\partial_t>
 \]
+\item Erhalte den zu $P_\phi$ assoziierten Meromorphen Zusammenhang $\cM_\phi$.
 \end{enumerate}
 
 \begin{comment}
@@ -67,23 +68,23 @@ warum sind diese wichtig??
 \end{comment}
 
 \paragraph{Wende das Rezept allgemein für
-$\phi=\sum_{k\in I}\frac{1}{t^{k}}$ an.}
+$\phi=\sum_{k\in I}\frac{a_k}{t^{k}}$ an.}
 So ist
 \begin{align*}
 \tilde Q(t,\partial_t) &=\partial_t-\frac{d}{dt}\phi(t) \\
-                       &=\partial_t+\sum_{k\in I} k\frac{1}{t^{k+1}}
+                       &=\partial_t+\sum_{k\in I} k\frac{a_k}{t^{k+1}}
                        & &\in \C[t][t^{-1}]<\partial_t>\\
 Q(t,\partial_t)        &=\partial_tt^{\max(I)+1}
-                         +\sum_{k\in I} k\frac{1}{t^{k-\max(I)}} \\
+                         +\sum_{k\in I} k\frac{a_k}{t^{k-\max(I)}} \\
                        &=\partial_tt^{\max(I)+1}
-                         +\sum_{k\in I} kt^{\max(I)-k}
+                         +\sum_{k\in I}k a_k t^{\max(I)-k}
                        & &\in \C[t]<\partial_t>\\
 \cF_Q(z,\partial_z)    &=Q(\partial_z,-z)\\
                        &=-z\partial_z^{\max(I)+1}
-                         +\sum_{k\in I} k\partial_z^{\max(I)-k} \\
+                         +\sum_{k\in I}k a_k\partial_z^{\max(I)-k} \\
 P_{\phi}(x,\partial_x) &=F_Q(x^{-1},-x^2\partial_x) \\
                        &=x\partial_x(-x^2\partial_x)^{\max(I)}
-                         +\sum_{k\in I} k(-x^2\partial_x)^{\max(I)-k}
+                         +\sum_{k\in I}k a_k(-x^2\partial_x)^{\max(I)-k}
                        & &\in \C[x]<\partial_x>
 \end{align*}
 
@@ -123,12 +124,16 @@ also gilt für spezielle $k$
 \dots
 \end{cases}
 \end{equation}
-\textbf{also für $\phi_1:=\frac{1}{x}$} ist
+\textbf{also für $\phi_1:=\frac{a}{x}$} ist
 \begin{align*}
-P_{\phi_1} &=1-\frac{1}{x}\underbracket{(x^2\partial_x)^{2}}\\
-           &\overbox{=}{(\ref{eq:rezeptNeben1})}1+\frac{1}{x}
+P_{\phi_1} &=1-a\frac{1}{x}\underbracket{(x^2\partial_x)^{2}}\\
+           &\overbox{=}{(\ref{eq:rezeptNeben1})}1+a\frac{1}{x}
              \overbracket{(2x^3\partial_x-x^4\partial_x^2)}\\
-           &=1-2x^2\partial_x-x^{3}\partial_x^2
+           &=1-2x^2\partial_x-x^{3}\partial_x^2\\
+P_{\phi_1} &=1-ax\underbracket{\partial_xx^2}\partial_x\\
+           &\overbox{=}{(\ref{eq:rezeptNeben1})}
+             1-ax\overbracket{(2x + x^2\partial_x)}\partial_x\\
+           &=1-2ax^2\partial_x - ax^3\partial_x^2\\
 \end{align*}
 \begin{figure}[H]
 \caption{Newton Polygon zu $P_{\phi_1}$}
@@ -161,25 +166,26 @@ P_{\phi_2} &=2+\frac{1}{x}\underbracket{(x^2\partial_x)^{3}}\\
 \end{center}
 \end{figure}
 
-\textbf{also für
-$\phi_3:=\frac{1}{x}+\frac{1}{x^2}$} ist
+\textbf{also für $\phi_3:=\frac{1}{x}+\frac{1}{x^2}$} ist
 \begin{align*}
 P_{\phi_3} &=x\partial_x(-x^2\partial_x)^{\max_j(k_j)}
-    +\sum_{i\in I} k_i(-x^2\partial_x)^{\max_j(k_j)-k_i}\\
-  &=x\partial_x\underbracket{(x^2\partial_x)^{2}}
-    +1(-x^2\partial_x)^{1}+2(-x^2\partial_x)^{0}\\
-  &=x\partial_x \overbracket{(2x^3\partial_x+x^4\partial_x^2)}
-    -x^2\partial_x+2\\
-  &=2x\underbracket{\partial_xx^3}\partial_x
-    +x\underbracket{\partial_xx^4}\partial_x^2
-    -x^2\partial_x+2\\
-  &=\underbracket{2x\overbracket{(3x^2+x^3\partial_x)}\partial_x}
-    +\underbracket{x\overbracket{(4x^3+x^4\partial_x)}\partial_x^2}
-    -x^2\partial_x+2\\
-  &=\overbracket{6x^3\partial_x+2x^4\partial_x^2}
-    +\overbracket{4x^4\partial_x^2+x^5\partial_x^3}
-    -x^2\partial_x+2\\
-  &= x^5\partial_x^3+6x^4\partial_x^2+(6x^3-x^2)\partial_x+2
+             +\sum_{i\in I} k_i(-x^2\partial_x)^{\max_j(k_j)-k_i}\\
+           &=x\partial_x\underbracket{(x^2\partial_x)^{2}}
+             +1(-x^2\partial_x)^{1}+2(-x^2\partial_x)^{0}\\
+           &\overbox{=}{(\ref{eq:rezeptNeben1})}
+             x\partial_x \overbracket{(2x^3\partial_x+x^4\partial_x^2)}
+             -x^2\partial_x+2\\
+           &=2x\underbracket{\partial_xx^3}\partial_x
+             +x\underbracket{\partial_xx^4}\partial_x^2
+             -x^2\partial_x+2\\
+           &\overbox{=}{(\ref{eq:kommutator1})}
+             \underbracket{2x\overbracket{(3x^2+x^3\partial_x)}\partial_x}
+             +\underbracket{x\overbracket{(4x^3+x^4\partial_x)}\partial_x^2}
+             -x^2\partial_x+2\\
+           &=\overbracket{6x^3\partial_x+2x^4\partial_x^2}
+             +\overbracket{4x^4\partial_x^2+x^5\partial_x^3}
+             -x^2\partial_x+2\\
+           &= x^5\partial_x^3+6x^4\partial_x^2+(6x^3-x^2)\partial_x+2
 \end{align*}
 \begin{figure}[H]
 \caption{Newton Polygon zu $P_{\phi_3}$}
@@ -193,26 +199,27 @@ P_{\phi_3} &=x\partial_x(-x^2\partial_x)^{\max_j(k_j)}
 \end{center}
 \end{figure}
 
-\textbf{also für
-$\phi_4:=\frac{1}{x^2}+\frac{1}{x^3}$} ist
+\textbf{also für $\phi_4:=\frac{1}{x^2}+\frac{1}{x^3}$} ist
 \begin{align*}
 P_{\phi_4} &=x\partial_x(-x^2\partial_x)^{\max_j(k_j)}
              +\sum_{i\in I} k_i(-x^2\partial_x)^{\max_j(k_j)-k_i}\\
            &=-x\partial_x\underbracket{(x^2\partial_x)^{3}}
              -2x^2\partial_x +3\\
-           &=-x\partial_x\overbracket{(5x^4\partial_x+4x^{5}\partial_x^2
+           &\overbox{=}{(\ref{eq:rezeptNeben1})}
+             -x\partial_x\overbracket{(5x^4\partial_x+4x^{5}\partial_x^2
              +x^6\partial_x^3)}-2x^2\partial_x +3\\
            &=-5x\underbracket{\partial_xx^4}\partial_x
              -4x\underbracket{\partial_xx^{5}}\partial_x^2
              -x\underbracket{\partial_xx^6}\partial_x^3
              -2x^2\partial_x +3\\
-           &=-5x\overbracket{(4x^3+x^4\partial_x)}\partial_x
-             -4x\overbracket{(5x^4+x^{5}\partial_x)}\partial_x^2
-             -x\overbracket{(6x^5+x^6\partial_x)}\partial_x^3
+           &\overbox{=}{(\ref{eq:kommutator1})}
+             \underbracket{-5x\overbracket{(4x^3+x^4\partial_x)}\partial_x}
+             \underbracket{-4x\overbracket{(5x^4+x^{5}\partial_x)}\partial_x^2}
+             \underbracket{-x\overbracket{(6x^5+x^6\partial_x)}\partial_x^3}
              -2x^2\partial_x+3\\
-           &=-20x^4\partial_x-5x^5\partial_x^2
-             -20x^5\partial_x^2-4x^{6}\partial_x^3
-             -6x^6\partial_x^3-x^7\partial_x^4
+           &=\overbracket{-20x^4\partial_x-5x^5\partial_x^2}
+             \overbracket{-20x^5\partial_x^2-4x^{6}\partial_x^3}
+             \overbracket{-6x^6\partial_x^3-x^7\partial_x^4}
              -2x^2\partial_x +3\\
            &=-x^7\partial_x^4-10x^6\partial_x^3-25x^5\partial_x^2
              -(20x^4+2x^2)\partial_x+3\\

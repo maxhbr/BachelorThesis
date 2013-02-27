@@ -1,5 +1,6 @@
+\xdef\myDevelopVariable{1}
 \documentclass[ngerman
-  ,fontsize=12pt % TODO: to small?
+  ,fontsize=12pt % TODO
   ,numbers=noenddot % obsolete
   ,headsepline
   ,parskip=half*
@@ -17,8 +18,7 @@
 %\usepackage[ansinew]{inputenc}
 \usepackage{lmodern} %Type1-Schriftart für nicht-englische Texte
 %\linespread{1.5}
-
-\xdef\myDevelopVariable{1}
+\usepackage[scale=0.75]{geometry}
 
 %\usepackage{python} %!!!
 
@@ -326,7 +326,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \frontmatter
 
+\newgeometry{left=5cm,right=5cm}
 \myinput{titel.tex}
+\restoregeometry
 
 \tableofcontents{}
 
@@ -345,7 +347,7 @@
 
 \myinput{levelt-turrittin.tex}
 
-\myinput{exmp.tex}
+\myinput{rezept.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \appendix
