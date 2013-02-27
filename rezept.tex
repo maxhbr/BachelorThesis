@@ -1,7 +1,7 @@
 %!TeX root = main.tex
 \chapter{DIE Klasse der Fourier-Transformationen}
 
-\section{Rezept} \label{sec:allgemeinProblem}
+\section{Rezept für allgemeine $\phi$} \label{sec:allgemeinProblem}
 
 \begin{comment}
 siehe: \cite[5.b]{sabbah_Fourier-local}
@@ -124,17 +124,16 @@ also gilt für spezielle $k$
 \dots
 \end{cases}
 \end{equation}
-\textbf{also für $\phi_1:=\frac{a}{x}$} ist
+
+\section{Angewendet für $\phi_1:=\frac{a}{x}$}
+Berechne zunächst $\cM_{\phi_1}$
 \begin{align*}
-P_{\phi_1} &=1-a\frac{1}{x}\underbracket{(x^2\partial_x)^{2}}\\
-           &\overbox{=}{(\ref{eq:rezeptNeben1})}1+a\frac{1}{x}
-             \overbracket{(2x^3\partial_x-x^4\partial_x^2)}\\
-           &=1-2x^2\partial_x-x^{3}\partial_x^2\\
-P_{\phi_1} &=1-ax\underbracket{\partial_xx^2}\partial_x\\
-           &\overbox{=}{(\ref{eq:rezeptNeben1})}
-             1-ax\overbracket{(2x + x^2\partial_x)}\partial_x\\
-           &=1-2ax^2\partial_x - ax^3\partial_x^2\\
+P_{\phi_1} &=a-x\underbracket{\partial_xx^2}\partial_x\\
+           &\overbox{=}{(\ref{eq:kommutator1})}
+             a-x\overbracket{(2x + x^2\partial_x)}\partial_x\\
+           &=a-2x^2\partial_x - x^3\partial_x^2\\
 \end{align*}
+Finde nun das Newton-Polygon mit den Slopes $\cP(\cM_{\phi_1})$
 \begin{figure}[H]
 \caption{Newton Polygon zu $P_{\phi_1}$}
 \begin{center}
@@ -147,12 +146,23 @@ P_{\phi_1} &=1-ax\underbracket{\partial_xx^2}\partial_x\\
 \end{center}
 \end{figure}
 
-\textbf{also für $\phi_2:=\frac{1}{x^2}$} ist
+\section{Angewendet für $\phi_2:=\frac{a}{x^2}$}
+\textbf{also für $\phi_2:=\frac{a}{x^2}$} ist
 \begin{align*}
 P_{\phi_2} &=2+\frac{1}{x}\underbracket{(x^2\partial_x)^{3}}\\
            &\overbox{=}{(\ref{eq:rezeptNeben1})}2+\frac{1}{x}
              \overbracket{(5x^4\partial_x+4x^5\partial_x^2+x^6\partial_x^3)}\\
-           &=2+5x^3\partial_x+4x^{4}\partial_x^2+x^5\partial_x^3
+           &=2+5x^3\partial_x+4x^{4}\partial_x^2+x^5\partial_x^3\\
+%TODO: BESSER:???
+P_{\phi_2} &=2a+x\partial_x\underbracket{(-x^2\partial_x)^{2}}\\
+           &=2a +x\partial_x \overbracket{(2x^3\partial_x+x^4\partial_x^2)} \\
+           &=2a 
+             +2x\underbracket{\partial_xx^3}\partial_x
+             +x\underbracket{\partial_xx^4}\partial_x^2 \\
+           &=2a 
+             +2x\overbracket{(3x^2+x^3\partial_x)}\partial_x
+             +x\overbracket{(4x^3+x^4\partial_x)}\partial_x^2 \\
+           &=2a+5x^3\partial_x+4x^{4}\partial_x^2+x^5\partial_x^3
 \end{align*}
 \begin{figure}[H]
 \caption{Newton Polygon zu $P_{\phi_2}$}
@@ -166,6 +176,7 @@ P_{\phi_2} &=2+\frac{1}{x}\underbracket{(x^2\partial_x)^{3}}\\
 \end{center}
 \end{figure}
 
+\section{Angewendet für $\phi_3:=\frac{1}{x}+\frac{1}{x^2}$}
 \textbf{also für $\phi_3:=\frac{1}{x}+\frac{1}{x^2}$} ist
 \begin{align*}
 P_{\phi_3} &=x\partial_x(-x^2\partial_x)^{\max_j(k_j)}
@@ -199,6 +210,7 @@ P_{\phi_3} &=x\partial_x(-x^2\partial_x)^{\max_j(k_j)}
 \end{center}
 \end{figure}
 
+\section{Angewendet für $\phi_4:=\frac{1}{x^2}+\frac{1}{x^3}$}
 \textbf{also für $\phi_4:=\frac{1}{x^2}+\frac{1}{x^3}$} ist
 \begin{align*}
 P_{\phi_4} &=x\partial_x(-x^2\partial_x)^{\max_j(k_j)}
