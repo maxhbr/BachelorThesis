@@ -39,6 +39,11 @@
 \usepackage{graphicx}
 
 \usepackage{listings}
+\lstset{
+  literate={ö}{{\"o}}1
+           {ä}{{\"a}}1
+           {ü}{{\"u}}1
+}
 
 \allowdisplaybreaks
 
@@ -333,6 +338,12 @@
 \tableofcontents{}
 
 %\myinput{einleitung.tex}
+
+\begin{comment}
+\paragraph{Plan}:
+
+\lstinputlisting{../wiki/plan.wiki}
+\end{comment}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \mainmatter
