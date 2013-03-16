@@ -38,11 +38,13 @@ diesen Ring auch als
 $k=K\bydef\C\{x\}[x^{-1}]$
 \item $\cD_{\hat K}:=\Cfxl<\partial_x>$ falls $k=\hat
 K\bydef\Cfx[x^{-1}]$
+\footnote{Wird mit $\hat\cD_{\hat K}$ bezeichnet, in \cite{ZulaBarbara}.}.
 \end{itemize}
 \end{defn}
 \begin{bem}
 \begin{itemize}
-\item Es gilt $\cD[x^{-1}]=\cD_K$ und $\hat \cD[x^{-1}]=\cD_{\hat K}$.
+\item Es gilt $\cD[x^{-1}]=\cD_K$ und $\hat \cD[x^{-1}]=\cD_{\hat
+K}$
 \item Offensichtlich erhält $\cD_k$ in kanonischer weiße eine Ringstruktur,
 dies ist in \cite[Kapittel 2 Section 1]{ZulaBarbara} genauer ausgeführt.
 \item $\cD_k$ ist offensichtlich nichtkommutativ.
@@ -147,19 +149,19 @@ $\Theta_X$ ein links $\cO_X$-Untermodul, aber kein rechts $\cO_X$-Untermodul ist
 
 \begin{prop}
 \cite[Exmp 1.1]{ArkhipovDmod}
-Sei $X=\A^1=\C$, $\cO_X=\C[t]$ und $\Theta_X=\C[t]\partial$. Wobei $\partial$
-als $\partial(t^n)=nt^{n-1}$ wirkt. Dann sind die Differentialoperatoren 
+Sei $X=\A^1=\C$, $\cO_X=\C[t]$ und $\Theta_X=\C[x]\partial_x$. Wobei $\partial_x$
+als $\partial_x(x^n)=nx^{n-1}$ wirkt. Dann sind die Differentialoperatoren 
 \begin{align*}
-\cD_X &= \C[t,\partial], & \mbox{mit} & & \partial t-t\partial & =1.
+\cD_X &= \C[x,\partial_x], & \mbox{mit} & & \partial_x x-x\partial_x & =1.
 \end{align*}
 Somit stimmt die Alternative Definition schon mal mit der Einfachen überein.
 \end{prop}
 
 \begin{comment}
 \begin{defn} \cite[Defn 2.1]{ArkhipovDmod}
-Sei $X=\A^1$, $\cO_X=\C[t]$ und $\cD_X=[t,\partial]$ mit der Relation
-$[\partial,t]=1$. Dann definieren wir die links $\cD$-Moduln über $\A^1$ als
-die $\C[t,\partial]$-Moduln. Sie werden geschrieben als $\cD-mod(\A^1)$
+Sei $X=\A^1$, $\cO_X=\C[x]$ und $\cD_X=[x,\partial_x]$ mit der Relation
+$[\partial_x,x]=1$. Dann definieren wir die links $\cD$-Moduln über $\A^1$ als
+die $\C[x,\partial_x]$-Moduln. Sie werden geschrieben als $\cD-mod(\A^1)$
 \end{defn}
 \end{comment}
 
@@ -179,22 +181,22 @@ auf links $\cD$-Moduln beziehen.
 %
 \item $\cD$ ist ein links und rechts $\cD$-Modul
 %
-\item $\cM=\C[t]$ oder $\cM=\C[t,t^{-1}]$ jeweils durch $t\cdot t^{m}=t^{m+1}$
-und $\partial(t^m)=mt^{m-1}$
+\item $\cM=\C[x]$ oder $\cM=\C[x,x^{-1}]$ jeweils durch $x\cdot x^{m}=x^{m+1}$
+und $\partial(x^m)=mx^{m-1}$
 %
 \item \cite[Exmp 2.2]{ArkhipovDmod}
 Führe formal, also ohne analytischen Hintergurnd, ein Symbol
-$\exp(\lambda t)$ ein, mit $\partial(f(t)\exp(\lambda t))=\frac{\partial
-f}{\partial t}\exp(\lambda t)+f\lambda\exp(\lambda t)$.  So ist
-$\cM=\sO_X\exp(\lambda t)$ ein $\cD$-Modul.
+$\exp(\lambda x)$ ein, mit $\partial(f(x)\exp(\lambda x))=\frac{\partial
+f}{\partial x}\exp(\lambda x)+f\lambda\exp(\lambda x)$.  So ist
+$\cM=\sO_X\exp(\lambda x)$ ein $\cD$-Modul.
 %
 \item \cite[Exmp 3.1.4]{ginzburg}
-Führe formal ein Symbol $\log(t)$ mit den Eigenschaften
-$\partial\cdot\log(t)=\frac{1}{t}$ ein. Erhalte nun das $\cD$-Modul
-$\C[t]\log(t)+\C[t,t^{-1}]$. Dieses Modul ist über $\cD$ erzeugt durch
-$\log(t)$ und man hat
+Führe formal ein Symbol $\log(x)$ mit den Eigenschaften
+$\partial_x\log(x)=\frac{1}{x}$ ein. Erhalte nun das $\cD$-Modul
+$\C[x]\log(x)+\C[x,x^{-1}]$. Dieses Modul ist über $\cD$ erzeugt durch
+$\log(x)$ und man hat
 \[
-\C[t]\log(t)+\C[t,t^{-1}]=\cD\cdot\log(t)=\cD\slash\cD(\partial t\partial) \,.
+\C[x]\log(x)+\C[x,x^{-1}]=\cD\cdot\log(x)=\cD\slash\cD(\partial_x x\partial_x) \,.
 \]
 %
 \end{enumerate}

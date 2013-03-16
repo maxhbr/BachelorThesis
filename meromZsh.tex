@@ -2,8 +2,8 @@
 % TODO; wie darf ich einen Meromorphen verändern, (das P verändern) ohne das
 % sich effektiv was ändert?
 % TODO: \cM = \cM_K ... replace
-%TODO: Dimension eines Meromorphen Zusammenhang
-\chapter{Der Meromorphe Zusammenhang}
+% TODO: Dimension eines Meromorphen Zusammenhang
+\chapter{Meromorphe Zusammenhänge}
 \begin{comment}
 Alle MeromZsh sind $\cD$-Moduln aber nicht andersherum?
 \end{comment}
@@ -33,7 +33,7 @@ auf einer Umgebung um die $0$, erfüllt.
 
 \begin{comment}
 TODO: zeige, das der lösungsraum die eigenschaften von $\cD$-Moduln erfüllt\\
-siehe "alternativer Zugang"
+siehe alternativer Zugang
 \end{comment}
 
 Nun wollen wir dieses Klassische Gebilde nun in die moderne Sprache der
@@ -47,18 +47,13 @@ $(\cM_K,\partial)$ und besteht aus folgenden Daten:
 \begin{itemize}
 \item $\cM_K$, ein endlich dimensionaler $K$-Vektor Raum
 \item einer $\C$-linearen Abbildung $\partial:\cM_K\rightarrow \cM_K$,
-genannt \emph{Derivation} oder \emph{Zusammenhvolksumfrageang}, welche für alle $f\in K$
-und $u\in \cM_K$ die
-\emph{Leibnitzregel}
+genannt \emph{Derivation} oder \emph{Zusammenhang}, welche für alle $f\in K$
+und $u\in \cM_K$ die \emph{Leibnitzregel}
 \begin{equation}\label{eq:Leibnitzregel}
-\partial(fu)=f'u+f\partial u
+\partial(fu)=f'u+f\partial u %TODO: hier klammern um das letzte u ?
 \end{equation}
 erfüllen soll.
 \end{itemize}
-%Falls $k=K=\C(\{x\})$ reden wir von einem \emph{(konvergentem) Meromorphen
-%Zusammenhang} und falls $k=\hat K=\Cful$ reden wir von einem \emph{formalen
-%Meromorphen Zusammenhang}.
-%TODO: korrekte benennung?
 \end{defn}
 
 \begin{defn}
@@ -71,10 +66,9 @@ wir auch $\phi:(\cM_K,\partial_\cM)\rightarrow(\cN_K,\partial_\cN)$.
 
 \begin{bem}
 \begin{enumerate}
-\item Später wird man auf die Angabe von $\partial$ verichten und einfach
+\item Später wird man auf die Angabe von $\partial$ verzichten und einfach
 $\cM_K$ als den Meromorphen Zusammenhang bezeichnen, auch wird manchmal auf die
 Angabe von $K$ verzichtet.
-%\item Wir betrachten hier Meromorphe Zusammenhänge an $x=0$.
 \item \cite[Rem 5.1.2.]{hotta2007d}
 Die Bedingung (\ref{eq:Leibnitzregel}) ist zur schwächeren Bedingung
 \[
@@ -153,7 +147,7 @@ $\C\{x\}$-module and let $\cM[x^{-1}]$ be the localized module.
 \cite[Satz 4.8]{ZulaBarbara}
 Sei $\cM_K$ ein Meromorpher Zusammenhang. Es Existiert ein Element
 $m\in\cM_K$ und eine ganze Zahl $d$ so dass
-$m,\partial_tm,\dots,\partial_t^{d-1}m$ eine $K$-Basis von $\cM_K$ ist.
+$m,\partial_xm,\dots,\partial_x^{d-1}m$ eine $K$-Basis von $\cM_K$ ist.
 \end{lem}
 \begin{proof}
 \cite[Satz 4.8]{ZulaBarbara}
@@ -280,14 +274,14 @@ K$ und $u\in\cM_K$ gilt.\\
 \end{align*}
 \end{proof}
 \begin{cor}
-Für $(K^r,\partial)$ ein Meromorpher Zusammenhang existiert ein $a\in M(r\times
-r,K)$, so dass $\partial=\frac{d}{dz}-A$.
+Für $(K^r,\partial)$ ein Meromorpher Zusammenhang existiert ein $A\in M(r\times
+r,K)$, so dass $\partial=\frac{d}{dx}-A$.
 \end{cor}
 \begin{proof}
 Es sei $(K^r,\partial)$ ein Meromorpher Zusammenhang.  So ist
-$\frac{d}{dz}-\partial:K^r\rightarrow K^r$ $K$-linear, also es existiert eine
-Matrix $A\in M(r\times r,K)$ mit $\frac{d}{dz}-\partial=A$, also ist, wie
-behauptet, $\partial=\frac{d}{dz}-A$.
+$\frac{d}{dx}-\partial:K^r\rightarrow K^r$ $K$-linear, also es existiert eine
+Matrix $A\in M(r\times r,K)$ mit $\frac{d}{dx}-\partial=A$, also ist, wie
+behauptet, $\partial=\frac{d}{dx}-A$.
 \end{proof}
 
 %TODO: beobachtung...
@@ -330,12 +324,12 @@ In der Situation
 ;
 \end{tikzpicture}
 \end{center}
-mit $\phi,\psi$ und $T$ $K$-Linear und $\partial,(\frac{d}{dz}+A)$ und
-$(\frac{d}{dz}+B)$ $\C$-Linear, gilt:\\
-Der Meromorphe Zusammenhang. $\frac{d}{dz}+A$ auf $K^r$ wird durch Basiswechsel
+mit $\phi,\psi$ und $T$ $K$-Linear und $\partial,(\frac{d}{dx}+A)$ und
+$(\frac{d}{dx}+B)$ $\C$-Linear, gilt:\\
+Der Meromorphe Zusammenhang. $\frac{d}{dx}+A$ auf $K^r$ wird durch Basiswechsel
 $T\in GL(r,K)$ zu
 \[
-\frac{d}{dz}+(T^{-1}\cdot T'+T^{-1}AT) = \frac{d}{dz}+B
+\frac{d}{dx}+(T^{-1}\cdot T'+T^{-1}AT) = \frac{d}{dx}+B
 \]
 \end{prop}
 \begin{defn}[Differenziell Äquivalent]
@@ -343,6 +337,9 @@ Man nennt $A$ und $B$ \emph{differenziell Äquivalent} ($A\sim B$) genau
 dann, wenn es ein $T\in
 GL(r,K)$ gibt, mit $B=T^{-1}\cdot T'+T^{-1}AT$.
 \end{defn}
+\begin{proof}
+TODO
+\end{proof}
 
 \begin{comment}
 $1=TT^{-1}$ $\rightsquigarrow$ $T'T^{-1}+T(T^{-1})'=0$\\
@@ -368,10 +365,13 @@ Klar
 Quelle: sabba?\\
 sabbah mach alles formal, barbara mach alles konvergent
 \end{comment}
-Jedes $P\in \cD$ lässt sich eindeutig als
-\[ P=\sum^{n}_{k=0}{\sum^{\infty}_{l=-N}{\alpha_{kl}t^l\partial_t^k}} \]
-mit $\alpha_{kl}\in\C$ schreiben. Betrachte das zu $P$ dazugehörige
-\[ H(P):=\underset{k,l\mbox{ mit }\alpha_{kl}\neq0}{\bigcup}\Big( (k,l-k) +
+Jedes $P\in \cD_{\hat K}$, also insbesondere auch jedes $P\in\cD_K$, lässt sich
+eindeutig als
+\[
+P=\sum^{n}_{k=0}a_k\partial_x^k}
+=\sum^{n}_{k=0}\big(\sum^{\infty}_{l=-N}{\alpha_{kl}x^l\big)\partial_x^k} \]
+mit $\alpha_{ml}\in\C$ schreiben. Betrachte das zu $P$ dazugehörige
+\[ H(P):=\underset{m,l\mbox{ mit }\alpha_{ml}\neq0}{\bigcup}\Big( (m,l-m) +
 \R_{\leq 0}\times \R_{\geq 0} \Big) \subset \R^2 \,. \]
 \begin{comment}
 Bei Sabbah: $H\subset \N\times\Z$ und dann konvexe Hülle davon in $\R^2$
@@ -387,22 +387,23 @@ Die Menge $\slopes(P)$ sind die nicht-vertikalen Steigungen von $N(P)$, die
 sich echt rechts von $\{0\}\times\R$ befinden.\\ % der $y$-Achse
 %TODO: bessere formulierung
 \begin{itemize}
-\item P heißt \emph{regulär} (oder \emph{regulär singulär}) $:\Leftrightarrow$
-$\slopes(P)=\{0\}$, sonst \emph{irregulär singulär}.
-\item Schreibe $\cP(\cM_K)$ für die Menge der zu $\cM_K$ gehörigen slopes.
-%TODO: wie sind die genau definiert? invariant?
-\item Ein meromorpher Zusammenhang $\cM_K$ heißt regulär singulär, falls es
-ein regulär singuläres $P$ gibt, mit $\cM_K\cong\cD/\cD\cdot P$
+\item Schreibe $\cP(\cM)$ für die Menge der zu $\cM$ gehörigen slopes.
+\item P heißt \emph{regulär} oder \emph{regulär singulär} $:\Leftrightarrow$
+$\slopes(P)=\{0\}$ oder $\deg P=0$, sonst \emph{irregulär singulär}.
+\item Ein meromorpher Zusammenhang $\cM_{\hat K}$ (bzw. $\cM_K$) heißt regulär
+singulär, falls es ein regulär singuläres $P\in \cD_{\hat K}$ (bzw. $P\in
+\cD_K$) gibt, mit $\cM_{\hat K}\cong\cD_{\hat K}/\cD_{\hat K}\cdot P$ (bzw.
+$\cM_K\cong\cD_K/\cD_K\cdot P$).
 \end{itemize}
 \end{defn}
 
 \begin{exmp} \label{exmp:Newton-Polygon}
 \begin{enumerate}
 \item Ein besonders einfaches Beispiel ist
-$P_1=t^{\textcolor{red}1}\partial_t^{\textcolor{blue}2}$.  Es ist leicht
+$P_1=x^{\textcolor{red}1}\partial_x^{\textcolor{blue}2}$.  Es ist leicht
 abzulesen, dass
 \begin{align*}
-\textcolor{blue}k &= \textcolor{blue}2 &
+\textcolor{blue}m &= \textcolor{blue}2 &
 \textcolor{red}l  &= \textcolor{red}1
 \end{align*}
 so dass
@@ -414,7 +415,7 @@ In Abbildung \ref{fig:Newton-Polygon1} ist $H(P_1)$ (blau) sowie das Newton
 Polygon eingezeichnet. Offensichtlich ist $\slopes(P_1)=\{0\}$ und damit ist
 $P_1$ regulär singulär.
 \item \cite[Bsp 5.3. 2.]{ZulaBarbara}
-Sei $P_2=t^4(t+1)\partial_t^4+t\partial_t^2+\frac{1}{t}\partial_t+1$ so kann
+Sei $P_2=x^4(x+1)\partial_x^4+x\partial_x^2+\frac{1}{x}\partial_x+1$ so kann
 man das entsprechende Newton Polygon konstruieren.
 Das Newton Polygon wurde in Abbildung \ref{fig:Newton-Polygon2} visualisiert.
 \end{enumerate}
@@ -446,6 +447,11 @@ Das Newton Polygon wurde in Abbildung \ref{fig:Newton-Polygon2} visualisiert.
 }
 \end{figure}
 
+\begin{bem}
+\cite[Bem 5.4]{ZulaBarbara}
+Für alle $f\in \Ckxl \backslash \{0\}$ gilt allgemein, dass das zu $P\in \cD_{\hat K}$ gehörige
+Newton Polygon, bis auf Verschiebung mit dem von $f\cdot P$ übereinstimmt.
+\end{bem}
 \begin{lem}
 %TOTO: sabbah redet hier schon immer von \hat K, ist das nötig?
 \cite[5.1]{sabbah_cimpa90} %TODO: genauer
@@ -463,7 +469,7 @@ hat, so gilt $\cP(\cM_K)=\cP({\cM'}_K)\cup\cP({\cM''}_K)$.
 %Definiere $ \hat\cD[x^{-1}]=\cD_\Cfx[x^{-1}]=\hat K<\partial_x>=:\cD_{\hat K}
 %$ wobei $\hat K=\Cfu[x^{-1}]$.
 \begin{comment}
-bei ZulaBarbara ist $\hat \cD_{\hat K}=\Cful<\partial_u>$ hier $=\cD_{\hat K}$
+bei ZulaBarbara ist $\hat \cD_{\hat K}=\Cfxl<\partial_x>$ hier $=\cD_{\hat K}$
 \end{comment}
 \begin{defn}[Formaler Meromorpher Zusammenhang]
 Ein \emph{formaler Meromorpher Zusammenhang}
@@ -482,39 +488,21 @@ Zusammenhänge. Im besonderen existiert für jedes $\cM_{\hat K}$ ein ein $P\in
 \cD_{\hat K}$ mit $\cM_{\hat K}=\cD_{\hat K}/\cD_{\hat K}\cdot P$.
 \end{bem}
 
-\begin{defn}
-\cite[1.a]{sabbah_Fourier-local}
-Sei $\phi\in\C(\!(u)\!)$.
-Wir schreiben $\sE^\phi$ für den (formalen) Rang 1 Vektorraum $\C(\!(u)\!)$
-ausgestattet mit dem Zusammenhang $\nabla=\partial_u+\partial_u\phi$, im
-speziellen also $\nabla_{\partial_u}1=\partial_u1=\phi'$.\\
-\begin{comment}
-Also
-\begin{align*}
-\sE^\phi=\Cful & \overset{\partial_u}{\rightarrow} \Cful\\
-1              & \mapsto \phi'(u)\\
-f(u)           & \mapsto f'(u)+f(u)\phi'(u)\\
-\end{align*}
-\end{comment}
-\end{defn}
-
-\begin{bem}
-\cite[1.a]{sabbah_Fourier-local}
-Es gilt $\sE^\phi\cong\sE^\psi$ genau dann wenn $\phi\equiv\psi \mod \Cfu$.
-%TODO: hier formal oder konvergent?
-\end{bem}
-
 \begin{thm}
-\cite[Thm 5.3.1]{sabbah_cimpa90}
+\cite[Thm 5.3.1]{sabbah_cimpa90} \cite[5.15]{ZulaBarbara}
 Sei $\cM_{\hat{K}}$ ein formaler Meromorpher Zusammenhang und sei
 $\cP(\cM_{\hat K})=\{L^{(1)},\dots,L^{(r)}\}$ die Menge seiner slopes. Es
-exisitiert eine (bis auf Permutation) eindutige Aufteilung $\cM_{\hat
-K}=\bigoplus_{i=1}^r\cM_{\hat K}^{(i)}$ in formale Meromorphe Zusammenhänge
+exisitiert eine (bis auf Permutation) eindutige Zerlegung 
+\[
+\cM_{\hat K}=\bigoplus_{i=1}^r\cM_{\hat K}^{(i)}
+\] 
+in formale Meromorphe Zusammenhänge
 mit $\cP(\cM_{\hat K}^{(i)})=\{L^{(i)}\}$.
 \end{thm}
 \begin{proof}
-\cite[Thm 5.3.1]{sabbah_cimpa90}
+\cite[Thm 5.3.1]{sabbah_cimpa90} oder \cite[5.15]{ZulaBarbara}
 \end{proof}
+
 \begin{comment}
 Aussagen, die aus dem Beweis entstehen:\\
 Wir erhalten die Exacte Sequenz
@@ -532,10 +520,7 @@ $\cP(P)=\cP(P_1)\cup\cP(P_2)$ und $\cP(P_1)\cap\cP(P_2)=\emptyset$
 
 \section{Formale Struktur regulärer Zusammenhänge}
 \cite[Chap 5.2]{sabbah_cimpa90}
-Sei $\cM_{\hat K}$ ein regulärer Formaler Meromorpher Zusammenhang, also
-$\slopes(\cM_{\hat K})=1$. Das nun folgende Kapitel wird sich mit der
-Struktur solcher Zusammenhänge genauer auseinandersetzen.
-
+Sei $\cM_{\hat K}$ ein regulärer Formaler Meromorpher Zusammenhang.
 \begin{lem}
 \cite[Def 5.1.1 Remarks 3.]{sabbah_cimpa90}
 Ein $P=\sum_{i=0}^d a_i(x)(x\partial_x)^i$ mit $a_i\in\Cfx$ ist regulär, genau
@@ -544,9 +529,6 @@ dann wenn der Koeffizient $a_d$ vor dem dominanten Term eine Einheit ist.
 \begin{proof}
 
 \end{proof}
-
-Dank diesem Satz ist es berechtigt, reguläre Zusammenhänge genauer zu
-betrachten.
 
 \begin{lem}
 \cite[Lem 5.2.1.]{sabbah_cimpa90}
@@ -564,7 +546,6 @@ $\partial_x^dm+\sum_{i=0}^{d-1}b_i(x)\partial_x^im=0$.
 
 \begin{comment} bis hier schon klar \end{comment}
 
-
 Tatsächlich werden wir $b_i(x)=x^ib_i'(x)$ mit $b_i'\in \Cfx$ schreiben (wegen
 Regularität).
 
@@ -579,29 +560,42 @@ Es existiert sogar eine Basis von $\cM_{\hat K}$ über $\hat K$ so dass die
 Matrix zu $x\partial_x$ konstant ist.
 \end{lem}
 \begin{proof}
-
+TODO
 \end{proof}
+
 %TODO: titel: Operations on vector spaces with connection
 %TODO: verzweigung statt pull-back?
 \section{pull-back und push-forward}
-%QUELLE: hottaetal.pdf Seite 21
 \begin{comment}
-\cite[1.3]{hotta2007d}
+TODO: Variable zu x machen
 \end{comment}
-
-Nach \cite[1.a]{sabbah_Fourier-local}. Sei $(\rho:\C\rightarrow \C , u\mapsto
-t:=\rho(u))\in u\Cfu$ mit Bewertung $p\geq1$ und sei $\cM$ ein endlich
-dimensionaler $\C(\!(t)\!)$ Vektorraum ausgestattet mit einem Zusammenhang
-$\nabla$.
+Nach \cite[1.a]{sabbah_Fourier-local} und \cite[1.3]{hotta2007d}.
+%
+Sei $(\rho:\C\rightarrow \C , u\mapsto t:=\rho(u))\in u\Cfu$ mit Bewertung
+$p\geq1$ und sei $\cM$ ein endlich dimensionaler $\C(\!(t)\!)$ Vektorraum
+ausgestattet mit einem Zusammenhang $\nabla$.
 \begin{defn}[pull-back] \label{defn:pull-back}
 \cite[1.a]{sabbah_Fourier-local}
-Der \emph{pull-back (Inverses Bild)} $\rho^{+}\cM$ ist der Vektorraum
-$\rho^{*}\cM=\C(\!(u)\!)\otimes_{\C(\!(t)\!)}\cM$ mit dem \emph{pull-back
-Zusammenhang} $\rho^*\nabla$ definiert durch
+Der \emph{pull-back} oder das \emph{Inverses Bild} $\rho^{+}\cM$ von $\cM$ ist
+der Vektorraum $\rho^{*}\cM=\C(\!(u)\!)\otimes_{\C(\!(t)\!)}\cM$ mit dem
+\emph{pull-back Zusammenhang} $\rho^*\nabla$ definiert durch
 \begin{equation} \label{eq:pull-back-zusammenhang}
 \partial_u(1\otimes m):=\rho'(u)\otimes\partial_tm \,.
 \end{equation}
 \end{defn}
+\begin{comment}
+\cite[Page 34]{sabbah_cimpa90}
+Sei $\cM_{\hat K}$ ein formaler Meromorpher Zusammenhang. Man definiert
+$\pi^*\cM_{\hat K}$ als den Vektor Raum über $\hat L:\pi^*\cM_{\hat K}=\hat
+L\otimes_{\hat K}\cM_{\hat K}$. Dann definiert man die Wirkung von
+$\partial_t$ durch: $t\partial_t\cdot(1\otimes
+m)=q(1\otimes(x\partial_x\otimes m))$ und damit
+\[
+t\partial_t\cdot(\phi\otimes m)=q(\phi\otimes(x\partial_x\cdot
+m))+((t\frac{\partial\phi}{\partial t})\otimes m) \,.
+\]
+Man erhält damit die Wirkung von $\partial_t=t^{-1}(t\partial_t)$.
+\end{comment}
 %
 \begin{lem} \label{lem:pull-back-hilfslemma1}
 \def\myT{\cD_{\Cftl}}
@@ -635,7 +629,7 @@ f(u)\otimes m(t,\partial_t) & f(u)m(\rho(u),\rho'(u)^{-1}\partial_u) \\
 \end{proof}
 \begin{bem}
 Das soeben, in Lemma \ref{lem:pull-back-hilfslemma1}, definierte $\Phi$ erfüllt
-für $1\otimes m\in \Cful\otimes_{\Cftl}\cD_{\Cftl}$
+für Elementartensoren $1\otimes m\in \Cful\otimes_{\Cftl}\cD_{\Cftl}$
 \begin{align*}
 \partial_u(1\otimes m) &\overset{\mbox{def}}{=} \rho'(u)\otimes\partial_t m \\
 &\overset{\Phi}{\mapsto} \underset{=1}{\underbrace{\rho'(u)\rho'(u)^{-1}}}
@@ -850,8 +844,7 @@ Sequenz fortsetzen (weil $\_\!\cdot\! Q$ injektiv)
   ;
 \end{tikzpicture}
 \end{center}
-Nun ist aber bekannt, dass Kokerne isomorpher Abbildungen ebenfalls isomorph
-sind. Damit folgt die Behauptung
+Nun konstruieren wir den Isomorphismus, den wir suchen mittels Diagrammjagd.
 \begin{comment}
 Nun wollen wir einen Isomorphismus
 \[
@@ -912,9 +905,19 @@ die Wirkung von $\partial_t$ gleich der Wirkung von $\rho'(u)^{-1}\partial_u$.
 \end{comment}
 %
 \begin{lem}
-Ein pull-back mit $u\mapsto u^p$ multipliziert alle slopes mit $p$.
+\cite[5.4.3]{sabbah_cimpa90}
+Sei $\cP(\cM_{\hat K})=\{\lambda_1,\dots,\lambda_r\}$ die Menge der Slopes von
+$\cM_{\hat K}$ und $\rho:u\mapsto t:=u^p$, dann gilt für $\cP(\rho^*\cM_{\hat
+K})=\{\lambda_1',\dots,\lambda_r'\}$, dass $\lambda_n'=p\cdot\lambda_n$.
 \end{lem}
 \begin{proof}
+Sei $\cM_{\hat K}=\cD_{\hat K}\slash \cD_{\hat K}\cdot P$ mit $P=\sum
+a_i(t)\partial_t^i$, dann ist
+$\rho^*\cM_{\hat K}=\cD_{\hat K}\slash \cD_{\hat K}\cdot P'$ mit 
+\begin{align*}
+P' &= \sum a_i(\rho(t))(\rho'(t)^{-1}\partial_u)\\
+   &=\sum a_i(u^p)(p\cdot u^{-(p-1)}\partial_u)
+\end{align*}
 \end{proof}
 %
 \begin{exmp}[pull-back]\label{exmp:Pull-Back}
@@ -972,7 +975,7 @@ also:
 
 Wir wollen $\cM:=\cD/\cD\cdot P$ bzgl. $P:= t^3\partial_t^2-4t^2\partial_t-1$
 betrachten.
-Unser Ziel ist es hier ganzzahlige slopes erhalte
+Unser Ziel ist es hier ganzzahlige slopes zu erhalten.
 Es gilt $ \slopes(P)=\{\frac{1}{2}\} $ (siehe Abbildung \ref{fig:Pull-Back1})
 und es ist $2$ der Hauptnenner aller Slopes.
 Wende den pull-back
@@ -1143,5 +1146,8 @@ $P$ gegeben durch
 \cF_P:=\cF_P(z,\partial_z)=\sum_{i=0}^da_i(\partial_z)(-z)^i
 \]
 \end{defn}
+\begin{comment}
+TODO: beispiel aus \cite{ZulaBarbara}
+\end{comment}
 
 % vim: set ft=tex :

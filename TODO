@@ -9,6 +9,7 @@ d-modul.tex:%TODO: Variable zu t machen?
 d-modul.tex:TODO: defn of Car als Charakteristische Varietät
 d-modul.tex:(linear differential system) %TODO: defn
 d-modul.tex:%TODO: was heißt holonom (holonomic)
+elem-mer-zsh.tex:%TODO: hier formal oder konvergent?
 elem-mer-zsh.tex:%TODO: auch nicht formal
 elem-mer-zsh.tex:%TODO: verwendet hier schon das klassische Levelt-Turittin
 grundlagen.tex:%TODO: Pfeile
@@ -21,16 +22,17 @@ lemma2-4.tex:  %\mbox{\footnote{$(\xi^i)^p=1\forall i$}} % TODO: correct footnot
 lemma2-4.tex:%TODO: this
 main/main.ps:w FJ(TODO,)30 b(\(3.)i(T)-8 b(re\033en\))p 3633 5576
 Übereinstimmungen in Binärdatei main/main.dvi.
-main.tex:  ,fontsize=12pt % TODO
+main.tex:  ,fontsize=11pt % TODO
 main.tex:%TODO: replace def --> newcommand
 main.tex:%TODO: set titel variable??
+main.tex:TODO: Erklärung das das wirklich selbstgemacht ist
 meromZsh.tex:% TODO; wie darf ich einen Meromorphen verändern, (das P verändern) ohne das
 meromZsh.tex:% TODO: \cM = \cM_K ... replace
-meromZsh.tex:%TODO: Dimension eines Meromorphen Zusammenhang
+meromZsh.tex:% TODO: Dimension eines Meromorphen Zusammenhang
 meromZsh.tex:%TODO: \tilde cO --> \tilde \cO
 meromZsh.tex:%TODO: partial oder d
 meromZsh.tex:TODO: zeige, das der lösungsraum die eigenschaften von $\cD$-Moduln erfüllt\\
-meromZsh.tex:%TODO: korrekte benennung?
+meromZsh.tex:\partial(fu)=f'u+f\partial u %TODO: hier klammern um das letzte u ?
 meromZsh.tex:assoziierten Meromorphen Zusammenhang $(\cM_A,\partial_A)$ %TODO: improve notation
 meromZsh.tex:Lösungen in $\C\{t\}$. %TODO: oder \tilde\cO
 meromZsh.tex:%TODO: reihenfolge bei sabbah anderst!!!
@@ -41,14 +43,15 @@ meromZsh.tex:TODO, (3. Treffen)
 meromZsh.tex:%TODO: wieso gilt das?
 meromZsh.tex:%TODO: beobachtung...
 meromZsh.tex:%TODO: differenz ist linear
+meromZsh.tex:TODO
 meromZsh.tex:%TODO: bessere formulierung
-meromZsh.tex:%TODO: wie sind die genau definiert? invariant?
 meromZsh.tex:%TODO: nummer aus der referenz ist falsch
 meromZsh.tex:\cite[5.1]{sabbah_cimpa90} %TODO: genauer
-meromZsh.tex:%TODO: hier formal oder konvergent?
 meromZsh.tex:Wähle einen zyklischen Vektor $m\in\cM_{\hat K}$ % TODO: richtiger Raum?
+meromZsh.tex:TODO
 meromZsh.tex:%TODO: titel: Operations on vector spaces with connection
 meromZsh.tex:%TODO: verzweigung statt pull-back?
+meromZsh.tex:TODO: Variable zu x machen
 meromZsh.tex:%TODO: Pfeile
 meromZsh.tex:%TODO: Pfeile
 meromZsh.tex:%TODO: warum hier alles Lokalisiert?
@@ -65,6 +68,7 @@ meromZsh.tex:%TODO: wieso multipliziert dieser mit 2?
 meromZsh.tex:%TODO: nummer aus der referenz ist falsch
 meromZsh.tex:%TODO: nummer aus der referenz ist falsch
 meromZsh.tex:  & \mbox{(Rechenregeln Tensorprodukt)}\\ %TODO: hinzufügen
+meromZsh.tex:TODO: beispiel aus \cite{ZulaBarbara}
 myNewtonPlot.sty:            %TODO
 myNewtonPlot.sty:            %TODO
 myNewtonPoly.sty:          %TODO
