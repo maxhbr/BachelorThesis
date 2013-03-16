@@ -104,7 +104,7 @@ u'(x)=A(x)u(x)
 für $u(x)=\,^t(u_1(x),\dots,u_n(x))\in\tilde \cO^n$. Damit haben wir gesehen,
 dass jeder Meromorphe Zusammanhang $(\cM,\partial)$ ausgestattet mit einer
 $K$-Basis $\{e_i\}_{i\in\{1,\dots,n\}}$ von $\cM$ zu einem ODE zugeordnet
-werden kann. 
+werden kann.
 
 Umgekehrt können wir für jede Matrix $A(x)=(a_{ij}(x))$ den
 assoziierten Meromorphen Zusammenhang $(\cM_A,\partial_A)$ %TODO: improve notation
@@ -116,7 +116,7 @@ angeben, durch
 
 \begin{comment}
 \section{Alternativer Zugang}
-Hier wird nun ein alternativer Zugang, wie in \cite[3.1.1]{sabbah_cimpa90}, 
+Hier wird nun ein alternativer Zugang, wie in \cite[3.1.1]{sabbah_cimpa90},
 präsentiert. Sei $\cF$ ein Funktionenraum, auf dem die Differentialoperatoren
 $\cD$ wirken.
 
@@ -492,10 +492,10 @@ Zusammenhänge. Im besonderen existiert für jedes $\cM_{\hat K}$ ein ein $P\in
 \cite[Thm 5.3.1]{sabbah_cimpa90} \cite[5.15]{ZulaBarbara}
 Sei $\cM_{\hat{K}}$ ein formaler Meromorpher Zusammenhang und sei
 $\cP(\cM_{\hat K})=\{L^{(1)},\dots,L^{(r)}\}$ die Menge seiner slopes. Es
-exisitiert eine (bis auf Permutation) eindutige Zerlegung 
+exisitiert eine (bis auf Permutation) eindutige Zerlegung
 \[
 \cM_{\hat K}=\bigoplus_{i=1}^r\cM_{\hat K}^{(i)}
-\] 
+\]
 in formale Meromorphe Zusammenhänge
 mit $\cP(\cM_{\hat K}^{(i)})=\{L^{(i)}\}$.
 \end{thm}
@@ -571,18 +571,40 @@ TODO: Variable zu x machen
 \end{comment}
 Nach \cite[1.a]{sabbah_Fourier-local} und \cite[1.3]{hotta2007d}.
 %
-Sei $(\rho:\C\rightarrow \C , u\mapsto t:=\rho(u))\in u\Cfu$ mit Bewertung
-$p\geq1$ und sei $\cM$ ein endlich dimensionaler $\C(\!(t)\!)$ Vektorraum
-ausgestattet mit einem Zusammenhang $\nabla$.
+Sei
+\begin{align*}
+\rho&:\C\rightarrow \C , t\mapsto x:=\rho(t) &\in t\Cft
+\end{align*}
+mit Bewertung $p\geq1$. Hier werden wir immer $\rho(t)=t^p$ für ein $p\in \N$
+betrachten. Diese Funktion induziert eine Abbildung
+\begin{align*}
+\rho^*&:\Ckx\hookrightarrow \Ckt, f \mapsto f\circ \rho & \mbox{bzw.} &&
+\rho^*&:\Cfx\hookrightarrow \Cft, f \mapsto f\circ \rho
+\end{align*}
+analog erhalten wir
+\begin{align*}
+\rho^*&:K\hookrightarrow L:=\Cktl, f \mapsto f\circ \rho & \mbox{bzw.} &&
+\rho^*&:\hat K\hookrightarrow \hat L:=\Cftl, f \mapsto f\circ \rho
+\end{align*}
+wobei $L$ (bzw. $\hat L$) eine enldiche Körpererweiterung von $K$ (bzw $\hat
+K$) ist.
+Sei $\cM_{\hat K}$ ein endlich dimensionaler $\C(\!(t)\!)$ Vektorraum ausgestattet mit
+einem Zusammenhang $\nabla$.
+%
 \begin{defn}[pull-back] \label{defn:pull-back}
-\cite[1.a]{sabbah_Fourier-local}
-Der \emph{pull-back} oder das \emph{Inverses Bild} $\rho^{+}\cM$ von $\cM$ ist
-der Vektorraum $\rho^{*}\cM=\C(\!(u)\!)\otimes_{\C(\!(t)\!)}\cM$ mit dem
-\emph{pull-back Zusammenhang} $\rho^*\nabla$ definiert durch
+\cite[1.a]{sabbah_Fourier-local} und
+\cite[Page 34]{sabbah_cimpa90}
+Der \emph{pull-back} oder das \emph{Inverses Bild} $\rho^{+}\cM_{\hat K}$ von
+$(\cM_{\hat K},\nabla)$ ist der Vektorraum
+$\rho^{*}\cM_{\hat K}=\hat L\otimes_{\hat K}\cM_{\hat K}
+=\Cftl\otimes_{\Cfxl}\cM_{\Cfxl}$
+ mit dem \emph{pull-back Zusammenhang} $\rho^*\nabla$ definiert durch
+%TODO: ist das der zusammenhang oder die wirkung oder was?
 \begin{equation} \label{eq:pull-back-zusammenhang}
-\partial_u(1\otimes m):=\rho'(u)\otimes\partial_tm \,.
+\partial_t(1\otimes m):=\rho'(t)\otimes\partial_xm \,.
 \end{equation}
 \end{defn}
+%
 \begin{comment}
 \cite[Page 34]{sabbah_cimpa90}
 Sei $\cM_{\hat K}$ ein formaler Meromorpher Zusammenhang. Man definiert
@@ -598,9 +620,7 @@ Man erhält damit die Wirkung von $\partial_t=t^{-1}(t\partial_t)$.
 \end{comment}
 %
 \begin{lem} \label{lem:pull-back-hilfslemma1}
-\def\myT{\cD_{\Cftl}}
-\def\myU{\cD_{\Cful}}
-Es gilt $\rho^*\myT=\Cful\otimes_{\Cftl}\myT \cong \myU$ mittels
+Es gilt $\rho^*\cD_{\hat K }=\hat L\otimes_{\hat K}\cD_{\hat K } \cong \cD_{\hat L }$ mittels
 \begin{center}
 \begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
 \matrix (m) [
@@ -610,9 +630,10 @@ Es gilt $\rho^*\myT=\Cful\otimes_{\Cftl}\myT \cong \myU$ mittels
   %, text height=3em
   %, text depth=0.25em
 ]{
-\Phi:\Cful\otimes_{\Cftl}\myT & \myU \\
-%1\otimes m(t,\partial_t) & m(\rho(u),\rho'(u)^{-1}\partial_u) \\
-f(u)\otimes m(t,\partial_t) & f(u)m(\rho(u),\rho'(u)^{-1}\partial_u) \\
+  \Phi:\hat L\otimes_{\hat K}\cD_{\hat K }  & \cD_{\hat L } \\
+  %1\otimes m(t,\partial_t) & m(\rho(u),\rho'(u)^{-1}\partial_u) \\
+  %f(u)\otimes m(t,\partial_t) & f(u)m(\rho(u),\rho'(u)^{-1}\partial_u) \\
+  f(t)\otimes m(x,\partial_x) & f(t)m(\rho(t),\rho'(t)^{-1}\partial_t) \\
 };
 %TODO: Pfeile
 \path[->,font=\scriptsize,>=angle 90]
@@ -627,22 +648,24 @@ f(u)\otimes m(t,\partial_t) & f(u)m(\rho(u),\rho'(u)^{-1}\partial_u) \\
 \end{lem}
 \begin{proof}
 \end{proof}
+\begin{comment}
 \begin{bem}
+BENÜTZT BEREITS DAS NÄCHSTE LEMMA...
+
 Das soeben, in Lemma \ref{lem:pull-back-hilfslemma1}, definierte $\Phi$ erfüllt
-für Elementartensoren $1\otimes m\in \Cful\otimes_{\Cftl}\cD_{\Cftl}$
+für Elementartensoren $1\otimes m\in \hat L\otimes_{\hat K}\cD_{\hat K}$
 \begin{align*}
-\partial_u(1\otimes m) &\overset{\mbox{def}}{=} \rho'(u)\otimes\partial_t m \\
-&\overset{\Phi}{\mapsto} \underset{=1}{\underbrace{\rho'(u)\rho'(u)^{-1}}}
-  \partial_u m(\rho(u),\rho'(u)^{-1}\partial_u) \\
-&= \partial_u m(\rho(u),\rho'(u)^{-1}\partial_u)\\
+\partial_u(1\otimes m) &\overset{\mbox{def}}{=} \rho'(t)\otimes\partial_x m \\
+&\overset{\Phi}{\mapsto} \underset{=1}{\underbrace{\rho'(t)\rho'(t)^{-1}}}
+  \partial_t m(\rho(t),\rho'(t)^{-1}\partial_t) \\
+&= \partial_t m(\rho(t),\rho'(t)^{-1}\partial_t)\\
 \end{align*}
 und somit (\ref{eq:pull-back-zusammenhang}) wie gewollt.
 \end{bem}
+\end{comment}
 %
 \begin{lem} \label{lem:pull-back-hilfslemma2}
-\def\myT{\cD_{\Cftl}}
-\def\myU{\cD_{\Cful}}
-In der Situation
+Sei $P(x,\partial_x)\in \cD_K$. In der Situation
 \begin{center}
 \begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
 \matrix (m) [
@@ -652,8 +675,8 @@ In der Situation
   %, text height=3em
   %, text depth=0.25em
 ]{
-\Cful\otimes_{\Cftl}\myT & \Cful\otimes_{\Cftl}\myT \\
-\myU & \myU \\
+\hat L\otimes_{\hat K}\cD_{\hat K } & \hat L\otimes_{\hat K}\cD_{\hat K } \\
+\cD_{\hat L } & \cD_{\hat L } \\
 };
 %TODO: Pfeile
 %\path (m-1-1) edge[white] node{$\%$} (m-2-2);
@@ -666,7 +689,7 @@ In der Situation
 \end{tikzpicture}
 \end{center}
 mit $\Phi$ wie in Lemma \ref{lem:pull-back-hilfslemma1}
-macht $\alpha:=\_\!\cdot\! P(\rho(u),\rho'(u)^{-1}\partial_u)$ das Diagram
+macht $\alpha:=\_\!\cdot\! P(\rho(t),\rho'(t)^{-1}\partial_t)$ das Diagram
 kommutativ.
 \end{lem}
 \begin{proof}
@@ -675,28 +698,26 @@ kommutativ.
 \begin{lem} \label{lem:pull-back-hilfslemma3}
 %Wie erhält man den pull-back Zusammenhang bzw. wie ist er berechenbar?
 In der Situation von Lemma \ref{defn:pull-back}, mit
-$\cM=\cD_{\Cftl}/\cD_{\Cftl}\cdot P(t,\partial_t)$ für ein
-$P(t,\partial_t)\in\cD_{\Cftl}$, gilt
-\[\rho^*\cM\cong \cD_{\Cful}\Big/\cD_{\Cful}\cdot
-  P(\rho(u),\rho'(u)^{-1}\partial_u) \,. \]
+$\cM_{\hat K}=\cD_{\hat K}/\cD_{\hat K}\cdot P(x,\partial_x)$ für ein
+$P(x,\partial_x)\in\cD_{\hat K}$, gilt
+\[\rho^*\cM_{\hat K}\cong \cD_{\hat L}\Big/\cD_{\hat L}\cdot
+  P(\rho(t),\rho'(t)^{-1}\partial_t) \,. \]
 \begin{comment}
 also wird der Übergang beschrieben durch
 \begin{align*}
-t          &\rightarrow \rho(t) \\
-\partial_t &\rightarrow \rho'(t)^{-1}\partial_u 
+x          &\rightarrow \rho(t) \\
+\partial_x &\rightarrow \rho'(t)^{-1}\partial_t
 \end{align*}
 \end{comment}
 \end{lem}
 \begin{proof}
 %TODO: warum hier alles Lokalisiert?
-\def\myT{\cD_{\Cftl}}
-\def\myU{\cD_{\Cful}}
-Sei $P\in\cD_\Cftl$ und $\cM:=\myT/\myT\cdot P$.
+Sei $P\in\cD_{\hat K}$ und $\cM_{\hat K }:=\cD_{\hat K }/\cD_{\hat K }\cdot P$.
 Wir wollen zeigen, dass
 \begin{align*}
-\rho^*\cM &\overset{!}{\cong}\myU/\myU\cdot Q 
+\rho^*\cM_{\hat K } &\overset{!}{\cong}\cD_{\hat L }/\cD_{\hat L }\cdot Q
 \end{align*}
-für $Q=P(\rho(u),\rho'(u)^{-1}\partial_u)$ gilt.
+für $Q=P(\rho(t),\rho'(t)^{-1}\partial_t)$ gilt.
 Betrachte dazu die kurze Sequenz
 \begin{center}
 \begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
@@ -707,14 +728,10 @@ Betrachte dazu die kurze Sequenz
     %, text height=3em
     %, text depth=0.25em
   ]{
-  0 & \myT
-    & \myT
-    & \cM
-    & 0\\
-    & u & u\cdot P \\
-    & & u & u\mod\cD_\Cftl\cdot P \\
+  0 & \cD_{\hat K } & \cD_{\hat K } & \cM_{\hat K }            & 0\\
+    & u             & u\cdot P \\
+    &               & u             & u\mod\cD_{\hat K}\cdot P \\
   };
-  %TODO: Pfeile
   \path[->,font=\scriptsize,>=angle 90]
   (m-1-1) edge (m-1-2)
   (m-1-2) edge node[above]{$\_\!\cdot\! P$} (m-1-3)
@@ -728,9 +745,11 @@ Betrachte dazu die kurze Sequenz
 \end{tikzpicture}
 \end{center}
 %TODO: muss \Cful oder \Cftl flach sein???
-ist \textbf{exact}, weil $\cM\cong\myT\Big/\myT\cdot P=\coker(\_\cdot P)$.
-Weil $\Cful$ \textbf{flach} ist, da  Körper, ist auch, nach anwenden des
-exacten Funktors $\Cful\otimes_\Cftl\_$, die Sequenz
+ist \textbf{exact}, weil $\cM_{\hat K } \cong\cD_{\hat K }\Big/\cD_{\hat K
+}\cdot P=\coker(\_\cdot P)$.  Weil $\hat K$ \textbf{flach} ist, da  Körper, ist
+auch, nach anwenden des
+%exacten
+Funktors $\hat L\otimes_{\hat K}\_$, die Sequenz
 %TODO: Funktorialität von Pull-Back? NEIN: Funktorialität von tensor
 \begin{center}
 \begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
@@ -741,16 +760,12 @@ exacten Funktors $\Cful\otimes_\Cftl\_$, die Sequenz
     %, text height=3em
     %, text depth=0.25em
   ]{
-  0 & \Cful\otimes_{\Cftl}\myT
-    & \Cful\otimes_{\Cftl}\myT
-    & \C(\!(u)\!)\otimes_{\C(\!(t)\!)}\cM
+  0 & \hat L\otimes_{\hat K}\cD_{\hat K}
+    & \hat L\otimes_{\hat K}\cD_{\hat K}
+    & \hat L\otimes_{\hat K}\cM_{\hat K}
     & 0\\
-    &
-    &
-    & \shortparallel\\
-    &
-    &
-    & \rho^*\cM \\
+    & & & \shortparallel\\
+    & & & \rho^*\cM_{\hat K} \\
   };
   %TODO: Pfeile
   \path[->,font=\scriptsize,>=angle 90]
@@ -761,17 +776,18 @@ exacten Funktors $\Cful\otimes_\Cftl\_$, die Sequenz
   ;
 \end{tikzpicture}
 \end{center}
-exact. 
-Deshalb ist 
+exact.
+Deshalb ist
 \begin{align*}
-\rho^*\cM &\cong \coker(\id\otimes\_\cdot P)
+\rho^*\cM_{\hat K} &\cong \coker(\id\otimes\_\cdot P)
   & \mbox{(weil exact)}\\
-&\cong \Cful\otimes_{\Cftl}\myT \Big/(\id\otimes\_\!\cdot\!  P)\Big(
-  \Cful\otimes_{\Cftl}\myT \Big) 
+&\cong \hat L\otimes_{\hat K}\cD_{\hat K } \Big/
+  \Big(( \hat L\otimes_{\hat K}\cD_{\hat K } )
+  \cdot (\id\otimes\_\!\cdot\!  P) \Big)
   & \mbox{(nach def. von $\coker$)}
 \end{align*}
 Also mit $\Phi$ wie in Lemma \ref{lem:pull-back-hilfslemma1} und
-$Q(u,\partial_u):=P(\rho(u),\rho'(u)^{-1}\partial_u)$
+$Q(t,\partial_t):=P(\rho(t),\rho'(t)^{-1}\partial_t)$
 nach Lemma \ref{lem:pull-back-hilfslemma2}
 ergibt sich
 \begin{center}
@@ -783,12 +799,12 @@ ergibt sich
     %, text height=3em
     %, text depth=0.25em
   ]{
-  0 & \Cful\otimes_{\Cftl}\myT
-    & \Cful\otimes_{\Cftl}\myT
-    & \rho^*\cM
+  0 & \hat L\otimes_{\hat K}\cD_{\hat K}
+    & \hat L\otimes_{\hat K}\cD_{\hat K}
+    & \hat L\otimes_{\hat K}\cM_{\hat K}
     & 0\\
- & \myU
-    & \myU
+ & \cD_{\hat L }
+    & \cD_{\hat L }
     &
     & \\
   };
@@ -806,8 +822,8 @@ ergibt sich
   ;
 \end{tikzpicture}
 \end{center}
-wobei das Diagram kommutiert. Nun lässt sich die untere Zeile zu einer exacten
-Sequenz fortsetzen (weil $\_\!\cdot\! Q$ injektiv)
+als kommutatives Diagram. Nun, weil $\_\!\cdot\! Q$ injektiv ist, lässt sich
+die untere Zeile zu einer exacten Sequenz fortsetzen
 \begin{center}
 \begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
   \matrix (m) [
@@ -817,13 +833,13 @@ Sequenz fortsetzen (weil $\_\!\cdot\! Q$ injektiv)
     %, text height=3em
     %, text depth=0.25em
   ]{
-  0 & \Cful\otimes_{\Cftl}\myT
-    & \Cful\otimes_{\Cftl}\myT
-    & \rho^*\cM
+  0 & \hat L\otimes_{\hat K}\cD_{\hat K}
+    & \hat L\otimes_{\hat K}\cD_{\hat K}
+    & \hat L\otimes_{\hat K}\cM_{\hat K}
     & 0\\
-  0 & \myU
-    & \myU
-    & \myU\Big/\myU\cdot Q
+  0 & \cD_{\hat L }
+    & \cD_{\hat L }
+    & \cD_{\hat L }\Big/\cD_{\hat L }\cdot Q
     & 0 \\
   };
   %TODO: Pfeile
@@ -849,7 +865,7 @@ Nun konstruieren wir den Isomorphismus, den wir suchen mittels Diagrammjagd.
 Nun wollen wir einen Isomorphismus
 \[
 \phi:\rho^*\cM = \Cful\otimes_\Cftl\big(\cD_\Cftl\big\slash\cD_\Cftl\cdot
-P\big)\rightarrow \myU\big/\myU\cdot Q
+P\big)\rightarrow \cD_{\hat K }\big/\cD_{\hat K }\cdot Q
 \]
  finden, so dass $\phi\circ(\id\otimes\pi)=\Pi\circ\Phi$.
 \end{comment}
@@ -907,17 +923,21 @@ die Wirkung von $\partial_t$ gleich der Wirkung von $\rho'(u)^{-1}\partial_u$.
 \begin{lem}
 \cite[5.4.3]{sabbah_cimpa90}
 Sei $\cP(\cM_{\hat K})=\{\lambda_1,\dots,\lambda_r\}$ die Menge der Slopes von
-$\cM_{\hat K}$ und $\rho:u\mapsto t:=u^p$, dann gilt für $\cP(\rho^*\cM_{\hat
+$\cM_{\hat K}$ und $\rho:t\mapsto x:=t^p$, dann gilt für $\cP(\rho^*\cM_{\hat
 K})=\{\lambda_1',\dots,\lambda_r'\}$, dass $\lambda_n'=p\cdot\lambda_n$.
 \end{lem}
 \begin{proof}
 Sei $\cM_{\hat K}=\cD_{\hat K}\slash \cD_{\hat K}\cdot P$ mit $P=\sum
-a_i(t)\partial_t^i$, dann ist
-$\rho^*\cM_{\hat K}=\cD_{\hat K}\slash \cD_{\hat K}\cdot P'$ mit 
+a_i(x)\partial_x^i$, dann ist
+$\rho^*\cM_{\hat K}\cong\cD_{\hat L}\slash \cD_{\hat L}\cdot P'$ mit
 \begin{align*}
-P' &= \sum a_i(\rho(t))(\rho'(t)^{-1}\partial_u)\\
-   &=\sum a_i(u^p)(p\cdot u^{-(p-1)}\partial_u)
+P'(t,\partial_t) &=P(\rho(t),\rho'(t)^{-1}\partial_t)\\
+                 &=\sum a_i(\rho(t))(\rho'(t)^{-1}\partial_t)^i\\
+                 &=\sum a_i(t^p)((p\cdot t^{p-1})^{-1}\partial_t)^i
 \end{align*}
+\begin{comment}
+TODO: Hier weiter...
+\end{comment}
 \end{proof}
 %
 \begin{exmp}[pull-back]\label{exmp:Pull-Back}
@@ -973,38 +993,36 @@ also:
 \end{itemize}
 \end{comment}
 
-Wir wollen $\cM:=\cD/\cD\cdot P$ bzgl. $P:= t^3\partial_t^2-4t^2\partial_t-1$
-betrachten.
+Wir wollen $\cM_{\hat K}:=\cD_{\hat K}/\cD_{\hat K}\cdot P$ bzgl. $P:=
+x^3\partial_x^2-4x^2\partial_x-1$ betrachten.
 Unser Ziel ist es hier ganzzahlige slopes zu erhalten.
-Es gilt $ \slopes(P)=\{\frac{1}{2}\} $ (siehe Abbildung \ref{fig:Pull-Back1})
+%TODO: erkläre wieso --> Elementare Zusammenhänge
+Es gilt $\slopes(P)=\{\frac{1}{2}\}$ (siehe Abbildung \ref{fig:Pull-Back1})
 und es ist $2$ der Hauptnenner aller Slopes.
-Wende den pull-back
-$\rho:t\rightarrow u^2$, welcher alle slopes mit 2 Multipliziert,
-an.
-%TODO: wieso multipliziert dieser mit 2?
+Wende den pull-back mit $\rho:t\rightarrow x:=t^2$ an.
 Zunächst ein paar Nebenrechnungen, damit wir Lemma
 \ref{lem:pull-back-hilfslemma3} einfacher anwenden können.
 \begin{align*}
-\partial_t   &\rightarrow \frac{1}{\rho'}\partial_u=\frac{1}{2u}\partial_u \\
-\partial_t^2 &\rightarrow (\frac{1}{2u}\partial_u)^2 \\
-             &= \frac{1}{2u}\partial_u (\frac{1}{2u}\partial_u) \\
-             &= \frac{1}{2u}(-\frac{1}{2u^2}\partial_u +
-               \frac{1}{2u}\partial_u^2) \\
-             &= \frac{1}{4u^2}\partial_u^2-\frac{1}{4u^3}\partial_u \\
+\partial_x   &\rightarrow \frac{1}{\rho'(t)}\partial_t=\frac{1}{2t}\partial_t \\
+\partial_x^2 &\rightarrow (\frac{1}{2t}\partial_t)^2 \\
+             &= \frac{1}{2t}\partial_t (\frac{1}{2t}\partial_t) \\
+             &= \frac{1}{2t}(-\frac{1}{2t^2}\partial_t +
+               \frac{1}{2t}\partial_t^2) \\
+             &= \frac{1}{4t^2}\partial_t^2-\frac{1}{4t^3}\partial_t \\
 \end{align*}
 also ergibt einsetzen
 \begin{align*}
-\rho^+P &= u^6(\frac{1}{4u^2}\partial_u^2-\frac{1}{4u^3}\partial_u)-
-          4u^{4}\frac{1}{2u}\partial_u-1\\
-        &= \frac{1}{4}u^4\partial_u^2-u^3\frac{1}{4u^3}\partial_u-
-          4u^{3}\frac{1}{2}\partial_u-1\\
-        &= \frac{1}{4}u^4\partial_u^2 -2\frac{1}{4}u^3\partial_u-1
+\rho^+P &= t^6(\frac{1}{4t^2}\partial_t^2-\frac{1}{4t^3}\partial_t)-
+          4t^{4}\frac{1}{2t}\partial_t-1\\
+        &= \frac{1}{4}t^4\partial_t^2-t^3\frac{1}{4u^3}\partial_t-
+          4t^{3}\frac{1}{2}\partial_t-1\\
+        &= \frac{1}{4}t^4\partial_t^2 -2\frac{1}{4}t^3\partial_t-1
 \end{align*}
 
-Also ist $\rho^+P= \frac{1}{4}u^4\partial_u^2 -\frac{1}{2}u^3\partial_u-1$ mit
+Also ist $\rho^+P= \frac{1}{4}t^4\partial_t^2 -\frac{1}{2}t^3\partial_t-1$ mit
 $ \slopes(\rho^+P)=\{1\} $ (siehe Abbildung \ref{fig:Pull-Back2}) und somit
-$\rho^*\cM=\cD/\cD\cdot (\frac{1}{4}u^4\partial_u^2
--\frac{1}{2}u^3\partial_u-1)$.
+$\rho^*\cM_{\hat K}=\cD_{\hat L}/\cD_{\hat L}
+\cdot(\frac{1}{4}t^4\partial_t^2-\frac{1}{2}t^3\partial_t-1)$.
 \begin{figure}[H]
 %TODO: nummer aus der referenz ist falsch
 \label{fig:Pull-Back}
@@ -1012,7 +1030,7 @@ $\rho^*\cM=\cD/\cD\cdot (\frac{1}{4}u^4\partial_u^2
 \begin{center}
 %\caption{Newton Polygon zu $P$ und $\rho^+P$}
 \fbox{
-  \subfloat[Newton Polygon zu\\ $P=t^3\partial_t^2-4t^2\partial_t-1$]{
+  \subfloat[Newton Polygon zu\\ $P=x^3\partial_x^2-4x^2\partial_x-1$]{
     \label{fig:Pull-Back1}
     \begin{tikzpicture}[scale=1.5]
     \def\myPoints{{(0,0)}, {(1,1)}, {(2,1)}}
@@ -1023,8 +1041,8 @@ $\rho^*\cM=\cD/\cD\cdot (\frac{1}{4}u^4\partial_u^2
     \end{tikzpicture}
   }
   \quad
-  \subfloat[Newton Polygon zu\\ $\rho^+P=\frac{1}{4}u^4\partial_u^2
-    -\frac{1}{2}u^3\partial_u-1$]
+  \subfloat[Newton Polygon zu\\ $\rho^+P=
+\frac{1}{4}t^4\partial_t^2-\frac{1}{2}t^3\partial_t-1)$]
   {
     \label{fig:Pull-Back2}
     \begin{tikzpicture}[scale=1.5]
@@ -1038,17 +1056,19 @@ $\rho^*\cM=\cD/\cD\cdot (\frac{1}{4}u^4\partial_u^2
 \end{figure}
 \end{exmp}
 
-Sei $\cN$ ein $\C(\!(u)\!)$-VR mit Verknüpfung, so definiere den push-forward
-wie folgt.
+Sei $\cN_{\hat L}$ ein endlich dimensionaler $\hat L$-VR mit Verknüpfung, so
+definiere den push-forward wie folgt.
 \begin{defn}[push-forward]
 \cite[1.a]{sabbah_Fourier-local}
-Der \emph{push-forward (Direktes Bild)} $\rho_+\cN$ ist
+Der \emph{push-forward} oder das \emph{Direktes Bild} $\rho_+\cN_{\hat L}$ von
+$\cN_{\hat L}$ ist
 \begin{itemize}
-\item der $\C(\!(t)\!)$-VR $\rho_*\cN$ ist der $\C$-Vektor Raum $\cN$ mit
-der $\C(\!(t)\!)$-Vektor Raum Struktur durch $f(t)\cdot m:=f(\rho(t))m$
+\item der $\hat K$-VR $\rho_*\cN$ ist definiert als der $\C$-Vektor Raum
+$\cN_{\hat L}$ mit der $\hat K$-Vektor Raum Struktur durch $f(x)\cdot
+m:=f(\rho(t))m$
 % für alle m aus ???
-\item mit der Wirkung $\partial_t$ beschrieben durch
-$\rho'(u)^{-1}\partial_u$.
+\item mit der Wirkung $\partial_x$ beschrieben durch
+$\rho'(t)^{-1}\partial_t$.
 \end{itemize}
 \end{defn}
 
@@ -1081,6 +1101,9 @@ $\rho'(u)^{-1}\partial_u$.
 \end{center}
 \end{figure}
 \begin{exmp}[push-forward]\label{exmp:Push-Forward}
+%ACHTUNG: variablem müssen noch geändert werden!\\
+%ACHTUNG: wenn das hier richtig wäre, müsste es zu einer dimensionsänderung
+         %kommen!\\
 Für $\rho:t\rightarrow u^2$, $\phi=\frac{1}{u^2}$ betrachte
 \begin{align*}
 \sE^\phi &\cong\hat\cD/\hat\cD\cdot(\partial_u+\partial_u\frac{1}{u^2})\\
@@ -1106,21 +1129,20 @@ Abbildung \ref{fig:Push-Forward2})
 \cite[1.a]{sabbah_Fourier-local}
 Es gilt die Projektionsformel
 \begin{equation} \label{eq:Projektionsformel}
-\rho_+(\cN\otimes_{\C(\!(u)\!)}\rho^+\cM) \cong
-\rho_+\cN\otimes_{\C(\!(t)\!)}\cM\,.
+\rho_+(\cN_{\hat L}\otimes_{\hat L}\rho^+\cM_{\hat K}) \cong
+\rho_+\cN_{\hat L}\otimes_{\hat K}\cM_{\hat K}\,.
 \end{equation}
 \end{thm}
 \begin{proof}
 \begin{align*}
-\rho_+(\cN\otimes_{\C(\!(u)\!)}\rho^+\cM) &=
-\rho_+(\cN\otimes_{\C(\!(u)\!)}(\C(\!(u)\!)\otimes_{\C(\!(t)\!)}\cM)) 
-  & \mbox{(def von $\rho^+\cM$)}\\
-&\cong \rho_+((\cN\otimes_{\C(\!(u)\!)}\C(\!(u)\!))
-\otimes_{\C(\!(t)\!)}\cM) 
+\rho_+(\cN_{\hat L}\otimes_{\hat L}\rho^+\cM_{\hat K}) &=
+\rho_+(\cN_{\hat L}\otimes_{\hat L}(\hat L\otimes_{\hat K}\cM_{\hat L}))
+  & \mbox{(def von $\rho^+\cM_{\hat K}$)}\\
+&\cong \rho_+((\cN_{\hat L}\otimes_{\hat L}\hat L)\otimes_{\hat K}\cM_{\hat K})
   & \mbox{(Rechenregeln Tensorprodukt)}\\ %TODO: hinzufügen
-&\cong \rho_+(\cN\otimes_{\C(\!(t)\!)}\cM) 
+&\cong \rho_+(\cN_{\hat L}\otimes_{\hat K}\cM_{\hat K})
   & \mbox{(Rechenregeln Tensorprodukt)}\\
-&= \rho_+\cN\otimes_{\C(\!(t)\!)}\cM 
+&= \rho_+\cN_{\hat L}\otimes_{\hat K}\cM_{\hat K}
   & \mbox{(?)}
 \end{align*}
 \end{proof}
@@ -1141,7 +1163,7 @@ Sei $\rho(u)=u^p=t$ und $\phi(t)$ gegeben.
 \cite[Def 6.1]{ZulaBarbara}
 Sei $P=\sum_{i=0}^da_i(x)\partial_x^i$. Dann ist die
 \emph{Fouriertransformierte} von
-$P$ gegeben durch 
+$P$ gegeben durch
 \[
 \cF_P:=\cF_P(z,\partial_z)=\sum_{i=0}^da_i(\partial_z)(-z)^i
 \]
