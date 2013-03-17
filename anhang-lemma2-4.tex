@@ -1,60 +1,60 @@
 \begin{landscape}
-  %\chapter{zur aufteilung in Lemma 2.4}
-  \chapter{Aufteilung von ...}
-  \label{chap:aufteilung}
-  Sei $\phi\in u^{-1}\C[u^{-1}]$, so ist $\phi'=:\sum_{i=2}^N a_{-i}u^{-i}\in u^{-2}\C[u^{-1}]$ also 
-  $u\phi'(u)=\sum_{i=1}^N a_{-i-1}u^{-i} \in u^{-1}\C[u^{-1}]$, welches wir zerlegen wollen.\\
-  Zerlege also $u\phi'(u)=\sum_{j=0}^{p-1}u^j\psi_j(u^p)$
-  mit $\psi_j\in\C[t^{-1}]$ für alle $j>0$ und $\psi_0\in
-  t^{-1}\C[t^{-1}]$:\\
-  \begin{center}
-    \footnotesize
-    \begin{tikzpicture} [descr/.style={fill=white,inner sep=2.5pt}]
-    \matrix (m) [
-      matrix of math nodes,
-      row sep=1em,
-      %column sep=-0.7em,
-      text height=1.5ex,
-      text depth=0.25ex]
-    {
-      & & & & & & & & & & & & & & \, \\
-      u\phi'(u)= &
-      a_{-2}u^{-1} &
-      +...+ &
-      a_{-p}u^{-(p-1)} &
-      + &
-      a_{-(p+1)}u^{-p} &
-      + &
-      a_{-(p+2)}u^{-(p+1)} &
-      +...+ &
-      a_{-2p}u^{-(2p-1)} &
-      + &
-      a_{-(2p+1)}u^{-2p} &
-      + &
-      a_{-(2p+3)}u^{-(2p+1)} &
-      + ...  \\
-      & & & & & & & & & & & & & & \, \\
-    };
+%\chapter{zur aufteilung in Lemma 2.4}
+\chapter{Aufteilung von ...}
+\label{chap:aufteilung}
+Sei $\phi\in t^{-1}\C[t^{-1}]$, so ist $\phi'=:\sum_{i=2}^N a_{-i}t^{-i}\in
+t^{-2}\C[t^{-1}]$ also $u\phi'(t)=\sum_{i=1}^N a_{-i-1}t^{-i} \in
+t^{-1}\C[t^{-1}]$, welches wir zerlegen wollen.\\
+Zerlege also $t\phi'(t)=\sum_{j=0}^{p-1}t^j\psi_j(t^p)$ mit
+$\psi_j\in\C[x^{-1}]$ für alle $j>0$ und $\psi_0\in x^{-1}\C[x^{-1}]$:\\
+\begin{center}
+\footnotesize
+\begin{tikzpicture} [descr/.style={fill=white,inner sep=2.5pt}]
+\matrix (m) [
+  matrix of math nodes,
+  row sep=1em,
+  %column sep=-0.7em,
+  text height=1.5ex,
+  text depth=0.25ex]
+{
+  & & & & & & & & & & & & & & \, \\
+  t\phi'(t)= &
+  a_{-2}t^{-1} &
+  +...+ &
+  a_{-p}t^{-(p-1)} &
+  + &
+  a_{-(p+1)}t^{-p} &
+  + &
+  a_{-(p+2)}t^{-(p+1)} &
+  +...+ &
+  a_{-2p}t^{-(2p-1)} &
+  + &
+  a_{-(2p+1)}t^{-2p} &
+  + &
+  a_{-(2p+3)}t^{-(2p+1)} &
+  + ...  \\
+  & & & & & & & & & & & & & & \, \\
+};
 
-      \path[solid]
-      (m-2-6) edge [bend left=20] node[descr]{$\psi_0(u^p)$} (m-2-12)
-      (m-2-12)  edge [bend left=20] (m-1-15);
+  \path[solid]
+  (m-2-6) edge [bend left=20] node[descr]{$\psi_0(t^p)$} (m-2-12)
+  (m-2-12)  edge [bend left=20] (m-1-15);
 
-      \path[dotted]
-      (m-2-4) edge [bend right=20] node[descr]{$u\psi_1(u^p)$} (m-2-10)
-      (m-2-10)  edge [bend right=20] (m-3-15);
+  \path[dotted]
+  (m-2-4) edge [bend right=20] node[descr]{$t\psi_1(t^p)$} (m-2-10)
+  (m-2-10)  edge [bend right=20] (m-3-15);
 
-      \path[dashed]
-      (m-2-2) edge [bend right=20] node[descr]{$u^{p-1}\psi_{p-1}(u^{p})$} (m-2-8)
-      (m-2-8) edge [bend right=20] (m-2-14)
-      (m-2-14) edge [bend right=20] (m-3-15);
-    \end{tikzpicture}
-  \end{center}
-  also:\\
-  \begin{align*}
-    \psi_0(u^p) &= a_{-(p+1)}u^{-p}+a_{-(2p+1)}u^{-2p}+...\\
-    \psi_1(u^p) &= a_{-p}u^{-p}+a_{-2p}u^{2p}+...\\
-    & \vdots & \\
-    \psi_{p-1}(u^p) &= a_{-2}u^p+a_{-(p+2)}u^{2p}+...\\
-  \end{align*}
+  \path[dashed]
+  (m-2-2) edge [bend right=20] node[descr]{$t^{p-1}\psi_{p-1}(t^{p})$} (m-2-8)
+  (m-2-8) edge [bend right=20] (m-2-14)
+  (m-2-14) edge [bend right=20] (m-3-15);
+\end{tikzpicture}
+\end{center}
+also:\\
+\begin{align*}
+\psi_0(t^p) &= a_{-(p+1)}t^{-p}+a_{-(2p+1)}t^{-2p}+...\\
+\psi_1(t^p) &= a_{-p}t^{-p}+a_{-2p}t^{2p}+...\\
+& \vdots & \\
+\psi_{p-1}(t^p) &= a_{-2}t^p+a_{-(p+2)}t^{2p}+...\\
+\end{align*}
 \end{landscape}
