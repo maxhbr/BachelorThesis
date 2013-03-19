@@ -154,6 +154,54 @@ Finde nun das Newton-Polygon mit den Slopes $\cP(\cM_{\phi_1})$
 \end{center}
 \end{figure}
 
+\subsection{Levelt-Turittin-Zerlegung für $\phi_1$}
+\begin{comment}
+Zeige zunächst: ist noch nicht zerlegt!\\
+% ist das nötig?
+Es ist $\cM_{\phi_1}\bydef \cD_{\hat K}/\cD_{\hat K}\cdot P_{}\phi_1}$. Wäre
+dieser bereits Zerlegt, also gleich einem Elementarem Meromorphen Zusammenhang,
+so müsste es $\rho\in t\Cft$, $\phi\in\hat L$ und $R$ geben, so dass
+$\cM_{\phi_1}\cong El(\rho,\phi,R)=\rho_+(\sE^\phi\otimes R)$.
+\end{comment}
+\begin{comment}
+vergleiche mit \cite[Proof of theorem 5.4.7]{sabbah_cimpa90}\\
+was ist $\sigma_L(P)\in \hat K[\xi]$?
+\end{comment}
+$\cM_{\phi_1}$ hat genau den Slope $\frac{1}{2}$ mit Nenner $2$.\\
+Sei $\rho:t\mapsto x:=t^2$ und betrachte 
+\begin{align*}
+\rho^+\cM_{\phi_1} &= \rho^+\Big( \cD_{\hat K}/\cD_{\hat
+  K}\cdot(a-2x^2\partial_x -x^3\partial_x^2) \Big) \\
+&= \cD_{\hat L}/\cD_{\hat L}\cdot(a-2\rho(t)^2(\rho'(t)^{-1}\partial_t)
+  -\rho(t)^3(\rho'(t)^{-1}\partial_t)^2)\\
+&= \cD_{\hat L}/\cD_{\hat L}\cdot(a-2t^4(\frac{1}{2}t^{-1}\partial_t)
+  -t^6(\frac{1}{2}t^{-1}\partial_t)^2)\\
+&= \cD_{\hat L}/\cD_{\hat L}\cdot(a-t^3\partial_t
+  -\frac{1}{4}t^6(t^{-1}\underbracket{\partial_tt^{-1}}\partial_t))\\
+&= \cD_{\hat L}/\cD_{\hat L}\cdot(a-t^3\partial_t
+  -\frac{1}{4}t^6(t^{-1}\overbracket{(t^{-1}\partial_t +
+  [\partial_t,t^{-1}])}\partial_t))\\
+&= \cD_{\hat L}/\cD_{\hat L}\cdot(a-t^3\partial_t
+  -\frac{1}{4}t^6(t^{-1}(t^{-1}\partial_t -t^{-2})\partial_t))\\
+&= \cD_{\hat L}/\cD_{\hat L}\cdot(a-t^3\partial_t
+  -\frac{1}{4}t^6(t^{-2}\partial_t^2 -t^{-1}t^{-2}\partial_t))\\
+&= \cD_{\hat L}/\cD_{\hat L}\cdot(a-t^3\partial_t
+  -\frac{1}{4}t^4\partial_t^2+\frac{1}{4}t^{3}\partial_t)\\
+&= \cD_{\hat L}/\cD_{\hat L}\cdot(a-\frac{3}{4}t^3\partial_t
+  -\frac{1}{4}t^4\partial_t^2)\\
+\end{align*}
+\begin{figure}[H]
+\caption{Newton Polygon zu $\rho^*P_{\phi_1}$}
+\begin{center}
+\fbox{
+  \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
+  \def\myPoints{0/0,1/2,2/2}
+  \myinput{myNewtonPoly.sty}
+  \end{tikzpicture}
+}
+\end{center}
+\end{figure}
+
 \section{Angewendet für $\phi_2:=\frac{a}{x^2}$}
 \textbf{also für $\phi_2:=\frac{a}{x^2}$} ist
 \begin{align*}

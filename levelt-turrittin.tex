@@ -8,12 +8,12 @@ Quellen:\\
 sabbah\_cimpa90 seite 28 / 30 / 35
 
 \begin{thm}[Levelt-Turittin]
-Es ex. endliche Körper $\hat{L}|\hat{K}$ mit $\hat{L}=\C((u))$ mit
-$\hat{K}\hookrightarrow\hat{L},x\mapsto u^p$ so dass:
+Es ex. endliche Körper $\hat{L}|\hat{K}$ mit $\hat{L}=\Cftl$ mit
+$t\mapsto x:=t^p$ so dass:
 \[
 \hat{M}\otimes_{\hat{K}}\hat{L}=\bigoplus_{i=1}^r\hat{M}_i
 \]
-mit $#\slopes(\hat{M}_i)=1 \forall i$ bzw. genauer
+mit $\#\slopes(\hat{M}_i)=1 \forall i$ bzw. genauer
 $\hat{M}_i=\xi^{\phi_i}\otimes R$
 \end{thm}
 
@@ -26,7 +26,7 @@ mit
 \]
 und 
 \begin{itemize}
-\item $\dim_L\xi^{\phi_j}=1$, $\phi_j\in \C[u^{-1}]\cdot u^{-1}$
+\item $\dim_L\xi^{\phi_j}=1$, $\phi_j\in \C[x^{-1}]\cdot x^{-1}$
 \item R regulär singulär, also mit $\slopes=\{0\}$ % oder ={k} ??
 \end{itemize}
 \end{thm}
@@ -50,12 +50,13 @@ Es existiert eine Aufteilung $P=P_1P_2$ mit:
 \end{lem}
 \end{comment}
 
-\section{Klassische Definition}
+\section{Klassische Version}
 \begin{thm}
 \cite[Thm 5.4.7]{sabbah_cimpa90}
 Sie $\cM_{\hat K}$ ein formaler Meromorpher Zusammenhang. So gibt es eine
-ganze Zahl $q$ so dass der Zusammenhang $\pi^*\cM_{\hat K}=\cM_{\hat L}$
-isomorph zu einer direkten Summe von elementaren Meromorphen Zusammenhänge
+ganze Zahl $p$ so dass der Zusammenhang $\cM_{\hat L}:=\rho^+\cM_{\hat K}$,
+mit $\rho:t\mapsto x:=t^p$, isomorph zu einer direkten Summe von elementaren
+Meromorphen Zusammenhänge
 ist.
 \end{thm}
 \begin{proof}
@@ -66,10 +67,10 @@ ist.
 \begin{prop}
 \cite[Prop 3.1]{sabbah_Fourier-local}
 Jeder irreduzible endlich dimensionale formale Meromorphe Zusammenhang
-$\cM_{\hat K}$ ist isomorph zu $\rho_+(\sE^\phi\otimes L)$, wobei $\phi\in
-u^{-1}\C[u^-1]$, $\rho:u\mapsto t=u^p$ mit grad $p\geq1$ minimal bzgl. $\phi$
-(siehe \cite[Rem 2.8]{sabbah_Fourier-local}), und $L$ ist ein Rang $1$
-$\Cful$-Vektor Raum mit regulärem Zusammenhang.
+$\cM_{\hat L}$ ist isomorph zu $\rho_+(\sE^\phi\otimes_{\hat K} S)$, wobei
+$\phi\in x^{-1}\C[x^-1]$, $\rho:x\mapsto t=x^p$ mit grad $p\geq1$ minimal bzgl.
+$\phi$ (siehe \cite[Rem 2.8]{sabbah_Fourier-local}), und $S$ ist ein Rang $1$
+$\hat K$-Vektor Raum mit regulärem Zusammenhang.
 \end{prop}
 \begin{proof}
 \cite[Prop 3.1]{sabbah_Fourier-local}
@@ -79,10 +80,13 @@ $\Cful$-Vektor Raum mit regulärem Zusammenhang.
 \cite[Cor 3.3]{sabbah_Fourier-local}
 Jeder endlich dimensionale Meromorphe Zusammenhang $\cM_{\hat K}$ kann in
 eindutiger weiße geschrieben werden als direkte Summe $\bigoplus
-El(\rho,\phi,R)\underset{\mbox{def}}{=}\rho_+(\sE^\phi)\otimes R$, so dass
+El(\rho,\phi,R)\bydef\rho_+(\sE^\phi)\otimes R$, so dass
 jedes $\rho_+\sE^\phi$ irreduzibel ist und keine zwei $\rho_+\sE^\phi$ isomorph
 sind.
 \end{thm}
+\begin{comment}
+In welchem Raum ist $\cM$ ?? in $L$ oder in $K$
+\end{comment}
 \begin{proof}
 \cite[Cor 3.3]{sabbah_Fourier-local}
 \end{proof}

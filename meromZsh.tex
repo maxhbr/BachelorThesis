@@ -464,6 +464,46 @@ hat, so gilt $\cP(\cM_K)=\cP({\cM'}_K)\cup\cP({\cM''}_K)$.
 \end{enumerate}
 \end{lem}
 
+\subsection{Die Filtrierung $\,^LV\cD_{\hat K}$ und das $L$-Symbol}
+Sei $\Lambda=\frac{\lambda_0}{\lambda_1}\in \Q_{\geq 0}$ vollständig gekürtzt,
+also mit $\lambda_0$ und $\lambda_1$ in $\N$ relativ prim Definiere die
+Linearform $L(s_0,s_1)=\lambda_0s_0+\lambda_1s_1$ in zwei Variablen, Sei
+$P\in\cD_{\hat K}$.  Falls $P=x^a\partial_x^b$ mit $a\in \Z$ und $b\in \N$
+setzen wir
+\[
+\ord_L(P)=L(b,b-a)
+\]
+und falls $P=\sum_{i=0}^d b_i(x)\partial_x^i$ mit $b_i\in\hat K$ setzen wir
+\[
+\ord_L(P)=\max_{\{i\mid a_i\neq 0\}} L(i,i-v(b_i))\,.
+%Hier ist ein fehler im Sabbah script a_i <-> b_i
+\]
+\begin{defn}[Die Filtrierung $\,^LV\cD_{\hat K}$]
+\cite[Seite 25]{sabbah_cimpa90}
+Nun können wir die aufsteigende Filtration $\,^LV\cD_{\hat K}$, welche mit $\Z$
+indiziert ist, durch
+\[
+\,^LV_\lambda\cD_{\hat K}:=\{P\in\cD_{\hat K}\mid \ord_L(P)\leq \lambda\}
+\]
+definieren.
+\end{defn}
+\begin{bem}
+Man hat $\ord_L(PQ)=\ord_L(P)+\ord_L(Q)$ und falls $\lambda_0\neq 0$ hat man
+auch, dass $\ord_L([P,Q])\leq \ord_L(P)+\ord_L(Q)-1$.
+\end{bem}
+\begin{defn}[$L$-Symbol]
+\cite[Seite 25]{sabbah_cimpa90}
+Falls $\lambda_0\neq 0$ ist der graduierte Ring $gr^{\,^LV}\cD_{\hat K}\bydef
+\bigoplus_{\lambda \in \Z}gr_\lambda^{\,^LV}\cD_{\hat K}$ ein kommutativer
+Ring. Bezeichne die Klasse von $\partial_x$ in dem Ring durch $\xi$, dann ist
+der Ring isomorph zu $\hat K[\xi]$.
+%
+Sei $P\in \cD_{\hat K}$, so ist $\sigma_L(P)$ definiert als die Klasse von $P$
+in $gr_{\ord_L(P)}^{\,^LV}\cD_{\hat K}$. $\sigma_L$ wir hierbei als das
+$L$-Symbol Bezeichnet.
+\end{defn}
+Zum Beispiel ist $\sigma_L(x^a\partial_x^b)=x^a\xi^b$.
+
 \section{Formale Meromorphe Zusammenhänge}
 %
 %Definiere $ \hat\cD[x^{-1}]=\cD_\Cfx[x^{-1}]=\hat K<\partial_x>=:\cD_{\hat K}
@@ -491,13 +531,13 @@ Zusammenhänge. Im besonderen existiert für jedes $\cM_{\hat K}$ ein ein $P\in
 \begin{thm}
 \cite[Thm 5.3.1]{sabbah_cimpa90} \cite[5.15]{ZulaBarbara}
 Sei $\cM_{\hat{K}}$ ein formaler Meromorpher Zusammenhang und sei
-$\cP(\cM_{\hat K})=\{L^{(1)},\dots,L^{(r)}\}$ die Menge seiner slopes. Es
-exisitiert eine (bis auf Permutation) eindutige Zerlegung
+$\cP(\cM_{\hat K})=\{\Lambda_1,\dots,\Lambda_r\}$ die Menge seiner
+slopes. Es exisitiert eine (bis auf Permutation) eindutige Zerlegung
 \[
 \cM_{\hat K}=\bigoplus_{i=1}^r\cM_{\hat K}^{(i)}
 \]
 in formale Meromorphe Zusammenhänge
-mit $\cP(\cM_{\hat K}^{(i)})=\{L^{(i)}\}$.
+mit $\cP(\cM_{\hat K}^{(i)})=\{\Lambda_i\}$.
 \end{thm}
 \begin{proof}
 \cite[Thm 5.3.1]{sabbah_cimpa90} oder \cite[5.15]{ZulaBarbara}
