@@ -76,7 +76,6 @@ myNewtonPoly.sty:          %TODO
 myNewtonPoly.sty:          %TODO
 rezept.tex:-\partial_z(f)\cdot z^2= %TODO: wegen klammerung?
 rezept.tex:%TODO: induktion
-rezept.tex:%TODO: BESSER:???
 titel.tex:%TODO; titelpage bitte nicht seitlich versetzt
 trash/meromZsh.tex:  %TODO: auch nicht formal
 workflow:  grep -r --exclude='TODO' "TODO" * > TODO
