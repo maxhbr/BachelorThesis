@@ -33,22 +33,26 @@ Q(x,\partial_x):=F_P(x^{-1},-x^2\partial_x)\cdot \mbox{Hauptnenner
 \end{enumerate}
 \end{comment}
 
+\begin{comment}
+\cite[5.b.]{sabbah_Fourier-local}
+\end{comment}
 Hier wollen wir nun eine Spezielle Klasse von Meromorphen Zusammenhängen, die
 die durch das folgende Rezept entstehen.
 \begin{enumerate}
 \item Wähle zunächst ein $\phi$
-$\in=
-  \{\phi=\sum_{k\in I}\frac{a_k}{t^{k}}|I\subset\N\mbox{ endlich},a_k\in \C\}$ 
+$\in\{\phi=\sum_{k\in I}\frac{a_k}{t^{k}}|I\subset\N\mbox{ endlich},a_k\in \C\}$
 aus 
-\item und definiere dann
+\item und beginne mit $\sE^{\phi}=\cD_{\hat L}/\cD_{\hat L}\cdot \tilde Q$
+mit
 $ \tilde Q(t,\partial_t):=\partial_t-\frac{d}{dt}\phi(t)$
-$\in\C[t][t^{-1}]<\partial_t>$.
+$\in\C[t,t^{-1}]<\partial_t>$.
 \item Wir wollen aber ein Element in $\C[t]<\partial_t>$,
 deshalb multipliziere mit Hauptnenner und erhalte
-\[
-Q(t,\partial_t):=(\partial_t-\frac{d}{dt}\phi(t)) \cdot
-\underset{\in\C[t]}{\underbrace{\mbox{Hauptnenner }}}\in\C[t]<\partial_t>
-\]
+\begin{align*}
+Q(t,\partial_t):&=(\partial_t-\frac{d}{dt}\phi(t)) \cdot
+  \underset{\in\C[t]}{\underbrace{\mbox{Hauptnenner }}}\\
+&=(\partial_t-\frac{d}{dt}\phi(t)) \cdot t^{\max(I)+1} \in\C[t]<\partial_t>
+\end{align*}
 Dies ändert den Assozierten Meromorphen Zusammenhang nicht.
 \begin{comment}
 Lemma?
@@ -65,9 +69,10 @@ Was passiert mit der Ableitung $\partial_x$? Es gilt
 \]
 also $ \partial_x\rightsquigarrow-z^2\partial_z $.
 \[
-P_\phi(x,\partial_x):=F_Q(x^{-1},-x^2\partial_x) \in \C[t]<\partial_t>
+P_\phi(x,\partial_x):=\cF_Q(x^{-1},-x^2\partial_x) \in \C[t]<\partial_t>
 \]
-\item Erhalte den zu $P_\phi$ assoziierten Meromorphen Zusammenhang $\cM_\phi$.
+\item Erhalte den zu $P_\phi$ assoziierten Meromorphen Zusammenhang
+$\cM_\phi=\cD_{\hat K}/\cD_{\hat K}\cdot P_{\phi}$.
 \end{enumerate}
 
 \begin{comment}
@@ -119,16 +124,20 @@ Nun müssen wir noch $(x^2\partial_x)^{k+1}$ besser verstehen.
                       &=(5x^4\partial_x+4x^{5}\partial_x^2
                         +x^6\partial_x^3)
                         (x^2\partial_x)^{k-2}\\
-                      &=\dots \mbox{geschlossene Formel??}
+                      &=\sum_{n=1}^{k+1}\binom{k}{n-1}\frac{(k+1)!}{n!}x^{n+k}
+                        \partial_x^{n}
 %TODO: induktion
 \end{align*}
+\begin{comment}
+Stirlingzahlen
+\end{comment}
 also gilt für spezielle $k$
 \begin{equation} \label{eq:rezeptNeben1}
 (x^2\partial_x)^{k+1}=
 \begin{cases}
-2x^3\partial_x+x^{4}\partial_x^2 & \mbox{ falls } k=1\\
-5x^4\partial_x+4x^{5}\partial_x^2 +x^6\partial_x^3 & \mbox{ falls } k=2\\
-\dots
+  2x^3\partial_x+x^{4}\partial_x^2 & \mbox{ falls } k=1\\
+  5x^4\partial_x+4x^{5}\partial_x^2 +x^6\partial_x^3 & \mbox{ falls } k=2\\
+  \sum_{n=1}^{k+1}\binom{k}{n-1}\frac{(k+1)!}{n!}x^{n+k} \partial_x^{n}
 \end{cases}
 \end{equation}
 
@@ -218,11 +227,6 @@ schreiben, mit $\alpha_0\neq 0$ ...
 \section{Angewendet für $\phi_2:=\frac{a}{x^2}$}
 \textbf{also für $\phi_2:=\frac{a}{x^2}$} ist
 \begin{align*}
-P_{\phi_2} &=2+\frac{1}{x}\underbracket{(x^2\partial_x)^{3}}\\
-           &\overbox{=}{(\ref{eq:rezeptNeben1})}2+\frac{1}{x}
-             \overbracket{(5x^4\partial_x+4x^5\partial_x^2+x^6\partial_x^3)}\\
-           &=2+5x^3\partial_x+4x^{4}\partial_x^2+x^5\partial_x^3\\
-%TODO: BESSER:???
 P_{\phi_2} &=2a+x\partial_x\underbracket{(-x^2\partial_x)^{2}}\\
            &=2a +x\partial_x \overbracket{(2x^3\partial_x+x^4\partial_x^2)} \\
            &=2a 
