@@ -443,19 +443,19 @@ Das Newton Polygon wurde in Abbildung \ref{fig:Newton-Polygon2} visualisiert.
 \fbox{
   \subfloat[Newton Polygon zu $P_1$]{
     \label{fig:Newton-Polygon1}
-    \begin{tikzpicture}
-    \def\myPoints{{(2,-1)}}
-    \def\myPath{(-.5,-1) -- (2,-1) -- (2,2)}
-    \myNewtonPlot{\myPoints}{\myPath}{2}{-2}{2}{$N(P_1)$}
+    \begin{tikzpicture}[scale=1,descr/.style={fill=white,inner sep=2.5pt}]
+    \def\myPoints{2/-1}
+    \def\myPath{-- (0,-1) -- (2,-1)}
+    \myPlotFunction{\myPoints}{\myPath}{2}{-1}{-1}{$N(P_1)$}
     \end{tikzpicture}
   }
   \quad
   \subfloat[Newton Polygon zu $P_2$]{
-    \label{fig:Newton-Polygon2}
-    \begin{tikzpicture} %[scale=1.5]
-    \def\myPoints{{(0,0)}, {(1,-2)}, {(2,-1)}, {(4,0)}}
-    \def\myPath{(-.5,-2) -- (1,-2) -- (4,0) -- (4,2)}
-    \myNewtonPlot{\myPoints}{\myPath}{4}{-2}{2}{$N(P_2)$}
+    \label{fig:Newton-Polygon1}
+    \begin{tikzpicture}[scale=1,descr/.style={fill=white,inner sep=2.5pt}]
+    \def\myPoints{0/0,1/-2,2/-1,4/0}
+    \def\myPath{-- (1,-2) -- node[descr]{$\frac{2}{3}$} (4,0)}
+    \myPlotFunction{\myPoints}{\myPath}{4}{-2}{-1}{$N(P_2)$}
     \end{tikzpicture}
   }
 }
@@ -551,11 +551,13 @@ Zum Beispiel ist $\sigma_L(x^a\partial_x^b)=x^a\xi^b$.
 \begin{bem}
 Ist $P\in \cD_{\hat K}$ geschrieben als
 $P=\sum_i\sum_j\alpha_{ij}x^j\partial_x^i$.
-Wie berechnet man $\sigma_L(P)$? 
+So erhält man $\sigma_L(P)$ durch die Setzung
 \[
-\sigma_L(P)=\sum_{\{(i,j) \mid L(i,i-j)=\ord_L(P)\}}\alpha_{ij}x^j\xi^i
+\sigma_L(P)=\sum_{\{(i,j) \mid L(i,i-j)=\ord_L(P)\}}\alpha_{ij}x^j\xi^i \,.
 \]
 \end{bem}
+\begin{proof}
+\end{proof}
 
 \section{Formale Struktur regulärer Zusammenhänge}
 \cite[Chap 5.2]{sabbah_cimpa90}
@@ -987,13 +989,15 @@ Beginne mit
 \[ \tilde P=\tau\partial_\tau^2+2\partial_\tau-1 \]
 
 \begin{center}
-\begin{tikzpicture}[scale=1.5]
-\def\myPoints{{(0,0)}, {(1,-1)}, {(2,-1)}}
-\def\myPath{(-.5,-1) -- (2,-1) -- (2,1)}
-\myNewtonPlot{\myPoints}{\myPath}{2}{-1}{1}{
-  $N(P) =N(\tau\partial_\tau^2+2\partial_\tau-1)$
+\fbox{
+  \begin{tikzpicture}[scale=1,descr/.style={fill=white,inner sep=2.5pt}]
+  \def\myPoints{0/0, 1/-1, 2/-1}
+  \def\myPath{-- (2,-1)}
+  \myPlotFunction{\myPoints}{\myPath}{2}{-1}{-1}{
+    $N(P) =N(\tau\partial_\tau^2+2\partial_\tau-1)$
+  }
+  \end{tikzpicture}
 }
-\end{tikzpicture}
 \end{center}
 
 und gehe von $\tau$ über zu $t$ via $\tau\rightarrow\frac{1}{t}$:\\
@@ -1071,23 +1075,21 @@ $\rho^*\cM_{\hat K}=\cD_{\hat L}/\cD_{\hat L}
 \fbox{
   \subfloat[Newton Polygon zu\\ $P=x^3\partial_x^2-4x^2\partial_x-1$]{
     \label{fig:Pull-Back1}
-    \begin{tikzpicture}[scale=1.5]
-    \def\myPoints{{(0,0)}, {(1,1)}, {(2,1)}}
-    \def\myPath{(-.5,0) -- (0,0) -- (2,1) -- (2,3)}
-    \myNewtonPlot{\myPoints}{\myPath}{2}{0}{3}{
-      $N(P)$
-    }
+    \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
+    \def\myPoints{0/0, 1/1, 2/1}
+    \def\myPath{-- node[descr]{$\frac{1}{2}$} (2,1)}
+    \myPlotFunction{\myPoints}{\myPath}{2}{0}{2}{$N(P))$}
     \end{tikzpicture}
   }
   \quad
   \subfloat[Newton Polygon zu\\ $\rho^+P=
-\frac{1}{4}t^4\partial_t^2-\frac{1}{2}t^3\partial_t-1)$]
+    \frac{1}{4}t^4\partial_t^2-\frac{1}{2}t^3\partial_t-1)$]
   {
     \label{fig:Pull-Back2}
-    \begin{tikzpicture}[scale=1.5]
-    \def\myPoints{{(0,0)}, {(1,2)}, {(2,2)}}
-    \def\myPath{(-.5,0) -- (0,0) -- (2,2) -- (2,3)}
-    \myNewtonPlot{\myPoints}{\myPath}{2}{0}{3}{$N(\rho^+P)$}
+    \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
+    \def\myPoints{0/0, 1/2, 2/2}
+    \def\myPath{-- node[descr]{$1$} (2,2)}
+    \myPlotFunction{\myPoints}{\myPath}{2}{0}{2}{$N(\rho^*P))$}
     \end{tikzpicture}
   }
 }
@@ -1126,19 +1128,19 @@ $\rho'(t)^{-1}\partial_t$.
 \fbox{
   \subfloat[Newton Polygon zu $P$]{
     \label{fig:Push-Forward1}
-    \begin{tikzpicture}[scale=1.5]
-    \def\myPoints{{(0,-3)}, {(1,-1)}}
-    \def\myPath{(-.5,-3) -- (0,-3) -- (1,-1) -- (1,1)}
-    \myNewtonPlot{\myPoints}{\myPath}{1}{-3}{1}{$N(P)$}
+    \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
+    \def\myPoints{0/-3, 1/-1}
+    \def\myPath{-- (1,-1)}
+    \myPlotFunction{\myPoints}{\myPath}{1}{-3}{-1}{$N(P))$}
     \end{tikzpicture}
   }
   \quad
   \subfloat[Newton Polygon zu $\rho_+P$]{
     \label{fig:Push-Forward2}
-    \begin{tikzpicture}[scale=1.5]
-    \def\myPoints{{(0,-2)}, {(1,-1)}}
-    \def\myPath{(-.5,-2) -- (0,-2) -- (1,-1) -- (1,1)}
-    \myNewtonPlot{\myPoints}{\myPath}{1}{-3}{1}{$N(\rho_+P)$}
+    \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
+    \def\myPoints{0/-2, 1/-1}
+    \def\myPath{-- (1,-1)}
+    \myPlotFunction{\myPoints}{\myPath}{1}{-2}{-1}{$N(\rho_*P))$}
     \end{tikzpicture}
   }
 }

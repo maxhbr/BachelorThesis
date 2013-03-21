@@ -1,0 +1,25 @@
+\newcommand\findExtrema[2]{%
+\luaexec{
+  if maxX == nil then
+    maxX = #1
+  else
+    if maxX > #1 then
+      maxX = #1
+    end
+  end
+  if maxY == nil then
+    maxY = #2
+  else
+    if maxY > #2 then
+      maxY = #2
+    end
+  end
+  if minY == nil then
+    minY = #2
+  else
+    if minY < #2 then
+      minY = #2
+    end
+  end
+}}
+

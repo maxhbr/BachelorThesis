@@ -1,0 +1,44 @@
+%\usepackage{calc}
+%\usepackage{ifthen}
+\usepackage{fp}
+\newcommand{\myPlotFunction}[6]{
+  \iftrue
+    \FPset\myMaxX{#3}
+    \FPset\myMinY{#4}
+    %\FPset\myMaxY{#5}
+    \FPmax{\myMaxY}{1}{#5}
+  \else
+    \foreach \x/\y [count=\ii] in \myPoints{
+      \ifnum\ii=1
+        \FPeval\myMaxX{\x}
+        \FPeval\myMinY{\y}
+        \FPeval\myMaxY{\y}
+      \else
+        \FPmax\myMaxX\x\myMaxX
+        \FPmin\myMinY\y\myMinY
+        \FPmax\myMaxY\y\myMaxY
+      \fi
+    }
+    \FPmax{\myMaxY}{1}{\myMaxY}
+  \fi
+
+  %%axis
+  \draw[->] (-.5,0) -- (\myMaxX+.2,0) node[below]{$u$};
+  \draw[->] (0,\myMinY-.2) -- (0,\myMaxY+.7) node[left]{$v$};
+  \draw (1,0) -- (1,-.1);
+  \draw (0,1) -- (-.1,1);
+
+  %%rectangle
+  \foreach \x/\y in #1
+    { \fill[blue,opacity=.2] (-.5,\myMaxY+.5) rectangle (\x,\y); }
+
+  %%path
+  \draw[color=black,thick] (-.5,\myMinY) --(0,\myMinY) #2 
+    -- (\myMaxX,\myMaxY+.5);
+
+  %%nodes
+  \foreach \x/\y in #1
+    { \node[draw,circle,inner sep=1.5pt,fill=white] at (\x,\y) {}; }
+
+  \node [below right] at (#3,#5/2) {#6};
+}

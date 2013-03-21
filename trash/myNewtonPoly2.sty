@@ -1,23 +1,16 @@
+{
 \foreach \x/\y [count=\ii] in \myPoints{
   \ifnum\ii=1
-    \xdef\myMinY{\y}
-    \xdef\myMaxY{\y}
-    \xdef\myMaxX{\x}
+    \FPeval\myMaxX{\x}
+    \FPeval\myMinY{\y}
+    \FPeval\myMaxY{\y}
   \else
-    \ifnum\myMinY>\y
-      \xdef\myMinY{\y}
-    \fi
-    \ifnum\myMaxY<\y
-      \xdef\myMaxY{\y}
-    \fi
-    \ifnum\myMaxX<\x
-      \xdef\myMaxX{\x}
-    \fi
+    \FPmax\myMaxX\x\myMaxX
+    \FPmin\myMinY\y\myMinY
+    \FPmax\myMaxY\y\myMaxY
   \fi
 }
-\ifnum\myMaxY<1
-  \xdef\myMaxY{1}
-\fi
+\FPmax{\myMaxY}{1}{\myMaxY}
 
 %%axis
 \draw[->] (-.5,0) -- (\myMaxX+.2,0);
@@ -104,3 +97,4 @@
 %%nodes
 \foreach \x/\y in \myPoints
   { \node[draw,circle,inner sep=1.5pt,fill=white] at (\x,\y) {}; }
+}
