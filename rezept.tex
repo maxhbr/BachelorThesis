@@ -158,7 +158,7 @@ Finde nun das Newton-Polygon mit den Slopes $\cP(\cM_{\phi_1})$
   \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
   \def\myPoints{0/0,1/1,2/1}
   \def\myPath{ -- node[descr]{$\frac{1}{2}$} (2,1)}
-  \myPlotFunction{\myPoints}{\myPath}{2}{0}{1}{}
+  \myPlotFunction{\myPoints}{\myPath}{2}{0}{1}{$N(P_{\phi_1})$}
   \end{tikzpicture}
 }
 \end{center}
@@ -204,7 +204,7 @@ Sei $\rho:t\mapsto x:=t^2$ und betrachte
   \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
   \def\myPoints{0/0,1/2,2/2}
   \def\myPath{ -- node[descr]{$1$} (2,2)}
-  \myPlotFunction{\myPoints}{\myPath}{2}{0}{2}{}
+  \myPlotFunction{\myPoints}{\myPath}{2}{0}{2}{$N(\rho^*P_{\phi_1})$}
   \end{tikzpicture}
 }
 \end{center}
@@ -236,8 +236,11 @@ schreiben, welches wir als nächstes faktorisieren
 &=-\frac{1}{4}
   (\theta-\underset{=:\beta_0}{\underbrace{2\sqrt{a}}})(\theta+2\sqrt{a})
 \end{align*}
+Dies geht, weil $\hat K[\xi]$ kommutativ ist.
 Setze $R(z):=(\beta_0/(\lambda_0+1))z^{\lambda_0+1}=\sqrt{a}z^2$ und betrachte
 $\rho^+\cM_{\phi_1}\otimes\cF_{\hat K}^R$.
+
+für $\cF_{\hat K}^R$ siehe \cite[5.4.4]{sabbah_cimpa90}
 
 \section{Angewendet für $\phi_2:=\frac{a}{x^2}$}
 \textbf{also für $\phi_2:=\frac{a}{x^2}$} ist

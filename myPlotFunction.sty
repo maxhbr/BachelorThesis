@@ -5,7 +5,6 @@
   \iftrue
     \FPset\myMaxX{#3}
     \FPset\myMinY{#4}
-    %\FPset\myMaxY{#5}
     \FPmax{\myMaxY}{1}{#5}
   \else
     \foreach \x/\y [count=\ii] in \myPoints{
@@ -33,12 +32,12 @@
     { \fill[blue,opacity=.2] (-.5,\myMaxY+.5) rectangle (\x,\y); }
 
   %%path
-  \draw[color=black,thick] (-.5,\myMinY) --(0,\myMinY) #2 
+  \draw[color=purple,thick] (-.5,\myMinY) --(0,\myMinY) #2 
     -- (\myMaxX,\myMaxY+.5);
 
   %%nodes
   \foreach \x/\y in #1
     { \node[draw,circle,inner sep=1.5pt,fill=white] at (\x,\y) {}; }
-
-  \node [below right] at (#3,#5/2) {#6};
+  %%Text
+  \node [below right] at (#3,#5) {#6};
 }

@@ -70,14 +70,16 @@ meromZsh.tex:%TODO: nummer aus der referenz ist falsch
 meromZsh.tex:%TODO: nummer aus der referenz ist falsch
 meromZsh.tex:  & \mbox{(Rechenregeln Tensorprodukt)}\\ %TODO: hinzufügen
 meromZsh.tex:TODO: beispiel aus \cite{ZulaBarbara}
-myNewtonPlot.sty:            %TODO
-myNewtonPlot.sty:            %TODO
-myNewtonPoly.sty:          %TODO
-myNewtonPoly.sty:          %TODO
 rezept.tex:-\partial_z(f)\cdot z^2= %TODO: wegen klammerung?
 rezept.tex:%TODO: induktion
 titel.tex:%TODO; titelpage bitte nicht seitlich versetzt
+trash/myNewtonPoly2.sty:          %TODO
+trash/myNewtonPoly2.sty:          %TODO
 trash/meromZsh.tex:  %TODO: auch nicht formal
+trash/myNewtonPlot.sty:            %TODO
+trash/myNewtonPlot.sty:            %TODO
+trash/myNewtonPoly.sty:          %TODO
+trash/myNewtonPoly.sty:          %TODO
 workflow:  grep -r --exclude='TODO' "TODO" * > TODO
 workflow:  wc -l TODO
 workflow:      grep -r --exclude='TODO' "TODO" * > TODO
