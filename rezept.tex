@@ -2,7 +2,7 @@
 \chapter{DIE Klasse der Fourier-Transformationen}
 In diesem Kapittel werden Beispiele einer speziellen Klasse von $\cD$-Moduln
 diskutiert. Dazu wird im folgendem zu 2 Beispielen explizit der Beweis aus
-\cite{sabbah_cimpa90} zur Levelt-Turrittin-Zerlegung nachvollzogen. 
+\cite{sabbah_cimpa90} zur Levelt-Turrittin-Zerlegung nachvollzogen.
 \begin{comment}
 Eine weitere
 explizite Berechnung findet sich bei \cite[5.b oder 5.c]{sabbah_cimpa90}.
@@ -41,7 +41,7 @@ die durch das folgende Rezept entstehen.
 \begin{enumerate}
 \item Wähle zunächst ein $\phi$
 $\in\{\phi=\sum_{k\in I}\frac{a_k}{t^{k}}|I\subset\N\mbox{ endlich},a_k\in \C\}$
-aus 
+aus
 \item und beginne mit $\sE^{\phi}=\cD_{\hat L}/\cD_{\hat L}\cdot \tilde Q$
 mit
 $ \tilde Q(t,\partial_t):=\partial_t-\frac{d}{dt}\phi(t)$
@@ -49,10 +49,15 @@ $\in\C[t,t^{-1}]<\partial_t>$.
 \item Wir wollen aber ein Element in $\C[t]<\partial_t>$,
 deshalb multipliziere mit Hauptnenner und erhalte
 \begin{align*}
-Q(t,\partial_t):&=(\partial_t-\frac{d}{dt}\phi(t)) \cdot
-  \underset{\in\C[t]}{\underbrace{\mbox{Hauptnenner }}}\\
-&=(\partial_t-\frac{d}{dt}\phi(t)) \cdot t^{\max(I)+1} \in\C[t]<\partial_t>
+\cD_{\hat L}\cdot \tilde Q(t,\partial_t)
+  &=\cD_{\hat L}\cdot (\underset{\in\C[t]\subset\cD_{\hat L}^*}
+    {\underbrace{\mbox{Hauptnenner }}}
+  \cdot (\partial_t-\frac{d}{dt}\phi(t))) \\
+&=\cD_{\hat L}\cdot ( \underset{=:Q(t,\partial_t)}{\underbrace{
+  t^{\max(I)+1} \cdot (\partial_t-\frac{d}{dt}\phi(t))}}) 
+  & & \vartriangleleft\cD_{\hat L}
 \end{align*}
+mit $Q\in\C[t]<\partial_t>$.
 Dies ändert den Assozierten Meromorphen Zusammenhang nicht.
 \begin{comment}
 Lemma?
@@ -140,6 +145,23 @@ also gilt für spezielle $k$
   \sum_{n=1}^{k+1}\binom{k}{n-1}\frac{(k+1)!}{n!}x^{n+k} \partial_x^{n}
 \end{cases}
 \end{equation}
+Also
+\begin{align*}
+P_{\phi}(x,\partial_x)
+  &=x\partial_x(-1)^{\max(I)}
+    \sum_{n=1}^{\max(I)}\binom{\max(I)-1}{n-1}
+    \frac{(\max(I))!}{n!}x^{n+\max(I)-1} \partial_x^{n}\\
+  &\qquad+\sum_{k\in I}k a_k(-1)^{\max(I)-k}
+    \sum_{n=1}^{\max(I)-k}\binom{\max(I)-k-1}{n-1}
+    \frac{(\max(I)-k)!}{n!}x^{n+\max(I)-k-1} \partial_x^{n}
+\end{align*}
+
+\section{Allgemein für $\phi=\frac{a}{t^q}$}
+Es ist 
+\begin{align*}
+\sE^\phi &= \cD_{\hat L}/\cD_{\hat L}\cdot(\partial_t+q\frac{a}{t^{q+1}})\\
+  &= \cD_{\hat L}/\cD_{\hat L}\cdot(t^{q+1}\partial_t+qa)\\
+\end{align*}
 
 \section{Angewendet für $\phi_1:=\frac{a}{x}$}
 Das wohl einfachste Beispiel ist $\cM_{\phi_1}$ bezüglich
@@ -178,7 +200,7 @@ vergleiche mit \cite[Proof of theorem 5.4.7]{sabbah_cimpa90}\\
 was ist $\sigma_L(P)\in \hat K[\xi]$?
 \end{comment}
 $\cM_{\phi_1}$ hat genau den Slope $\frac{1}{2}$ mit Nenner $2$.\\
-Sei $\rho:t\mapsto x:=t^2$ und betrachte 
+Sei $\rho:t\mapsto x:=t^2$ und betrachte
 \begin{align*}
 \rho^+\cM_{\phi_1} &= \rho^+\Big( \cD_{\hat K}/\cD_{\hat
   K}\cdot(a-2x^2\partial_x -x^3\partial_x^2) \Big) \\
@@ -213,25 +235,25 @@ Sei $\rho:t\mapsto x:=t^2$ und betrachte
 Ab hier nochmal neu / verbessern!\\
 wechselt variable t |-> x
 \end{comment}
-Nun hat $\rho^*P$ nur noch den Slope
+Nun hat $\rho^*P_{\phi_1}$ nur noch den Slope
 $1=\frac{1}{1}=:\frac{\lambda_0}{\lambda_1}$ und definiere damit die Linearform
 $L(s_0,s_1)=\lambda_0s_0+\lambda_1s_1$.  Berechne nun die \emph{Determinanten
 Gleichung} $\sigma_L(\rho^*P_{\phi_1})\in \hat
-K[\xi]$ von $\rho^*P$. 
+K[\xi]$ von $\rho^*P_{\phi_1}$.
 \begin{align*}
-\sigma_L(\rho^*P) 
-&= \sum_{\{(i,j) \mid L(i,i-j)=\ord_L(\rho^*P)\}}\alpha_{ij}x^j\xi^i\\
+\sigma_L(\rho^*P_{\phi_1})
+&= \sum_{\{(i,j) \mid L(i,i-j)=\ord_L(\rho^*P_{\phi_1})\}}\alpha_{ij}x^j\xi^i\\
 &= \sum_{\{(i,j) \mid i + i-j=0\}}\alpha_{ij}x^j\xi^i\\
-&= a-\frac{1}{4}t^4\xi^2
+&= a-\frac{1}{4}x^4\xi^2
 \end{align*}
-Setze $\theta=x^{\lambda_0+\lambda_1}\xi^{\lambda_1}=x^2\xi$ so können wir 
+Setze $\theta=x^{\lambda_0+\lambda_1}\xi^{\lambda_1}=x^2\xi$ so können wir
 \begin{align*}
-\sigma_L(\rho^*P) &= \sum_{k\geq 0}\alpha_k\theta^k\\
+\sigma_L(\rho^*P_{\phi_1}) &= \sum_{k\geq 0}\alpha_k\theta^k\\
 &= a-\frac{1}{4}\theta^2
 \end{align*}
 schreiben, welches wir als nächstes faktorisieren
 \begin{align*}
-\sigma_L(\rho^*P) &= a-\frac{1}{4}\theta^2\\
+\sigma_L(\rho^*P_{\phi_1}) &= a-\frac{1}{4}\theta^2\\
 &=-\frac{1}{4}(\theta^2-4a)\\
 &=-\frac{1}{4}
   (\theta-\underset{=:\beta_0}{\underbrace{2\sqrt{a}}})(\theta+2\sqrt{a})
@@ -242,13 +264,14 @@ $\rho^+\cM_{\phi_1}\otimes\cF_{\hat K}^R$.
 
 \section{Angewendet für $\phi_2:=\frac{a}{x^2}$}
 \textbf{also für $\phi_2:=\frac{a}{x^2}$} ist
-\begin{align*}
+\begin{align*}                                                                       !
+xn+max(I)k1
 P_{\phi_2} &=2a+x\partial_x\underbracket{(-x^2\partial_x)^{2}}\\
            &=2a +x\partial_x \overbracket{(2x^3\partial_x+x^4\partial_x^2)} \\
-           &=2a 
+           &=2a
              +2x\underbracket{\partial_xx^3}\partial_x
              +x\underbracket{\partial_xx^4}\partial_x^2 \\
-           &=2a 
+           &=2a
              +2x\overbracket{(3x^2+x^3\partial_x)}\partial_x
              +x\overbracket{(4x^3+x^4\partial_x)}\partial_x^2 \\
            &=2a+5x^3\partial_x+4x^{4}\partial_x^2+x^5\partial_x^3
@@ -268,7 +291,7 @@ P_{\phi_2} &=2a+x\partial_x\underbracket{(-x^2\partial_x)^{2}}\\
 
 \subsection{Levelt-Turrittin-Zerlegung für $\phi_2$}
 $\cM_{\phi_2}$ hat genau den Slope $\frac{2}{3}$ mit Nenner $3$.\\
-Sei $\rho:t\mapsto x:=t^3$ und betrachte 
+Sei $\rho:t\mapsto x:=t^3$ und betrachte
 \begin{align*}
 \rho^+\cM_{\phi_1} &= \rho^+\Big( \cD_{\hat K}/\cD_{\hat
   K}\cdot(2a+5x^3\partial_x+4x^{4}\partial_x^2+x^5\partial_x^3) \Big) \\
@@ -354,7 +377,32 @@ Sei $\rho:t\mapsto x:=t^3$ und betrachte
 }
 \end{center}
 \end{figure}
-$\rho^*\cM_{\phi_2}$ hat genau den Slope $2$.
+Nun hat $\rho^*\cM_{\phi_2}$ nur noch den Slope
+$2=\frac{2}{1}=:\frac{\lambda_0}{\lambda_1}$ und definiere damit die Linearform
+$L(s_0,s_1)=\lambda_0s_0+\lambda_1s_1$.  Berechne nun die \emph{Determinanten
+Gleichung} $\sigma_L(\rho^*P_{\phi_2})\in \hat
+K[\xi]$ von $\rho^*P_{\phi_2}$.
+\begin{align*}
+\sigma_L(\rho^*P_{\phi_2})
+&= \sum_{\{(i,j) \mid L(i,i-j)=\ord_L(\rho^*P_{\phi_2})\}}\alpha_{ij}x^j\xi^i\\
+&= \sum_{\{(i,j) \mid 2i + i-j=0\}}\alpha_{ij}x^j\xi^i\\
+&= 2a+\frac{1}{27}x^9\xi^3
+\end{align*}
+Setze $\theta=x^{\lambda_0+\lambda_1}\xi^{\lambda_1}=x^3\xi$ so können wir
+\begin{align*}
+\sigma_L(\rho^*P_{\phi_2}) &= \sum_{k\geq 0}\alpha_k\theta^k\\
+&= 2a+\frac{1}{27}\theta^3
+\end{align*}
+%Dies geht, weil $\hat K[\xi]$ kommutativ ist.
+schreiben, welches wir als nächstes faktorisieren
+\begin{align*}
+\sigma_L(\rho^*P_{\phi_2}) &= 2a+\frac{1}{27}\theta^3\\
+&=\frac{1}{27}(\theta^3-54a)\\
+&=\frac{1}{27}(\theta-?)(\theta-?)(\theta-?)\\
+\end{align*}
+
+Setze $R(z):=(\beta_0/(\lambda_0+1))z^{\lambda_0+1}=\sqrt{??}z^3$ und betrachte
+$\rho^+\cM_{\phi_2}\otimes\cF_{\hat K}^R$.
 
 \section{Angewendet für $\phi_3:=\frac{1}{x}+\frac{1}{x^2}$}
 \textbf{also für $\phi_3:=\frac{1}{x}+\frac{1}{x^2}$} ist
