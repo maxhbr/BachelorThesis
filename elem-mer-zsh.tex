@@ -9,10 +9,24 @@ einführen als Bausteine oder kleinste Meromorphe Zusammenhänge
 in \cite{sabbah_cimpa90} Teil 5.4.4 Seite 34
 \end{comment}
 \begin{defn}
-$\cF_{\hat K}^R$
+Sei $R(z)=\sum_{i=0}^k\alpha_iz^i\in z\C[z]$.
+So ist der Meromorphe Zusammenhang $\cF_{\hat K}^R$ als Vektorraum isomorph zu
+$\hat K$ und hat der Basis $e(R)$.
+Die Wirkung von $x\partial_x$ ist definiert durch
+\[
+x\partial_x(\phi\cdot e(R))=\Big[ (x\frac{\partial \phi}{\partial x}) 
+  +\phi x \frac{\partial R(x^{-1})}{\partial_x} \Big]\cdot e(R)
+\]
+\begin{comment}
+This means that $e(R)$ plays the role of $\exp R(x^{-1})$.
+\end{comment}
 \end{defn}
 \begin{defn}
+Ein Elementarer Meromorpher Zusammenhang (über $\hat K$) ist ein Zusammenhang
+welcher zu 
 $\cF_{\hat K}^R\otimes_{\hat K} \cG_{\hat K}$
+isomorph ist. Wobei hier $\cG_{\hat K}$ ein Elementarer regulärer Meromorpher
+Zusammenhang.
 \end{defn}
 
 \section{Defnintion in \cite{sabbah_Fourier-local}}

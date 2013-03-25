@@ -3,10 +3,11 @@
 
 \chapter{Moduln über $\cD_k$}
 Ich werde hier die Weyl Algebra, wie in \cite[Chapter~1]{sabbah_cimpa90}, in
-einer Veränderlichen einführen. 
-Ab hier sei $k\in \{ \C[x],\Ckx,\Cfx,K,\hat K \}$.
+einer Veränderlichen einführen.
+Wir werden als $k$ immer ein Element aus $\{ \C[x],\Ckx,\Cfx,K,\hat K \}$
+betrachten.
 
-\section{Weyl-Algebra und der Ring $\cD_k$} 
+\section{Weyl-Algebra und der Ring $\cD_k$}
 %TODO: sabah-cimpa90.pdf  seite 3
 %script ginzburg.pdf seite 34 als garbe definiert
 Sei dazu $\frac{\partial}{\partial x}=\partial_x$ der Ableitungsoperator nach
@@ -63,6 +64,13 @@ Siehe \cite[Proposition 1.2.3]{sabbah_cimpa90}
 ein teil des Beweises ist "left as an exersice"
 \end{comment}
 \end{proof}
+\begin{comment}
+Gilt das folgende??
+\[
+\alpha_i(x)\partial_x^i \equiv \frac{\alpha_i}{x^i}(x\partial_x)^i \mod
+F_{i-1}\cD
+\]
+\end{comment}
 
 \begin{comment}
 Besser?:\\
@@ -70,7 +78,7 @@ erst Filtrierung definieren und dadurch dann den Grad?
 \end{comment}
 \begin{defn}
 Sei $P=\sum_{i=0}^na_i(x)\partial_x^i$, wie in Proposition
-\ref{prop:weyl_eindeutige_schreibung}, gegeben, so definiere 
+\ref{prop:weyl_eindeutige_schreibung}, gegeben, so definiere
 \[
 \deg P:=\max\{i|a_i\neq 0\}
 \]
@@ -150,7 +158,7 @@ $\Theta_X$ ein links $\cO_X$-Untermodul, aber kein rechts $\cO_X$-Untermodul ist
 \begin{prop}
 \cite[Exmp 1.1]{ArkhipovDmod}
 Sei $X=\A^1=\C$, $\cO_X=\C[t]$ und $\Theta_X=\C[x]\partial_x$. Wobei $\partial_x$
-als $\partial_x(x^n)=nx^{n-1}$ wirkt. Dann sind die Differentialoperatoren 
+als $\partial_x(x^n)=nx^{n-1}$ wirkt. Dann sind die Differentialoperatoren
 \begin{align*}
 \cD_X &= \C[x,\partial_x], & \mbox{mit} & & \partial_x x-x\partial_x & =1.
 \end{align*}
@@ -170,7 +178,7 @@ Sei $\cD:=\cD_k$ für eines der oben genannten $k$.
 Da $\cD$ ein nichtkommutativer Ring ist, muss man vorsichtig sein und zwischen
 links unr rechts $\cD$-Moduln unterschiden. Wenn ich im folgendem von
 $\cD$-Moduln rede, werde ich mich immer
-%, wie auch \cite[Chapter 1.6.]{arapuraNotes}, 
+%, wie auch \cite[Chapter 1.6.]{arapuraNotes},
 auf links $\cD$-Moduln beziehen.
 
 \begin{exmp}[links $\cD$-Moduln]
@@ -222,7 +230,7 @@ endich dimensionaler Vektorraum ist, so ist schon $\cM=\{0\}$.
 TODO: defn of Car als Charakteristische Varietät
 \end{comment}
 \begin{defn} \cite[Def 3.3.1.]{sabbah_cimpa90}
-Sei $\cM$ lineares Differentialsystem 
+Sei $\cM$ lineares Differentialsystem
 (linear differential system) %TODO: defn
 .  Man sagt, $\cM$ ist holonom, falls $\cM=0$ oder falls $\Car\cM\subset
 \{x=0\}\cup{\xi=0}$.
