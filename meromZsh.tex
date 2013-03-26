@@ -466,6 +466,9 @@ Das Newton Polygon wurde in Abbildung \ref{fig:Newton-Polygon2} visualisiert.
 Für alle $f\in \Ckxl \backslash \{0\}$ gilt allgemein, dass das zu $P\in \cD_{\hat K}$ gehörige
 Newton Polygon, bis auf Verschiebung mit dem von $f\cdot P$ übereinstimmt.
 \end{bem}
+\begin{proof}
+TODO
+\end{proof}
 \begin{lem}
 %TOTO: sabbah redet hier schon immer von \hat K, ist das nötig?
 \cite[5.1]{sabbah_cimpa90} %TODO: genauer
@@ -632,7 +635,11 @@ Sei
 \begin{align*}
 \rho&:\C\rightarrow \C , t\mapsto x:=\rho(t) &\in t\Cft
 \end{align*}
-mit Bewertung $p\geq1$. Hier werden wir immer $\rho(t)=t^p$ für ein $p\in \N$
+mit Bewertung $p\geq1$. 
+\begin{comment}
+TODO: muss das ein Homomorphismus sein? \cite[Seite 130]{coutinho1995primer}
+\end{comment}
+Hier werden wir immer $\rho(t)=t^p$ für ein $p\in \N$
 betrachten. Diese Funktion induziert eine Abbildung
 \begin{align*}
 \rho^*&:\Ckx\hookrightarrow \Ckt, f \mapsto f\circ \rho & \mbox{bzw.} &&
@@ -645,6 +652,9 @@ analog erhalten wir
 \end{align*}
 wobei $L$ (bzw. $\hat L$) eine enldiche Körpererweiterung von $K$ (bzw $\hat
 K$) ist.
+\begin{comment}
+TODO: damit wird $\hat L$ zu einem $\hat K$ Vektorraum.
+\end{comment}
 Sei $\cM_{\hat K}$ ein endlich dimensionaler $\C(\!(t)\!)$ Vektorraum ausgestattet mit
 einem Zusammenhang $\nabla$.
 %
@@ -661,6 +671,10 @@ $\rho^{*}\cM_{\hat K}=\hat L\otimes_{\hat K}\cM_{\hat K}
 \partial_t(1\otimes m):=\rho'(t)\otimes\partial_xm \,.
 \end{equation}
 \end{defn}
+\begin{comment}
+\cite[Seite 130]{coutinho1995primer} Holonomic modules are preserved under
+this construction.
+\end{comment}
 %
 \begin{comment}
 \cite[Page 34]{sabbah_cimpa90}
