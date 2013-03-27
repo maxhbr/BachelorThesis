@@ -5,8 +5,11 @@
 % TODO: Dimension eines Meromorphen Zusammenhang
 \chapter{Meromorphe Zusammenhänge}
 \begin{comment}
-Alle MeromZsh sind $\cD$-Moduln aber nicht andersherum?
+Alle MeromZsh sind holonome lokalisierte $\cD$-Moduln und andersherum
 \end{comment}
+Sei $\cM$ ein $\cD$-Modul ungleich Null von endlichem Typ. Falls die
+links-Multiplikation mit $x$ bijektiv ist, so nennen wir $\cM$ einen
+Meromorphen Zusammenhang. \cite[Chap 4]{sabbah_cimpa90}
 
 \section{Systeme von ODEs und Meromorphe Zusammenhänge}
 %TODO: \tilde cO --> \tilde \cO
@@ -36,9 +39,28 @@ TODO: zeige, das der lösungsraum die eigenschaften von $\cD$-Moduln erfüllt\\
 siehe alternativer Zugang
 \end{comment}
 
+\subsubsection{Alternativer Zugang}
+\begin{comment}
+Sei $P$ ein linearer Differentialoperator mit Koeffizienten in $a_i(x)\in\Ckx$
+geschrieben als $P=\sum^{d}_{i=0}{a_{i}(x)\partial_x^i}$.
+Man sagt eine Funktion $u\in\cF$ ist Lösung von $P$, falls $u$ die Gleichung
+$Pu=0$ erfüllt.
+Man sagt $0$ ist ein singulärer Punkt falls $a_d(0)=0$.
+Falls $0$ kein singulärer Punkt ist, hat $P$ genau $d$ über $\C$ Unabhängige
+Lösungen in $\Ckx$. %TODO: oder \tilde\cO
+\end{comment}
+
+\cite[3.1.1]{sabbah_cimpa90} Sei $\cF$ ein Funktionenraum, auf dem die
+Differentialoperatoren $\cD$ wirken. Ein Element $u\in \cF$ ist Lösung von
+$P\in\cD$ falls $P\cdot u=0$ gilt.
+
+Falls $u$ ein Lösung von $P$ ist, so ist $u$ auch Lösung von $Q\cdot P$ mit
+$Q\in \cD$. Also hängt die Lösung nur vom Links Ideal $\cD\cdot
+P\vartriangleleft\cD$ ab.
+
+\subsection{Meromorphe Zusammenhänge}
 Nun wollen wir dieses Klassische Gebilde nun in die moderne Sprache der
 Meromorphen Zusammenhänge übersetzen.
-
 %\section{Meromorpher Zusammenhang (Definition)}
 %Quelle ist \cite{sabbah_cimpa90}
 \begin{defn}[Meromorpher Zusammenhang] \label{def:merom-zush}
@@ -128,26 +150,7 @@ angeben, durch
 -\sum_{i=1}^na_{ij}(x)e_i \,.
 \end{align*}
 
-\begin{comment}
-\section{Alternativer Zugang}
-Hier wird nun ein alternativer Zugang, wie in \cite[3.1.1]{sabbah_cimpa90},
-präsentiert. Sei $\cF$ ein Funktionenraum, auf dem die Differentialoperatoren
-$\cD$ wirken.
-
-Sei $P$ ein linearer Differentialoperator mit Koeffizienten in $a_i(t)\in\Ckx$
-geschrieben als $P=\sum^{d}_{i=0}{a_{i}(t)\partial_t^i}$.
-Man sagt eine Funktion $u\in\cF$ ist Lösung von $P$, falls $u$ die Gleichung
-$Pu=0$ erfüllt.
-Man sagt $0$ ist ein singulärer Punkt falls $a_d(0)=0$.
-Falls $0$ kein singulärer Punkt ist, hat $P$ genau $d$ über $\C$ Unabhängige
-Lösungen in $\C\{t\}$. %TODO: oder \tilde\cO
-
-Falls $u$ ein Lösung von $P$ ist, so ist $u$ auch Lösung von $Q\cdot P$ mit
-$Q\in \cD$. Also hängt die Lösung nur vom Links Ideal $I$ von $\cD$, welches
-von $P$ erzeugt wird.
-\end{comment}
-
-\section{Eigenschaften}
+\section{Eigenschaften / Äquivalenz zu holonomen lokalisierten $\cD$-Moduln}
 %Hier nun einige Eigenschaften Meromorpher Zusammenhänge.
 \begin{comment}
 \cite[4.2]{sabbah_cimpa90}
@@ -169,7 +172,7 @@ $m,\partial_xm,\dots,\partial_x^{d-1}m$ eine $K$-Basis von $\cM_K$ ist.
 
 \begin{thm}
 \cite[Thm 4.3.2]{sabbah_cimpa90}
-Ein Meromorpher Zusammenhang bestimmt ein $\cD_K$-Modul
+Ein Meromorpher Zusammenhang bestimmt ein holonomes lokalisiertes $\cD_K$-Modul
 und andersherum.
 \end{thm}
 \begin{proof}
