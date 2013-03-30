@@ -3,7 +3,48 @@
 \begin{comment}
 einführen als Bausteine oder kleinste Meromorphe Zusammenhänge
 \end{comment}
+\begin{defn}
+\cite[1.a]{sabbah_Fourier-local}
+Sei $\phi\in\hat K$.
+Wir schreiben $\sE^\phi$ für den (formalen) Rang 1 Vektorraum $\Cfxl \bydef
+\hat K$ ausgestattet mit dem Zusammenhang $\nabla=\partial_x+\partial_x\phi$,
+im speziellen also $\nabla_{\partial_x}1=\partial_x1=\phi'$.\\
+\begin{comment}
+Also
+\begin{align*}
+\sE^\phi=\Cfxl & \overset{\partial_x}{\rightarrow} \Cfxl\\
+1              & \mapsto \phi'(x)\\
+f(x)           & \mapsto f'(x)+f(x)\phi'(x)\\
+\end{align*}
+\end{comment}
+\end{defn}
 
+\begin{bem} \label{bem:FormRang1VR}
+\cite[1.a]{sabbah_Fourier-local}
+Es gilt $\sE^\phi\cong\sE^\psi$ genau dann wenn $\phi\equiv\psi \mod \Cfx$.
+%TODO: hier formal oder konvergent?
+\end{bem}
+%
+\myinput{lemma2-4.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Defnintion von Notizen}
+\begin{defn}
+Ein \emph{Elementarer Meromorpher Zusammenhang} ist ein Zusammenhang $\cM$, für
+den es
+\begin{itemize}
+\item $\psi \in \Cfx$,
+\item $\alpha\in\C$ und
+\item $p\in \N$
+\end{itemize}
+gibt, so dass
+\[
+\cM\cong \sE^{\psi}\otimes R_{\alpha,p}\,,
+\]
+mit $R_{\alpha,p}:=\cD/\cD(x\partial_x-\alpha)^p$, ist.
+\end{defn}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Defnintion in \cite{sabbah_cimpa90}}
 \begin{comment}
 in \cite{sabbah_cimpa90} Teil 5.4.4 Seite 34
@@ -29,29 +70,8 @@ isomorph ist. Wobei hier $\cG_{\hat K}$ ein Elementarer regulärer Meromorpher
 Zusammenhang.
 \end{defn}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Defnintion in \cite{sabbah_Fourier-local}}
-\begin{defn}
-\cite[1.a]{sabbah_Fourier-local}
-Sei $\phi\in\hat K$.
-Wir schreiben $\sE^\phi$ für den (formalen) Rang 1 Vektorraum $\Cfxl \bydef
-\hat K$ ausgestattet mit dem Zusammenhang $\nabla=\partial_x+\partial_x\phi$,
-im speziellen also $\nabla_{\partial_x}1=\partial_x1=\phi'$.\\
-\begin{comment}
-Also
-\begin{align*}
-\sE^\phi=\Cfxl & \overset{\partial_x}{\rightarrow} \Cfxl\\
-1              & \mapsto \phi'(x)\\
-f(x)           & \mapsto f'(x)+f(x)\phi'(x)\\
-\end{align*}
-\end{comment}
-\end{defn}
-
-\begin{bem} \label{bem:FormRang1VR}
-\cite[1.a]{sabbah_Fourier-local}
-Es gilt $\sE^\phi\cong\sE^\psi$ genau dann wenn $\phi\equiv\psi \mod \Cfx$.
-%TODO: hier formal oder konvergent?
-\end{bem}
-
 %TODO: auch nicht formal
 \begin{defn}[Elementarer formaler Zusammenhang]
 \cite[Def 2.1]{sabbah_Fourier-local}
@@ -71,9 +91,6 @@ Bis auf Isomorphismus hängt $El(\rho,\phi,R)$ nur von $\phi\mod\Cft$ ab.
 \begin{lem}
 \cite[Lem 2.2]{sabbah_Fourier-local}
 \end{lem}
-%
-\myinput{lemma2-4.tex}
-%
 \begin{lem} \cite[Lem 2.6.]{sabbah_Fourier-local}
 Es gilt $El([t\mapsto t^p],\phi,R)\cong El([t\mapsto t^p],\psi,S)$ genau dann,
 wenn

@@ -32,9 +32,9 @@ meromZsh.tex:% TODO: Dimension eines Meromorphen Zusammenhang
 meromZsh.tex:%TODO: \tilde cO --> \tilde \cO
 meromZsh.tex:%TODO: partial oder d
 meromZsh.tex:TODO: zeige, das der lösungsraum die eigenschaften von $\cD$-Moduln erfüllt\\
+meromZsh.tex:Lösungen in $\Ckx$. %TODO: oder \tilde\cO
 meromZsh.tex:\partial(fu)=f'u+f\partial u %TODO: hier klammern um das letzte u ?
 meromZsh.tex:assoziierten Meromorphen Zusammenhang $(\cM_A,\partial_A)$ %TODO: improve notation
-meromZsh.tex:Lösungen in $\C\{t\}$. %TODO: oder \tilde\cO
 meromZsh.tex:%TODO: reihenfolge bei sabbah anderst!!!
 meromZsh.tex:%TODO: make this harpoon arrows
 meromZsh.tex:TODO, (3. Treffen)
@@ -43,11 +43,9 @@ meromZsh.tex:TODO, (3. Treffen)
 meromZsh.tex:%TODO: wieso gilt das?
 meromZsh.tex:%TODO: beobachtung...
 meromZsh.tex:%TODO: differenz ist linear
-meromZsh.tex:TODO
 meromZsh.tex:%TODO: bessere formulierung
 meromZsh.tex:%TODO: nummer aus der referenz ist falsch
 meromZsh.tex:TODO
-meromZsh.tex:\cite[5.1]{sabbah_cimpa90} %TODO: genauer
 meromZsh.tex:Wähle einen zyklischen Vektor $m\in\cM_{\hat K}$ % TODO: richtiger Raum?
 meromZsh.tex:TODO
 meromZsh.tex:%TODO: titel: Operations on vector spaces with connection

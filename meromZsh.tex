@@ -296,8 +296,10 @@ r,K)$, so dass $\partial=\frac{d}{dx}-A$.
 \end{cor}
 \begin{proof}
 Es sei $(K^r,\partial)$ ein Meromorpher Zusammenhang.  So ist
-$\frac{d}{dx}-\partial:K^r\rightarrow K^r$ $K$-linear, also es existiert eine
-Matrix $A\in M(r\times r,K)$ mit $\frac{d}{dx}-\partial=A$, also ist, wie
+$\frac{d}{dx}-\partial:K^r\rightarrow K^r$ $K$-linear, also lässt sich durch
+eine Matrix $A\in M(r\times r,K)$ darstellen
+%$\frac{d}{dx}-\partial=A$
+, also ist, wie
 behauptet, $\partial=\frac{d}{dx}-A$.
 \end{proof}
 
@@ -354,9 +356,6 @@ Man nennt $A$ und $B$ \emph{differenziell Äquivalent} ($A\sim B$) genau
 dann, wenn es ein $T\in
 GL(r,K)$ gibt, mit $B=T^{-1}\cdot T'+T^{-1}AT$.
 \end{defn}
-\begin{proof}
-TODO
-\end{proof}
 
 \begin{comment}
 $1=TT^{-1}$ $\rightsquigarrow$ $T'T^{-1}+T(T^{-1})'=0$\\
@@ -390,9 +389,6 @@ P=\sum^{n}_{k=0}a_k\partial_x^k}
 mit $\alpha_{ml}\in\C$ schreiben. Betrachte das zu $P$ dazugehörige
 \[ H(P):=\underset{m,l\mbox{ mit }\alpha_{ml}\neq0}{\bigcup}\Big( (m,l-m) +
 \R_{\leq 0}\times \R_{\geq 0} \Big) \subset \R^2 \,. \]
-\begin{comment}
-Bei Sabbah: $H\subset \N\times\Z$ und dann konvexe Hülle davon in $\R^2$
-\end{comment}
 
 \begin{defn} % aus der zula
 Das Randpolygon der konvexen Hülle $\conv(H(P))$ von $H(P)$ heißt das
@@ -435,6 +431,7 @@ $P_1$ regulär singulär.
 Sei $P_2=x^4(x+1)\partial_x^4+x\partial_x^2+\frac{1}{x}\partial_x+1$ so kann
 man das entsprechende Newton Polygon konstruieren.
 Das Newton Polygon wurde in Abbildung \ref{fig:Newton-Polygon2} visualisiert.
+Man erkennt, dass $\cP(P_2)=\{0,\frac{2}{3}\}$ ist.
 \end{enumerate}
 \end{exmp}
 \begin{figure}[H]
@@ -474,12 +471,28 @@ TODO
 \end{proof}
 \begin{lem}
 %TOTO: sabbah redet hier schon immer von \hat K, ist das nötig?
-\cite[5.1]{sabbah_cimpa90} %TODO: genauer
+\cite[5.1]{sabbah_cimpa90} %Seite 25f
 \begin{enumerate}
 \item $\cP(\cM_K)$ ist nicht Leer, wenn $\cM_K\neq\{0\}$
 \item Wenn man eine exacte Sequenz
 $0\rightarrow{\cM'}_K\rightarrow{\cM}_K\rightarrow{\cM''}_K\rightarrow0$
-hat, so gilt $\cP(\cM_K)=\cP({\cM'}_K)\cup\cP({\cM''}_K)$.
+hat, so gilt $\cP(\cM_K)=\cP({\cM'}_K)\cup\cP({\cM''}_K)$. 
+\begin{comment}
+Siehe auch \cite[Thm 5.3.4]{sabbah_cimpa90}
+
+Dort Steht:\\
+Wir erhalten die Exacte Sequenz
+\[
+0 \rightarrow \cD_{\hat K}/\cD_{\hat K} \cdot P_1
+  \rightarrow \cD_{\hat K}/\cD_{\hat K} \cdot P
+  \rightarrow \cD_{\hat K}/\cD_{\hat K} \cdot P_2
+  \rightarrow 0
+\]
+\begin{cor}
+\cite[Thm 5.3.4]{sabbah_cimpa90}
+$\cP(P)=\cP(P_1)\cup\cP(P_2)$ und $\cP(P_1)\cap\cP(P_2)=\emptyset$
+\end{cor}
+\end{comment}
 % es gibt noch 2 weitere punkte
 \end{enumerate}
 \end{lem}
@@ -498,21 +511,6 @@ mit $\cP(\cM_{\hat K}^{(i)})=\{\Lambda_i\}$.
 \begin{proof}
 \cite[Thm 5.3.1]{sabbah_cimpa90} oder \cite[5.15]{ZulaBarbara}
 \end{proof}
-
-\begin{comment}
-Aussagen, die aus dem Beweis entstehen:\\
-Wir erhalten die Exacte Sequenz
-\[
-0 \rightarrow \cD_{\hat K}/\cD_{\hat K} \cdot P_1
-  \rightarrow \cD_{\hat K}/\cD_{\hat K} \cdot P
-  \rightarrow \cD_{\hat K}/\cD_{\hat K} \cdot P_2
-  \rightarrow 0
-\]
-\begin{cor}
-\cite[Thm 5.3.4]{sabbah_cimpa90}
-$\cP(P)=\cP(P_1)\cup\cP(P_2)$ und $\cP(P_1)\cap\cP(P_2)=\emptyset$
-\end{cor}
-\end{comment}
 
 \subsection{Die Filtrierung $\,^LV\cD_{\hat K}$ und das $L$-Symbol}
 Sei $\Lambda=\frac{\lambda_0}{\lambda_1}\in \Q_{\geq 0}$ vollständig gekürtzt,
@@ -583,16 +581,7 @@ Wenn $L(x_0,s_1)$ wie oben aus $\Lambda$ entstanden ist, so gilt
 
 \section{Formale Struktur regulärer Zusammenhänge}
 \cite[Chap 5.2]{sabbah_cimpa90}
-Sei $\cM_{\hat K}$ ein regulärer Formaler Meromorpher Zusammenhang.
-\begin{lem}
-\cite[Def 5.1.1 Remarks 3.]{sabbah_cimpa90}
-Ein $P=\sum_{i=0}^d a_i(x)(x\partial_x)^i$ mit $a_i\in\Cfx$ ist regulär, genau
-dann wenn der Koeffizient $a_d$ vor dem dominanten Term eine Einheit ist.
-\end{lem}
-\begin{proof}
-
-\end{proof}
-
+Sei $\cM_{\hat K}$ ein regulärer formaler Meromorpher Zusammenhang.
 \begin{lem}
 \cite[Lem 5.2.1.]{sabbah_cimpa90}
 Es existiert eine Basis von $\cM_{\hat K}$ über $\hat K$ mit der Eigenschaften,
@@ -638,7 +627,7 @@ Sei
 \begin{align*}
 \rho&:\C\rightarrow \C , t\mapsto x:=\rho(t) &\in t\Cft
 \end{align*}
-mit Bewertung $p\geq1$. 
+mit Bewertung $p\geq1$.
 \begin{comment}
 TODO: muss das ein Homomorphismus sein? \cite[Seite 130]{coutinho1995primer}
 \end{comment}
