@@ -72,9 +72,7 @@ meromZsh.tex:%TODO: nummer aus der referenz ist falsch
 meromZsh.tex:  & \mbox{(Rechenregeln Tensorprodukt)}\\ %TODO: hinzufügen
 meromZsh.tex:TODO: beispiel aus \cite{ZulaBarbara}
 rezept.tex:-\partial_z(f)\cdot z^2= %TODO: wegen klammerung?
-rezept.tex:%TODO: induktion
-rezept.tex:%TODO: move to Anhang
-rezept.tex:%TODO: induktion
+rezept.tex:TODO: über L-Symbol? Stützfunktion?
 titel.tex:%TODO; titelpage bitte nicht seitlich versetzt
 trash/myNewtonPoly2.sty:          %TODO
 trash/myNewtonPoly2.sty:          %TODO

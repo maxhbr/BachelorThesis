@@ -3,44 +3,14 @@
 In diesem Kapittel werden Beispiele einer speziellen Klasse von $\cD$-Moduln
 diskutiert. Dazu wird im folgendem zu 2 Beispielen explizit der Beweis aus
 \cite{sabbah_cimpa90} zur Levelt-Turrittin-Zerlegung nachvollzogen.
-\begin{comment}
-Eine weitere
-explizite Berechnung findet sich bei \cite[5.b oder 5.c]{sabbah_cimpa90}.
-\end{comment}
 
 \section{Rezept für allgemeine $\phi$} \label{sec:allgemeinProblem}
-
-\begin{comment}
-siehe: \cite[5.b]{sabbah_Fourier-local}
-
-bzeug zu $\sE^\phi$??
-\end{comment}
-
-\begin{comment}
-sei $\phi\in\{\frac{1}{t^k},\frac{1}{t^2}+\frac{1}{t^3},\dots\}$
-\begin{enumerate}
-\item Starte mit: $P(t,\partial_t):=(\partial_t-\frac{d}{dt}\phi(t)) \cdot
-\mbox{Hauptnenner }\in\C[t]<\partial_t>$
-\item Furiertrafo: $F_P(z,\partial_z)=P(\partial_z,-z)\in\C[z]<\partial_z>$
-\item $x=z^{-1}$ und $\partial_x=-z^2\partial_z$ \\
-\[
-Q(x,\partial_x):=F_P(x^{-1},-x^2\partial_x)\cdot \mbox{Hauptnenner
-}\in\C[x]<\partial_x>
-\]
-
-\textbf{Hauptnenner unnötig?!?}
-\item Berechne für $Q$ das NP usw...
-\end{enumerate}
-\end{comment}
-
-\begin{comment}
-\cite[5.b.]{sabbah_Fourier-local}
-\end{comment}
 Hier wollen wir nun eine Spezielle Klasse von Meromorphen Zusammenhängen, die
 die durch das folgende Rezept entstehen.
 \begin{enumerate}
 \item Wähle zunächst ein $\phi$
-$\in\{\phi=\sum_{k\in I}\frac{a_k}{t^{k}}|I\subset\N\mbox{ endlich},a_k\in \C\}$
+$\in\{\phi=\sum_{k\in I}\frac{a_k}{t^{k}}|I\subset\N\mbox{ endlich}
+,a_k\in \C\}$
 aus
 \item und beginne mit $\sE^{\phi}=\cD_{\hat L}/\cD_{\hat L}\cdot \tilde Q$
 mit
@@ -54,14 +24,12 @@ deshalb multipliziere mit Hauptnenner und erhalte
     {\underbrace{\mbox{Hauptnenner }}}
   \cdot (\partial_t-\frac{d}{dt}\phi(t))) \\
 &=\cD_{\hat L}\cdot ( \underset{=:Q(t,\partial_t)}{\underbrace{
-  t^{\max(I)+1} \cdot (\partial_t-\frac{d}{dt}\phi(t))}}) 
+  t^{\max(I)+1} \cdot (\partial_t-\frac{d}{dt}\phi(t))}})
   & & \vartriangleleft\cD_{\hat L}
 \end{align*}
 mit $Q\in\C[t]<\partial_t>$.
-Dies ändert den Assozierten Meromorphen Zusammenhang nicht.
-\begin{comment}
-Lemma?
-\end{comment}
+Dies ändert den Assozierten Meromorphen Zusammenhang nicht, weil
+$t^{\max(I)+1}$ eine Einheit in $\cD_{\hat L}$ ist.
 \item Fouriertransformiere $Q$ und erhalte
 $\cF_Q(z,\partial_z)=Q(\partial_z,-z)$ in $\C[z]<\partial_z>$
 \item Wende den Übergang $x\rightsquigarrow z^{-1}$ an.\\
@@ -91,81 +59,6 @@ So ist
 \tilde Q(t,\partial_t) &=\partial_t-\frac{d}{dt}\phi(t) \\
                        &=\partial_t+\sum_{k\in I} k\frac{a_k}{t^{k+1}}
                        & &\in \C[t][t^{-1}]<\partial_t>\\
-Q(t,\partial_t)        &=\partial_tt^{\max(I)+1}
-                         +\sum_{k\in I} k\frac{a_k}{t^{k-\max(I)}} \\
-                       &=\partial_tt^{\max(I)+1}
-                         +\sum_{k\in I}k a_k t^{\max(I)-k}
-                       & &\in \C[t]<\partial_t>\\
-\cF_Q(z,\partial_z)    &=Q(\partial_z,-z)\\
-                       &=-z\partial_z^{\max(I)+1}
-                         +\sum_{k\in I}k a_k\partial_z^{\max(I)-k} \\
-P_{\phi}(x,\partial_x) &=\cF_Q(x^{-1},-x^2\partial_x) \\
-                       &=x\partial_x(-x^2\partial_x)^{\max(I)}
-                         +\sum_{k\in I}k a_k(-x^2\partial_x)^{\max(I)-k}
-                       & &\in \C[x]<\partial_x>
-\end{align*}
-
-Nun müssen wir noch $(x^2\partial_x)^{k+1}$ besser verstehen.
-\begin{align*}
-(x^2\partial_x)^{k+1} &=x^2\underbracket{\partial_xx^2}\partial_x
-                        (x^2\partial_x)^{k-1}\\
-                      &=x^2\overbracket{(2x+x^{2}\partial_x)}\partial_x
-                        (x^2\partial_x)^{k-1}\\
-                      &=(2x^3\partial_x+x^{4}\partial_x^2)
-                        (x^2\partial_x)^{k-1}\\
-                      &=(2x^3\partial_x+x^{4}\partial_x^2)(x^2\partial_x)
-                        (x^2\partial_x)^{k-2}\\
-                      &=(2x^3\underbracket{\partial_xx^2}\partial_x
-                        +x^{4}\underbracket{\partial_x^2x^2}\partial_x)
-                        (x^2\partial_x)^{k-2}\\
-                      &=(2x^3\overbracket{(2x+x^{2}\partial_x)}\partial_x
-                        +x^{4}\overbracket{(2x\partial_x+1+x^2\partial_x^2)}
-                        \partial_x) (x^2\partial_x)^{k-2}\\
-                      &=(4x^4\partial_x+2x^{5}\partial_x^2
-                        +2x^{5}\partial_x^2
-                        +x^4\partial_x
-                        +x^6\partial_x^3)
-                        (x^2\partial_x)^{k-2}\\
-                      &=(5x^4\partial_x+4x^{5}\partial_x^2
-                        +x^6\partial_x^3)
-                        (x^2\partial_x)^{k-2}\\
-                      &=\sum_{n=1}^{k+1}\binom{k}{n-1}\frac{(k+1)!}{n!}x^{n+k}
-                        \partial_x^{n}
-%TODO: induktion
-\end{align*}
-\begin{comment}
-Stirlingzahlen
-\end{comment}
-also gilt für spezielle $k$
-\begin{equation} \label{eq:rezeptNeben1}
-(x^2\partial_x)^{k+1}=
-\begin{cases}
-  2x^3\partial_x+x^{4}\partial_x^2 & \mbox{ falls } k=1\\
-  5x^4\partial_x+4x^{5}\partial_x^2 +x^6\partial_x^3 & \mbox{ falls } k=2\\
-  \sum_{n=1}^{k+1}\binom{k}{n-1}\frac{(k+1)!}{n!}x^{n+k} \partial_x^{n}
-\end{cases}
-\end{equation}
-Also
-\begin{align*}
-P_{\phi}(x,\partial_x)
-  &=x\partial_x(-1)^{\max(I)}
-    \sum_{n=1}^{\max(I)}\binom{\max(I)-1}{n-1}
-    \frac{(\max(I))!}{n!}x^{n+\max(I)-1} \partial_x^{n}\\
-  &\qquad+\sum_{k\in I}k a_k(-1)^{\max(I)-k}
-    \sum_{n=1}^{\max(I)-k}\binom{\max(I)-k-1}{n-1}
-    \frac{(\max(I)-k)!}{n!}x^{n+\max(I)-k-1} \partial_x^{n}
-\end{align*}
-
-\paragraph{Wende das Rezept allgemein für
-$\phi=\sum_{k\in I}\frac{a_k}{t^{k}}$ an.}
-\begin{comment}
-Multiplikation von LINKS !
-\end{comment}
-So ist
-\begin{align*}
-\tilde Q(t,\partial_t) &=\partial_t-\frac{d}{dt}\phi(t) \\
-                       &=\partial_t+\sum_{k\in I} k\frac{a_k}{t^{k+1}}
-                       & &\in \C[t][t^{-1}]<\partial_t>\\
 Q(t,\partial_t)        &=t^{\max(I)+1}\partial_t
                          +\sum_{k\in I} k\frac{a_k}{t^{k-\max(I)}} \\
                        &=t^{\max(I)+1}\partial_t
@@ -185,84 +78,102 @@ P_{\phi}(x,\partial_x) &=\cF_Q(x^{-1},-x^2\partial_x) \\
                          +\sum_{k\in I}k a_k(-x^2\partial_x)^{\max(I)-k}
                        & &\in \C[x]<\partial_x>
 \end{align*}
-%TODO: move to Anhang
-Nun müssen wir noch $(x^2\partial_x)^{k+1}$ besser verstehen.
-\begin{align*}
-(x^2\partial_x)^{k+1} &=x^2\underbracket{\partial_xx^2}\partial_x
-                        (x^2\partial_x)^{k-1}\\
-                      &=x^2\overbracket{(2x+x^{2}\partial_x)}\partial_x
-                        (x^2\partial_x)^{k-1}\\
-                      &=(2x^3\partial_x+x^{4}\partial_x^2)
-                        (x^2\partial_x)^{k-1}\\
-                      &=(2x^3\partial_x+x^{4}\partial_x^2)(x^2\partial_x)
-                        (x^2\partial_x)^{k-2}\\
-                      &=(2x^3\underbracket{\partial_xx^2}\partial_x
-                        +x^{4}\underbracket{\partial_x^2x^2}\partial_x)
-                        (x^2\partial_x)^{k-2}\\
-                      &=(2x^3\overbracket{(2x+x^{2}\partial_x)}\partial_x
-                        +x^{4}\overbracket{(2x\partial_x+1+x^2\partial_x^2)}
-                        \partial_x) (x^2\partial_x)^{k-2}\\
-                      &=(4x^4\partial_x+2x^{5}\partial_x^2
-                        +2x^{5}\partial_x^2
-                        +x^4\partial_x
-                        +x^6\partial_x^3)
-                        (x^2\partial_x)^{k-2}\\
-                      &=(5x^4\partial_x+4x^{5}\partial_x^2
-                        +x^6\partial_x^3)
-                        (x^2\partial_x)^{k-2}\\
-                      &=\sum_{n=1}^{k+1}\binom{k}{n-1}\frac{(k+1)!}{n!}x^{n+k}
-                        \partial_x^{n}
-%TODO: induktion
-\end{align*}
-\begin{comment}
-Stirlingzahlen
-\end{comment}
-also gilt für spezielle $k$
-\begin{equation} \label{eq:rezeptNeben1}
-(x^2\partial_x)^{k+1}=
-\begin{cases}
-  2x^3\partial_x+x^{4}\partial_x^2 & \mbox{ falls } k=1\\
-  5x^4\partial_x+4x^{5}\partial_x^2 +x^6\partial_x^3 & \mbox{ falls } k=2\\
-  \sum_{n=1}^{k+1}\binom{k}{n-1}\frac{(k+1)!}{n!}x^{n+k} \partial_x^{n}
-\end{cases}
-\end{equation}
+Im Anhang \ref{chap:zu-rezept} wird das $(x^2\partial_x)^{k}$ genauer
+diskutiert. Dies führt aber hier an dieser Stelle nicht mehr weiter in die
+richtige Richtung.
 
 \paragraph{Ab jetzt nur noch für den Spezialfall $\phi=\frac{a}{t^{q}}$.}
 
-Also 
+Also sei $\cM_\phi=\cD_{\hat K}/\cD_{\hat K}\cdot P_\phi$ mit
 \[
-P_{\phi}(x,\partial_x) =(-x^2\partial_x)^{q} (x\partial_x-1)+qa \\
+P_{\phi}(x,\partial_x) =(-x^2\partial_x)^{q} (x\partial_x-1)+qa \,,
 \]
-
-\section{Allgemein für $\phi=\frac{a}{t^q}$}
-Es ist 
+so dass
+\begin{lem}
+$\cP(\cM_{\phi})=\{\frac{q}{q+1}\}$ gilt.
+\end{lem}
+\begin{proof} \cite[5.b.]{sabbah_Fourier-local}
+TODO: über L-Symbol? Stützfunktion?
+\end{proof}
+Also ist ein pull-back mit Grad $q+1$ nötig, um einen ganzzahligen Slope zu
+bekommen. Sei $\rho:t\mapsto x:=t^{q+1}$ so ist
 \begin{align*}
-\sE^\phi &= \cD_{\hat L}/\cD_{\hat L}\cdot(\partial_t+q\frac{a}{t^{q+1}})\\
-  &= \cD_{\hat L}/\cD_{\hat L}\cdot(t^{q+1}\partial_t+qa)\\
+\rho^+\cM_\phi &= \rho^+(\cD_{\hat K}/\cD_{\hat K}\cdot P_\phi)\\
+  &=\cD_{\hat K}/\cD_{\hat K}\cdot(\rho^*P_\phi)\\
+  &=\cD_{\hat K}/\cD_{\hat K}\cdot(\rho^*P_\phi(\rho(t)
+    ,\rho'(t)^{-1}\partial_t))\\
+  &=\cD_{\hat K}/\cD_{\hat K}\cdot(P_\phi(\rho(t),\rho'(t)^{-1}\partial_t))\\
+  &=\cD_{\hat K}/\cD_{\hat K}\cdot((-\rho(t)^2\rho'(t)^{-1}\partial_t)^{q}
+    (\rho(t)\rho'(t)^{-1}\partial_t-1)+qa)\\
+  &=\cD_{\hat K}/\cD_{\hat K}\cdot((-\rho(t)\partial_t)^{q}
+    (\partial_t-1)+qa)\\
+  &=\cD_{\hat K}/\cD_{\hat K}\cdot((-t^{q+1}\partial_t)^{q}(\partial_t-1)+qa)
 \end{align*}
+mit $\cP(\rho^+\cM_\phi)=\{q\}\subset\N$. Definiere mittels
+$q=\frac{q}{1}=:\frac{\lambda_0}{\lambda_1}$ die  Linearform
+\[
+L(s_0,s_1)=\lambda_0s_0+\lambda_1s_1=qs_0+s_1 \,.
+\]
+Berechne nun die
+\emph{Determinanten Gleichung} $\sigma_L(\rho^*P_{\phi})\in \hat K[\xi]$ von
+$\rho^*P_{\phi}$.
+\begin{align*}
+\sigma_L(\rho^*P_{\phi})
+  &= \sum_{\{(i,j) \mid L(i,i-j)=\ord_L(\rho^*P_{\phi})\}}\alpha_{ij}x^j\xi^i\\
+  &= \sum_{\{(i,j) \mid (q+1)i-j=0\}}\alpha_{ij}x^j\xi^i
+\end{align*}
+Setze $\theta=x^{\lambda_0+\lambda_1}\xi^{\lambda_1}=x^{q+1}\xi$ so können wir
+\begin{align*}
+\sigma_L(\rho^*P_{\phi_1}) &= \sum_{k\geq 0}\alpha_k\theta^k
+\end{align*}
+schreiben, welches wir als nächsten Schritt faktorisieren.
 
 \section{Angewendet für $\phi_1:=\frac{a}{x}$}
 Das wohl einfachste Beispiel ist $\cM_{\phi_1}$ bezüglich
 $\phi_1:=\frac{a}{x}$.
 \begin{align*}
-P_{\phi_1} &=a-x\underbracket{\partial_xx^2}\partial_x\\
-           &\overbox{=}{(\ref{eq:kommutator1})}
-             a-x\overbracket{(2x + x^2\partial_x)}\partial_x\\
-           &=a-2x^2\partial_x - x^3\partial_x^2\\
+P_{\phi_1}(x,\partial_x) &=-x^2\partial_x (x\partial_x-1)+a \\
+  &=-x^2\underbracket{\partial_xx}\partial_x+x^2\partial_x+a \\
+  &=-x^2\overbracket{(x\partial_x+1)}\partial_x+x^2\partial_x+a \\
+  &=-x^3\partial_x^2 - x^2\partial_x+x^2\partial_x+a \\
+  &=-x^3\partial_x^2+a
 \end{align*}
-Finde nun das Newton-Polygon mit den Slopes $\cP(\cM_{\phi_1})$
+Erhalte nun das Newton-Polygon mit den Slopes
+$\cP(\cM_{\phi_1})=\{\frac{1}{2}\}$.
 \begin{figure}[H]
 \caption{Newton Polygon zu $P_{\phi_1}$}
 \begin{center}
 \fbox{
   \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
-  \def\myPoints{0/0,1/1,2/1}
+  \def\myPoints{0/0,2/1}
   \def\myPath{ -- node[descr]{$\frac{1}{2}$} (2,1)}
   \myPlotFunction{\myPoints}{\myPath}{2}{0}{1}{$N(P_{\phi_1})$}
   \end{tikzpicture}
 }
 \end{center}
 \end{figure}
+Berechne nun den pull-back mit $\rho:t\mapsto x:=t^2$
+\begin{align*}
+\rho^*P_{\phi_1}(x,\partial_x) &= -t^{2}\partial_t(\partial_t-1)+a\\
+  &= -t^{2}\partial_t^2+t^{2}\partial_t+a\\
+\end{align*}
+und erhalte einen Meromorphen Zusammenhang $\rho^+\cM$ mit genau dem Slope $1$.
+\begin{figure}[H]
+\caption{Newton Polygon zu $\rho^*P_{\phi_1}$}
+\begin{center}
+\fbox{
+  \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
+  \def\myPoints{0/0,1/2,2/2}
+  \def\myPath{ -- node[descr]{$1$} (2,2)}
+  \myPlotFunction{\myPoints}{\myPath}{2}{0}{2}{$N(\rho^*P_{\phi_1})$}
+  \end{tikzpicture}
+}
+\end{center}
+\end{figure}
+
+\begin{comment}
+BIS HIER HIN KORREGIERT: $P_\phi$ ist im folgendem FALSCH
+\end{comment}
 
 \subsection{Levelt-Turrittin-Zerlegung für $\phi_1$}
 \begin{comment}
@@ -344,6 +255,26 @@ $\rho^+\cM_{\phi_1}\otimes\cF_{\hat K}^R$.
 
 
 \section{Angewendet für $\phi_2:=\frac{a}{x^2}$}
+\begin{comment}
+für $q=2$
+%
+\begin{align*}
+P_{\phi}(x,\partial_x) &=(-x^2\partial_x)^2 (x\partial_x-1)+2a \\
+  &=x^2\underbracket{\partial_xx^2}\partial_x(x\partial_x-1)+2a \\
+  &=x^2\overbracket{(x^2\partial_x+2x)}\partial_x(x\partial_x-1)+2a \\
+  &=(x^4\partial_x^2+2x^3\partial_x)(x\partial_x-1)+2a \\
+  &=x^4\underbracket{\partial_x^2x}\partial_x
+    +2x^3\underbracket{\partial_xx}\partial_x
+    -x^4\partial_x^2-2x^3\partial_x+2a \\
+  &=x^4\overbracket{(x\partial_x^2+2x)}\partial_x
+    +2x^3\overbracket{(x\partial_x+1)}\partial_x
+    -x^4\partial_x^2-2x^3\partial_x+2a \\
+  &=x^5\partial_x^3+2x^5\partial_x +2x^4\partial_x^2 +2x^3\partial_x
+    -x^4\partial_x^2-2x^3\partial_x+2a \\
+  &=3x^5\partial_x^3 +x^4\partial_x^2 + 2a
+\end{align*}
+\end{comment}
+
 \textbf{also für $\phi_2:=\frac{a}{x^2}$} ist
 \begin{align*}                                                                       !
 xn+max(I)k1
