@@ -73,6 +73,7 @@ P_{\phi}(x,\partial_x) &=\cF_Q(x^{-1},-x^2\partial_x) \\
                        &=(-x^2\partial_x)^{\max(I)}
                          \underbracket{x^2\partial_xx^{-1}}
                          +\sum_{k\in I}k a_k(-x^2\partial_x)^{\max(I)-k} \\
+%TODO; weiter ausführen, genauer, nebenrechnung
                        &=(-x^2\partial_x)^{\max(I)}
                          \overbracket{(x\partial_x-1)}
                          +\sum_{k\in I}k a_k(-x^2\partial_x)^{\max(I)-k}
@@ -83,7 +84,6 @@ diskutiert. Dies führt aber hier an dieser Stelle nicht mehr weiter in die
 richtige Richtung.
 
 \paragraph{Ab jetzt nur noch für den Spezialfall $\phi=\frac{a}{t^{q}}$.}
-
 Also sei $\cM_\phi=\cD_{\hat K}/\cD_{\hat K}\cdot P_\phi$ mit
 \[
 P_{\phi}(x,\partial_x) =(-x^2\partial_x)^{q} (x\partial_x-1)+qa \,,
@@ -98,25 +98,28 @@ TODO: über L-Symbol? Stützfunktion?
 Also ist ein pull-back mit Grad $q+1$ nötig, um einen ganzzahligen Slope zu
 bekommen. Sei $\rho:t\mapsto x:=t^{q+1}$ so ist
 \begin{align*}
-\rho^+\cM_\phi &= \rho^+(\cD_{\hat K}/\cD_{\hat K}\cdot P_\phi)\\
-  &=\cD_{\hat K}/\cD_{\hat K}\cdot(\rho^*P_\phi)\\
-  &=\cD_{\hat K}/\cD_{\hat K}\cdot(\rho^*P_\phi(\rho(t)
-    ,\rho'(t)^{-1}\partial_t))\\
+\rho^+\cM_\phi &= \rho^+(\cD_{\hat K}/\cD_{\hat K}\cdot P_\phi(x,\partial_x))\\
+  &=\cD_{\hat K}/\cD_{\hat K}\cdot(\rho^*P_\phi(x,\partial_x))\\
   &=\cD_{\hat K}/\cD_{\hat K}\cdot(P_\phi(\rho(t),\rho'(t)^{-1}\partial_t))\\
   &=\cD_{\hat K}/\cD_{\hat K}\cdot((-\rho(t)^2\rho'(t)^{-1}\partial_t)^{q}
     (\rho(t)\rho'(t)^{-1}\partial_t-1)+qa)\\
-  &=\cD_{\hat K}/\cD_{\hat K}\cdot((-\rho(t)\partial_t)^{q}
-    (\partial_t-1)+qa)\\
-  &=\cD_{\hat K}/\cD_{\hat K}\cdot((-t^{q+1}\partial_t)^{q}(\partial_t-1)+qa)
+  &=\cD_{\hat K}/\cD_{\hat K}
+    \cdot((-(t^{q+1})^2\frac{1}{(q+1)t^{q}}\partial_t)^{q}
+    (t^{q+1}\frac{1}{(q+1)t^{q}}\partial_t-1)+qa)\\
+  &=\cD_{\hat K}/\cD_{\hat K}
+    \cdot((-\frac{1}{(q+1)}t^{2(q+1)-q}\partial_t)^{q}
+    (\frac{1}{(q+1)}t\partial_t-1)+qa)\\
+  &=\cD_{\hat K}/\cD_{\hat K}
+    \cdot((-\frac{1}{(q+1)}t^{q+2}\partial_t)^{q}
+    (\frac{1}{(q+1)}t\partial_t-1)+qa)
 \end{align*}
 mit $\cP(\rho^+\cM_\phi)=\{q\}\subset\N$. Definiere mittels
 $q=\frac{q}{1}=:\frac{\lambda_0}{\lambda_1}$ die  Linearform
 \[
 L(s_0,s_1)=\lambda_0s_0+\lambda_1s_1=qs_0+s_1 \,.
 \]
-Berechne nun die
-\emph{Determinanten Gleichung} $\sigma_L(\rho^*P_{\phi})\in \hat K[\xi]$ von
-$\rho^*P_{\phi}$.
+Schreibe $\rho^*P_{\phi}=\sum_i\sum_j\alpha_{ij}t^j\partial_t^i$ und berechne
+die \emph{Determinanten Gleichung} $\sigma_L(\rho^*P_{\phi})\in \hat K[\xi]$.
 \begin{align*}
 \sigma_L(\rho^*P_{\phi})
   &= \sum_{\{(i,j) \mid L(i,i-j)=\ord_L(\rho^*P_{\phi})\}}\alpha_{ij}x^j\xi^i\\
@@ -124,11 +127,15 @@ $\rho^*P_{\phi}$.
 \end{align*}
 Setze $\theta=x^{\lambda_0+\lambda_1}\xi^{\lambda_1}=x^{q+1}\xi$ so können wir
 \begin{align*}
-\sigma_L(\rho^*P_{\phi_1}) &= \sum_{k\geq 0}\alpha_k\theta^k
+\sigma_L(\rho^*P_{\phi}) &= \sum_{k\geq 0}\alpha_k\theta^k
 \end{align*}
 schreiben, welches wir als nächsten Schritt faktorisieren.
+Es ist $0$ keine Nullstelle von $\sigma_L(\rho^*P_\phi)$ da $\alpha_0\neq 0$.
+\begin{comment}
+HIER WEITER!! und gleichzeitig auch an den spezialfällen weiter machen!!!
+\end{comment}
 
-\section{Angewendet für $\phi_1:=\frac{a}{x}$}
+\section{Spezialfall $\phi_1:=\frac{a}{x}$}
 Das wohl einfachste Beispiel ist $\cM_{\phi_1}$ bezüglich
 $\phi_1:=\frac{a}{x}$.
 \begin{align*}
@@ -154,10 +161,22 @@ $\cP(\cM_{\phi_1})=\{\frac{1}{2}\}$.
 \end{figure}
 Berechne nun den pull-back mit $\rho:t\mapsto x:=t^2$
 \begin{align*}
-\rho^*P_{\phi_1}(x,\partial_x) &= -t^{2}\partial_t(\partial_t-1)+a\\
-  &= -t^{2}\partial_t^2+t^{2}\partial_t+a\\
+\rho^*P_{\phi_1}(x,\partial_x)
+  %&=(-\frac{1}{(q+1)}t^{q+2}\partial_t)^{q}
+    %(\frac{1}{(q+1)}t\partial_t-1)+qa\\
+  &=-\frac{1}{2}t^{3}\partial_t
+    (\frac{1}{2}t\partial_t-1)+a\\
+  &=-\frac{1}{4}t^{3}\underbracket{\partial_tt}\partial_t
+    -\frac{1}{2}t^{3}\partial_t+a\\
+  &=-\frac{1}{4}t^{3}\overbracket{(t\partial_t+1)}\partial_t
+    -\frac{1}{2}t^{3}\partial_t+a\\
+  &=-\frac{1}{4}t^{4}\partial_t^2
+    \underbracket{-\frac{1}{4}t^{3}\partial_t-\frac{1}{2}t^{3}\partial_t}+a\\
+  &=-\frac{1}{4}t^{4}\partial_t^2
+    \overbracket{-\frac{3}{4}t^{3}\partial_t}+a
 \end{align*}
-und erhalte einen Meromorphen Zusammenhang $\rho^+\cM$ mit genau dem Slope $1$.
+und erhalte einen Meromorphen Zusammenhang $\rho^+\cM$ mit genau dem Slope
+$1=\frac{1}{1}=:\frac{\lambda_0}{\lambda_1}$.
 \begin{figure}[H]
 \caption{Newton Polygon zu $\rho^*P_{\phi_1}$}
 \begin{center}
@@ -170,7 +189,28 @@ und erhalte einen Meromorphen Zusammenhang $\rho^+\cM$ mit genau dem Slope $1$.
 }
 \end{center}
 \end{figure}
-
+Definiere die Linearform $L(s_0,s_1):=\lambda_0s_0+\lambda_1s_1=s_0+s_1$.
+Berechne nun die \emph{Determinanten Gleichung} $\sigma_L(\rho^*P_{\phi_1})\in
+\hat K[\xi]$ von $\rho^*P_{\phi_1}$.
+\begin{align*}
+\sigma_L(\rho^*P_{\phi_1})
+  &= \sum_{\{(i,j)\mid 2i-j=0\}}\alpha_{ij}x^{j}\xi^i\\
+  &= -\frac{1}{4}x^4\xi^2 + a
+\end{align*}
+Setze $\theta=x^{\lambda_0+\lambda_1}\xi^{\lambda_1}=x^2\xi$ so können wir
+\begin{align*}
+\sigma_L(\rho^*P_{\phi_1}) &= \sum_{k\geq 0}\alpha_k\theta^k\\
+  &= -\frac{1}{4}\theta^2 + a
+\end{align*}
+schreiben, welches wir als nächstes faktorisieren
+\begin{align*}
+\sigma_L(\rho^*P_{\phi_1}) &= -\frac{1}{4}\theta^2+a\\
+  &=-\frac{1}{4}(\theta^2-4a)\\
+  &=-(\theta-\underset{=:\beta_0}{\underbrace{2\sqrt{a}}})(\theta+2\sqrt{a})
+\end{align*}
+Dies geht, weil $\hat K[\xi]$ kommutativ ist.
+Setze $R(z):=(\beta_0/(\lambda_0+1))z^{\lambda_0+1}=\sqrt{a}z^2$ und betrachte
+$\rho^+\cM_{\phi_1}\otimes\cF_{\hat K}^R$.
 \begin{comment}
 BIS HIER HIN KORREGIERT: $P_\phi$ ist im folgendem FALSCH
 \end{comment}
@@ -277,7 +317,6 @@ P_{\phi}(x,\partial_x) &=(-x^2\partial_x)^2 (x\partial_x-1)+2a \\
 
 \textbf{also für $\phi_2:=\frac{a}{x^2}$} ist
 \begin{align*}                                                                       !
-xn+max(I)k1
 P_{\phi_2} &=2a+x\partial_x\underbracket{(-x^2\partial_x)^{2}}\\
            &=2a +x\partial_x \overbracket{(2x^3\partial_x+x^4\partial_x^2)} \\
            &=2a
