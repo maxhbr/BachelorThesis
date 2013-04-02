@@ -463,12 +463,19 @@ Man erkennt, dass $\cP(P_2)=\{0,\frac{2}{3}\}$ ist.
 
 \begin{bem}
 \cite[Bem 5.4]{ZulaBarbara}
-Für alle $f\in \Ckxl \backslash \{0\}$ gilt allgemein, dass das zu $P\in \cD_{\hat K}$ gehörige
-Newton Polygon, bis auf Verschiebung mit dem von $f\cdot P$ übereinstimmt.
+Für alle $f\in \Ckxl \backslash \{0\}$ gilt allgemein, dass das zu $P\in
+\cD_{\hat K}$ gehörige Newton Polygon, bis auf vertikale Verschiebung mit dem
+von $f\cdot P$ übereinstimmt.
 \end{bem}
 \begin{proof}
 TODO
 \end{proof}
+Damit Lässt sich das Newton Polygon, durch ein $f$, immer so verschieben, dass
+$(0,0)\in N(f\cdot P)$, und es gilt, dass 
+\[
+\cD_K\cdot P=\cD_K\cdot(f\cdot P) \vartriangleleft \cD_K
+\]
+ist. Dies stellt eine Normierung des Newton Polygons dar.
 \begin{lem}
 %TOTO: sabbah redet hier schon immer von \hat K, ist das nötig?
 \cite[5.1]{sabbah_cimpa90} %Seite 25f
@@ -497,7 +504,7 @@ $\cP(P)=\cP(P_1)\cup\cP(P_2)$ und $\cP(P_1)\cap\cP(P_2)=\emptyset$
 \end{enumerate}
 \end{lem}
 
-\begin{thm}
+\begin{thm} \label{thm:Split-after-slopes}
 \cite[Thm 5.3.1]{sabbah_cimpa90} \cite[5.15]{ZulaBarbara}
 Sei $\cM_{\hat{K}}$ ein formaler Meromorpher Zusammenhang und sei
 $\cP(\cM_{\hat K})=\{\Lambda_1,\dots,\Lambda_r\}$ die Menge seiner
@@ -578,6 +585,9 @@ Wenn $L(x_0,s_1)$ wie oben aus $\Lambda$ entstanden ist, so gilt
 \omega_P(\Lambda)=ord_L(P) \,.
 \]
 \end{bem}
+\begin{comment}
+TODO: ist $L$ Slope (gehört zu Slope) dann hat $\sigma_L(P)$ zumindest 2 Monome
+\end{comment}
 
 \section{Formale Struktur regulärer Zusammenhänge}
 \cite[Chap 5.2]{sabbah_cimpa90}

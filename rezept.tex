@@ -122,7 +122,7 @@ Schreibe $\rho^*P_{\phi}=\sum_i\sum_j\alpha_{ij}t^j\partial_t^i$ und berechne
 die \emph{Determinanten Gleichung} $\sigma_L(\rho^*P_{\phi})\in \hat K[\xi]$.
 \begin{align*}
 \sigma_L(\rho^*P_{\phi})
-  &= \sum_{\{(i,j) \mid L(i,i-j)=\ord_L(\rho^*P_{\phi})\}}\alpha_{ij}x^j\xi^i\\
+  &= \sum_{\{(i,j) \mid L(i,i-j)=0\}}\alpha_{ij}x^j\xi^i\\
   &= \sum_{\{(i,j) \mid (q+1)i-j=0\}}\alpha_{ij}x^j\xi^i
 \end{align*}
 Da $\hat K[\xi]$ kommutativ ist gilt hier, dass $(x^j\xi^i)^k=x^{jk}\xi^{ik}$ ist.
@@ -130,11 +130,26 @@ Setze $\theta=x^{\lambda_0+\lambda_1}\xi^{\lambda_1}=x^{q+1}\xi$ so können wir
 \begin{align*}
 \sigma_L(\rho^*P_{\phi}) &= \sum_{k\geq 0}\alpha_k\theta^k
 \end{align*}
-schreiben, welches wir als nächsten Schritt faktorisieren.
+schreiben, welches wir als nächsten Schritt faktorisieren
+\[
+\sigma_L(\rho^*P_\phi)=\epsilon\prod_{\beta}(\theta-\beta)^{\gamma_\beta}\,.
+\]
+Wobei $\epsilon\in\C$ eine Konstante ist.
+Sei $\beta_0$  eine der Nullstellen.
 Es ist $0$ keine Nullstelle von $\sigma_L(\rho^*P_\phi)$ da $\alpha_0\neq 0$.
-\begin{comment}
-HIER WEITER!! und gleichzeitig auch an den spezialfällen weiter machen!!!
-\end{comment}
+Setze $R(z):=(\beta_0/(\lambda_0+1))z^{\lambda_0+1}=(\beta_0/(q+1)z^{q+1}$ und
+betrachte
+\begin{align*}
+\rho^+\cM_\phi\otimes\cF_{\hat K}^R 
+  &= \cD_{\hat K}/\cD_{\hat K}\cdot(\rho^*P)\otimes\cF_{\hat K}^R \,.
+\end{align*}
+\begin{lem}
+Sei $e$ ein zyklischer Vektor zu $\rho^+\cM_\phi$, so ist $e\otimes e(R)$ ein
+zyklischer Vektor für $\rho^+\cM_\phi\otimes\cF_{\hat K}^R$.
+\end{lem}
+\begin{proof}
+TODO
+\end{proof}
 
 \section{Spezialfall $\phi_1:=\frac{a}{x}$}
 Das wohl einfachste Beispiel ist $\cM_{\phi_1}$ bezüglich

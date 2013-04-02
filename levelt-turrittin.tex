@@ -1,54 +1,7 @@
 %!TeX root = main.tex
 \chapter{Levelt-\!Turrittin-\!Theorem}
-Das Levelt-Turrittin-Theorem ist ein Satz, der hilft die Struktur von formalen
-Meromorphen Zusammenhängen besser zu verstehen.
-
-\begin{comment}
-Quellen:\\
-sabbah\_cimpa90 seite 28 / 30 / 35
-
-\begin{thm}[Levelt-Turrittin]
-Es ex. endliche Körper $\hat{L}|\hat{K}$ mit $\hat{L}=\Cftl$ mit
-$t\mapsto x:=t^p$ so dass:
-\[
-\hat{M}\otimes_{\hat{K}}\hat{L}=\bigoplus_{i=1}^r\hat{M}_i
-\]
-mit $\#\slopes(\hat{M}_i)=1 \forall i$ bzw. genauer
-$\hat{M}_i=\xi^{\phi_i}\otimes R$
-\end{thm}
-
-\begin{thm}[Levelt-Turrittin-Malgrange]
-$\exists \hat L|\hat K$ mit $\hat M_i\otimes _{\hat K}\hat L =
-\bigoplus_{j=1}^s \hat N_j$
-mit 
-\[
-\hat N_i=\xi^{\phi_j}\otimes R
-\]
-und 
-\begin{itemize}
-\item $\dim_L\xi^{\phi_j}=1$, $\phi_j\in \C[x^{-1}]\cdot x^{-1}$
-\item R regulär singulär, also mit $\slopes=\{0\}$ % oder ={k} ??
-\end{itemize}
-\end{thm}
-\end{comment}
-
-Ab hier werden wir nur noch formale Meromorphe Zusammenhänge betrachten. 
-%Alle bisher getroffenen Aussagen gelten für diese aber analog.
-
-\begin{comment}
-% sabbah\_cimpba90 Seite 30
-Sei $M_{\hat{K}}=\cD_{\hat{K}}/\cD_{\hat{K}}\cdot P$ und nehme an, dass $N(P)$
-zumindes 2 nichttriviale Steigungen hat. Spalte $N(P)=N_1\dot\cup N_2$ in 2
-Teile. Dann gilt:
-
-\begin{lem}
-Es existiert eine Aufteilung $P=P_1P_2$ mit:
-\begin{itemize}
-\item $N(P_1)\subset N_1$ und $N(P_2)\subset N_2$
-\item A ist eine kante von ...
-\end{itemize}
-\end{lem}
-\end{comment}
+Das Levelt-Turrittin-Theorem ist ein Satz, der hilft, Meromorphe Zusammenhänge
+in ihre irreduziblen Komponenten zu zerlegen.
 
 \section{Klassische Version}
 \begin{thm}
@@ -59,8 +12,51 @@ mit $\rho:t\mapsto x:=t^p$, isomorph zu einer direkten Summe von elementaren
 Meromorphen Zusammenhänge
 ist.
 \end{thm}
+Der folgende Beweis stammt aus \cite[Seite 35]{sabbah_cimpa90}.
 \begin{proof}
+Der Beweis geht, mittels induktion auf den Lexicographisch geordnetem Paar
+$(\dim_{\hat K}\cM_{\hat K},\kappa)$ wobei $\kappa\in\N\cup\{\infty\}$ dem
+größtem Slope von $\cM_{\hat K}$. Es wird $\kappa=\infty$ gesetzt, falls der
+größte Slope nicht Ganzzahlig ist.
 
+Wir nehmen oBdA an, dass $\cM_{\hat K}$ genau einen Slope $\Lambda$ hat, sonst
+Teile $\cM_{\hat K}$ mittels Satz \ref{thm:Split-after-slopes} in Meromorphe
+Zusammenhänge mit je einem Slope und wende jeweils die Induktion an.
+Mit $\Lambda=:\frac{\lambda_0}{\lambda_1}$ (vollständig gekürtzt) Definieren
+wir die dem Slope entsprechende Linearform
+$L(s_0,s_1):=\lambda_0s_0+\lambda_1s_1$.  Wir nennen $\sigma_L(P)\in \hat
+K[\xi]$ die \emph{Determinanten Gleichung} von $P$. Da $L$ zu einem Slope von
+$P$ gehört, besteht $\sigma_L(P)$ aus zumindest zwei Monomen.
+\begin{comment}
+and is homogeneous of degree $\ord_L(P)=0$ because $P$ is chosen with
+coefficients in $\Cfx$, one of them, being a unit.
+\end{comment}
+Schreibe
+\begin{align*}
+\sigma_L(P)&=\sum_{L(i,i-j)=\ord_L(P)}\alpha_{ij}x^j\xi^i\\
+  &=\sum_{L(i,i-j)=0}\alpha_{ij}x^j\xi^i \,.
+\end{align*}
+Sei $\theta:=x^{\lambda_0+\lambda_1}}xi^{\lambda_1}$ so können wir
+\[
+\sigma_L(P) &= \sum_{k\geq 0}\alpha_k\theta^k
+\]
+schreiben, wobei $\alpha_0\neq0$ ist.
+
+\paragraph{Erster Fall: $\lambda_1=1$.} Das bedeutet, dass der Slope ganzzahlig
+ist. Betrachte die Faktorisierung
+\[
+\sigma_L(P)=\epsilon\prod_{\beta}(\theta-\beta)^{\gamma_\beta}\,.
+\]
+Wobei $\epsilon\in\C$ eine Konstante ist.  Sei $\beta_0$  eine der Nullstellen.
+So setze $R(z):=(\beta_0/(\lambda_0+1)z^{\lambda_0+1})$ und betrachte
+$\cM_{\hat K}\otimes \cF_{\hat K}^R$. Falls $e$ ein zyklischer Vektor für
+$\cM_{\hat K}$ ist, so ist $e\otimes e(R)$ ein zyklischer Vektor für 
+$\cM_{\hat K}\otimes \cF_{\hat K}^R$.
+\begin{comment}
+TODO: hier weiter
+\end{comment}
+
+\paragraph{Zweiter Fall: $\lambda_1\neq1$.}
 \end{proof}
 
 \section{Sabbah's Refined version}
