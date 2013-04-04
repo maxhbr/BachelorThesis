@@ -96,13 +96,16 @@ $\cP(\cM_{\phi})=\{\frac{q}{q+1}\}$ gilt.
 TODO: über L-Symbol? Stützfunktion?
 \end{proof}
 Also ist ein pull-back mit Grad $q+1$ nötig, um einen ganzzahligen Slope zu
-bekommen. Sei $\rho:t\mapsto x:=t^{q+1}$ so ist
+bekommen.
+Sei $\rho:t\mapsto x:=t^{q+1}$ so ist
 \begin{align*}
 \rho^+\cM_\phi &= \rho^+(\cD_{\hat K}/\cD_{\hat K}\cdot P_\phi(x,\partial_x))\\
   &=\cD_{\hat K}/\cD_{\hat K}\cdot(\rho^*P_\phi(x,\partial_x))\\
   &=\cD_{\hat K}/\cD_{\hat K}\cdot(P_\phi(\rho(t),\rho'(t)^{-1}\partial_t))\\
-  &=\cD_{\hat K}/\cD_{\hat K}\cdot((-\rho(t)^2\rho'(t)^{-1}\partial_t)^{q}
-    (\rho(t)\rho'(t)^{-1}\partial_t-1)+qa)\\
+  &=\cD_{\hat K}/\cD_{\hat K}
+    \cdot(P_\phi(t^{q+1},\frac{1}{(q+1)t^q}\partial_t))\\
+  %&=\cD_{\hat K}/\cD_{\hat K}\cdot((-\rho(t)^2\rho'(t)^{-1}\partial_t)^{q}
+    %(\rho(t)\rho'(t)^{-1}\partial_t-1)+qa)\\
   &=\cD_{\hat K}/\cD_{\hat K}
     \cdot((-(t^{q+1})^2\frac{1}{(q+1)t^{q}}\partial_t)^{q}
     (t^{q+1}\frac{1}{(q+1)t^{q}}\partial_t-1)+qa)\\
@@ -113,6 +116,25 @@ bekommen. Sei $\rho:t\mapsto x:=t^{q+1}$ so ist
     \cdot((-\frac{1}{q+1}t^{q+2}\partial_t)^{q}
     (\frac{1}{q+1}t\partial_t-1)+qa)
 \end{align*}
+\begin{comment}
+Sei $\rho:t\mapsto x:=-(q+1) t^{q+1}$ so ist
+\begin{align*}
+\rho^+\cM_\phi &= \rho^+(\cD_{\hat K}/\cD_{\hat K}\cdot P_\phi(x,\partial_x))\\
+  &=\cD_{\hat K}/\cD_{\hat K}\cdot(\rho^*P_\phi(x,\partial_x))\\
+  &=\cD_{\hat K}/\cD_{\hat K}\cdot(P_\phi(\rho(t),\rho'(t)^{-1}\partial_t))\\
+  &=\cD_{\hat K}/\cD_{\hat K}
+    \cdot(P_\phi(-(q+1) t^{q+1},-(q+1)^{-1}\frac{1}{(q+1)t^q}\partial_t))\\
+  &=\cD_{\hat K}/\cD_{\hat K} \cdot
+    ((-(-(q+1) t^{q+1})^2\frac{-(q+1)^{-1}}{(q+1)t^{q}}\partial_t)^{q}
+    (-(q+1) t^{q+1}\frac{-(q+1)^{-1}}{(q+1)t^{q}}\partial_t-1)+qa)\\
+  &=\cD_{\hat K}/\cD_{\hat K}
+    \cdot((-\frac{-(q+1)}{q+1}t^{2(q+1)-q}\partial_t)^{q}
+    (\frac{1}{q+1}t\partial_t-1)+qa)\\
+  &=\cD_{\hat K}/\cD_{\hat K}
+    \cdot((t^{q+2}\partial_t)^{q}
+    (\frac{1}{q+1}t\partial_t-1)+qa)
+\end{align*}
+\end{comment}
 mit $\cP(\rho^+\cM_\phi)=\{q\}\subset\N$. Definiere mittels
 $q=\frac{q}{1}=:\frac{\lambda_0}{\lambda_1}$ die  Linearform
 \[
@@ -122,8 +144,8 @@ Schreibe $\rho^*P_{\phi}=\sum_i\sum_j\alpha_{ij}t^j\partial_t^i$ und berechne
 die \emph{Determinanten Gleichung} $\sigma_L(\rho^*P_{\phi})\in \hat K[\xi]$.
 \begin{align*}
 \sigma_L(\rho^*P_{\phi})
-  &= \sum_{\{(i,j) \mid L(i,i-j)=0\}}\alpha_{ij}x^j\xi^i\\
-  &= \sum_{\{(i,j) \mid (q+1)i-j=0\}}\alpha_{ij}x^j\xi^i
+  &= \sum_{\{(i,j)\in\N\times\Z \mid L(i,i-j)=0\}}\alpha_{ij}x^j\xi^i\\
+  &= \sum_{\{(i,j)\in\N\times\Z \mid (q+1)i-j=0\}}\alpha_{ij}x^j\xi^i
 \end{align*}
 Da $\hat K[\xi]$ kommutativ ist gilt hier, dass $(x^j\xi^i)^k=x^{jk}\xi^{ik}$ ist.
 Setze $\theta=x^{\lambda_0+\lambda_1}\xi^{\lambda_1}=x^{q+1}\xi$ so können wir

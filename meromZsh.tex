@@ -480,7 +480,7 @@ von $f\cdot P$ übereinstimmt.
 TODO
 \end{proof}
 Damit Lässt sich das Newton Polygon, durch ein $f$, immer so verschieben, dass
-$(0,0)\in N(f\cdot P)$, und es gilt, dass 
+$(0,0)\in N(f\cdot P)$, und es gilt, dass
 \[
 \cD_K\cdot P=\cD_K\cdot(f\cdot P) \vartriangleleft \cD_K
 \]
@@ -492,7 +492,7 @@ ist. Dies stellt eine Normierung des Newton Polygons dar.
 \item $\cP(\cM_K)$ ist nicht Leer, wenn $\cM_K\neq\{0\}$
 \item Wenn man eine exacte Sequenz
 $0\rightarrow{\cM'}_K\rightarrow{\cM}_K\rightarrow{\cM''}_K\rightarrow0$
-hat, so gilt $\cP(\cM_K)=\cP({\cM'}_K)\cup\cP({\cM''}_K)$. 
+hat, so gilt $\cP(\cM_K)=\cP({\cM'}_K)\cup\cP({\cM''}_K)$.
 \begin{comment}
 Siehe auch \cite[Thm 5.3.4]{sabbah_cimpa90}
 
@@ -517,7 +517,7 @@ $\cP(P)=\cP(P_1)\cup\cP(P_2)$ und $\cP(P_1)\cap\cP(P_2)=\emptyset$
 \cite[Thm 5.3.1]{sabbah_cimpa90} \cite[5.15]{ZulaBarbara}
 Sei $\cM_{\hat{K}}$ ein formaler Meromorpher Zusammenhang und sei
 $\cP(\cM_{\hat K})=\{\Lambda_1,\dots,\Lambda_r\}$ die Menge seiner
-slopes. Es exisitiert eine (bis auf Permutation) eindutige Zerlegung
+slopes. Es exisitiert eine (bis auf Permutation) eindeutige Zerlegung
 \[
 \cM_{\hat K}=\bigoplus_{i=1}^r\cM_{\hat K}^{(i)}
 \]
@@ -527,6 +527,56 @@ mit $\cP(\cM_{\hat K}^{(i)})=\{\Lambda_i\}$.
 \begin{proof}
 \cite[Thm 5.3.1]{sabbah_cimpa90} oder \cite[5.15]{ZulaBarbara}
 \end{proof}
+\begin{exmp}
+\cite[Ex 5.3.6]{sabbah_cimpa90}
+Sei $P=x(x\partial_x)^2+x\partial_x+\frac{1}{2}$. So sieht das Newton-Polygon
+wie folgt aus
+\begin{figure}[H]
+\caption{Newton Polygon zu $P$}
+\begin{center}
+\fbox{
+  \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
+  \def\myPoints{0/0,1/0,2/1}
+  \def\myPath{ -- (1,0) -- node[descr]{$1$} (2,1)}
+  \myPlotFunction{\myPoints}{\myPath}{2}{0}{1}{$N(P)$}
+  \end{tikzpicture}
+}
+\end{center}
+\end{figure}
+mit den Slopes $\cP(P)=\{0,1\}=:\{\Lambda_1,\Lambda_2\}$. Nach dem Satz
+\ref{thm:Split-after-slopes} existiert eine Zerlegung $P=P_1\cdot P_2$ mit
+$\cP(P_1)=\{\Lambda_1\}$ und $\cP(P_2)=\{\Lambda_2\}$. Durch scharfes hinsehen
+erkennt man, dass
+\begin{align*}
+P=x(x\partial_x)^2+x\partial_x+\frac{1}{2} 
+  &= (x(x\partial_x)+\dots)\cdot(x\partial_x+\dots)\\
+  &= P_1\cdot P_2
+\end{align*}
+\begin{comment}
+\paragraph{anders geschrieben}
+\begin{align*}
+P &= x(x\partial_x)^2+x\partial_x+\frac{1}{2}\\
+  &= xx\partial_xx\partial_x+x\partial_x+\frac{1}{2}\\
+  &= x^2(x\partial_x+1)\partial_x+x\partial_x+\frac{1}{2}\\
+  &= x^3\partial_x^2+x^2\partial_x+x\partial_x+\frac{1}{2}\\
+  &= x^3\partial_x^2+(x^2+x)\partial_x+\frac{1}{2}\\
+\end{align*}
+So sieht das Newton-Polygon
+wie folgt aus
+\begin{figure}[H]
+\caption{Newton Polygon zu $P$}
+\begin{center}
+\fbox{
+  \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
+  \def\myPoints{0/0,1/0,1/1,2/1}
+  \def\myPath{ -- (1,0) -- node[descr]{$1$} (2,1)}
+  \myPlotFunction{\myPoints}{\myPath}{2}{0}{1}{$N(P)$}
+  \end{tikzpicture}
+}
+\end{center}
+\end{figure}
+\end{comment}
+\end{exmp}
 
 \subsection{Die Filtrierung $\,^LV\cD_{\hat K}$ und das $L$-Symbol}
 Sei $\Lambda=\frac{\lambda_0}{\lambda_1}\in \Q_{\geq 0}$ vollständig gekürtzt,

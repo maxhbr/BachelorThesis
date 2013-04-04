@@ -20,6 +20,7 @@ grundlagen.tex:  %TODO: Pfeile
 grundlagen.tex:  %TODO: Pfeile
 lemma2-4.tex:  %\mbox{\footnote{$(\xi^i)^p=1\forall i$}} % TODO: correct footnote
 lemma2-4.tex:TODO: zeige das noch
+levelt-turrittin.tex:TODO
 levelt-turrittin.tex:TODO: hier weiter
 main/main.log:[]\T1/lmr/m/n/10.95 TODO: ist $\OML/lmm/m/it/10.95 L$ \T1/lmr/m/n/10.95 Slo-pe 
 main/main.ps:w FJ(TODO,)30 b(\(3.)i(T)-8 b(re\033en\))p 3633 5576
@@ -45,6 +46,8 @@ meromZsh.tex:TODO, (3. Treffen)
 meromZsh.tex:%TODO: wieso gilt das?
 meromZsh.tex:%TODO: beobachtung...
 meromZsh.tex:%TODO: differenz ist linear
+meromZsh.tex:%TODO: move after slope definition!!!
+meromZsh.tex:TODO
 meromZsh.tex:%TODO: bessere formulierung
 meromZsh.tex:%TODO: nummer aus der referenz ist falsch
 meromZsh.tex:TODO
@@ -77,7 +80,6 @@ meromZsh.tex:TODO: beispiel aus \cite{ZulaBarbara}
 rezept.tex:-\partial_z(f)\cdot z^2= %TODO: wegen klammerung?
 rezept.tex:%TODO; weiter ausführen, genauer, nebenrechnung
 rezept.tex:TODO: über L-Symbol? Stützfunktion?
-rezept.tex:TODO
 titel.tex:%TODO; titelpage bitte nicht seitlich versetzt
 trash/myNewtonPoly2.sty:          %TODO
 trash/myNewtonPoly2.sty:          %TODO
