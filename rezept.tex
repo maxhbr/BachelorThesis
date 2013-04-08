@@ -202,13 +202,13 @@ Berechne nun den pull-back mit $\rho:t\mapsto x:=t^2$
   &=-\frac{1}{2}t^{3}\partial_t
     (\frac{1}{2}t\partial_t-1)+a\\
   &=-\frac{1}{4}t^{3}\underbracket{\partial_tt}\partial_t
-    -\frac{1}{2}t^{3}\partial_t+a\\
+    +\frac{1}{2}t^{3}\partial_t+a\\
   &=-\frac{1}{4}t^{3}\overbracket{(t\partial_t+1)}\partial_t
-    -\frac{1}{2}t^{3}\partial_t+a\\
+    +\frac{1}{2}t^{3}\partial_t+a\\
   &=-\frac{1}{4}t^{4}\partial_t^2
-    \underbracket{-\frac{1}{4}t^{3}\partial_t-\frac{1}{2}t^{3}\partial_t}+a\\
+    \underbracket{-\frac{1}{4}t^{3}\partial_t+\frac{1}{2}t^{3}\partial_t}+a\\
   &=-\frac{1}{4}t^{4}\partial_t^2
-    \overbracket{-\frac{3}{4}t^{3}\partial_t}+a
+    \overbracket{+\frac{1}{4}t^{3}\partial_t}+a
 \end{align*}
 und erhalte einen Meromorphen Zusammenhang $\rho^+\cM_{\phi_1}=\cD_{\hat
 K}/\cD_{\hat K}\cdot\rho^*P_{\phi_1}$ mit genau dem Slope
@@ -233,10 +233,9 @@ Berechne nun die \emph{Determinanten Gleichung} $\sigma_L(\rho^*P_{\phi_1})\in
   &= \sum_{\{(i,j)\mid 2i-j=0\}}\alpha_{ij}x^{j}\xi^i\\
   &= -\frac{1}{4}x^4\xi^2 + a
 \end{align*}
-Setze $\theta=x^{\lambda_0+\lambda_1}\xi^{\lambda_1}=x^2\xi$ so können wir
+Setze $\theta:=x^{\lambda_0+\lambda_1}\xi^{\lambda_1}=x^2\xi$ so erhalten wir
 \begin{align*}
-\sigma_L(\rho^*P_{\phi_1}) &= \sum_{k\geq 0}\alpha_k\theta^k\\
-  &= -\frac{1}{4}\theta^2 + a
+\sigma_L(\rho^*P_{\phi_1}) &= -\frac{1}{4}\theta^2 + a
 \end{align*}
 schreiben, welches wir als nächstes faktorisieren
 \begin{align*}

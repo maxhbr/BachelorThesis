@@ -4,9 +4,6 @@
 % TODO: \cM = \cM_K ... replace
 % TODO: Dimension eines Meromorphen Zusammenhang
 \chapter{Meromorphe Zusammenhänge}
-\begin{comment}
-Alle MeromZsh sind holonome lokalisierte $\cD$-Moduln und andersherum
-\end{comment}
 Sei $\cM$ ein $\cD$-Modul ungleich Null von endlichem Typ. Falls die
 links-Multiplikation mit $x$ bijektiv ist, so nennen wir $\cM$ einen
 Meromorphen Zusammenhang. \cite[Chap 4]{sabbah_cimpa90}
@@ -88,9 +85,6 @@ $(\cM_{\hat K},\partial)$ bestehend, analog wie in Definition
 erfüllen soll.
 \end{itemize}
 \end{bem}
-\begin{comment}
-bei ZulaBarbara ist $\hat \cD_{\hat K}=\Cfxl<\partial_x>$ hier $=\cD_{\hat K}$
-\end{comment}
 
 \begin{defn}
 Seien $(\cM_K,\partial_\cM)$ und $(\cN_K,\partial_\cN)$ zwei Meromorphe
@@ -196,6 +190,31 @@ dass $\cM_K\cong\cD_K/\cD_K\cdot P$.
 \]
 \end{rem}
 \end{comment}
+\begin{thm}\label{thm:basic-splitting}
+\cite[Seite 64]{ZulaBarbara} %TODO: hat die sich hier verschrieben???
+Ist $P=P_1\cdot P_2$ mit $P_1,P_2\in \cD_K$ so gilt
+\[
+\cD_K/\cD_K\cdot P \cong \cD_K/\cD_K\cdot P_1 \oplus \cD_K/\cD_K\cdot P_2 \,.
+\]
+\end{thm}
+\begin{proof}
+\cite[Seite 57-64]{ZulaBarbara}
+\end{proof}
+\begin{cor}
+Sei $P=P_1\cdot P_2$ mit $P_1,P_2\in \cD_K$ wie in Satz
+\ref{thm:basic-splitting} so gilt
+\[
+\cD_K/\cD_K\cdot (P_1\cdot P_2) \cong \cD_K/\cD_K\cdot (P_2 \cdot P_1)
+\]
+\end{cor}
+\begin{proof}
+\begin{align*}
+\cD_K/\cD_K\cdot P &= \cD_K/\cD_K\cdot (P_1\cdot P_2)\\
+  &\cong \cD_K/\cD_K\cdot P_1 \oplus \cD_K/\cD_K\cdot P_2\\
+  &= \cD_K/\cD_K\cdot P_2 \oplus \cD_K/\cD_K\cdot P_1\\
+  &\cong \cD_K/\cD_K\cdot (P_2 \cdot P_1)
+\end{align*}
+\end{proof}
 
 \begin{lem}
 Sei $(\cM_K,\partial)$ ein gegebener Meromorpher Zusammenhang, und $\phi$ ein
@@ -418,6 +437,16 @@ singulär, falls es ein regulär singuläres $P\in \cD_{\hat K}$ (bzw. $P\in
 $\cM_K\cong\cD_K/\cD_K\cdot P$).
 \end{itemize}
 \end{defn}
+\begin{comment}
+\begin{defn}[Alternative Definition]
+\cite[Def 5.1.6]{hotta2007d}
+We say a meromorphic connection $(\cM,\nabla)$ at $x=0$ is \emph{regular} if
+there exists a finitely generated $\cO$-submodule $\cL\subset \cM$ which is
+stable by the action of $\theta=x\nabla$ (i.e., $\theta \cL\subset\cL$) and
+generates $\cM$ over $K$. We call such an $\cO$-submodule $\cL$ an
+$\cO$-lattice of $(\cM,\nabla)$.
+\end{defn}
+\end{comment}
 
 \begin{exmp} \label{exmp:Newton-Polygon}
 \begin{enumerate}
@@ -548,8 +577,10 @@ mit den Slopes $\cP(P)=\{0,1\}=:\{\Lambda_1,\Lambda_2\}$. Nach dem Satz
 $\cP(P_1)=\{\Lambda_1\}$ und $\cP(P_2)=\{\Lambda_2\}$. Durch scharfes hinsehen
 erkennt man, dass
 \begin{align*}
-P=x(x\partial_x)^2+x\partial_x+\frac{1}{2} 
+P &= x(x\partial_x)^2+x\partial_x+\frac{1}{2}\\
+  &\dots\\
   &= (x(x\partial_x)+\dots)\cdot(x\partial_x+\dots)\\
+  &\dots\\
   &= P_1\cdot P_2
 \end{align*}
 \begin{comment}
@@ -1031,7 +1062,7 @@ eventuell noch ein Lemma bei kurzen exacten Sequenzen hinzufügen
 \end{proof}
 
 \begin{comment}
-\begin{bem}[versuch 1] % von Robert
+\begin{bem}[Nach Robert] % von Robert
 Wieso sieht die Wirkung auf dem pull-back Zusammenhang so aus?\\
 Betrachte ein Element der Form $f(t)m=f(\rho(u))m$.
 %TODO: wofür das m??
