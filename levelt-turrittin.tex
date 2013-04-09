@@ -48,7 +48,7 @@ ist. Betrachte die Faktorisierung
 \sigma_L(P)=\epsilon\prod_{\beta}(\theta-\beta)^{\gamma_\beta}\,.
 \]
 Wobei $\epsilon\in\C$ eine Konstante ist.  Sei $\beta_0$  eine der Nullstellen.
-So setze $R(z):=(\beta_0/(\lambda_0+1)z^{\lambda_0+1})$ und betrachte
+So setze $R(z):=(\beta_0/(\lambda_0+1))z^{\lambda_0+1}$ und betrachte
 $\cM_{\hat K}\otimes \cF_{\hat K}^R$.
 \begin{lem}
 Falls $e$ ein zyklischer Vektor für $\cM_{\hat K}$ ist, so ist $e\otimes e(R)$
@@ -58,11 +58,47 @@ ein zyklischer Vektor für $\cM_{\hat K}\otimes \cF_{\hat K}^R$.
 TODO
 \end{proof}
 \begin{comment}
-TODO: hier weiter
+AB HIER VLT NICHT RICHTIG, nur versuch
 \end{comment}
-
-\paragraph{Zweiter Fall: $\lambda_1\neq1$.}
+Falls $P(x,\partial_x)\cdot e=0$ gilt
+\[
+P\Big(x,\partial_x-\frac{\partial R(x^{-1})}{\partial x}\Big)
+  \cdot e\otimes e(R)=0
+\]
+und hier haben wir 
+\begin{align*}
+\frac{\partial R(x^{-1})}{\partial x} 
+  &=\frac{\partial(\frac{\beta_0}{\lambda_0+1}x^{-(\lambda_0+1)})}{\partial
+  x}\\
+  &=-\beta_0z^{-(\lambda_0+2)} \,.
+\end{align*}
+Schreibe $P'=P(x,\partial_x+\beta_0x^{-(\lambda_0+2)})$.
+\begin{lem}
+Es gilt, dass $P'$ Koeffizienten in $\Cfx$ hat.
+\end{lem}
+\begin{proof}
+TODO
 \end{proof}
+Des weiteren ist $\sigma_L(P')=\sum_{k\geq 0}\alpha_k(\theta+\beta_0)^k$. Wir
+unterscheiden nun 2 Fälle:
+\begin{enumerate}
+\item \textbf{Die Determinanten Gleichung $\sigma_L(P)$ hat nur eine
+Nullstelle.}
+\begin{comment}TODO: Hier weiter \end{comment}
+\item \textbf{Die Determinanten Gleichung $\sigma_L(P)$ hat mehrere
+Nullstellen.}
+\begin{comment}TODO: Hier weiter \end{comment}
+\end{enumerate}
+
+\paragraph{Zweiter Fall: $\lambda_1\neq1$.} In diesem Fall ist einzige Slope
+$\Lambda$ nicht ganzzahlig. Mache deshalb einen pull-back mit $\lambda_1$. Sei
+$\rho:t\mapsto x:=t^{\lambda_1}$ und erhalte $P'$ so dass $\rho^*\cM_{\hat
+K}=\cD_{\hat L}/\cD_{\hat L}\cdot P'$. Nach Lemma
+\ref{lem:slope-pb-multiplikation} hat $P'$ den einen Slope
+$\Lambda\cdot\lambda_1=\lambda_0$.
+\begin{comment}TODO: Hier weiter \end{comment}
+
+\end{proof} % ende von beweis zu levelt aus sabbah_cimpa90
 
 \section{Sabbah's Refined version}
 \begin{prop}

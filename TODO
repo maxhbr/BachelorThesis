@@ -21,8 +21,10 @@ grundlagen.tex:  %TODO: Pfeile
 lemma2-4.tex:  %\mbox{\footnote{$(\xi^i)^p=1\forall i$}} % TODO: correct footnote
 lemma2-4.tex:TODO: zeige das noch
 levelt-turrittin.tex:TODO
-levelt-turrittin.tex:TODO: hier weiter
-main/main.log:[]\T1/lmr/m/n/10.95 TODO: ist $\OML/lmm/m/it/10.95 L$ \T1/lmr/m/n/10.95 Slo-pe 
+levelt-turrittin.tex:TODO
+levelt-turrittin.tex:\begin{comment}TODO: Hier weiter \end{comment}
+levelt-turrittin.tex:\begin{comment}TODO: Hier weiter \end{comment}
+levelt-turrittin.tex:\begin{comment}TODO: Hier weiter \end{comment}
 main/main.ps:w FJ(TODO,)30 b(\(3.)i(T)-8 b(re\033en\))p 3633 5576
 Übereinstimmungen in Binärdatei main/main.dvi.
 main.tex:  ,fontsize=11pt % TODO
@@ -39,6 +41,7 @@ meromZsh.tex:Lösungen in $\Ckx$. %TODO: oder \tilde\cO
 meromZsh.tex:\partial(fu)=f'u+f\partial u %TODO: hier klammern um das letzte u ?
 meromZsh.tex:assoziierten Meromorphen Zusammenhang $(\cM_A,\partial_A)$ %TODO: improve notation
 meromZsh.tex:%TODO: reihenfolge bei sabbah anderst!!!
+meromZsh.tex:\cite[Seite 64]{ZulaBarbara} %TODO: hat die sich hier verschrieben???
 meromZsh.tex:%TODO: make this harpoon arrows
 meromZsh.tex:TODO, (3. Treffen)
 meromZsh.tex:%TODO: make this harpoon arrows
@@ -48,6 +51,8 @@ meromZsh.tex:%TODO: beobachtung...
 meromZsh.tex:%TODO: differenz ist linear
 meromZsh.tex:%TODO: move after slope definition!!!
 meromZsh.tex:TODO
+meromZsh.tex:%TODO: welche definition ist besser?
+meromZsh.tex:%TODO: zeige, das beide definitionen gleich sind
 meromZsh.tex:%TODO: bessere formulierung
 meromZsh.tex:%TODO: nummer aus der referenz ist falsch
 meromZsh.tex:TODO
@@ -68,6 +73,8 @@ meromZsh.tex:%TODO: Funktorialität von Pull-Back? NEIN: Funktorialität von ten
 meromZsh.tex:  %TODO: Pfeile
 meromZsh.tex:  %TODO: Pfeile
 meromZsh.tex:  %TODO: Pfeile
+meromZsh.tex:  %TODO: Pfeile
+meromZsh.tex:%TODO: das folgende
 meromZsh.tex:%TODO: wofür das m??
 meromZsh.tex:TODO: Hier weiter...
 meromZsh.tex:%TODO: rightarrow oder mapsto?

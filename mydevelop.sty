@@ -8,13 +8,16 @@
 \MakeFramed {\FrameRestore}}%
 {\endMakeFramed}
 
-%\newenvironment{comment}{\definecolor{shadecolor}{rgb}{1,.6,.6}%
+%\renewcommand{\comment}{\definecolor{shadecolor}{rgb}{.8,.8,.8}%
 %\definecolor{framecolor}{rgb}{0,0,0}%
-%\begin{fshaded}}{\end{fshaded}}
+%\fshaded}
+%\renewcommand{\endcomment}{\endfshaded}
 
-\renewcommand{\comment}{\definecolor{shadecolor}{rgb}{.8,.8,.8}%
-\definecolor{framecolor}{rgb}{0,0,0}%
-\fshaded}
+\renewcommand{\comment}{\color{gray}%
+\definecolor{shadecolor}{rgb}{.95,.95,.95}%
+\definecolor{framecolor}{rgb}{.8,.8,.8}%
+\fshaded%
+\textbf{Kommentar: } }
 \renewcommand{\endcomment}{\endfshaded}
 
 %Zeilenhöhe, für bessere lesbarkeit
