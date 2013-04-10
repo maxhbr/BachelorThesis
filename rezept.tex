@@ -93,7 +93,17 @@ so dass
 $\cP(\cM_{\phi})=\{\frac{q}{q+1}\}$ gilt.
 \end{lem}
 \begin{proof} \cite[5.b.]{sabbah_Fourier-local}
-TODO: über L-Symbol? Stützfunktion?
+TODO
+\begin{comment}
+über L-Symbol? Stützfunktion? Versuch:\\
+Mit $L=q s_0 + (q+1)s_2$ gilt
+\[
+\sigma_L(P)= \pm x^{2q+1}\partial_x^{q+1} + qa \,,
+\]
+welches aus mehr als einem Monom besteht, deshalb ist der zu $L$ zugehörige
+Slope $\frac{q}{q+1}$ ein Slope von $P$. Da $q+1$ die höchste vorkommende
+$\partial_x$-Potez ist, kann es auch keinen weiteren Slope geben.
+\end{comment}
 \end{proof}
 Also ist ein pull-back mit Grad $q+1$ nötig, um einen ganzzahligen Slope zu
 bekommen.
@@ -162,7 +172,7 @@ Es ist $0$ keine Nullstelle von $\sigma_L(\rho^*P_\phi)$ da $\alpha_0\neq 0$.
 Setze $R(z):=(\beta_0/(\lambda_0+1))z^{\lambda_0+1}=(\beta_0/(q+1)z^{q+1}$ und
 betrachte
 \begin{align*}
-\rho^+\cM_\phi\otimes\cF_{\hat K}^R 
+\rho^+\cM_\phi\otimes\cF_{\hat K}^R
   &= \cD_{\hat K}/\cD_{\hat K}\cdot(\rho^*P_{\phi})\otimes\cF_{\hat K}^R \,.
 \end{align*}
 \begin{lem}
@@ -176,6 +186,7 @@ $\phi_1:=\frac{a}{x}$.
 \begin{align*}
 P_{\phi_1}(x,\partial_x) &=-x^2\partial_x (x\partial_x-1)+a \\
   &=-x^2\underbracket{\partial_xx}\partial_x+x^2\partial_x+a \\
+  %&=-x(x\partial_x)^2+x(x\partial_x)+a \\
   &=-x^2\overbracket{(x\partial_x+1)}\partial_x+x^2\partial_x+a \\
   &=-x^3\partial_x^2 - x^2\partial_x+x^2\partial_x+a \\
   &=-x^3\partial_x^2+a

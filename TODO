@@ -10,6 +10,8 @@ d-modul.tex:TODO: defn of Car als Charakteristische Varietät
 d-modul.tex:(linear differential system) %TODO: defn
 d-modul.tex:%TODO: was heißt holonom (holonomic)
 elem-mer-zsh.tex:%TODO: hier formal oder konvergent?
+elem-mer-zsh.tex:  %\mbox{\footnote{$(\xi^i)^p=1\forall i$}} % TODO: correct footnote
+elem-mer-zsh.tex:TODO: zeige das noch
 elem-mer-zsh.tex:%TODO: auch nicht formal
 elem-mer-zsh.tex:%TODO: verwendet hier schon das klassische Levelt-Turittin
 grundlagen.tex:%TODO: Pfeile
@@ -18,11 +20,8 @@ grundlagen.tex:%TODO: tensorprodukt / faserprodukt zum basiswechsel
 grundlagen.tex:  %TODO: Pfeile
 grundlagen.tex:  %TODO: Pfeile
 grundlagen.tex:  %TODO: Pfeile
-lemma2-4.tex:  %\mbox{\footnote{$(\xi^i)^p=1\forall i$}} % TODO: correct footnote
-lemma2-4.tex:TODO: zeige das noch
 levelt-turrittin.tex:TODO
 levelt-turrittin.tex:TODO
-levelt-turrittin.tex:\begin{comment}TODO: Hier weiter \end{comment}
 levelt-turrittin.tex:\begin{comment}TODO: Hier weiter \end{comment}
 levelt-turrittin.tex:\begin{comment}TODO: Hier weiter \end{comment}
 main/main.ps:w FJ(TODO,)30 b(\(3.)i(T)-8 b(re\033en\))p 3633 5576
@@ -86,11 +85,13 @@ meromZsh.tex:  & \mbox{(Rechenregeln Tensorprodukt)}\\ %TODO: hinzufügen
 meromZsh.tex:TODO: beispiel aus \cite{ZulaBarbara}
 rezept.tex:-\partial_z(f)\cdot z^2= %TODO: wegen klammerung?
 rezept.tex:%TODO; weiter ausführen, genauer, nebenrechnung
-rezept.tex:TODO: über L-Symbol? Stützfunktion?
+rezept.tex:TODO
 titel.tex:%TODO; titelpage bitte nicht seitlich versetzt
 trash/myNewtonPoly2.sty:          %TODO
 trash/myNewtonPoly2.sty:          %TODO
 trash/meromZsh.tex:  %TODO: auch nicht formal
+trash/lemma2-4.tex:  %\mbox{\footnote{$(\xi^i)^p=1\forall i$}} % TODO: correct footnote
+trash/lemma2-4.tex:TODO: zeige das noch
 trash/myNewtonPlot.sty:            %TODO
 trash/myNewtonPlot.sty:            %TODO
 trash/myNewtonPoly.sty:          %TODO

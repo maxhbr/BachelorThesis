@@ -24,8 +24,232 @@ f(x)           & \mapsto f'(x)+f(x)\phi'(x)\\
 Es gilt $\sE^\phi\cong\sE^\psi$ genau dann wenn $\phi\equiv\psi \mod \Cfx$.
 %TODO: hier formal oder konvergent?
 \end{bem}
+
+\begin{comment}
+ausformulierte version eines beweises im paper sabbah_Fourier-local.pdf zu
+lemma 2.4
+\end{comment}
+
+Sei $\rho:t\mapsto x:=t^p$ und $\mu_\xi:t\mapsto\xi t$.
+\begin{lem}
+\cite[Lem 2.4]{sabbah_Fourier-local}
+Für alle $\phi \in \hat L$ gilt
+\[
+\rho^+\rho_+\sE^\phi=\bigoplus_{\xi^p=1}\sE^{\phi\circ\mu_\xi} \,.
+\]
+\end{lem}
 %
-\myinput{lemma2-4.tex}
+\begin{proof}
+Wir wollen zeigen, dass das folgende Diagram, für einen passenden
+Isomorphismus, kommutiert:
+\begin{center}
+  \begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
+  \matrix (m) [
+    matrix of math nodes
+    ,row sep=2em
+    ,column sep=6em
+    %,text height=3em
+    %,text depth=0.25em
+    ]
+  {
+    \rho^+\rho_+\sE^{\phi(u)} &
+    \bigoplus_{\xi^p=1}\sE^{\phi\circ\mu_\xi} \\
+    \rho^+\rho_+\sE^{\phi(u)} &
+    \bigoplus_{\xi^p=1}\sE^{\phi\circ\mu_\xi} \\
+  };
+    \path[->,font=\scriptsize,>=angle 90]
+    (m-1-1) edge node[right]{$\partial_t$} (m-2-1)
+    (m-1-2) edge node[right]{$\partial_t$} (m-2-2)
+    (m-1-1) edge node[below]{$\cong$} (m-1-2)
+    (m-2-1) edge node[below]{$\cong$} (m-2-2)
+    ;
+  \end{tikzpicture}
+\end{center}
+Es sei oBdA $\phi\in t^{-1}\C[t^{-1}]$, dies ist nach Bemerkung 
+\ref{bem:FormRang1VR} berechtigt.
+Wir wählen eine $\hat L$ Basis $e$ des Rang 1 $\hat L$-Vektorraum $\sE^\phi$
+und damit erhält man die Familie $e,te,...,t^{p-1}e$ als $\hat K$-Basis von
+$\rho_+\sE^\phi$.\\
+Durch die Setzung $e_k:=t^{-k}\otimes_{\hat K}t^ke$ wird die Familie
+$\mathbf{e}:=(e_0,...,e_{p-1})$ eine $\hat L$-Basis von
+$\rho^+\rho_+\sE^\phi$.\\
+Zerlege nun $t\phi'(t)=\sum_{j=0}^{p-1}t^j\psi_j(t^p)\in t^{-2}\C[t^{-1}]$
+mit $\psi_j\in\C[x^{-1}]$ für alle $j>0$ und $\psi_0\in x^{-1}\C[x^{-1}]$
+(siehe: Anhang \ref{chap:aufteilung}). 
+Es gilt:
+\[
+t\partial_te_k= \sum_{i=0}^{p-1-k}t^i\psi_i(t^p)e_{k+1} +
+  \sum_{i=p-k}^{p-1}t^i\psi_i(t^p)e_{k+i-p} 
+\]
+denn:
+\begin{align*}
+t\partial_te_k &= t\partial_t(t^{-k}\otimes_{\hat K}t^ke)\\
+  &= t(-kt^{-k-1}\otimes_{\hat K}t^ke +
+    pt^{p-1}\cdot t^{-k}\otimes_{\hat K}\partial_x
+    (\underset{\in\rho_+\sE^\phi}{\underbrace{t^ke}}))\\
+  &= -kt^{-k}\otimes_{\hat K}t^ke +
+    pt^{p-1}t^{-k+1}\otimes_{\hat K}(pt^{p-1})^{-1} (kt^{k-1}e
+    + t^k\phi'(t)e)\\
+  &= -kt^{-k}\otimes_{\hat K}t^ke +
+    t^{-k+1}\otimes_{\hat K}(kt^{k-1}e + t^k\phi'(t)e)\\
+  &= \underset{=0}{\underbrace{-kt^{-k}\otimes_{\hat K}t^ke +
+    t^{-k+1}\otimes_{\hat K}kt^{k-1}e}} +
+    t^{-k+1}\otimes_{\hat K}t^k\phi'(t)e\\
+  &= t^{-k}\otimes_{\hat K}t^{k+1}\phi'(t)e\\
+  &= \sum_{i=0}^{p-1}t^{-k}\otimes_{\hat K}
+    t^{k}t^i\underset{\in\hat K}{\underbrace{\psi_i(t^p)}}e\\
+  &= \sum_{i=0}^{p-1}t^i\psi_i(t^p)(t^{-k}\otimes_{\hat K} t^{k}e)\\
+  &= \sum_{i=0}^{p-1-k}t^i\psi_i(t^p)e_{k+1} +
+  \sum_{i=p-k}^{p-1}t^i\psi_i(t^p)e_{k+i-p}
+\end{align*}
+Sei
+\[
+V:=\begin{pmatrix}
+0 &        &          & 1\\
+1 & 0\\
+  & \ddots & \ddots\\
+  &        & 1        & 0
+\end{pmatrix}
+\]
+so dass $\mathbf{e}\cdot V=(e_1,...,e_{p-1},e_0)$ gilt, 
+so dass gilt:
+\[
+t\partial_t\mathbf{e}=\mathbf{e}[\sum_{j=0}^{p-1}t^j\psi_jV^j]
+\]
+denn:
+\begin{align*}
+  t\partial_t\mathbf{e} &= (t\partial_te_0,...,t\partial_te_{p-1})\\
+  &= \Bigg(\sum_{i=0}^{p-1-k}t^i\psi_i(t^p)e_{k+1} +
+    \sum_{i=p-k}^{p-1}t^i\psi_i(t^p)e_{k+i-p}\Bigg)_{k\in\{0,..,p-1\}}\\
+  &= \mathbf{e}
+{ %\small
+  \footnotesize
+  \begin{pmatrix}u^{p-1}\psi_{p-1}(t^p) &  & \cdots & t^{3}\psi_{3}(t^p) & t^{2}
+  \psi_{2}(t^p) & t^{1}\psi_{1}(t^p)\\
+  t^{1}\psi_{1}(t^p) & t^{p-1}\psi_{p-1}(t^p) &  &
+  & \ddots & t^{2}\psi_{2}(t^p)\\
+  t^{2}\psi_{2}(t^p) & t^{1}\psi_{1}(t^p) & \ddots &  &  & t^{3}\psi_{3}(t^p)\\
+  t^{3}\psi_{3}(t^p) & \ddots & \ddots & \ddots &  & \vdots\\
+  \vdots &  & \ddots & t^{1}\psi_{1}(t^p) & t^{p-1}\psi_{p-1}(t^p)\\
+  t^{p-2}\psi_{p-2}(t^p) & \cdots & t^{3}\psi_{3}(t^p) & t^{2}\psi_{2}(t^p) &
+  t^{1}\psi_{1}(t^p) & t^{p-1}\psi_{p-1}(t^p)
+  \end{pmatrix}
+} \\
+  &= \mathbf{e}[\sum_{j=0}^{p-1}t^j\psi_j(t^p)V^j]
+\end{align*}
+Die Wirkung von $\partial_t$ auf die Basis von $\rho^+\rho_+\sE^{\phi(t)}$ ist
+also Beschrieben durch
+\[
+\partial_t\mathbf{e}=\mathbf{e}[\sum_{j=0}^{p-1}t^{j-1}\psi_jV^j] \,.
+\]
+Da $V$ das Minimalpolynom $\chi_V(x)=X^p-1$ hat, können wir diese Matrix durch
+Passendes $T$ auf die Form
+\[
+D:=TVT^{-1}=\begin{pmatrix}\xi^{0}\\
+ & \xi^{1}\\
+ &  & \ddots\\
+ &  &  & \xi^{p-1}
+\end{pmatrix} \,,
+\]
+mit $\xi^p=1$, bringen.
+So dass gilt:
+\begin{align*}
+  T[\sum_{j=0}^{p-1}t^{j-1}\psi_j(t^p)V^j]T^{-1} 
+  &= [\sum_{j=0}^{p-1}t^{j-1}\psi_j(t^p) (TVT^{-1})^j]\\
+  &= [\sum_{j=0}^{p-1}t^{j-1}\psi_j(t^p)D^j]\\
+  &=
+{
+  \footnotesize
+  \begin{pmatrix}\sum_{j=0}^{p-1}t^{j-1}\psi_{j}\\
+    & \sum_{j=0}^{p-1}t^{j-1}\psi_{j}\left(\xi^{1}\right)^{j}\\
+    & & \ddots\\
+    &  &  & \sum_{j=0}^{p-1}t^{j-1}\psi_{j}\left(\xi^{p-1}\right)^{j}
+  \end{pmatrix}
+}\\
+  &=
+{
+  \footnotesize
+  \begin{pmatrix}\sum_{j=0}^{p-1}t^{j-1}\psi_{j}\\
+    & \sum_{j=0}^{p-1}(t\xi^1)^{j-1}\psi_{j}\xi^{1}\\
+    & & \ddots\\
+    &  &  & \sum_{j=0}^{p-1}(t\xi^{p-1})^{j-1}\psi_{j}\xi^{p-1}
+  \end{pmatrix}
+  %\mbox{\footnote{$(\xi^i)^p=1\forall i$}} % TODO: correct footnote
+}\\
+  &= \begin{pmatrix}\phi'(t)\\
+    & \phi'(\xi t)\xi^{1}\\
+    & & \ddots\\
+    &  &  & \phi'(\xi^{p-1} t)\xi^{p-1}
+  \end{pmatrix}\\
+\end{align*}
+Damit wissen wir bereits, das im Diagram
+\begin{center}
+  \begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
+  \matrix (m) [
+    matrix of math nodes
+    ,row sep=2em
+    ,column sep=6em
+    %,text height=3em
+    %,text depth=0.25em
+    ]
+  {
+    \rho^+\rho_+\sE^{\phi(u)} &
+    \hat L^p &
+    \hat L^p &
+    \bigoplus_{\xi^p=1}\sE^{\phi\circ\mu_\xi} \\
+    & \\
+    & \\
+    \rho^+\rho_+\sE^{\phi(u)} &
+    \hat L^p &
+    \hat L^p &
+    \bigoplus_{\xi^p=1}\sE^{\phi\circ\mu_\xi} \\
+  };
+    \path[->,font=\scriptsize,>=angle 90]
+    (m-1-2) edge node[below]{$\cong$} (m-1-1)
+    (m-1-1) edge node[right]{$\partial_t$} (m-4-1)
+    (m-4-2) edge node[below]{$\cong$} (m-4-1)
+    (m-1-3) edge node[above]{$T$} node[below]{$\cong$} (m-1-2)
+    (m-4-3) edge node[above]{$T$} node[below]{$\cong$} (m-4-2)
+    (m-1-2) edge node[descr]{$\sum_{j=0}^{p-1}t^{j-1}\psi_jV^j$} (m-4-2)
+    (m-1-3) edge node[descr]{$\sum_{j=0}^{p-1}t^{j-1}\psi_jD^j$} (m-4-3)
+    (m-1-3) edge node[above]{$\Phi$} node[below]{$\cong$} (m-1-4)
+    (m-4-3) edge node[above]{$\Phi$} node[below]{$\cong$} (m-4-4)
+    (m-1-4) edge node[right]{$\partial_t$} (m-4-4)
+    ;
+
+    \draw [decoration={brace,amplitude=0.5em},decorate]
+      (m.south -| m-4-3.east) -- node[below]{$(\star)$} 
+        (m.south -| m-4-1.west);
+  \end{tikzpicture}
+\end{center}
+der mit $(\star)$ bezeichnete Teil kommutiert. Um zu zeigen, dass alles
+kommutiert, zeigen wir noch, dass
+\begin{align*}
+\partial_t(\Phi(x))=\Phi\big(\sum_{j=0}^{p-1}t^{j-1}\psi_j(x)D^j\big)
+& & \forall x\in \hat L^p
+\end{align*}
+gilt.
+\begin{comment}
+TODO: zeige das noch
+\end{comment}
+Sei $x=\,^t(x_1,\dots,x_p)\in\hat L^p$. So ist 
+\begin{align*}
+\partial_t(\Phi(x)) &= \partial_t(\,^t(\dots))
+\end{align*}
+und
+\begin{align*}
+\Phi\Big(\,^tx\big(\sum_{j=0}^{p-1}t^{j-1}\psi_j(t^p)D^j\big)\Big) 
+&= \Phi\Big( (x_1,\dots,x_p)
+  \begin{pmatrix}\phi'(t)\\
+    & \phi'(\xi t)\xi^{1}\\
+    & & \ddots\\
+    &  &  & \phi'(\xi^{p-1} t)\xi^{p-1}
+  \end{pmatrix}
+  \Big)\\
+&= \Phi\Big(
+(x_1\phi'(t),x_2\phi'(\xi t)\xi,\dots,x_p\phi'(\xi^{p-1} t)\xi^{p-1}) \Big)
+\end{align*}
+\end{proof}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Defnintion von Notizen und \cite[Cor 5.2.6]{sabbah_cimpa90}}
