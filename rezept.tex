@@ -1,8 +1,13 @@
 %!TeX root = main.tex
 \chapter{DIE Klasse der Fourier-Transformationen}
 In diesem Kapittel werden Beispiele einer speziellen Klasse von $\cD$-Moduln
-diskutiert. Dazu wird im folgendem zu 2 Beispielen explizit der Beweis aus
-\cite{sabbah_cimpa90} zur Levelt-Turrittin-Zerlegung nachvollzogen.
+diskutiert. Dazu wird im folgendem zu 2 Beispielen unter anderem explizit der
+Beweis aus \cite{sabbah_cimpa90} zur Levelt-Turrittin-Zerlegung nachvollzogen.
+
+Es wird zunächst ein allgemeines Rezept gegeben, welches zu gegebenem $\phi$
+D-Moduln ergibt. Im laufe des Kapittels werden immer speziellere $\phi$
+betrachtet und zuletzt wird für konkrete Beispiele eine explizite Rechnung
+gegeben.
 
 \section{Rezept für allgemeine $\phi$} \label{sec:allgemeinProblem}
 Hier wollen wir nun eine Spezielle Klasse von Meromorphen Zusammenhängen, die
@@ -29,9 +34,9 @@ deshalb multipliziere mit Hauptnenner und erhalte
 \end{align*}
 mit $Q\in\C[t]<\partial_t>$.
 Dies ändert den Assozierten Meromorphen Zusammenhang nicht, weil
-$t^{\max(I)+1}$ eine Einheit in $\cD_{\hat L}$ ist.
+$t^{\max(I)+1}$ eine Einheit in $\cD_{\hat L}$ (und auch in $\cD_{L}$) ist.
 \item Fouriertransformiere $Q$ und erhalte
-$\cF_Q(z,\partial_z)=Q(\partial_z,-z)$ in $\C[z]<\partial_z>$
+$\cF_Q(z,\partial_z)\bydef Q(\partial_z,-z)$ in $\C[z]<\partial_z>$
 \item Wende den Übergang $x\rightsquigarrow z^{-1}$ an.\\
 Was passiert mit der Ableitung $\partial_x$? Es gilt
 \[

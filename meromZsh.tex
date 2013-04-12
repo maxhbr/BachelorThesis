@@ -406,7 +406,7 @@ TODO
 % ist dies eine Invariante??
 % gestohlen aus der ZulaBarbara Seite 46
 \begin{comment}
-Quelle: sabba?\\
+Quelle: sabbah?\\
 sabbah mach alles formal, barbara mach alles konvergent
 \end{comment}
 Jedes $P\in \cD_{\hat K}$, also insbesondere auch jedes $P\in\cD_K$, lässt sich
@@ -1097,6 +1097,10 @@ $\id\otimes\pi_{\hat K}\circ\Phi^{-1}(y_1)=\psi(y_0)$.
 \]
 
 \begin{comment}
+TODO: zeige, dass die Ableitung mit dem Isom. kommutiert
+\end{comment}
+
+\begin{comment}
 Ingo sagt:\\
 Nun zu deiner Situation: Da geht es jeweils um die rechten Endstücke.
 Anders als die Mittelstücke sind diese bis auf Isomorphie eindeutig
@@ -1370,15 +1374,13 @@ Es gilt die Projektionsformel
 \rho_+(\cN_{\hat L}\otimes_{\hat L}\rho^+\cM_{\hat K}) &=
 \rho_+(\cN_{\hat L}\otimes_{\hat L}(\hat L\otimes_{\hat K}\cM_{\hat L}))
   & \mbox{(def von $\rho^+\cM_{\hat K}$)}\\
-&\cong \rho_+((\cN_{\hat L}\otimes_{\hat L}\hat L)\otimes_{\hat K}\cM_{\hat K})
+&\cong\rho_+((\cN_{\hat L}\otimes_{\hat L}\hat L)\otimes_{\hat K}\cM_{\hat K})
   & \mbox{(Rechenregeln Tensorprodukt)}\\ %TODO: hinzufügen
 &\cong \rho_+(\cN_{\hat L}\otimes_{\hat K}\cM_{\hat K})
   & \mbox{(Rechenregeln Tensorprodukt)}\\
 &= \rho_+\cN_{\hat L}\otimes_{\hat K}\cM_{\hat K}
   & \mbox{(?)}
-\end{align*}                               sudo rm /etc/asound.conf
-      alsactl restore 0
-
+\end{align*}
 \end{proof}
 
 \begin{comment}
@@ -1390,25 +1392,5 @@ Sei $\rho(u)=u^p=t$ und $\phi(t)$ gegeben.
 &=\underset{\zeta\in\mu_p}{\bigoplus}\sE^{\phi(\zeta\cdot u)}\\
 \end{align*}
 \end{comment}
-
-\section{Fouriertransformation}
-\begin{defn}[Fouriertransformation]
-\cite[Def 3.1]{Bloch_localfourier}
-\cite{GarciaLopez04}
-\cite[Def 6.1]{ZulaBarbara}
-Sei $P=\sum_{i=0}^da_i(x)\partial_x^i$. Dann ist die
-\emph{Fouriertransformierte} von
-$P$ gegeben durch
-\[
-\cF_P:=\cF_P(z,\partial_z)=\sum_{i=0}^da_i(\partial_z)(-z)^i
-\]
-\end{defn}
-\begin{comment}
-TODO: beispiel aus \cite{ZulaBarbara}
-\end{comment}
-\begin{defn}[Fouriertransformation von Meromorphen Zusammenhang]
-Ist $\cM_{\hat K}=\hat K / \hat K \cdot P$ so ist die Fouriertransformierte
-davon $\,^\cF\cM_{\hat K}=\hat K / \hat K \cdot \cF_P(x,\partial_x)$.
-\end{defn}
 
 % vim: set ft=tex :

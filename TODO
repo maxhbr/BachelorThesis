@@ -74,6 +74,7 @@ meromZsh.tex:  %TODO: Pfeile
 meromZsh.tex:  %TODO: Pfeile
 meromZsh.tex:  %TODO: Pfeile
 meromZsh.tex:%TODO: das folgende
+meromZsh.tex:TODO: zeige, dass die Ableitung mit dem Isom. kommutiert
 meromZsh.tex:%TODO: wofür das m??
 meromZsh.tex:TODO: Hier weiter...
 meromZsh.tex:%TODO: rightarrow oder mapsto?
@@ -82,7 +83,6 @@ meromZsh.tex:%TODO: erkläre wieso --> Elementare Zusammenhänge
 meromZsh.tex:%TODO: nummer aus der referenz ist falsch
 meromZsh.tex:%TODO: nummer aus der referenz ist falsch
 meromZsh.tex:  & \mbox{(Rechenregeln Tensorprodukt)}\\ %TODO: hinzufügen
-meromZsh.tex:TODO: beispiel aus \cite{ZulaBarbara}
 rezept.tex:-\partial_z(f)\cdot z^2= %TODO: wegen klammerung?
 rezept.tex:%TODO; weiter ausführen, genauer, nebenrechnung
 rezept.tex:TODO
