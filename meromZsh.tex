@@ -93,6 +93,10 @@ Morphismus von Meromorphen Zusammenhängen, falls sie
 $\phi\circ\partial_\cM=\phi\circ\partial_\cN$ erfüllt. In diesem Fall schreiben
 wir auch $\phi:(\cM_K,\partial_\cM)\rightarrow(\cN_K,\partial_\cN)$.
 \end{defn}
+\begin{comment}
+TODO: Wann sind die Isomorph\\
+$\cM\cong \cN$ und die Ableitungen kommutieren mit dem Isomorphismus
+\end{comment}
 
 \begin{bem}
 \begin{enumerate}
@@ -776,12 +780,12 @@ analog erhalten wir
 \rho^*&:K\hookrightarrow L:=\Cktl, f \mapsto f\circ \rho & \mbox{bzw.} &&
 \rho^*&:\hat K\hookrightarrow \hat L:=\Cftl, f \mapsto f\circ \rho
 \end{align*}
-wobei $L$ (bzw. $\hat L$) eine enldiche Körpererweiterung von $K$ (bzw $\hat
+wobei $L$ (bzw. $\hat L$) eine enldiche Körpererweiterung von $K$ (bzw. $\hat
 K$) ist.
 \begin{comment}
 TODO: damit wird $\hat L$ zu einem $\hat K$ Vektorraum.
 \end{comment}
-Sei $\cM_{\hat K}$ ein endlich dimensionaler $\C(\!(t)\!)$ Vektorraum ausgestattet mit
+Sei $\cM_{\hat K}$ ein endlich dimensionaler $\Cftl$ Vektorraum ausgestattet mit
 einem Zusammenhang $\nabla$.
 %
 \begin{defn}[pull-back] \label{defn:pull-back}
@@ -789,14 +793,21 @@ einem Zusammenhang $\nabla$.
 \cite[Page 34]{sabbah_cimpa90}
 Der \emph{pull-back} oder das \emph{Inverses Bild} $\rho^{+}\cM_{\hat K}$ von
 $(\cM_{\hat K},\nabla)$ ist der Vektorraum
-$\rho^{*}\cM_{\hat K}=\hat L\otimes_{\hat K}\cM_{\hat K}
-=\Cftl\otimes_{\Cfxl}\cM_{\Cfxl}$
+\[
+\rho^{*}\cM_{\hat K}:=\hat L\otimes_{\hat K}\cM_{\hat K}
+\bydef\Cftl\otimes_{\Cfxl}\cM_{\Cfxl}
+\]
  mit dem \emph{pull-back Zusammenhang} $\rho^*\nabla$ definiert durch
 %TODO: ist das der zusammenhang oder die wirkung oder was?
 \begin{equation} \label{eq:pull-back-zusammenhang}
 \partial_t(1\otimes m):=\rho'(t)\otimes\partial_xm \,.
 \end{equation}
 \end{defn}
+Für ein allgemeines $\phi\otimes m\in \rho^{*}\cM_{\hat K}$ gilt somit
+\begin{equation} \label{eq:pull-back-zusammenhang-2}
+\partial_t(\phi\otimes m):=\rho'(t)(\phi\otimes\partial_xm) +
+  \frac{\partial\phi}{\partial t}\otimes m \,.
+\end{equation}
 \begin{comment}
 \cite[Seite 130]{coutinho1995primer} Holonomic modules are preserved under
 this construction.
