@@ -1,0 +1,8 @@
+#!/bin/bash
+if [ -L $0 ] ; then
+  DIR=$(dirname $(readlink -f $0)) ;
+else
+  DIR=$(dirname $0) ;
+fi
+cd $DIR
+latexmk -pvc -pdf main.tex
