@@ -1,4 +1,3 @@
-\xdef\myDevelopVariable{1}
 \documentclass[ngerman
   ,fontsize=11pt % TODO
   ,numbers=noenddot % obsolete
@@ -12,6 +11,9 @@
   %,biblography=totoc  % unused
   %,landscape,twocolumn
 ]{scrbook}
+\def\ifundefined#1{\expandafter\ifx\csname#1\endcsname\relax}
+\ifundefined{myDevelopVariable}\xdef\myDevelopVariable{1}\fi
+
 \usepackage[ngerman]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}

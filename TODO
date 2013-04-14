@@ -9,6 +9,7 @@ d-modul.tex:%TODO: Variable zu t machen?
 d-modul.tex:TODO: defn of Car als Charakteristische Varietät
 d-modul.tex:(linear differential system) %TODO: defn
 d-modul.tex:%TODO: was heißt holonom (holonomic)
+d-modul.tex:TODO: hier weiter
 elem-mer-zsh.tex:%TODO: hier formal oder konvergent?
 elem-mer-zsh.tex:  %\mbox{\footnote{$(\xi^i)^p=1\forall i$}} % TODO: correct footnote
 elem-mer-zsh.tex:TODO: zeige das noch
@@ -24,6 +25,7 @@ levelt-turrittin.tex:TODO
 levelt-turrittin.tex:TODO
 levelt-turrittin.tex:\begin{comment}TODO: Hier weiter \end{comment}
 levelt-turrittin.tex:\begin{comment}TODO: Hier weiter \end{comment}
+Übereinstimmungen in Binärdatei main/final.dvi.
 main/main.ps:w FJ(TODO,)30 b(\(3.)i(T)-8 b(re\033en\))p 3633 5576
 Übereinstimmungen in Binärdatei main/main.dvi.
 main.tex:  ,fontsize=11pt % TODO
@@ -38,6 +40,7 @@ meromZsh.tex:%TODO: partial oder d
 meromZsh.tex:TODO: zeige, das der lösungsraum die eigenschaften von $\cD$-Moduln erfüllt\\
 meromZsh.tex:Lösungen in $\Ckx$. %TODO: oder \tilde\cO
 meromZsh.tex:\partial(fu)=f'u+f\partial u %TODO: hier klammern um das letzte u ?
+meromZsh.tex:TODO: Wann sind die Isomorph\\
 meromZsh.tex:assoziierten Meromorphen Zusammenhang $(\cM_A,\partial_A)$ %TODO: improve notation
 meromZsh.tex:%TODO: reihenfolge bei sabbah anderst!!!
 meromZsh.tex:\cite[Seite 64]{ZulaBarbara} %TODO: hat die sich hier verschrieben???
