@@ -4,31 +4,29 @@
   ,headsepline
   ,parskip=half*
   ,openany
-  ,DIV=12
+  ,DIV=10
   ,fleqn % mv align to left
   %,oneside
   %,titelpage % unused
   %,biblography=totoc  % unused
   %,landscape,twocolumn
 ]{scrbook}
-\def\ifundefined#1{\expandafter\ifx\csname#1\endcsname\relax}
-\ifundefined{myDevelopVariable}\xdef\myDevelopVariable{1}\fi
 
 \usepackage[ngerman]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 %\usepackage[ansinew]{inputenc}
-\usepackage{lmodern} %Type1-Schriftart für nicht-englische Texte
-%\linespread{1.5}
-\usepackage[scale=0.75]{geometry}
 
 %\usepackage{python} %!!!
 
+\usepackage{lmodern} %Type1-Schriftart für nicht-englische Texte
 %schrift enger:
 %\usepackage{mathptmx}
 %\usepackage[scaled=.92]{helvet}
 %\usepackage{courier}
+%\linespread{1.5}
 
+\usepackage[scale=0.75]{geometry}
 \setlength{\unitlength}{1mm}
 %\emergencystretch 2em
 
@@ -36,7 +34,6 @@
 \usepackage{amsmath,amsthm,amssymb}
 \usepackage{latexsym}
 \usepackage{enumerate}
-\usepackage{verbatim}
 \usepackage{graphicx}
 
 \usepackage{listings}
@@ -47,10 +44,6 @@
 }
 
 \allowdisplaybreaks
-
-%\usepackage{thmbox}
-
-%\usepackage{natbib}
 
 \usepackage[automark]{scrpage2} % Headline styles
 \usepackage[square,numbers]{natbib}
@@ -73,8 +66,8 @@
 \usepackage{mathtools}
 
 \usepackage{tikz}
-\usetikzlibrary{matrix,arrows, calc,%
-  decorations.pathmorphing, decorations.pathreplacing }
+\usetikzlibrary{matrix,arrows, calc, decorations.pathmorphing,%
+  decorations.pathreplacing }
 \usepackage{float}
 \usepackage{subfig}
 
@@ -150,6 +143,11 @@
 %\crefname{algorithmus}{Algorithmus}{Algorithmen}
 %\crefname{kor}{Korollar}{Korollare}
 
+%%%%  MyDevelop  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\myinput{mydevelop.sty}
+\ifnum\myDevelopVariable=0
+  \cfoot{\today}
+\fi
 %%%%  new Commands  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %TODO: replace def --> newcommand
 \def\bme{\boldsymbol{e}}
@@ -301,12 +299,6 @@
 \makebox[0pt]{\fbox{\scriptsize#2}}\\[-2pt]\text{\small$\downarrow$}\\[-3pt]%
 {\displaystyle#1}\end{array}}%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\ifnum\myDevelopVariable=1
-  \myinput{mydevelop.sty}
-\else
-  \cfoot{\today}
-\fi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}

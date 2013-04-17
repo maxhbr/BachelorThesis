@@ -1,29 +1,30 @@
+\def\ifundefined#1{\expandafter\ifx\csname#1\endcsname\relax}
+\ifundefined{myDevelopVariable}\xdef\myDevelopVariable{1}\fi
 
-\usepackage{xcolor}
-\usepackage{color}
-\usepackage{framed}
+\ifnum\myDevelopVariable=1
+  \usepackage{xcolor}
+  \usepackage{color}
+  \usepackage{framed}
 
-\newenvironment{fshaded}{%
-\def\FrameCommand{\fcolorbox{framecolor}{shadecolor}}%
-\MakeFramed {\FrameRestore}}%
-{\endMakeFramed}
+  \newenvironment{fshaded}{%
+  \def\FrameCommand{\fcolorbox{framecolor}{shadecolor}}%
+  \MakeFramed {\FrameRestore}}%
+  {\endMakeFramed}
 
-%\renewcommand{\comment}{\definecolor{shadecolor}{rgb}{.8,.8,.8}%
-%\definecolor{framecolor}{rgb}{0,0,0}%
-%\fshaded}
-%\renewcommand{\endcomment}{\endfshaded}
+  \renewcommand{\comment}{\color{gray}%
+  \definecolor{shadecolor}{rgb}{.95,.95,.95}%
+  \definecolor{framecolor}{rgb}{.8,.8,.8}%
+  \fshaded%
+  \textbf{\tiny Kommentar: } }
+  \renewcommand{\endcomment}{\endfshaded}
 
-\renewcommand{\comment}{\color{gray}%
-\definecolor{shadecolor}{rgb}{.95,.95,.95}%
-\definecolor{framecolor}{rgb}{.8,.8,.8}%
-\fshaded%
-\textbf{\tiny Kommentar: } }
-\renewcommand{\endcomment}{\endfshaded}
+  %Zeilenhöhe, für bessere lesbarkeit
+  \linespread{1.3}
 
-%Zeilenhöhe, für bessere lesbarkeit
-\linespread{1.3}
+  \cfoot{-\thepage-\\\today}
+  \setboolean{@twoside}{false} 
 
-\cfoot{-\thepage-\\\today}
-\setboolean{@twoside}{false} 
-
-%\usepackage{showframe}
+  %\usepackage{showframe}
+\else
+  \usepackage{verbatim}
+\fi
