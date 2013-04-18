@@ -820,6 +820,21 @@ Für ein allgemeines $\phi\otimes m\in \rho^{*}\cM_{\hat K}$ gilt somit
 \partial_t(\phi\otimes m):=\rho'(t)(\phi\otimes\partial_xm) +
   \frac{\partial\phi}{\partial t}\otimes m \,.
 \end{equation}
+\begin{lem} \label{lem:pull-back-hilfslemma3}
+%Wie erhält man den pull-back Zusammenhang bzw. wie ist er berechenbar?
+In der Situation von Lemma \ref{defn:pull-back}, mit
+$\cM_{\hat K}=\cD_{\hat K}/\cD_{\hat K}\cdot P(x,\partial_x)$ für ein
+$P(x,\partial_x)\in\cD_{\hat K}$, gilt
+\[\rho^*\cM_{\hat K}\cong \cD_{\hat L}\Big/\cD_{\hat L}\cdot
+  P(\rho(t),\rho'(t)^{-1}\partial_t) \,. \]
+\begin{comment}
+also wird der Übergang beschrieben durch
+\begin{align*}
+x          &\rightarrow \rho(t) \\
+\partial_x &\rightarrow \rho'(t)^{-1}\partial_t
+\end{align*}
+\end{comment}
+\end{lem}
 \begin{comment}
 \cite[Seite 130]{coutinho1995primer} Holonomic modules are preserved under
 this construction.
@@ -829,18 +844,22 @@ this construction.
 \cite[Page 34]{sabbah_cimpa90}
 Sei $\cM_{\hat K}$ ein formaler Meromorpher Zusammenhang. Man definiert
 $\pi^*\cM_{\hat K}$ als den Vektor Raum über $\hat L:\pi^*\cM_{\hat K}=\hat
-L\otimes_{\hat K}\cM_{\hat K}$. Dann definiert man die Wirkung von
-$\partial_t$ durch: $t\partial_t\cdot(1\otimes
-m)=q(1\otimes(x\partial_x\otimes m))$ und damit
+L\otimes_{\hat K}\cM_{\hat K}$. Dann definiert man die Wirkung von $\partial_t$
+durch: $t\partial_t\cdot(1\otimes m)=q(1\otimes(x\partial_x\otimes m))$ und
+damit
 \[
 t\partial_t\cdot(\phi\otimes m)=q(\phi\otimes(x\partial_x\cdot
 m))+((t\frac{\partial\phi}{\partial t})\otimes m) \,.
 \]
 Man erhält damit die Wirkung von $\partial_t=t^{-1}(t\partial_t)$.
 \end{comment}
-%
+
+Für den Beweis von Lemma \ref{lem:pull-back-hilfslemma3} werden zunächst zwei
+kleine Lemmata bewiesen.
+
 \begin{lem} \label{lem:pull-back-hilfslemma1}
-Es gilt $\rho^*\cD_{\hat K }=\hat L\otimes_{\hat K}\cD_{\hat K } \cong \cD_{\hat L }$ mittels
+Es gilt $\rho^*\cD_{\hat K }=\hat L\otimes_{\hat K}\cD_{\hat K } \cong
+\cD_{\hat L }$ mittels
 \begin{center}
 \begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
 \matrix (m) [
@@ -938,22 +957,7 @@ Also gilt $\partial_t(f(t)m) = \rho'(u)^{-1}\partial_u(f(t)m)$ und somit ist
 die Wirkung von $\partial_t$ gleich der Wirkung von $\rho'(u)^{-1}\partial_u$.
 \end{bem}
 %
-\begin{lem} \label{lem:pull-back-hilfslemma3}
-%Wie erhält man den pull-back Zusammenhang bzw. wie ist er berechenbar?
-In der Situation von Lemma \ref{defn:pull-back}, mit
-$\cM_{\hat K}=\cD_{\hat K}/\cD_{\hat K}\cdot P(x,\partial_x)$ für ein
-$P(x,\partial_x)\in\cD_{\hat K}$, gilt
-\[\rho^*\cM_{\hat K}\cong \cD_{\hat L}\Big/\cD_{\hat L}\cdot
-  P(\rho(t),\rho'(t)^{-1}\partial_t) \,. \]
-\begin{comment}
-also wird der Übergang beschrieben durch
-\begin{align*}
-x          &\rightarrow \rho(t) \\
-\partial_x &\rightarrow \rho'(t)^{-1}\partial_t
-\end{align*}
-\end{comment}
-\end{lem}
-\begin{proof}
+\begin{proof}von  Lemma \ref{lem:pull-back-hilfslemma3}.
 %TODO: warum hier alles Lokalisiert?
 Sei $P\in\cD_{\hat K}$ und $\cM_{\hat K }:=\cD_{\hat K }/\cD_{\hat K }\cdot P$.
 Wir wollen zeigen, dass
@@ -1379,5 +1383,43 @@ Sei $\rho(u)=u^p=t$ und $\phi(t)$ gegeben.
 &=\underset{\zeta\in\mu_p}{\bigoplus}\sE^{\phi(\zeta\cdot u)}\\
 \end{align*}
 \end{comment}
+
+\section{Twisten von $\cD$-Moduln}
+\cite[Chap 5 §2]{coutinho1995primer}
+\begin{comment}
+\begin{lem}
+\cite[Seite 44]{DiplHedwig}
+Sei $\cM_{\hat K}=\hat\cD/\hat\cD\cdot P(x,\partial_x)$ und sei
+$\psi=\frac{\beta}{\lambda}x^{-\lambda}$. So gilt
+\[
+\cM_{\hat K}\otimes_{\hat K}\sE^{\phi}=\cD_{\hat K}/\cD_{\hat K}\cdot
+Q(x,\partial_x)
+\]
+mit $Q(x,\partial_x)=P(x,\partial_x+\frac{\beta}{x^{\lambda+1}})$.
+\end{lem}
+\end{comment}
+
+\section{Fouriertransformation}
+\begin{defn}[Fouriertransformation]
+\cite[Def 3.1]{Bloch_localfourier}
+\cite{GarciaLopez04}
+\cite[Def 6.1]{ZulaBarbara}
+Sei $P=\sum_{i=0}^da_i(x)\partial_x^i$. Dann ist die
+\emph{Fouriertransformierte} von
+$P$ gegeben durch
+\[
+\cF_P:=\cF_P(z,\partial_z)=\sum_{i=0}^da_i(\partial_z)(-z)^i
+\]
+\end{defn}
+\begin{defn}[Fouriertransformation von lokalisierten holonomen D-Moduln]
+Ist $\cM_{\hat K}=\hat K / \hat K \cdot P$ so ist die Fouriertransformierte
+davon $\,^\cF\cM_{\hat K}=\hat K / \hat K \cdot \cF_P(x,\partial_x)$.
+\end{defn}
+\begin{exmp}
+Sei $P=t^2\partial_t+1$ dann ist die Fouriertransformierte davon $\cF_P=\dots$
+\begin{comment}
+TODO: hier weiter
+\end{comment}
+\end{exmp}
 
 % vim: set ft=tex :

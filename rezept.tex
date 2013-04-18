@@ -165,7 +165,7 @@ die \emph{Determinanten Gleichung} $\sigma_L(\rho^*P_{\phi})\in \hat K[\xi]$.
 Da $\hat K[\xi]$ kommutativ ist gilt hier, dass $(x^j\xi^i)^k=x^{jk}\xi^{ik}$ ist.
 Setze $\theta=x^{\lambda_0+\lambda_1}\xi^{\lambda_1}=x^{q+1}\xi$ so können wir
 \begin{align*}
-\sigma_L(\rho^*P_{\phi}) &= \sum_{k\geq 0}\alpha_k\theta^k
+\sigma_L(\rho^*P_{\phi}) &= \sum_{k\geq 0}\alpha_k\theta^k & & \alpha_k\in\C
 \end{align*}
 schreiben, welches wir als nächsten Schritt faktorisieren
 \[
@@ -173,22 +173,46 @@ schreiben, welches wir als nächsten Schritt faktorisieren
 \]
 Wobei $\epsilon\in\C$ eine Konstante ist.
 Sei $\beta_0$  eine der Nullstellen.
-Es ist $0$ keine Nullstelle von $\sigma_L(\rho^*P_\phi)$ da $\alpha_0\neq 0$.
+Da $\ord_L(\rho^*P_\phi)=0$ und der einzige Slope von $\rho^*P_\phi$ nicht
+gleich $0$ ist, gilt offensichtlich, dass $\alpha_0\neq0$.
+\begin{comment}
 Setze $R(z):=(\beta_0/(\lambda_0+1))z^{\lambda_0+1}=(\beta_0/(q+1)z^{q+1}$ und
 betrachte
 \begin{align*}
 \rho^+\cM_\phi\otimes\cF_{\hat K}^R
   &= \cD_{\hat K}/\cD_{\hat K}\cdot(\rho^*P_{\phi})\otimes\cF_{\hat K}^R \,.
 \end{align*}
+\end{comment}
+Setze $\psi(z):=(\beta_0/(\lambda_0+1))z^{\lambda_0+1}=(\beta_0/(q+1))z^{q+1}$
+und betrachte
+\begin{comment}
+TODO: bei Hedwig ist es $\beta/\lambda \cdot x^{-\lambda}$
+\end{comment}
+\begin{align*}
+\cN:=\rho^+\cM_\phi\otimes\sE_{\hat K}^\psi
+  &= \cD_{\hat K}/\cD_{\hat K}\cdot(\rho^*P_{\phi})\otimes\sE_{\hat K}^\psi \,.
+\end{align*}
 \begin{lem}
-Sei $e$ ein zyklischer Vektor zu $\rho^+\cM_\phi$, so ist $e\otimes e(R)$ ein
-zyklischer Vektor für $\rho^+\cM_\phi\otimes\cF_{\hat K}^R$.
+Sei $e$ ein zyklischer Vektor zu $\rho^+\cM_\phi$, so ist $e\otimes e(R)\in\cN$
+ein zyklischer Vektor für $\cN\bydef\rho^+\cM_\phi\otimes\sE_{\hat K}^\psi$.
 \end{lem}
 \begin{proof}
 \begin{comment}
 Vergleiche mit Hedwigs Diplomarbeit Seite 37
 \end{comment}
 \end{proof}
+\begin{lem}
+\cite[Seite 44]{DiplHedwig}
+Wenn $\rho^+\cM_\phi=\cD_{\hat K}/\cD_{\hat
+K}\cdot(\rho^*P_{\phi}(x,\partial_x))$ gilt, so ist
+\begin{align*}
+\cN\bydef\rho^+\cM_\phi\otimes\sE_{\hat K}^\psi
+  &=\cD_{\hat K}/\cD_{\hat
+    K}\cdot(\rho^*P_{\phi}(x,\partial_x+\frac{\beta}{x^{\lambda+1}}))\\
+  &=\cD_{\hat K}/\cD_{\hat
+    K}\cdot(\rho^*P_{\phi}(x,\partial_x+\frac{\beta}{x^{\lambda+1}}))
+\end{align*}
+\end{lem}
 
 \section{Spezialfall $\phi_1:=\frac{a}{x}$}
 Das wohl einfachste Beispiel ist $\cM_{\phi_1}$ bezüglich
@@ -276,12 +300,10 @@ Dies geht, weil $\hat K[\xi]$ kommutativ ist.
 Setze $R(z):=(\beta_0/(\lambda_0+1))z^{\lambda_0+1}=\sqrt{a}z^2$ und betrachte
 $\rho^+\cM_{\phi_1}\otimes\cF_{\hat K}^R$.
 
-\begin{comment}
-BIS HIER HIN KORREGIERT: $P_\phi$ ist im folgendem FALSCH
-\end{comment}
-
 \subsection{Sabah's refined Levelt-Turrittin-Zerlegung für $\phi_1$}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\iffalse
 \section{Angewendet für $\phi_2:=\frac{a}{x^2}$}
 \begin{comment}
 für $q=2$
@@ -516,6 +538,6 @@ P_{\phi_4} &=x\partial_x(-x^2\partial_x)^{\max_j(k_j)}
 }
 \end{center}
 \end{figure}
-
+\fi
 
 % vim: set ft=tex :

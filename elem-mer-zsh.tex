@@ -6,7 +6,7 @@ einführen als Bausteine oder kleinste Meromorphe Zusammenhänge
 \begin{defn}
 \cite[1.a]{sabbah_Fourier-local}
 Sei $\phi\in\hat K$.
-Wir schreiben $\sE^\phi$ für den (formalen) Rang 1 Vektorraum $\Cfxl \bydef
+Wir schreiben $\sE_{\hat K}^\phi$ für den (formalen) Rang 1 Vektorraum $\Cfxl \bydef
 \hat K$ ausgestattet mit dem Zusammenhang $\nabla=\partial_x+\partial_x\phi$,
 im speziellen also $\nabla_{\partial_x}1=\partial_x1=\phi'$.\\
 \begin{comment}
@@ -18,6 +18,10 @@ f(x)           & \mapsto f'(x)+f(x)\phi'(x)\\
 \end{align*}
 \end{comment}
 \end{defn}
+\begin{bem}
+Auf die Angabe von des Rang 1 Vektorraums im Subscript wird im folgendem meist
+verzichtet.
+\end{bem}
 
 \begin{bem} \label{bem:FormRang1VR}
 \cite[1.a]{sabbah_Fourier-local}
@@ -261,6 +265,14 @@ den es $\psi \in \Cfx$, $\alpha\in\C$ und $p\in \N$ gibt, so dass
 \]
 mit $R_{\alpha,p}:=\cD/\cD(x\partial_x-\alpha)^p$, ist.
 \end{defn}
+
+\begin{lem}
+\sE^{\psi}\otimes R_{\alpha,p}\cong
+\cD/\cD\cdot(x\partial_x-(\alpha+x\frac{\partial \psi}{\partial x}))^p
+\end{lem}
+\begin{proof}
+\cite[Lem 5.12]{DiplHedwig}
+\end{proof}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Defnintion in \cite{sabbah_cimpa90}}
