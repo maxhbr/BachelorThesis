@@ -9,7 +9,6 @@ d-modul.tex:%TODO: Variable zu t machen?
 d-modul.tex:TODO: defn of Car als Charakteristische Varietät
 d-modul.tex:(linear differential system) %TODO: defn
 d-modul.tex:%TODO: was heißt holonom (holonomic)
-d-modul.tex:TODO: hier weiter
 elem-mer-zsh.tex:%TODO: hier formal oder konvergent?
 elem-mer-zsh.tex:  %\mbox{\footnote{$(\xi^i)^p=1\forall i$}} % TODO: correct footnote
 elem-mer-zsh.tex:TODO: zeige das noch
@@ -21,6 +20,7 @@ grundlagen.tex:%TODO: tensorprodukt / faserprodukt zum basiswechsel
 grundlagen.tex:  %TODO: Pfeile
 grundlagen.tex:  %TODO: Pfeile
 grundlagen.tex:  %TODO: Pfeile
+levelt-turrittin.tex:TODO: induktionsanfang und -schritt kennzeichnen
 levelt-turrittin.tex:TODO
 levelt-turrittin.tex:TODO
 levelt-turrittin.tex:\begin{comment}TODO: Hier weiter \end{comment}
@@ -43,6 +43,8 @@ meromZsh.tex:\partial(fu)=f'u+f\partial u %TODO: hier klammern um das letzte u ?
 meromZsh.tex:TODO: Wann sind die Isomorph\\
 meromZsh.tex:assoziierten Meromorphen Zusammenhang $(\cM_A,\partial_A)$ %TODO: improve notation
 meromZsh.tex:%TODO: reihenfolge bei sabbah anderst!!!
+meromZsh.tex:TODO: Wie findet man einen Zyklischen Vektor\\
+meromZsh.tex:TODO: wie bekommt man daraus das $P$
 meromZsh.tex:\cite[Seite 64]{ZulaBarbara} %TODO: hat die sich hier verschrieben???
 meromZsh.tex:%TODO: make this harpoon arrows
 meromZsh.tex:TODO, (3. Treffen)
@@ -84,9 +86,12 @@ meromZsh.tex:%TODO: erkläre wieso --> Elementare Zusammenhänge
 meromZsh.tex:%TODO: nummer aus der referenz ist falsch
 meromZsh.tex:%TODO: nummer aus der referenz ist falsch
 meromZsh.tex:  & \mbox{(Rechenregeln Tensorprodukt)}\\ %TODO: hinzufügen
+meromZsh.tex:TODO: hier weiter
 rezept.tex:-\partial_z(f)\cdot z^2= %TODO: wegen klammerung?
 rezept.tex:%TODO; weiter ausführen, genauer, nebenrechnung
 rezept.tex:TODO
+rezept.tex:TODO: bei Hedwig ist es $\beta/\lambda \cdot x^{-\lambda}$
+rezept.tex:%TODO: Dies geht, weil $\hat K[\xi]$ kommutativ ist. ????
 titel.tex:%TODO; titelpage bitte nicht seitlich versetzt
 trash/myNewtonPoly2.sty:          %TODO
 trash/myNewtonPoly2.sty:          %TODO

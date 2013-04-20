@@ -148,8 +148,36 @@ Sei $\rho:t\mapsto x:=-(q+1) t^{q+1}$ so ist
     (\frac{1}{q+1}t\partial_t-1)+qa)\\
   &=\cD_{\hat K}/\cD_{\hat K}
     \cdot((t^{q+2}\partial_t)^{q}
-    (\frac{1}{q+1}t\partial_t-1)+qa)
+    (\frac{1}{q+1}t\partial_t-1)+qa)\\
+  &=\cD_{\hat K}/\cD_{\hat K}
+    \cdot((t^{q+2}\partial_t)^{q}
+    (t\partial_t-(q+1))+(q+1)qa)
 \end{align*}
+\begin{comment}
+Bei \cite{sabbah_Fourier-local}:\\
+Sei $\rho:t\mapsto x:=-\frac{t^{q+1}}{qa}$ so ist
+\begin{align*}
+\rho^+\cM_\phi &= \rho^+(\cD_{\hat K}/\cD_{\hat K}\cdot P_\phi(x,\partial_x))\\
+  &=\cD_{\hat K}/\cD_{\hat K}\cdot(\rho^*P_\phi(x,\partial_x))\\
+  &=\cD_{\hat K}/\cD_{\hat K}\cdot(P_\phi(\rho(t),\rho'(t)^{-1}\partial_t))\\
+  &=\cD_{\hat K}/\cD_{\hat K}
+    \cdot(P_\phi(-\frac{t^{q+1}}{qa}, -\frac{qa}{(q+1)t^q}\partial_t))
+\end{align*}
+mit
+\begin{align*}
+P_\phi(-\frac{t^{q+1}}{qa}, -\frac{qa}{(q+1)t^q}\partial_t) 
+  &= (-(-\frac{t^{q+1}}{qa})^2(-\frac{qa}{(q+1)t^q}\partial_t))^q
+    (-\frac{t^{q+1}}{qa}(-\frac{qa}{(q+1)t^q}\partial_t)-1)+qa\\
+  &= ((\frac{t^{q+1}}{qa})^2\frac{qa}{(q+1)t^q}\partial_t)^q
+    (\frac{t^{q+1}}{qa}\frac{qa}{(q+1)t^q}\partial_t-1)+qa\\
+  &= (\frac{(t^{q+1})^2}{qa(q+1)t^q}\partial_t)^q
+    (\frac{t^{q+1}}{(q+1)t^q}\partial_t-1)+qa\\
+  &= (\frac{t^{2q+2-q}}{qa(q+1)}\partial_t)^q
+    (\frac{t^{q+1-q}}{(q+1)}\partial_t-1)+qa\\
+  &= (\frac{t^{q+2}}{qa(q+1)}\partial_t)^q
+    (\frac{1}{(q+1)}t\partial_t-1)+qa\\
+\end{align*}
+\end{comment}
 mit $\cP(\rho^+\cM_\phi)=\{q\}\subset\N$. Definiere mittels
 $q=\frac{q}{1}=:\frac{\lambda_0}{\lambda_1}$ die  Linearform
 \[
@@ -171,7 +199,7 @@ schreiben, welches wir als nächsten Schritt faktorisieren
 \[
 \sigma_L(\rho^*P_\phi)=\epsilon\prod_{\beta}(\theta-\beta)^{\gamma_\beta}\,.
 \]
-Wobei $\epsilon\in\C$ eine Konstante ist.
+Wobei $\epsilon\in\C^\times$ eine Konstante ist.
 Sei $\beta_0$  eine der Nullstellen.
 Da $\ord_L(\rho^*P_\phi)=0$ und der einzige Slope von $\rho^*P_\phi$ nicht
 gleich $0$ ist, gilt offensichtlich, dass $\alpha_0\neq0$. Also ist $0$ keine
@@ -302,14 +330,15 @@ $\cP(\cM_{\phi_1})=\{\frac{1}{2}\}$.
 }
 \end{center}
 \end{figure}
-Berechne nun den pull-back mit $\rho:t\mapsto x:=-2t^2$
+Berechne nun zu $\rho:t\mapsto x:=-2t^2$ ein Minimalpolynom $\rho^*P_{\phi_1}$
+zu $\rho^+\cM_{\phi_1}$:
 \begin{align*}
 \rho^*P_{\phi_1}(x,\partial_x)
-  &=t^{3}\partial_t(\frac{1}{2}t\partial_t-1)+a\\
-  &=\frac{1}{2}t^{3}\underbracket{\partial_tt}\partial_t-t^{3}\partial_t+a\\
-  &=\frac{1}{2}t^{3}\overbracket{(t\partial_t+1)}\partial_t-t^{3}\partial_t+a\\
-  &=\frac{1}{2}t^{4}\partial_t^2+\frac{1}{2}t^{3}\partial_t-t^{3}\partial_t+a\\
-  &=\frac{1}{2}t^{4}\partial_t^2-\frac{1}{2}t^{3}\partial_t+a
+  &=t^{3}\partial_t(t\partial_t-2)+2a\\
+  &=t^{3}\underbracket{\partial_tt}\partial_t-2t^{3}\partial_t+2a\\
+  &=t^{3}\overbracket{(t\partial_t+1)}\partial_t-2t^{3}\partial_t+2a\\
+  &=t^{4}\partial_t^2+t^{3}\partial_t-2t^{3}\partial_t+2a\\
+  &=t^{4}\partial_t^2-t^{3}\partial_t+2a
 \end{align*}
 \iffalse
   \begin{comment}
@@ -349,60 +378,43 @@ Berechne nun die \emph{Determinanten Gleichung} $\sigma_L(\rho^*P_{\phi_1})\in
 \begin{align*}
 \sigma_L(\rho^*P_{\phi_1})
   &= \sum_{\{(i,j)\mid 2i-j=0\}}\alpha_{ij}x^{j}\xi^i\\
-  &= \frac{1}{2}x^4\xi^2 + a
+  &= x^4\xi^2 + 2a
 \end{align*}
 Setze $\theta:=x^{\lambda_0+\lambda_1}\xi^{\lambda_1}=x^2\xi$ so erhalten wir
 \begin{align*}
-\sigma_L(\rho^*P_{\phi_1}) &= \frac{1}{2}\theta^2 + a
+\sigma_L(\rho^*P_{\phi_1}) &= \theta^2 + 2a
 \end{align*}
 schreiben, welches wir als nächstes faktorisieren
 \begin{align*}
-\sigma_L(\rho^*P_{\phi_1}) &= \frac{1}{2}\theta^2+a\\
-  &=\frac{1}{2}(\theta^2-4a)\\
-  &=\frac{1}{2}(\theta-\underset{=:\beta_0}{\underbrace{2\sqrt{a}}})
-    (\theta+2\sqrt{a})
+\sigma_L(\rho^*P_{\phi_1}) &= \theta^2+2a\\
+  &=(\theta-\underset{=:\beta_0}{\underbrace{i\sqrt{2a}}})
+    (\theta+i\sqrt{2a})
 \end{align*}
-Dies geht, weil $\hat K[\xi]$ kommutativ ist.
-Setze $\psi(x):=(\beta_0/(\lambda_0+1))x^{\lambda_0+1}=\sqrt{a}x^2$ und
+%TODO: Dies geht, weil $\hat K[\xi]$ kommutativ ist. ????
+Setze $\psi(x):=(\beta_0/(\lambda_0+1))x^{\lambda_0+1}=i\sqrt{2a}x^2$ und
 betrachte $\cN:=\rho^+\cM_{\phi_1}\otimes\sE_{\hat K}^\psi$ mit dem zyklischem
 Vektor $e\otimes 1$, wobei $e$ ein zyklischer Vektor von $\rho^+\cM$.
 Es ist
 \begin{align*}
+\textcolor{red}{0\overset{?}{=}}
 \partial_t^2(e\otimes 1) 
   &= \partial_t(\underbracket{\partial_t(e\otimes 1)})\\
   &= \partial_t(\overbracket{(\partial_te)\otimes 1 
-  + \psi'(t)(e\otimes 1)})\\
+    + e\otimes \psi'(t)})\\
   &= (\partial_t^2 e)\otimes 1
-  + 2\psi'(t)(\partial_t e)\otimes 1
-  + (\psi''(t) + \psi'(t)^2)(e\otimes 1)\\
-  &= (t^{-1}\partial_t-2t^{-4}a)e\otimes 1
-  + \underbracket{2qt^{q-1}(\partial_t e)\otimes 1}
-  + (q(q-2)t^{q-2} + (qt^{q-1})^2)(e\otimes 1)\\
-  &\begin{aligned}
-    & = \overbracket{2qt^{q-1}\partial_t (e\otimes 1) -
-      \underbracket{2qt^{q-1}(\psi'(t)(e\otimes 1))}}
-      +t^{-1}\partial_t(e\otimes 1) \\
-    &\qquad + (-2t^{-4}a + q(q-2)t^{q-2} 
-      + (qt^{q-1})^2)(e\otimes 1)\\
-  \end{aligned}\\
-  &\begin{aligned}
-    & = 2qt^{q-1}\partial_t (e\otimes 1) - \overbracket{2(qt^{q-1})^2(e\otimes
-    1)} +t^{-1}\partial_t(e\otimes 1) \\
-    &\qquad + (-2t^{-4}a + q(q-2)t^{q-2} + (qt^{q-1})^2)(e\otimes 1)\\
-  \end{aligned}\\
-  & = (2qt^{q-1}+t^{-1})\partial_t (e\otimes 1) + (-2t^{-4}a + q(q-2)t^{q-2} -
-    (qt^{q-1})^2)(e\otimes 1)\\
-  & = \Big((2qt^{q-1}+t^{-1})\partial_t - 2t^{-4}a + q(q-2)t^{q-2} -
-    (qt^{q-1})^2\Big)(e\otimes 1)\\
+    + \underbracket{(\partial_t e)\otimes \psi'(t)
+    +               (\partial_t e)\otimes \psi'(t)}
+    + e\otimes\underset{\in K}{\underbrace{((\psi'(t))' + \psi'(t)\psi'(t))}}\\
+  &= (\partial_t^2 e)\otimes 1
+    + \overbracket{\underbracket{2\psi'(t)} (\partial_t e)\otimes 1}
+    + (\underbracket{\psi''(t)} + \underbracket{\psi'(t)^2})e\otimes 1\\
+  &= (\partial_t^2 e)\otimes 1
+    + \overbracket{4i\sqrt{2a}t} (\partial_t e)\otimes 1
+    + (\overbracket{2i\sqrt{2a}} + \overbracket{(2i\sqrt{2a}t)^2})e\otimes 1\\
+  &= (\partial_t^2 e)\otimes 1
+    + 4i\sqrt{2a}t (\partial_t e)\otimes 1
+    + (2i\sqrt{2a} - 8at^2)e\otimes 1\\
 \end{align*}
-\begin{comment}
-TODO: verbessern
-\end{comment}
-Also ist 
-\[
-\cN=\hat\cD/\hat\cD\cdot ( \partial_t^2-((2qt^{q-1}+t^{-1})\partial_t +
-(-2t^{-4}a + q(q-2)t^{q-2} - (qt^{q-1})^2)))
-\]
 \begin{comment}
 \begin{align*}
 0 &= (\frac{1}{2}t^{4}\partial_t^2-\frac{1}{2}t^{3}\partial_t+a)e\\
