@@ -174,7 +174,8 @@ schreiben, welches wir als nächsten Schritt faktorisieren
 Wobei $\epsilon\in\C$ eine Konstante ist.
 Sei $\beta_0$  eine der Nullstellen.
 Da $\ord_L(\rho^*P_\phi)=0$ und der einzige Slope von $\rho^*P_\phi$ nicht
-gleich $0$ ist, gilt offensichtlich, dass $\alpha_0\neq0$.
+gleich $0$ ist, gilt offensichtlich, dass $\alpha_0\neq0$. Also ist $0$ keine
+Nullstelle von $\sigma_L(\rho^*P_\phi)$.
 \begin{comment}
 Setze $R(z):=(\beta_0/(\lambda_0+1))z^{\lambda_0+1}=(\beta_0/(q+1)z^{q+1}$ und
 betrachte
@@ -193,14 +194,75 @@ TODO: bei Hedwig ist es $\beta/\lambda \cdot x^{-\lambda}$
   &= \cD_{\hat K}/\cD_{\hat K}\cdot(\rho^*P_{\phi})\otimes\sE_{\hat K}^\psi \,.
 \end{align*}
 \begin{lem}
-Sei $e$ ein zyklischer Vektor zu $\rho^+\cM_\phi$, so ist $e\otimes e(R)\in\cN$
-ein zyklischer Vektor für $\cN\bydef\rho^+\cM_\phi\otimes\sE_{\hat K}^\psi$.
+Sei $e$ ein zyklischer Vektor zu $\rho^+\cM_\phi$, so ist $e\otimes
+\underset{\in\hat K}{\underbrace{1}}\in\cN$ ein zyklischer Vektor für
+$\cN\bydef\rho^+\cM_\phi\otimes\sE_{\hat K}^\psi$.
 \end{lem}
 \begin{proof}
-\begin{comment}
-Vergleiche mit Hedwigs Diplomarbeit Seite 37
-\end{comment}
+Es sei $e$ ein zyklischer Vektor von $\rho^+\cM_{\phi_1}$.
+Da der Grad von $\rho^*P_{\phi}$ gleich $q+1$ ist, ist auch die Dimension von
+$\rho^+\cM$ gleich $q+1$. Damit ist auch $\dim_K\cN=q+1$, also reicht zu
+zeigen, dass $e\otimes 1$, $\partial_x(e\otimes 1)$, $\partial_x^2(e\otimes
+1)$, ,\dots, $\partial_x^{q}(e\otimes 1)$ ein linear unabhängiges System ist.
+Es gilt
+\begin{align*}
+\partial_x(e\otimes 1) &= (\partial_x e)\otimes 1 + x\otimes \partial_x 1\\
+  &= (\partial_x e)\otimes 1 + e\otimes \psi'(x)\\
+  &= (\partial_x e)\otimes 1 +  \psi'(x)(e\otimes 1)\\
+\partial_x^2(e\otimes 1) &= \partial_x((\partial_x e)\otimes 1 +
+    \psi'(x)(e\otimes 1))\\
+  &= (\partial_x^2 e)\otimes 1 + (\partial_x e)\otimes \psi'(x)
+  + \psi''(x)(e\otimes 1)
+  + \psi'(x)((\partial_x e)\otimes 1 + e\otimes \psi'(x))\\
+  &= (\partial_x^2 e)\otimes 1
+  + \psi'(x)(\partial_x e)\otimes 1
+  + \psi''(x)(e\otimes 1)
+  + \psi'(x)(\partial_x e)\otimes 1
+  + \psi'(x)^2(e\otimes 1)\\
+  &= (\partial_x^2 e)\otimes 1
+  + 2\psi'(x)(\partial_x e)\otimes 1
+  + (\psi''(x) + \psi'(x)^2)(e\otimes 1)\\
+  &~\vdots\\
+\partial_x^{q}(e\otimes 1) &= (\partial_x^q e)\otimes 1
+  + \lambda_{q-1}(\partial_x^{q-1} e)\otimes 1
+  +\dots
+  + \lambda_{1}(\partial_x e)\otimes 1
+  + \lambda_0(e\otimes 1)\\
+\end{align*}
+und somit ist dann
+\[
+\begin{pmatrix}
+e\otimes 1\\
+\partial_x(e\otimes 1)\\
+\partial_x^2(e\otimes 1)\\
+\vdots\\
+\partial_x^{q-1}(e\otimes 1)\\
+\partial_x^{q}(e\otimes 1)\\
+\end{pmatrix}
+=
+\begin{pmatrix}
+1         & 0         & \cdots & \cdots & \cdots        & 0 \\
+\psi'(x)  & 1         & 0      &        &               & \vdots\\
+\star     & \star     & 1      & 0      &               & \vdots\\
+\vdots    &           & \ddots & \ddots & \ddots        & \vdots\\
+\star     & \cdots    & \cdots & \star  & 1             & 0\\
+\lambda_0 & \lambda_1 & \cdots & \cdots & \lambda_{q-1} & 1\\
+\end{pmatrix}
+\begin{pmatrix}
+e\otimes 1\\
+(\partial_xe)\otimes 1\\
+(\partial_x^{2}e)\otimes 1\\
+\vdots\\
+(\partial_x^{q-1}e)\otimes 1\\
+(\partial_x^{q}e)\otimes 1\\
+\end{pmatrix}
+\]
+Da bekanntlich $e\otimes1$, $(\partial_xe)\otimes 1$, $(\partial_x^{2}e)\otimes
+1$,\dots, $(\partial_x^{q}e)\otimes 1$ linear unabhängig sind, gilt dies auch
+für $e\otimes 1$, $\partial_x(e\otimes 1)$, $\partial_x^2(e\otimes 1)$, ,\dots,
+$\partial_x^{q}(e\otimes 1)$. Damit folgt die Behauptung.
 \end{proof}
+\begin{comment}
 \begin{lem}
 \cite[Seite 44]{DiplHedwig}
 Wenn $\rho^+\cM_\phi=\cD_{\hat K}/\cD_{\hat
@@ -213,10 +275,11 @@ K}\cdot(\rho^*P_{\phi}(x,\partial_x))$ gilt, so ist
     K}\cdot(\rho^*P_{\phi}(x,\partial_x+\frac{\beta}{x^{\lambda+1}}))
 \end{align*}
 \end{lem}
+\end{comment}
 
 \section{Spezialfall $\phi_1:=\frac{a}{x}$}
-Das wohl einfachste Beispiel ist $\cM_{\phi_1}$ bezüglich
-$\phi_1:=\frac{a}{x}$.
+Als konkreten Fall betrachten wir nun $\cM_{\phi_1}$ bezüglich
+$\phi_1:=\frac{a}{x}$. Es ist das Minimalpolynom gegeben durch
 \begin{align*}
 P_{\phi_1}(x,\partial_x) &=-x^2\partial_x (x\partial_x-1)+a \\
   &=-x^2\underbracket{\partial_xx}\partial_x+x^2\partial_x+a \\
@@ -248,21 +311,23 @@ Berechne nun den pull-back mit $\rho:t\mapsto x:=-2t^2$
   &=\frac{1}{2}t^{4}\partial_t^2+\frac{1}{2}t^{3}\partial_t-t^{3}\partial_t+a\\
   &=\frac{1}{2}t^{4}\partial_t^2-\frac{1}{2}t^{3}\partial_t+a
 \end{align*}
-\begin{comment}
-\begin{align*}
-\rho^*P_{\phi_1}(x,\partial_x)
-  &=-\frac{1}{2}t^{3}\partial_t
-    (\frac{1}{2}t\partial_t-1)+a\\
-  &=-\frac{1}{4}t^{3}\underbracket{\partial_tt}\partial_t
-    +\frac{1}{2}t^{3}\partial_t+a\\
-  &=-\frac{1}{4}t^{3}\overbracket{(t\partial_t+1)}\partial_t
-    +\frac{1}{2}t^{3}\partial_t+a\\
-  &=-\frac{1}{4}t^{4}\partial_t^2
-    \underbracket{-\frac{1}{4}t^{3}\partial_t+\frac{1}{2}t^{3}\partial_t}+a\\
-  &=-\frac{1}{4}t^{4}\partial_t^2
-    \overbracket{+\frac{1}{4}t^{3}\partial_t}+a
-\end{align*}
-\end{comment}
+\iffalse
+  \begin{comment}
+  \begin{align*}
+  \rho^*P_{\phi_1}(x,\partial_x)
+    &=-\frac{1}{2}t^{3}\partial_t
+      (\frac{1}{2}t\partial_t-1)+a\\
+    &=-\frac{1}{4}t^{3}\underbracket{\partial_tt}\partial_t
+      +\frac{1}{2}t^{3}\partial_t+a\\
+    &=-\frac{1}{4}t^{3}\overbracket{(t\partial_t+1)}\partial_t
+      +\frac{1}{2}t^{3}\partial_t+a\\
+    &=-\frac{1}{4}t^{4}\partial_t^2
+      \underbracket{-\frac{1}{4}t^{3}\partial_t+\frac{1}{2}t^{3}\partial_t}+a\\
+    &=-\frac{1}{4}t^{4}\partial_t^2
+      \overbracket{+\frac{1}{4}t^{3}\partial_t}+a
+  \end{align*}
+  \end{comment}
+\fi
 und erhalte einen Meromorphen Zusammenhang $\rho^+\cM_{\phi_1}=\cD_{\hat
 K}/\cD_{\hat K}\cdot\rho^*P_{\phi_1}$ mit genau dem Slope
 $1=\frac{1}{1}=:\frac{\lambda_0}{\lambda_1}$.
@@ -294,11 +359,61 @@ schreiben, welches wir als nächstes faktorisieren
 \begin{align*}
 \sigma_L(\rho^*P_{\phi_1}) &= \frac{1}{2}\theta^2+a\\
   &=\frac{1}{2}(\theta^2-4a)\\
-  &=-(\theta-\underset{=:\beta_0}{\underbrace{2\sqrt{a}}})(\theta+2\sqrt{a})
+  &=\frac{1}{2}(\theta-\underset{=:\beta_0}{\underbrace{2\sqrt{a}}})
+    (\theta+2\sqrt{a})
 \end{align*}
 Dies geht, weil $\hat K[\xi]$ kommutativ ist.
-Setze $R(z):=(\beta_0/(\lambda_0+1))z^{\lambda_0+1}=\sqrt{a}z^2$ und betrachte
-$\rho^+\cM_{\phi_1}\otimes\cF_{\hat K}^R$.
+Setze $\psi(x):=(\beta_0/(\lambda_0+1))x^{\lambda_0+1}=\sqrt{a}x^2$ und
+betrachte $\cN:=\rho^+\cM_{\phi_1}\otimes\sE_{\hat K}^\psi$ mit dem zyklischem
+Vektor $e\otimes 1$, wobei $e$ ein zyklischer Vektor von $\rho^+\cM$.
+Es ist
+\begin{align*}
+\partial_t^2(e\otimes 1) 
+  &= \partial_t(\underbracket{\partial_t(e\otimes 1)})\\
+  &= \partial_t(\overbracket{(\partial_te)\otimes 1 
+  + \psi'(t)(e\otimes 1)})\\
+  &= (\partial_t^2 e)\otimes 1
+  + 2\psi'(t)(\partial_t e)\otimes 1
+  + (\psi''(t) + \psi'(t)^2)(e\otimes 1)\\
+  &= (t^{-1}\partial_t-2t^{-4}a)e\otimes 1
+  + \underbracket{2qt^{q-1}(\partial_t e)\otimes 1}
+  + (q(q-2)t^{q-2} + (qt^{q-1})^2)(e\otimes 1)\\
+  &\begin{aligned}
+    & = \overbracket{2qt^{q-1}\partial_t (e\otimes 1) -
+      \underbracket{2qt^{q-1}(\psi'(t)(e\otimes 1))}}
+      +t^{-1}\partial_t(e\otimes 1) \\
+    &\qquad + (-2t^{-4}a + q(q-2)t^{q-2} 
+      + (qt^{q-1})^2)(e\otimes 1)\\
+  \end{aligned}\\
+  &\begin{aligned}
+    & = 2qt^{q-1}\partial_t (e\otimes 1) - \overbracket{2(qt^{q-1})^2(e\otimes
+    1)} +t^{-1}\partial_t(e\otimes 1) \\
+    &\qquad + (-2t^{-4}a + q(q-2)t^{q-2} + (qt^{q-1})^2)(e\otimes 1)\\
+  \end{aligned}\\
+  & = (2qt^{q-1}+t^{-1})\partial_t (e\otimes 1) + (-2t^{-4}a + q(q-2)t^{q-2} -
+    (qt^{q-1})^2)(e\otimes 1)\\
+  & = \Big((2qt^{q-1}+t^{-1})\partial_t - 2t^{-4}a + q(q-2)t^{q-2} -
+    (qt^{q-1})^2\Big)(e\otimes 1)\\
+\end{align*}
+\begin{comment}
+TODO: verbessern
+\end{comment}
+Also ist 
+\[
+\cN=\hat\cD/\hat\cD\cdot ( \partial_t^2-((2qt^{q-1}+t^{-1})\partial_t +
+(-2t^{-4}a + q(q-2)t^{q-2} - (qt^{q-1})^2)))
+\]
+\begin{comment}
+\begin{align*}
+0 &= (\frac{1}{2}t^{4}\partial_t^2-\frac{1}{2}t^{3}\partial_t+a)e\\
+0 &= (\partial_t^2-t^{-1}\partial_t+2t^{-4}a)e\\
+\partial_t^2e &= (t^{-1}\partial_t-2t^{-4}a)e\\
+\end{align*}
+\end{comment}
+und Aufgrund der linearen Abhängigkeit existieren $a_0$ und $a_1$, so dass
+\[
+\partial_x^2 (e\otimes 1) = a_0 e\otimes 1 + a_1\partial_x (e\otimes 1)
+\]
 
 \subsection{Sabah's refined Levelt-Turrittin-Zerlegung für $\phi_1$}
 
