@@ -165,7 +165,7 @@ Sei $\rho:t\mapsto x:=-\frac{t^{q+1}}{qa}$ so ist
 \end{align*}
 mit
 \begin{align*}
-P_\phi(-\frac{t^{q+1}}{qa}, -\frac{qa}{(q+1)t^q}\partial_t) 
+P_\phi(-\frac{t^{q+1}}{qa}, -\frac{qa}{(q+1)t^q}\partial_t)
   &= (-(-\frac{t^{q+1}}{qa})^2(-\frac{qa}{(q+1)t^q}\partial_t))^q
     (-\frac{t^{q+1}}{qa}(-\frac{qa}{(q+1)t^q}\partial_t)-1)+qa\\
   &= ((\frac{t^{q+1}}{qa})^2\frac{qa}{(q+1)t^q}\partial_t)^q
@@ -393,28 +393,12 @@ schreiben, welches wir als nächstes faktorisieren
 %TODO: Dies geht, weil $\hat K[\xi]$ kommutativ ist. ????
 Setze $\psi(x):=(\beta_0/(\lambda_0+1))x^{\lambda_0+1}=i\sqrt{2a}x^2$ und
 betrachte $\cN:=\rho^+\cM_{\phi_1}\otimes\sE_{\hat K}^\psi$ mit dem zyklischem
-Vektor $e\otimes 1$, wobei $e$ ein zyklischer Vektor von $\rho^+\cM$.
-Es ist
-\begin{align*}
-\textcolor{red}{0\overset{?}{=}}
-\partial_t^2(e\otimes 1) 
-  &= \partial_t(\underbracket{\partial_t(e\otimes 1)})\\
-  &= \partial_t(\overbracket{(\partial_te)\otimes 1 
-    + e\otimes \psi'(t)})\\
-  &= (\partial_t^2 e)\otimes 1
-    + \underbracket{(\partial_t e)\otimes \psi'(t)
-    +               (\partial_t e)\otimes \psi'(t)}
-    + e\otimes\underset{\in K}{\underbrace{((\psi'(t))' + \psi'(t)\psi'(t))}}\\
-  &= (\partial_t^2 e)\otimes 1
-    + \overbracket{\underbracket{2\psi'(t)} (\partial_t e)\otimes 1}
-    + (\underbracket{\psi''(t)} + \underbracket{\psi'(t)^2})e\otimes 1\\
-  &= (\partial_t^2 e)\otimes 1
-    + \overbracket{4i\sqrt{2a}t} (\partial_t e)\otimes 1
-    + (\overbracket{2i\sqrt{2a}} + \overbracket{(2i\sqrt{2a}t)^2})e\otimes 1\\
-  &= (\partial_t^2 e)\otimes 1
-    + 4i\sqrt{2a}t (\partial_t e)\otimes 1
-    + (2i\sqrt{2a} - 8at^2)e\otimes 1\\
-\end{align*}
+Vektor $e\otimes 1$, wobei $e$ ein zyklischer Vektor von $\rho^+\cM$ ist.
+Es existieren $a_0(t)$ und $a_1(t)$ in $K$, so dass
+\[
+0=\partial_t^2 (e\otimes 1) + a_1(t)\partial_t (e\otimes 1) + a_0(t) e\otimes 1
+\]
+und damit ist dann $\cN=\cD/\cD\cdot(\partial_t^2+a_1(t)\partial_t+a_0(t))$.
 \begin{comment}
 \begin{align*}
 0 &= (\frac{1}{2}t^{4}\partial_t^2-\frac{1}{2}t^{3}\partial_t+a)e\\
@@ -422,10 +406,200 @@ Es ist
 \partial_t^2e &= (t^{-1}\partial_t-2t^{-4}a)e\\
 \end{align*}
 \end{comment}
-und Aufgrund der linearen Abhängigkeit existieren $a_0$ und $a_1$, so dass
+\begin{try}
+Es ist
+\begin{align*}
+\partial_t(e\otimes 1) &= (\partial_te)\otimes 1 + e\otimes \psi'(t) \\
+  &= (\partial_te)\otimes 1 + \underbracket{\psi'(t)} e\otimes 1 \\
+  &= (\partial_te)\otimes 1 + \overbracket{2i\sqrt{2a}t} e\otimes 1 \\
+\partial_t^2(e\otimes 1)
+  &= \partial_t(\underbracket{\partial_t(e\otimes 1)})\\
+  &= \partial_t(\overbracket{(\partial_te)\otimes 1
+    + e\otimes \psi'(t)})\\
+  &= (\underbracket{\partial_t^2 e})\otimes 1
+    + \underbracket{(\partial_t e)\otimes \psi'(t)
+    +               (\partial_t e)\otimes \psi'(t)}
+    + e\otimes\underset{\in K}{\underbrace{((\partial_t+\psi'(t))\psi'(t))}}\\
+%TODO: darf ich hier die Ableitung anwenden
+  &= (\overbracket{(t^{-1}\partial_t - 2at^{-4}) e})\otimes 1
+    + \overbracket{2\psi'(t) (\partial_t e)\otimes 1}
+    + (\psi''(t) + \psi'(t)^2)e\otimes 1\\
+  &= t^{-1}(\partial_t  e)\otimes 1
+    - 2at^{-4} e\otimes 1
+    + 2\psi'(t) (\partial_t e)\otimes 1
+    + (\psi''(t) + \psi'(t)^2)e\otimes 1\\
+  &= (t^{-1} + 2\psi'(t)) \underbracket{(\partial_t e)\otimes 1}
+    + (- 2at^{-4} + \psi''(t) + \psi'(t)^2)e\otimes 1\\
+  &= (t^{-1} + 2\psi'(t)) \overbracket{(\partial_t (e\otimes 1)
+    - e\otimes \psi'(t))}
+    + (- 2at^{-4} + \psi''(t) + \psi'(t)^2)e\otimes 1\\
+  &= (t^{-1} + 2\psi'(t)) \partial_t (e\otimes 1)
+    + (- t^{-1}\psi'(t) - 2\psi'(t)^2
+    - 2at^{-4} + \psi''(t) + \psi'(t)^2)e\otimes 1\\
+  &= (t^{-1} + 2\psi'(t)) \partial_t (e\otimes 1)
+    + (\psi''(t) - t^{-1}\psi'(t) - 2at^{-4} - \psi'(t)^2)e\otimes 1\\
+  &= (t^{-1} + 4i\sqrt{2a}t) \partial_t (e\otimes 1)
+    + (\underset{=0}{\underbrace{2i\sqrt{2a} - t^{-1}2i\sqrt{2a}t}}
+    - 2at^{-4} - (2i\sqrt{2a}t)^2)e\otimes 1\\
+  &= (t^{-1} + 4i\sqrt{2a}t) \partial_t (e\otimes 1)
+    + ( - 2at^{-4} + 8iat^2)e\otimes 1\\
+\end{align*}
+Also gilt
 \[
-\partial_x^2 (e\otimes 1) = a_0 e\otimes 1 + a_1\partial_x (e\otimes 1)
+0 = \Big( \partial_t^2 - (t^{-1} + 4i\sqrt{2a}t) \partial_t
+  + ( 2at^{-4} - 8iat^2)\Big) e\otimes 1
 \]
+beziehungsweise gilt
+\[
+0 = \Big( t^4\partial_t^2 - (t^{3} + 4i\sqrt{2a}t^5) \partial_t
+  + ( 2a - 8iat^6)\Big) e\otimes 1
+\]
+\begin{figure}[H]
+\caption{Newton Polygon zu $\cN$}
+\begin{center}
+\fbox{
+  \begin{tikzpicture}[scale=0.5,descr/.style={fill=white,inner sep=2.5pt}]
+  \def\myPoints{0/0,0/6,1/2,1/4,2/2}
+  \def\myPath{ -- node[descr]{$1$} (2,2)}
+  \myPlotFunction{\myPoints}{\myPath}{2}{0}{6}{$N(\rho^*P_{\phi_1})$}
+  \end{tikzpicture}
+}
+\end{center}
+\end{figure}
+\end{try}
+\begin{try} %2
+Es ist
+\begin{align*}
+\partial_t(e\otimes 1) &= (\partial_te)\otimes 1 + e\otimes \psi'(t) \\
+  &= (\partial_te)\otimes 1 + \underbracket{\psi'(t)} e\otimes 1 \\
+\partial_t^2(e\otimes 1) &= \partial_t(\underbracket{\partial_t(e\otimes 1)})\\
+  &= \partial_t(\overbracket{(\partial_te)\otimes 1
+    + e\otimes \psi'(t)})\\
+  &= (\underbracket{\partial_t^2 e})\otimes 1
+    + \underbracket{(\partial_t e)\otimes \psi'(t)
+    +               (\partial_t e)\otimes \psi'(t)}
+    + e\otimes\underset{\in K}{\underbrace{((\partial_t+\psi'(t))\psi'(t))}}\\
+  &= (\overbracket{(t^{-1}\partial_t - 2at^{-4}) e})\otimes 1
+    + \overbracket{2\psi'(t) (\partial_t e)\otimes 1}
+    + (\underbracket{\partial_t\psi'(t)} + \psi'(t)^2)e\otimes 1\\
+  &= \underbracket{((t^{-1}\partial_t - 2at^{-4}) e)\otimes 1}
+    + 2\psi'(t) (\partial_t e)\otimes 1
+    + \underbracket{(\overbracket{\psi'(t)\partial_t + \psi''(t)} +
+    \psi'(t)^2)e\otimes 1}\\
+  &\begin{aligned}
+    &= \overbracket{
+        (t^{-1}\partial_t e)\otimes 1
+        - (2at^{-4}) e)\otimes 1
+      }
+      + 2\psi'(t) (\partial_t e)\otimes 1\\
+    &\qquad + \overbracket{
+        (\psi'(t)\partial_t e)\otimes 1
+        + \psi''(t) e\otimes 1
+        + \psi'(t)^2 e\otimes 1
+      }\\
+  \end{aligned} \\
+  &= (t^{-1} + \underbracket{2\psi'(t) + \psi'(t)})
+    \underbracket{(\partial_t e)\otimes 1}
+    + (- 2at^{-4} + \psi''(t) + \psi'(t)^2) e\otimes 1 \\
+  &\begin{aligned}
+    &= (t^{-1} + \overbracket{3\psi'(t)})\overbracket{(\partial_t (e\otimes 1)
+    - e\otimes \psi'(t))}\\
+    &\qquad + (- 2at^{-4} + \psi''(t) + \psi'(t)^2) e\otimes 1 \\
+  \end{aligned} \\
+  &\begin{aligned}
+    &= (t^{-1} + 3\psi'(t))\partial_t (e\otimes 1)
+    - (t^{-1} \psi'(t) + 3\psi'(t)^2)e\otimes 1\\
+    &\qquad + (- 2at^{-4} + \psi''(t) + \psi'(t)^2) e\otimes 1 \\
+  \end{aligned} \\
+  &= \Big((t^{-1} + 3\psi'(t))\partial_t
+    - t^{-1} \psi'(t) - 3\psi'(t)^2 - 2at^{-4} + \psi''(t)
+    + \psi'(t)^2\Big) e\otimes 1 \\
+  &= \Big((t^{-1} + 3\psi'(t))\partial_t
+    - t^{-1} \psi'(t) - 2at^{-4} + \psi''(t)
+    - 2 \psi'(t)^2\Big) e\otimes 1
+\end{align*}
+also
+\[
+0 = \Big(\partial_t^2 - \big(t^{-1} + 3\psi'(t)\big)\partial_t
+    + t^{-1} \psi'(t) + 2at^{-4} -\psi''(t)
+    + 2 \psi'(t)^2\Big) e\otimes 1
+\]
+\begin{try}
+und somit mit $\psi(t)=i\sqrt{2a}t^2$ ist $\psi'(t)=2i\sqrt{2a}t$ und
+$\psi''(t)=2i\sqrt{2a}$. Also
+\begin{align*}
+0 &= \Big(\partial_t^2 - \big(t^{-1} + 3\psi'(t)\big)\partial_t
+    + t^{-1} \psi'(t) + 2at^{-4} -\psi''(t)
+    + 2 \psi'(t)^2\Big) e\otimes 1
+\\&= \Big(\partial_t^2 - \big(t^{-1} + 6i\sqrt{2a}t\big)\partial_t
+    + \underbracket{t^{-1} 2i\sqrt{2a}t} + 2at^{-4} - 2i\sqrt{2a}
+    + \underbracket{2 (2i\sqrt{2a}t)^2}\Big) e\otimes 1
+\\&= \Big(\partial_t^2 - \big(t^{-1} + 6i\sqrt{2a}t\big)\partial_t
+    + \overbracket{2i\sqrt{2a}} + 2at^{-4} - 2i\sqrt{2a}
+    - \overbracket{8 (2a) t^2}\Big) e\otimes 1
+\\&= \Big(\partial_t^2 - \big(t^{-1} + 6i\sqrt{2a}t\big)\partial_t
+    + 2at^{-4} - 16a t^2\Big) e\otimes 1
+\end{align*}
+\begin{figure}[H]
+\caption{Newton Polygon zu $\cN$}
+\begin{center}
+\fbox{
+  \begin{tikzpicture}[scale=0.5,descr/.style={fill=white,inner sep=2.5pt}]
+  \def\myPoints{0/-4,0/2,1/-2,1/0,2/-2}
+  \def\myPath{ -- node[descr]{$1$} (2,-2)}
+  \myPlotFunction{\myPoints}{\myPath}{2}{-4}{2}{$N(\rho^*P_{\phi_1})$}
+  \end{tikzpicture}
+}
+\end{center}
+\end{figure}
+\end{try}
+\begin{try}
+und somit mit $\psi(t)=\frac{\beta}{\lambda}t^{-\lambda}$ ist 
+$\psi'(t)=-\beta t^{-(\lambda+1)}$ und
+$\psi''(t)=(\lambda+1)\beta t^{-(\lambda+2)}$. Also
+\begin{align*}
+0 &= \Big(\partial_t^2 - \big(t^{-1} + 3\psi'(t)\big)\partial_t
+   + t^{-1} \psi'(t) + 2at^{-4} -\psi''(t)
+   + 2 \psi'(t)^2\Big) e\otimes 1
+\\&= \Big(\partial_t^2 - \big(t^{-1} - 3\beta t^{-(\lambda+1)}\big)\partial_t
+   - t^{-1} \beta t^{-(\lambda+1)} + 2at^{-4} - (\lambda+1)\beta
+   t^{-(\lambda+2)}
+   + 2 (-\beta t^{-(\lambda+1)})^2\Big) e\otimes 1
+\\&= \Big(\partial_t^2 - \big(t^{-1} - 3\beta t^{-(\lambda+1)}\big)\partial_t
+   - \beta t^{-(\lambda+2)} + 2at^{-4} - (\lambda+1)\beta t^{-(\lambda+2)}
+   + 2 \beta^2 t^{-2(\lambda+1)}\Big) e\otimes 1
+\\&= \Big(\partial_t^2 - \big(t^{-1} - 3\beta t^{-(\lambda+1)}\big)\partial_t
+   + 2at^{-4} - (\lambda+2)\beta t^{-(\lambda+2)}
+   + 2 \beta^2 t^{-2(\lambda+1)}\Big) e\otimes 1
+\end{align*}
+Setze nun $\beta=i\sqrt{a}$ und $\lambda=1$
+\begin{align*}
+0 &= \Big(\partial_t^2 - \big(t^{-1} - 3\beta t^{-(\lambda+1)}\big)\partial_t
+   + 2at^{-4} - (\lambda+2)\beta t^{-(\lambda+2)}
+   + 2 \beta^2 t^{-2(\lambda+1)}\Big) e\otimes 1
+\\&= \Big(\partial_t^2 - \big(t^{-1} - 3i\sqrt{a}
+    t^{-2}\big)\partial_t
+   + 2at^{-4} - 3i\sqrt{a} t^{-3}
+   - 2a t^{-4}\Big) e\otimes 1
+\\&= \Big(\partial_t^2 - \big(t^{-1} - 3i\sqrt{a} t^{-2}\big)\partial_t
+   - 3i\sqrt{a} t^{-3} \Big) e\otimes 1
+\end{align*}
+somit ist das Newton Polygon
+\begin{figure}[H]
+\caption{Newton Polygon zu $\cN$}
+\begin{center}
+\fbox{
+  \begin{tikzpicture}[scale=1,descr/.style={fill=white,inner sep=2.5pt}]
+  \def\myPoints{0/-3,1/-2,1/-3,2/-2}
+  \def\myPath{ -- (1,-3) -- node[descr]{$1$} (2,-2)}
+  \myPlotFunction{\myPoints}{\myPath}{2}{-3}{0}{}
+  \end{tikzpicture}
+}
+\end{center}
+\end{figure}
+\end{try}
+\end{try}
+
 
 \subsection{Sabah's refined Levelt-Turrittin-Zerlegung für $\phi_1$}
 
