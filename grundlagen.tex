@@ -106,9 +106,6 @@ kommutiert.
 
 \begin{defn}[Tensorprodukt]
 \cite[3(Algebra).11.21]{stacks-project}
-\begin{comment}
-Faserprodukt: \cite[4(Categories).6.1]{stacks-project}
-\end{comment}
 % von Vorlesung Algebra 2
 
 \begin{center}
@@ -133,7 +130,6 @@ Faserprodukt: \cite[4(Categories).6.1]{stacks-project}
   ;
 \end{tikzpicture}
 \end{center}
-\begin{comment}
 Für eine Abbildung $f:M\rightarrow M'$ definiere das Tensorprodukt davon über
 $R$ mit $N$ als
 \[
@@ -143,7 +139,6 @@ N\otimes_{R}M & \rightarrow & N\otimes_{R}M'\\
 n\otimes m & \mapsto & n\otimes f(m)
 \end{array}
 \]
-\end{comment}
 \end{defn}
 \begin{bem} \label{bem:Rechenregeln-Tensorprodukt}
 Hier ein paar Rechenregeln für das Tensorprodukt,
@@ -276,48 +271,5 @@ $gr_i^F$ als was??
 \cite[Def 3.2.1]{sabbah_cimpa90}
 Eine Filtrierung heißt \emph{gut}, falls ...
 \end{defn}
-
-\begin{defn}[Kommutator]%zula seite 15
-Sei $R$ ein Ring. Für $a,b\in R$ wird
-\[[a,b]=a\cdot b-b\cdot a\]
-als der \emph{Kommutator von a und b} definiert.
-\end{defn}
-% komutativ, dann immer kommutator gleich 0
-
-\begin{prop} \label{prop:d-modul-komutator-regeln}
-Sei $k\in \{ \C[x],\Ckx,\Cfx,K,\hat K \}$.
-Sei $\partial_x:k\rightarrow k$ der gewohnte Ableitungsoperator
-nach $x$, so gilt 
-% geklaut aus Zula Barbara
-\begin{enumerate}
-\item $[ \partial_x,x] = \partial_xx-x\partial_x=1 $
-%und damit ist $\cD_k$ insbesondere nicht kommutativ.
-\item für $f\in k$ ist
-\[ [\partial_x,f] = \frac{\partial f}{\partial x} \,. \]
-\item Es gelten die Formeln\\
-\begin{align}
-[\partial_x,x^k]   &= kx^{k-1}
-  \label{eq:kommutator1}\\
-[\partial_x^j,x]   &= j\partial_x^{j-1}
-  \label{eq:kommutator2}\\
-[\partial_x^j,x^k] &= \sum_{i\geq1}\frac{k(k-1)\cdots(k-i+1)
-  \cdot j(j-1)\cdots(j-i+1)}{i!}x^{k-i}\partial_x^{j-i}
-  \label{eq:kommutator3}
-\end{align}
-\end{enumerate}
-\end{prop}
-\begin{proof}
-\begin{enumerate}
-\item Klar.
-\item Für ein Testobjekt $g\in k$ ist
-\[
-[\partial_x,f]\cdot g=\partial_x(fg)-f\partial_xg=
-  (\partial_xf)g+\underset{=0}{\underbrace{ 
-  f(\partial_xg)-f(\partial_xg)}}=
-  (\partial_xf)g
-\]
-\item Siehe \cite[???]{ZulaBarbara}
-\end{enumerate}
-\end{proof}
 
 % vim: set ft=tex :

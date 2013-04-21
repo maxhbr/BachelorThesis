@@ -7,6 +7,49 @@ einer Veränderlichen einführen.
 Wir werden als $k$ immer ein Element aus $\{ \C[x],\Ckx,\Cfx,K,\hat K \}$
 betrachten.
 
+\begin{defn}[Kommutator]%zula seite 15
+Sei $R$ ein Ring. Für $a,b\in R$ wird
+\[[a,b]=a\cdot b-b\cdot a\]
+als der \emph{Kommutator von a und b} definiert.
+\end{defn}
+% komutativ, dann immer kommutator gleich 0
+
+\begin{prop} \label{prop:d-modul-komutator-regeln}
+Sei $k\in \{ \C[x],\Ckx,\Cfx,K,\hat K \}$.
+Sei $\partial_x:k\rightarrow k$ der gewohnte Ableitungsoperator
+nach $x$, so gilt 
+% geklaut aus Zula Barbara
+\begin{enumerate}
+\item $[ \partial_x,x] = \partial_xx-x\partial_x=1 $
+%und damit ist $\cD_k$ insbesondere nicht kommutativ.
+\item für $f\in k$ ist
+\[ [\partial_x,f] = \frac{\partial f}{\partial x} \,. \]
+\item Es gelten die Formeln\\
+\begin{align}
+[\partial_x,x^k]   &= kx^{k-1}
+  \label{eq:kommutator1}\\
+[\partial_x^j,x]   &= j\partial_x^{j-1}
+  \label{eq:kommutator2}\\
+[\partial_x^j,x^k] &= \sum_{i\geq1}\frac{k(k-1)\cdots(k-i+1)
+  \cdot j(j-1)\cdots(j-i+1)}{i!}x^{k-i}\partial_x^{j-i}
+  \label{eq:kommutator3}
+\end{align}
+\end{enumerate}
+\end{prop}
+\begin{proof}
+\begin{enumerate}
+\item Klar.
+\item Für ein Testobjekt $g\in k$ ist
+\[
+[\partial_x,f]\cdot g=\partial_x(fg)-f\partial_xg=
+  (\partial_xf)g+\underset{=0}{\underbrace{ 
+  f(\partial_xg)-f(\partial_xg)}}=
+  (\partial_xf)g
+\]
+\item Siehe \cite[???]{ZulaBarbara}
+\end{enumerate}
+\end{proof}
+
 \section{Weyl-Algebra und der Ring $\cD_k$}
 %TODO: sabah-cimpa90.pdf  seite 3
 %script ginzburg.pdf seite 34 als garbe definiert
@@ -272,11 +315,12 @@ $\cD/\mathfrak{a}$ ein holonomes $\cD$-Modul.
 
 \subsubsection{Alternative Definition B} %ohne information
 \begin{defn}
-Ein $\cD$-Modul $\cM$ heißt \emph{holonom}, falls es ein
+Ein lokalisiertes $\cD$-Modul $\cM$ heißt \emph{holonom}, falls es ein
 $\mathfrak{a}\vartriangleleft \cD$ gibt, so dass
 \[
 \cM\cong \cD/\mathfrak{a} \,.
 \]
+%TODO: besser: D/D*P
 \end{defn}
 \begin{bem}
 In \cite{coutinho1995primer} wird dies über die Dimension definiert, und bei
