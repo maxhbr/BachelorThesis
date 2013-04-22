@@ -8,6 +8,7 @@ d-modul.tex:\begin{proof} TODO
 d-modul.tex:%TODO: Variable zu t machen?
 d-modul.tex:TODO: defn of Car als Charakteristische Varietät
 d-modul.tex:(linear differential system) %TODO: defn
+d-modul.tex:%TODO: besser: D/D*P
 d-modul.tex:%TODO: was heißt holonom (holonomic)
 elem-mer-zsh.tex:%TODO: hier formal oder konvergent?
 elem-mer-zsh.tex:  %\mbox{\footnote{$(\xi^i)^p=1\forall i$}} % TODO: correct footnote
