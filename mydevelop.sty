@@ -1,6 +1,7 @@
 \def\ifundefined#1{\expandafter\ifx\csname#1\endcsname\relax}
 \ifundefined{myDevelopVariable}\xdef\myDevelopVariable{1}\fi
 
+\usepackage{verbatim}
 \ifnum\myDevelopVariable=1
   \usepackage{xcolor}
   \usepackage{color}
@@ -25,6 +26,4 @@
   \setboolean{@twoside}{false} 
 
   %\usepackage{showframe}
-\else
-  \usepackage{verbatim}
 \fi
