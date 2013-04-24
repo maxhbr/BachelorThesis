@@ -93,7 +93,12 @@ rezept.tex:%TODO; weiter ausführen, genauer, nebenrechnung
 rezept.tex:TODO
 rezept.tex:TODO: bei Hedwig ist es $\beta/\lambda \cdot x^{-\lambda}$
 rezept.tex:%TODO: Dies geht, weil $\hat K[\xi]$ kommutativ ist. ????
-rezept.tex:%TODO: darf ich hier die Ableitung anwenden
+rezept.tex_versions/v01_rezept.tex:-\partial_z(f)\cdot z^2= %TODO: wegen klammerung?
+rezept.tex_versions/v01_rezept.tex:%TODO; weiter ausführen, genauer, nebenrechnung
+rezept.tex_versions/v01_rezept.tex:TODO
+rezept.tex_versions/v01_rezept.tex:TODO: bei Hedwig ist es $\beta/\lambda \cdot x^{-\lambda}$
+rezept.tex_versions/v01_rezept.tex:%TODO: Dies geht, weil $\hat K[\xi]$ kommutativ ist. ????
+rezept.tex_versions/v01_rezept.tex:%TODO: darf ich hier die Ableitung anwenden
 titel.tex:%TODO; titelpage bitte nicht seitlich versetzt
 trash/myNewtonPoly2.sty:          %TODO
 trash/myNewtonPoly2.sty:          %TODO
