@@ -23,7 +23,8 @@
 
   %%axis
   \draw[->] (-.5,0) -- (\myMaxX+.2,0) node[below]{$u$};
-  \draw[->] (0,\myMinY-.2) -- (0,\myMaxY+.7) node[left]{$v$};
+  \FPmin{\myPlotMinY}{\myMinY}{0}
+  \draw[->] (0,\myPlotMinY-.2) -- (0,\myMaxY+.7) node[left]{$v$};
   \draw (1,0) -- (1,-.1);
   \draw (0,1) -- (-.1,1);
 

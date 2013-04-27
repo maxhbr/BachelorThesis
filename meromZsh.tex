@@ -461,11 +461,6 @@ H'(P):=\underset{m\mbox{ mit }a_{m}\neq0}{\bigcup}\Big( (m,deg(a_m)) +
 %TODO: zeige, das beide definitionen gleich sind
 \end{bem}
 
-\begin{lem}
-\cite[Seite 26]{sabbah_cimpa90}
-Das Newton-Polygon hängt nur von dem assoziierten Meromorphen Zusammenhang ab.
-\end{lem}
-
 \begin{defn} % aus der zula
 Die Menge $\slopes(P)$ sind die nicht-vertikalen Steigungen von $N(P)$, die
 sich echt rechts von $\{0\}\times\R$ befinden.\\ % der $y$-Achse
@@ -556,7 +551,18 @@ $(0,0)\in N(f\cdot P)$, und es gilt, dass
 \[
 \cD_K\cdot P=\cD_K\cdot(f\cdot P) \vartriangleleft \cD_K
 \]
-ist. Dies stellt eine Normierung des Newton Polygons dar.
+ist.
+
+\begin{lem}
+\cite[Seite 26]{sabbah_cimpa90}
+Das Newton-Polygon hängt, bis auf vertikales verschieben, nur von dem
+assoziierten Meromorphen Zusammenhang ab.
+\begin{comment}
+ODER: assoziierte Meromorphen Zusammenhänge haben gleiche Slopes aber sind
+möglicherweise vertikal verschoben.
+\end{comment}
+\end{lem}
+
 \begin{lem}
 %TOTO: sabbah redet hier schon immer von \hat K, ist das nötig?
 \cite[5.1]{sabbah_cimpa90} %Seite 25f
@@ -1384,21 +1390,6 @@ Sei $\rho(u)=u^p=t$ und $\phi(t)$ gegeben.
 \rho^+\rho_+\sE^{\phi(u)}
 &=\underset{\zeta\in\mu_p}{\bigoplus}\sE^{\phi(\zeta\cdot u)}\\
 \end{align*}
-\end{comment}
-
-\section{Twisten von $\cD$-Moduln}
-\cite[Chap 5 §2]{coutinho1995primer}
-\begin{comment}
-\begin{lem}
-\cite[Seite 44]{DiplHedwig}
-Sei $\cM_{\hat K}=\hat\cD/\hat\cD\cdot P(x,\partial_x)$ und sei
-$\psi=\frac{\beta}{\lambda}x^{-\lambda}$. So gilt
-\[
-\cM_{\hat K}\otimes_{\hat K}\sE^{\phi}=\cD_{\hat K}/\cD_{\hat K}\cdot
-Q(x,\partial_x)
-\]
-mit $Q(x,\partial_x)=P(x,\partial_x+\frac{\beta}{x^{\lambda+1}})$.
-\end{lem}
 \end{comment}
 
 \section{Fouriertransformation}

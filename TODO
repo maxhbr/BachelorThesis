@@ -11,6 +11,7 @@ d-modul.tex:(linear differential system) %TODO: defn
 d-modul.tex:%TODO: besser: D/D*P
 d-modul.tex:%TODO: was heißt holonom (holonomic)
 elem-mer-zsh.tex:%TODO: hier formal oder konvergent?
+elem-mer-zsh.tex:TODO
 elem-mer-zsh.tex:  %\mbox{\footnote{$(\xi^i)^p=1\forall i$}} % TODO: correct footnote
 elem-mer-zsh.tex:TODO: zeige das noch
 elem-mer-zsh.tex:%TODO: auch nicht formal
@@ -93,6 +94,7 @@ rezept.tex:%TODO; weiter ausführen, genauer, nebenrechnung
 rezept.tex:TODO
 rezept.tex:TODO: bei Hedwig ist es $\beta/\lambda \cdot x^{-\lambda}$
 rezept.tex:%TODO: Dies geht, weil $\hat K[\xi]$ kommutativ ist. ????
+rezept.tex:TODO: $\lambda=\lambda_0$ ??
 rezept.tex_versions/v01_rezept.tex:-\partial_z(f)\cdot z^2= %TODO: wegen klammerung?
 rezept.tex_versions/v01_rezept.tex:%TODO; weiter ausführen, genauer, nebenrechnung
 rezept.tex_versions/v01_rezept.tex:TODO

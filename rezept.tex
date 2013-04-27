@@ -25,36 +25,19 @@ aus
   \cdot (\partial_t-\frac{d}{dt}\phi(t)))
 \\&=\cD_{\hat L}/\cD_{\hat L}\cdot ( \underset{=:Q(t,\partial_t)}{\underbrace{
   t^{\max(I)+1} \cdot (\partial_t-\frac{d}{dt}\phi(t))}})
-  & & \vartriangleleft\cD_{\hat L}
 \end{align*}
 Dies ändert den Meromorphen Zusammenhang nicht, weil $t^{\max(I)+1}$ eine
 Einheit in $\cD_{\hat L}$ (und auch in $\cD_{L}$) ist.
-\iffalse
-  \item und beginne mit $\sE^{\phi}=\cD_{\hat L}/\cD_{\hat L}\cdot \tilde Q$
-  mit
-  $ \tilde Q(t,\partial_t):=\partial_t-\frac{d}{dt}\phi(t)$
-  $\in\C[t,t^{-1}]<\partial_t>$.
-  \item Wir wollen aber ein Element in $\C[t]<\partial_t>$,
-  deshalb multipliziere mit Hauptnenner und erhalte
-  \begin{align*}
-  \cD_{\hat L}\cdot \tilde Q(t,\partial_t)
-    &=\cD_{\hat L}\cdot (\underset{\in\C[t]\subset\cD_{\hat L}^*}
-      {\underbrace{\mbox{Hauptnenner }}}
-    \cdot (\partial_t-\frac{d}{dt}\phi(t))) \\
-  &=\cD_{\hat L}\cdot ( \underset{=:Q(t,\partial_t)}{\underbrace{
-    t^{\max(I)+1} \cdot (\partial_t-\frac{d}{dt}\phi(t))}})
-    & & \vartriangleleft\cD_{\hat L}
-  \end{align*}
-  mit $Q\in\C[t]<\partial_t>$.
-\fi
 \item Fouriertransformiere $\sE^{\phi}$ und erhalte
-$
-\,^\cF\!\sE^{\phi}=\cD_{\hat L}/\cD_{\hat L}\cdot{\cF_Q(z,\partial_z)}
-\bydef \cD_{\hat L}/\cD_{\hat L}\cdot 
-\underset{\in\C[z]<\partial_z>}{\underbrace{Q(\partial_z,-z)}}
-$
-\item Wende den Übergang $x\rightsquigarrow z^{-1}$ an.\\
-Was passiert mit der Ableitung $\partial_x$? Es gilt
+\begin{align*}
+\,^\cF\!\sE^{\phi}&=\cD_{\hat L}/\cD_{\hat L}\cdot{\cF_Q(z,\partial_z)}
+\\&\bydef \cD_{\hat L}/\cD_{\hat L}\cdot 
+  \underset{\in\C[z]<\partial_z>}{\underbrace{Q(\partial_z,-z)}}
+\end{align*}
+\item Betrachte den Zusammenhang bei Unendlich, also wende den Übergang
+$x\rightsquigarrow z^{-1}$ an.\\
+Was passiert mit der Ableitung $\partial_x$?
+Es gilt
 \[
 \partial_x (f(\frac{1}{x}))=
 \partial_z(f)\cdot (-\frac{1}{x^2})=
@@ -65,13 +48,12 @@ also $ \partial_x\rightsquigarrow-z^2\partial_z $.
 \[
 P_\phi(x,\partial_x):=\cF_Q(x^{-1},-x^2\partial_x) \in \C[t]<\partial_t>
 \]
-\item Erhalte den zu $P_\phi$ assoziierten Meromorphen Zusammenhang
-$\cM_\phi=\cD_{\hat K}/\cD_{\hat K}\cdot P_{\phi}$.
 \end{enumerate}
+Im folgendem werden wir den zu $P_\phi$ assoziierten Meromorphen Zusammenhang
+$\cM_\phi=\cD_{\hat K}/\cD_{\hat K}\cdot P_{\phi}$ betrachten.
 
-\paragraph{Wende das Rezept allgemein für
-  $\phi=\sum_{k\in I}\frac{a_k}{t^{k}}$ an.}
-So ist
+Wen wir ein spezielles $\phi=\sum_{k\in I}\frac{a_k}{t^{k}}$ betrachten, können
+wir das entstehende $P_\phi$, wie folgt, explizit berechnen
 \begin{align*}
 \tilde Q(t,\partial_t) &=\partial_t-\frac{d}{dt}\phi(t) \\
                        &=\partial_t+\sum_{k\in I} k\frac{a_k}{t^{k+1}}
@@ -90,7 +72,6 @@ P_{\phi}(x,\partial_x) &=\cF_Q(x^{-1},-x^2\partial_x) \\
                        &=(-x^2\partial_x)^{\max(I)}
                          \underbracket{x^2\partial_xx^{-1}}
                          +\sum_{k\in I}k a_k(-x^2\partial_x)^{\max(I)-k} \\
-%TODO; weiter ausführen, genauer, nebenrechnung
                        &=(-x^2\partial_x)^{\max(I)}
                          \overbracket{(x\partial_x-1)}
                          +\sum_{k\in I}k a_k(-x^2\partial_x)^{\max(I)-k}
@@ -124,42 +105,22 @@ $\partial_x$-Potez ist, kann es auch keinen weiteren Slope geben.
 \end{proof}
 Also ist ein pull-back mit Grad $q+1$ nötig, um einen ganzzahligen Slope zu
 bekommen.
-\begin{comment}
-Sei $\rho:t\mapsto x:=t^{q+1}$ so ist
-\begin{align*}
-\rho^+\cM_\phi &= \rho^+(\cD_{\hat K}/\cD_{\hat K}\cdot P_\phi(x,\partial_x))\\
-  &=\cD_{\hat K}/\cD_{\hat K}\cdot(\rho^*P_\phi(x,\partial_x))\\
-  &=\cD_{\hat K}/\cD_{\hat K}\cdot(P_\phi(\rho(t),\rho'(t)^{-1}\partial_t))\\
-  &=\cD_{\hat K}/\cD_{\hat K}
-    \cdot(P_\phi(t^{q+1},\frac{1}{(q+1)t^q}\partial_t))\\
-  %&=\cD_{\hat K}/\cD_{\hat K}\cdot((-\rho(t)^2\rho'(t)^{-1}\partial_t)^{q}
-    %(\rho(t)\rho'(t)^{-1}\partial_t-1)+qa)\\
-  &=\cD_{\hat K}/\cD_{\hat K}
-    \cdot((-(t^{q+1})^2\frac{1}{(q+1)t^{q}}\partial_t)^{q}
-    (t^{q+1}\frac{1}{(q+1)t^{q}}\partial_t-1)+qa)\\
-  &=\cD_{\hat K}/\cD_{\hat K}
-    \cdot((-\frac{1}{q+1}t^{2(q+1)-q}\partial_t)^{q}
-    (\frac{1}{q+1}t\partial_t-1)+qa)\\
-  &=\cD_{\hat K}/\cD_{\hat K}
-    \cdot((-\frac{1}{q+1}t^{q+2}\partial_t)^{q}
-    (\frac{1}{q+1}t\partial_t-1)+qa)
-\end{align*}
-\end{comment}
 Sei $\rho:t\mapsto x:=-(q+1) t^{q+1}$ so ist
 \begin{align*}
 \rho^+\cM_\phi &= \rho^+(\cD_{\hat K}/\cD_{\hat K}\cdot P_\phi(x,\partial_x))\\
   &=\cD_{\hat K}/\cD_{\hat K}\cdot(\rho^*P_\phi(x,\partial_x))\\
   &=\cD_{\hat K}/\cD_{\hat K}\cdot(P_\phi(\rho(t),\rho'(t)^{-1}\partial_t))\\
   &=\cD_{\hat K}/\cD_{\hat K}
-    \cdot(P_\phi(-(q+1) t^{q+1},-(q+1)^{-1}\frac{1}{(q+1)t^q}\partial_t))\\
+    \cdot(P_\phi(-(q+1) t^{q+1},-\frac{1}{(q+1)^2t^q}\partial_t))\\
   &=\cD_{\hat K}/\cD_{\hat K} \cdot
-    ((-(-(q+1) t^{q+1})^2\frac{-(q+1)^{-1}}{(q+1)t^{q}}\partial_t)^{q}
-    (-(q+1) t^{q+1}\frac{-(q+1)^{-1}}{(q+1)t^{q}}\partial_t-1)+qa)\\
+    ((\underbracket{-(-(q+1) t^{q+1})^2\frac{-1}{(q+1)^2t^{q}}\partial_t})^{q}
+    (\underbracket{-(q+1) t^{q+1}\frac{-1}{(q+1)^2t^{q}}\partial_t}-1)+qa)\\
   &=\cD_{\hat K}/\cD_{\hat K}
-    \cdot((-\frac{-(q+1)}{q+1}t^{2(q+1)-q}\partial_t)^{q}
-    (\frac{1}{q+1}t\partial_t-1)+qa)\\
+    \cdot((\overbracket{
+      \underbracket{-\frac{-(q+1)^2}{(q+1)^2}t^{2(q+1)-q}}\partial_t})^{q}
+    (\overbracket{\frac{1}{q+1}t\partial_t}-1)+qa)\\
   &=\cD_{\hat K}/\cD_{\hat K}
-    \cdot((t^{q+2}\partial_t)^{q}
+    \cdot((\overbracket{t^{q+2}}\partial_t)^{q}
     (\frac{1}{q+1}t\partial_t-1)+qa)\\
   &=\cD_{\hat K}/\cD_{\hat K}
     \cdot((t^{q+2}\partial_t)^{q}
@@ -196,14 +157,17 @@ $q=\frac{q}{1}=:\frac{\lambda_0}{\lambda_1}$ die  Linearform
 L(s_0,s_1)=\lambda_0s_0+\lambda_1s_1=qs_0+s_1 \,.
 \]
 Schreibe $\rho^*P_{\phi}=\sum_i\sum_j\alpha_{ij}t^j\partial_t^i$ und berechne
-die \emph{Determinanten Gleichung} $\sigma_L(\rho^*P_{\phi})\in \hat K[\xi]$.
+die \emph{Determinanten Gleichung} $\sigma_L(\rho^*P_{\phi})\in \hat L[\xi]$.
+\begin{comment}
+Schon gezeigt, das $ord_L = 0$?
+\end{comment}
 \begin{align*}
 \sigma_L(\rho^*P_{\phi})
-  &= \sum_{\{(i,j)\in\N\times\Z \mid L(i,i-j)=0\}}\alpha_{ij}x^j\xi^i\\
-  &= \sum_{\{(i,j)\in\N\times\Z \mid (q+1)i-j=0\}}\alpha_{ij}x^j\xi^i
+  &= \sum_{\{(i,j)\in\N\times\Z \mid L(i,i-j)=0\}}\alpha_{ij}t^j\xi^i\\
+  &= \sum_{\{(i,j)\in\N\times\Z \mid (q+1)i-j=0\}}\alpha_{ij}t^j\xi^i
 \end{align*}
-Da $\hat K[\xi]$ kommutativ ist gilt hier, dass $(x^j\xi^i)^k=x^{jk}\xi^{ik}$ ist.
-Setze $\theta=x^{\lambda_0+\lambda_1}\xi^{\lambda_1}=x^{q+1}\xi$ so können wir
+Da $\hat L[\xi]$ kommutativ ist gilt hier, dass $(t^j\xi^i)^k=t^{jk}\xi^{ik}$ ist.
+Setze $\theta=t^{\lambda_0+\lambda_1}\xi^{\lambda_1}=t^{q+1}\xi$ so können wir
 \begin{align*}
 \sigma_L(\rho^*P_{\phi}) &= \sum_{k\geq 0}\alpha_k\theta^k & & \alpha_k\in\C
 \end{align*}
@@ -220,69 +184,66 @@ Nullstelle von $\sigma_L(\rho^*P_\phi)$.
 Setze $R(z):=(\beta_0/(\lambda_0+1))z^{\lambda_0+1}=(\beta_0/(q+1)z^{q+1}$ und
 betrachte
 \begin{align*}
-\rho^+\cM_\phi\otimes\cF_{\hat K}^R
-  &= \cD_{\hat K}/\cD_{\hat K}\cdot(\rho^*P_{\phi})\otimes\cF_{\hat K}^R \,.
+\rho^+\cM_\phi\otimes\cF_{\hat L}^R
+  &= \cD_{\hat L}/\cD_{\hat L}\cdot(\rho^*P_{\phi})\otimes\cF_{\hat L}^R \,.
 \end{align*}
 \end{comment}
-Setze $\psi(z):=(\beta_0/(\lambda_0+1))z^{\lambda_0+1}=(\beta_0/(q+1))z^{q+1}$
-und betrachte
-\begin{comment}
-TODO: bei Hedwig ist es $\beta/\lambda \cdot x^{-\lambda}$
-\end{comment}
+Setze $\psi(x):=(\beta_0/\lambda_0)t^{-\lambda_0}=(\beta_0/q)t^{-1}$ und
+betrachte
 \begin{align*}
-\cN:=\rho^+\cM_\phi\otimes\sE_{\hat K}^\psi
-  &= \cD_{\hat K}/\cD_{\hat K}\cdot(\rho^*P_{\phi})\otimes\sE_{\hat K}^\psi \,.
+\cN:=\rho^+\cM_\phi\otimes\sE_{\hat L}^\psi
+  &= \cD_{\hat L}/\cD_{\hat L}\cdot(\rho^*P_{\phi})\otimes\sE_{\hat L}^\psi \,.
 \end{align*}
 \begin{lem}
 Sei $e$ ein zyklischer Vektor zu $\rho^+\cM_\phi$, so ist $e\otimes
-\underset{\in\hat K}{\underbrace{1}}\in\cN$ ein zyklischer Vektor für
-$\cN\bydef\rho^+\cM_\phi\otimes\sE_{\hat K}^\psi$.
+\underset{\in\hat L}{\underbrace{1}}\in\cN$ ein zyklischer Vektor für
+$\cN\bydef\rho^+\cM_\phi\otimes\sE_{\hat L}^\psi$.
 \end{lem}
 \begin{proof}
 Es sei $e$ ein zyklischer Vektor von $\rho^+\cM_{\phi_1}$.
 Da der Grad von $\rho^*P_{\phi}$ gleich $q+1$ ist, ist auch die Dimension von
 $\rho^+\cM$ gleich $q+1$. Damit ist auch $\dim_K\cN=q+1$, also reicht zu
-zeigen, dass $e\otimes 1$, $\partial_x(e\otimes 1)$, $\partial_x^2(e\otimes
-1)$, ,\dots, $\partial_x^{q}(e\otimes 1)$ ein linear unabhängiges System ist.
+zeigen, dass $e\otimes 1$, $\partial_t(e\otimes 1)$, $\partial_t^2(e\otimes
+1)$, ,\dots, $\partial_t^{q}(e\otimes 1)$ ein linear unabhängiges System ist.
 Es gilt
 \begin{align*}
-\partial_x(e\otimes 1) &= (\partial_x e)\otimes 1 + x\otimes \partial_x 1\\
-  &= (\partial_x e)\otimes 1 + e\otimes \psi'(x)\\
-  &= (\partial_x e)\otimes 1 +  \psi'(x)(e\otimes 1)\\
-\partial_x^2(e\otimes 1) &= \partial_x((\partial_x e)\otimes 1 +
-    \psi'(x)(e\otimes 1))\\
-  &= (\partial_x^2 e)\otimes 1 + (\partial_x e)\otimes \psi'(x)
-  + \psi''(x)(e\otimes 1)
-  + \psi'(x)((\partial_x e)\otimes 1 + e\otimes \psi'(x))\\
-  &= (\partial_x^2 e)\otimes 1
-  + \psi'(x)(\partial_x e)\otimes 1
-  + \psi''(x)(e\otimes 1)
-  + \psi'(x)(\partial_x e)\otimes 1
-  + \psi'(x)^2(e\otimes 1)\\
-  &= (\partial_x^2 e)\otimes 1
-  + 2\psi'(x)(\partial_x e)\otimes 1
-  + (\psi''(x) + \psi'(x)^2)(e\otimes 1)\\
+\partial_t(e\otimes 1) &= (\partial_t e)\otimes 1 + t\otimes \partial_t 1\\
+  &= (\partial_t e)\otimes 1 + e\otimes \psi'(t)\\
+  &= (\partial_t e)\otimes 1 +  \psi'(t)(e\otimes 1)\\
+\partial_t^2(e\otimes 1) &= \partial_t((\partial_t e)\otimes 1 +
+    \psi'(t)(e\otimes 1))\\
+  &= (\partial_t^2 e)\otimes 1 + (\partial_t e)\otimes \psi'(t)
+  + \psi''(t)(e\otimes 1)
+  + \psi'(t)((\partial_t e)\otimes 1 + e\otimes \psi'(t))\\
+  &= (\partial_t^2 e)\otimes 1
+  + \psi'(t)(\partial_t e)\otimes 1
+  + \psi''(t)(e\otimes 1)
+  + \psi'(t)(\partial_t e)\otimes 1
+  + \psi'(t)^2(e\otimes 1)\\
+  &= (\partial_t^2 e)\otimes 1
+  + 2\psi'(t)(\partial_t e)\otimes 1
+  + (\psi''(t) + \psi'(t)^2)(e\otimes 1)\\
   &~\vdots\\
-\partial_x^{q}(e\otimes 1) &= (\partial_x^q e)\otimes 1
-  + \lambda_{q-1}(\partial_x^{q-1} e)\otimes 1
+\partial_t^{q}(e\otimes 1) &= (\partial_t^q e)\otimes 1
+  + \lambda_{q-1}(\partial_t^{q-1} e)\otimes 1
   +\dots
-  + \lambda_{1}(\partial_x e)\otimes 1
+  + \lambda_{1}(\partial_t e)\otimes 1
   + \lambda_0(e\otimes 1)\\
 \end{align*}
 und somit ist dann
 \[
 \begin{pmatrix}
 e\otimes 1\\
-\partial_x(e\otimes 1)\\
-\partial_x^2(e\otimes 1)\\
+\partial_t(e\otimes 1)\\
+\partial_t^2(e\otimes 1)\\
 \vdots\\
-\partial_x^{q-1}(e\otimes 1)\\
-\partial_x^{q}(e\otimes 1)\\
+\partial_t^{q-1}(e\otimes 1)\\
+\partial_t^{q}(e\otimes 1)\\
 \end{pmatrix}
 =
 \begin{pmatrix}
 1         & 0         & \cdots & \cdots & \cdots        & 0 \\
-\psi'(x)  & 1         & 0      &        &               & \vdots\\
+\psi'(t)  & 1         & 0      &        &               & \vdots\\
 \star     & \star     & 1      & 0      &               & \vdots\\
 \vdots    &           & \ddots & \ddots & \ddots        & \vdots\\
 \star     & \cdots    & \cdots & \star  & 1             & 0\\
@@ -290,17 +251,17 @@ e\otimes 1\\
 \end{pmatrix}
 \begin{pmatrix}
 e\otimes 1\\
-(\partial_xe)\otimes 1\\
-(\partial_x^{2}e)\otimes 1\\
+(\partial_t e)\otimes 1\\
+(\partial_t^{2}e)\otimes 1\\
 \vdots\\
-(\partial_x^{q-1}e)\otimes 1\\
-(\partial_x^{q}e)\otimes 1\\
+(\partial_t^{q-1}e)\otimes 1\\
+(\partial_t^{q}e)\otimes 1\\
 \end{pmatrix}
 \]
-Da bekanntlich $e\otimes1$, $(\partial_xe)\otimes 1$, $(\partial_x^{2}e)\otimes
-1$,\dots, $(\partial_x^{q}e)\otimes 1$ linear unabhängig sind, gilt dies auch
-für $e\otimes 1$, $\partial_x(e\otimes 1)$, $\partial_x^2(e\otimes 1)$, ,\dots,
-$\partial_x^{q}(e\otimes 1)$. Damit folgt die Behauptung.
+Da bekanntlich $e\otimes1$, $(\partial_t e)\otimes 1$, $(\partial_t^{2}e)\otimes
+1$,\dots, $(\partial_t^{q}e)\otimes 1$ linear unabhängig sind, gilt dies auch
+für $e\otimes 1$, $\partial_t(e\otimes 1)$, $\partial_t^2(e\otimes 1)$, ,\dots,
+$\partial_t^{q}(e\otimes 1)$. Damit folgt die Behauptung.
 \end{proof}
 \begin{comment}
 \begin{lem}
@@ -316,6 +277,16 @@ K}\cdot(\rho^*P_{\phi}(x,\partial_x))$ gilt, so ist
 \end{align*}
 \end{lem}
 \end{comment}
+Zerlege nun $\cN=\bigoplus_i\cN_i$ wobei $\cN_i$ Meromorphe Zusammenhänge mit
+genau einem Slope.
+\begin{comment}
+TODO: Quelle / Lemma
+\end{comment}
+Wende auf die $\cN_i$ jeweils die Induktion an und erhalte zu jedem (nach
+eventuellem pull-back) eine Zerlegung in reguläre Meromorphe Zusammenhänge.
+Nach dem diese mittels $\sE^{-\psi}_{\hat L}$ zurückgetwistet wurden, sind
+diese immer noch regulär, aber die direkte Summe davon ist isomorph zu
+$\rho^+\cM_{\phi}$.
 
 \section{Spezialfall $\phi_1:=\frac{a}{x}$}
 Als konkreten Fall betrachten wir nun $\cM_{\phi_1}$ bezüglich
@@ -323,7 +294,6 @@ $\phi_1:=\frac{a}{x}$. Es ist das Minimalpolynom gegeben durch
 \begin{align*}
 P_{\phi_1}(x,\partial_x) &=-x^2\partial_x (x\partial_x-1)+a \\
   &=-x^2\underbracket{\partial_xx}\partial_x+x^2\partial_x+a \\
-  %&=-x(x\partial_x)^2+x(x\partial_x)+a \\
   &=-x^2\overbracket{(x\partial_x+1)}\partial_x+x^2\partial_x+a \\
   &=-x^3\partial_x^2 - x^2\partial_x+x^2\partial_x+a \\
   &=-x^3\partial_x^2+a
@@ -384,16 +354,19 @@ $1=\frac{1}{1}=:\frac{\lambda_0}{\lambda_1}$.
 }
 \end{center}
 \end{figure}
-\begin{try}[wie \cite{sabbah_cimpa90}, bei mir nicht zielführend]
+
+\begin{comment}
+TODO: Namenskollision: $\hat L$ und $L(s_0,s_1)$.
+\end{comment}
 Definiere die Linearform $L(s_0,s_1):=\lambda_0s_0+\lambda_1s_1=s_0+s_1$.
 Berechne nun die \emph{Determinanten Gleichung} $\sigma_L(\rho^*P_{\phi_1})\in
-\hat K[\xi]$ von $\rho^*P_{\phi_1}$.
+\hat L[\xi]$ von $\rho^*P_{\phi_1}$.
 \begin{align*}
 \sigma_L(\rho^*P_{\phi_1})
   &= \sum_{\{(i,j)\mid 2i-j=0\}}\alpha_{ij}x^{j}\xi^i\\
-  &= x^4\xi^2 + 2a
+  &= t^4\xi^2 + 2a
 \end{align*}
-Setze $\theta:=x^{\lambda_0+\lambda_1}\xi^{\lambda_1}=x^2\xi$ so erhalten wir
+Setze $\theta:=t^{\lambda_0+\lambda_1}\xi^{\lambda_1}=t^2\xi$ so erhalten wir
 \begin{align*}
 \sigma_L(\rho^*P_{\phi_1}) &= \theta^2 + 2a
 \end{align*}
@@ -403,466 +376,134 @@ schreiben, welches wir als nächstes faktorisieren
   &=(\theta-\underset{=:\beta_0}{\underbrace{i\sqrt{2a}}})
     (\theta+i\sqrt{2a})
 \end{align*}
-Setze $\psi(x):=(\beta_0/(\lambda_0+1))x^{\lambda_0+1}=i\sqrt{2a}x^2$ und
+\begin{comment}
+Definiere $R(t):=(\beta_0/(\lambda_0+1))t^{\lambda_0+1}=i\sqrt{2a}t^2$ und wir
+wollen ein $\psi(t)$ so dass 
+\[
+\frac{\partial R(t^{-1})}{\partial t} = \psi'(t)
+\]
+erhalte $\psi'(x)=\beta_0(x^{-1})^{\lambda_0}$
+\end{comment}
+\begin{comment}
+TODO: korregiere allgemeinen Part, falls richtig!
+\end{comment}
+Setze $\psi(x):=(\beta_0/\lambda_0)t^{-\lambda_0}=i\sqrt{2a}t^{-1}$ und
 betrachte den Twist $\cN:=\rho^+\cM_{\phi_1}\otimes\sE_{\hat K}^\psi$ von
 $\cM$.
-Es ist $e\otimes 1$ ein zyklischer Vektor , wobei $e$ ein zyklischer Vektor von
+Es ist $e\otimes 1$ ein zyklischer Vektor, wobei $e$ ein zyklischer Vektor von
 $\rho^+\cM$ ist.
-Es existieren $a_0(t)$ und $a_1(t)$ in $K$, so dass
+Es existieren $a_0(t)$ und $a_1(t)$ in $\hat L$, so dass
 \[
-0=\partial_t^2 (e\otimes 1) + a_1(t)\partial_t (e\otimes 1) + a_0(t) e\otimes 1
+0=\partial_t^2 (e\otimes 1) + (a_1(t)\partial_t + a_0(t)) e\otimes 1
 \]
 und damit ist dann $\cN=\cD/\cD\cdot(\partial_t^2+a_1(t)\partial_t+a_0(t))$.
 Es ist
 \begin{align*}
-\partial_t(e\otimes 1) &= (\partial_te)\otimes 1 + e\otimes \psi'(t) \\
-  &= (\partial_te)\otimes 1 + \psi'(t) e\otimes 1 \\
-\partial_t^2(e\otimes 1) &= \partial_t(\underbracket{\partial_t(e\otimes 1)})\\
+\partial_t^2(e\otimes 1) &=\partial_t(\underbracket{\partial_t(e\otimes 1)})\\
   &= \partial_t(\overbracket{(\partial_te)\otimes 1
     + e\otimes \psi'(t)})\\
   &= (\underbracket{\partial_t^2 e})\otimes 1
     + \underbracket{(\partial_t e)\otimes \psi'(t)
     +               (\partial_t e)\otimes \psi'(t)}
-    + e\otimes\underset{\in K}{\underbrace{((\partial_t+\psi'(t))\psi'(t))}}\\
-  &= (\overbracket{(t^{-1}\partial_t - 2at^{-4}) e})\otimes 1
+    + e\otimes\underset{\in K}{\underbrace{((\frac{\partial}{\partial t} 
+    + \psi'(t))\psi'(t))}}\\
+  &= \underbracket{(\overbracket{(t^{-1}\partial_t - 2at^{-4}) e})\otimes 1}
     + \overbracket{2\psi'(t) (\partial_t e)\otimes 1}
-    + (\underbracket{\partial_t\psi'(t)} + \psi'(t)^2)e\otimes 1\\
-  &= \underbracket{((t^{-1}\partial_t - 2at^{-4}) e)\otimes 1}
-    + 2\psi'(t) (\partial_t e)\otimes 1
-    + \underbracket{(\overbracket{\psi'(t)\partial_t + \psi''(t)} +
-    \psi'(t)^2)e\otimes 1}\\
-  &\begin{aligned}
-    &= \overbracket{
-        (t^{-1}\partial_t e)\otimes 1
-        - (2at^{-4}) e)\otimes 1
-      }
-      + 2\psi'(t) (\partial_t e)\otimes 1\\
-    &\qquad + \overbracket{
-        (\psi'(t)\partial_t e)\otimes 1
-        + \psi''(t) e\otimes 1
-        + \psi'(t)^2 e\otimes 1
-      }\\
-  \end{aligned} \\
-  &= (t^{-1} + \underbracket{2\psi'(t) + \psi'(t)})
-    \underbracket{(\partial_t e)\otimes 1}
+    + \underbracket{(\psi''(t) + \psi'(t)^2)e\otimes 1}\\
+  &= \overbracket{
+      (t^{-1}\partial_t e)\otimes 1
+      - 2at^{-4} e\otimes 1
+    }
+    + 2\psi'(t) (\partial_t e)\otimes 1 + \overbracket{
+      ( \psi''(t) e\otimes 1
+      + \psi'(t)^2 e\otimes 1
+    }\\
+  &= (t^{-1} + 2\psi'(t)) \underbracket{(\partial_t e)\otimes 1}
     + (- 2at^{-4} + \psi''(t) + \psi'(t)^2) e\otimes 1 \\
+  &= (t^{-1} + 2\psi'(t))\overbracket{(\partial_t (e\otimes 1)
+    - e\otimes \psi'(t))}+ (- 2at^{-4} + \psi''(t) + \psi'(t)^2) e\otimes 1 \\
   &\begin{aligned}
-    &= (t^{-1} + \overbracket{3\psi'(t)})\overbracket{(\partial_t (e\otimes 1)
-    - e\otimes \psi'(t))}\\
+    &= (t^{-1} + 2\psi'(t))\partial_t (e\otimes 1)
+    - (\psi'(t) t^{-1} + 2\psi'(t)^2)e\otimes 1\\
     &\qquad + (- 2at^{-4} + \psi''(t) + \psi'(t)^2) e\otimes 1 \\
   \end{aligned} \\
-  &\begin{aligned}
-    &= (t^{-1} + 3\psi'(t))\partial_t (e\otimes 1)
-    - (t^{-1} \psi'(t) + 3\psi'(t)^2)e\otimes 1\\
-    &\qquad + (- 2at^{-4} + \psi''(t) + \psi'(t)^2) e\otimes 1 \\
-  \end{aligned} \\
-  &= \Big((t^{-1} + 3\psi'(t))\partial_t
-    - t^{-1} \psi'(t) - 3\psi'(t)^2 - 2at^{-4} + \psi''(t)
+  &= \Big((t^{-1} + 2\psi'(t))\partial_t
+    - \psi'(t) t^{-1} - 2\psi'(t)^2 - 2at^{-4} + \psi''(t)
     + \psi'(t)^2\Big) e\otimes 1 \\
-  &= \Big((t^{-1} + 3\psi'(t))\partial_t
-    - t^{-1} \psi'(t) - 2at^{-4} + \psi''(t)
-    - 2 \psi'(t)^2\Big) e\otimes 1
+  &= \Big((t^{-1} + 2\psi'(t))\partial_t
+    - \psi'(t) t^{-1} - 2at^{-4} + \psi''(t)
+    - \psi'(t)^2\Big) e\otimes 1\\
 \end{align*}
 also
-\[
-0 = \Big(\partial_t^2 - \big(t^{-1} + 3\psi'(t)\big)\partial_t
-    + t^{-1} \psi'(t) + 2at^{-4} -\psi''(t)
-    + 2 \psi'(t)^2\Big) e\otimes 1
-\]
-%TODO: Dies geht, weil $\hat K[\xi]$ kommutativ ist. ????
-und somit mit $\psi(t)=i\sqrt{2a}t^2$ ist $\psi'(t)=2i\sqrt{2a}t$ und
-$\psi''(t)=2i\sqrt{2a}$. Also
 \begin{align*}
-0 &= \Big(\partial_t^2 - \big(t^{-1} + 3\psi'(t)\big)\partial_t
-    + t^{-1} \psi'(t) + 2at^{-4} -\psi''(t)
-    + 2 \psi'(t)^2\Big) e\otimes 1
-\\&= \Big(\partial_t^2 - \big(t^{-1} + 6i\sqrt{2a}t\big)\partial_t
-    + \underbracket{t^{-1} 2i\sqrt{2a}t} + 2at^{-4} - 2i\sqrt{2a}
-    + \underbracket{2 (2i\sqrt{2a}t)^2}\Big) e\otimes 1
-\\&= \Big(\partial_t^2 - \big(t^{-1} + 6i\sqrt{2a}t\big)\partial_t
-    + \overbracket{2i\sqrt{2a}} + 2at^{-4} - 2i\sqrt{2a}
-    - \overbracket{8 (2a) t^2}\Big) e\otimes 1
-\\&= \Big(\partial_t^2 - \big(t^{-1} + 6i\sqrt{2a}t\big)\partial_t
-    + 2at^{-4} - 16a t^2\Big) e\otimes 1
-\end{align*}
-\begin{figure}[H]
-\caption{Newton Polygon zu $\cN$}
-\begin{center}
-\fbox{
-  \begin{tikzpicture}[scale=0.5,descr/.style={fill=white,inner sep=2.5pt}]
-  \def\myPoints{0/-4,0/2,1/-2,1/0,2/-2}
-  \def\myPath{ -- node[descr]{$1$} (2,-2)}
-  \myPlotFunction{\myPoints}{\myPath}{2}{-4}{2}{$N(\rho^*P_{\phi_1})$}
-  \end{tikzpicture}
-}
-\end{center}
-\end{figure}
-Hier entsteht KEIN regulären Anteil, es gibt noch nicht mal einen zweiten
-Slope.
-\end{try}
-\begin{try}[wie \cite{DiplHedwig} bzw. \cite{sabbah_Fourier-local}]
-Für $\psi(t):=\frac{\beta}{\lambda}t^{-\lambda}$ betrachte den Twist
-$\cN:=\rho^+\cM_{\phi_1}\otimes\sE_{\hat K}^\psi$ von $\cM$.  Es ist $e\otimes
-1$ ein zyklischer Vektor, wobei $e$ ein zyklischer Vektor von $\rho^+\cM$ ist.
-Es existieren $a_0(t)$ und $a_1(t)$ in $K$, so dass
-\[
-\partial_t^2 (e\otimes 1) = a_1(t)\partial_t (e\otimes 1) + a_0(t) e\otimes 1
-\]
-und damit ist dann $\cN=\cD/\cD\cdot(\partial_t^2-a_1(t)\partial_t-a_0(t))$.
-Es ist
-\begin{align*}
-\partial_t^2(e\otimes 1) &= \partial_t(\underbracket{\partial_t(e\otimes 1)})
-\\&= \partial_t(\overbracket{(\partial_te)\otimes 1
-    + e\otimes \psi'(t)})
-\\&= (\underbracket{\partial_t^2 e})\otimes 1
-    + \underbracket{(\partial_t e)\otimes \psi'(t)
-    +               (\partial_t e)\otimes \psi'(t)}
-    + e\otimes\underset{\in K}{\underbrace{((\partial_t+\psi'(t))\psi'(t))}}
-\\&= (\overbracket{(t^{-1}\partial_t - 2at^{-4}) e})\otimes 1
-    + \overbracket{2\psi'(t) (\partial_t e)\otimes 1}
-    + (\underbracket{\partial_t\psi'(t)} + \psi'(t)^2)e\otimes 1
-\\&= \underbracket{((t^{-1}\partial_t - 2at^{-4}) e)\otimes 1}
-    + 2\psi'(t) (\partial_t e)\otimes 1
-    + \underbracket{(\overbracket{\psi'(t)\partial_t + \psi''(t)} +
-    \psi'(t)^2)e\otimes 1}
-\\&\begin{aligned}
-    &= \overbracket{
-        (t^{-1}\partial_t e)\otimes 1
-        - (2at^{-4}) e)\otimes 1
-      }
-      + 2\psi'(t) (\partial_t e)\otimes 1
-  \\&\qquad + \overbracket{
-        (\psi'(t)\partial_t e)\otimes 1
-        + \psi''(t) e\otimes 1
-        + \psi'(t)^2 e\otimes 1
-      }
-\\\end{aligned}
-\\&= (t^{-1} + \underbracket{2\psi'(t) + \psi'(t)})
-    \underbracket{(\partial_t e)\otimes 1}
-    + (- 2at^{-4} + \psi''(t) + \psi'(t)^2) e\otimes 1 \\&\begin{aligned} &=
-    (t^{-1} + \overbracket{3\psi'(t)})\overbracket{(\partial_t (e\otimes 1) -
-    e\otimes \psi'(t))}
-  \\&\qquad + (- 2at^{-4} + \psi''(t) + \psi'(t)^2) e\otimes 1
-\\\end{aligned}
-\\&\begin{aligned}
-    &= (t^{-1} + 3\psi'(t))\partial_t (e\otimes 1)
-    - (t^{-1} \psi'(t) + 3\psi'(t)^2)e\otimes 1
-  \\&\qquad + (- 2at^{-4} + \psi''(t) + \psi'(t)^2) e\otimes 1
-\\\end{aligned}
-\\&= \Big((t^{-1} + 3\psi'(t))\partial_t
-    - t^{-1} \psi'(t) - 3\psi'(t)^2 - 2at^{-4} + \psi''(t)
+0 &= \Big( \partial_t^2 - \big(t^{-1} + 2\psi'(t)\big)\partial_t
+    + \psi'(t) t^{-1} + 2at^{-4} -\psi''(t)
     + \psi'(t)^2\Big) e\otimes 1
-\\&= \Big((t^{-1} + 3\psi'(t))\partial_t
-    - t^{-1} \psi'(t) - 2at^{-4} + \psi''(t)
-    - 2 \psi'(t)^2\Big) e\otimes 1
+\\&\overbox{=}{Verschieben des Newton-Polygons} \Big(\underset{=:P'}{\underbrace{
+    t^4\partial_t^2 - \big(t^{3} + 2\psi'(t)t^4\big)\partial_t
+    + \psi'(t)t^{3} + 2a -\psi''(t)t^4
+    + \psi'(t)^2t^4}}\Big) e\otimes 1
 \end{align*}
-also
-\[
-0 = \Big(\partial_t^2 - \big(t^{-1} + 3\psi'(t)\big)\partial_t
-    + t^{-1} \psi'(t) + 2at^{-4} -\psi''(t)
-    + 2 \psi'(t)^2\Big) e\otimes 1
-\]
-Setze $\psi(t)=\frac{\beta}{\lambda}t^{-\lambda}$ und damit ist 
-$\psi'(t)=-\beta t^{-(\lambda+1)}$ und
-$\psi''(t)=(\lambda+1)\beta t^{-(\lambda+2)}$.
+und somit mit $\psi(t)=i\sqrt{2a}t^{-1}$ ist $\psi'(t)=-i\sqrt{2a}t^{-2}$ und
+$\psi''(t)=2i\sqrt{2a}t^{-3}$. Also durch Einsetzen ergibt sich
 \begin{align*}
-0 &= \Big(\partial_t^2 - \big(t^{-1} + 3\underbracket{\psi'(t)}\big)\partial_t
-   + \underbracket{t^{-1} \psi'(t)} + 2at^{-4} -\underbracket{\psi''(t)}
-   + 2 \underbracket{\psi'(t)^2}\Big) e\otimes 1
-\\&= \Big(\partial_t^2 - \big(t^{-1} 
-   - 3\overbracket{\beta t^{-(\lambda+1)}}\big)\partial_t
-   \overbracket{- t^{-1} \beta t^{-(\lambda+1)}} + 2at^{-4} 
-   - \overbracket{(\lambda+1)\beta t^{-(\lambda+2)}}
-   + 2 \overbracket{(-\beta t^{-(\lambda+1)})^2}\Big) e\otimes 1
-\\&= \Big(\partial_t^2 - \big(t^{-1} - 3\beta t^{-(\lambda+1)}\big)\partial_t
-   - \beta t^{-(\lambda+2)} + 2at^{-4} - (\lambda+1)\beta t^{-(\lambda+2)}
-   + 2 \beta^2 t^{-2(\lambda+1)}\Big) e\otimes 1
-\\&= \Big(\partial_t^2 - \big(t^{-1} - 3\beta t^{-(\lambda+1)}\big)\partial_t
-   + 2at^{-4} - (\lambda+2)\beta t^{-(\lambda+2)}
-   + 2 \beta^2 t^{-2(\lambda+1)}\Big) e\otimes 1
-%\\&= \Big(t^3\partial_t^2 - \big(t^{2} - 3\beta t^{-(\lambda-2)}\big)\partial_t
-   %+ 2at^{-1} - (\lambda+2)\beta t^{-(\lambda-1)}
-   %+ 2 \beta^2 t^{-2\lambda+1}\Big) e\otimes 1
+P' &= t^4\partial_t^2 - (t^{3} + 2\psi'(t)t^4)\partial_t
+    + \psi'(t)t^3 + 2a -\psi''(t)t^4
+    + \psi'(t)^2t^4
+\\&= t^4\partial_t^2 - (t^{3} + 2i\sqrt{2a}t^{2})\partial_t - i\sqrt{2a}
+    + 2a - 2i\sqrt{2a}t + \underbracket{(-i\sqrt{2a}t^{-2})^2}t^4
+\\&= t^4\partial_t^2 - (t^{3} + 2i\sqrt{2a}t^{2})\partial_t - 3 i\sqrt{2a}
+    + 2a \overbracket{- 2at^{-4}}t^4
+\\&= t^4\partial_t^2 - (t^{3} + 2i\sqrt{2a}t^{2})\partial_t - 3 i\sqrt{2a}
 \end{align*}
-Setze nun $\beta:=i\sqrt{a}$ und $\lambda:=1$, um einen regulären Anteil zu
-bekommen.
-\begin{comment}
-TODO: $\lambda=\lambda_0$ ??
-\end{comment}
-\begin{align*}
-0 &= \Big(\partial_t^2 - \big(t^{-1} - 3\beta t^{-(\lambda+1)}\big)\partial_t
-   + 2at^{-4} - (\lambda+2)\beta t^{-(\lambda+2)}
-   + 2 \beta^2 t^{-2(\lambda+1)}\Big) e\otimes 1
-\\&= \Big(\partial_t^2 - \big(t^{-1} - 3i\sqrt{a}
-    t^{-2}\big)\partial_t
-   + 2at^{-4} - 3i\sqrt{a} t^{-3}
-   - 2a t^{-4}\Big) e\otimes 1
-\\&= \Big( \underset{=:P'}{\underbrace{ \partial_t^2 - \big(t^{-1} - 3i\sqrt{a}
-  t^{-2}\big)\partial_t - 3i\sqrt{a} t^{-3} }} \Big) e\otimes 1
-\\&= \Big(t^3\partial_t^2 - \big(t^{2} - 3i\sqrt{a} t\big)\partial_t
-   - 3i\sqrt{a} \Big) e\otimes 1
-\end{align*}
-somit ist das Newton Polygon
 \begin{figure}[H]
 \caption{Newton Polygon zu $\cN$}
 \begin{center}
 \fbox{
   \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
-  \def\myPoints{0/0,1/1,1/0,2/1}
-  \def\myPath{ -- (1,0) -- node[descr]{$1$} (2,1)}
-  \myPlotFunction{\myPoints}{\myPath}{2}{0}{1}{}
+  \def\myPoints{0/1,1/2,1/1,2/2}
+  \def\myPath{ -- (1,1) -- node[descr]{$1$} (2,2)}
+  \myPlotFunction{\myPoints}{\myPath}{2}{1}{2}{$N(P')$}
   \end{tikzpicture}
 }
 \end{center}
 \end{figure}
+
 Nun wollen wir $\cN=\cD_{\hat K}/\cD_{\hat K}\cdot P'$ in zwei Meromorphe
 Zusammenhänge mit nur einem Slope zerlegen. Zerlege dazu $P'=Q_1\cdot Q_2$. Um
 eine nichttriviale Zerlegung zu bekommen, müssen die $Q_i$ zumindest den
-$\partial_x$-Grad von 1 haben.
+$\partial_t$-Grad von 1 haben.
+\begin{comment}
+in \cite[Lem 1.14.]{ZulaBarbara} steht die obere schranke
+\end{comment}
 \begin{align*}
 P'&\overset{!}{=} Q_1\cdot Q_2
-\\&= (\partial_x+v(x))\cdot(\partial_x+u(x)) & & u(x), v(x) \in \hat K
+\\&= (\partial_t+v(t))\cdot(\partial_t+u(t))=(\star)
 \end{align*}
-\end{try}
+mit $u(t)=\sum_n u_nt^n$ und $v(t)=\sum_n v_nt^n \in \hat K$. Also
+\begin{align*}
+(\star)&= \partial_t^2+v(t)\partial_t + \partial_t u(t)+v(t)u(t)
+\\&= \partial_t^2 + \sum_n v_nt^n\partial_t
+  + \underbracket{\partial_t (\sum_n u_nt^n)}
+  + \underbracket{(\sum_n v_nt^n)(\sum_n u_nt^n)}
+\\&= \partial_t^2 +  \sum_n v_nt^n\partial_t
+  + \overbracket{\sum u_n(t^n\partial_t+nt^{n-1})}
+  + \overbracket{\sum_n(\sum_{k=0}^nv_nu_{k-n})t^n}
+\\&= \partial_t^2 +  (\sum_n (v_n-u_n)t^n )\partial_t
+  + \sum_n(u_{n-1}(n-1)+\sum_{k=0}^nv_nu_{k-n})t^n
+\end{align*}
+Also:
+\begin{align*}
+\sum_n (v_n-u_n)t^n&=t^{-1}-3i\sqrt{a}t^{-2}
+&\mbox{ und } &&
+\sum_n(u_{n-1}(n-1)+\sum_{k=0}^nv_nu_{k-n})t^n&=-3i\sqrt{a}t^{-3}
+\end{align*}
+müssen gelten.
+
+Nun lässt sich diese Zerlegung mit $\sE^{-\psi(t)}$ zurücktwisten.
 
 \subsection{Sabah's refined Levelt-Turrittin-Zerlegung für $\phi_1$}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\iffalse
 \section{Angewendet für $\phi_2:=\frac{a}{x^2}$}
-\begin{comment}
-für $q=2$
-%
-\begin{align*}
-P_{\phi}(x,\partial_x) &=(-x^2\partial_x)^2 (x\partial_x-1)+2a \\
-  &=x^2\underbracket{\partial_xx^2}\partial_x(x\partial_x-1)+2a \\
-  &=x^2\overbracket{(x^2\partial_x+2x)}\partial_x(x\partial_x-1)+2a \\
-  &=(x^4\partial_x^2+2x^3\partial_x)(x\partial_x-1)+2a \\
-  &=x^4\underbracket{\partial_x^2x}\partial_x
-    +2x^3\underbracket{\partial_xx}\partial_x
-    -x^4\partial_x^2-2x^3\partial_x+2a \\
-  &=x^4\overbracket{(x\partial_x^2+2x)}\partial_x
-    +2x^3\overbracket{(x\partial_x+1)}\partial_x
-    -x^4\partial_x^2-2x^3\partial_x+2a \\
-  &=x^5\partial_x^3+2x^5\partial_x +2x^4\partial_x^2 +2x^3\partial_x
-    -x^4\partial_x^2-2x^3\partial_x+2a \\
-  &=3x^5\partial_x^3 +x^4\partial_x^2 + 2a
-\end{align*}
-\end{comment}
-
-\textbf{also für $\phi_2:=\frac{a}{x^2}$} ist
-\begin{align*}
-P_{\phi_2} &=2a+x\partial_x\underbracket{(-x^2\partial_x)^{2}}\\
-           &=2a +x\partial_x \overbracket{(2x^3\partial_x+x^4\partial_x^2)} \\
-           &=2a
-             +2x\underbracket{\partial_xx^3}\partial_x
-             +x\underbracket{\partial_xx^4}\partial_x^2 \\
-           &=2a
-             +2x\overbracket{(3x^2+x^3\partial_x)}\partial_x
-             +x\overbracket{(4x^3+x^4\partial_x)}\partial_x^2 \\
-           &=2a+5x^3\partial_x+4x^{4}\partial_x^2+x^5\partial_x^3
-\end{align*}
-\begin{figure}[H]
-\caption{Newton Polygon zu $P_{\phi_2}$}
-\begin{center}
-\fbox{
-  \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
-  \def\myPoints{0/0,1/2,2/2,3/2}
-  \def\myPath{ -- node[descr]{$\frac{2}{3}$} (3,2)}
-  \myPlotFunction{\myPoints}{\myPath}{3}{0}{2}{}
-  \end{tikzpicture}
-}
-\end{center}
-\end{figure}
-
-\subsection{Levelt-Turrittin-Zerlegung für $\phi_2$}
-$\cM_{\phi_2}$ hat genau den Slope $\frac{2}{3}$ mit Nenner $3$.\\
-Sei $\rho:t\mapsto x:=t^3$ und betrachte
-\begin{align*}
-\rho^+\cM_{\phi_1} &= \rho^+\Big( \cD_{\hat K}/\cD_{\hat
-  K}\cdot(2a+5x^3\partial_x+4x^{4}\partial_x^2+x^5\partial_x^3) \Big) \\
-&= \cD_{\hat L}/\cD_{\hat L}\cdot(2a+
-  5\rho(t)^3(\rho'(t)^{-1}\partial_t)
-  +4\rho(t)^{4}(\rho'(t)^{-1}\partial_t)^2
-  +\rho(t)^5(\rho'(t)^{-1}\partial_t)^3) \\
-&= \cD_{\hat L}/\cD_{\hat L}\cdot(2a+
-  5t^9(\frac{1}{3}t^{-2}\partial_t)
-  +4t^{12}(\frac{1}{3}t^{-2}\partial_t)^2
-  +t^{15}(\frac{1}{3}t^{-2}\partial_t)^3) \\
-&= \cD_{\hat L}/\cD_{\hat L}\cdot(2a+
-  \frac{5}{3}t^7\partial_t
-  +\frac{4}{9}t^{12}(t^{-2}
-    \underbracket{\partial_tt^{-2}}
-    \partial_t)
-  +\frac{1}{27}t^{15}(t^{-2}
-    \underbracket{\partial_tt^{-2}}
-    \underbracket{\partial_tt^{-2}}
-    \partial_t)) \\
-&\begin{aligned}
-&= \cD_{\hat L}/\cD_{\hat L}\cdot(2a+
-  \frac{5}{3}t^7\partial_t
-  +\frac{4}{9}t^{10}
-    \overbracket{(t^{-2}\partial_t-2t^{-3})}
-    \partial_t\\
-  &\qquad+\frac{1}{27}t^{13}
-    \underbracket{
-      \overbracket{(t^{-2}\partial_t-2t^{-3})}
-      \overbracket{(t^{-2}\partial_t-2t^{-3})}
-    }
-    \partial_t) \\
-\end{aligned}\\
-&\begin{aligned}
-&= \cD_{\hat L}/\cD_{\hat L}\cdot(2a+
-  \frac{5}{3}t^7\partial_t
-  +\frac{4}{9}t^{8}\partial_t^2
-  -\frac{8}{9}t^{7}\partial_t\\
-  &\qquad+\frac{1}{27}t^{13}
-    \overbracket{(
-      t^{-2}\underbracket{\partial_tt^{-2}}\partial_t
-      -2t^{-2}\underbracket{\partial_tt^{-3}}
-      -2t^{-5}\partial_t
-      +4t^{-6}
-    )}
-    \partial_t) \\
-\end{aligned}\\
-&\begin{aligned}
-  &= \cD_{\hat L}/\cD_{\hat L}\cdot(2a+
-    (\frac{5}{3}-\frac{7}{9}+\frac{4}{27})t^7\partial_t
-    +(\frac{4}{9}-\frac{2}{27})t^{8}\partial_t^2
-    +\frac{1}{27}t^{11}\overbracket{(t^{-2}\partial_t-2t^{-3})}\partial_t^2\\
-    &\qquad-\frac{2}{27}t^{11}\overbracket{(t^{-3}\partial_t-3t^{-4})}
-      \partial_t
-  )
-\end{aligned}\\
-%&\begin{aligned}
-  %&= \cD_{\hat L}/\cD_{\hat L}\cdot(2a+
-    %(\frac{5}{3}-\frac{7}{9}+\frac{4}{27})t^7\partial_t
-    %+(\frac{4}{9}-\frac{2}{27})t^{8}\partial_t^2
-    %+\frac{1}{27}t^{9}\partial_t^3-\frac{2}{27}t^{8}\partial_t^2\\
-    %&\qquad -\frac{2}{27}t^{8}\partial_t^2 +\frac{6}{27}t^{7}\partial_t
-  %)
-%\end{aligned}\\
-&= \cD_{\hat L}/\cD_{\hat L}\cdot(2a+
-  \frac{28}{27}t^7\partial_t
-  +\frac{10}{27}t^{8}\partial_t^2
-  +\frac{1}{27}t^{9}\partial_t^3-\frac{2}{27}t^{8}\partial_t^2
-  -\frac{2}{27}t^{8}\partial_t^2 +\frac{6}{27}t^{7}\partial_t
-)\\
-&= \cD_{\hat L}/\cD_{\hat L}\cdot(2a+ \frac{34}{27}t^7\partial_t
-  +\frac{6}{27}t^{8}\partial_t^2 +\frac{1}{27}t^{9}\partial_t^3)
-\end{align*}
-\begin{figure}[H]
-\caption{Newton Polygon zu $\rho^*P_{\phi_2}$}
-\begin{center}
-\fbox{
-  \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
-  \def\myPoints{0/0,1/6,2/6,3/6}
-  \def\myPath{ -- node[descr]{$2$} (3,6)}
-  \myPlotFunction{\myPoints}{\myPath}{3}{0}{6}{}
-  \end{tikzpicture}
-}
-\end{center}
-\end{figure}
-Nun hat $\rho^*\cM_{\phi_2}$ nur noch den Slope
-$2=\frac{2}{1}=:\frac{\lambda_0}{\lambda_1}$ und definiere damit die Linearform
-$L(s_0,s_1)=\lambda_0s_0+\lambda_1s_1$.  Berechne nun die \emph{Determinanten
-Gleichung} $\sigma_L(\rho^*P_{\phi_2})\in \hat
-K[\xi]$ von $\rho^*P_{\phi_2}$.
-\begin{align*}
-\sigma_L(\rho^*P_{\phi_2})
-&= \sum_{\{(i,j) \mid L(i,i-j)=\ord_L(\rho^*P_{\phi_2})\}}\alpha_{ij}x^j\xi^i\\
-&= \sum_{\{(i,j) \mid 2i + i-j=0\}}\alpha_{ij}x^j\xi^i\\
-&= 2a+\frac{1}{27}x^9\xi^3
-\end{align*}
-Setze $\theta=x^{\lambda_0+\lambda_1}\xi^{\lambda_1}=x^3\xi$ so können wir
-\begin{align*}
-\sigma_L(\rho^*P_{\phi_2}) &= \sum_{k\geq 0}\alpha_k\theta^k\\
-&= 2a+\frac{1}{27}\theta^3
-\end{align*}
-%Dies geht, weil $\hat K[\xi]$ kommutativ ist.
-schreiben, welches wir als nächstes faktorisieren
-\begin{align*}
-\sigma_L(\rho^*P_{\phi_2}) &= 2a+\frac{1}{27}\theta^3\\
-&=\frac{1}{27}(\theta^3-54a)\\
-&=\frac{1}{27}(\theta-?)(\theta-?)(\theta-?)\\
-\end{align*}
-
-Setze $R(z):=(\beta_0/(\lambda_0+1))z^{\lambda_0+1}=\sqrt{??}z^3$ und betrachte
-$\rho^+\cM_{\phi_2}\otimes\cF_{\hat K}^R$.
-
-\section{Angewendet für $\phi_3:=\frac{1}{x}+\frac{1}{x^2}$}
-\textbf{also für $\phi_3:=\frac{1}{x}+\frac{1}{x^2}$} ist
-\begin{align*}
-P_{\phi_3} &=x\partial_x(-x^2\partial_x)^{\max_j(k_j)}
-             +\sum_{i\in I} k_i(-x^2\partial_x)^{\max_j(k_j)-k_i}\\
-           &=x\partial_x\underbracket{(x^2\partial_x)^{2}}
-             +1(-x^2\partial_x)^{1}+2(-x^2\partial_x)^{0}\\
-           &\overbox{=}{(\ref{eq:rezeptNeben1})}
-             x\partial_x \overbracket{(2x^3\partial_x+x^4\partial_x^2)}
-             -x^2\partial_x+2\\
-           &=2x\underbracket{\partial_xx^3}\partial_x
-             +x\underbracket{\partial_xx^4}\partial_x^2
-             -x^2\partial_x+2\\
-           &\overbox{=}{(\ref{eq:kommutator1})}
-             \underbracket{2x\overbracket{(3x^2+x^3\partial_x)}\partial_x}
-             +\underbracket{x\overbracket{(4x^3+x^4\partial_x)}\partial_x^2}
-             -x^2\partial_x+2\\
-           &=\overbracket{6x^3\partial_x+2x^4\partial_x^2}
-             +\overbracket{4x^4\partial_x^2+x^5\partial_x^3}
-             -x^2\partial_x+2\\
-           &= x^5\partial_x^3+6x^4\partial_x^2+(6x^3-x^2)\partial_x+2
-\end{align*}
-\begin{figure}[H]
-\caption{Newton Polygon zu $P_{\phi_3}$}
-\begin{center}
-\fbox{
-  \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
-  \def\myPoints{0/0,1/1,1/2,2/2,3/2}
-  \def\myPath{ -- node[descr]{$\frac{2}{3}$} (3,2)}
-  \myPlotFunction{\myPoints}{\myPath}{3}{0}{2}{}
-  \end{tikzpicture}
-}
-\end{center}
-\end{figure}
-
-\section{Angewendet für $\phi_4:=\frac{1}{x^2}+\frac{1}{x^3}$}
-\textbf{also für $\phi_4:=\frac{1}{x^2}+\frac{1}{x^3}$} ist
-\begin{align*}
-P_{\phi_4} &=x\partial_x(-x^2\partial_x)^{\max_j(k_j)}
-             +\sum_{i\in I} k_i(-x^2\partial_x)^{\max_j(k_j)-k_i}\\
-           &=-x\partial_x\underbracket{(x^2\partial_x)^{3}}
-             -2x^2\partial_x +3\\
-           &\overbox{=}{(\ref{eq:rezeptNeben1})}
-             -x\partial_x\overbracket{(5x^4\partial_x+4x^{5}\partial_x^2
-             +x^6\partial_x^3)}-2x^2\partial_x +3\\
-           &=-5x\underbracket{\partial_xx^4}\partial_x
-             -4x\underbracket{\partial_xx^{5}}\partial_x^2
-             -x\underbracket{\partial_xx^6}\partial_x^3
-             -2x^2\partial_x +3\\
-           &\overbox{=}{(\ref{eq:kommutator1})}
-             \underbracket{-5x\overbracket{(4x^3+x^4\partial_x)}\partial_x}
-             \underbracket{-4x\overbracket{(5x^4+x^{5}\partial_x)}\partial_x^2}
-             \underbracket{-x\overbracket{(6x^5+x^6\partial_x)}\partial_x^3}
-             -2x^2\partial_x+3\\
-           &=\overbracket{-20x^4\partial_x-5x^5\partial_x^2}
-             \overbracket{-20x^5\partial_x^2-4x^{6}\partial_x^3}
-             \overbracket{-6x^6\partial_x^3-x^7\partial_x^4}
-             -2x^2\partial_x +3\\
-           &=-x^7\partial_x^4-10x^6\partial_x^3-25x^5\partial_x^2
-             -(20x^4+2x^2)\partial_x+3\\
-\end{align*}
-\begin{figure}[H]
-\caption{Newton Polygon zu $P_{\phi_4}$}
-\begin{center}
-\fbox{
-  \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
-  \def\myPoints{0/0,1/1,1/3,2/3,3/3,4/3}
-  \def\myPath{ -- node[descr]{$\frac{3}{4}$} (4,3)}
-  \myPlotFunction{\myPoints}{\myPath}{4}{0}{3}{}
-  \end{tikzpicture}
-}
-\end{center}
-\end{figure}
-\fi
 
 % vim: set ft=tex :
