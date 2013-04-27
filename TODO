@@ -90,11 +90,10 @@ meromZsh.tex:%TODO: nummer aus der referenz ist falsch
 meromZsh.tex:  & \mbox{(Rechenregeln Tensorprodukt)}\\ %TODO: hinzufügen
 meromZsh.tex:TODO: hier weiter
 rezept.tex:-\partial_z(f)\cdot z^2= %TODO: wegen klammerung?
-rezept.tex:%TODO; weiter ausführen, genauer, nebenrechnung
 rezept.tex:TODO
-rezept.tex:TODO: bei Hedwig ist es $\beta/\lambda \cdot x^{-\lambda}$
-rezept.tex:%TODO: Dies geht, weil $\hat K[\xi]$ kommutativ ist. ????
-rezept.tex:TODO: $\lambda=\lambda_0$ ??
+rezept.tex:TODO: Quelle / Lemma
+rezept.tex:TODO: Namenskollision: $\hat L$ und $L(s_0,s_1)$.
+rezept.tex:TODO: korregiere allgemeinen Part, falls richtig!
 rezept.tex_versions/v01_rezept.tex:-\partial_z(f)\cdot z^2= %TODO: wegen klammerung?
 rezept.tex_versions/v01_rezept.tex:%TODO; weiter ausführen, genauer, nebenrechnung
 rezept.tex_versions/v01_rezept.tex:TODO
@@ -104,6 +103,8 @@ rezept.tex_versions/v01_rezept.tex:%TODO: darf ich hier die Ableitung anwenden
 titel.tex:%TODO; titelpage bitte nicht seitlich versetzt
 trash/myNewtonPoly2.sty:          %TODO
 trash/myNewtonPoly2.sty:          %TODO
+trash/fromRezept.tex:TODO: $\lambda=\lambda_0$ ??
+trash/fromRezept.tex:TODO: $\lambda=\lambda_0$ ??
 trash/meromZsh.tex:  %TODO: auch nicht formal
 trash/lemma2-4.tex:  %\mbox{\footnote{$(\xi^i)^p=1\forall i$}} % TODO: correct footnote
 trash/lemma2-4.tex:TODO: zeige das noch

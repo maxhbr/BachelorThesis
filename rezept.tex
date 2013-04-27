@@ -67,10 +67,15 @@ Q(t,\partial_t)        &=t^{\max(I)+1}\partial_t
                        &=-\partial_z^{\max(I)+1}z
                          +\sum_{k\in I}k a_k\partial_z^{\max(I)-k} \\
 P_{\phi}(x,\partial_x) &=\cF_Q(x^{-1},-x^2\partial_x) \\
-                       &=-(-x^2\partial_x)^{\max(I)+1}x^{-1}
+                       &=\underbracket{-(-x^2\partial_x)^{\max(I)+1}x^{-1}}
+                         +\sum_{k\in I}k a_k(-x^2\partial_x)^{\max(I)-k} \\
+                       &=\overbracket{(-x^2\partial_x)^{\max(I)}
+                         \underbracket{x^2\partial_xx^{-1}}}
                          +\sum_{k\in I}k a_k(-x^2\partial_x)^{\max(I)-k} \\
                        &=(-x^2\partial_x)^{\max(I)}
-                         \underbracket{x^2\partial_xx^{-1}}
+                         \underbracket{
+                           \overbracket{x^2(x^{-1}\partial_x-x^{-2})}
+                         }
                          +\sum_{k\in I}k a_k(-x^2\partial_x)^{\max(I)-k} \\
                        &=(-x^2\partial_x)^{\max(I)}
                          \overbracket{(x\partial_x-1)}
@@ -91,16 +96,78 @@ so dass
 $\cP(\cM_{\phi})=\{\frac{q}{q+1}\}$ gilt.
 \end{lem}
 \begin{proof} \cite[5.b.]{sabbah_Fourier-local}
-TODO
+Um zu zeigen, dass die Behauptung gilt, formen wir $P_{\phi}$ um und isolieren
+die Monome, die für das Newton-Polygon von bedeutung sind.
+\begin{align*}
+N\Big(P_{\phi}(x,\partial_x)\Big) &= N\Big(\underbracket{(-x^2\partial_x)^{q}}
+  (x\partial_x-1)+qa\Big)
+\\&= N\Big(\overbracket{\underset{\text{liefert keinen
+Beitrag}}{\underbrace{(-1)^q}}(x^{2q}\partial_x^q 
+  + \underset{\text{liefern keinen Beitrag}}{\underbrace{\textbf{T.h.O.}}}}) 
+  (x\partial_x - 1) + qa \Big)
+\\&= N\Big(x^{2q}\partial_x^q
+  (x\partial_x - 1) + qa \Big)
+\\&= N\Big(x^{2q}\underbracket{\partial_x^q x}\partial_x
+  - x^{2q}\partial_x^q + qa \Big)
+\\&= N\Big(x^{2q}\overbracket{(x\partial_x^q + q\partial_x^{q-1})}\partial_x
+  - x^{2q}\partial_x^q + qa \Big)
+\\&= N\Big(x^{2q + 1}\partial_x^{q + 1} 
+  + \underset{\text{liefern keinen Beitrag}}{
+  \underbrace{qx^{2q}\partial_x^{q} - x^{2q}\partial_x^q}} + qa \Big)
+\\&= N\Big(x^{2q + 1}\partial_x^{q + 1} + qa \Big)
+\end{align*}
 \begin{comment}
-über L-Symbol? Stützfunktion? Versuch:\\
-Mit $L=q s_0 + (q+1)s_2$ gilt
+ist vlt besser \emph{Therme niedriger Ordnung} zu verwenden??
+\end{comment}
+Wobei hier das \textbf{T.h.O} eine Abkürzung für \emph{Therme höherer Ordnung}
+ist. Hier ist ein Term $\epsilon x^{p}\partial_x^{q}$, mit $\epsilon\in \C, p,q
+\in \Z$, von höherer Ordnung als
+$\tilde\epsilon x^{\tilde p}\partial_x^{\tilde q}$, mit $\tilde\epsilon\in \C,
+\tilde p,\tilde q \in \Z$, falls $q>\tilde q$ und $p-q<\tilde p - \tilde q$.
+Anschaulich bedeutet das, dass 
 \[
-\sigma_L(P)= \pm x^{2q+1}\partial_x^{q+1} + qa \,,
+\Big( (q,p-q) + \R_{\leq 0} \times \R_{\geq 0} \Big) \supset 
+\Big( (\tilde q,\tilde p-\tilde q) + \R_{\leq 0} \times \R_{\geq 0} \Big) \,.
 \]
-welches aus mehr als einem Monom besteht, deshalb ist der zu $L$ zugehörige
-Slope $\frac{q}{q+1}$ ein Slope von $P$. Da $q+1$ die höchste vorkommende
-$\partial_x$-Potez ist, kann es auch keinen weiteren Slope geben.
+Offensichtlich ist damit $ N(\epsilon x^{p}\partial_x^{q}+\tilde\epsilon
+x^{\tilde p}\partial_x^{\tilde q}) =N(\epsilon x^{p}\partial_x^{q}) $, also
+können Therme höherer Ordnung vernachlässigt werden, wenn das
+Newton-Polygon gesucht ist.
+\begin{figure}[H]
+\caption{Newton Polygon zu $P_{\phi}$}
+\begin{center}
+\fbox{
+  \begin{tikzpicture}[scale=.7,descr/.style={fill=white,inner sep=2.5pt}]
+  \def\myPoints{0/0,6/5}
+  \def\myPath{ -- node[descr]{$\frac{q}{q+1}$} (6,5)}
+  \myPlotFunction{\myPoints}{\myPath}{6}{0}{5}{$(q+1,q)$}
+  \end{tikzpicture}
+}
+\end{center}
+\end{figure}
+\begin{comment}
+TODO: ist T.h.O. hier die richtige formulierung?? besser:
+\begin{align*}
+N\Big(P_{\phi}(x,\partial_x)\Big) &= N\Big(\underbracket{(-x^2\partial_x)^{q}}
+  (x\partial_x-1)+qa\Big)
+\\&= N\Big(\overbracket{\underset{\text{liefert keinen
+Beitrag}}{\underbrace{(-1)^q}}(x^{2q}\partial_x^q 
+  + \underset{\text{liefern keinen Beitrag, weil $\mu_i(x)\in x^{q+i}\Cfx$}}{
+  \underbrace{
+  \mu_{q-1}(x)\partial_x^{q-1} + \dots + \mu_{1}(x)\partial_x + \mu_0(x)}}
+  )}
+  (x\partial_x - 1) + qa \Big)
+\\&= N\Big(x^{2q}\partial_x^q
+  (x\partial_x - 1) + qa \Big)
+\\&= N\Big(x^{2q}\underbracket{\partial_x^q x}\partial_x
+  - x^{2q}\partial_x^q + qa \Big)
+\\&= N\Big(x^{2q}\overbracket{(x\partial_x^q + q\partial_x^{q-1})}\partial_x
+  - x^{2q}\partial_x^q + qa \Big)
+\\&= N\Big(x^{2q + 1}\partial_x^{q + 1} 
+  + \underset{\text{liefern keinen Beitrag}}{
+  \underbrace{qx^{2q}\partial_x^{q} - x^{2q}\partial_x^q}} + qa \Big)
+\\&= N\Big(x^{2q + 1}\partial_x^{q + 1} + qa \Big)
+\end{align*}
 \end{comment}
 \end{proof}
 Also ist ein pull-back mit Grad $q+1$ nötig, um einen ganzzahligen Slope zu
@@ -188,7 +255,7 @@ betrachte
   &= \cD_{\hat L}/\cD_{\hat L}\cdot(\rho^*P_{\phi})\otimes\cF_{\hat L}^R \,.
 \end{align*}
 \end{comment}
-Setze $\psi(x):=(\beta_0/\lambda_0)t^{-\lambda_0}=(\beta_0/q)t^{-1}$ und
+Setze $\psi(x):=(\beta_0/\lambda_0)t^{-\lambda_0}=(\beta_0/q)t^{-q}$ und
 betrachte
 \begin{align*}
 \cN:=\rho^+\cM_\phi\otimes\sE_{\hat L}^\psi
