@@ -73,8 +73,7 @@ meromZsh.tex:TODO: damit wird $\hat L$ zu einem $\hat K$ Vektorraum.
 meromZsh.tex:%TODO: ist das der zusammenhang oder die wirkung oder was?
 meromZsh.tex:%TODO: Pfeile
 meromZsh.tex:%TODO: Pfeile
-meromZsh.tex:TODO: Umformulieren als Vermutung, oder ähnliches
-meromZsh.tex:%TODO: wofür das m??
+meromZsh.tex:TODO
 meromZsh.tex:%TODO: warum hier alles Lokalisiert?
 meromZsh.tex:%TODO: muss \Cful oder \Cftl flach sein???
 meromZsh.tex:%TODO: Funktorialität von Pull-Back? NEIN: Funktorialität von tensor
@@ -90,7 +89,7 @@ meromZsh.tex:%TODO: nummer aus der referenz ist falsch
 meromZsh.tex:  & \mbox{(Rechenregeln Tensorprodukt)}\\ %TODO: hinzufügen
 meromZsh.tex:TODO: hier weiter
 rezept.tex:-\partial_z(f)\cdot z^2= %TODO: wegen klammerung?
-rezept.tex:TODO
+rezept.tex:TODO: ist T.h.O. hier die richtige formulierung?? besser:
 rezept.tex:TODO: Quelle / Lemma
 rezept.tex:TODO: Namenskollision: $\hat L$ und $L(s_0,s_1)$.
 rezept.tex:TODO: korregiere allgemeinen Part, falls richtig!

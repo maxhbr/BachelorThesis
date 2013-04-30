@@ -459,7 +459,7 @@ betrachte den Twist $\cN:=\rho^+\cM_{\phi_1}\otimes\sE_{\hat K}^\psi$ von
 $\cM$.
 Es ist $e\otimes 1$ ein zyklischer Vektor, wobei $e$ ein zyklischer Vektor von
 $\rho^+\cM$ ist.
-Es existieren $a_0(t)$ und $a_1(t)$ in $\hat L$, so dass
+Somit existieren $a_0(t)$ und $a_1(t)$ in $\hat L$, so dass
 \[
 0=\partial_t^2 (e\otimes 1) + (a_1(t)\partial_t + a_0(t)) e\otimes 1
 \]
@@ -517,11 +517,11 @@ $\psi''(t)=2i\sqrt{2a}t^{-3}$. Also durch Einsetzen ergibt sich
 P' &= t^4\partial_t^2 - (t^{3} + 2\psi'(t)t^4)\partial_t
     + \psi'(t)t^3 + 2a -\psi''(t)t^4
     + \psi'(t)^2t^4
-\\&= t^4\partial_t^2 - (t^{3} + 2i\sqrt{2a}t^{2})\partial_t - i\sqrt{2a}
+\\&= t^4\partial_t^2 - (t^{3} - 2i\sqrt{2a}t^{2})\partial_t - i\sqrt{2a}t
     + 2a - 2i\sqrt{2a}t + \underbracket{(-i\sqrt{2a}t^{-2})^2}t^4
-\\&= t^4\partial_t^2 - (t^{3} + 2i\sqrt{2a}t^{2})\partial_t - 3 i\sqrt{2a}
-    + 2a \overbracket{- 2at^{-4}}t^4
-\\&= t^4\partial_t^2 - (t^{3} + 2i\sqrt{2a}t^{2})\partial_t - 3 i\sqrt{2a}
+\\&= t^4\partial_t^2 - (t^{3} - 2i\sqrt{2a}t^{2})\partial_t - 3i\sqrt{2a}t
+  + \underset{=0}{\underbrace{ 2a \overbracket{- 2at^{-4}}t^4 }}
+\\&= t^4\partial_t^2 - (t^{3} - 2i\sqrt{2a}t^{2})\partial_t - 3 i\sqrt{2a}t
 \end{align*}
 \begin{figure}[H]
 \caption{Newton Polygon zu $\cN$}
@@ -535,6 +535,43 @@ P' &= t^4\partial_t^2 - (t^{3} + 2\psi'(t)t^4)\partial_t
 }
 \end{center}
 \end{figure}
+\begin{comment}
+Alternative berechnung: mit Formel aus \cite[Seite 44]{DiplHedwig}
+\[
+P'(t,\partial_t)=\rho^*P(t,\partial_t-\frac{\partial \psi}{\partial t})
+\]
+es ist $\rho^*P(t,\partial_t)=t^4\partial_t^2-t^3\partial_t+2a$, und somit 
+\begin{align*}
+\rho^*P(t,\partial_t-\frac{\partial \psi}{\partial t}) 
+  &=\rho^*P(t,\partial_t-\frac{-i\sqrt{2a}}{t^2}) 
+\\&= t^4\underbracket{(\partial_t+\frac{i\sqrt{2a}}{t^2})^2}
+    \underbracket{- t^3(\partial_t+\frac{i\sqrt{2a}}{t^2})} + 2a
+\\&= t^4 \overbracket{\underbracket{
+      (\partial_t+i\sqrt{2a}t^{-2})(\partial_t+i\sqrt{2a}t^{-2})
+    }} \overbracket{ - t^3\partial_t - i\sqrt{2a}t} + 2a
+\\&= t^4 \overbracket{
+      (\partial_t^2 + i\sqrt{2a}t^{-2}\partial_t
+      +\partial_ti\sqrt{2a}t^{-2}
+      +(i\sqrt{2a}t^{-2})^2)
+    } - t^3\partial_t - i\sqrt{2a}t + 2a
+\\&= t^4\partial_t^2 
+    + i\sqrt{2a}t^{2}\partial_t
+    + i\sqrt{2a}t^4\underbracket{\partial_tt^{-2}} -2a
+    - t^3\partial_t - i\sqrt{2a}t + 2a
+\\&= t^4\partial_t^2 
+    + i\sqrt{2a}t^{2}\partial_t
+    + i\sqrt{2a}t^4\overbracket{(t^{-2}\partial_t-2t^{-3})}
+    - t^3\partial_t - i\sqrt{2a}t
+\\&= t^4\partial_t^2 
+    + i\sqrt{2a}t^{2}\partial_t
+    + i\sqrt{2a}t^2\partial_t
+    - 2i\sqrt{2a}t
+    - t^3\partial_t - i\sqrt{2a}t
+\\&= t^4\partial_t^2 
+    - (t^3-2i\sqrt{2a}t^{2})\partial_t
+    - 3i\sqrt{2a}t
+\end{align*}
+\end{comment}
 
 Nun wollen wir $\cN=\cD_{\hat K}/\cD_{\hat K}\cdot P'$ in zwei Meromorphe
 Zusammenhänge mit nur einem Slope zerlegen. Zerlege dazu $P'=Q_1\cdot Q_2$. Um
@@ -561,9 +598,9 @@ mit $u(t)=\sum_n u_nt^n$ und $v(t)=\sum_n v_nt^n \in \hat K$. Also
 \end{align*}
 Also:
 \begin{align*}
-\sum_n (v_n-u_n)t^n&=t^{-1}-3i\sqrt{a}t^{-2}
+\sum_n (v_n-u_n)t^n&=???
 &\mbox{ und } &&
-\sum_n(u_{n-1}(n-1)+\sum_{k=0}^nv_nu_{k-n})t^n&=-3i\sqrt{a}t^{-3}
+\sum_n(u_{n-1}(n-1)+\sum_{k=0}^nv_nu_{k-n})t^n&=???
 \end{align*}
 müssen gelten.
 
