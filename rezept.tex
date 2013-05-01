@@ -55,32 +55,28 @@ $\cM_\phi=\cD_{\hat K}/\cD_{\hat K}\cdot P_{\phi}$ betrachten.
 Wen wir ein spezielles $\phi=\sum_{k\in I}\frac{a_k}{t^{k}}$ betrachten, können
 wir das entstehende $P_\phi$, wie folgt, explizit berechnen
 \begin{align*}
-\tilde Q(t,\partial_t) &=\partial_t-\frac{d}{dt}\phi(t) \\
-                       &=\partial_t+\sum_{k\in I} k\frac{a_k}{t^{k+1}}
-                       & &\in \C[t][t^{-1}]<\partial_t>\\
-Q(t,\partial_t)        &=t^{\max(I)+1}\partial_t
-                         +\sum_{k\in I} k\frac{a_k}{t^{k-\max(I)}} \\
-                       &=t^{\max(I)+1}\partial_t
-                         +\sum_{k\in I}k a_k t^{\max(I)-k}
-                       & &\in \C[t]<\partial_t>\\
-\cF_Q(z,\partial_z)    &=Q(\partial_z,-z)\\
-                       &=-\partial_z^{\max(I)+1}z
-                         +\sum_{k\in I}k a_k\partial_z^{\max(I)-k} \\
-P_{\phi}(x,\partial_x) &=\cF_Q(x^{-1},-x^2\partial_x) \\
-                       &=\underbracket{-(-x^2\partial_x)^{\max(I)+1}x^{-1}}
-                         +\sum_{k\in I}k a_k(-x^2\partial_x)^{\max(I)-k} \\
-                       &=\overbracket{(-x^2\partial_x)^{\max(I)}
-                         \underbracket{x^2\partial_xx^{-1}}}
-                         +\sum_{k\in I}k a_k(-x^2\partial_x)^{\max(I)-k} \\
-                       &=(-x^2\partial_x)^{\max(I)}
-                         \underbracket{
-                           \overbracket{x^2(x^{-1}\partial_x-x^{-2})}
-                         }
-                         +\sum_{k\in I}k a_k(-x^2\partial_x)^{\max(I)-k} \\
-                       &=(-x^2\partial_x)^{\max(I)}
-                         \overbracket{(x\partial_x-1)}
-                         +\sum_{k\in I}k a_k(-x^2\partial_x)^{\max(I)-k}
-                       & &\in \C[x]<\partial_x>
+Q(t,\partial_t) &= t^{\max(I)+1}(\partial_t-\frac{d}{dt}\phi(t))
+\\&=t^{\max(I)+1}\Big(\underset{\in \C[t][t^{-1}]<\partial_t>}{\underbrace{
+    \partial_t+\sum_{k\in I} k\frac{a_k}{t^{k+1}}}}\Big)
+\\&=t^{\max(I)+1}\partial_t +\sum_{k\in I} k\frac{a_k}{t^{k-\max(I)}} 
+\\&=t^{\max(I)+1}\partial_t +\sum_{k\in I}k a_k t^{\max(I)-k}
+  & &\in \C[t]<\partial_t>
+\\\cF_Q(z,\partial_z) &=Q(\partial_z,-z)
+\\&=-\partial_z^{\max(I)+1}z +\sum_{k\in I}k a_k\partial_z^{\max(I)-k}
+\end{align*}
+und damit ist
+\begin{align*}
+P_{\phi}(x,\partial_x) &=\cF_Q(x^{-1},-x^2\partial_x)
+\\&=\underbracket{-(-x^2\partial_x)^{\max(I)+1}x^{-1}}
+  +\sum_{k\in I}k a_k(-x^2\partial_x)^{\max(I)-k}
+\\&=\overbracket{(-x^2\partial_x)^{\max(I)} \underbracket{x^2\partial_xx^{-1}}}
+   +\sum_{k\in I}k a_k(-x^2\partial_x)^{\max(I)-k}
+\\&=(-x^2\partial_x)^{\max(I)}
+   \underbracket{ \overbracket{x^2(x^{-1}\partial_x-x^{-2})} }
+   +\sum_{k\in I}k a_k(-x^2\partial_x)^{\max(I)-k}
+\\&=(-x^2\partial_x)^{\max(I)} \overbracket{(x\partial_x-1)}
+   +\sum_{k\in I}k a_k(-x^2\partial_x)^{\max(I)-k}
+  & &\in \C[x]<\partial_x>
 \end{align*}
 Im Anhang \ref{chap:zu-rezept} wird das $(x^2\partial_x)^{k}$ genauer
 diskutiert. Dies führt aber hier an dieser Stelle nicht mehr weiter in die
@@ -542,34 +538,26 @@ P'(t,\partial_t)=\rho^*P(t,\partial_t-\frac{\partial \psi}{\partial t})
 \]
 es ist $\rho^*P(t,\partial_t)=t^4\partial_t^2-t^3\partial_t+2a$, und somit 
 \begin{align*}
-\rho^*P(t,\partial_t-\frac{\partial \psi}{\partial t}) 
-  &=\rho^*P(t,\partial_t-\frac{-i\sqrt{2a}}{t^2}) 
+P'(t,\partial_t) &= \rho^*P(t,\partial_t-\frac{\partial \psi}{\partial t}) 
+\\&=\rho^*P(t,\partial_t-\frac{-i\sqrt{2a}}{t^2}) 
 \\&= t^4\underbracket{(\partial_t+\frac{i\sqrt{2a}}{t^2})^2}
     \underbracket{- t^3(\partial_t+\frac{i\sqrt{2a}}{t^2})} + 2a
 \\&= t^4 \overbracket{\underbracket{
       (\partial_t+i\sqrt{2a}t^{-2})(\partial_t+i\sqrt{2a}t^{-2})
     }} \overbracket{ - t^3\partial_t - i\sqrt{2a}t} + 2a
-\\&= t^4 \overbracket{
-      (\partial_t^2 + i\sqrt{2a}t^{-2}\partial_t
-      +\partial_ti\sqrt{2a}t^{-2}
-      +(i\sqrt{2a}t^{-2})^2)
+\\&= t^4 \overbracket{ (\partial_t^2 + i\sqrt{2a}t^{-2}\partial_t
+      +\partial_ti\sqrt{2a}t^{-2} + \underbracket{(i\sqrt{2a}t^{-2})^2)}
     } - t^3\partial_t - i\sqrt{2a}t + 2a
-\\&= t^4\partial_t^2 
-    + i\sqrt{2a}t^{2}\partial_t
-    + i\sqrt{2a}t^4\underbracket{\partial_tt^{-2}} -2a
-    - t^3\partial_t - i\sqrt{2a}t + 2a
-\\&= t^4\partial_t^2 
-    + i\sqrt{2a}t^{2}\partial_t
-    + i\sqrt{2a}t^4\overbracket{(t^{-2}\partial_t-2t^{-3})}
-    - t^3\partial_t - i\sqrt{2a}t
-\\&= t^4\partial_t^2 
-    + i\sqrt{2a}t^{2}\partial_t
-    + i\sqrt{2a}t^2\partial_t
-    - 2i\sqrt{2a}t
-    - t^3\partial_t - i\sqrt{2a}t
-\\&= t^4\partial_t^2 
-    - (t^3-2i\sqrt{2a}t^{2})\partial_t
-    - 3i\sqrt{2a}t
+\\&= t^4\partial_t^2 + i\sqrt{2a}t^{2}\partial_t
+    + i\sqrt{2a}t^4\underbracket{\partial_tt^{-2}} \overbracket{-2at^{-4}}t^4
+    - t^3\partial_t
+    - i\sqrt{2a}t + 2a
+\\&= t^4\partial_t^2 + i\sqrt{2a}t^{2}\partial_t
+    + i\sqrt{2a}t^4\overbracket{(t^{-2}\partial_t-2t^{-3})} - t^3\partial_t
+    - i\sqrt{2a}t
+\\&= t^4\partial_t^2 + i\sqrt{2a}t^{2}\partial_t + i\sqrt{2a}t^2\partial_t
+    - 2i\sqrt{2a}t - t^3\partial_t - i\sqrt{2a}t
+\\&= t^4\partial_t^2 - (t^3-2i\sqrt{2a}t^{2})\partial_t - 3i\sqrt{2a}t
 \end{align*}
 \end{comment}
 
