@@ -256,26 +256,9 @@ und
 \end{align*}
 \end{proof}
 
-\section{Twisten von Meromorphen Zusammenhängen}
-\cite[Chap 5 §2]{coutinho1995primer}
-\begin{comment}
-\begin{lem}
-\cite[Seite 44]{DiplHedwig}
-Sei $\cM_{\hat K}=\hat\cD/\hat\cD\cdot P(x,\partial_x)$ und sei
-$\psi=\frac{\beta}{\lambda}x^{-\lambda}$. So gilt
-\[
-\cM_{\hat K}\otimes_{\hat K}\sE^{\phi}=\cD_{\hat K}/\cD_{\hat K}\cdot
-Q(x,\partial_x)
-\]
-mit $Q(x,\partial_x)=P(x,\partial_x+\frac{\beta}{x^{\lambda+1}})$.
-\end{lem}
-\end{comment}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Defnintion von Notizen und \cite[Cor 5.2.6]{sabbah_cimpa90}}
 \begin{defn}
 Ein \emph{Elementarer Meromorpher Zusammenhang} ist ein Zusammenhang $\cM$, für
-den es $\psi \in \Cfx$, $\alpha\in\C$ und $p\in \N$ gibt, so dass
+den es $\psi \in \Cfxl$, $\alpha\in\C$ und $p\in \N$ gibt, so dass
 \[
 \cM\cong \sE^{\psi}\otimes R_{\alpha,p}\,,
 \]
@@ -283,43 +266,13 @@ mit $R_{\alpha,p}:=\cD/\cD(x\partial_x-\alpha)^p$, ist.
 \end{defn}
 
 \begin{lem}
-\sE^{\psi}\otimes R_{\alpha,p}\cong
-\cD/\cD\cdot(x\partial_x-(\alpha+x\frac{\partial \psi}{\partial x}))^p
+$\sE^{\psi}\otimes R_{\alpha,p}\cong
+\cD/\cD\cdot(x\partial_x-(\alpha+x\frac{\partial \psi}{\partial x}))^p$
 \end{lem}
 \begin{proof}
 \cite[Lem 5.12]{DiplHedwig}
 \end{proof}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Defnintion in \cite{sabbah_cimpa90}}
-\begin{comment}
-in \cite{sabbah_cimpa90} Teil 5.4.4 Seite 34
-\end{comment}
-\begin{defn}
-Sei $R(z)=\sum_{i=0}^k\alpha_iz^i\in z\C[z]$.
-So ist der Meromorphe Zusammenhang $\cF_{\hat K}^R$ als Vektorraum isomorph zu
-$\hat K$ und hat der Basis $e(R)$.
-Die Wirkung von $x\partial_x$ ist definiert durch
-\[
-x\partial_x(\phi\cdot e(R))=\Big[ (x\frac{\partial \phi}{\partial x}) 
-  +\phi x \frac{\partial R(x^{-1})}{\partial_x} \Big]\cdot e(R)
-\]
-\begin{comment}
-hat das was mit fourier zu tun
-\end{comment}
-\begin{comment}
-This means that $e(R)$ plays the role of $\exp R(x^{-1})$.
-\end{comment}
-\end{defn}
-\begin{defn}
-Ein \emph{Elementarer Meromorpher Zusammenhang} (über $\hat K$) ist ein Zusammenhang
-welcher zu 
-$\cF_{\hat K}^R\otimes_{\hat K} \cG_{\hat K}$
-isomorph ist. Wobei hier $\cG_{\hat K}$ ein Elementarer regulärer Meromorpher
-Zusammenhang.
-\end{defn}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Defnintion in \cite{sabbah_Fourier-local}}
 %TODO: auch nicht formal
 \begin{defn}[Elementarer formaler Zusammenhang]
@@ -365,4 +318,18 @@ Rang $1$ $\hat L$-Vektrorraum mit regulärem Zusammenhang.
 \cite[Prop 3.1]{sabbah_Fourier-local}
 \end{proof}
 
+\section{Twisten von Meromorphen Zusammenhängen}
+\cite[Chap 5 §2]{coutinho1995primer}
+\begin{comment}
+\begin{lem}
+\cite[Seite 44]{DiplHedwig}
+Sei $\cM_{\hat K}=\hat\cD/\hat\cD\cdot P(x,\partial_x)$ und sei
+$\psi=\frac{\beta}{\lambda}x^{-\lambda}$. So gilt
+\[
+\cM_{\hat K}\otimes_{\hat K}\sE^{\phi}=\cD_{\hat K}/\cD_{\hat K}\cdot
+Q(x,\partial_x)
+\]
+mit $Q(x,\partial_x)=P(x,\partial_x+\frac{\beta}{x^{\lambda+1}})$.
+\end{lem}
+\end{comment}
 % vim: set ft=tex :

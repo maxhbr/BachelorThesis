@@ -26,8 +26,10 @@ aus
 \\&=\cD_{\hat L}/\cD_{\hat L}\cdot ( \underset{=:Q(t,\partial_t)}{\underbrace{
   t^{\max(I)+1} \cdot (\partial_t-\frac{d}{dt}\phi(t))}})
 \end{align*}
+\begin{comment}
 Dies ändert den Meromorphen Zusammenhang nicht, weil $t^{\max(I)+1}$ eine
 Einheit in $\cD_{\hat L}$ (und auch in $\cD_{L}$) ist.
+\end{comment}
 \item Fouriertransformiere $\sE^{\phi}$ und erhalte
 \begin{align*}
 \,^\cF\!\sE^{\phi}&=\cD_{\hat L}/\cD_{\hat L}\cdot{\cF_Q(z,\partial_z)}
@@ -49,8 +51,9 @@ also $ \partial_x\rightsquigarrow-z^2\partial_z $.
 P_\phi(x,\partial_x):=\cF_Q(x^{-1},-x^2\partial_x) \in \C[t]<\partial_t>
 \]
 \end{enumerate}
-Im folgendem werden wir den zu $P_\phi$ assoziierten Meromorphen Zusammenhang
-$\cM_\phi=\cD_{\hat K}/\cD_{\hat K}\cdot P_{\phi}$ betrachten.
+Im folgendem werden wir den zum Minimalpolynom $P_\phi$ assoziierten
+Meromorphen Zusammenhang $\cM_\phi=\cD_{\hat K}/\cD_{\hat K}\cdot P_{\phi}$
+betrachten.
 
 Wen wir ein spezielles $\phi=\sum_{k\in I}\frac{a_k}{t^{k}}$ betrachten, können
 wir das entstehende $P_\phi$, wie folgt, explizit berechnen
@@ -58,9 +61,10 @@ wir das entstehende $P_\phi$, wie folgt, explizit berechnen
 Q(t,\partial_t) &= t^{\max(I)+1}(\partial_t-\frac{d}{dt}\phi(t))
 \\&=t^{\max(I)+1}\Big(\underset{\in \C[t][t^{-1}]<\partial_t>}{\underbrace{
     \partial_t+\sum_{k\in I} k\frac{a_k}{t^{k+1}}}}\Big)
-\\&=t^{\max(I)+1}\partial_t +\sum_{k\in I} k\frac{a_k}{t^{k-\max(I)}} 
-\\&=t^{\max(I)+1}\partial_t +\sum_{k\in I}k a_k t^{\max(I)-k}
-  & &\in \C[t]<\partial_t>
+\\&=t^{\max(I)+1}\partial_t 
+  + \sum_{k\in I} k\underbracket{\frac{a_k}{t^{k-\max(I)}}}
+\\&=t^{\max(I)+1}\partial_t +\sum_{k\in I}k \overbracket{a_k t^{\max(I)-k}}
+  & \in \C[t]<\partial_t>
 \\\cF_Q(z,\partial_z) &=Q(\partial_z,-z)
 \\&=-\partial_z^{\max(I)+1}z +\sum_{k\in I}k a_k\partial_z^{\max(I)-k}
 \end{align*}
@@ -69,18 +73,18 @@ und damit ist
 P_{\phi}(x,\partial_x) &=\cF_Q(x^{-1},-x^2\partial_x)
 \\&=\underbracket{-(-x^2\partial_x)^{\max(I)+1}x^{-1}}
   +\sum_{k\in I}k a_k(-x^2\partial_x)^{\max(I)-k}
-\\&=\overbracket{(-x^2\partial_x)^{\max(I)} \underbracket{x^2\partial_xx^{-1}}}
+\\&=\overbracket{(-x^2\partial_x)^{\max(I)} x^2\underbracket{\partial_xx^{-1}}}
    +\sum_{k\in I}k a_k(-x^2\partial_x)^{\max(I)-k}
 \\&=(-x^2\partial_x)^{\max(I)}
-   \underbracket{ \overbracket{x^2(x^{-1}\partial_x-x^{-2})} }
+   \underbracket{ x^2 \overbracket{(x^{-1}\partial_x-x^{-2})} }
    +\sum_{k\in I}k a_k(-x^2\partial_x)^{\max(I)-k}
 \\&=(-x^2\partial_x)^{\max(I)} \overbracket{(x\partial_x-1)}
    +\sum_{k\in I}k a_k(-x^2\partial_x)^{\max(I)-k}
-  & &\in \C[x]<\partial_x>
+  & \in \C[x]<\partial_x>
 \end{align*}
 Im Anhang \ref{chap:zu-rezept} wird das $(x^2\partial_x)^{k}$ genauer
 diskutiert. Dies führt aber hier an dieser Stelle nicht mehr weiter in die
-richtige Richtung.
+gewünschte Richtung.
 
 \paragraph{Ab jetzt nur noch für den Spezialfall $\phi=\frac{a}{t^{q}}$.}
 Also sei $\cM_\phi=\cD_{\hat K}/\cD_{\hat K}\cdot P_\phi$ mit
@@ -89,8 +93,13 @@ P_{\phi}(x,\partial_x) =(-x^2\partial_x)^{q} (x\partial_x-1)+qa \,,
 \]
 so dass
 \begin{lem}
-$\cP(\cM_{\phi})=\{\frac{q}{q+1}\}$ gilt.
+Es gilt $\cP(\cM_{\phi})=\{\frac{q}{q+1}\}$.
 \end{lem}
+\begin{comment}
+\begin{lem}
+$N((x^2\partial_x)^q)=N(x^{2q}\partial_x^q)$
+\end{lem}
+\end{comment}
 \begin{proof} \cite[5.b.]{sabbah_Fourier-local}
 Um zu zeigen, dass die Behauptung gilt, formen wir $P_{\phi}$ um und isolieren
 die Monome, die für das Newton-Polygon von bedeutung sind.
@@ -101,10 +110,9 @@ N\Big(P_{\phi}(x,\partial_x)\Big) &= N\Big(\underbracket{(-x^2\partial_x)^{q}}
 Beitrag}}{\underbrace{(-1)^q}}(x^{2q}\partial_x^q 
   + \underset{\text{liefern keinen Beitrag}}{\underbrace{\textbf{T.h.O.}}}}) 
   (x\partial_x - 1) + qa \Big)
-\\&= N\Big(x^{2q}\partial_x^q
-  (x\partial_x - 1) + qa \Big)
-\\&= N\Big(x^{2q}\underbracket{\partial_x^q x}\partial_x
-  - x^{2q}\partial_x^q + qa \Big)
+\\&= N\Big( \underbracket{x^{2q}\partial_x^q (x\partial_x - 1)} + qa \Big)
+\\&= N\Big(\overbracket{x^{2q}\underbracket{\partial_x^q x}\partial_x
+  - x^{2q}\partial_x^q} + qa \Big)
 \\&= N\Big(x^{2q}\overbracket{(x\partial_x^q + q\partial_x^{q-1})}\partial_x
   - x^{2q}\partial_x^q + qa \Big)
 \\&= N\Big(x^{2q + 1}\partial_x^{q + 1} 
@@ -243,14 +251,6 @@ Sei $\beta_0$  eine der Nullstellen.
 Da $\ord_L(\rho^*P_\phi)=0$ und der einzige Slope von $\rho^*P_\phi$ nicht
 gleich $0$ ist, gilt offensichtlich, dass $\alpha_0\neq0$. Also ist $0$ keine
 Nullstelle von $\sigma_L(\rho^*P_\phi)$.
-\begin{comment}
-Setze $R(z):=(\beta_0/(\lambda_0+1))z^{\lambda_0+1}=(\beta_0/(q+1)z^{q+1}$ und
-betrachte
-\begin{align*}
-\rho^+\cM_\phi\otimes\cF_{\hat L}^R
-  &= \cD_{\hat L}/\cD_{\hat L}\cdot(\rho^*P_{\phi})\otimes\cF_{\hat L}^R \,.
-\end{align*}
-\end{comment}
 Setze $\psi(x):=(\beta_0/\lambda_0)t^{-\lambda_0}=(\beta_0/q)t^{-q}$ und
 betrachte
 \begin{align*}
@@ -355,11 +355,12 @@ $\rho^+\cM_{\phi}$.
 Als konkreten Fall betrachten wir nun $\cM_{\phi_1}$ bezüglich
 $\phi_1:=\frac{a}{x}$. Es ist das Minimalpolynom gegeben durch
 \begin{align*}
-P_{\phi_1}(x,\partial_x) &=-x^2\partial_x (x\partial_x-1)+a \\
-  &=-x^2\underbracket{\partial_xx}\partial_x+x^2\partial_x+a \\
-  &=-x^2\overbracket{(x\partial_x+1)}\partial_x+x^2\partial_x+a \\
-  &=-x^3\partial_x^2 - x^2\partial_x+x^2\partial_x+a \\
-  &=-x^3\partial_x^2+a
+P_{\phi_1}(x,\partial_x) &=-x^2\partial_x (x\partial_x-1)+a
+\\&=-x^2\underbracket{\partial_xx}\partial_x+x^2\partial_x+a
+\\&=\underbracket{-x^2\overbracket{(x\partial_x+1)}\partial_x} + x^2\partial_x
+  + a
+\\&=\overbracket{-x^3\partial_x^2 - x^2\partial_x}+x^2\partial_x+a
+\\&=-x^3\partial_x^2+a
 \end{align*}
 Erhalte nun das Newton-Polygon mit den Slopes
 $\cP(\cM_{\phi_1})=\{\frac{1}{2}\}$.
