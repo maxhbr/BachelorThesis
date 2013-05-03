@@ -93,6 +93,7 @@ rezept.tex:TODO: ist T.h.O. hier die richtige formulierung?? besser:
 rezept.tex:TODO: Quelle / Lemma
 rezept.tex:TODO: Namenskollision: $\hat L$ und $L(s_0,s_1)$.
 rezept.tex:TODO: korregiere allgemeinen Part, falls richtig!
+rezept.tex:  %TODO: hier weiter
 rezept.tex_versions/v01_rezept.tex:-\partial_z(f)\cdot z^2= %TODO: wegen klammerung?
 rezept.tex_versions/v01_rezept.tex:%TODO; weiter ausführen, genauer, nebenrechnung
 rezept.tex_versions/v01_rezept.tex:TODO
