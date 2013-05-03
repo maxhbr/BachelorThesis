@@ -198,6 +198,9 @@ Sei $\rho:t\mapsto x:=-(q+1) t^{q+1}$ so ist
     (t\partial_t-(q+1))+(q+1)qa)
 \end{align*}
 \begin{comment}
+muss noch gezeigt werden, dass dies ein Meromorpher Zusammenhang???
+\end{comment}
+\begin{comment}
 Bei \cite{sabbah_Fourier-local}:\\
 Sei $\rho:t\mapsto x:=-\frac{t^{q+1}}{qa}$ so ist
 \begin{align*}
@@ -569,6 +572,7 @@ $\partial_t$-Grad von 1 haben.
 \begin{comment}
 in \cite[Lem 1.14.]{ZulaBarbara} steht die obere schranke
 \end{comment}
+\begin{try}
 \begin{align*}
 P'&\overset{!}{=} Q_1\cdot Q_2
 \\&= (\partial_t+v(t))\cdot(\partial_t+u(t))=(\star)
@@ -584,14 +588,107 @@ mit $u(t)=\sum_n u_nt^n$ und $v(t)=\sum_n v_nt^n \in \hat K$. Also
   + \overbracket{\sum_n(\sum_{k=0}^nv_nu_{k-n})t^n}
 \\&= \partial_t^2 +  (\sum_n (v_n-u_n)t^n )\partial_t
   + \sum_n(u_{n-1}(n-1)+\sum_{k=0}^nv_nu_{k-n})t^n
+\\&\overset{!}{=} \partial_t^2 - (t^{-1} - 2i\sqrt{2a}t^{-2})\partial_t 
+  - 3 i\sqrt{2a}t^{-3}
 \end{align*}
-Also:
+Also müssen
+\begin{align} \label{eq:bedingung1}
+\sum_n (v_n-u_n)t^n\overset{!}{=}-t^{-1}+2i\sqrt{2a}t^{-2}
+\end{align}
+und
+\begin{align} \label{eq:bedingung2}
+\sum_n(u_{n-1}(n-1)+\sum_{k=0}^nv_nu_{k-n})t^n\overset{!}{=}-3i\sqrt{2a}t^{-3}
+\end{align}
+gelten. Mit Gleichung (\ref{eq:bedingung1}) folgt, dass
 \begin{align*}
-\sum_n (v_n-u_n)t^n&=???
-&\mbox{ und } &&
-\sum_n(u_{n-1}(n-1)+\sum_{k=0}^nv_nu_{k-n})t^n&=???
+& \dots
+&,&& v_{-3}&=u_{-3}
+&,&& v_{-2}&=u_{-2}+2i\sqrt{2a}
+&,&& v_{-1}&=u_{-1}-1
+&,&& v_0&=u_0
+&,&& \dots
 \end{align*}
-müssen gelten.
+und zusammen mit Gleichung (\ref{eq:bedingung2}) gilt
+\end{try}
+
+\begin{try}
+Setze $Q_1=\partial_t+v(t)$ und $Q_2=\partial_t+u(t)$ mit
+$v(t)=\sum_{n=-l_1}^\infty v_nt^n$ und $u(t)=\sum_{n=-l_2}^\infty u_nt^n \in
+\hat K$ und $l_1,l_2\in\N$ 
+\begin{comment}
+\begin{itemize}
+\item $l_1+l_2=3$, da der minimale vorkommente $t$-Exponent in $P'$ genau $-3$ ist
+\item $max(l_1,l_2)=2$, da
+\end{itemize}
+\end{comment}
+Also
+\begin{align*}
+P'&\overset{!}{=} Q_1\cdot Q_2
+\\&= (\partial_t+v(t))\cdot(\partial_t+u(t))
+\\&= \partial_t^2+v(t)\partial_t + \partial_t u(t)+v(t)u(t)
+\\&= \partial_t^2 + \sum_{n=-l_1}^\infty v_nt^n\partial_t
+  + \partial_t (\sum_{n=-l_2}^\infty u_nt^n)
+  + \underbracket{(\sum_{n=-l_1}^{\infty} v_{n}t^n)}
+    \underbracket{(\sum_{n=-l_2}^{\infty} u_{n}t^n)}
+\\&= \partial_t^2 + \sum_{n=-l_1}^\infty v_nt^n\partial_t
+  + \underbracket{\partial_t (\sum_{n=-l_2}^\infty u_nt^n)}
+  + \underbracket{
+    \overbracket{t^{-l_1}(\sum_{n=0}^{\infty} v_{n-l_1}t^n)}
+    \overbracket{t^{-l_2}(\sum_{n=0}^{\infty} u_{n-l_2}t^n)}
+  }
+\\&= \partial_t^2 +  \sum_{n=-l_1}^\infty v_nt^n\partial_t
+  + \overbracket{\sum_{n=-l_2}^\infty u_n(t^n\partial_t+nt^{n-1})}
+  + \overbracket{
+    t^{-(l_1+l_2)}\sum_{n=0}^\infty(\sum_{k=0}^nv_{k-l_1}u_{n-k-l_2})t^n
+  }
+\\&= \partial_t^2 
+  +\underbracket{ \sum_{n=-l_1}^\infty v_nt^n\partial_t 
+  + \sum_{n=-l_2}^\infty t^n\partial_t}
+  + \sum_{n=-l_2}^\infty u_nnt^{n-1} + \underbracket{
+  \sum_{n=0}^\infty(\sum_{k=0}^nv_{k-l_1}u_{n-k-l_2})t^{n-(l_1+l_2)}}
+\\&\begin{aligned}
+  &= \partial_t^2 
+  +\underbracket{ \sum_{n=-l_1}^\infty v_nt^n\partial_t 
+  + \sum_{n=-l_2}^\infty u_nt^n\partial_t}
+\\&\qquad+ \underbracket{ \sum_{n=-l_2-1}^\infty u_{n+1}(n+1)t^{n} 
+  + \overbracket{ \sum_{n=-(l_1+l_2)}^\infty(\sum_{k=-(l_1+l_2)}^{n}
+  v_{k+l_2}u_{n-k-l_2})t^{n}
+  }}
+  \end{aligned}
+  %TODO: hier weiter
+\\&= \partial_t^2 
+  + \overbracket{\sum_{n=-max(l_1,l_2)}^\infty (v_n-u_n)t^n \partial_t}
+  + \overbracket{\sum_{n=-(l_1+l_2)}^\infty
+  (u_{n+1}(n+1)+\sum_{k=-(l_1+l_2)}^{n} v_{k+l_2}u_{n-k-l_2})t^n}
+\\&\overset{!}{=} \partial_t^2 - (t^{-1} - 2i\sqrt{2a}t^{-2})\partial_t 
+  - 3 i\sqrt{2a}t^{-3}
+\end{align*}
+Also mit Koeffizientenvergleich erhält man die Bedingungen
+\begin{align} \label{eq:bedingung1}
+\sum_{n=-max(l_1,l_2)}^\infty (v_n-u_n)t^n
+\overset{!}{=}-t^{-1}+2i\sqrt{2a}t^{-2}
+\end{align}
+und
+\begin{align} \label{eq:bedingung2}
+\sum_{n=-(l_1+l_2)}^\infty
+(u_{n+1}(n+1)+\sum_{k=-(l_1+l_2)}^{n} v_{k+l_2}u_{n-k-l_2})t^n
+\overset{!}{=}-3i\sqrt{2a}t^{-3} \,.
+\end{align}
+Mit Gleichung (\ref{eq:bedingung1}) folgt, dass
+\begin{align*}
+& \dots
+&,&& v_{-3}&=u_{-3}
+&,&& v_{-2}&=u_{-2}+2i\sqrt{2a}
+&,&& v_{-1}&=u_{-1}-1
+&,&& v_0&=u_0
+&,&& \dots
+\end{align*}
+und zusammen mit Gleichung (\ref{eq:bedingung2}) gilt
+\end{try}
+
+\begin{comment}
+$\cdots$
+\end{comment}
 
 Nun lässt sich diese Zerlegung mit $\sE^{-\psi(t)}$ zurücktwisten.
 
