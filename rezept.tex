@@ -571,7 +571,7 @@ Minimalpolynom und zerlege dieses in $P'=Q_1\cdot Q_2$.
 
 Hierfür betrachten wir das verschobene Minimalpolynom 
 \begin{align*}
-t^{-4}P'&=\partial_t^2 + (t^{-1} - 1i\sqrt{2a}t^{-2})\partial_t - 3
+t^{-4}P'&=\partial_t^2 - (t^{-1} - 1i\sqrt{2a}t^{-2})\partial_t - 3
 i\sqrt{2a}t^{-3} & \in \cD_{\hat L}
 \end{align*}
 \begin{figure}[H]
@@ -619,7 +619,7 @@ und somit ist
   \begin{aligned}
 Q_1\cdot Q_2&=\bar v(t) \partial_t^2 + \bar v(t)\partial_t u(t) +
   v(t)\partial_t + v(t)u(t)
-\\&\overset{!}{=} \partial_t^2 + (t^{-1} - 2i\sqrt{2a}t^{-2})\partial_t 
+\\&\overset{!}{=} \partial_t^2 - (t^{-1} - 2i\sqrt{2a}t^{-2})\partial_t 
   - 3 i\sqrt{2a}t^{-3}
   \end{aligned}
 \end{equation}
@@ -698,22 +698,88 @@ anwenden wollen: %TODO: quelle? formel?
   &= t^{-3}\Big(\sum_{n=0}^\infty v_{n-1}t^{n} \Big)
   \Big( \sum_{n=0}^\infty u_{n-2} t^{n} \Big)
 \\&= t^{-3}\sum_{n=0}^\infty
-  \Big( \sum_{k=0}^n v_{k-1}t^{k} u_{(n-k)-2} t^{(n-k)} \Big)
-\\&= \sum_{n=0}^\infty \Big( \sum_{k=0}^n v_{k-1}u_{(n-k)-2}t^{k+(n-k)-3} \Big)
-\\&= \sum_{n=0}^\infty \Big( \sum_{k=0}^n v_{k-1} u_{(n-k)-2} \Big) t^{n-3}
-\\&= \sum_{n=-3}^\infty \Big( \sum_{k=0}^{n-3} v_{k+2} u_{(n-k)-2} \Big) t^{n}
+  \Big( \sum_{k=0}^n v_{k-1}t^{k} u_{n-k-2} t^{(n-k)} \Big)
+\\&= \sum_{n=0}^\infty \Big( \sum_{k=0}^n v_{k-1}u_{n-k-2}t^{k+(n-k)-3} \Big)
+\\&= \sum_{n=0}^\infty \Big( \sum_{k=0}^n v_{k-1} u_{n-k-2} \Big) t^{n-3}
+\\&= \sum_{n=-3}^\infty \Big( \sum_{k=0}^{n+3} v_{k-1} u_{n-k+1} \Big) t^{n}
 \end{align*}
 Wenn wir auch diese Rechnung in \ref{eq:schritt300} integrieren, erhalten wir
 \begin{equation} \label{eq:schritt300}
   \begin{aligned}
 Q_1\cdot Q_2&=\partial_t^2 + \sum_{n=-2}^\infty (u_n+v_n)t^n \partial_t 
   + \sum_{n=-3}^\infty (n+1)u_{n+1}t^{n} 
-  + \sum_{n=-3}^\infty \Big( \sum_{k=0}^{n-3} v_{k+2}u_{(n-k)-2} \Big) t^{n}
+  + \sum_{n=-3}^\infty \Big( \sum_{k=0}^{n+3} v_{k-1}u_{n-k+1} \Big) t^{n}
 \\&=\partial_t^2 + \sum_{n=-2}^\infty (u_n+v_n)t^n \partial_t 
   + \sum_{n=-3}^\infty 
-  \Big( (n+1)u_{n+1} + \sum_{k=0}^{n-3} v_{k+2}u_{(n-k)-2} \Big) t^{n}
+  \Big( (n+1)u_{n+1} + \sum_{k=0}^{n+3} v_{k-1}u_{n-k+1} \Big) t^{n}
+\\&\overset{!}{=} \partial_t^2 - (t^{-1} - 2i\sqrt{2a}t^{-2})\partial_t 
+  - 3 i\sqrt{2a}t^{-3}
   \end{aligned}
 \end{equation}
+Nun haben wir ein Ergebnis, das sich Koeffizientenweise mit den gewünschten
+Polynom vergleichen lässt:
+\begin{equation} \label{eq:bedingung1}
+2i\sqrt{2a}t^{-2} - t^{-1}=\sum_{n=-2}^\infty (u_n+v_n)t^n
+\end{equation}
+\begin{equation} \label{eq:bedingung2}
+- 3 i\sqrt{2a}t^{-3}= \sum_{n=-3}^\infty 
+  \Big( (n+1)u_{n+1} + \sum_{k=0}^{n+3} v_{k-1}u_{n-k+1} \Big) t^{n}
+\end{equation}
+Nun können wir mit (\ref{eq:bedingung1}) und (\ref{eq:bedingung2}) jeweils
+nochmal einen Koeffizientenvergleich machen und erhalten zunächst aus
+(\ref{eq:bedingung1}) dass
+\begin{align}
+2i\sqrt{2a} &= u_{-2} + \underset{=0}{\underbrace{v_{-2}}} = u_{-2}
+\label{eq:bedingung1a}
+\\-1 &= u_{-1} + v_{-1}
+\label{eq:bedingung1b}
+\\0 &= u_n + v_n & \forall n \geq 0 
+\label{eq:bedingung1c}
+\end{align}
+Als nächstes wollen wir dieses Ergenis mit (\ref{eq:bedingung2}) kombinieren.
+Betrachte zunächst den Vorfaktor vor $t^{-3}$:
+\begin{align*}
+- 3 i\sqrt{2a} &= (-2)u_{-2} + \sum_{k=0}^{0} v_{k-1}u_{-3-k+1}
+\\&= -2u_{-2} + v_{-1}u_{-2}
+\\&\overset{(\ref{eq:bedingung1a})}{=} -2\cdot2i\sqrt{2a} + v_{-1}2i\sqrt{2a}
+\\\Rightarrow -3&\overset{a\neq0}{=}-4+2v_{-1}
+\\\Rightarrow v_{-1} &= \frac{1}{2} 
+& \overset{(\ref{eq:bedingung1b})}{\Rightarrow} -1&=u_{-1}+\frac{1}{2}
+\\ & & \Rightarrow u_{-1}&=-\frac{3}{2}
+\end{align*}
+Nun zum Koeffizienten vor $t^{-2}$:
+\begin{align*}
+0&= -u_{-1} + \sum_{k=0}^{1} v_{k-1}u_{-k-1}
+\\&= -u_{-1} + v_{-1}u_{-1} + v_{0}u_{-2}
+\\&= \frac{3}{2} - \frac{3}{4} + v_{0}\cdot2i\sqrt{2a}
+\\\Rightarrow 2i\sqrt{2a} v_0 &= -\frac{3}{4}
+\\\Rightarrow v_0 &= -\frac{3}{8i\sqrt{2a}}
+\\&= \frac{3i}{8\sqrt{2a}}
+\\&\overset{(\ref{eq:bedingung1c})}{=}u_0
+\end{align*}
+
+Nun zum allgemeinem Koeffizienten vor $t^{n}$:
+\begin{align*}
+0&= (n+1)u_{n+1} + \sum_{k=0}^{n+3} v_{k-1}u_{n-k+1}
+\\&= (n+1)u_{n+1} + \sum_{k=0}^{n+2} v_{k-1}u_{n-k+1} + v_{n+3-1}u_{n-(n+3)+1}
+\\&= (n+1)u_{n+1} + \sum_{k=0}^{n+2} v_{k-1}u_{n-k+1} + v_{n+2}u_{-2}
+\\\Rightarrow v_{n+2}u_{-2}&=-(n+1)u_{n+1} - \sum_{k=0}^{n+2} v_{k-1}u_{n-k+1}
+\\\Rightarrow v_{n+2} &= 
+  -(n+1)\frac{u_{n+1}}{u_{-2}}-\sum_{k=0}^{n+2} \frac{v_{k-1}u_{n-k+1}}{u_{-2}}
+\\&= -(n+1)\frac{u_{n+1}}{2i\sqrt{2a}} 
+  - \sum_{k=0}^{n+2} \frac{v_{k-1}u_{n-k+1}}{2i\sqrt{2a}}
+\\&= i\Big((n+1)\frac{u_{n+1}}{2\sqrt{2a}} 
+  + \sum_{k=0}^{n+2} \frac{v_{k-1}u_{n-k+1}}{2\sqrt{2a}}\Big)
+\\&\overset{(\ref{eq:bedingung1c})}{=}u_{n+2}
+\end{align*}
+also nach passendem Indexshift:
+\begin{equation}
+v_n = u_n = 
+i\Big((n-1)\frac{u_{n-1}}{2\sqrt{2a}} 
+  + \sum_{k=0}^{n-1} \frac{v_{k-1}u_{n-k-1}}{2\sqrt{2a}}\Big)
+\end{equation}
+Zusammen mit $u_{-2}=2i\sqrt{2a}$, $u_{-1}=-\frac{3}{2}$ und
+$v_{-1}=\frac{1}{2}$ sind die Koeffizienten vollständig bestimmt.
 
 \begin{comment}
 $\cdots$
