@@ -612,10 +612,12 @@ P'&\overset{!}{=} Q_1\cdot Q_2
   v_{k+l_2}u_{n-k-l_2})t^{n}
   }}
   \end{aligned}
-\\&= \partial_t^2 
+\\&\begin{aligned}
+  &= \partial_t^2 
   + \overbracket{\sum_{n=-\max(l_1,l_2)}^\infty (v_n-u_n)t^n \partial_t}
-  + \overbracket{\sum_{n=-\max((l_1+l_2),l_2+1)}^\infty
+\\&\qquad + \overbracket{\sum_{n=-\max((l_1+l_2),l_2+1)}^\infty
   (u_{n+1}(n+1)+\sum_{k=-(l_1+l_2)}^{n} v_{k+l_2}u_{n-k-l_2})t^n}
+  \end{aligned}
 \\&\overset{!}{=} \partial_t^2 - (t^{-1} - 2i\sqrt{2a}t^{-2})\partial_t 
   - 3 i\sqrt{2a}t^{-3}
 \end{align*}
