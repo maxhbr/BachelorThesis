@@ -600,27 +600,28 @@ P'&\overset{!}{=} Q_1\cdot Q_2
   }
 \\&= \partial_t^2 + \sum_{n=-l_1}^\infty v_nt^n\partial_t
   + \sum_{n=-l_2}^\infty u_nt^n\partial_t
-  + \sum_{n=-l_2}^\infty u_nnt^{n-1} + \underbracket{
+  + \underbracket{\sum_{n=-l_2}^\infty u_nnt^{n-1}} + \underbracket{
   \sum_{n=0}^\infty(\sum_{k=0}^nv_{k-l_1}u_{n-k-l_2})t^{n-(l_1+l_2)}}
 \\&\begin{aligned}
   &= \partial_t^2 
   +\underbracket{ \sum_{n=-l_1}^\infty v_nt^n\partial_t 
   + \sum_{n=-l_2}^\infty u_nt^n\partial_t}
-\\&\qquad+ \underbracket{ \sum_{n=-l_2-1}^\infty u_{n+1}(n+1)t^{n} 
+\\&\qquad+ \underbracket{ \overbracket{\sum_{n=-l_2-1}^\infty
+  u_{n+1}(n+1)t^{n}}
   + \overbracket{ \sum_{n=-(l_1+l_2)}^\infty(\sum_{k=-(l_1+l_2)}^{n}
   v_{k+l_2}u_{n-k-l_2})t^{n}
   }}
   \end{aligned}
 \\&= \partial_t^2 
-  + \overbracket{\sum_{n=-max(l_1,l_2)}^\infty (v_n-u_n)t^n \partial_t}
-  + \overbracket{\sum_{n=-(l_1+l_2)}^\infty
+  + \overbracket{\sum_{n=-\max(l_1,l_2)}^\infty (v_n-u_n)t^n \partial_t}
+  + \overbracket{\sum_{n=-\max((l_1+l_2),l_2+1)}^\infty
   (u_{n+1}(n+1)+\sum_{k=-(l_1+l_2)}^{n} v_{k+l_2}u_{n-k-l_2})t^n}
 \\&\overset{!}{=} \partial_t^2 - (t^{-1} - 2i\sqrt{2a}t^{-2})\partial_t 
   - 3 i\sqrt{2a}t^{-3}
 \end{align*}
 Also mit Koeffizientenvergleich erhält man die Bedingungen
 \begin{align} \label{eq:bedingung1}
-\sum_{n=-max(l_1,l_2)}^\infty (v_n-u_n)t^n
+\sum_{n=-\max(l_1,l_2)}^\infty (v_n-u_n)t^n
 \overset{!}{=}-t^{-1}+2i\sqrt{2a}t^{-2}
 \end{align}
 und
