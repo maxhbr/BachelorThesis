@@ -29,6 +29,7 @@
 \usepackage[scale=0.75]{geometry}
 \setlength{\unitlength}{1mm}
 %\emergencystretch 2em
+\usepackage{multicol}
 
 \usepackage{lscape} % alt: pdflscape
 \usepackage{amsmath,amsthm,amssymb}
@@ -122,9 +123,10 @@
 \theoremstyle{remark}
 \newtheorem{rem}[thm]{Bemerkung}
 \newtheorem{bem}[thm]{Bemerkung}
+\newtheorem{beo}[thm]{Beobachtung}
 \newtheorem{note}[thm]{Notiz}
 
-\usepackage{thmbox}
+%\usepackage{thmbox}
 \newtheorem{try}{Versuch}
 \newtheorem{case}{Fall}
 
@@ -303,6 +305,7 @@
 
 %\renewcommand{\overbracket}[1]{#1}
 %\renewcommand{\underbracket}[1]{#1}
+\renewcommand{\fbox}[1]{#1}
 
 \makeatother
 
