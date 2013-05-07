@@ -96,7 +96,6 @@
   \setlength{\nomitemsep}{-\parsep}
   \setlength{\parindent}{0pt}
   \makenomenclature
-
   %% BASH: makeindex main.nlo -s nomencl.ist -o main.nls
   %% BASH: makeindex main.nlo -s main.sty -o main.nls
 \fi
@@ -132,6 +131,7 @@
 
 \numberwithin{equation}{chapter}
 \numberwithin{figure}{chapter}
+%\numberwithin{figure}{thm}
 
 \setcounter{chapter}{-1}
 
@@ -359,6 +359,7 @@
 
 %\myinput{anhang-plot-newton-polygon.tex}
 
+\listoffigures
 \nocite{*}
 %\bibliographystyle{dinat}
 %\bibliographystyle{plain}

@@ -106,9 +106,10 @@ die Monome, die für das Newton-Polygon von bedeutung sind.
 \begin{align*}
 N\Big(P_{\phi}(x,\partial_x)\Big) &= N\Big(\underbracket{(-x^2\partial_x)^{q}}
   (x\partial_x-1)+qa\Big)
+%TODO: QUELLE!
 \\&= N\Big(\overbracket{\underset{\text{liefert keinen
 Beitrag}}{\underbrace{(-1)^q}}(x^{2q}\partial_x^q 
-  + \underset{\text{liefern keinen Beitrag}}{\underbrace{\textbf{T.h.O.}}}}) 
+  + \underset{\text{liefern keinen Beitrag}}{\underbrace{\textbf{T.h.O.}}})} 
   (x\partial_x - 1) + qa \Big)
 \\&= N\Big( \underbracket{x^{2q}\partial_x^q (x\partial_x - 1)} + qa \Big)
 \\&= N\Big(\overbracket{x^{2q}\underbracket{\partial_x^q x}\partial_x
@@ -121,9 +122,9 @@ Beitrag}}{\underbrace{(-1)^q}}(x^{2q}\partial_x^q
 \\&= N\Big(x^{2q + 1}\partial_x^{q + 1} + qa \Big)
 \end{align*}
 \begin{comment}
-ist vlt besser \emph{Therme niedriger Ordnung} zu verwenden??
+ist vlt besser \emph{Therme niedriger Ordnung} zu verwenden??\\
 \end{comment}
-Wobei hier das \textbf{T.h.O} eine Abkürzung für \emph{Therme höherer Ordnung}
+Wobei hier das \textbf{T.h.O.} eine Abkürzung für \emph{Therme höherer Ordnung}
 ist. Hier ist ein Term $\epsilon x^{p}\partial_x^{q}$, mit $\epsilon\in \C, p,q
 \in \Z$, von höherer Ordnung als
 $\tilde\epsilon x^{\tilde p}\partial_x^{\tilde q}$, mit $\tilde\epsilon\in \C,
@@ -137,17 +138,17 @@ Offensichtlich ist damit $ N(\epsilon x^{p}\partial_x^{q}+\tilde\epsilon
 x^{\tilde p}\partial_x^{\tilde q}) =N(\epsilon x^{p}\partial_x^{q}) $, also
 können Therme höherer Ordnung vernachlässigt werden, wenn das
 Newton-Polygon gesucht ist.
-\begin{figure}[H]
-\caption{Newton Polygon zu $P_{\phi}$}
+\begin{figure}[H] % htbp
 \begin{center}
 \fbox{
   \begin{tikzpicture}[scale=.7,descr/.style={fill=white,inner sep=2.5pt}]
-  \def\myPoints{0/0,6/5}
+  \def\myPoints{}
   \def\myPath{ -- node[descr]{$\frac{q}{q+1}$} (6,5)}
   \myPlotFunction{\myPoints}{\myPath}{6}{0}{5}{$(q+1,q)$}
   \end{tikzpicture}
 }
 \end{center}
+\caption{Newton-Polygon zu $P_{\phi}$}
 \end{figure}
 \begin{comment}
 TODO: ist T.h.O. hier die richtige formulierung?? besser:
@@ -343,20 +344,26 @@ K}\cdot(\rho^*P_{\phi}(x,\partial_x))$ gilt, so ist
 \end{align*}
 \end{lem}
 \end{comment}
-Zerlege nun $\cN=\bigoplus_i\cN_i$ wobei $\cN_i$ Meromorphe Zusammenhänge mit
-genau einem Slope.
+Zerlege nun wie in  Satz \ref{thm:Split-after-slopes} den Meromorphen
+Zusammenhang $\cN$ in $\cN=\bigoplus_i\cN_i$ wobei $\cN_i$ Meromorphe
+Zusammenhänge mit genau einem Slope.
+
 \begin{comment}
-TODO: Quelle / Lemma
-\end{comment}
 Wende auf die $\cN_i$ jeweils die Induktion an und erhalte zu jedem (nach
 eventuellem pull-back) eine Zerlegung in reguläre Meromorphe Zusammenhänge.
 Nach dem diese mittels $\sE^{-\psi}_{\hat L}$ zurückgetwistet wurden, sind
 diese immer noch regulär, aber die direkte Summe davon ist isomorph zu
 $\rho^+\cM_{\phi}$.
+%TODO: erst zurücktwisten und dann Induktion!!!!!!!!!!!!!!!!!
+\end{comment}
+Twiste die $\cN_i$ jeweils mit $\sE^{-\psi}_{\hat L}$ und somit ist dann
+\[
+\rho^+\cM_{\phi}=\bigoplus_i\cN_i\otimes\sE^{-\psi}_{\hat L}
+\]
 
 \section{Spezialfall $\phi_1:=\frac{a}{x}$}
 Als konkreten Fall betrachten wir nun $\cM_{\phi_1}$ bezüglich
-$\phi_1:=\frac{a}{x}$. Es ist das Minimalpolynom gegeben durch
+$\phi_1:=\frac{a}{x}$. Es ist das zugehörigen Minimalpolynom gegeben durch
 \begin{align*}
 P_{\phi_1}(x,\partial_x) &=-x^2\partial_x (x\partial_x-1)+a
 \\&=-x^2\underbracket{\partial_xx}\partial_x+x^2\partial_x+a
@@ -367,8 +374,7 @@ P_{\phi_1}(x,\partial_x) &=-x^2\partial_x (x\partial_x-1)+a
 \end{align*}
 Erhalte nun das Newton-Polygon mit den Slopes
 $\cP(\cM_{\phi_1})=\{\frac{1}{2}\}$.
-\begin{figure}[H]
-\caption{Newton Polygon zu $P_{\phi_1}$}
+\begin{figure}[H] % htbp
 \begin{center}
 \fbox{
   \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
@@ -378,6 +384,7 @@ $\cP(\cM_{\phi_1})=\{\frac{1}{2}\}$.
   \end{tikzpicture}
 }
 \end{center}
+\caption{Newton Polygon zu $P_{\phi_1}$}
 \end{figure}
 Berechne nun zu $\rho:t\mapsto x:=-2t^2$ ein Minimalpolynom $\rho^*P_{\phi_1}$
 zu $\rho^+\cM_{\phi_1}$:
@@ -410,7 +417,6 @@ und erhalte einen Meromorphen Zusammenhang $\rho^+\cM_{\phi_1}=\cD_{\hat
 K}/\cD_{\hat K}\cdot\rho^*P_{\phi_1}$ mit genau dem Slope
 $1=\frac{1}{1}=:\frac{\lambda_0}{\lambda_1}$.
 \begin{figure}[H]
-\caption{Newton Polygon zu $\rho^*P_{\phi_1}$}
 \begin{center}
 \fbox{
   \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
@@ -420,6 +426,7 @@ $1=\frac{1}{1}=:\frac{\lambda_0}{\lambda_1}$.
   \end{tikzpicture}
 }
 \end{center}
+\caption{Newton Polygon zu $\rho^*P_{\phi_1}$}
 \end{figure}
 
 \begin{comment}
@@ -503,37 +510,35 @@ Es ist
 \end{align*}
 also
 \begin{align*}
-0 &= \Big( \partial_t^2 - \big(t^{-1} + 2\psi'(t)\big)\partial_t
+0 &= \Big( \underset{=:P'}{\underbrace{
+    \partial_t^2 - \big(t^{-1} + 2\psi'(t)\big)\partial_t
     + \psi'(t) t^{-1} + 2at^{-4} -\psi''(t)
-    + \psi'(t)^2\Big) e\otimes 1
-\\&\overbox{=}{Verschieben des Newton-Polygons} \Big(\underset{=:P'}{\underbrace{
-    t^4\partial_t^2 - \big(t^{3} + 2\psi'(t)t^4\big)\partial_t
-    + \psi'(t)t^{3} + 2a -\psi''(t)t^4
-    + \psi'(t)^2t^4}}\Big) e\otimes 1
+    + \psi'(t)^2 }} \Big) e\otimes 1
 \end{align*}
 und somit mit $\psi(t)=i\sqrt{2a}t^{-1}$ ist $\psi'(t)=-i\sqrt{2a}t^{-2}$ und
 $\psi''(t)=2i\sqrt{2a}t^{-3}$. Also durch Einsetzen ergibt sich
 \begin{align*}
-P' &= t^4\partial_t^2 - (t^{3} + 2\psi'(t)t^4)\partial_t
-    + \psi'(t)t^3 + 2a -\psi''(t)t^4
-    + \psi'(t)^2t^4
-\\&= t^4\partial_t^2 - (t^{3} - 2i\sqrt{2a}t^{2})\partial_t - i\sqrt{2a}t
-    + 2a - 2i\sqrt{2a}t + \underbracket{(-i\sqrt{2a}t^{-2})^2}t^4
-\\&= t^4\partial_t^2 - (t^{3} - 2i\sqrt{2a}t^{2})\partial_t - 3i\sqrt{2a}t
-  + \underset{=0}{\underbrace{ 2a \overbracket{- 2at^{-4}}t^4 }}
-\\&= t^4\partial_t^2 - (t^{3} - 2i\sqrt{2a}t^{2})\partial_t - 3 i\sqrt{2a}t
+P' &= \partial_t^2 - (t^{-1} + 2\psi'(t))\partial_t
+    + \psi'(t)t^{-1} + 2a -\psi''(t)
+    + \psi'(t)^2
+\\&= \partial_t^2 - (t^{-1} - 2i\sqrt{2a}t^{-2})\partial_t - i\sqrt{2a}t^{-3}
+    + 2a^{-4} - 2i\sqrt{2a}t^{-3} + \underbracket{(-i\sqrt{2a}t^{-2})^2}
+\\&= \partial_t^2 - (t^{-1} - 2i\sqrt{2a}t^{-2})\partial_t - 3i\sqrt{2a}t^{-3}
+  + \underset{=0}{\underbrace{ 2at^{-4} \overbracket{- 2at^{-4}}}}
+\\&= \partial_t^2 - (t^{-1} - 2i\sqrt{2a}t^{-2})\partial_t - 3 i\sqrt{2a}t^{-3}
 \end{align*}
+mit, wie gewünscht, mehr als einem Slope.
 \begin{figure}[H]
-\caption{Newton Polygon zu $\cN$}
 \begin{center}
 \fbox{
   \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
-  \def\myPoints{0/1,1/2,1/1,2/2}
-  \def\myPath{ -- (1,1) -- node[descr]{$1$} (2,2)}
-  \myPlotFunction{\myPoints}{\myPath}{2}{1}{2}{$N(P')$}
+  \def\myPoints{0/-3,1/-2,1/-3,2/-2}
+  \def\myPath{ -- (1,-3) -- node[descr]{$1$} (2,-2)}
+  \myPlotFunction{\myPoints}{\myPath}{2}{-3}{-2}{$N(P')$}
   \end{tikzpicture}
 }
 \end{center}
+\caption{Newton Polygon zu $\cN$}
 \end{figure}
 \begin{comment}
 Alternative berechnung: mit Formel aus \cite[Seite 44]{DiplHedwig}
@@ -567,37 +572,21 @@ P'(t,\partial_t) &= \rho^*P(t,\partial_t-\frac{\partial \psi}{\partial t})
 
 Unser nächstes Ziel ist es, $\cN=\cD_{\hat K}/\cD_{\hat K}\cdot P'$ in zwei
 Meromorphe Zusammenhänge mit nur einem Slope zerlegen.  Betrachte hierzu das
-Minimalpolynom und zerlege dieses in $P'=Q_1\cdot Q_2$.
+Minimalpolynom und zerlege dieses in ein Produkt
+$P'(t,\partial_t)=Q_1(t,\partial_t)\cdot Q_2(t,\partial_t)$.
 
-Hierfür betrachten wir das verschobene Minimalpolynom 
-\begin{align*}
-t^{-4}P'&=\partial_t^2 - (t^{-1} - 1i\sqrt{2a}t^{-2})\partial_t - 3
-i\sqrt{2a}t^{-3} & \in \cD_{\hat L}
-\end{align*}
-\begin{figure}[H]
-\begin{center}
-\fbox{
-  \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
-  \def\myPoints{0/-3,1/-2,1/-3,2/-2}
-  \def\myPath{ -- (1,-3) -- node[descr]{$1$} (2,-2)}
-  \myPlotFunction{\myPoints}{\myPath}{2}{-3}{-2}{}
-  \end{tikzpicture}
-}
-\end{center}
-\end{figure}
-und wir suchen $Q_1$ und $Q_2\in \cD_{\hat L}$ so, dass $t^{-4}P'=Q_1\cdot
-Q_2$ und dass $\cP(Q_1)=\{0\}$ und $\cP(Q_2)=\{1\}$.
-Da der $\partial_t$-Grad von $t^{-4}P'$ genau $2$ ist, müssen die $Q_i$
+Da der $\partial_t$-Grad von $P'$ genau $2$ ist, müssen die $Q_i$
 jeweils den Grad $1$ haben, um eine nichttriviale Zerlegung zu bekommen.
 \begin{beo} \label{beo:paarweise-verschieben}
 %TODO: move to theorie-teil??
 Ist $Q_1$ und $Q_2$ so ein solches Paar, dann ist für $\sigma\in \hat K$ das
-Paar $Q_1':=Q_1\cdot \sigma^{-1}$ und $Q_2':=\sigma\cdot Q_2$ ebenfalls eine
-Zerlegung.
+Paar $\bar Q_1:=Q_1\cdot \sigma^{-1}$ und $\bar Q_2:=\sigma\cdot Q_2$ ebenfalls
+eine Zerlegung.
 \end{beo}
 \begin{proof}
+Es ist klar, dass die Beobachtung korrekt ist, denn
 \[
-t^{-4}P'=Q_1\cdot Q_2=
+P'=Q_1\cdot Q_2=
 \underset{\in\cD_{\hat L}}{\underbrace{
   \Q_1\cdot\sigma
 }}
@@ -605,16 +594,18 @@ t^{-4}P'=Q_1\cdot Q_2=
 \underset{\in\cD_{\hat L}}{\underbrace{
   \sigma^{-1}\cdot Q_2
 }}
+=\bar Q_1 \cdot \bar Q_2 \,.
 \]
 \end{proof}
 Mit der Beobachtung \ref{beo:paarweise-verschieben} ist klar, dass wir
 den Faktor vor den $\partial_t$ in $Q_2$ frei wählen können. Setze diesen
-also setze allgemein auf $1$ und erhalte
+also allgemein auf $1$ und erhalte
 \begin{align*}
 Q_1&:=\bar v(t) \partial_t + v(t) & Q_2&:=\partial_t + u(t)
 & \mbox{mit } \bar v(t), v(t), u(t)\in \Cft
 \end{align*}
-und somit ist 
+%TODO: Namenskollision: u und v wie in Achsbeschriftung
+und somit ist ist das Produkt gegeben durch
 \begin{equation} \label{eq:schritt100}
   \begin{aligned}
 Q_1\cdot Q_2&=\bar v(t) \partial_t^2 + \bar v(t)\partial_t u(t) +
@@ -623,41 +614,41 @@ Q_1\cdot Q_2&=\bar v(t) \partial_t^2 + \bar v(t)\partial_t u(t) +
   - 3 i\sqrt{2a}t^{-3}
   \end{aligned}
 \end{equation}
-Somit ist ebenfalls $\bar v(t)=1$. 
+Damit ist ebenfalls $\bar v(t)=1$. 
 
-Durch das Wissen über die Slopes der $Q_i$
-erhalten wir noch Informationen über $v(t):=\sum_n v_nt^n$ bzw. $u(t):=\sum_i
-u_nt^n$. Beide Polynome enthalten $\partial_t$ als einziges Monom vom
+Durch das Wissen über die Slopes der $Q_i$ erhalten wir noch Informationen über
+die Koeffizienten $v(t):=\sum_n v_nt^n$ bzw. $u(t):=\sum_i u_nt^n$. Die beiden
+Polynome $Q_1$ und $Q_2$ enthalten $\partial_t$ als einziges Monom vom
 $\partial_t$-Grad $1$, deshalb ist $(1,-1)$ in beiden zugehörigen
 Newton-Polygonen enthalten.
 
 Da $Q_1$ nur den Slope $0$ hat, muss das Newton-Polygon wie in Abbildung
-\ref{plot:Q_1} aussenen und somit wissen wir, dass $v_n=0$ für alle $n<-1$.
+\ref{abb:Q_1} aussenen und somit wissen wir, dass $v_n=0$ für alle $n<-1$.
 Da $Q_2$ nur den Slope $1$ hat, ist das Newton-Polygon gegeben durch Abbildung
-\ref{plot:Q_2}, also ist $u_n=0$ für alle $n<-2$ und $u_{-2}\neq0$.
+\ref{abb:Q_2}, also ist $u_n=0$ für alle $n<-2$ und $u_{-2}\neq0$.
 \begin{figure}[htbp]
 \fbox{
   \begin{minipage}[hbt]{0,49\textwidth}
   \begin{center}
     \begin{tikzpicture}[scale=1,descr/.style={fill=white,inner sep=2.5pt}]
-    \def\myPoints{1/-1}
-    \def\myPath{ -- (1,-1)}
+    \def\myPoints{}
+    \def\myPath{ -- node[descr]{$0$} (1,-1)}
     \myPlotFunction{\myPoints}{\myPath}{1}{-1}{-1}{}
     \end{tikzpicture}
   \end{center}
-      \caption{Newton-Polygon zu $Q_1$}
-      \label{plot:Q_1}
+  \caption{Newton-Polygon zu $Q_1$}
+  \label{abb:Q_1}
   \end{minipage}
   \begin{minipage}[hbt]{0,49\textwidth}
   \begin{center}
     \begin{tikzpicture}[scale=1,descr/.style={fill=white,inner sep=2.5pt}]
-    \def\myPoints{0/-2,1/-1}
-    \def\myPath{ -- (0,-2) -- node[descr]{$1$} (1,-1)}
+    \def\myPoints{}
+    \def\myPath{ -- node[descr]{$1$} (1,-1)}
     \myPlotFunction{\myPoints}{\myPath}{1}{-2}{-1}{}
     \end{tikzpicture}
   \end{center}
-      \caption{Newton-Polygon zu $Q_2$}
-      \label{plot:Q_2}
+  \caption{Newton-Polygon zu $Q_2$}
+  \label{abb:Q_2}
   \end{minipage}
 }
 \end{figure}
@@ -682,12 +673,12 @@ Wenn wir dieses Ergenis nun in (\ref{eq:schritt200}) einsetzen ergibt sich
 Q_1\cdot Q_2&=\partial_t^2 + \sum_{n=-2}^\infty u_nt^n\partial_t 
   + \sum_{n=-2}^\infty nu_nt^{n-1} + \sum_{n=-1}^\infty v_nt^n \partial_t 
   + \Big(\sum_{n=-1}^\infty v_nt^n \Big)\Big( \sum_{n=-2}^\infty u_n t^n \Big)
-\\&=\partial_t^2 + (\sum_{n=-2}^\infty u_nt^n
-  + \sum_{n=-1}^\infty v_nt^n) \partial_t 
-  + \sum_{n=-2}^\infty nu_nt^{n-1} 
+\\&=\partial_t^2 + \underbracket{(\sum_{n=-2}^\infty u_nt^n
+  + \sum_{n=-1}^\infty v_nt^n)} \partial_t 
+  + \underbracket{\sum_{n=-2}^\infty nu_nt^{n-1}}
   + \Big(\sum_{n=-1}^\infty v_nt^n \Big)\Big( \sum_{n=-2}^\infty u_n t^n \Big)
-\\&=\partial_t^2 + \sum_{n=-2}^\infty (u_n+v_n)t^n \partial_t 
-  + \sum_{n=-3}^\infty (n+1)u_{n+1}t^{n} 
+\\&=\partial_t^2 + \overbracket{\sum_{n=-2}^\infty (u_n+v_n)t^n} \partial_t 
+  + \overbracket{\sum_{n=-3}^\infty (n+1)u_{n+1}t^{n}}
   + \Big(\sum_{n=-1}^\infty v_nt^n \Big)\Big( \sum_{n=-2}^\infty u_n t^n \Big)
   \end{aligned}
 \end{equation}
@@ -703,7 +694,7 @@ anwenden wollen: %TODO: quelle? formel?
 \\&= \sum_{n=0}^\infty \Big( \sum_{k=0}^n v_{k-1} u_{n-k-2} \Big) t^{n-3}
 \\&= \sum_{n=-3}^\infty \Big( \sum_{k=0}^{n+3} v_{k-1} u_{n-k+1} \Big) t^{n}
 \end{align*}
-Wenn wir auch diese Rechnung in \ref{eq:schritt300} integrieren, erhalten wir
+Wenn wir auch diese Rechnung in (\ref{eq:schritt300}) integrieren, erhalten wir
 \begin{equation} \label{eq:schritt300}
   \begin{aligned}
 Q_1\cdot Q_2&=\partial_t^2 + \sum_{n=-2}^\infty (u_n+v_n)t^n \partial_t 
@@ -726,8 +717,8 @@ Polynom vergleichen lässt:
   \Big( (n+1)u_{n+1} + \sum_{k=0}^{n+3} v_{k-1}u_{n-k+1} \Big) t^{n}
 \end{equation}
 Nun können wir mit (\ref{eq:bedingung1}) und (\ref{eq:bedingung2}) jeweils
-nochmal einen Koeffizientenvergleich machen und erhalten zunächst aus
-(\ref{eq:bedingung1}) dass
+nochmals einen Koeffizientenvergleich machen und erhalten zunächst aus
+(\ref{eq:bedingung1}), dass
 \begin{align}
 2i\sqrt{2a} &= u_{-2} + \underset{=0}{\underbrace{v_{-2}}} = u_{-2}
 \label{eq:bedingung1a}
@@ -747,6 +738,7 @@ Betrachte zunächst den Vorfaktor vor $t^{-3}$:
 & \overset{(\ref{eq:bedingung1b})}{\Rightarrow} -1&=u_{-1}+\frac{1}{2}
 \\ & & \Rightarrow u_{-1}&=-\frac{3}{2}
 \end{align*}
+\begin{comment}
 Nun zum Koeffizienten vor $t^{-2}$:
 \begin{align*}
 0&= -u_{-1} + \sum_{k=0}^{1} v_{k-1}u_{-k-1}
@@ -755,29 +747,31 @@ Nun zum Koeffizienten vor $t^{-2}$:
 \\\Rightarrow 2i\sqrt{2a} v_0 &= -\frac{3}{4}
 \\\Rightarrow v_0 &= -\frac{3}{8i\sqrt{2a}}
 \\&= \frac{3i}{8\sqrt{2a}}
-\\&\overset{(\ref{eq:bedingung1c})}{=}u_0
+\\&\overset{(\ref{eq:bedingung1c})}{=}-u_0
 \end{align*}
-
+\end{comment}
 Nun zum allgemeinem Koeffizienten vor $t^{n}$:
 \begin{align*}
 0&= (n+1)u_{n+1} + \sum_{k=0}^{n+3} v_{k-1}u_{n-k+1}
-\\&= (n+1)u_{n+1} + \sum_{k=0}^{n+2} v_{k-1}u_{n-k+1} + v_{n+3-1}u_{n-(n+3)+1}
-\\&= (n+1)u_{n+1} + \sum_{k=0}^{n+2} v_{k-1}u_{n-k+1} + v_{n+2}u_{-2}
+\\&= (n+1)u_{n+1} + (\sum_{k=0}^{n+2} v_{k-1}u_{n-k+1}) 
+  + v_{n+3-1}u_{n-(n+3)+1}
+\\&= (n+1)u_{n+1} + (\sum_{k=0}^{n+2} v_{k-1}u_{n-k+1}) + v_{n+2}u_{-2}
 \\\Rightarrow v_{n+2}u_{-2}&=-(n+1)u_{n+1} - \sum_{k=0}^{n+2} v_{k-1}u_{n-k+1}
 \\\Rightarrow v_{n+2} &= 
   -(n+1)\frac{u_{n+1}}{u_{-2}}-\sum_{k=0}^{n+2} \frac{v_{k-1}u_{n-k+1}}{u_{-2}}
-\\&= -(n+1)\frac{u_{n+1}}{2i\sqrt{2a}} 
+\\&\overset{(\ref{eq:bedingung1a})}{=} -(n+1)\frac{u_{n+1}}{2i\sqrt{2a}} 
   - \sum_{k=0}^{n+2} \frac{v_{k-1}u_{n-k+1}}{2i\sqrt{2a}}
 \\&= i\Big((n+1)\frac{u_{n+1}}{2\sqrt{2a}} 
   + \sum_{k=0}^{n+2} \frac{v_{k-1}u_{n-k+1}}{2\sqrt{2a}}\Big)
-\\&\overset{(\ref{eq:bedingung1c})}{=}u_{n+2}
+\\&\overset{(\ref{eq:bedingung1c})}{=}-u_{n+2}
 \end{align*}
 also nach passendem Indexshift:
-\begin{equation}
-v_n = u_n = 
+\begin{align}
+v_n &= - u_n = 
 i\Big((n-1)\frac{u_{n-1}}{2\sqrt{2a}} 
-  + \sum_{k=0}^{n-1} \frac{v_{k-1}u_{n-k-1}}{2\sqrt{2a}}\Big)
-\end{equation}
+  + \sum_{k=0}^{n} \frac{v_{k-1}u_{n-k-1}}{2\sqrt{2a}}\Big)
+  & \forall n \geq 0
+\end{align}
 Zusammen mit $u_{-2}=2i\sqrt{2a}$, $u_{-1}=-\frac{3}{2}$ und
 $v_{-1}=\frac{1}{2}$ sind die Koeffizienten vollständig bestimmt.
 
@@ -785,7 +779,11 @@ $v_{-1}=\frac{1}{2}$ sind die Koeffizienten vollständig bestimmt.
 $\cdots$
 \end{comment}
 
-Nun lässt sich diese Zerlegung mit $\sE^{-\psi(t)}$ zurücktwisten.
+Nun lässt sich diese Zerlegung mit $\sE^{-\psi(t)}$ zurücktwisten und erhalte
+damit die gesuchte Zerlegung
+\[
+\rho^+\cM_{\phi_1}=\cN_1\otimes\sE^{-\psi(t)}\oplus\cN_2\otimes\sE^{-\psi(t)}\,.
+\]
 
 \subsection{Sabah's refined Levelt-Turrittin-Zerlegung für $\phi_1$}
 

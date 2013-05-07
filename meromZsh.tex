@@ -510,30 +510,58 @@ Das Newton Polygon wurde in Abbildung \ref{fig:Newton-Polygon2} visualisiert.
 Man erkennt, dass $\cP(P_2)=\{0,\frac{2}{3}\}$ ist.
 \end{enumerate}
 \end{exmp}
-\begin{figure}[H]
-%TODO: nummer aus der referenz ist falsch
-\label{fig:Newton-Polygon}
-\caption{Zu Beispiel \ref{exmp:Newton-Polygon}}
-\centering
-%\caption{Newton Polygon zu $P$ und $\rho^+P$}
+\iffalse
+  \begin{figure}[H]
+  %TODO: nummer aus der referenz ist falsch
+  \label{fig:Newton-Polygon}
+  \caption{Zu Beispiel \ref{exmp:Newton-Polygon}}
+  \centering
+  %\caption{Newton Polygon zu $P$ und $\rho^+P$}
+  \fbox{
+    \subfloat[Newton Polygon zu $P_1$]{
+      \label{fig:Newton-Polygon1}
+      \begin{tikzpicture}[scale=1,descr/.style={fill=white,inner sep=2.5pt}]
+      \def\myPoints{2/-1}
+      \def\myPath{-- (0,-1) -- (2,-1)}
+      \myPlotFunction{\myPoints}{\myPath}{2}{-1}{-1}{$N(P_1)$}
+      \end{tikzpicture}
+    }
+    \quad
+    \subfloat[Newton Polygon zu $P_2$]{
+      \label{fig:Newton-Polygon1}
+      \begin{tikzpicture}[scale=1,descr/.style={fill=white,inner sep=2.5pt}]
+      \def\myPoints{0/0,1/-2,2/-1,4/0}
+      \def\myPath{-- (1,-2) -- node[descr]{$\frac{2}{3}$} (4,0)}
+      \myPlotFunction{\myPoints}{\myPath}{4}{-2}{-1}{$N(P_2)$}
+      \end{tikzpicture}
+    }
+  }
+  \end{figure}
+\fi
+\begin{figure}[htbp]
 \fbox{
-  \subfloat[Newton Polygon zu $P_1$]{
-    \label{fig:Newton-Polygon1}
+  \begin{minipage}[hbt]{0,49\textwidth}
+  \begin{center}
     \begin{tikzpicture}[scale=1,descr/.style={fill=white,inner sep=2.5pt}]
     \def\myPoints{2/-1}
     \def\myPath{-- (0,-1) -- (2,-1)}
     \myPlotFunction{\myPoints}{\myPath}{2}{-1}{-1}{$N(P_1)$}
     \end{tikzpicture}
-  }
-  \quad
-  \subfloat[Newton Polygon zu $P_2$]{
+  \end{center}
+  \caption{Newton-Polygon zu $P_1=x\partial_x^2$}
     \label{fig:Newton-Polygon1}
+  \end{minipage}
+  \begin{minipage}[hbt]{0,49\textwidth}
+  \begin{center}
     \begin{tikzpicture}[scale=1,descr/.style={fill=white,inner sep=2.5pt}]
     \def\myPoints{0/0,1/-2,2/-1,4/0}
     \def\myPath{-- (1,-2) -- node[descr]{$\frac{2}{3}$} (4,0)}
     \myPlotFunction{\myPoints}{\myPath}{4}{-2}{-1}{$N(P_2)$}
     \end{tikzpicture}
-  }
+  \end{center}
+  \caption{Newton-Polygon zu $P_2$}
+    \label{fig:Newton-Polygon2}
+  \end{minipage}
 }
 \end{figure}
 
@@ -609,8 +637,7 @@ mit $\cP(\cM_{\hat K}^{(i)})=\{\Lambda_i\}$.
 \cite[Ex 5.3.6]{sabbah_cimpa90}
 Sei $P=x(x\partial_x)^2+x\partial_x+\frac{1}{2}$. So sieht das Newton-Polygon
 wie folgt aus
-\begin{figure}[H]
-\caption{Newton Polygon zu $P$}
+\begin{figure}[H] % htbp
 \begin{center}
 \fbox{
   \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
@@ -620,6 +647,7 @@ wie folgt aus
   \end{tikzpicture}
 }
 \end{center}
+\caption{Newton Polygon zu $P=x(x\partial_x)^2+x\partial_x+\frac{1}{2}$}
 \end{figure}
 mit den Slopes $\cP(P)=\{0,1\}=:\{\Lambda_1,\Lambda_2\}$. Nach dem Satz
 \ref{thm:Split-after-slopes} existiert eine Zerlegung $P=P_1\cdot P_2$ mit
@@ -644,7 +672,6 @@ P &= x(x\partial_x)^2+x\partial_x+\frac{1}{2}\\
 So sieht das Newton-Polygon
 wie folgt aus
 \begin{figure}[H]
-\caption{Newton Polygon zu $P$}
 \begin{center}
 \fbox{
   \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
@@ -654,6 +681,7 @@ wie folgt aus
   \end{tikzpicture}
 }
 \end{center}
+\caption{Newton Polygon zu $P$}
 \end{figure}
 \end{comment}
 \end{exmp}
@@ -1150,58 +1178,6 @@ TODO: Hier weiter...
 \begin{exmp}[pull-back]\label{exmp:Pull-Back}
 %from beispil/formal_b.tex
 Hier nun ein explizit berechneter pull-back.
-\begin{comment}
-Beginne mit
-\[ \tilde P=\tau\partial_\tau^2+2\partial_\tau-1 \]
-
-\begin{center}
-\fbox{
-  \begin{tikzpicture}[scale=1,descr/.style={fill=white,inner sep=2.5pt}]
-  \def\myPoints{0/0, 1/-1, 2/-1}
-  \def\myPath{-- (2,-1)}
-  \myPlotFunction{\myPoints}{\myPath}{2}{-1}{-1}{
-    $N(P) =N(\tau\partial_\tau^2+2\partial_\tau-1)$
-  }
-  \end{tikzpicture}
-}
-\end{center}
-
-und gehe von $\tau$ über zu $t$ via $\tau\rightarrow\frac{1}{t}$:\\
-%TODO: rightarrow oder mapsto?
-\begin{itemize}
-\item was passiert mit der Ableitung $\partial_\tau$? Es gilt:
-\[
-\partial_\tau (f(\frac{1}{\tau}))=
-\partial_t(f)\cdot (-\frac{1}{\tau^2})=
--\partial_t(f)\cdot t^2= %TODO: wegen klammerung?
-- t^2 \cdot \partial_t(f)
-\]
-also:
-\[
-\partial_\tau=-t^2\partial_t
-% stimmt das VZ?
-\]
-\item was ist $\partial_t(t^2\partial_t)$?
-\begin{align*}
-\partial_tt^2\partial_t &= (\partial_tt)t\partial_t\\
-&= (t\partial_t-1)t\partial_t\\
-&= t(\partial_tt)\partial_t-t\partial_t\\
-&= t(t\partial_t-1)\partial_t-t\partial_t\\
-&= t^2\partial_t^2-2t\partial_t\\
-\end{align*}
-\item was passiert mit $ \tilde P=\tau\partial_\tau^2+2\partial_\tau-1 $?
-\begin{align*}
-\tilde P &= \tau\partial_\tau^2+2\partial_\tau-1\\
-&\overset{\tau\rightarrow\frac{1}{t}}{\longrightarrow}
-\frac{1}{t}(-t^2\partial_t)^2+2(-t^2\partial_t)-1\\
-&= \frac{1}{t}t^2(\partial_t(t^2\partial_t))-2t^2\partial_t-1\\
-&= t(\partial_t(t^2\partial_t))-2t^2\partial_t-1\\
-&= t(t^2\partial_t^2-2t\partial_t)-2t^2\partial_t-1\\
-&= t^3\partial_t^2-4t^2\partial_t-1 =: P\\
-\end{align*}
-\end{itemize}
-\end{comment}
-
 Wir wollen $\cM_{\hat K}:=\cD_{\hat K}/\cD_{\hat K}\cdot P$ bzgl. $P:=
 x^3\partial_x^2-4x^2\partial_x-1$ betrachten.
 Unser Ziel ist es hier ganzzahlige slopes zu erhalten.
@@ -1232,34 +1208,63 @@ Also ist $\rho^+P= \frac{1}{4}t^4\partial_t^2 -\frac{1}{2}t^3\partial_t-1$ mit
 $ \slopes(\rho^+P)=\{1\} $ (siehe Abbildung \ref{fig:Pull-Back2}) und somit
 $\rho^*\cM_{\hat K}=\cD_{\hat L}/\cD_{\hat L}
 \cdot(\frac{1}{4}t^4\partial_t^2-\frac{1}{2}t^3\partial_t-1)$.
-\begin{figure}[H]
-%TODO: nummer aus der referenz ist falsch
-\label{fig:Pull-Back}
-\caption{Zu Beispiel \ref{exmp:Pull-Back}}
-\begin{center}
-%\caption{Newton Polygon zu $P$ und $\rho^+P$}
+\iffalse
+  \begin{figure}[H]
+  %TODO: nummer aus der referenz ist falsch
+  \label{fig:Pull-Back}
+  \caption{Zu Beispiel \ref{exmp:Pull-Back}}
+  \begin{center}
+  %\caption{Newton Polygon zu $P$ und $\rho^+P$}
+  \fbox{
+    \subfloat[Newton Polygon zu \newline $P=x^3\partial_x^2-4x^2\partial_x-1$]{
+      \label{fig:Pull-Back1}
+      \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
+      \def\myPoints{0/0, 1/1, 2/1}
+      \def\myPath{-- node[descr]{$\frac{1}{2}$} (2,1)}
+      \myPlotFunction{\myPoints}{\myPath}{2}{0}{2}{$N(P))$}
+      \end{tikzpicture}
+    }
+    \quad
+    \subfloat[Newton Polygon zu \newline $\rho^+P=%
+      \frac{1}{4}t^4\partial_t^2-\frac{1}{2}t^3\partial_t-1$]
+    {
+      \label{fig:Pull-Back2}
+      \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
+      \def\myPoints{0/0, 1/2, 2/2}
+      \def\myPath{-- node[descr]{$1$} (2,2)}
+      \myPlotFunction{\myPoints}{\myPath}{2}{0}{2}{$N(\rho^*P))$}
+      \end{tikzpicture}
+    }
+  }
+  \end{center}
+  \end{figure}
+\fi
+\begin{figure}[htbp]
 \fbox{
-  \subfloat[Newton Polygon zu \newline $P=x^3\partial_x^2-4x^2\partial_x-1$]{
-    \label{fig:Pull-Back1}
+  \begin{minipage}[hbt]{0,49\textwidth}
+  \begin{center}
     \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
     \def\myPoints{0/0, 1/1, 2/1}
     \def\myPath{-- node[descr]{$\frac{1}{2}$} (2,1)}
     \myPlotFunction{\myPoints}{\myPath}{2}{0}{2}{$N(P))$}
     \end{tikzpicture}
-  }
-  \quad
-  \subfloat[Newton Polygon zu \newline $\rho^+P=%
-    \frac{1}{4}t^4\partial_t^2-\frac{1}{2}t^3\partial_t-1)$]
-  {
-    \label{fig:Pull-Back2}
+  \end{center}
+  \caption{Newton Polygon zu \newline $P=x^3\partial_x^2-4x^2\partial_x-1$}
+  \label{fig:Pull-Back1}
+  \end{minipage}
+  \begin{minipage}[hbt]{0,49\textwidth}
+  \begin{center}
     \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
     \def\myPoints{0/0, 1/2, 2/2}
     \def\myPath{-- node[descr]{$1$} (2,2)}
     \myPlotFunction{\myPoints}{\myPath}{2}{0}{2}{$N(\rho^*P))$}
     \end{tikzpicture}
-  }
+  \end{center}
+  \caption{Newton Polygon zu \newline $\rho^+P=%
+    \frac{1}{4}t^4\partial_t^2-\frac{1}{2}t^3\partial_t-1$}
+  \label{fig:Pull-Back2}
+  \end{minipage}
 }
-\end{center}
 \end{figure}
 \end{exmp}
 
@@ -1285,33 +1290,34 @@ $\rho'(t)^{-1}\partial_t$.
 \end{defn}
 
 \begin{comment}
-\begin{figure}[H]
-%TODO: nummer aus der referenz ist falsch
-\label{fig:Push-Forward}
-\caption{Zu Beispiel \ref{exmp:Push-Forward}}
-\begin{center}
-%\caption{Newton Polygon zu $P$ und $\rho^+P$}
+\iffalse % hide plot in comment section
+\begin{figure}[htbp]
 \fbox{
-  \subfloat[Newton Polygon zu $P$]{
-    \label{fig:Push-Forward1}
+  \begin{minipage}[hbt]{0,49\textwidth}
+  \begin{center}
     \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
     \def\myPoints{0/-3, 1/-1}
     \def\myPath{-- (1,-1)}
     \myPlotFunction{\myPoints}{\myPath}{1}{-3}{-1}{$N(P))$}
     \end{tikzpicture}
-  }
-  \quad
-  \subfloat[Newton Polygon zu $\rho_+P$]{
-    \label{fig:Push-Forward2}
+  \end{center}
+  \caption{Newton-Polygon zu $P$}
+  \label{fig:Push-Forward1}
+  \end{minipage}
+  \begin{minipage}[hbt]{0,49\textwidth}
+  \begin{center}
     \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
     \def\myPoints{0/-2, 1/-1}
     \def\myPath{-- (1,-1)}
     \myPlotFunction{\myPoints}{\myPath}{1}{-2}{-1}{$N(\rho_*P))$}
     \end{tikzpicture}
-  }
+  \end{center}
+  \caption{Newton-Polygon zu $\rho_+P$}
+  \label{fig:Push-Forward2}
+  \end{minipage}
 }
-\end{center}
 \end{figure}
+\fi
 \begin{exmp}[push-forward]\label{exmp:Push-Forward}
 %ACHTUNG: variablem müssen noch geändert werden!\\
 %ACHTUNG: wenn das hier richtig wäre, müsste es zu einer dimensionsänderung
