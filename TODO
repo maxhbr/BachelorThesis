@@ -27,7 +27,6 @@ levelt-turrittin.tex:TODO
 levelt-turrittin.tex:TODO
 levelt-turrittin.tex:\begin{comment}TODO: Hier weiter \end{comment}
 levelt-turrittin.tex:\begin{comment}TODO: Hier weiter \end{comment}
-Übereinstimmungen in Binärdatei main/final.dvi.
 main/main.ps:w FJ(TODO,)30 b(\(3.)i(T)-8 b(re\033en\))p 3633 5576
 Übereinstimmungen in Binärdatei main/main.dvi.
 main.tex:  ,fontsize=11pt % TODO
@@ -60,7 +59,7 @@ meromZsh.tex:TODO
 meromZsh.tex:%TODO: welche definition ist besser?
 meromZsh.tex:%TODO: zeige, das beide definitionen gleich sind
 meromZsh.tex:%TODO: bessere formulierung
-meromZsh.tex:%TODO: nummer aus der referenz ist falsch
+meromZsh.tex:  %TODO: nummer aus der referenz ist falsch
 meromZsh.tex:TODO
 meromZsh.tex:TODO: ist $L$ Slope (gehört zu Slope) dann hat $\sigma_L(P)$ zumindest 2 Monome
 meromZsh.tex:Wähle einen zyklischen Vektor $m\in\cM_{\hat K}$ % TODO: richtiger Raum?
@@ -81,19 +80,18 @@ meromZsh.tex:  %TODO: Pfeile
 meromZsh.tex:  %TODO: Pfeile
 meromZsh.tex:  %TODO: Pfeile
 meromZsh.tex:TODO: Hier weiter...
-meromZsh.tex:%TODO: rightarrow oder mapsto?
-meromZsh.tex:-\partial_t(f)\cdot t^2= %TODO: wegen klammerung?
 meromZsh.tex:%TODO: erkläre wieso --> Elementare Zusammenhänge
-meromZsh.tex:%TODO: nummer aus der referenz ist falsch
-meromZsh.tex:%TODO: nummer aus der referenz ist falsch
+meromZsh.tex:  %TODO: nummer aus der referenz ist falsch
 meromZsh.tex:  & \mbox{(Rechenregeln Tensorprodukt)}\\ %TODO: hinzufügen
 meromZsh.tex:TODO: hier weiter
 rezept.tex:-\partial_z(f)\cdot z^2= %TODO: wegen klammerung?
+rezept.tex:%TODO: QUELLE!
 rezept.tex:TODO: ist T.h.O. hier die richtige formulierung?? besser:
-rezept.tex:TODO: Quelle / Lemma
+rezept.tex:%TODO: erst zurücktwisten und dann Induktion!!!!!!!!!!!!!!!!!
 rezept.tex:TODO: Namenskollision: $\hat L$ und $L(s_0,s_1)$.
 rezept.tex:TODO: korregiere allgemeinen Part, falls richtig!
 rezept.tex:%TODO: move to theorie-teil??
+rezept.tex:%TODO: Namenskollision: u und v wie in Achsbeschriftung
 rezept.tex:und mit denn Kommutatorregeln %TODO: lemma? quelle?
 rezept.tex:anwenden wollen: %TODO: quelle? formel?
 rezept.tex_versions/v01_rezept.tex:-\partial_z(f)\cdot z^2= %TODO: wegen klammerung?

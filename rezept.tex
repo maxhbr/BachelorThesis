@@ -738,42 +738,60 @@ Betrachte zunächst den Vorfaktor vor $t^{-3}$:
 & \overset{(\ref{eq:bedingung1b})}{\Rightarrow} -1&=u_{-1}+\frac{1}{2}
 \\ & & \Rightarrow u_{-1}&=-\frac{3}{2}
 \end{align*}
-\begin{comment}
-Nun zum Koeffizienten vor $t^{-2}$:
-\begin{align*}
-0&= -u_{-1} + \sum_{k=0}^{1} v_{k-1}u_{-k-1}
-\\&= -u_{-1} + v_{-1}u_{-1} + v_{0}u_{-2}
-\\&= \frac{3}{2} - \frac{3}{4} + v_{0}\cdot2i\sqrt{2a}
-\\\Rightarrow 2i\sqrt{2a} v_0 &= -\frac{3}{4}
-\\\Rightarrow v_0 &= -\frac{3}{8i\sqrt{2a}}
-\\&= \frac{3i}{8\sqrt{2a}}
-\\&\overset{(\ref{eq:bedingung1c})}{=}-u_0
-\end{align*}
-\end{comment}
-Nun zum allgemeinem Koeffizienten vor $t^{n}$:
+Nun zum allgemeinem Koeffizienten vor $t^{n}$ mit $n>-3$:
 \begin{align*}
 0&= (n+1)u_{n+1} + \sum_{k=0}^{n+3} v_{k-1}u_{n-k+1}
 \\&= (n+1)u_{n+1} + (\sum_{k=0}^{n+2} v_{k-1}u_{n-k+1}) 
   + v_{n+3-1}u_{n-(n+3)+1}
 \\&= (n+1)u_{n+1} + (\sum_{k=0}^{n+2} v_{k-1}u_{n-k+1}) + v_{n+2}u_{-2}
 \\\Rightarrow v_{n+2}u_{-2}&=-(n+1)u_{n+1} - \sum_{k=0}^{n+2} v_{k-1}u_{n-k+1}
-\\\Rightarrow v_{n+2} &= 
-  -(n+1)\frac{u_{n+1}}{u_{-2}}-\sum_{k=0}^{n+2} \frac{v_{k-1}u_{n-k+1}}{u_{-2}}
-\\&\overset{(\ref{eq:bedingung1a})}{=} -(n+1)\frac{u_{n+1}}{2i\sqrt{2a}} 
-  - \sum_{k=0}^{n+2} \frac{v_{k-1}u_{n-k+1}}{2i\sqrt{2a}}
-\\&= i\Big((n+1)\frac{u_{n+1}}{2\sqrt{2a}} 
-  + \sum_{k=0}^{n+2} \frac{v_{k-1}u_{n-k+1}}{2\sqrt{2a}}\Big)
-\\&\overset{(\ref{eq:bedingung1c})}{=}-u_{n+2}
+\\\Rightarrow v_{n+2} &= - \frac{1}{u_{-2}} 
+  ((n+1)u_{n+1} + \sum_{k=0}^{n+2} v_{k-1}u_{n-k+1})
 \end{align*}
-also nach passendem Indexshift:
+also nach passendem Indexshift folgt
+\begin{align*}
+\Rightarrow v_{n} &= - \frac{1}{u_{-2}}
+  ((n-1)u_{n-1} + \sum_{k=0}^{n} v_{k-1}u_{n-k-1})
+\\&\overset{(\ref{eq:bedingung1a})}{=} - \frac{1}{2i\sqrt{2a}}
+  ((n-1)u_{n-1} + \sum_{k=0}^{n} v_{k-1}u_{n-k-1})
+\end{align*}
+Zusammen mit $u_{-2}=2i\sqrt{2a}$, $u_{-1}=-\frac{3}{2}$ und
+$v_{-1}=\frac{1}{2}$ sind durch
 \begin{align}
 v_n &= - u_n = 
 i\Big((n-1)\frac{u_{n-1}}{2\sqrt{2a}} 
   + \sum_{k=0}^{n} \frac{v_{k-1}u_{n-k-1}}{2\sqrt{2a}}\Big)
   & \forall n \geq 0
 \end{align}
-Zusammen mit $u_{-2}=2i\sqrt{2a}$, $u_{-1}=-\frac{3}{2}$ und
-$v_{-1}=\frac{1}{2}$ sind die Koeffizienten vollständig bestimmt.
+die Koeffizienten vollständig bestimmt.
+
+Somit ergeben sich für $n=0$ die Koeffizienten
+\begin{align*}
+v_{0} &= - \frac{1}{2i\sqrt{2a}}
+  ((-1)u_{-1} + \sum_{k=0}^{0} v_{k-1}u_{-k-1})
+\\&= - \frac{1}{2i\sqrt{2a}} (\frac{3}{2} + v_{-1}u_{-1})
+\\&= - \frac{1}{2i\sqrt{2a}} (\frac{3}{2} - \frac{3}{4})
+\\&= - \frac{3}{8i\sqrt{2a}} = -u_{0}
+\end{align*}
+Für $n>0$ wollen wir die Formel noch weiter vereinfachen:
+\begin{align*}
+v_{n} &= - \frac{1}{2i\sqrt{2a}}
+  ((n-1)u_{n-1} + \underbracket{\sum_{k=0}^{n} v_{k-1}u_{n-k-1}})
+\\&= - \frac{1}{2i\sqrt{2a}}
+  ((n-1)u_{n-1} + \overbracket{v_{-1}u_{n-1} + \sum_{k=1}^{n-1}
+  v_{k-1}u_{n-k-1} + v_{n-1}u_{-1}})
+\\&\overset{(\ref{eq:bedingung1c})}{=} - \frac{1}{2i\sqrt{2a}}
+  (-(n-1)v_{n-1} + v_{-1}(-v_{n-1}) - \sum_{k=1}^{n-1}
+  v_{k-1}v_{n-k-1} + v_{n-1}u_{-1})
+\\&= - \frac{1}{2i\sqrt{2a}} (-(n-1)v_{n-1} -\frac{1}{2}v_{n-1} - \sum_{k=1}^{n-1}
+  v_{k-1}v_{n-k-1} - \frac{3}{2} v_{n-1})
+\\&= \frac{1}{2i\sqrt{2a}} ((n-1+\frac{1}{2}+\frac{3}{2})v_{n-1} 
+  + \sum_{k=1}^{n-1} v_{k-1}v_{n-k-1})
+\\&= \frac{1}{2i\sqrt{2a}} ((n+1)v_{n-1} + \sum_{k=1}^{n-1} v_{k-1}v_{n-k-1})
+\\&\overset{(\ref{eq:bedingung1a})}{=}
+  \frac{1}{2i\sqrt{2a}} ((n+1)v_{n-1} + \sum_{k=1}^{n-1} v_{k-1}v_{n-k-1})
+\\&\overset{(\ref{eq:bedingung1c})}{=}-u_{n}
+\end{align*}
 
 \begin{comment}
 $\cdots$
@@ -784,6 +802,9 @@ damit die gesuchte Zerlegung
 \[
 \rho^+\cM_{\phi_1}=\cN_1\otimes\sE^{-\psi(t)}\oplus\cN_2\otimes\sE^{-\psi(t)}\,.
 \]
+
+\subsection{Berechnung der Faktoren}
+\lstinputlisting[language=HaskellUlisses]{../programm.hs}
 
 \subsection{Sabah's refined Levelt-Turrittin-Zerlegung für $\phi_1$}
 
