@@ -159,7 +159,25 @@
   \cfoot{\today}
 \fi
 
+%%%%  Listings  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \myinput{haskell.sty}
+
+\definecolor{DarkGrey}{rgb}{0.1,0.1,0.1}
+\lstdefinestyle{Bash} { 
+  language=Bash,
+  backgroundcolor=\color{DarkGrey},
+  keywordstyle=\color{BlueViolet}\bfseries,
+  commentstyle=\color{Grey},
+  stringstyle=\color{Red},
+  showstringspaces=false,
+  basicstyle=\ttfamily\scriptsize,
+  \color{white},
+  numbers=none,
+  captionpos=b,
+  tabsize=4,
+  breaklines=true
+}
+
 %%%%  new Commands  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %TODO: replace def --> newcommand
 \def\bme{\boldsymbol{e}}
