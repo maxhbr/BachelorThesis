@@ -109,7 +109,8 @@ N\Big(P_{\phi}(x,\partial_x)\Big) &= N\Big(\underbracket{(-x^2\partial_x)^{q}}
 %TODO: QUELLE!
 \\&= N\Big(\overbracket{\underset{\text{liefert keinen
 Beitrag}}{\underbrace{(-1)^q}}(x^{2q}\partial_x^q
-  + \underset{\text{liefern keinen Beitrag}}{\underbrace{\textbf{T.h.O.}}})}
+  + \underset{\text{liefern keinen Beitrag}}{
+  \underbrace{\textbf{T.i.Q. von }x^{2q}\partial_x^q}})}
   (x\partial_x - 1) + qa \Big)
 \\&= N\Big( \underbracket{x^{2q}\partial_x^q (x\partial_x - 1)} + qa \Big)
 \\&= N\Big(\overbracket{x^{2q}\underbracket{\partial_x^q x}\partial_x
@@ -117,16 +118,15 @@ Beitrag}}{\underbrace{(-1)^q}}(x^{2q}\partial_x^q
 \\&= N\Big(x^{2q}\overbracket{(x\partial_x^q + q\partial_x^{q-1})}\partial_x
   - x^{2q}\partial_x^q + qa \Big)
 \\&= N\Big(x^{2q + 1}\partial_x^{q + 1}
-  + \underset{\text{liefern keinen Beitrag}}{
-  \underbrace{qx^{2q}\partial_x^{q} - x^{2q}\partial_x^q}} + qa \Big)
+  + \underset{\text{sind also vernachlässigbar}}{
+  \underset{\text{im Quadranten von $x^{2q + 1}\partial_x^{q + 1}$,}}{
+  \underbrace{qx^{2q}\partial_x^{q} - x^{2q}\partial_x^q}}} + qa \Big)
 \\&= N\Big(x^{2q + 1}\partial_x^{q + 1} + qa \Big)
 \end{align*}
-\begin{comment}
-ist vlt besser \emph{Therme niedriger Ordnung} zu verwenden??\\
-\end{comment}
-Wobei hier das \textbf{T.h.O.} eine Abkürzung für \emph{Therme höherer Ordnung}
-ist. Hier ist ein Term $\epsilon x^{p}\partial_x^{q}$, mit $\epsilon\in \C, p,q
-\in \Z$, von höherer Ordnung als
+Wobei hier das \textbf{T.i.Q.} eine Abkürzung für \emph{Therme im Quadranten}
+ist.
+Hier ist ein Term $\epsilon x^{p}\partial_x^{q}$, mit $\epsilon\in \C, p,q
+\in \Z$, im Quadranten von 
 $\tilde\epsilon x^{\tilde p}\partial_x^{\tilde q}$, mit $\tilde\epsilon\in \C,
 \tilde p,\tilde q \in \Z$, falls $q>\tilde q$ und $p-q<\tilde p - \tilde q$.
 Anschaulich bedeutet das, dass
@@ -136,8 +136,8 @@ Anschaulich bedeutet das, dass
 \]
 Offensichtlich ist damit $ N(\epsilon x^{p}\partial_x^{q}+\tilde\epsilon
 x^{\tilde p}\partial_x^{\tilde q}) =N(\epsilon x^{p}\partial_x^{q}) $, also
-können Therme höherer Ordnung vernachlässigt werden, wenn das
-Newton-Polygon gesucht ist.
+können Therme, die sich bereits im Quadranten eines anderen Therms befinden,
+vernachlässigt werden, wenn das Newton-Polygon gesucht ist.
 \begin{figure}[H] % htbp
 \begin{center}
 \fbox{
@@ -150,33 +150,9 @@ Newton-Polygon gesucht ist.
 \end{center}
 \caption{Newton-Polygon zu $P_{\phi}$}
 \end{figure}
-\begin{comment}
-TODO: ist T.h.O. hier die richtige formulierung?? besser:
-\begin{align*}
-N\Big(P_{\phi}(x,\partial_x)\Big) &= N\Big(\underbracket{(-x^2\partial_x)^{q}}
-  (x\partial_x-1)+qa\Big)
-\\&= N\Big(\overbracket{\underset{\text{liefert keinen
-Beitrag}}{\underbrace{(-1)^q}}(x^{2q}\partial_x^q
-  + \underset{\text{liefern keinen Beitrag, weil $\mu_i(x)\in x^{q+i}\Cfx$}}{
-  \underbrace{
-  \mu_{q-1}(x)\partial_x^{q-1} + \dots + \mu_{1}(x)\partial_x + \mu_0(x)}}
-  )}
-  (x\partial_x - 1) + qa \Big)
-\\&= N\Big(x^{2q}\partial_x^q
-  (x\partial_x - 1) + qa \Big)
-\\&= N\Big(x^{2q}\underbracket{\partial_x^q x}\partial_x
-  - x^{2q}\partial_x^q + qa \Big)
-\\&= N\Big(x^{2q}\overbracket{(x\partial_x^q + q\partial_x^{q-1})}\partial_x
-  - x^{2q}\partial_x^q + qa \Big)
-\\&= N\Big(x^{2q + 1}\partial_x^{q + 1}
-  + \underset{\text{liefern keinen Beitrag}}{
-  \underbrace{qx^{2q}\partial_x^{q} - x^{2q}\partial_x^q}} + qa \Big)
-\\&= N\Big(x^{2q + 1}\partial_x^{q + 1} + qa \Big)
-\end{align*}
-\end{comment}
 \end{proof}
-Also ist ein pull-back mit Grad $q+1$ nötig, um einen ganzzahligen Slope zu
-bekommen.
+Also ist ein pull-back mit Grad $q+1$ hinreichend, um einen ganzzahligen Slope
+zu bekommen.
 Sei $\rho:t\mapsto x:=-(q+1) t^{q+1}$ so ist
 \begin{align*}
 \rho^+\cM_\phi &= \rho^+(\cD_{\hat K}/\cD_{\hat K}\cdot P_\phi(x,\partial_x))\\
@@ -198,47 +174,19 @@ Sei $\rho:t\mapsto x:=-(q+1) t^{q+1}$ so ist
     \cdot((t^{q+2}\partial_t)^{q}
     (t\partial_t-(q+1))+(q+1)qa)
 \end{align*}
-\begin{comment}
-muss noch gezeigt werden, dass dies ein Meromorpher Zusammenhang???
-\end{comment}
-\begin{comment}
-Bei \cite{sabbah_Fourier-local}:\\
-Sei $\rho:t\mapsto x:=-\frac{t^{q+1}}{qa}$ so ist
-\begin{align*}
-\rho^+\cM_\phi &= \rho^+(\cD_{\hat K}/\cD_{\hat K}\cdot P_\phi(x,\partial_x))\\
-  &=\cD_{\hat K}/\cD_{\hat K}\cdot(\rho^*P_\phi(x,\partial_x))\\
-  &=\cD_{\hat K}/\cD_{\hat K}\cdot(P_\phi(\rho(t),\rho'(t)^{-1}\partial_t))\\
-  &=\cD_{\hat K}/\cD_{\hat K}
-    \cdot(P_\phi(-\frac{t^{q+1}}{qa}, -\frac{qa}{(q+1)t^q}\partial_t))
-\end{align*}
-mit
-\begin{align*}
-P_\phi(-\frac{t^{q+1}}{qa}, -\frac{qa}{(q+1)t^q}\partial_t)
-  &= (-(-\frac{t^{q+1}}{qa})^2(-\frac{qa}{(q+1)t^q}\partial_t))^q
-    (-\frac{t^{q+1}}{qa}(-\frac{qa}{(q+1)t^q}\partial_t)-1)+qa\\
-  &= ((\frac{t^{q+1}}{qa})^2\frac{qa}{(q+1)t^q}\partial_t)^q
-    (\frac{t^{q+1}}{qa}\frac{qa}{(q+1)t^q}\partial_t-1)+qa\\
-  &= (\frac{(t^{q+1})^2}{qa(q+1)t^q}\partial_t)^q
-    (\frac{t^{q+1}}{(q+1)t^q}\partial_t-1)+qa\\
-  &= (\frac{t^{2q+2-q}}{qa(q+1)}\partial_t)^q
-    (\frac{t^{q+1-q}}{(q+1)}\partial_t-1)+qa\\
-  &= (\frac{t^{q+2}}{qa(q+1)}\partial_t)^q
-    (\frac{1}{(q+1)}t\partial_t-1)+qa\\
-\end{align*}
-\end{comment}
 mit $\cP(\rho^+\cM_\phi)=\{q\}\subset\N$. Definiere mittels
 $q=\frac{q}{1}=:\frac{\lambda_0}{\lambda_1}$ die  Linearform
 \[
-L(s_0,s_1)=\lambda_0s_0+\lambda_1s_1=qs_0+s_1 \,.
+\ell(s_0,s_1)=\lambda_0s_0+\lambda_1s_1=qs_0+s_1 \,.
 \]
 Schreibe $\rho^*P_{\phi}=\sum_i\sum_j\alpha_{ij}t^j\partial_t^i$ und berechne
-die \emph{Determinanten Gleichung} $\sigma_L(\rho^*P_{\phi})\in \hat L[\xi]$.
+die \emph{Determinanten Gleichung} $\sigma_\ell(\rho^*P_{\phi})\in \hat L[\xi]$.
 \begin{comment}
-Schon gezeigt, das $ord_L = 0$?
+Schon gezeigt, das $ord_\ell = 0$?
 \end{comment}
 \begin{align*}
 \sigma_L(\rho^*P_{\phi})
-  &= \sum_{\{(i,j)\in\N\times\Z \mid L(i,i-j)=0\}}\alpha_{ij}t^j\xi^i\\
+  &= \sum_{\{(i,j)\in\N\times\Z \mid \ell(i,i-j)=0\}}\alpha_{ij}t^j\xi^i\\
   &= \sum_{\{(i,j)\in\N\times\Z \mid (q+1)i-j=0\}}\alpha_{ij}t^j\xi^i
 \end{align*}
 Da $\hat L[\xi]$ kommutativ ist gilt hier, dass $(t^j\xi^i)^k=t^{jk}\xi^{ik}$ ist.
@@ -252,7 +200,7 @@ schreiben, welches wir als nächsten Schritt faktorisieren
 \]
 Wobei $\epsilon\in\C^\times$ eine Konstante ist.
 Sei $\beta_0$  eine der Nullstellen.
-Da $\ord_L(\rho^*P_\phi)=0$ und der einzige Slope von $\rho^*P_\phi$ nicht
+Da $\ord_\ell(\rho^*P_\phi)=0$ und der einzige Slope von $\rho^*P_\phi$ nicht
 gleich $0$ ist, gilt offensichtlich, dass $\alpha_0\neq0$. Also ist $0$ keine
 Nullstelle von $\sigma_L(\rho^*P_\phi)$.
 Setze $\psi(x):=(\beta_0/\lambda_0)t^{-\lambda_0}=(\beta_0/q)t^{-q}$ und

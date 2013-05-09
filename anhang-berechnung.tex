@@ -1,13 +1,64 @@
-\chapter{Berechnung der Koeffizienten mit dem Computer}
+\chapter{Numerische berechnung der Koeffizienten}
 Hier wird nun ein Haskell Programm, dass in der Funktion \textbf{main} die
-Koeffizienten von $v$ und $u$ numerisch berechnet.
-\lstinputlisting[language=HaskellUlisses]{../programm.hs}
+Koeffizienten von $v$ und $u$ numerisch berechnet. Wir wählen $a=\frac{1}{8}$,
+dadurch gilt $u_{-2}=i$.
+\lstinputlisting[language=HaskellUlisses]{../haskell/programm.hs}
 
-Ist der Code in einer Datei \textbf{programm.hs} gespeicher, lässt er sich
-durch die folgenden Befehle compilieren und ausführen.
+Ist der Code in einer Datei \textbf{koeff.hs} gespeicher, so lässt er sich
+in Unix-Artigen Systemen beispielsweise mit den folgenden Befehlen compilieren
+und ausführen.
 \begin{lstlisting}[style=Bash]
-$ ghc programm.hs
-$ ./programm.hs
+$ ghc koeff.hs
+$ ./koeff
 \end{lstlisting}
+Durch das Ausführen berechnet das Programm die Koeffizienten von $v$ und $u$
+und produziert einen Ausgang, der wie folgt aussieht
+\begin{lstlisting}[style=Bash]
+n       | v_n   u_n
+-------------------
+-2      | 0.0 :+ 0.0    0.0 :+ 1.0
+-1      | 0.5 :+ 0.0    (-1.5) :+ (-0.0)
+0       | 0.0 :+ (-0.75)    (-0.0) :+ 0.75
+1       | (-1.5) :+ (-0.0)    1.5 :+ 0.0
+2       | 0.0 :+ 3.9375    (-0.0) :+ (-3.9375)
+3       | 13.5 :+ 0.0    (-13.5) :+ (-0.0)
+4       | 0.0 :+ (-59.34375)    (-0.0) :+ 59.34375
+5       | (-324.0) :+ (-0.0)    324.0 :+ 0.0
+6       | 0.0 :+ 2122.98046875    (-0.0) :+ (-2122.98046875)
+7       | 16213.5 :+ 0.0    (-16213.5) :+ (-0.0)
+8       | 0.0 :+ (-141115.447265625)    (-0.0) :+ 141115.447265625
+9       | (-1376311.5) :+ (-0.0)    1376311.5 :+ 0.0
+10      | 0.0 :+ 1.4850124677246094e7    (-0.0) :+ (-1.4850124677246094e7)
+11      | 1.75490226e8 :+ 0.0    (-1.75490226e8) :+ (-0.0)
+12      | 0.0 :+ (-2.2530628205925293e9)    (-0.0) :+ 2.2530628205925293e9
+13      | (-3.1217145174e10) :+ (-0.0)    3.1217145174e10 :+ 0.0
+14      | 0.0 :+ 4.641652455250599e11    (-0.0) :+ (-4.641652455250599e11)
+15      | 7.3709524476135e12 :+ 0.0    (-7.3709524476135e12) :+ (-0.0)
+\end{lstlisting}
+übersetzt in unsere Zahlenschreibweise sieht das Ergebnis, wie folgt aus:
+\begin{center}
+\begin{tabular}{c || c | c}
+n    & $v_n$                            & $u_n$
+\\\hline\hline
+  -2 & $0$                              & $i$
+\\-1 & $0,5$                            & $-1,5 $
+\\0  & $-0,75i$                         & $-0,75i$
+\\1  & $-1,5$                           & $1,5$
+\\2  & $3,9375i$                        & $-3,9375i$
+\\3  & $13,5$                           & $-13,5$
+\\4  & $-59,34375i$                     & $59,34375i$
+\\5  & $-324,0$                         & $324,0$
+\\6  & $2122,98046875i$                 & $-2122,98046875i$
+\\7  & $16213,5$                        & $-16213,5$
+\\8  & $-141115,447265625i$             & $141115,447265625i$
+\\9  & $-1376311,5$                     & $1376311,5$
+\\10 & $1,4850124677246094\cdot10^7i$   & $-1,4850124677246094\cdot10^7i$
+\\11 & $1,75490226\cdot10^8$            & $-1,75490226\cdot10^8$
+\\12 & $-2,2530628205925293\cdot10^9i$  & $2,2530628205925293\cdot10^9i$
+\\13 & $-3,1217145174\cdot10^{10}$      & $3,1217145174\cdot10^{10}$
+\\14 & $4,641652455250599\cdot10^{11}i$ & $-4,641652455250599\cdot10^{11}i$
+\\15 & $7,3709524476135\cdot10^{12}$    & $-7,3709524476135\cdot10^{12}$
+\end{tabular}
+\end{center}
 
 % vim: set ft=tex :

@@ -695,51 +695,60 @@ passendem $\cD_{\hat K}/\cD_{\hat K}\cdot(x\partial_x-\alpha)^p$ isomorph
 sind.
 \end{cor}
 
-\subsection{Die Filtrierung $\,^LV\cD_{\hat K}$ und das $L$-Symbol}
+\subsection{Die Filtrierung $\,^\ell V\cD_{\hat K}$ und das $\ell$-Symbol}
+\begin{comment}
+TODO: mache alle Linearform $L$ zu $\ell$
+\end{comment}
 Sei $\Lambda=\frac{\lambda_0}{\lambda_1}\in \Q_{\geq 0}$ vollständig gekürtzt,
 also mit $\lambda_0$ und $\lambda_1$ in $\N$ relativ prim Definiere die
-Linearform $L(s_0,s_1)=\lambda_0s_0+\lambda_1s_1$ in zwei Variablen, Sei
+Linearform $\ell(s_0,s_1)=\lambda_0s_0+\lambda_1s_1$ in zwei Variablen, Sei
 $P\in\cD_{\hat K}$.  Falls $P=x^a\partial_x^b$ mit $a\in \Z$ und $b\in \N$
 setzen wir
 \[
-\ord_L(P)=L(b,b-a)
+\ord_\ell(P)=\ell(b,b-a)
 \]
 und falls $P=\sum_{i=0}^d b_i(x)\partial_x^i$ mit $b_i\in\hat K$ setzen wir
 \[
-\ord_L(P)=\max_{\{i\mid a_i\neq 0\}} L(i,i-v(b_i))\,.
+\ord_\ell(P)=\max_{\{i\mid a_i\neq 0\}} \ell(i,i-v(b_i))\,.
 %Hier ist ein fehler im Sabbah script a_i <-> b_i
 \]
-\begin{defn}[Die Filtrierung $\,^LV\cD_{\hat K}$]
+\begin{defn}[Die Filtrierung $\,^\ell V\cD_{\hat K}$]
 \cite[Seite 25]{sabbah_cimpa90}
-Nun können wir die aufsteigende Filtration $\,^LV\cD_{\hat K}$, welche mit $\Z$
-indiziert ist, durch
+Nun können wir die aufsteigende Filtration $\,^\ell V\cD_{\hat K}$, welche mit 
+$\Z$ indiziert ist, durch
 \[
-\,^LV_\lambda\cD_{\hat K}:=\{P\in\cD_{\hat K}\mid \ord_L(P)\leq \lambda\}
+\,^\ell V_\lambda\cD_{\hat K}:=\{P\in\cD_{\hat K}\mid \ord_\ell(P)\leq \lambda\}
 \]
 definieren.
 \end{defn}
 \begin{bem}
-Man hat $\ord_L(PQ)=\ord_L(P)+\ord_L(Q)$ und falls $\lambda_0\neq 0$ hat man
-auch, dass $\ord_L([P,Q])\leq \ord_L(P)+\ord_L(Q)-1$.
+Man hat $\ord_\ell(PQ)=\ord_\ell(P)+\ord_\ell(Q)$ und falls $\lambda_0\neq 0$
+hat man auch, dass $\ord_\ell([P,Q])\leq \ord_\ell(P)+\ord_\ell(Q)-1$.
 \end{bem}
-\begin{defn}[$L$-Symbol]
+\begin{defn}[$\ell$-Symbol]
 \cite[Seite 25]{sabbah_cimpa90}
-Falls $\lambda_0\neq 0$ ist der graduierte Ring $gr^{\,^LV}\cD_{\hat K}\bydef
-\bigoplus_{\lambda \in \Z}gr_\lambda^{\,^LV}\cD_{\hat K}$ ein kommutativer
-Ring. Bezeichne die Klasse von $\partial_x$ in dem Ring durch $\xi$, dann ist
-der Ring isomorph zu $\hat K[\xi]$.
+Falls $\lambda_0\neq 0$ ist der graduierte Ring $gr^{\,^\ell V}\cD_{\hat
+K}\bydef \bigoplus_{\lambda \in \Z}gr_\lambda^{\,^\ell V}\cD_{\hat K}$ ein
+kommutativer Ring. Bezeichne die Klasse von $\partial_x$ in dem Ring durch
+$\xi$, dann ist der Ring isomorph zu $\hat K[\xi]$.
 %
-Sei $P\in \cD_{\hat K}$, so ist $\sigma_L(P)$ definiert als die Klasse von $P$
-in $gr_{\ord_L(P)}^{\,^LV}\cD_{\hat K}$. $\sigma_L$ wir hierbei als das
-$L$-Symbol Bezeichnet.
+Sei $P\in \cD_{\hat K}$, so ist $\sigma_\ell(P)$ definiert als die Klasse von
+$P$ in $gr_{\ord_\ell(P)}^{\,^\ell V}\cD_{\hat K}$. $\sigma_\ell$ wir hierbei
+als das $\ell$-Symbol Bezeichnet.
 \end{defn}
-Zum Beispiel ist $\sigma_L(x^a\partial_x^b)=x^a\xi^b$.
+Zum Beispiel ist $\sigma_\ell(x^a\partial_x^b)=x^a\xi^b$.
+\begin{bem}
+Bei \cite{sabbah_cimpa90} wird der Buchstabe $L$ anstatt $\ell$ für
+Linearformen verweden, dieser ist hier aber bereits für $\Cft$ reserviert.
+Dementsprechend ist die Filtrierung dort als $\,^L V\cD_{\hat K}$ und das
+$\ell$-Symbol als $L$-Symbol zu finden.
+\end{bem}
 \begin{bem}
 Ist $P\in \cD_{\hat K}$ geschrieben als
 $P=\sum_i\sum_j\alpha_{ij}x^j\partial_x^i$.
-So erhält man $\sigma_L(P)$ durch die Setzung
+So erhält man $\sigma_\ell(P)$ durch die Setzung
 \[
-\sigma_L(P)=\sum_{\{(i,j) \mid L(i,i-j)=\ord_L(P)\}}\alpha_{ij}x^j\xi^i \,.
+\sigma_\ell(P)=\sum_{\{(i,j)\mid\ell(i,i-j)=\ord_\ell(P)\}}\alpha_{ij}x^j\xi^i \,.
 \]
 \end{bem}
 \begin{proof}
@@ -756,13 +765,14 @@ heißt Stützfunktion und wird in \cite{ZulaBarbara} als alternative zu dieser
 Ordnung verwendet.
 \end{defn}
 \begin{bem}
-Wenn $L(x_0,s_1)$ wie oben aus $\Lambda$ entstanden ist, so gilt
+Wenn $\ell(x_0,s_1)$ wie oben aus $\Lambda$ entstanden ist, so gilt
 \[
-\omega_P(\Lambda)=ord_L(P) \,.
+\omega_P(\Lambda)=ord_\ell(P) \,.
 \]
 \end{bem}
 \begin{comment}
-TODO: ist $L$ Slope (gehört zu Slope) dann hat $\sigma_L(P)$ zumindest 2 Monome
+TODO: ist $\ell$ Slope (gehört zu Slope) dann hat $\sigma_\ell(P)$ zumindest 2
+Monome
 \end{comment}
 
 \section{Formale Struktur regulärer Zusammenhänge}
@@ -784,7 +794,7 @@ $\partial_x^dm+\sum_{i=0}^{d-1}b_i(x)\partial_x^im=0$.
 
 \begin{comment} bis hier schon klar \end{comment}
 
-Tatsächlich werden wir $b_i(x)=x^ib_i'(x)$ mit $b_i'\in \Cfx$ schreiben (wegen
+Tatsächlich kann man $b_i(x)=x^ib_i'(x)$ mit $b_i'\in \Cfx$ schreiben (wegen
 Regularität).
 
 Dies impliziert, dass $m,x\partial_xm,\dots,(x\partial_x)^{d-1}m$ ebenfalls
