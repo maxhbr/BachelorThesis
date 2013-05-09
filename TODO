@@ -61,7 +61,8 @@ meromZsh.tex:%TODO: zeige, das beide definitionen gleich sind
 meromZsh.tex:%TODO: bessere formulierung
 meromZsh.tex:  %TODO: nummer aus der referenz ist falsch
 meromZsh.tex:TODO
-meromZsh.tex:TODO: ist $L$ Slope (gehört zu Slope) dann hat $\sigma_L(P)$ zumindest 2 Monome
+meromZsh.tex:TODO: mache alle Linearform $L$ zu $\ell$
+meromZsh.tex:TODO: ist $\ell$ Slope (gehört zu Slope) dann hat $\sigma_\ell(P)$ zumindest 2
 meromZsh.tex:Wähle einen zyklischen Vektor $m\in\cM_{\hat K}$ % TODO: richtiger Raum?
 meromZsh.tex:TODO
 meromZsh.tex:%TODO: titel: Operations on vector spaces with connection
@@ -86,7 +87,6 @@ meromZsh.tex:  & \mbox{(Rechenregeln Tensorprodukt)}\\ %TODO: hinzufügen
 meromZsh.tex:TODO: hier weiter
 rezept.tex:-\partial_z(f)\cdot z^2= %TODO: wegen klammerung?
 rezept.tex:%TODO: QUELLE!
-rezept.tex:TODO: ist T.h.O. hier die richtige formulierung?? besser:
 rezept.tex:%TODO: erst zurücktwisten und dann Induktion!!!!!!!!!!!!!!!!!
 rezept.tex:TODO: Namenskollision: $\hat L$ und $L(s_0,s_1)$.
 rezept.tex:TODO: korregiere allgemeinen Part, falls richtig!

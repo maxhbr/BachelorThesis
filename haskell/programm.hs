@@ -22,7 +22,7 @@ uKoeff n | n == -2   = 0:+(sqrt(8*a))
 
 main :: IO ()
 main = do { putStr "n \t| v_n    u_n\n"
-          ; putStr "--------------------------------------------------------\n"
+          ; putStr "--------+-----------------------------------------------\n"
           ; mapM_ format bothKoeffs }
   where bothKoeffs :: [(Int, Complex Double, Complex Double)]
         bothKoeffs = [(i, vKoeff i, uKoeff i)|i <- [-2..]]
