@@ -25,8 +25,13 @@
   \draw[->] (-.5,0) -- (\myMaxX+.2,0) node[below]{$u$};
   \FPmin{\myPlotMinY}{\myMinY}{0}
   \draw[->] (0,\myPlotMinY-.2) -- (0,\myMaxY+.7) node[left]{$v$};
-  \draw (1,0) -- (1,-.1);
-  \draw (0,1) -- (-.1,1);
+  \iftrue
+    \draw (1,0) -- (1,-.1);
+    \draw (0,1) -- (-.1,1);
+  \else
+    \draw (1,0) -- node[below]{\footnotesize$1$} (1,-.1);
+    \draw (0,1) -- node[left]{\footnotesize$1$} (-.1,1);
+  \fi
 
   %%rectangle
   \foreach \x/\y in #1
@@ -40,5 +45,5 @@
   \foreach \x/\y in #1
     { \node[draw,circle,inner sep=1.5pt,fill=white] at (\x,\y) {}; }
   %%Text
-  \node [below right] at (#3,\myMaxY) {#6};
+  \node[below right] at (#3,\myMaxY) {#6};
 }
