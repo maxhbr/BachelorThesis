@@ -1,0 +1,5 @@
+set output "plot.ps"
+set terminal postscript portrait
+set size .75,.75
+set log y
+plot "plotData" using 1:2 with lines

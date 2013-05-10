@@ -4,15 +4,15 @@ Koeffizienten von $v$ und $u$ numerisch berechnet. Wir wählen $a=\frac{1}{8}$,
 dadurch gilt $u_{-2}=i$.
 \lstinputlisting[language=HaskellUlisses]{../haskell/programm.hs}
 
-Ist der Code in einer Datei \textbf{koeff.hs} gespeicher, so lässt er sich
-in Unix-Artigen Systemen beispielsweise mit den folgenden Befehlen compilieren
-und ausführen.
+Ist der Code in einer Datei \textbf{/Pfad/zu/koeff.hs} gespeicher, so lässt er
+sich in Unix-Artigen Systemen beispielsweise mit den folgenden Befehlen
+compilieren und ausführen.
 \begin{lstlisting}[style=Bash]
-$ ghc koeff.hs
-$ ./koeff
+$ ghc /Pfad/zu/koeff.hs
+$ /Pfad/zu/koeff 20
 \end{lstlisting}
 Durch das Ausführen berechnet das Programm die Koeffizienten von $v$ und $u$
-und produziert einen Ausgang, der wie folgt aussieht
+bis zum Index $20$ und produziert einen Ausgang, der wie folgt aussieht
 \begin{lstlisting}[style=Bash]
 n       | v_n   u_n
 --------+-----------------------------------------------
@@ -39,8 +39,6 @@ n       | v_n   u_n
 18      | 0.0 :+ 4.211869282476113e16    (-0.0) :+ (-4.211869282476113e16)
 19      | 8.385809834576763e17 :+ 0.0    (-8.385809834576763e17) :+ (-0.0)
 20      | 0.0 :+ (-1.753906248830001e19)    (-0.0) :+ 1.753906248830001e19
-21      | (-3.844527685924405e20) :+ (-0.0)    3.844527685924405e20 :+ 0.0
-22      | 0.0 :+ 8.813173625065073e21    (-0.0) :+ (-8.813173625065073e21)
 \end{lstlisting}
 In Haskell ist das \textbf{:+} ein Infix-Konstruktor der Klasse
 \textbf{Data.Complex}. So erzeugt ein Aufruf der Form \textbf{a +: b} eine
