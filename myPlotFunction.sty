@@ -28,8 +28,13 @@
     (-.5,\myPlotMinY-.2) grid (\myMaxX+.2,\myMaxY+.5);
 
   %%axis
-  \draw[->] (-.5,0) -- (\myMaxX+.2,0) node[below]{$u$};
-  \draw[->] (0,\myPlotMinY-.2) -- (0,\myMaxY+.7) node[left]{$v$};
+  \iftrue
+    \draw[->] (-.5,0) -- (\myMaxX+.2,0);
+    \draw[->] (0,\myPlotMinY-.2) -- (0,\myMaxY+.7);
+  \else
+    \draw[->] (-.5,0) -- (\myMaxX+.2,0) node[below]{$u$};
+    \draw[->] (0,\myPlotMinY-.2) -- (0,\myMaxY+.7) node[left]{$v$};
+  \fi
   \iftrue
     \draw (1,0) -- (1,-.1);
     \draw (0,1) -- (-.1,1);

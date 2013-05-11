@@ -58,7 +58,7 @@ betrachten.
 \begin{lem}
 Zu einem $\phi=\sum_{k\in I}\frac{a_k}{t^{k}}\in {\phi=\sum_{k\in
 I}\frac{a_k}{t^{k}}|I\subset\N\mbox{ endlich} ,a_k\in \C\}$ ist das
-Minimalpolynom von $\cM_\phi$ explizit gegeben durch 
+Minimalpolynom von $\cM_\phi$ explizit gegeben durch
 \begin{align*}
 P_{\phi}(x,\partial_x) &=(-x^2\partial_x)^{\max(I)} (x\partial_x-1)
    +\sum_{k\in I}k a_k(-x^2\partial_x)^{\max(I)-k} & \in \C[x]<\partial_x>
@@ -135,7 +135,7 @@ Beitrag}}{\underbrace{(-1)^q}}(x^{2q}\partial_x^q
 Wobei hier das \textbf{T.i.Q.} eine Abkürzung für \emph{Therme im Quadranten}
 ist.
 Hier ist ein Term $\epsilon x^{p}\partial_x^{q}$, mit $\epsilon\in \C, p,q
-\in \Z$, im Quadranten von 
+\in \Z$, im Quadranten von
 $\tilde\epsilon x^{\tilde p}\partial_x^{\tilde q}$, mit $\tilde\epsilon\in \C,
 \tilde p,\tilde q \in \Z$, falls $q>\tilde q$ und $p-q<\tilde p - \tilde q$.
 Anschaulich bedeutet das, dass
@@ -298,7 +298,7 @@ L}\cdot(\rho^*P_{\phi}(t,\partial_t))$ gilt, so ist
   &=\cD_{\hat L}/\cD_{\hat
     L}\cdot(\rho^*P_{\phi}(t,\partial_t+\frac{\beta}{t^{\lambda+1}}))
 \\&=\cD_{\hat L}/\cD_{\hat L}\cdot
-    (t^{q+2}(\partial_t+\frac{\beta}{t^{\lambda+1}}))^{q} 
+    (t^{q+2}(\partial_t+\frac{\beta}{t^{\lambda+1}}))^{q}
     (t(\partial_x+\frac{\beta}{t^{\lambda+1}})-(q+1))+(q+1)qa
 \end{align*}
 \end{lem}
@@ -659,8 +659,8 @@ Betrachte zunächst den Vorfaktor vor $t^{-3}$:
 \end{align*}
 und somit
 \begin{align*}
-\overset{(\ref{eq:bedingung1b})}{\Rightarrow} -1&=u_{-1}+\frac{1}{2}
-\\&=u_{-1}+v_{-1}
+\overset{(\ref{eq:bedingung1b})}{\Rightarrow} -1 &=u_{-1}+v_{-1}
+\\ &=u_{-1}+\frac{1}{2}
 \\\Rightarrow u_{-1}&=-\frac{3}{2}
 \end{align*}
 Nun zum allgemeinem Koeffizienten vor $t^{n}$ mit $n>-3$:
@@ -685,13 +685,49 @@ also nach passendem Indexshift $n+2\rightarrow n$ folgt
 \end{align*}
 Zusammen mit $u_{-2}=2i\sqrt{2a}$, $u_{-1}=-\frac{3}{2}$ und
 $v_{-1}=\frac{1}{2}$ sind durch
-\begin{align}
+\begin{align} \label{eq:induktiveFormel}
 v_n &= - u_n = \frac{i}{2\sqrt{2a}}
   ((n-1)u_{n-1} + \sum_{k=0}^{n} v_{k-1}u_{n-k-1}) & \forall n \geq 0
 \end{align}
 die Koeffizienten von $v$ und $u$ vollständig bestimmt.
 
-Somit ergeben sich für $n=0$ die Koeffizienten
+Nun lässt sich diese Zerlegung mit $\sE^{-\psi(t)}$ zurücktwisten und erhalte
+damit die Zerlegung
+\begin{align*}
+\rho^+\cM_{\phi_1} &=
+  \cN_1\otimes\sE^{-\psi(t)}\oplus\cN_2\otimes\sE^{-\psi(t)}
+\\&= (\cD_{\hat L}/\cD_{\hat L}\cdot Q_1\otimes\sE^{-\psi(t)})
+  \oplus(\cD_{\hat L}/\cD_{\hat L}\cdot Q_2\otimes\sE^{-\psi(t)})
+\end{align*}
+und, da $Q_1$ regulär, ist $\cD_{\hat L}/\cD_{\hat L}\cdot
+Q_1\otimes\sE^{-\psi(t)}$ bereits ein Elementarer Meromorpher Zusammenhang.
+Betrachte also noch $\cD_{\hat L}/\cD_{\hat L}\cdot Q_2\otimes\sE^{-\psi(t)}$:
+\begin{align*}
+\cD_{\hat L}/\cD_{\hat L}\cdot Q_2\otimes\sE^{-\psi(t)}
+  &= \cD_{\hat L}/\cD_{\hat L}\cdot Q_2(t,\partial_t-i\sqrt{2a}t^{-2})
+\\&= \cD_{\hat L}/\cD_{\hat L}\cdot (\partial_t
+  \underbracket{-i\sqrt{2a}t^{-2} + u(t)})
+\\&= \cD_{\hat L}/\cD_{\hat L}\cdot (\partial_t + \overbracket{i\sqrt{2a}t^{-2}
+  +\sum_{n=-1}^\infty u_nt^n})
+\\&= \underset{\mbox{regulär}}{\underbrace{
+  \cD_{\hat L}/\cD_{\hat L}\cdot (\partial_t
+  + \sum_{n=-1}^\infty u_nt^n)}}\otimes\sE^{\psi(t)}
+\end{align*}
+Damit ist der Zweite Summant also auch ein Elementarer Meromorpher
+Zusammenhang.
+Also zwelegt sich $\cM$, nach einem pull-back mit $\rho:t\mapsto x=t^2$, in
+\[
+\rho^+\cM_{\phi_1} &= (\cD_{\hat L}/\cD_{\hat L}\cdot Q_1\otimes\sE^{-\psi(t)})
+  \oplus (\cD_{\hat L}/\cD_{\hat L}\cdot (\partial_t
+  + \sum_{n=-1}^\infty u_nt^n)}\otimes\sE^{\psi(t)}) \,.
+\]
+Damit ist die Levelt-Turrittin-Zerlegung vollständig gegeben.
+
+\subsection{Konvergenz der Potenzreihen}
+Nun wollen wir die Potenzreihen $v$ und $u$ noch genauer betrachten, im
+besonderen deren konvergenzverhalten.
+
+Aus (\ref{eq:induktiveFormel}) ergeben sich für $n=0$ die Koeffizienten
 \begin{align*}
 v_{0} &= \frac{i}{2\sqrt{2a}}
   ((-1)u_{-1} + \sum_{k=0}^{0} v_{k-1}u_{-k-1})
@@ -699,37 +735,48 @@ v_{0} &= \frac{i}{2\sqrt{2a}}
 \\&= \frac{i}{2\sqrt{2a}} (\frac{3}{2} - \frac{3}{4})
 \\&= \frac{3i}{8\sqrt{2a}} = -u_{0}
 \end{align*}
-\begin{comment}
-Somit ergeben sich für $n=1$ die Koeffizienten
+\iffalse
+  \begin{comment}
+  Somit ergeben sich für $n=1$ die Koeffizienten
+  \begin{align*}
+  v_1 &= \frac{i}{2\sqrt{2a}}
+    ((1-1)u_{1-1} + \sum_{k=0}^{1} v_{k-1}u_{1-k-1})
+  \\&= \frac{i}{2\sqrt{2a}} (v_{-1}u_{0} + v_{0}u_{-1})
+  \\&= \frac{iv_0}{2\sqrt{2a}} (-v_{-1} + u_{-1})
+  \\&= \frac{3i\cdoti}{2\sqrt{2a}\cdot8\sqrt{2a}} (-\frac{1}{2} - \frac{3}{2})
+  \\&= \frac{-3}{16\cdot2a} (-2)
+  \\&= \frac{3}{16a} = -u_1
+  & \overset{a=\frac{1}{8}}{=} 1.5
+  \end{align*}
+  und für $n=2$ ist
+  \begin{align*}
+  v_2 &=\frac{i}{2\sqrt{2a}} ((2-1)u_{2-1} + \sum_{k=0}^{2} v_{k-1}u_{2-k-1})
+  \\&=\frac{i}{2\sqrt{2a}} (u_{1} + v_{-1}u_{1} + v_{0}u_{0} + v_{1}u_{-1})
+  \\&=\frac{i}{2\sqrt{2a}} (\frac{-3}{16a}
+    + \frac{1}{2}\frac{-3}{16a}
+    + \frac{3i}{8\sqrt{2a}}\frac{-3i}{8\sqrt{2a}}
+    + \frac{3}{16a}\frac{-3}{2})
+  \\&=\frac{i}{2\sqrt{2a}} (-\frac{3}{16a} - \frac{3}{32a} + \frac{9}{8^22a}
+    - \frac{9}{32a})
+  \\&=\frac{i}{2\sqrt{2a}} (-\frac{24}{128a} - \frac{12}{128a} + \frac{9}{128a}
+    - \frac{36}{128a})
+  \\&=\frac{i(-24-12+9-36)}{256a\sqrt{2a}}
+  \\&=\frac{-63i}{256a\sqrt{2a}} = -u_2
+  & \overset{a=\frac{1}{8}}{\approx} -3.9375i
+  \end{align*}
+  \end{comment}
+\fi
+und analog, für $n=1$ und $n=2$
 \begin{align*}
-v_1 &= \frac{i}{2\sqrt{2a}}
-  ((1-1)u_{1-1} + \sum_{k=0}^{1} v_{k-1}u_{1-k-1})
-\\&= \frac{i}{2\sqrt{2a}} (v_{-1}u_{0} + v_{0}u_{-1})
-\\&= \frac{iv_0}{2\sqrt{2a}} (-v_{-1} + u_{-1})
-\\&= \frac{3i\cdoti}{2\sqrt{2a}\cdot8\sqrt{2a}} (-\frac{1}{2} - \frac{3}{2})
-\\&= \frac{-3}{16\cdot2a} (-2)
-\\&= \frac{3}{16a} = -u_1
-& \overset{a=\frac{1}{8}}{=} 1.5
+v_1&= \frac{3}{16a} = -u_1 &\mbox{und}
+  & & v_2&=\frac{-63i}{256a\sqrt{2a}} = -u_2 \,.
 \end{align*}
-und für $n=2$ ist
-\begin{align*}
-v_2 &=\frac{i}{2\sqrt{2a}} ((2-1)u_{2-1} + \sum_{k=0}^{2} v_{k-1}u_{2-k-1})
-\\&=\frac{i}{2\sqrt{2a}} (u_{1} + v_{-1}u_{1} + v_{0}u_{0} + v_{1}u_{-1})
-\\&=\frac{i}{2\sqrt{2a}} (\frac{-3}{16a}
-  + \frac{1}{2}\frac{-3}{16a}
-  + \frac{3i}{8\sqrt{2a}}\frac{-3i}{8\sqrt{2a}}
-  + \frac{3}{16a}\frac{-3}{2})
-\\&=\frac{i}{2\sqrt{2a}} (-\frac{3}{16a} - \frac{3}{32a} + \frac{9}{8^22a}
-  - \frac{9}{32a})
-\\&=\frac{i}{2\sqrt{2a}} (-\frac{24}{128a} - \frac{12}{128a} + \frac{9}{128a}
-  - \frac{36}{128a})
-\\&=\frac{i(-24-12+9-36)}{256a\sqrt{2a}}
-\\&=\frac{-63i}{256a\sqrt{2a}} = -u_2 
-& \overset{a=\frac{1}{8}}{\approx} -3.9375i
-\end{align*}
-\end{comment}
+Die letzten zwei Paare sind für die Berechnung nicht von bedeutung und dienen
+nur dazu, das Programm zu prüfen.
+
 Für $n>0$ gilt $v_{n-1}\overset{(\ref{eq:bedingung1c})}{=}-u_{n-1}$ und damit
-wollen wir die Formel noch weiter vereinfachen:
+wollen wir die Formel noch weiter vereinfachen, um eine Version zu bekommen,
+die sich gut implementieren lässt.
 \begin{align*}
 v_{n} &= \frac{i}{2\sqrt{2a}}
   ((n-1)u_{n-1} + \underbracket{\sum_{k=0}^{n} v_{k-1}u_{n-k-1}})
@@ -746,54 +793,17 @@ v_{n} &= \frac{i}{2\sqrt{2a}}
   + \sum_{k=1}^{n-1} v_{k-1}v_{n-k-1})
 \\&= - \frac{i}{2\sqrt{2a}} ((n+1)v_{n-1} + \sum_{k=1}^{n-1} v_{k-1}v_{n-k-1})
 \end{align*}
-Nun lässt sich diese Zerlegung mit $\sE^{-\psi(t)}$ zurücktwisten und erhalte
-damit die Zerlegung
-\begin{align*}
-\rho^+\cM_{\phi_1} &= 
-  \cN_1\otimes\sE^{-\psi(t)}\oplus\cN_2\otimes\sE^{-\psi(t)}
-\\&= (\cD_{\hat L}/\cD_{\hat L}\cdot Q_1\otimes\sE^{-\psi(t)})
-  \oplus(\cD_{\hat L}/\cD_{\hat L}\cdot Q_2\otimes\sE^{-\psi(t)})
-\end{align*}
-und, da $Q_1$ regulär, ist $\cD_{\hat L}/\cD_{\hat L}\cdot
-Q_1\otimes\sE^{-\psi(t)}$ bereits ein Elementarer Meromorpher Zusammenhang.
-Betrachte also noch $\cD_{\hat L}/\cD_{\hat L}\cdot Q_2\otimes\sE^{-\psi(t)}$:
-\begin{align*}
-\cD_{\hat L}/\cD_{\hat L}\cdot Q_2\otimes\sE^{-\psi(t)}
-  &= \cD_{\hat L}/\cD_{\hat L}\cdot Q_2(t,\partial_t-i\sqrt{2a}t^{-2})
-\\&= \cD_{\hat L}/\cD_{\hat L}\cdot (\partial_t 
-  \underbracket{-i\sqrt{2a}t^{-2} + u(t)})
-\\&= \cD_{\hat L}/\cD_{\hat L}\cdot (\partial_t + \overbracket{i\sqrt{2a}t^{-2} 
-  +\sum_{n=-1}^\infty u_nt^n})
-\\&= \underset{\mbox{regulär}}{\underbrace{ 
-  \cD_{\hat L}/\cD_{\hat L}\cdot (\partial_t
-  + \sum_{n=-1}^\infty u_nt^n)}}\otimes\sE^{\psi(t)}
-\end{align*}
-Damit ist der Zweite Summant also auch ein Elementarer Meromorpher
-Zusammenhang.
-Also zwelegt sich $\cM$, nach einem pull-back mit $\rho:t\mapsto x=t^2$, in
-\[
-\rho^+\cM_{\phi_1} &= (\cD_{\hat L}/\cD_{\hat L}\cdot Q_1\otimes\sE^{-\psi(t)})
-  \oplus (\cD_{\hat L}/\cD_{\hat L}\cdot (\partial_t
-  + \sum_{n=-1}^\infty u_nt^n)}\otimes\sE^{\psi(t)}) \,.
-\]
-Damit ist die Levelt-Turrittin-Zerlegung vollständig gegeben.
-
-\subsection{Konvergenz der Potenzreihen}
-Mittels eines geeignetem Computerprogramms ist es einfach die $v_n$ und $u_n$
-Numerisch zu berechnen. So wird ein geeigneter Quellcode in Anhang
-\ref{anh:Programm} vorgestellt. Mit diesen Programm wurden für verschiedene $a$
-numerisch die Koeffizienten berechnet und in abhängigkeit von $n$ in Abbildung
-\ref{fig:plotKoeffs} dargestellt.
-
+In einer geeigneten Programmiersprache ist es nun einfach die $v_n$ und
+$u_n$ Numerisch zu berechnen. So wird ein geeigneter Quellcode in Anhang
+\ref{anh:Programm} vorgestellt. Mit diesen Programm wurde für verschiedene $a$
+numerisch die Beträge der Koeffizienten berechnet und in abhängigkeit von $n$
+in Abbildung \ref{fig:plotKoeffs} dargestellt.
 \begin{figure}[htbp]
   \centering
   \includegraphics[angle=270,width=\the\textwidth]{../img/koeff.pdf}
   \caption[Koeffizienten in abhängigkeit von $a$]
-   {Hier sind die Beträge der Koeffizienten für unterschiedliche $a$ 
-    angetragen.}
+   {Die Beträge der Koeffizienten für unterschiedliche $a$}
   \label{fig:plotKoeffs}
 \end{figure}
-
-\subsection{Refined Levelt-Turrittin-Theorem}
 
 % vim: set ft=tex :
