@@ -163,7 +163,7 @@
 \myinput{haskell.sty}
 
 \definecolor{myLightGrey}{rgb}{0.9,0.9,0.9}
-\lstdefinestyle{Bash} { 
+\lstdefinestyle{Bash} {
   language=Bash,
   backgroundcolor=\color{myLightGrey},
   keywordstyle=\color{BlueViolet}\bfseries,
@@ -348,12 +348,13 @@
 
 \tableofcontents{}
 
-%\myinput{einleitung.tex}
+\listoffigures
+\begingroup
+\let\clearpage\relax
+\listoftables
+\endgroup
 
-\begin{comment}
-\paragraph{Plan}:
-
-\end{comment}
+\myinput{einleitung.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \mainmatter
@@ -371,6 +372,10 @@
 \myinput{rezept.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\myinput{schluss.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \appendix
 \addcontentsline{toc}{chapter}{Anhang}
 
@@ -380,7 +385,6 @@
 
 %\myinput{anhang-plot-newton-polygon.tex}
 
-\listoffigures
 \nocite{*}
 %\bibliographystyle{dinat}
 %\bibliographystyle{plain}

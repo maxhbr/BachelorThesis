@@ -1,7 +1,7 @@
 %!TeX root = main.tex
 \chapter{DIE Klasse der Fourier-Transformationen}
 In diesem Kapitel werden Beispiele einer speziellen Klasse von $\cD$-Moduln
-diskutiert. Dazu wird im folgendem zu 2 Beispielen unter anderem explizit der
+diskutiert. Dazu wird im folgendem zu einem Beispiel unter anderem explizit der
 Beweis aus \cite{sabbah_cimpa90} zur Levelt-Turrittin-Zerlegung nachvollzogen.
 
 Es wird zunächst ein allgemeines Rezept gegeben, welches zu gegebenem $\phi$
@@ -21,7 +21,7 @@ aus
 \begin{align*}
 \sE^{\phi} &= \cD_{\hat L}/\cD_{\hat L}\cdot (\partial_t-\frac{d}{dt}\phi(t))
 \\&=\cD_{\hat L}/\cD_{\hat L}\cdot (\underset{\in\C[t]\subset\cD_{\hat L}^*}
-    {\underbrace{\mbox{Hauptnenner }}}
+    {\underbrace{\mbox{\textbf{Hauptnenner von $\frac{d}{dt}\phi(t)$ }}}}
   \cdot (\partial_t-\frac{d}{dt}\phi(t)))
 \\&=\cD_{\hat L}/\cD_{\hat L}\cdot ( \underset{=:Q(t,\partial_t)}{\underbrace{
   t^{\max(I)+1} \cdot (\partial_t-\frac{d}{dt}\phi(t))}})
@@ -52,11 +52,20 @@ P_\phi(x,\partial_x):=\cF_Q(x^{-1},-x^2\partial_x) \in \C[t]<\partial_t>
 \]
 \end{enumerate}
 Im folgendem werden wir den zum Minimalpolynom $P_\phi$ assoziierten
-Meromorphen Zusammenhang $\cM_\phi=\cD_{\hat K}/\cD_{\hat K}\cdot P_{\phi}$
+Meromorphen Zusammenhang $\cM_\phi:=\cD_{\hat K}/\cD_{\hat K}\cdot P_{\phi}$
 betrachten.
 
-Wen wir ein spezielles $\phi=\sum_{k\in I}\frac{a_k}{t^{k}}$ betrachten, können
-wir das entstehende $P_\phi$, wie folgt, explizit berechnen
+\begin{lem}
+Zu einem $\phi=\sum_{k\in I}\frac{a_k}{t^{k}}\in {\phi=\sum_{k\in
+I}\frac{a_k}{t^{k}}|I\subset\N\mbox{ endlich} ,a_k\in \C\}$ ist das
+Minimalpolynom von $\cM_\phi$ explizit gegeben durch 
+\begin{align*}
+P_{\phi}(x,\partial_x) &=(-x^2\partial_x)^{\max(I)} (x\partial_x-1)
+   +\sum_{k\in I}k a_k(-x^2\partial_x)^{\max(I)-k} & \in \C[x]<\partial_x>
+\end{align*}
+\end{lem}
+\begin{proof}
+Sei $\phi=\sum_{k\in I}\frac{a_k}{t^{k}}$, so ist
 \begin{align*}
 Q(t,\partial_t) &= t^{\max(I)+1}(\partial_t-\frac{d}{dt}\phi(t))
 \\&=t^{\max(I)+1}\Big(\underset{\in \C[t][t^{-1}]<\partial_t>}{\underbrace{
@@ -82,6 +91,7 @@ P_{\phi}(x,\partial_x) &=\cF_Q(x^{-1},-x^2\partial_x)
    +\sum_{k\in I}k a_k(-x^2\partial_x)^{\max(I)-k}
   & \in \C[x]<\partial_x>
 \end{align*}
+\end{proof}
 Im Anhang \ref{chap:zu-rezept} wird das $(x^2\partial_x)^{k}$ genauer
 diskutiert. Dies führt aber hier an dieser Stelle nicht mehr weiter in die
 gewünschte Richtung.
@@ -96,13 +106,12 @@ so dass
 Es gilt $\cP(\cM_{\phi})=\{\frac{q}{q+1}\}$.
 \end{lem}
 \begin{comment}
-\begin{lem}
-$N((x^2\partial_x)^q)=N(x^{2q}\partial_x^q)$
-\end{lem}
+Allgemeiner? für allgemeine $\phi$??
 \end{comment}
 \begin{proof} \cite[5.b.]{sabbah_Fourier-local}
 Um zu zeigen, dass die Behauptung gilt, formen wir $P_{\phi}$ um und isolieren
-die Monome, die für das Newton-Polygon von bedeutung sind.
+die Monome, die für das Newton-Polygon von bedeutung sind und vernachlässigt
+werden können.
 \begin{align*}
 N\Big(P_{\phi}(x,\partial_x)\Big) &= N\Big(\underbracket{(-x^2\partial_x)^{q}}
   (x\partial_x-1)+qa\Big)
@@ -141,6 +150,7 @@ vernachlässigt werden, wenn das Newton-Polygon gesucht ist.
 \begin{figure}[H] % htbp
 \begin{center}
 \fbox{
+  %TODO: hier kein grid
   \begin{tikzpicture}[scale=.7,descr/.style={fill=white,inner sep=2.5pt}]
   \def\myPoints{}
   \def\myPath{ -- node[descr]{$\frac{q}{q+1}$} (6,5)}
@@ -281,33 +291,26 @@ $\partial_t^{q}(e\otimes 1)$. Damit folgt die Behauptung.
 \begin{comment}
 \begin{lem}
 \cite[Seite 44]{DiplHedwig}
-Wenn $\rho^+\cM_\phi=\cD_{\hat K}/\cD_{\hat
-K}\cdot(\rho^*P_{\phi}(x,\partial_x))$ gilt, so ist
+Wenn $\rho^+\cM_\phi=\cD_{\hat L}/\cD_{\hat
+L}\cdot(\rho^*P_{\phi}(t,\partial_t))$ gilt, so ist
 \begin{align*}
-\cN\bydef\rho^+\cM_\phi\otimes\sE_{\hat K}^\psi
-  &=\cD_{\hat K}/\cD_{\hat
-    K}\cdot(\rho^*P_{\phi}(x,\partial_x+\frac{\beta}{x^{\lambda+1}}))\\
-  &=\cD_{\hat K}/\cD_{\hat
-    K}\cdot(\rho^*P_{\phi}(x,\partial_x+\frac{\beta}{x^{\lambda+1}}))
+\cN\bydef\rho^+\cM_\phi\otimes\sE_{\hat L}^\psi
+  &=\cD_{\hat L}/\cD_{\hat
+    L}\cdot(\rho^*P_{\phi}(t,\partial_t+\frac{\beta}{t^{\lambda+1}}))
+\\&=\cD_{\hat L}/\cD_{\hat L}\cdot
+    (t^{q+2}(\partial_t+\frac{\beta}{t^{\lambda+1}}))^{q} 
+    (t(\partial_x+\frac{\beta}{t^{\lambda+1}})-(q+1))+(q+1)qa
 \end{align*}
 \end{lem}
 \end{comment}
 Zerlege nun wie in  Satz \ref{thm:Split-after-slopes} den Meromorphen
 Zusammenhang $\cN$ in $\cN=\bigoplus_i\cN_i$ wobei $\cN_i$ Meromorphe
-Zusammenhänge mit genau einem Slope.
-
-\begin{comment}
-Wende auf die $\cN_i$ jeweils die Induktion an und erhalte zu jedem (nach
-eventuellem pull-back) eine Zerlegung in reguläre Meromorphe Zusammenhänge.
-Nach dem diese mittels $\sE^{-\psi}_{\hat L}$ zurückgetwistet wurden, sind
-diese immer noch regulär, aber die direkte Summe davon ist isomorph zu
-$\rho^+\cM_{\phi}$.
-%TODO: erst zurücktwisten und dann Induktion!!!!!!!!!!!!!!!!!
-\end{comment}
+Zusammenhänge mit genau einem Slope sind.
 Twiste die $\cN_i$ jeweils mit $\sE^{-\psi}_{\hat L}$ und somit ist dann
 \[
-\rho^+\cM_{\phi}=\bigoplus_i\cN_i\otimes\sE^{-\psi}_{\hat L}
+\rho^+\cM_{\phi}=\bigoplus_i\cN_i\otimes\sE^{-\psi}_{\hat L} \,.
 \]
+Für jeden Summanten lässt sich nun Induktion anwenden.
 
 \section{Spezialfall $\phi_1:=\frac{a}{x}$}
 Als konkreten Fall betrachten wir nun $\cM_{\phi_1}$ bezüglich
@@ -344,23 +347,6 @@ zu $\rho^+\cM_{\phi_1}$:
   &=t^{4}\partial_t^2+t^{3}\partial_t-2t^{3}\partial_t+2a\\
   &=t^{4}\partial_t^2-t^{3}\partial_t+2a
 \end{align*}
-\iffalse
-  \begin{comment}
-  \begin{align*}
-  \rho^*P_{\phi_1}(x,\partial_x)
-    &=-\frac{1}{2}t^{3}\partial_t
-      (\frac{1}{2}t\partial_t-1)+a\\
-    &=-\frac{1}{4}t^{3}\underbracket{\partial_tt}\partial_t
-      +\frac{1}{2}t^{3}\partial_t+a\\
-    &=-\frac{1}{4}t^{3}\overbracket{(t\partial_t+1)}\partial_t
-      +\frac{1}{2}t^{3}\partial_t+a\\
-    &=-\frac{1}{4}t^{4}\partial_t^2
-      \underbracket{-\frac{1}{4}t^{3}\partial_t+\frac{1}{2}t^{3}\partial_t}+a\\
-    &=-\frac{1}{4}t^{4}\partial_t^2
-      \overbracket{+\frac{1}{4}t^{3}\partial_t}+a
-  \end{align*}
-  \end{comment}
-\fi
 und erhalte einen Meromorphen Zusammenhang $\rho^+\cM_{\phi_1}=\cD_{\hat
 K}/\cD_{\hat K}\cdot\rho^*P_{\phi_1}$ mit genau dem Slope
 $1=\frac{1}{1}=:\frac{\lambda_0}{\lambda_1}$.
@@ -377,20 +363,17 @@ $1=\frac{1}{1}=:\frac{\lambda_0}{\lambda_1}$.
 \caption{Newton Polygon zu $\rho^*P_{\phi_1}$}
 \end{figure}
 
-\begin{comment}
-TODO: Namenskollision: $\hat L$ und $L(s_0,s_1)$.
-\end{comment}
-Definiere die Linearform $L(s_0,s_1):=\lambda_0s_0+\lambda_1s_1=s_0+s_1$.
-Berechne nun die \emph{Determinanten Gleichung} $\sigma_L(\rho^*P_{\phi_1})\in
-\hat L[\xi]$ von $\rho^*P_{\phi_1}$.
+Definiere die Linearform $\ell(s_0,s_1):=\lambda_0s_0+\lambda_1s_1=s_0+s_1$.
+Berechne nun die \emph{Determinanten Gleichung}
+$\sigma_\ell(\rho^*P_{\phi_1})\in \hat L[\xi]$ von $\rho^*P_{\phi_1}$.
 \begin{align*}
-\sigma_L(\rho^*P_{\phi_1})
+\sigma_\ell(\rho^*P_{\phi_1})
   &= \sum_{\{(i,j)\mid 2i-j=0\}}\alpha_{ij}x^{j}\xi^i\\
   &= t^4\xi^2 + 2a
 \end{align*}
 Setze $\theta:=t^{\lambda_0+\lambda_1}\xi^{\lambda_1}=t^2\xi$ so erhalten wir
 \begin{align*}
-\sigma_L(\rho^*P_{\phi_1}) &= \theta^2 + 2a
+\sigma_\ell(\rho^*P_{\phi_1}) &= \theta^2 + 2a
 \end{align*}
 schreiben, welches wir als nächstes faktorisieren
 \begin{align*}
@@ -398,14 +381,6 @@ schreiben, welches wir als nächstes faktorisieren
   &=(\theta-\underset{=:\beta_0}{\underbrace{i\sqrt{2a}}})
     (\theta+i\sqrt{2a})
 \end{align*}
-\begin{comment}
-Definiere $R(t):=(\beta_0/(\lambda_0+1))t^{\lambda_0+1}=i\sqrt{2a}t^2$ und wir
-wollen ein $\psi(t)$ so dass
-\[
-\frac{\partial R(t^{-1})}{\partial t} = \psi'(t)
-\]
-erhalte $\psi'(x)=\beta_0(x^{-1})^{\lambda_0}$
-\end{comment}
 \begin{comment}
 TODO: korregiere allgemeinen Part, falls richtig!
 \end{comment}
@@ -529,10 +504,7 @@ jeweils den Grad $1$ haben, um eine nichttriviale Zerlegung zu bekommen.
 %TODO: move to theorie-teil??
 Ist $Q_1$ und $Q_2$ so ein solches Paar, dann ist für $\sigma\in \hat K$ das
 Paar $\bar Q_1:=Q_1\cdot \sigma^{-1}$ und $\bar Q_2:=\sigma\cdot Q_2$ ebenfalls
-eine Zerlegung.
-\end{beo}
-\begin{proof}
-Es ist klar, dass die Beobachtung korrekt ist, denn
+eine Zerlegung, denn
 \[
 P'=Q_1\cdot Q_2=
 \underset{\in\cD_{\hat L}}{\underbrace{
@@ -544,7 +516,7 @@ P'=Q_1\cdot Q_2=
 }}
 =\bar Q_1 \cdot \bar Q_2 \,.
 \]
-\end{proof}
+\end{beo}
 Mit der Beobachtung \ref{beo:paarweise-verschieben} ist klar, dass wir
 den Faktor vor den $\partial_t$ in $Q_2$ frei wählen können. Setze diesen
 also allgemein auf $1$ und erhalte
@@ -766,32 +738,62 @@ v_{n} &= \frac{i}{2\sqrt{2a}}
   + (\sum_{k=1}^{n-1} v_{k-1}\underbracket{u_{n-k-1}}) + v_{n-1}u_{-1}})
 \\&\overset{(\ref{eq:bedingung1c})}{=} \frac{i}{2\sqrt{2a}}
   (\overbracket{-(n-1)v_{n-1}} + \underbracket{v_{-1}\overbracket{(-v_{n-1})}}
-  + (\sum_{k=1}^{n-1} v_{k-1}\overbracket{(-v_{n-k-1})} + \underbracket{v_{n-1}u_{-1}})
+  + (\sum_{k=1}^{n-1} v_{k-1}\overbracket{(-v_{n-k-1})}
+  + \underbracket{v_{n-1}u_{-1}})
 \\&= \frac{i}{2\sqrt{2a}} (-(n-1)v_{n-1} \overbracket{-\frac{1}{2}v_{n-1}}
   - \sum_{k=1}^{n-1} v_{k-1}v_{n-k-1} \overbracket{- \frac{3}{2} v_{n-1}})
 \\&= - \frac{i}{2\sqrt{2a}} ((n-1+\frac{1}{2}+\frac{3}{2})v_{n-1}
   + \sum_{k=1}^{n-1} v_{k-1}v_{n-k-1})
 \\&= - \frac{i}{2\sqrt{2a}} ((n+1)v_{n-1} + \sum_{k=1}^{n-1} v_{k-1}v_{n-k-1})
 \end{align*}
-
-\begin{comment}
-$\cdots$
-\end{comment}
-
 Nun lässt sich diese Zerlegung mit $\sE^{-\psi(t)}$ zurücktwisten und erhalte
-damit die gesuchte Zerlegung
+damit die Zerlegung
 \begin{align*}
-\rho^+\cM_{\phi_1} &= \cN_1\otimes\sE^{-\psi(t)}\oplus\cN_2\otimes\sE^{-\psi(t)}
-\\&= (\cD_{\hat L}/\cD_{\hat L}\cdot Q_1(t,\partial_t)\otimes\sE^{-\psi(t)})
-  \oplus(\cD_{\hat L}/\cD_{\hat L}\cdot Q_2(t,\partial_t)\otimes\sE^{-\psi(t)})
-\\&= (\cD_{\hat L}/\cD_{\hat L}\cdot Q_1(t,\partial_t-i\sqrt{2a}t^{-2}))
-  \oplus(\cD_{\hat L}/\cD_{\hat L}\cdot Q_2(t,\partial_t-i\sqrt{2a}t^{-2}))
-\\&= (\cD_{\hat L}/\cD_{\hat L}\cdot (\partial_t-i\sqrt{2a}t^{-2} + v(t)))
-  \oplus(\cD_{\hat L}/\cD_{\hat L}\cdot (\partial_t-i\sqrt{2a}t^{-2} + u(t)))
+\rho^+\cM_{\phi_1} &= 
+  \cN_1\otimes\sE^{-\psi(t)}\oplus\cN_2\otimes\sE^{-\psi(t)}
+\\&= (\cD_{\hat L}/\cD_{\hat L}\cdot Q_1\otimes\sE^{-\psi(t)})
+  \oplus(\cD_{\hat L}/\cD_{\hat L}\cdot Q_2\otimes\sE^{-\psi(t)})
 \end{align*}
+und, da $Q_1$ regulär, ist $\cD_{\hat L}/\cD_{\hat L}\cdot
+Q_1\otimes\sE^{-\psi(t)}$ bereits ein Elementarer Meromorpher Zusammenhang.
+Betrachte also noch $\cD_{\hat L}/\cD_{\hat L}\cdot Q_2\otimes\sE^{-\psi(t)}$:
+\begin{align*}
+\cD_{\hat L}/\cD_{\hat L}\cdot Q_2\otimes\sE^{-\psi(t)}
+  &= \cD_{\hat L}/\cD_{\hat L}\cdot Q_2(t,\partial_t-i\sqrt{2a}t^{-2})
+\\&= \cD_{\hat L}/\cD_{\hat L}\cdot (\partial_t 
+  \underbracket{-i\sqrt{2a}t^{-2} + u(t)})
+\\&= \cD_{\hat L}/\cD_{\hat L}\cdot (\partial_t + \overbracket{i\sqrt{2a}t^{-2} 
+  +\sum_{n=-1}^\infty u_nt^n})
+\\&= \underset{\mbox{regulär}}{\underbrace{ 
+  \cD_{\hat L}/\cD_{\hat L}\cdot (\partial_t
+  + \sum_{n=-1}^\infty u_nt^n)}}\otimes\sE^{\psi(t)}
+\end{align*}
+Damit ist der Zweite Summant also auch ein Elementarer Meromorpher
+Zusammenhang.
+Also zwelegt sich $\cM$, nach einem pull-back mit $\rho:t\mapsto x=t^2$, in
+\[
+\rho^+\cM_{\phi_1} &= (\cD_{\hat L}/\cD_{\hat L}\cdot Q_1\otimes\sE^{-\psi(t)})
+  \oplus (\cD_{\hat L}/\cD_{\hat L}\cdot (\partial_t
+  + \sum_{n=-1}^\infty u_nt^n)}\otimes\sE^{\psi(t)}) \,.
+\]
+Damit ist die Levelt-Turrittin-Zerlegung vollständig gegeben.
 
-\begin{comment}
-\subsection{Sabah's refined Levelt-Turrittin-Zerlegung für $\phi_1$}
-\end{comment}
+\subsection{Konvergenz der Potenzreihen}
+Mittels eines geeignetem Computerprogramms ist es einfach die $v_n$ und $u_n$
+Numerisch zu berechnen. So wird ein geeigneter Quellcode in Anhang
+\ref{anh:Programm} vorgestellt. Mit diesen Programm wurden für verschiedene $a$
+numerisch die Koeffizienten berechnet und in abhängigkeit von $n$ in Abbildung
+\ref{fig:plotKoeffs} dargestellt.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[angle=270,width=\the\textwidth]{../img/koeff.pdf}
+  \caption[Koeffizienten in abhängigkeit von $a$]
+   {Hier sind die Beträge der Koeffizienten für unterschiedliche $a$ 
+    angetragen.}
+  \label{fig:plotKoeffs}
+\end{figure}
+
+\subsection{Refined Levelt-Turrittin-Theorem}
 
 % vim: set ft=tex :
