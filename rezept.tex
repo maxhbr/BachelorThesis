@@ -212,64 +212,65 @@ Setze $\theta=t^{\lambda_0+\lambda_1}\xi^{\lambda_1}=t^{q+1}\xi$ so können wir
 \end{align*}
 schreiben, welches wir als nächsten Schritt faktorisieren
 \[
-\sigma_L(\rho^*P_\phi)=\epsilon\prod_{\beta}(\theta-\beta)^{\gamma_\beta}\,.
+\sigma_L(\rho^*P_\phi)=\epsilon\prod_{\beta\mbox{ Nullstelle}}(\theta-\beta)^{\gamma_\beta}\,.
 \]
 Wobei $\epsilon\in\C^\times$ eine Konstante ist.
-Sei $\beta_0$  eine der Nullstellen.
+Sei $\beta$  eine der Nullstellen.
 Da $\ord_\ell(\rho^*P_\phi)=0$ und der einzige Slope von $\rho^*P_\phi$ nicht
 gleich $0$ ist, gilt offensichtlich, dass $\alpha_0\neq0$. Also ist $0$ keine
 Nullstelle von $\sigma_L(\rho^*P_\phi)$.
-Setze $\psi(x):=(\beta_0/\lambda_0)t^{-\lambda_0}=(\beta_0/q)t^{-q}$ und
+Setze $\psi(x):=(\beta/\lambda_0)t^{-\lambda_0}=(\beta/q)t^{-q}$ und
 betrachte
 \begin{align*}
-\cN:=\rho^+\cM_\phi\otimes\sE_{\hat L}^\psi
-  &= \cD_{\hat L}/\cD_{\hat L}\cdot(\rho^*P_{\phi})\otimes\sE_{\hat L}^\psi \,.
+\cN:=\rho^+\cM_\phi\otimes_{\hat L}\sE_{\hat L}^\psi
+  &= \cD_{\hat L}/\cD_{\hat L}\cdot(\rho^*P_{\phi})
+    \otimes_{\hat L}\sE_{\hat L}^\psi \,.
 \end{align*}
 \begin{lem}
-Sei $e$ ein zyklischer Vektor zu $\rho^+\cM_\phi$, so ist $e\otimes
+Sei $\bme$ ein zyklischer Vektor zu $\rho^+\cM_\phi$, so ist $\bme\otimes
 \underset{\in\hat L}{\underbrace{1}}\in\cN$ ein zyklischer Vektor für
-$\cN\bydef\rho^+\cM_\phi\otimes\sE_{\hat L}^\psi$.
+$\cN\bydef\rho^+\cM_\phi\otimes_{\hat L}\sE_{\hat L}^\psi$.
 \end{lem}
 \begin{proof}
-Es sei $e$ ein zyklischer Vektor von $\rho^+\cM_{\phi_1}$.
+Es sei $\bme$ ein zyklischer Vektor von $\rho^+\cM_{\phi}$.
 Da der Grad von $\rho^*P_{\phi}$ gleich $q+1$ ist, ist auch die Dimension von
 $\rho^+\cM$ gleich $q+1$. Damit ist auch $\dim_K\cN=q+1$, also reicht zu
-zeigen, dass $e\otimes 1$, $\partial_t(e\otimes 1)$, $\partial_t^2(e\otimes
-1)$, ,\dots, $\partial_t^{q}(e\otimes 1)$ ein linear unabhängiges System ist.
-Es gilt
+zeigen, dass $\bme\otimes 1$, $\partial_t(\bme\otimes 1)$,
+$\partial_t^2(\bme\otimes 1)$, ,\dots, $\partial_t^{q}(\bme\otimes 1)$ ein
+linear unabhängiges System ist.  Es gilt
 \begin{align*}
-\partial_t(e\otimes 1) &= (\partial_t e)\otimes 1 + t\otimes \partial_t 1\\
-  &= (\partial_t e)\otimes 1 + e\otimes \psi'(t)\\
-  &= (\partial_t e)\otimes 1 +  \psi'(t)(e\otimes 1)\\
-\partial_t^2(e\otimes 1) &= \partial_t((\partial_t e)\otimes 1 +
-    \psi'(t)(e\otimes 1))\\
-  &= (\partial_t^2 e)\otimes 1 + (\partial_t e)\otimes \psi'(t)
-  + \psi''(t)(e\otimes 1)
-  + \psi'(t)((\partial_t e)\otimes 1 + e\otimes \psi'(t))\\
-  &= (\partial_t^2 e)\otimes 1
-  + \psi'(t)(\partial_t e)\otimes 1
-  + \psi''(t)(e\otimes 1)
-  + \psi'(t)(\partial_t e)\otimes 1
-  + \psi'(t)^2(e\otimes 1)\\
-  &= (\partial_t^2 e)\otimes 1
-  + 2\psi'(t)(\partial_t e)\otimes 1
-  + (\psi''(t) + \psi'(t)^2)(e\otimes 1)\\
+\partial_t(\bme\otimes 1) &= (\partial_t \bme)\otimes 1 + t\otimes \partial_t 1\\
+  &= (\partial_t \bme)\otimes 1 + \bme\otimes \psi'(t)\\
+  &= (\partial_t \bme)\otimes 1 +  \psi'(t)(\bme\otimes 1)\\
+\partial_t^2(\bme\otimes 1) &= \partial_t((\partial_t \bme)\otimes 1 +
+    \psi'(t)(\bme\otimes 1))\\
+  &= (\partial_t^2 \bme)\otimes 1 + (\partial_t \bme)\otimes \psi'(t)
+  + \psi''(t)(\bme\otimes 1)
+  + \psi'(t)((\partial_t \bme)\otimes 1 + \bme\otimes \psi'(t))\\
+  &= (\partial_t^2 \bme)\otimes 1
+  + \psi'(t)(\partial_t \bme)\otimes 1
+  + \psi''(t)(\bme\otimes 1)
+  + \psi'(t)(\partial_t \bme)\otimes 1
+  + \psi'(t)^2(\bme\otimes 1)\\
+  &= (\partial_t^2 \bme)\otimes 1
+  + 2\psi'(t)(\partial_t \bme)\otimes 1
+  + (\psi''(t) + \psi'(t)^2)(\bme\otimes 1)\\
   &~\vdots\\
-\partial_t^{q}(e\otimes 1) &= (\partial_t^q e)\otimes 1
-  + \lambda_{q-1}(\partial_t^{q-1} e)\otimes 1
+\partial_t^{q}(\bme\otimes 1) &= (\partial_t^q \bme)\otimes 1
+  + \lambda_{q-1}(\partial_t^{q-1} \bme)\otimes 1
   +\dots
-  + \lambda_{1}(\partial_t e)\otimes 1
-  + \lambda_0(e\otimes 1)\\
+  + \lambda_{1}(\partial_t \bme)\otimes 1
+  + \lambda_0(\bme\otimes 1)\\
 \end{align*}
 und somit ist dann
 \[
 \begin{pmatrix}
-e\otimes 1\\
-\partial_t(e\otimes 1)\\
-\partial_t^2(e\otimes 1)\\
+\bme\otimes 1\\
+\partial_t(\bme\otimes 1)\\
+\partial_t^2(\bme\otimes 1)\\
 \vdots\\
-\partial_t^{q-1}(e\otimes 1)\\
-\partial_t^{q}(e\otimes 1)\\
+\partial_t^{q-1}(\bme\otimes 1)\\
+\partial_t^{q}(\bme\otimes 1)\\
 \end{pmatrix}
 =
 \begin{pmatrix}
@@ -281,18 +282,19 @@ e\otimes 1\\
 \lambda_0 & \lambda_1 & \cdots & \cdots & \lambda_{q-1} & 1\\
 \end{pmatrix}
 \begin{pmatrix}
-e\otimes 1\\
-(\partial_t e)\otimes 1\\
-(\partial_t^{2}e)\otimes 1\\
+\bme\otimes 1\\
+(\partial_t \bme)\otimes 1\\
+(\partial_t^{2}\bme)\otimes 1\\
 \vdots\\
-(\partial_t^{q-1}e)\otimes 1\\
-(\partial_t^{q}e)\otimes 1\\
+(\partial_t^{q-1}\bme)\otimes 1\\
+(\partial_t^{q}\bme)\otimes 1\\
 \end{pmatrix}
 \]
-Da bekanntlich $e\otimes1$, $(\partial_t e)\otimes 1$, $(\partial_t^{2}e)\otimes
-1$,\dots, $(\partial_t^{q}e)\otimes 1$ linear unabhängig sind, gilt dies auch
-für $e\otimes 1$, $\partial_t(e\otimes 1)$, $\partial_t^2(e\otimes 1)$, ,\dots,
-$\partial_t^{q}(e\otimes 1)$. Damit folgt die Behauptung.
+Da bekanntlich $\bme\otimes1$, $(\partial_t \bme)\otimes 1$,
+$(\partial_t^{2}\bme)\otimes 1$,\dots, $(\partial_t^{q}\bme)\otimes 1$ linear
+unabhängig sind, gilt dies auch für $\bme\otimes 1$, $\partial_t(\bme\otimes
+1)$, $\partial_t^2(\bme\otimes 1)$, ,\dots, $\partial_t^{q}(\bme\otimes 1)$.
+Damit folgt die Behauptung.
 \end{proof}
 \begin{comment}
 \begin{lem}
@@ -314,16 +316,16 @@ Zusammenhang $\cN$ in $\cN=\bigoplus_i\cN_i$ wobei $\cN_i$ Meromorphe
 Zusammenhänge mit genau einem Slope sind.
 Twiste die $\cN_i$ jeweils mit $\sE^{-\psi}_{\hat L}$ und somit ist dann
 \[
-\rho^+\cM_{\phi}=\bigoplus_i\cN_i\otimes\sE^{-\psi}_{\hat L} \,.
+\rho^+\cM_{\phi}=\bigoplus_i\cN_i\otimes_{\hat L}\sE^{-\psi}_{\hat L} \,.
 \]
 Für jeden Summanten lässt sich nun Induktion anwenden.
 
-\section{Levelt-Turrittin-Zerlegung für $\cM_{\phi_1}$ mit
+\section{Levelt-Turrittin-Zerlegung für $\cM_{\phi}$ mit
   $\phi_1:=\frac{a}{x}$}
-Als konkreten Fall betrachten wir nun $\cM_{\phi_1}$ bezüglich
+Als konkreten Fall betrachten wir nun $\cM_{\phi}$ bezüglich
 $\phi_1:=\frac{a}{x}$. Es ist das zugehörigen Minimalpolynom gegeben durch
 \begin{align*}
-P_{\phi_1}(x,\partial_x) &=-x^2\partial_x (x\partial_x-1)+a
+P_{\phi}(x,\partial_x) &=-x^2\partial_x (x\partial_x-1)+a
 \\&=-x^2\underbracket{\partial_xx}\partial_x+x^2\partial_x+a
 \\&=\underbracket{-x^2\overbracket{(x\partial_x+1)}\partial_x} + x^2\partial_x
   + a
@@ -331,31 +333,31 @@ P_{\phi_1}(x,\partial_x) &=-x^2\partial_x (x\partial_x-1)+a
 \\&=-x^3\partial_x^2+a
 \end{align*}
 Erhalte daraus das Newton-Polygon mit den Slopes
-$\cP(\cM_{\phi_1})=\{\frac{1}{2}\}$.
+$\cP(\cM_{\phi})=\{\frac{1}{2}\}$.
 \begin{figure}[H] % htbp
 \begin{center}
 \fbox{
   \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
   \def\myPoints{0/0,2/1}
   \def\myPath{ -- node[descr]{$\frac{1}{2}$} (2,1)}
-  \myPlotFunction{\myPoints}{\myPath}{2}{0}{1}{$N(P_{\phi_1})$}
+  \myPlotFunction{\myPoints}{\myPath}{2}{0}{1}{$N(P_{\phi})$}
   \end{tikzpicture}
 }
 \end{center}
-\caption{Newton Polygon zu $P_{\phi_1}$}
+\caption{Newton Polygon zu $P_{\phi}$}
 \end{figure}
-Berechne nun zu $\rho:t\mapsto x:=-2t^2$ ein Minimalpolynom $\rho^*P_{\phi_1}$
-zu $\rho^+\cM_{\phi_1}$:
+Berechne nun zu $\rho:t\mapsto x:=-2t^2$ ein Minimalpolynom $\rho^*P_{\phi}$
+zu $\rho^+\cM_{\phi}$:
 \begin{align*}
-\rho^*P_{\phi_1}(x,\partial_x)
+\rho^*P_{\phi}(x,\partial_x)
   &=t^{3}\partial_t(t\partial_t-2)+2a\\
   &=t^{3}\underbracket{\partial_tt}\partial_t-2t^{3}\partial_t+2a\\
   &=t^{3}\overbracket{(t\partial_t+1)}\partial_t-2t^{3}\partial_t+2a\\
   &=t^{4}\partial_t^2+t^{3}\partial_t-2t^{3}\partial_t+2a\\
   &=t^{4}\partial_t^2-t^{3}\partial_t+2a
 \end{align*}
-und erhalte einen Meromorphen Zusammenhang $\rho^+\cM_{\phi_1}=\cD_{\hat
-K}/\cD_{\hat K}\cdot\rho^*P_{\phi_1}$ mit genau dem Slope
+und erhalte einen Meromorphen Zusammenhang $\rho^+\cM_{\phi}=\cD_{\hat
+K}/\cD_{\hat K}\cdot\rho^*P_{\phi}$ mit genau dem Slope
 $1=\frac{1}{1}=:\frac{\lambda_0}{\lambda_1}$.
 \begin{figure}[H]
 \begin{center}
@@ -363,87 +365,86 @@ $1=\frac{1}{1}=:\frac{\lambda_0}{\lambda_1}$.
   \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
   \def\myPoints{0/0,1/2,2/2}
   \def\myPath{ -- node[descr]{$1$} (2,2)}
-  \myPlotFunction{\myPoints}{\myPath}{2}{0}{2}{$N(\rho^*P_{\phi_1})$}
+  \myPlotFunction{\myPoints}{\myPath}{2}{0}{2}{$N(\rho^*P_{\phi})$}
   \end{tikzpicture}
 }
 \end{center}
-\caption{Newton Polygon zu $\rho^*P_{\phi_1}$}
+\caption{Newton Polygon zu $\rho^*P_{\phi}$}
 \end{figure}
 
 Definiere die Linearform $\ell(s_0,s_1):=\lambda_0s_0+\lambda_1s_1=s_0+s_1$.
 Berechne nun die \emph{Determinanten Gleichung}
-$\sigma_\ell(\rho^*P_{\phi_1})\in \hat L[\xi]$ von $\rho^*P_{\phi_1}$.
+$\sigma_\ell(\rho^*P_{\phi})\in \hat L[\xi]$ von $\rho^*P_{\phi}$.
 \begin{align*}
-\sigma_\ell(\rho^*P_{\phi_1})
+\sigma_\ell(\rho^*P_{\phi})
   &= \sum_{\{(i,j)\mid 2i-j=0\}}\alpha_{ij}x^{j}\xi^i\\
   &= t^4\xi^2 + 2a
 \end{align*}
 Setze $\theta:=t^{\lambda_0+\lambda_1}\xi^{\lambda_1}=t^2\xi$ so erhalten wir
 \begin{align*}
-\sigma_\ell(\rho^*P_{\phi_1}) &= \theta^2 + 2a
+\sigma_\ell(\rho^*P_{\phi}) &= \theta^2 + 2a
 \end{align*}
 schreiben, welches wir als nächstes faktorisieren
 \begin{align*}
-\sigma_L(\rho^*P_{\phi_1}) &= \theta^2+2a\\
-  &=(\theta-\underset{=:\beta_0}{\underbrace{i\sqrt{2a}}})
+\sigma_L(\rho^*P_{\phi}) &= \theta^2+2a\\
+  &=(\theta-\underset{=:\beta}{\underbrace{i\sqrt{2a}}})
     (\theta+i\sqrt{2a})
 \end{align*}
-\begin{comment}
-TODO: korregiere allgemeinen Part, falls richtig!
-\end{comment}
-Setze $\psi(x):=(\beta_0/\lambda_0)t^{-\lambda_0}=i\sqrt{2a}t^{-1}$ und
-betrachte den Twist $\cN:=\rho^+\cM_{\phi_1}\otimes\sE_{\hat K}^\psi$ von
+Setze $\psi(x):=(\beta/\lambda_0)t^{-\lambda_0}=i\sqrt{2a}t^{-1}$ und
+betrachte den Twist $\cN:=\rho^+\cM_{\phi}\otimes\sE^\psi$ von
 $\cM$.
-Es ist $e\otimes 1$ ein zyklischer Vektor, wobei $e$ ein zyklischer Vektor von
-$\rho^+\cM$ ist.
+Es ist $\bme\otimes 1$ ein zyklischer Vektor, wobei $\bme$ ein zyklischer
+Vektor von $\rho^+\cM$ ist.
 Somit existieren $a_0(t)$ und $a_1(t)$ in $\hat L$, so dass
 \[
-0=\partial_t^2 (e\otimes 1) + (a_1(t)\partial_t + a_0(t)) e\otimes 1
+0=\partial_t^2 (\bme\otimes 1) + (a_1(t)\partial_t + a_0(t)) \bme\otimes 1
 \]
 und damit ist dann $\cN=\cD/\cD\cdot(\partial_t^2+a_1(t)\partial_t+a_0(t))$.
 Es ist
 \begin{align*}
-\partial_t^2(e\otimes 1) &=\partial_t(\underbracket{\partial_t(e\otimes 1)})\\
-  &= \partial_t(\overbracket{(\partial_te)\otimes 1
-    + e\otimes \psi'(t)})\\
-  &= (\underbracket{\partial_t^2 e})\otimes 1
-    + \underbracket{(\partial_t e)\otimes \psi'(t)
-    +               (\partial_t e)\otimes \psi'(t)}
-    + e\otimes\underset{\in K}{\underbrace{((\frac{\partial}{\partial t}
+\partial_t^2(\bme\otimes 1) 
+  &=\partial_t(\underbracket{\partial_t(\bme\otimes 1)})\\
+  &= \partial_t(\overbracket{(\partial_t\bme)\otimes 1
+    + \bme\otimes \psi'(t)})\\
+  &= (\underbracket{\partial_t^2 \bme})\otimes 1
+    + \underbracket{(\partial_t \bme)\otimes \psi'(t)
+    +               (\partial_t \bme)\otimes \psi'(t)}
+    + \bme\otimes\underset{\in K}{\underbrace{((\frac{\partial}{\partial t}
     + \psi'(t))\psi'(t))}}\\
-  &= \underbracket{(\overbracket{(t^{-1}\partial_t - 2at^{-4}) e})\otimes 1}
-    + \overbracket{2\psi'(t) (\partial_t e)\otimes 1}
-    + \underbracket{(\psi''(t) + \psi'(t)^2)e\otimes 1}\\
+  &= \underbracket{(\overbracket{(t^{-1}\partial_t - 2at^{-4}) \bme})\otimes 1}
+    + \overbracket{2\psi'(t) (\partial_t \bme)\otimes 1}
+    + \underbracket{(\psi''(t) + \psi'(t)^2)\bme\otimes 1}\\
   &= \overbracket{
-      (t^{-1}\partial_t e)\otimes 1
-      - 2at^{-4} e\otimes 1
+      (t^{-1}\partial_t \bme)\otimes 1
+      - 2at^{-4} \bme\otimes 1
     }
-    + 2\psi'(t) (\partial_t e)\otimes 1 + \overbracket{
-      ( \psi''(t) e\otimes 1
-      + \psi'(t)^2 e\otimes 1
+    + 2\psi'(t) (\partial_t \bme)\otimes 1 + \overbracket{
+      ( \psi''(t) \bme\otimes 1
+      + \psi'(t)^2 \bme\otimes 1
     }\\
-  &= (t^{-1} + 2\psi'(t)) \underbracket{(\partial_t e)\otimes 1}
-    + (- 2at^{-4} + \psi''(t) + \psi'(t)^2) e\otimes 1 \\
-  &= (t^{-1} + 2\psi'(t))\overbracket{(\partial_t (e\otimes 1)
-    - e\otimes \psi'(t))}+ (- 2at^{-4} + \psi''(t) + \psi'(t)^2) e\otimes 1 \\
+  &= (t^{-1} + 2\psi'(t)) \underbracket{(\partial_t \bme)\otimes 1}
+    + (- 2at^{-4} + \psi''(t) + \psi'(t)^2) \bme\otimes 1 \\
+  &= (t^{-1} + 2\psi'(t))\overbracket{(\partial_t (\bme\otimes 1)
+    - \bme\otimes \psi'(t))}+ (- 2at^{-4} + \psi''(t) + \psi'(t)^2) 
+    \bme\otimes 1 \\
   &\begin{aligned}
-    &= (t^{-1} + 2\psi'(t))\partial_t (e\otimes 1)
-    - (\psi'(t) t^{-1} + 2\psi'(t)^2)e\otimes 1\\
-    &\qquad + (- 2at^{-4} + \psi''(t) + \psi'(t)^2) e\otimes 1 \\
+    &= (t^{-1} + 2\psi'(t))\partial_t (\bme\otimes 1)
+    - (\psi'(t) t^{-1} + 2\psi'(t)^2)\bme\otimes 1\\
+    &\qquad + (- 2at^{-4} + \psi''(t) + \psi'(t)^2) \bme\otimes 1 \\
   \end{aligned} \\
   &= \Big((t^{-1} + 2\psi'(t))\partial_t
     - \psi'(t) t^{-1} - 2\psi'(t)^2 - 2at^{-4} + \psi''(t)
-    + \psi'(t)^2\Big) e\otimes 1 \\
+    + \psi'(t)^2\Big) \bme\otimes 1 \\
   &= \Big((t^{-1} + 2\psi'(t))\partial_t
     - \psi'(t) t^{-1} - 2at^{-4} + \psi''(t)
-    - \psi'(t)^2\Big) e\otimes 1\\
+    - \psi'(t)^2\Big) \bme\otimes 1\\
 \end{align*}
 also
 \begin{align*}
 0 &= \Big( \underset{=:P'}{\underbrace{
     \partial_t^2 - \big(t^{-1} + 2\psi'(t)\big)\partial_t
     + \psi'(t) t^{-1} + 2at^{-4} -\psi''(t)
-    + \psi'(t)^2 }} \Big) e\otimes 1
+    + \psi'(t)^2 }} \Big) \bme\otimes 1
 \end{align*}
 und somit mit $\psi(t)=i\sqrt{2a}t^{-1}$ ist $\psi'(t)=-i\sqrt{2a}t^{-2}$ und
 $\psi''(t)=2i\sqrt{2a}t^{-3}$. Also durch Einsetzen ergibt sich
@@ -621,7 +622,7 @@ anwenden wollen: %TODO: quelle? formel?
 \\&= \sum_{n=-3}^\infty \Big( \sum_{k=0}^{n+3} v_{k-1} u_{n-k+1} \Big) t^{n}
 \end{align*}
 Wenn wir auch diese Rechnung in (\ref{eq:schritt300}) integrieren, erhalten wir
-\begin{equation} \label{eq:schritt300}
+\begin{equation} \label{eq:schritt400}
   \begin{aligned}
 Q_1\cdot Q_2&=\partial_t^2 + \sum_{n=-2}^\infty (u_n+v_n)t^n \partial_t
   + \underbracket{\sum_{n=-3}^\infty (n+1)u_{n+1}t^{n}
@@ -701,7 +702,7 @@ die Koeffizienten von $v$ und $u$ vollständig bestimmt.
 Nun lässt sich diese Zerlegung mit $\sE^{-\psi(t)}$ zurücktwisten und erhalte
 damit die Zerlegung
 \begin{align*}
-\rho^+\cM_{\phi_1} &=
+\rho^+\cM_{\phi} &=
   \cN_1\otimes\sE^{-\psi(t)}\oplus\cN_2\otimes\sE^{-\psi(t)}
 \\&= (\cD_{\hat L}/\cD_{\hat L}\cdot Q_1\otimes\sE^{-\psi(t)})
   \oplus(\cD_{\hat L}/\cD_{\hat L}\cdot Q_2\otimes\sE^{-\psi(t)})
@@ -724,13 +725,25 @@ Damit ist der Zweite Summant also auch ein Elementarer Meromorpher
 Zusammenhang.
 Also zwelegt sich $\cM$, nach einem pull-back mit $\rho:t\mapsto x=-2t^2$, in
 \[
-\rho^+\cM_{\phi_1} &= (\cD_{\hat L}/\cD_{\hat L}\cdot Q_1\otimes\sE^{-\psi(t)})
+\rho^+\cM_{\phi} = (\cD_{\hat L}/\cD_{\hat L}\cdot Q_1\otimes\sE^{-\psi(t)})
   \oplus (\cD_{\hat L}/\cD_{\hat L}\cdot (\partial_t
   + \sum_{n=-1}^\infty u_nt^n)}\otimes\sE^{\psi(t)}) \,.
 \]
 Damit ist die Levelt-Turrittin-Zerlegung vollständig gegeben.
 
-\subsection{Konvergenz der Potenzreihen}
+\subsection{Konvergenz der Summanten} \label{sec:konvergenzDerPotReihen}
+Nun wollen wir noch prüfen, ob bei dieser Berechnung die Formalen Potenzreihen
+\begin{comment}
+TODO: text
+\end{comment}
+Es ist klar, dass 
+\begin{align*}
+Q_1\in\cD_{\hat L} \backslash\cD_L &\Leftrightarrow v(t) \in\hat L \backslash L
+&\mbox{bzw. } & &
+(\partial_t + \sum_{n=-1}^\infty u_nt^n)\in \cD_{\hat L} \backslash \cD_L
+&\Leftrightarrow u(t) \in \hat L \backslash L
+\end{align*}
+
 Nun wollen wir die Potenzreihen $v$ und $u$ noch genauer betrachten, im
 besonderen deren konvergenzverhalten.
 
@@ -808,6 +821,7 @@ in Abbildung \ref{fig:plotKoeffs} dargestellt.
 \begin{figure}[htbp]
   \centering
   \includegraphics[angle=270,width=\the\textwidth]{../img/koeff.pdf}
+  %\includegraphics[angle=270,width=\the\textwidth]{../img/koeff-logx.pdf}
   \caption[Koeffizienten in abhängigkeit von $a$]
    {Die Beträge der Koeffizienten für unterschiedliche $a$}
   \label{fig:plotKoeffs}

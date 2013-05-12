@@ -6,7 +6,7 @@
   ,openany
   ,DIV=10
   ,fleqn % mv align to left
-  %,oneside
+  ,oneside
   %,titelpage % unused
   %,biblography=totoc  % unused
   %,landscape,twocolumn
@@ -37,13 +37,6 @@
 \usepackage{enumerate}
 \usepackage{graphicx}
 
-\usepackage{listings}
-\lstset{
-  literate={ö}{{\"o}}1
-           {ä}{{\"a}}1
-           {ü}{{\"u}}1
-}
-
 \allowdisplaybreaks
 
 \usepackage[automark]{scrpage2} % Headline styles
@@ -59,46 +52,20 @@
 
 \renewcommand*{\thefootnote}{[\arabic{footnote}]}
 
-% Zeichen
+%%%%  Zeichen  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{nicefrac}
 \usepackage{mathrsfs}
 \usepackage{stmaryrd}
 %simplewick
 \usepackage{mathtools}
 
+%%%%  Ploting  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{tikz}
 \usetikzlibrary{matrix,arrows, calc, decorations.pathmorphing,%
   decorations.pathreplacing }
 \usepackage{float}
-\usepackage{subfig}
-
-%Versuch:
-%\renewcommand{\tikzpicture}{%
-%\begin{tikzpicture}[scale=1,descr/.style={fill=white,inner sep=2.5pt}] }
-
-%%besser als subfig:
-%\usepackage{caption}
-%\usepackage{subcaption}
 
 \myinput{myPlotFunction.sty}
-
-%%%%  Abkürzungsverzeichnis  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\iffalse
-  \usepackage{nomencl}
-  % Befehl umbenennen in abk
-  \let\abk\nomenclature
-  % Deutsche Überschrift
-  \renewcommand{\nomname}{Abkürzungsverzeichnis}
-  % Punkte zw. Abkürzung und Erklärung
-  \setlength{\nomlabelwidth}{.20\hsize}
-  \renewcommand{\nomlabel}[1]{#1 \dotfill}
-  % Zeilenabstände verkleinern
-  \setlength{\nomitemsep}{-\parsep}
-  \setlength{\parindent}{0pt}
-  \makenomenclature
-  %% BASH: makeindex main.nlo -s nomencl.ist -o main.nls
-  %% BASH: makeindex main.nlo -s main.sty -o main.nls
-\fi
 
 %%%%  Theoreme Styles  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \makeatletter
@@ -160,6 +127,13 @@
 \fi
 
 %%%%  Listings  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{listings}
+\lstset{
+  literate={ö}{{\"o}}1
+           {ä}{{\"a}}1
+           {ü}{{\"u}}1
+}
+
 \myinput{haskell.sty}
 
 \definecolor{myLightGrey}{rgb}{0.9,0.9,0.9}
