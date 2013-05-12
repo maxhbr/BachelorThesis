@@ -67,9 +67,9 @@ P_{\phi}(x,\partial_x) &=(-x^2\partial_x)^{\max(I)} (x\partial_x-1)
 \begin{proof}
 Sei $\phi=\sum_{k\in I}\frac{a_k}{t^{k}}$, so ist
 \begin{align*}
-Q(t,\partial_t) &= t^{\max(I)+1}(\partial_t-\frac{d}{dt}\phi(t))
+Q(t,\partial_t) &= t^{\max(I)+1}(\partial_t\underbracket{-\frac{d}{dt}\phi(t)})
 \\&=t^{\max(I)+1}\Big(\underset{\in \C[t][t^{-1}]<\partial_t>}{\underbrace{
-    \partial_t+\sum_{k\in I} k\frac{a_k}{t^{k+1}}}}\Big)
+    \partial_t+\overbracket{\sum_{k\in I} k\frac{a_k}{t^{k+1}}}}}\Big)
 \\&=t^{\max(I)+1}\partial_t
   + \sum_{k\in I} k\underbracket{\frac{a_k}{t^{k-\max(I)}}}
 \\&=t^{\max(I)+1}\partial_t +\sum_{k\in I}k \overbracket{a_k t^{\max(I)-k}}
@@ -111,7 +111,51 @@ Allgemeiner? für allgemeine $\phi$??
 \begin{proof} \cite[5.b.]{sabbah_Fourier-local}
 Um zu zeigen, dass die Behauptung gilt, formen wir $P_{\phi}$ um und isolieren
 die Monome, die für das Newton-Polygon von bedeutung sind und vernachlässigt
-werden können.
+werden können. Sei $q:=\max(I)$.
+\begin{align*}
+N\Big(P_{\phi}(x,\partial_x)\Big) &= N\Big(\underbracket{(-x^2\partial_x)^{q}}
+  (x\partial_x-1) + \sum_{k\in I}k a_k(-x^2\partial_x)^{q-k}\Big)
+%TODO: QUELLE!
+\\&= N\Big(\overbracket{(-1)^q(x^{2q}\partial_x^q
+  + \underset{\text{liefern keinen Beitrag}}{
+  \underbrace{\textbf{T.i.Q. von }x^{2q}\partial_x^q}})}
+  (x\partial_x - 1) + \sum_{k\in I}k a_k(-x^2\partial_x)^{q-k} \Big)
+\\&= N\Big(\underset{\text{liefert keinen Beitrag}}{\underbrace{(-1)^q}}
+  \underbracket{x^{2q}\partial_x^q (x\partial_x - 1)} 
+  + \sum_{k\in I}k a_k(-x^2\partial_x)^{q-k} \Big)
+\\&= N\Big(\overbracket{x^{2q}\underbracket{\partial_x^q x}\partial_x
+  - x^{2q}\partial_x^q} + \sum_{k\in I}k a_k(-x^2\partial_x)^{q-k} \Big)
+\\&= N\Big(x^{2q}\overbracket{(x\partial_x^q + q\partial_x^{q-1})}\partial_x
+  - x^{2q}\partial_x^q + \sum_{k\in I}k a_k(-x^2\partial_x)^{q-k} \Big)
+\\&= N\Big(x^{2q + 1}\partial_x^{q + 1}
+  + \underset{\text{sind also vernachlässigbar}}{
+  \underset{\text{im Quadranten von $x^{2q + 1}\partial_x^{q + 1}$,}}{
+  \underbrace{qx^{2q}\partial_x^{q} - x^{2q}\partial_x^q}}}
+  +\underbracket{ \sum_{k\in I}k a_k(-x^2\partial_x)^{q-k}} \Big)
+\\&= N\Big(x^{2q + 1}\partial_x^{q + 1} +\overbracket{ qa_q 
+  + \sum_{k\in I\backslash\{q\}}k a_k(-x^2\partial_x)^{q-k}} \Big)
+\end{align*}
+Nun wollen wir noch zeigen, das Die Summe auch vernachlässigt werden kann, um
+das gewünschte Ergebnis zu erziehlen. Das erste Monom liefert den Quadranten,
+der links über $(q+1,q)$ ist. Das zweite Monom liefert $\R_{\leq
+0}\times\R_{\geq 0}$, also den Quadranten, der links über $(0,0)$ liegt. Damit
+sieht das zu diesen beiden Monomen zugehörige Newton-Polygon, wie in Abbildung
+\ref{fig:Newton-PolygonP_phi} aus. Betrachte nun, zu einem $m\in I\backslash
+\{q\}$, einen Summanten $ma_m(-x^2\partial_x)^{q-m}$ aus der Summe:
+\begin{align*}
+N(ma_m(-x^2\partial_x)^{q-m}) &=N(ma_m(-1)^q(x^{2(q-m)}\partial_x^{q-m}
+  +\textbf{T.i.Q. von }x^{2(q-m)}\partial_x^{q-m}))
+\\&=N(x^{2(q-m)}\partial_x^{q-m})
+\end{align*}
+Offensichtlich sind die quadranten, die zu den Summanten gehören ebenfalls
+schon in der zu $x^{2q + 1}\partial_x^{q + 1} + qa_q$ zugehörigen Konvexen
+Hülle enthalten. Also ist
+\begin{align*}
+N\Big(P_{\phi}(x,\partial_x)\Big) 
+  &= N\Big(x^{2q + 1}\partial_x^{q + 1} + qa_q \Big) \,.
+\end{align*}
+womit die Behauptung folgt.
+\begin{comment}
 \begin{align*}
 N\Big(P_{\phi}(x,\partial_x)\Big) &= N\Big(\underbracket{(-x^2\partial_x)^{q}}
   (x\partial_x-1)+qa\Big)
@@ -132,6 +176,7 @@ Beitrag}}{\underbrace{(-1)^q}}(x^{2q}\partial_x^q
   \underbrace{qx^{2q}\partial_x^{q} - x^{2q}\partial_x^q}}} + qa \Big)
 \\&= N\Big(x^{2q + 1}\partial_x^{q + 1} + qa \Big)
 \end{align*}
+\end{comment}
 Wobei hier das \textbf{T.i.Q.} eine Abkürzung für \emph{Therme im Quadranten}
 ist.
 Hier ist ein Term $\epsilon x^{p}\partial_x^{q}$, mit $\epsilon\in \C, p,q
@@ -139,6 +184,7 @@ Hier ist ein Term $\epsilon x^{p}\partial_x^{q}$, mit $\epsilon\in \C, p,q
 $\tilde\epsilon x^{\tilde p}\partial_x^{\tilde q}$, mit $\tilde\epsilon\in \C,
 \tilde p,\tilde q \in \Z$, falls $q>\tilde q$ und $p-q<\tilde p - \tilde q$.
 Anschaulich bedeutet das, dass
+
 \[
 \Big( (q,p-q) + \R_{\leq 0} \times \R_{\geq 0} \Big) \supset
 \Big( (\tilde q,\tilde p-\tilde q) + \R_{\leq 0} \times \R_{\geq 0} \Big) \,.
@@ -165,6 +211,7 @@ vernachlässigt werden, wenn das Newton-Polygon gesucht ist.
 }
 \end{center}
 \caption{Newton-Polygon zu $P_{\phi}$}
+\label{fig:Newton-PolygonP_phi}
 \end{figure}
 \end{proof}
 Also ist, nach Lemma \ref{lem:slope-pb-multiplikation}, ein pull-back mit Grad
@@ -681,7 +728,7 @@ Nun zum allgemeinem Koeffizienten vor $t^{n}$ mit $n>-3$:
 \\\Rightarrow v_{n+2} &= - \frac{1}{u_{-2}}
   ((n+1)u_{n+1} + \sum_{k=0}^{n+2} v_{k-1}u_{n-k+1})
 \end{align*}
-also nach passendem Indexshift $n+2\rightarrow n$ folgt
+und nach passendem Indexshift $n+2\rightarrow n$ folgt
 \begin{comment} TODO: mapsto pfeil?  \end{comment}
 \begin{align*}
 \Rightarrow v_{n} &= - \frac{1}{u_{-2}}
@@ -733,6 +780,7 @@ Damit ist die Levelt-Turrittin-Zerlegung vollständig gegeben.
 
 \subsection{Konvergenz der Summanten} \label{sec:konvergenzDerPotReihen}
 Nun wollen wir noch prüfen, ob bei dieser Berechnung die Formalen Potenzreihen
+notwendig waren.
 \begin{comment}
 TODO: text
 \end{comment}
@@ -744,14 +792,13 @@ Q_1\in\cD_{\hat L} \backslash\cD_L &\Leftrightarrow v(t) \in\hat L \backslash L
 &\Leftrightarrow u(t) \in \hat L \backslash L
 \end{align*}
 
-Nun wollen wir die Potenzreihen $v$ und $u$ noch genauer betrachten, im
+Deshalb wollen wir die Potenzreihen $v$ und $u$ noch genauer betrachten, im
 besonderen deren konvergenzverhalten.
 
 Aus (\ref{eq:induktiveFormel}) ergeben sich für $n=0$ die Koeffizienten
 \begin{align*}
 v_{0} &= \frac{i}{2\sqrt{2a}}
   ((-1)u_{-1} + \sum_{k=0}^{0} v_{k-1}u_{-k-1})
-\\&= \frac{i}{2\sqrt{2a}} (\frac{3}{2} + v_{-1}u_{-1})
 \\&= \frac{i}{2\sqrt{2a}} (\frac{3}{2} - \frac{3}{4})
 \\&= \frac{3i}{8\sqrt{2a}} = -u_{0}
 \end{align*}

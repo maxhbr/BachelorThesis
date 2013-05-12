@@ -1,7 +1,7 @@
 \chapter{Numerische berechnung der Koeffizienten} \label{anh:Programm}
 Hier nun ein Haskell Programm, dass in der Funktion \textbf{main} die
 Koeffizienten von $v$ und $u$ für Abschnitt \ref{sec:konvergenzDerPotReihen} 
-numerisch berechnet. Für die beispielhaften berechnungen hier, wählen wir
+numerisch berechnet. Für die beispielhaften Berechnungen hier, wählen wir
 $a=\frac{1}{8}$, dadurch gilt $u_{-2}=i$.
 \lstinputlisting[language=HaskellUlisses]{../haskell/programm.hs}
 
@@ -42,7 +42,6 @@ n       | v_n   u_n
 50      | 0.0 :+ (-5.0878905001062135e65)    (-0.0) :+ 5.0878905001062135e65
 100     | 0.0 :+ 3.045728894141079e159    (-0.0) :+ (-3.045728894141079e159)
 150     | 0.0 :+ (-2.7737283214890534e264)    (-0.0) :+ 2.7737283214890534e264
-
 \end{lstlisting}
 In Haskell ist das \textbf{:+} ein Infix-Konstruktor der Klasse
 \textbf{Data.Complex}. So erzeugt ein Aufruf der Form \textbf{a :+ b} eine
