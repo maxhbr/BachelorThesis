@@ -16,6 +16,7 @@ elem-mer-zsh.tex:  %\mbox{\footnote{$(\xi^i)^p=1\forall i$}} % TODO: correct foo
 elem-mer-zsh.tex:TODO: zeige das noch
 elem-mer-zsh.tex:%TODO: auch nicht formal
 elem-mer-zsh.tex:%TODO: verwendet hier schon das klassische Levelt-Turittin
+elem-mer-zsh.tex:TODO
 grundlagen.tex:%TODO: Pfeile
 grundlagen.tex:  %TODO: Pfeile
 grundlagen.tex:%TODO: tensorprodukt / faserprodukt zum basiswechsel
@@ -87,8 +88,7 @@ meromZsh.tex:  & \mbox{(Rechenregeln Tensorprodukt)}\\ %TODO: hinzufügen
 meromZsh.tex:TODO: hier weiter
 rezept.tex:-\partial_z(f)\cdot z^2= %TODO: wegen klammerung?
 rezept.tex:%TODO: QUELLE!
-rezept.tex:%TODO: erst zurücktwisten und dann Induktion!!!!!!!!!!!!!!!!!
-rezept.tex:TODO: Namenskollision: $\hat L$ und $L(s_0,s_1)$.
+rezept.tex:  %TODO: hier kein grid
 rezept.tex:TODO: korregiere allgemeinen Part, falls richtig!
 rezept.tex:%TODO: move to theorie-teil??
 rezept.tex:%TODO: Namenskollision: u und v wie in Achsbeschriftung

@@ -43,3 +43,10 @@ saveForPlot = do fileExists <- doesFileExist filename
   where filename = "plotData/n="++(show n)++"/a="++(show a)
         appendFileFormated i = appendFile filename (formated i)
         formated i = show i ++ " " ++ (show $ magnitude $ vKoeff i) ++ "\n"
+
+saveForSpiral = do fileExists <- doesFileExist filename
+                   when fileExists (removeFile filename)
+                   mapM_ appendFileFormated [0..1000]
+  where filename = "plotData/spiral/a="++(show a)
+        appendFileFormated i = appendFile filename (formated i)
+        formated i = (show $ phase $ vKoeff i) ++ " " ++ (show $ log $ magnitude $ vKoeff i) ++ "\n"

@@ -154,7 +154,13 @@ vernachlässigt werden, wenn das Newton-Polygon gesucht ist.
   \begin{tikzpicture}[scale=.7,descr/.style={fill=white,inner sep=2.5pt}]
   \def\myPoints{}
   \def\myPath{ -- node[descr]{$\frac{q}{q+1}$} (6,5)}
-  \myPlotFunction{\myPoints}{\myPath}{6}{0}{5}{$(q+1,q)$}
+  \myPlotFunction[nogrid]{\myPoints}{\myPath}{6}{0}{5}{}
+  \draw [decorate,decoration={brace,amplitude=10pt,mirror},gray]
+    (6,0) -- (6,5.0) node [black,midway,xshift=0.5cm] 
+    {\footnotesize $q$};
+  \draw [decorate,decoration={brace,amplitude=10pt},gray]
+    (0,5) -- (6,5) node [black,midway,yshift=+0.5cm] 
+    {\footnotesize $q+1$};
   \end{tikzpicture}
 }
 \end{center}
@@ -312,7 +318,8 @@ Twiste die $\cN_i$ jeweils mit $\sE^{-\psi}_{\hat L}$ und somit ist dann
 \]
 Für jeden Summanten lässt sich nun Induktion anwenden.
 
-\section{Spezialfall $\phi_1:=\frac{a}{x}$}
+\section{Levelt-Turrittin-Zerlegung für $\cM_{\phi_1}$ mit
+  $\phi_1:=\frac{a}{x}$}
 Als konkreten Fall betrachten wir nun $\cM_{\phi_1}$ bezüglich
 $\phi_1:=\frac{a}{x}$. Es ist das zugehörigen Minimalpolynom gegeben durch
 \begin{align*}
@@ -323,7 +330,7 @@ P_{\phi_1}(x,\partial_x) &=-x^2\partial_x (x\partial_x-1)+a
 \\&=\overbracket{-x^3\partial_x^2 - x^2\partial_x}+x^2\partial_x+a
 \\&=-x^3\partial_x^2+a
 \end{align*}
-Erhalte nun das Newton-Polygon mit den Slopes
+Erhalte daraus das Newton-Polygon mit den Slopes
 $\cP(\cM_{\phi_1})=\{\frac{1}{2}\}$.
 \begin{figure}[H] % htbp
 \begin{center}

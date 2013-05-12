@@ -1,11 +1,12 @@
 %\usepackage{calc}
 %\usepackage{ifthen}
-\usepackage{fp}
-\newcommand{\myPlotFunction}[6]{
+\usepackage{fp} 
+\usepackage{xstring}
+\newcommand{\myPlotFunction}[7][\empty]{
   \iftrue
-    \FPset\myMaxX{#3}
-    \FPset\myMinY{#4}
-    \FPmax{\myMaxY}{1}{#5}
+    \FPset\myMaxX{#4}
+    \FPset\myMinY{#5}
+    \FPmax{\myMaxY}{1}{#6}
   \else
     \foreach \x/\y [count=\ii] in \myPoints{
       \ifnum\ii=1
@@ -23,37 +24,40 @@
 
   \FPmin{\myPlotMinY}{\myMinY}{0}
 
-  %%grid
-  \draw[step=1, line width=0.1mm, black!30!white] 
-    (-.5,\myPlotMinY-.2) grid (\myMaxX+.2,\myMaxY+.5);
+  \IfSubStr{#1}{nogrid}{}{
+    %%grid
+    \draw[step=1, line width=0.1mm, black!30!white] 
+      (-.5,\myPlotMinY-.2) grid (\myMaxX+.2,\myMaxY+.5);
+
+    \IfSubStr{#1}{size}{
+      \draw (1,0) -- node[below]{\footnotesize$1$} (1,-.1);
+      \draw (0,1) -- node[left]{\footnotesize$1$} (-.1,1);
+    }{
+      \draw (1,0) -- (1,-.1);
+      \draw (0,1) -- (-.1,1);
+    }
+  }
 
   %%axis
-  \iftrue
-    \draw[->] (-.5,0) -- (\myMaxX+.2,0);
-    \draw[->] (0,\myPlotMinY-.2) -- (0,\myMaxY+.7);
-  \else
+  \IfSubStr{#1}{coord}{
     \draw[->] (-.5,0) -- (\myMaxX+.2,0) node[below]{$u$};
     \draw[->] (0,\myPlotMinY-.2) -- (0,\myMaxY+.7) node[left]{$v$};
-  \fi
-  \iftrue
-    \draw (1,0) -- (1,-.1);
-    \draw (0,1) -- (-.1,1);
-  \else
-    \draw (1,0) -- node[below]{\footnotesize$1$} (1,-.1);
-    \draw (0,1) -- node[left]{\footnotesize$1$} (-.1,1);
-  \fi
+  }{
+    \draw[->] (-.5,0) -- (\myMaxX+.2,0);
+    \draw[->] (0,\myPlotMinY-.2) -- (0,\myMaxY+.7);
+  }
 
   %%rectangle
-  \foreach \x/\y in #1
+  \foreach \x/\y in #2
     { \fill[blue,opacity=.2] (-.5,\myMaxY+.5) rectangle (\x,\y); }
 
   %%path
-  \draw[color=purple,thick] (-.5,\myMinY) --(0,\myMinY) #2 
+  \draw[color=purple,thick] (-.5,\myMinY) --(0,\myMinY) #3 
     -- (\myMaxX,\myMaxY+.5);
 
   %%nodes
-  \foreach \x/\y in #1
+  \foreach \x/\y in #2
     { \node[draw,circle,inner sep=1.5pt,fill=white] at (\x,\y) {}; }
   %%Text
-  \node[below right] at (#3,\myMaxY) {#6};
+  \node[below right] at (#4,\myMaxY) {#7};
 }
