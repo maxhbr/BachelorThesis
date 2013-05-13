@@ -51,7 +51,7 @@ also $ \partial_x\rightsquigarrow-z^2\partial_z $.
 P_\phi(x,\partial_x):=\cF_Q(x^{-1},-x^2\partial_x) \in \C[t]<\partial_t>
 \]
 \end{enumerate}
-Im folgendem werden wir den zum Minimalpolynom $P_\phi$ assoziierten
+Im folgendem werden wir den zum Minimalpolynom $P_\phi$ assoziierten formalen
 Meromorphen Zusammenhang $\cM_\phi:=\cD_{\hat K}/\cD_{\hat K}\cdot P_{\phi}$
 betrachten.
 
@@ -96,12 +96,6 @@ Im Anhang \ref{chap:zu-rezept} wird das $(x^2\partial_x)^{k}$ genauer
 diskutiert. Dies führt aber hier an dieser Stelle nicht mehr weiter in die
 gewünschte Richtung.
 
-\paragraph{Ab jetzt nur noch für den Spezialfall $\phi=\frac{a}{t^{q}}$.}
-Also sei $\cM_\phi=\cD_{\hat K}/\cD_{\hat K}\cdot P_\phi$ mit
-\[
-P_{\phi}(x,\partial_x) =(-x^2\partial_x)^{q} (x\partial_x-1)+qa \,,
-\]
-so dass
 \begin{lem}
 Es gilt $\cP(\cM_{\phi})=\{\frac{q}{q+1}\}$.
 \end{lem}
@@ -110,112 +104,117 @@ Allgemeiner? für allgemeine $\phi$??
 \end{comment}
 \begin{proof} \cite[5.b.]{sabbah_Fourier-local}
 Um zu zeigen, dass die Behauptung gilt, formen wir $P_{\phi}$ um und isolieren
-die Monome, die für das Newton-Polygon von bedeutung sind und vernachlässigt
-werden können. Sei $q:=\max(I)$.
+die Monome, die für das Newton-Polygon nicht von bedeutung sind und
+vernachlässigt werden können. Betrachte dazu die Konvexen Hüllen, die wie in
+Abschnitt \ref{sec:NewtonPolygon} konstruiert werden. Sei $q:=\max(I)$.
 \begin{align*}
-N\Big(P_{\phi}(x,\partial_x)\Big) &= N\Big(\underbracket{(-x^2\partial_x)^{q}}
+H\Big(P_{\phi}(x,\partial_x)\Big) &= H\Big(\underbracket{(-x^2\partial_x)^{q}}
   (x\partial_x-1) + \sum_{k\in I}k a_k(-x^2\partial_x)^{q-k}\Big)
 %TODO: QUELLE!
-\\&= N\Big(\overbracket{(-1)^q(x^{2q}\partial_x^q
+\\&= H\Big(\overbracket{(-1)^q(x^{2q}\partial_x^q
   + \underset{\text{liefern keinen Beitrag}}{
   \underbrace{\textbf{T.i.Q. von }x^{2q}\partial_x^q}})}
   (x\partial_x - 1) + \sum_{k\in I}k a_k(-x^2\partial_x)^{q-k} \Big)
-\\&= N\Big(\underset{\text{liefert keinen Beitrag}}{\underbrace{(-1)^q}}
+\\&= H\Big(\underset{\text{liefert keinen Beitrag}}{\underbrace{(-1)^q}}
   \underbracket{x^{2q}\partial_x^q (x\partial_x - 1)} 
   + \sum_{k\in I}k a_k(-x^2\partial_x)^{q-k} \Big)
-\\&= N\Big(\overbracket{x^{2q}\underbracket{\partial_x^q x}\partial_x
+\\&= H\Big(\overbracket{x^{2q}\underbracket{\partial_x^q x}\partial_x
   - x^{2q}\partial_x^q} + \sum_{k\in I}k a_k(-x^2\partial_x)^{q-k} \Big)
-\\&= N\Big(x^{2q}\overbracket{(x\partial_x^q + q\partial_x^{q-1})}\partial_x
+\\&= H\Big(x^{2q}\overbracket{(x\partial_x^q + q\partial_x^{q-1})}\partial_x
   - x^{2q}\partial_x^q + \sum_{k\in I}k a_k(-x^2\partial_x)^{q-k} \Big)
-\\&= N\Big(x^{2q + 1}\partial_x^{q + 1}
+\\&= H\Big(x^{2q + 1}\partial_x^{q + 1}
   + \underset{\text{sind also vernachlässigbar}}{
   \underset{\text{im Quadranten von $x^{2q + 1}\partial_x^{q + 1}$,}}{
   \underbrace{qx^{2q}\partial_x^{q} - x^{2q}\partial_x^q}}}
   +\underbracket{ \sum_{k\in I}k a_k(-x^2\partial_x)^{q-k}} \Big)
-\\&= N\Big(x^{2q + 1}\partial_x^{q + 1} +\overbracket{ qa_q 
+\\&= H\Big(x^{2q + 1}\partial_x^{q + 1} +\overbracket{ qa_q 
   + \sum_{k\in I\backslash\{q\}}k a_k(-x^2\partial_x)^{q-k}} \Big)
 \end{align*}
-Nun wollen wir noch zeigen, das Die Summe auch vernachlässigt werden kann, um
-das gewünschte Ergebnis zu erziehlen. Das erste Monom liefert den Quadranten,
-der links über $(q+1,q)$ ist. Das zweite Monom liefert $\R_{\leq
-0}\times\R_{\geq 0}$, also den Quadranten, der links über $(0,0)$ liegt. Damit
-sieht das zu diesen beiden Monomen zugehörige Newton-Polygon, wie in Abbildung
-\ref{fig:Newton-PolygonP_phi} aus. Betrachte nun, zu einem $m\in I\backslash
-\{q\}$, einen Summanten $ma_m(-x^2\partial_x)^{q-m}$ aus der Summe:
-\begin{align*}
-N(ma_m(-x^2\partial_x)^{q-m}) &=N(ma_m(-1)^q(x^{2(q-m)}\partial_x^{q-m}
-  +\textbf{T.i.Q. von }x^{2(q-m)}\partial_x^{q-m}))
-\\&=N(x^{2(q-m)}\partial_x^{q-m})
-\end{align*}
-Offensichtlich sind die quadranten, die zu den Summanten gehören ebenfalls
-schon in der zu $x^{2q + 1}\partial_x^{q + 1} + qa_q$ zugehörigen Konvexen
-Hülle enthalten. Also ist
-\begin{align*}
-N\Big(P_{\phi}(x,\partial_x)\Big) 
-  &= N\Big(x^{2q + 1}\partial_x^{q + 1} + qa_q \Big) \,.
-\end{align*}
-womit die Behauptung folgt.
-\begin{comment}
-\begin{align*}
-N\Big(P_{\phi}(x,\partial_x)\Big) &= N\Big(\underbracket{(-x^2\partial_x)^{q}}
-  (x\partial_x-1)+qa\Big)
-%TODO: QUELLE!
-\\&= N\Big(\overbracket{\underset{\text{liefert keinen
-Beitrag}}{\underbrace{(-1)^q}}(x^{2q}\partial_x^q
-  + \underset{\text{liefern keinen Beitrag}}{
-  \underbrace{\textbf{T.i.Q. von }x^{2q}\partial_x^q}})}
-  (x\partial_x - 1) + qa \Big)
-\\&= N\Big( \underbracket{x^{2q}\partial_x^q (x\partial_x - 1)} + qa \Big)
-\\&= N\Big(\overbracket{x^{2q}\underbracket{\partial_x^q x}\partial_x
-  - x^{2q}\partial_x^q} + qa \Big)
-\\&= N\Big(x^{2q}\overbracket{(x\partial_x^q + q\partial_x^{q-1})}\partial_x
-  - x^{2q}\partial_x^q + qa \Big)
-\\&= N\Big(x^{2q + 1}\partial_x^{q + 1}
-  + \underset{\text{sind also vernachlässigbar}}{
-  \underset{\text{im Quadranten von $x^{2q + 1}\partial_x^{q + 1}$,}}{
-  \underbrace{qx^{2q}\partial_x^{q} - x^{2q}\partial_x^q}}} + qa \Big)
-\\&= N\Big(x^{2q + 1}\partial_x^{q + 1} + qa \Big)
-\end{align*}
-\end{comment}
-Wobei hier das \textbf{T.i.Q.} eine Abkürzung für \emph{Therme im Quadranten}
-ist.
-Hier ist ein Term $\epsilon x^{p}\partial_x^{q}$, mit $\epsilon\in \C, p,q
-\in \Z$, im Quadranten von
-$\tilde\epsilon x^{\tilde p}\partial_x^{\tilde q}$, mit $\tilde\epsilon\in \C,
-\tilde p,\tilde q \in \Z$, falls $q>\tilde q$ und $p-q<\tilde p - \tilde q$.
-Anschaulich bedeutet das, dass
-
+Nun wollen wir noch zeigen, dass die Summe auch vernachlässigt werden kann.
+\paragraph{Behauptung:} Es gilt
 \[
-\Big( (q,p-q) + \R_{\leq 0} \times \R_{\geq 0} \Big) \supset
-\Big( (\tilde q,\tilde p-\tilde q) + \R_{\leq 0} \times \R_{\geq 0} \Big) \,.
+H\Big(x^{2q + 1}\partial_x^{q + 1} + qa_q 
+  + \sum_{k\in I\backslash\{q\}}k a_k(-x^2\partial_x)^{q-k} \Big)
+\subset H\Big(x^{2q + 1}\partial_x^{q + 1} + qa_q \Big)
 \]
-Offensichtlich ist damit $ N(\epsilon x^{p}\partial_x^{q}+\tilde\epsilon
-x^{\tilde p}\partial_x^{\tilde q}) =N(\epsilon x^{p}\partial_x^{q}) $, also
-können Therme, die sich bereits im Quadranten eines anderen Therms befinden,
-vernachlässigt werden, wenn das Newton-Polygon gesucht ist.
+\paragraph{Denn:}
+Betrachte zu einem $m\in I\backslash \{q\}$, einen Summanden
+$ma_m(-x^2\partial_x)^{q-m}$ aus der Summe:
+\begin{align*}
+H(ma_m(-x^2\partial_x)^{q-m}) &= H(ma_m(-1)^q(x^{2(q-m)}\partial_x^{q-m}
+  +\textbf{T.i.Q. von }x^{2(q-m)}\partial_x^{q-m}))
+\\&=H(x^{2(q-m)}\partial_x^{q-m})
+\\&=(q-m,q-m) + \R_{\leq 0}\times \R_{\geq 0}
+\end{align*}
+In Abbildung \ref{fig:Newton-PolygonP_phi} ist die Situation, die wir gerade
+betrachten dargestellt, mit $N(x^{2q + 1}\partial_x^{q + 1} + qa_q)$ in der
+gewohnten Farbe und in Blau ist $H(x^{2(q-m)}\partial_x^{q-m})$ eingezeichnet.
+Man sieht also, dass die Behauptung gilt.
+\hfill Beh.\ensuremath{\Box}
+
 \begin{figure}[htbp] % htbp
 \begin{center}
 \fbox{
   %TODO: hier kein grid
-  \begin{tikzpicture}[scale=.7,descr/.style={fill=white,inner sep=2.5pt}]
+  \begin{tikzpicture}[scale=1,descr/.style={fill=white,inner sep=2.5pt}]
   \def\myPoints{}
   \def\myPath{ -- node[descr]{$\frac{q}{q+1}$} (6,5)}
   \myPlotFunction[nogrid]{\myPoints}{\myPath}{6}{0}{5}{}
   \draw [decorate,decoration={brace,amplitude=10pt,mirror},gray]
     (6,0) -- (6,5.0) node [black,midway,xshift=0.5cm] 
     {\footnotesize $q$};
-  \draw [decorate,decoration={brace,amplitude=10pt},gray]
-    (0,5) -- (6,5) node [black,midway,yshift=+0.5cm] 
+  \draw [decorate,decoration={brace,amplitude=10pt,mirror},gray]
+    (0,0) -- (6,0) node [black,midway,yshift=-0.5cm] 
     {\footnotesize $q+1$};
+
+  \draw [decorate,decoration={brace,amplitude=10pt},gray]
+    (3,5) -- (6,5) node [black,midway,yshift=0.5cm] 
+    {\footnotesize $m+1$};
+
+  \draw [decorate,decoration={brace,amplitude=10pt},gray]
+    (3,5) -- (3,3) node [black,midway,xshift=0.5cm] 
+    {\footnotesize $m$};
+
+  \fill[blue,opacity=.2] (-.5,5.5) rectangle (3,3);
+  \draw[color=blue,thick] (-.5,3) --(3,3) -- (3,5.5);
   \end{tikzpicture}
 }
 \end{center}
 \caption{Newton-Polygon zu $P_{\phi}$}
 \label{fig:Newton-PolygonP_phi}
 \end{figure}
+Mit der Behauptung gilt dann, dass
+\begin{align*}
+H\Big(P_{\phi}(x,\partial_x)\Big) 
+  &= H\Big(x^{2q + 1}\partial_x^{q + 1} + qa_q 
+  + \sum_{k\in I\backslash\{q\}}k a_k(-x^2\partial_x)^{q-k} \Big)
+\\&\overset{\text{Beh.}}{=} H\Big(x^{2q + 1}\partial_x^{q + 1} + qa_q \Big)
+\end{align*}
+Also ist
+\begin{align*}
+N\Big(P_{\phi}(x,\partial_x)\Big) 
+  &= N\Big(x^{2q + 1}\partial_x^{q + 1} + qa_q \Big) \,.
+\end{align*}
+womit die Behauptung folgt und das Newton-Polygon wie in Abbildung
+\ref{fig:Newton-PolygonP_phi} aussieht.
 \end{proof}
 Also ist, nach Lemma \ref{lem:slope-pb-multiplikation}, ein pull-back mit Grad
-$q+1$ hinreichend, um einen ganzzahligen Slope zu bekommen.
+$q+1$ hinreichend, um einen ganzzahligen Slope zu bekommen. Wir wissen auch,
+dass nach anwenden eines solchem pull-backs die Slopes mit ${q+1}$
+multipliziert werden, also gilt $\cP(\rho^+\cM_\phi)=\{q\}\subset\N$.
+\begin{lem}
+Im Fall $\phi=\frac{a}{t^{q}}$ ist mit $\rho:t\mapsto x:=-(q+1) t^{q+1}$ der
+pull-back gegeben durch
+\[
+\rho^+\cM_\phi =\cD_{\hat K}/\cD_{\hat K} \cdot((t^{q+2}\partial_t)^{q}
+    (t\partial_t-(q+1))+(q+1)qa) \,.
+\]
+\end{lem}
+\begin{proof}
+Sei $\phi=\frac{a}{t^{q}}$, so ist $P$ gegeben durch
+\[
+P_{\phi}(x,\partial_x) =(-x^2\partial_x)^{q} (x\partial_x-1)+qa \,,
+\]
 Sei $\rho:t\mapsto x:=-(q+1) t^{q+1}$ so ist
 \begin{align*}
 \rho^+\cM_\phi &= \rho^+(\cD_{\hat K}/\cD_{\hat K}\cdot P_\phi(x,\partial_x))\\
@@ -237,7 +236,8 @@ Sei $\rho:t\mapsto x:=-(q+1) t^{q+1}$ so ist
     \cdot((t^{q+2}\partial_t)^{q}
     (t\partial_t-(q+1))+(q+1)qa)
 \end{align*}
-mit $\cP(\rho^+\cM_\phi)=\{q\}\subset\N$. Definiere mittels
+\end{proof}
+Definiere mittels
 $q=\frac{q}{1}=:\frac{\lambda_0}{\lambda_1}$ die  Linearform
 \[
 \ell(s_0,s_1)=\lambda_0s_0+\lambda_1s_1=qs_0+s_1 \,.
@@ -259,7 +259,8 @@ Setze $\theta=t^{\lambda_0+\lambda_1}\xi^{\lambda_1}=t^{q+1}\xi$ so können wir
 \end{align*}
 schreiben, welches wir als nächsten Schritt faktorisieren
 \[
-\sigma_L(\rho^*P_\phi)=\epsilon\prod_{\beta\mbox{ Nullstelle}}(\theta-\beta)^{\gamma_\beta}\,.
+\sigma_L(\rho^*P_\phi)
+  =\epsilon\prod_{\beta\mbox{ Nullstelle}}(\theta-\beta)^{\gamma_\beta}\,.
 \]
 Wobei $\epsilon\in\C^\times$ eine Konstante ist.
 Sei $\beta$  eine der Nullstellen.
@@ -365,7 +366,7 @@ Twiste die $\cN_i$ jeweils mit $\sE^{-\psi}_{\hat L}$ und somit ist dann
 \[
 \rho^+\cM_{\phi}=\bigoplus_i\cN_i\otimes_{\hat L}\sE^{-\psi}_{\hat L} \,.
 \]
-Für jeden Summanten lässt sich nun Induktion anwenden.
+Für jeden Summanden lässt sich nun Induktion anwenden.
 
 \section{Levelt-Turrittin-Zerlegung für $\cM_{\phi}$ mit
   $\phi_1:=\frac{a}{x}$}
@@ -439,14 +440,16 @@ schreiben, welches wir als nächstes faktorisieren
 \end{align*}
 Setze $\psi(x):=(\beta/\lambda_0)t^{-\lambda_0}=i\sqrt{2a}t^{-1}$ und
 betrachte den Twist $\cN:=\rho^+\cM_{\phi}\otimes\sE^\psi$ von
-$\cM$.
+$\rho^+\cM$.
 Es ist $\bme\otimes 1$ ein zyklischer Vektor, wobei $\bme$ ein zyklischer
 Vektor von $\rho^+\cM$ ist.
-Somit existieren $a_0(t)$ und $a_1(t)$ in $\hat L$, so dass
-\[
-0=\partial_t^2 (\bme\otimes 1) + (a_1(t)\partial_t + a_0(t)) \bme\otimes 1
-\]
-und damit ist dann $\cN=\cD/\cD\cdot(\partial_t^2+a_1(t)\partial_t+a_0(t))$.
+\iffalse
+  Somit existieren $a_0(t)$ und $a_1(t)$ in $\hat L$, so dass
+  \[
+  0=\partial_t^2 (\bme\otimes 1) + (a_1(t)\partial_t + a_0(t)) \bme\otimes 1
+  \]
+  und damit ist dann $\cN=\cD/\cD\cdot(\partial_t^2+a_1(t)\partial_t+a_0(t))$.
+\fi
 Es ist
 \begin{align*}
 \partial_t^2(\bme\otimes 1) 
@@ -768,7 +771,7 @@ Betrachte also noch $\cD_{\hat L}/\cD_{\hat L}\cdot Q_2\otimes\sE^{-\psi(t)}$:
   \cD_{\hat L}/\cD_{\hat L}\cdot (\partial_t
   + \sum_{n=-1}^\infty u_nt^n)}}\otimes\sE^{\psi(t)}
 \end{align*}
-Damit ist der Zweite Summant also auch ein Elementarer Meromorpher
+Damit ist der Zweite Summand also auch ein Elementarer Meromorpher
 Zusammenhang.
 Also zwelegt sich $\cM$, nach einem pull-back mit $\rho:t\mapsto x=-2t^2$, in
 \[
@@ -778,7 +781,7 @@ Also zwelegt sich $\cM$, nach einem pull-back mit $\rho:t\mapsto x=-2t^2$, in
 \]
 Damit ist die Levelt-Turrittin-Zerlegung vollständig gegeben.
 
-\subsection{Konvergenz der Summanten} \label{sec:konvergenzDerPotReihen}
+\subsection{Konvergenz der Summanden} \label{sec:konvergenzDerPotReihen}
 Nun wollen wir noch prüfen, ob bei dieser Berechnung die Formalen Potenzreihen
 notwendig waren.
 \begin{comment}
@@ -858,7 +861,8 @@ v_{n} &= \frac{i}{2\sqrt{2a}}
   - \sum_{k=1}^{n-1} v_{k-1}v_{n-k-1} \overbracket{- \frac{3}{2} v_{n-1}})
 \\&= - \frac{i}{2\sqrt{2a}} ((n-1+\frac{1}{2}+\frac{3}{2})v_{n-1}
   + \sum_{k=1}^{n-1} v_{k-1}v_{n-k-1})
-\\&= - \frac{i}{2\sqrt{2a}} ((n+1)v_{n-1} + \sum_{k=1}^{n-1} v_{k-1}v_{n-k-1})
+\\&= \underset{=u_{-2}^{-1}}{\underbrace{ - \frac{i}{2\sqrt{2a}} }}
+  ((n+1)v_{n-1} + \sum_{k=1}^{n-1} v_{k-1}v_{n-k-1})
 \end{align*}
 In einer geeigneten Programmiersprache ist es nun einfach die $v_n$ und
 $u_n$ Numerisch zu berechnen. So wird ein geeigneter Quellcode in Anhang

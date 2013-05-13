@@ -25,7 +25,6 @@ grundlagen.tex:  %TODO: Pfeile
 grundlagen.tex:  %TODO: Pfeile
 levelt-turrittin.tex:TODO: induktionsanfang und -schritt kennzeichnen
 levelt-turrittin.tex:TODO
-levelt-turrittin.tex:TODO
 levelt-turrittin.tex:\begin{comment}TODO: Hier weiter \end{comment}
 levelt-turrittin.tex:\begin{comment}TODO: Hier weiter \end{comment}
 main/main.ps:w FJ(TODO,)30 b(\(3.)i(T)-8 b(re\033en\))p 3633 5576
@@ -87,13 +86,14 @@ meromZsh.tex:  & \mbox{(Rechenregeln Tensorprodukt)}\\ %TODO: hinzufügen
 meromZsh.tex:TODO: hier weiter
 rezept.tex:-\partial_z(f)\cdot z^2= %TODO: wegen klammerung?
 rezept.tex:%TODO: QUELLE!
+rezept.tex:%TODO: QUELLE!
 rezept.tex:  %TODO: hier kein grid
-rezept.tex:TODO: korregiere allgemeinen Part, falls richtig!
 rezept.tex:%TODO: move to theorie-teil??
 rezept.tex:%TODO: Namenskollision: u und v wie in Achsbeschriftung
 rezept.tex:und mit denn Kommutatorregeln %TODO: lemma? quelle?
 rezept.tex:anwenden wollen: %TODO: quelle? formel?
 rezept.tex:\begin{comment} TODO: mapsto pfeil?  \end{comment}
+rezept.tex:TODO: text
 rezept.tex_versions/v01_rezept.tex:-\partial_z(f)\cdot z^2= %TODO: wegen klammerung?
 rezept.tex_versions/v01_rezept.tex:%TODO; weiter ausführen, genauer, nebenrechnung
 rezept.tex_versions/v01_rezept.tex:TODO

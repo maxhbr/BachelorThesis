@@ -420,7 +420,7 @@ $\cM\otimes\cN$ genau die Menge der Slopes von $\cM$.
 TODO
 \end{proof}
 
-\section{Newton Polygon}
+\section{Newton Polygon} \label{sec:NewtonPolygon}
 % ist dies eine Invariante??
 % gestohlen aus der ZulaBarbara Seite 46
 \begin{comment}
@@ -556,19 +556,23 @@ $k \leq q$ und $l-k \geq p-q$.
 \begin{itemize}
 \item Anschaulich bedeutet das, dass
 \[
-\Big( (q,p-q) + \R_{\leq 0} \times \R_{\geq 0} \Big) \supset
-\Big( (k,l-k) + \R_{\leq 0} \times \R_{\geq 0} \Big) \,,
+H(\epsilon x^{p}\partial_x^{q})
+=\Big( (q,p-q) + \R_{\leq 0} \times \R_{\geq 0} \Big) \supset
+\Big( (k,l-k) + \R_{\leq 0} \times \R_{\geq 0} \Big) 
+=H(\alpha_{kl}x^l\partial_x^k)
+\,,
 \]
 für alle relevanten $k$ und $l$.
 \item Sei $P$ ein Polynom, bei dem alle Koeffizienten im Quadranten von
 $\epsilon x^{p}\partial_x^{q}$ sind, dann gilt:
 \begin{align*}
-N(P)&=N(\epsilon x^{p}\partial_x^{q}
+H(P)&=H(\epsilon x^{p}\partial_x^{q}
   +\sum^{n}_{k=0}\big(\sum^{\infty}_{l=-N}{\alpha_{kl}x^l\big)\partial_x^k})
-\\&=N(\epsilon x^{p}\partial_x^{q} + \textbf{T.i.Q. von }x^{p}\partial_x^{q})
-\\&=N(\epsilon x^{p}\partial_x^{q}) \,,
+\\&=H(\epsilon x^{p}\partial_x^{q} + \textbf{T.i.Q. von }x^{p}\partial_x^{q})
+\\&=H(\epsilon x^{p}\partial_x^{q}) 
+\\\Rightarrow N(P)&=N(\epsilon x^{p}\partial_x^{q}) \,.
 \end{align*}
-also können Therme, die sich bereits im Quadranten eines anderen Therms
+Also können Therme, die sich bereits im Quadranten eines anderen Therms
 befinden und nicht der Therm selbst sind, vernachlässigt werden, wenn das
 Newton-Polygon gesucht ist. Das \textbf{T.i.Q.} ist eine hier Abkürzung für
 Therme im Quadranten.
