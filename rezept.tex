@@ -198,10 +198,15 @@ N\Big(P_{\phi}(x,\partial_x)\Big)
 womit die Behauptung folgt und das Newton-Polygon wie in Abbildung
 \ref{fig:Newton-PolygonP_phi} aussieht.
 \end{proof}
+\begin{comment}
+\begin{cor}
+Ordnung vom pull-back ist $0$
+\end{cor}
+\end{comment}
 Also ist, nach Lemma \ref{lem:slope-pb-multiplikation}, ein pull-back mit Grad
-$q+1$ hinreichend, um einen ganzzahligen Slope zu bekommen. Wir wissen auch,
-dass nach anwenden eines solchem pull-backs die Slopes mit ${q+1}$
-multipliziert werden, also gilt $\cP(\rho^+\cM_\phi)=\{q\}\subset\N$.
+$q+1$ hinreichend, um einen ganzzahligen Slope zu bekommen. Wir wissen, dass
+nach Anwenden eines solchem pull-backs die Slopes mit ${q+1}$ multipliziert
+werden, also gilt $\cP(\rho^+\cM_\phi)=\{q\}\subset\N$.
 \begin{lem}
 Im Fall $\phi=\frac{a}{t^{q}}$ ist mit $\rho:t\mapsto x:=-(q+1) t^{q+1}$ der
 pull-back gegeben durch
@@ -227,7 +232,8 @@ Sei $\rho:t\mapsto x:=-(q+1) t^{q+1}$ so ist
     (\underbracket{-(q+1) t^{q+1}\frac{-1}{(q+1)^2t^{q}}\partial_t}-1)+qa)\\
   &=\cD_{\hat K}/\cD_{\hat K}
     \cdot((\overbracket{
-      \underbracket{-\frac{-(q+1)^2}{(q+1)^2}t^{2(q+1)-q}}\partial_t})^{q}
+      \underset{=1}{\underbrace{-\frac{-(q+1)^2}{(q+1)^2}}}
+      \underbracket{t^{2(q+1)-q}}\partial_t})^{q}
     (\overbracket{\frac{1}{q+1}t\partial_t}-1)+qa)\\
   &=\cD_{\hat K}/\cD_{\hat K}
     \cdot((\overbracket{t^{q+2}}\partial_t)^{q}
