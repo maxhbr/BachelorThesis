@@ -63,38 +63,3 @@ saveData fn end uMin2 = do fileExists <- doesFileExist fn
                                                       , show $ cauchy (i,v1,v2) , "\t"
                                                       , show $ quot (i,v1,v2)   , "\n"
                                                       ]
-
--- ####  old  ################################################################
---
-{-import System.Environment (getArgs)-}
-
-{-import System.IO-}
-{-import System.Directory-}
-{-import Control.Monad-}
--- | Writes the data to stdOut
-{-genData :: ComplRat -> Int -> Int -> IO()-}
-{-genData uMin2 step num = do mapM_ addLine [i*step|i <- [1..num]]-}
-  {-where toDbl x   = fromRational x :: Double-}
-        {-betrag i  = magnitude $ vKoeff uMin2 i-}
-        {-cauchy i  = (fromRational $ betrag i)**(1/(fromIntegral i))-}
-        {-quot i    = toDbl $ (betrag (i-1)) / (betrag i)-}
-        {-addLine i = do putStr $ concat [ show i                  , " "-}
-                                       {-[>, show $ toDbl $ betrag i , " "<]-}
-                                       {-[>, show $ cauchy i         , " "<]-}
-                                       {-, show $ quot i           , "\n" ]-}
-
-{--- | Writes the data to file-}
-{-genData' :: ComplRat -> Int -> IO()-}
-{-genData' uMin2 n = do fileExists <- doesFileExist fn-}
-                       {-when fileExists (removeFile fn)-}
-                       {-mapM_ addLine [1..n]-}
-  {-where fn        = "../img/data/test" -- a="++(show a)-}
-        {-toDbl x   = fromRational x :: Double-}
-        {-betrag i  = magnitude $ vKoeff uMin2 i-}
-        {-cauchy i  = (fromRational $ betrag i)**(1/(fromIntegral i))-}
-        {-quot i    = toDbl $ (betrag (i-1)) / (betrag i)-}
-        {-addLine i = do putStr $ show i ++ " "-}
-                       {-appendFile fn $ concat [ show i                  , " "-}
-                                              {-, show $ toDbl $ betrag i , " "-}
-                                              {-, show $ cauchy i         , " "-}
-                                              {-, show $ quot i           , "\n" ]-}
