@@ -690,8 +690,8 @@ Q_1\cdot Q_2&=\partial_t^2 + \sum_{n=-2}^\infty (u_n+v_n)t^n \partial_t
   - 3 i\sqrt{2a}t^{-3}
   \end{aligned}
 \end{equation}
-Nun haben wir ein Ergebnis, das sich Koeffizientenweise mit den gewünschten
-Ergebnis vergleichen lässt:
+Nun haben wir ein Ergebnis, das sich Koeffizientenweise mit der gewünschten
+Formel vergleichen lässt:
 \begin{align}
 \label{eq:bedingung1}
 2i\sqrt{2a}t^{-2} - t^{-1} &= \sum_{n=-2}^\infty (u_n+v_n)t^n
@@ -731,27 +731,29 @@ Nun zum allgemeinem Koeffizienten vor $t^{n}$ mit $n>-3$:
 \begin{align*}
 0&= (n+1)u_{n+1} + \sum_{k=0}^{n+3} v_{k-1}u_{n-k+1}
 \\&= (n+1)u_{n+1} + (\sum_{k=0}^{n+2} v_{k-1}u_{n-k+1})
-  + v_{n+3-1}u_{n-(n+3)+1}
-\\&= (n+1)u_{n+1} + (\sum_{k=0}^{n+2} v_{k-1}u_{n-k+1}) + v_{n+2}u_{-2}
-\\\Rightarrow v_{n+2}u_{-2}&=-(n+1)u_{n+1} - \sum_{k=0}^{n+2} v_{k-1}u_{n-k+1}
+  + v_{n+3-1}\underbracket{u_{n-(n+3)+1}}
+\\&= (n+1)u_{n+1} + (\sum_{k=0}^{n+2} v_{k-1}u_{n-k+1}) 
+  + v_{n+2}\overbracket{u_{-2}}
+\\\Rightarrow v_{n+2}u_{-2}&=-\left((n+1)u_{n+1} + \sum_{k=0}^{n+2}
+  v_{k-1}u_{n-k+1}\right)
 \\\Rightarrow v_{n+2} &= - \frac{1}{u_{-2}}
-  ((n+1)u_{n+1} + \sum_{k=0}^{n+2} v_{k-1}u_{n-k+1})
+  \left((n+1)u_{n+1} + \sum_{k=0}^{n+2} v_{k-1}u_{n-k+1}\right)
 \end{align*}
 und nach passendem Indexshift $n+2\rightarrow n$ folgt
 \begin{comment} TODO: mapsto pfeil?  \end{comment}
 \begin{align*}
 \Rightarrow v_{n} &= - \frac{1}{u_{-2}}
-  ((n-1)u_{n-1} + \sum_{k=0}^{n} v_{k-1}u_{n-k-1})
+  \left((n-1)u_{n-1} + \sum_{k=0}^{n} v_{k-1}u_{n-k-1}\right)
 \\&\overset{(\ref{eq:bedingung1a})}{=} - \frac{1}{2i\sqrt{2a}}
-  ((n-1)u_{n-1} + \sum_{k=0}^{n} v_{k-1}u_{n-k-1})
+  \left((n-1)u_{n-1} + \sum_{k=0}^{n} v_{k-1}u_{n-k-1}\right)
 \\&= \frac{i}{2\sqrt{2a}}
-  ((n-1)u_{n-1} + \sum_{k=0}^{n} v_{k-1}u_{n-k-1})
+  \left((n-1)u_{n-1} + \sum_{k=0}^{n} v_{k-1}u_{n-k-1}\right)
 \end{align*}
 Zusammen mit $u_{-2}=2i\sqrt{2a}$, $u_{-1}=-\frac{3}{2}$ und
 $v_{-1}=\frac{1}{2}$ sind durch
 \begin{align} \label{eq:induktiveFormel}
 v_n &= - u_n = \frac{i}{2\sqrt{2a}}
-  ((n-1)u_{n-1} + \sum_{k=0}^{n} v_{k-1}u_{n-k-1}) & \forall n \geq 0
+  \left((n-1)u_{n-1} + \sum_{k=0}^{n} v_{k-1}u_{n-k-1}\right) & \forall n \geq 0
 \end{align}
 die Koeffizienten von $v$ und $u$ vollständig bestimmt.
 
@@ -779,11 +781,12 @@ Betrachte also noch $\cD_{\hat L}/\cD_{\hat L}\cdot Q_2\otimes\sE^{-\psi(t)}$:
 \end{align*}
 Damit ist der Zweite Summand also auch ein Elementarer Meromorpher
 Zusammenhang.
-Also zwelegt sich $\cM$, nach einem pull-back mit $\rho:t\mapsto x=-2t^2$, in
+Also zerlegt sich $\cM$, nach einem pull-back mit $\rho:t\mapsto x=-2t^2$, in
 \[
-\rho^+\cM_{\phi} = (\cD_{\hat L}/\cD_{\hat L}\cdot Q_1\otimes\sE^{-\psi(t)})
-  \oplus (\cD_{\hat L}/\cD_{\hat L}\cdot (\partial_t
-  + \sum_{n=-1}^\infty u_nt^n)}\otimes\sE^{\psi(t)}) \,.
+\rho^+\cM_{\phi} = \left(\cD_{\hat L}/\cD_{\hat L}\cdot \Big(\partial_t
+  + \sum_{n=-1}^\infty v_nt^n\Big)\otimes\sE^{-\psi(t)}\right)
+  \oplus \left(\cD_{\hat L}/\cD_{\hat L}\cdot \Big(\partial_t
+  + \sum_{n=-1}^\infty u_nt^n\Big)\otimes\sE^{\psi(t)}\right) \,.
 \]
 Damit ist die Levelt-Turrittin-Zerlegung vollständig gegeben.
 
@@ -802,79 +805,134 @@ Q_1\in\cD_{\hat L} \backslash\cD_L &\Leftrightarrow v(t) \in\hat L \backslash L
 \end{align*}
 
 Deshalb wollen wir die Potenzreihen $v$ und $u$ noch genauer betrachten, im
-besonderen deren konvergenzverhalten.
+besonderen deren konvergenzverhalten. Als Konvergenzkriterium betrachten wir
+den folgenden Satz
+\begin{thm}[Wurzlkriterium nach Cauchy] \label{thm:convKrit}
+Sei $\sum_n a_n x^n$ eine Potenzreihe. Es gilt:
+\[
+\underset{n\rightarrow\infty}{\limsup} \sqrt[n]{|a_n|} = +\infty 
+\Rightarrow \text{ die Potenzreihe ist nirgends Konvergent.}
+\]
+\end{thm}
+\begin{proof}
+siehe \cite[§18, Satz 94]{KnoppReihen}.
+\end{proof}
+
+\begin{thm}[Quotientenkriterium]
+Sei $\sum_n a_n x^n$ eine Potenzreihe. Es gilt:
+\[
+\underset{n\rightarrow\infty}{\lim} \frac{|a_{n+1}|}{|a_n|} = 0
+\Rightarrow \text{ die Potenzreihe ist nirgends Konvergent.}
+\]
+\end{thm}
+\begin{proof}
+TODO
+\end{proof}
 
 Aus (\ref{eq:induktiveFormel}) ergeben sich für $n=0$ die Koeffizienten
 \begin{align*}
-v_{0} &= \frac{i}{2\sqrt{2a}}
-  ((-1)u_{-1} + \sum_{k=0}^{0} v_{k-1}u_{-k-1})
-\\&= \frac{i}{2\sqrt{2a}} (\frac{3}{2} - \frac{3}{4})
-\\&= \frac{3i}{8\sqrt{2a}} = -u_{0}
+v_{0} &= -\frac{1}{u_{-2}} ((-1)u_{-1} + \sum_{k=0}^{0} v_{k-1}u_{-k-1})
+\\&= -\frac{1}{u_{-2}} (\frac{3}{2} - \frac{3}{4})
+\\&= -\frac{3}{4u_{-2}}
+\\&\overset{(\ref{eq:bedingung1a})}{=} \frac{3i}{8\sqrt{2a}} = -u_{0}
 \end{align*}
-\iffalse
   \begin{comment}
   Somit ergeben sich für $n=1$ die Koeffizienten
   \begin{align*}
-  v_1 &= \frac{i}{2\sqrt{2a}}
+  v_1 &= -\frac{1}{u_{-2}}
     ((1-1)u_{1-1} + \sum_{k=0}^{1} v_{k-1}u_{1-k-1})
-  \\&= \frac{i}{2\sqrt{2a}} (v_{-1}u_{0} + v_{0}u_{-1})
-  \\&= \frac{iv_0}{2\sqrt{2a}} (-v_{-1} + u_{-1})
-  \\&= \frac{3i\cdoti}{2\sqrt{2a}\cdot8\sqrt{2a}} (-\frac{1}{2} - \frac{3}{2})
-  \\&= \frac{-3}{16\cdot2a} (-2)
+  \\&= -\frac{1}{u_{-2}} (v_{-1}u_{0} + v_{0}u_{-1})
+  \\&= -\frac{v_0}{u_{-2}} (-v_{-1} + u_{-1})
+  \\&= \frac{3}{u_{-2}\cdot 4u_{-2}} (-\frac{1}{2} - \frac{3}{2})
+  \\&= \frac{3}{4u_{-2}^2} (-2)
+  \\&= -\frac{3}{2u_{-2}^2}
   \\&= \frac{3}{16a} = -u_1
   & \overset{a=\frac{1}{8}}{=} 1.5
   \end{align*}
   und für $n=2$ ist
   \begin{align*}
-  v_2 &=\frac{i}{2\sqrt{2a}} ((2-1)u_{2-1} + \sum_{k=0}^{2} v_{k-1}u_{2-k-1})
-  \\&=\frac{i}{2\sqrt{2a}} (u_{1} + v_{-1}u_{1} + v_{0}u_{0} + v_{1}u_{-1})
-  \\&=\frac{i}{2\sqrt{2a}} (\frac{-3}{16a}
-    + \frac{1}{2}\frac{-3}{16a}
-    + \frac{3i}{8\sqrt{2a}}\frac{-3i}{8\sqrt{2a}}
-    + \frac{3}{16a}\frac{-3}{2})
-  \\&=\frac{i}{2\sqrt{2a}} (-\frac{3}{16a} - \frac{3}{32a} + \frac{9}{8^22a}
-    - \frac{9}{32a})
-  \\&=\frac{i}{2\sqrt{2a}} (-\frac{24}{128a} - \frac{12}{128a} + \frac{9}{128a}
-    - \frac{36}{128a})
-  \\&=\frac{i(-24-12+9-36)}{256a\sqrt{2a}}
-  \\&=\frac{-63i}{256a\sqrt{2a}} = -u_2
+  v_2 &=-\frac{1}{u_{-2}} ((2-1)u_{2-1} + \sum_{k=0}^{2} v_{k-1}u_{2-k-1})
+  \\&=-\frac{1}{u_{-2}} (u_{1} + v_{-1}u_{1} + v_{0}u_{0} + v_{1}u_{-1})
+  \\&=-\frac{1}{u_{-2}} (\frac{3}{2u_{-2}^2}
+    + \frac{1}{2}\frac{3}{2u_{-2}^2}
+    + \frac{-3}{4u_{-2}}\frac{3}{4u_{-2}}
+    + \frac{-3}{2u_{-2}^2}\frac{-3}{2})
+  \\&=-\frac{1}{u_{-2}^3} (\frac{24}{16}
+    + \frac{12}{16}
+    -\frac{9}{16}
+    + \frac{36}{16})
+  \\&=-\frac{63}{16u_{-2}^3} 
+  \\&=-\frac{63}{16(2i\sqrt{2a})^3} 
+  \\&=\frac{63}{256ia\sqrt{2a}} 
+  \\&=-\frac{63}{256a\sqrt{2a}} = -u_2
   & \overset{a=\frac{1}{8}}{\approx} -3.9375i
   \end{align*}
+  und für $n=3$ ist
+  \begin{align*}
+  v_3 &=-\frac{1}{u_{-2}} ((3-1)u_{3-1} + \sum_{k=0}^{3} v_{k-1}u_{3-k-1})
+  \\&\approx -u_{-2}^{-4}(\underbracket{-\frac{63}{8}-\frac{1}{2}v_2}
+    -v_0v_1-v_1v_0-\frac{3}{2}v_2)
+  \\&=-u_{-2}^{-4}(\overbracket{-\frac{(4-1)63}{32}}
+    -2\frac{-3}{4}\frac{-3}{2}-\frac{3}{2}\frac{-63}{16})
+  \\&=-\frac{-(4-1)63-8\cdot9+3\cdot63}{32u_{-2}^{4}}
+  \\&=-\frac{-8\cdot9}{8\cdot 4u_{-2}^{4}}
+  \\&=\frac{9}{4u_{-2}^{4}}
+  \end{align*}
   \end{comment}
-\fi
+\begin{comment}
 und analog, für $n=1$ und $n=2$
 \begin{align*}
-v_1&= \frac{3}{16a} = -u_1 &\mbox{und}
-  & & v_2&=\frac{-63i}{256a\sqrt{2a}} = -u_2 \,.
+v_1&= -\frac{3}{2u_{-2}^2} = \frac{3}{16a} = -u_1 &\mbox{und}
+  & & v_2&= -\frac{63}{16u_{-2}^3} = -\frac{63i}{256a\sqrt{2a}} = -u_2 \,.
 \end{align*}
 Die letzten zwei Paare sind für die Berechnung nicht von bedeutung und dienen
 nur dazu, das Programm zu prüfen.
+\end{comment}
 
 Für $n>0$ gilt $v_{n-1}\overset{(\ref{eq:bedingung1c})}{=}-u_{n-1}$ und damit
 wollen wir die Formel noch weiter vereinfachen, um eine Version zu bekommen,
 die sich gut implementieren lässt.
 \begin{align*}
-v_{n} &= \frac{i}{2\sqrt{2a}}
-  ((n-1)u_{n-1} + \underbracket{\sum_{k=0}^{n} v_{k-1}u_{n-k-1}})
-\\&= \frac{i}{2\sqrt{2a}}
-  (\underbracket{(n-1)u_{n-1}} + \overbracket{v_{-1}\underbracket{u_{n-1}}
-  + (\sum_{k=1}^{n-1} v_{k-1}\underbracket{u_{n-k-1}}) + v_{n-1}u_{-1}})
-\\&\overset{(\ref{eq:bedingung1c})}{=} \frac{i}{2\sqrt{2a}}
-  (\overbracket{-(n-1)v_{n-1}} + \underbracket{v_{-1}\overbracket{(-v_{n-1})}}
+v_{n} &= -\frac{1}{u_{-2}}
+  \Big((n-1)u_{n-1} + \underbracket{\sum_{k=0}^{n} v_{k-1}u_{n-k-1}}\Big)
+\\&= -\frac{1}{u_{-2}}
+  \Big(\underbracket{(n-1)u_{n-1}} + \overbracket{v_{-1}\underbracket{u_{n-1}}
+  + (\sum_{k=1}^{n-1} v_{k-1}\underbracket{u_{n-k-1}}) + v_{n-1}u_{-1}}\Big)
+\\&\overset{(\ref{eq:bedingung1c})}{=} -\frac{1}{u_{-2}}
+  \Big(\overbracket{-(n-1)v_{n-1}} + \underbracket{v_{-1}\overbracket{(-v_{n-1})}}
   + (\sum_{k=1}^{n-1} v_{k-1}\overbracket{(-v_{n-k-1})}
-  + \underbracket{v_{n-1}u_{-1}})
-\\&= \frac{i}{2\sqrt{2a}} (-(n-1)v_{n-1} \overbracket{-\frac{1}{2}v_{n-1}}
-  - \sum_{k=1}^{n-1} v_{k-1}v_{n-k-1} \overbracket{- \frac{3}{2} v_{n-1}})
-\\&= - \frac{i}{2\sqrt{2a}} ((n-1+\frac{1}{2}+\frac{3}{2})v_{n-1}
-  + \sum_{k=1}^{n-1} v_{k-1}v_{n-k-1})
-\\&= \underset{=u_{-2}^{-1}}{\underbrace{ - \frac{i}{2\sqrt{2a}} }}
-  ((n+1)v_{n-1} + \sum_{k=1}^{n-1} v_{k-1}v_{n-k-1})
+  + \underbracket{v_{n-1}u_{-1}}\Big)
+\\&= -\frac{1}{u_{-2}} \Big(-(n-1)v_{n-1} \overbracket{-\frac{1}{2}v_{n-1}}
+  - \sum_{k=1}^{n-1} v_{k-1}v_{n-k-1} \overbracket{- \frac{3}{2} v_{n-1}}\Big)
+\\&= \frac{1}{u_{-2}} \Big((n-1+\frac{1}{2}+\frac{3}{2})v_{n-1}
+  + \sum_{k=1}^{n-1} v_{k-1}v_{n-k-1}\Big)
+\\&= \frac{1}{u_{-2}} \Big((n+1)v_{n-1} + \sum_{k=1}^{n-1} v_{k-1}v_{n-k-1}\Big)
 \end{align*}
+Also, zu gegebenem $u_{-2}=2i\sqrt{2a}$, sind die Koeffizienten gegeben durch:
+\begin{align*}
+v_{-1}&=\frac{1}{2} & u_{-1}&=-\frac{3}{2}
+\\v_{0} = -u_{0} &= -\frac{3}{4u_{-2}}
+\\v_n = - u_n &= \frac{1}{u_{-2}}
+  \left((n+1)v_{n-1} + \sum_{k=1}^{n-1} v_{k-1}v_{n-k-1}\right)
+  & & \forall n > 0
+\end{align*}
+
+\begin{comment}
+Um den Satz \ref{thm:convKrit} anzuwenden, betrachten wir
+\begin{align*}
+\sqrt[n]{|v_{n}|} &= \sqrt[n]{\left| - \frac{i}{2\sqrt{2a}}
+  \left((n+1)v_{n-1} + \sum_{k=1}^{n-1} v_{k-1}v_{n-k-1}\right) \right|}
+\\&= \sqrt[n]{\left| u_{-2} \right|}^{-1}
+ \sqrt[n]{\left|(n+1)v_{n-1} + \sum_{k=1}^{n-1} v_{k-1}v_{n-k-1} \right|} 
+\end{align*}
+\end{comment}
+\begin{comment}
 In einer geeigneten Programmiersprache ist es nun einfach die $v_n$ und
 $u_n$ Numerisch zu berechnen. So wird ein geeigneter Quellcode in Anhang
 \ref{anh:Programm} vorgestellt. Mit diesen Programm wurde für verschiedene $a$
 numerisch die Beträge der Koeffizienten berechnet und in abhängigkeit von $n$
 in Abbildung \ref{fig:plotKoeffs} dargestellt.
+\end{comment}
 \begin{figure}[htbp]
   \centering
   \includegraphics[angle=270,width=\the\textwidth]{../img/koeff.pdf}
@@ -882,6 +940,30 @@ in Abbildung \ref{fig:plotKoeffs} dargestellt.
   \caption[Koeffizienten in abhängigkeit von $a$]
    {Die Beträge der Koeffizienten für unterschiedliche $a$}
   \label{fig:plotKoeffs}
+\end{figure}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[angle=270,width=\the\textwidth]{../img/cauchy.pdf}
+  %\includegraphics[angle=270,width=\the\textwidth]{../img/koeff-logx.pdf}
+  %\caption[Koeffizienten in abhängigkeit von $a$]
+   %{Die Beträge der Koeffizienten für unterschiedliche $a$}
+  \label{fig:plotCauchyKoeffs}
+\end{figure}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[angle=270,width=\the\textwidth]{../img/quot.pdf}
+  %\includegraphics[angle=270,width=\the\textwidth]{../img/koeff-logx.pdf}
+  %\caption[Koeffizienten in abhängigkeit von $a$]
+   %{Die Beträge der Koeffizienten für unterschiedliche $a$}
+  \label{fig:plotCauchyKoeffs}
+\end{figure}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[angle=270,width=\the\textwidth]{../img/fac.pdf}
+  %\includegraphics[angle=270,width=\the\textwidth]{../img/koeff-logx.pdf}
+  %\caption[Koeffizienten in abhängigkeit von $a$]
+   %{Die Beträge der Koeffizienten für unterschiedliche $a$}
+  \label{fig:plotCauchyKoeffs}
 \end{figure}
 
 % vim: set ft=tex :

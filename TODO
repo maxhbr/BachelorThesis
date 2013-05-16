@@ -86,7 +86,6 @@ meromZsh.tex:  & \mbox{(Rechenregeln Tensorprodukt)}\\ %TODO: hinzufügen
 meromZsh.tex:TODO: hier weiter
 rezept.tex:-\partial_z(f)\cdot z^2= %TODO: wegen klammerung?
 rezept.tex:%TODO: QUELLE!
-rezept.tex:%TODO: QUELLE!
 rezept.tex:  %TODO: hier kein grid
 rezept.tex:%TODO: move to theorie-teil??
 rezept.tex:%TODO: Namenskollision: u und v wie in Achsbeschriftung
