@@ -1,6 +1,5 @@
 -- | Dieses Modul stellt den Datentyp 'ComplRat' komplexrationaler
 -- Zahlen, also den Elementen von /Q(i)/, bereit.
-{-# LANGUAGE TypeFamilies, TypeSynonymInstances, FlexibleInstances #-}
 module ComplRat
     ( ComplRat(..)
     , realPart
@@ -58,7 +57,7 @@ instance Num ComplRat where
     {-signum z@(x:+:y)        =  x P./ r :+: y P./ r  where r = magnitude z-}
 
 instance  Fractional ComplRat  where
-  fromRational r        = fromRational r :+: 0
-  (a :+: b) / (c :+: d) = ((a*c + (b*d))/n) :+: ((b*c - (a*d))/n)
+  fromRational r      = fromRational r :+: 0
+  (a :+: b)/(c :+: d) = ((a*c + (b*d))/n) :+: ((b*c - (a*d))/n)
     where sqr z = z * z
           n     = sqr c + (sqr d)
