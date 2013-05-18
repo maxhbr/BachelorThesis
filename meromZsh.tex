@@ -851,8 +851,8 @@ Es sei
 \rho&:\C\rightarrow \C , t\mapsto x:=\rho(t) &\in t\Cft
 \end{align*}
 eine Polynomielle Abbildung mit  Bewertung $p\geq1$.
-Hier werden wir immer $\rho(t)=t^p$ für ein $p\in \N$
-betrachten. Diese Funktion induziert eine Abbildung
+Hier werden wir meistens $\rho(t)=t^p$ für ein $p\in \N$ betrachten. Diese
+Funktion induziert eine Abbildung
 \begin{align*}
 \rho^*&:\Ckx\hookrightarrow \Ckt, f \mapsto f\circ \rho & \mbox{bzw.} &&
 \rho^*&:\Cfx\hookrightarrow \Cft, f \mapsto f\circ \rho
@@ -890,25 +890,27 @@ Für ein allgemeines $\phi\otimes m\in \rho^{*}\cM_{\hat K}$ gilt somit
 \partial_t(\phi\otimes m):=\rho'(t)(\phi\otimes\partial_xm) +
   \frac{\partial\phi}{\partial t}\otimes m \,.
 \end{equation}
+\begin{comment}
+Nun wollen wir uns noch genauer mit dem pull-back beschäftigen, und stellen uns
+die Frage:
 \paragraph{Wie sieht die Wirkung der Derivation auf dem pull-back Zusammenhang
-aus?} Betrachte ein Element der Form $f(t)m=f(\rho(u))m\in\rho^*\cM_{\hat K}$
-dann gilt
+aus?} Für $\rho(t)=t^p$ betrachten wir beispielsweise ein Element der Form
+$f(x)m=f(\rho(t))m\in\rho^*\cM_{\hat K}$, dann gilt
 \begin{align*}
-\partial_t(f(t)m) &= \partial_{\rho(u)}(f(\rho(u))m) \\
-                  &= f'(\rho(u))\cdot \underset{=1}
-                    {\underbrace{\frac{\partial(f(u))}{\partial(f(u))}}}m +
-                    f(\rho(u))\underset{=\partial_t}
-                    {\underbrace{\partial_{\rho(u)}}}m = (\star)\\
-\end{align*}
-\begin{align*}
-\rho'(u)^{-1}\partial_u(f(t)m) &= \frac{1}{pu^{p-1}}\partial_u(f(u^p)m) \\
-                               &= f'(u^p)m+f(u^p)\frac{1}{pu^{p-1}}\partial_u m
-                                 = (\star) \\
+\partial_x(f(x)m) &= \partial_{\rho(t)}(f(\rho(t))m) \\
+  &= f'(\rho(t))\cdot \underset{=1}
+  {\underbrace{\frac{\partial(f(t))}{\partial(f(t))}}}m +
+  f(\rho(t))\underset{=\partial_x} {\underbrace{\partial_{\rho(t)}}}m 
+\\&= f'(\rho(t))m + f(\rho(t))\partial_x m 
+  = (\star)
+\\ \rho'(t)^{-1}\partial_t(f(x)m) &= \frac{1}{pt^{p-1}}\partial_t(f(t^p)m)
+\\ &= f'(t^p)m+f(t^p)\frac{1}{pt^{p-1}}\partial_t m = (\star) \\
 \end{align*}
 Also gilt $\partial_t(f(t)m) = \rho'(u)^{-1}\partial_u(f(t)m)$ und somit 
-lässt sich vermuten, dass die Wirkung von $\partial_t$ gleich der Wirkung von
-$\rho'(u)^{-1}\partial_u$ ist. In der Tat stimmt diese Vermutung, wie das
+lässt sich vermuten, dass die Wirkung von $\partial_x$ gleich der Wirkung von
+$\rho'(t)^{-1}\partial_t$ ist. In der Tat stimmt diese Vermutung, wie das
 folgende Lemma zeigt.
+\end{comment}
 %
 \begin{lem} \label{lem:pull-back-hilfslemma3}
 %Wie erhält man den pull-back Zusammenhang bzw. wie ist er berechenbar?
