@@ -4,6 +4,7 @@ beispiele/formal_b.tex:%TODO: besserer Titel
 beispiele/formal_b.tex:  %TODO: rightarrow oder mapsto?
 beispiele/formal_b.tex:        -\partial_t(f)\cdot t^2= %TODO: wegen klammerung?
 d-modul.tex:%TODO: sabah-cimpa90.pdf  seite 3
+d-modul.tex:%TODO: ein teil des Beweises ist "left as an exersice"
 d-modul.tex:\begin{proof} TODO
 d-modul.tex:%TODO: Variable zu t machen?
 d-modul.tex:TODO: defn of Car als Charakteristische Varietät
@@ -55,7 +56,8 @@ meromZsh.tex:TODO, (3. Treffen)
 meromZsh.tex:%TODO: wieso gilt das?
 meromZsh.tex:%TODO: beobachtung...
 meromZsh.tex:%TODO: differenz ist linear
-meromZsh.tex:%TODO: move after slope definition!!!
+meromZsh.tex:Wähle einen zyklischen Vektor $m\in\cM_{\hat K}$ % TODO: richtiger Raum?
+meromZsh.tex:\begin{comment} TODO: bis hier schon klar \end{comment}
 meromZsh.tex:TODO
 meromZsh.tex:%TODO: welche definition ist besser?
 meromZsh.tex:%TODO: zeige, das beide definitionen gleich sind
@@ -63,11 +65,10 @@ meromZsh.tex:%TODO: bessere formulierung
 meromZsh.tex:TODO
 meromZsh.tex:TODO: mache alle Linearform $L$ zu $\ell$
 meromZsh.tex:TODO: ist $\ell$ Slope (gehört zu Slope) dann hat $\sigma_\ell(P)$ zumindest 2
-meromZsh.tex:Wähle einen zyklischen Vektor $m\in\cM_{\hat K}$ % TODO: richtiger Raum?
-meromZsh.tex:TODO
 meromZsh.tex:%TODO: titel: Operations on vector spaces with connection
 meromZsh.tex:%TODO: verzweigung statt pull-back?
-meromZsh.tex:TODO: Variable zu x machen
+meromZsh.tex:%TODO: move after slope definition!!!
+meromZsh.tex:TODO
 meromZsh.tex:TODO: muss das ein Homomorphismus sein? \cite[Seite 130]{coutinho1995primer}
 meromZsh.tex:TODO: damit wird $\hat L$ zu einem $\hat K$ Vektorraum.
 meromZsh.tex:%TODO: ist das der zusammenhang oder die wirkung oder was?
