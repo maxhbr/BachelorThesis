@@ -1,10 +1,9 @@
 #!/bin/sh
 max=$1
 
-if true ; then
+if false; then
   ghc --make -threaded ./koeff.hs
   mkdir -p ./data
-  #rm ./data/u_*
   ./koeff $max +RTS -N3
 fi
 

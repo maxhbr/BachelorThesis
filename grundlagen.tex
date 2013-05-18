@@ -24,39 +24,39 @@ Funktionen. (bei \cite{hotta2007d} mit $\tilde K$ bezeichnet)
 Wobei offensichtlich die Inclulsionen $\C[x]\subsetneq\C\{x\}\subsetneq\Cfx$
 und $K\subsetneq\hat K$ gelten.
 
-\begin{comment}
 Es bezeichnet der Hut ($ \, \hat \,\, $) das jeweils formale äquivalent zu
 einem konvergentem Objekt.
-\end{comment}
 
-\begin{comment}
-\begin{lem}[Seite 2]
-ein paar eigenschaften
-\begin{enumerate}
-\item $\C[x]$ ist ein graduierter Ring, durch die Grad der
-Polynome. Diese graduierung induziert eine aufsteigende Filtrierung.
+\iffalse
+  \begin{comment}
+  \begin{lem}[Seite 2]
+  ein paar eigenschaften
+  \begin{enumerate}
+  \item $\C[x]$ ist ein graduierter Ring, durch die Grad der
+  Polynome. Diese graduierung induziert eine aufsteigende Filtrierung.
 
-alle Ideale haben die form $(x-a)$ mit $a\in \C$
-\item wenn $\mathfrak{m}$ das maximale Ideal von $\C[x]$ (erzeugt von
-$x$ ist), so ist
-\[
-  \C[[x]]=
-  \underset{k}{\underleftarrow{\lim}} \C[X]\backslash\mathfrak{m}^k
-\]
-The ring $\C[[x]]$ ist ein nöterscher lokaler Ring:
-jede Potenzreihe mit konstantem term $\neq 0$ ist invertierbar.
+  alle Ideale haben die form $(x-a)$ mit $a\in \C$
+  \item wenn $\mathfrak{m}$ das maximale Ideal von $\C[x]$ (erzeugt von
+  $x$ ist), so ist
+  \[
+    \C[[x]]=
+    \underset{k}{\underleftarrow{\lim}} \C[X]\backslash\mathfrak{m}^k
+  \]
+  The ring $\C[[x]]$ ist ein nöterscher lokaler Ring:
+  jede Potenzreihe mit konstantem term $\neq 0$ ist invertierbar.
 
-Der ring ist ebenfalls ein diskreter ??? Ring (discrete valuation
-ring)
+  Der ring ist ebenfalls ein diskreter ??? Ring (discrete valuation
+  ring)
 
-Die Filtrierung nach grad des Maximalen Ideals, genannt
-$\mathfrak{m}$-adische Fitration, ist die Filtrierung
-$\mathfrak{m}^k=\{f\in \C[[x]]|v(f)\geq k\}$
+  Die Filtrierung nach grad des Maximalen Ideals, genannt
+  $\mathfrak{m}$-adische Fitration, ist die Filtrierung
+  $\mathfrak{m}^k=\{f\in \C[[x]]|v(f)\geq k\}$
 
-und es gilt $gr_\mathfrak{m}(\C[[x]])=\C[x]$
-\end{enumerate}
-\end{lem}
-\end{comment}
+  und es gilt $gr_\mathfrak{m}(\C[[x]])=\C[x]$
+  \end{enumerate}
+  \end{lem}
+  \end{comment}
+\fi
 
 Für $v=(v_1,\dots,v_n)$ ein Vektor, bezeichnet 
 \[
@@ -254,6 +254,7 @@ $f$.
     
 \end{proof}
 
+\begin{comment}
 \begin{defn}[Filtrierung] \label{defn:Filtrierung}
 \cite[Def 10.13.1.]{stacks-project}
 \cite[Rem 2.5.]{elliottDmod}
@@ -263,9 +264,6 @@ Familie von $(F_iA)_{i\in\Z}$ von Unterobjekten (Unterring), so dass
 und definiere weiter $gr_i^FA:=F_iA\slash F_{k-1}A$ und damit das zu $A$ mit
 Filtrierung $F$ \emph{assoziierte graduierte Modul} 
 \[gr^FA:=\bigoplus_{k\in\Z}gr_i^FA \,. \]
-\begin{comment}
-$gr_i^F$ als was??
-\end{comment}
 \end{defn}
 
 \begin{defn}
@@ -273,5 +271,6 @@ $gr_i^F$ als was??
 \cite[Def 3.2.1]{sabbah_cimpa90}
 Eine Filtrierung heißt \emph{gut}, falls ...
 \end{defn}
+\end{comment}
 
 % vim: set ft=tex :

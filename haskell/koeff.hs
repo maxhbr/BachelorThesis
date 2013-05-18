@@ -8,8 +8,6 @@ import qualified Control.Monad.Parallel as P
 -- for writing to file
 import System.Environment
 import System.IO
-import System.Directory
-import Control.Monad
 import Data.Time
 
 -- returns array with the coefficients of v(t)
@@ -44,10 +42,10 @@ printData end uMin2 = mapM_ addLine $ take end $ zip3 [0..] (tail vals) vals
         addLine a = putStr $ genLine a
 
 genLine :: (Int, ComplRat, ComplRat) -> String
-genLine (i,v1,v2) = concat [ show  i                 , "\t"
-                           , show $ betrag (i,v1,v2) , "\t"
+genLine (i,v1,v2) = concat [ show  i                   , "\t"
+                           , show $ betrag (i,v1,v2)   , "\t"
                            , show $ (cauchy (i,v1,v2)) , "\t"
-                           , show $ quot (i,v1,v2)   , "\n" ]
+                           , show $ quot (i,v1,v2)     , "\n" ]
   where toDbl x        = fromRational x :: Double
         betrag (_,v,_) = fromRational $ magnitude v
         cauchy (i,v,_) = (fromRational $ magnitude v)**(1/(fromIntegral i))
@@ -73,18 +71,15 @@ main = do x <- getArgs
                                    , ("./data/u_-2=1.0e-5i" , (0:+:1.0e-5))
                                    ]
 
+testPrintData = printData 100 (0:+:1)
 testSaveData = saveData 100 ("./data/u_-2=i", (0:+:1))
 
 saveData :: Int -> (String, ComplRat) -> IO()
 saveData end (fn, uMin2) =
   do start <- getCurrentTime
-     fileExists <- doesFileExist fn
-     when fileExists (removeFile fn)
      withFile fn WriteMode (\handle -> do
        hPutStr handle (concat $ take end $ map genLine triples))
-     {-mapM_ addLine $ take end $ triples-}
      stop <- getCurrentTime
      putStrLn $ fn ++ " " ++ (show $ diffUTCTime stop start)
   where vals      = vKoeffs uMin2
         triples   = zip3 [0..] (tail vals) vals
-        {-addLine a = appendFile fn $ genLine a-}

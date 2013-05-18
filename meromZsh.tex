@@ -88,7 +88,7 @@ erfüllen soll.
 
 \begin{defn}
 Seien $(\cM_K,\partial_\cM)$ und $(\cN_K,\partial_\cN)$ zwei Meromorphe
-Zusammenhänge. Eine $K$-lineare Abbildung $\phi:\cM\rightarrow\cN$ heißt
+Zusammenhänge. Eine $K$-lineare Abbildung $\phi:\cM\rightarrow\cN$ ist ein
 Morphismus von Meromorphen Zusammenhängen, falls sie
 $\phi\circ\partial_\cM=\phi\circ\partial_\cN$ erfüllt. In diesem Fall schreiben
 wir auch $\phi:(\cM_K,\partial_\cM)\rightarrow(\cN_K,\partial_\cN)$.
@@ -98,6 +98,7 @@ TODO: Wann sind die Isomorph\\
 $\cM\cong \cN$ und die Ableitungen kommutieren mit dem Isomorphismus
 \end{comment}
 
+\begin{comment}
 \begin{defn}
 Wir erhalten damit die Kategorie dier meromorphen Zusammenhänge über $\hat K$
 mit 
@@ -105,6 +106,7 @@ mit
 \text{Objekte: } & ()
 \end{align*}
 \end{defn}
+\end{comment}
 
 \begin{bem}
 \begin{enumerate}
@@ -125,7 +127,8 @@ welche für alle $f\in \tilde\cO$ und für alle $u\in \cM_K$ erfüllt sein muss,
 Sei $(\cM_K,\partial)$ ein Meromorpher Zusammenhang so wähle eine $K$-Basis
 $\{e_i\}_{i\in\{1,\dots,n\}}$ von $\cM$. Dann ist die
 \emph{Zusammenhangsmatrix bzgl. der Basis $\{e_i\}_{i\in\{1,\dots,n\}}$} die
-Matrix $A(x)=(a_{ij}(x))\in M(n\times n,K)$ definiert durch
+Matrix $A(x)=(a_{ij}(x))_{i,j\in\{1,\dots,n\}}\in M(n\times n,K)$ definiert
+durch
 %\[ \partial e_j=-\sum_{i=1}^na_{ij}(x)e_i \,. \]
 \[ a_{ij}(x) = -^te_i \partial e_j \,. \]
 \end{defn}
@@ -225,7 +228,7 @@ Sei $P=P_1\cdot P_2$ mit $P_1,P_2\in \cD_K$ wie in Satz
 \cD_K/\cD_K\cdot (P_1\cdot P_2) \cong \cD_K/\cD_K\cdot (P_2 \cdot P_1)
 \]
 \end{cor}
-\begin{proof}
+\begin{proof} Denn:
 \begin{align*}
 \cD_K/\cD_K\cdot P &= \cD_K/\cD_K\cdot (P_1\cdot P_2)\\
   &\cong \cD_K/\cD_K\cdot P_1 \oplus \cD_K/\cD_K\cdot P_2\\
@@ -394,31 +397,44 @@ dann, wenn es ein $T\in
 GL(r,K)$ gibt, mit $B=T^{-1}\cdot T'+T^{-1}AT$.
 \end{defn}
 
-\begin{comment}
-$1=TT^{-1}$ $\rightsquigarrow$ $T'T^{-1}+T(T^{-1})'=0$\\
-$1=T^{-1}T$ $\rightsquigarrow$ $(T^{-1})'T+T^{-1}T'=0$
-\end{comment}
-
-\begin{prop} \cite[Prop 4.1.1]{SchneidersDmod}
-Seien $(\cM,\partial_\cM)$ und $(\cN,\partial_\cN)$ Meromorphe Zusammenhänge.
-Durch setzten von
-\[
-\partial(m\otimes n)=\partial_\cM(m)\otimes n +m\otimes \partial_\cN(n)
-\]
-als die Wirkung von $\partial$ auf das $K$-Modul $\cM\otimes_K\cN$, wird
-$(\cM\otimes_K\cN,\partial)$ zu einem Meromorphen Zusammenhang.
-\end{prop}
+\cite[Chap 5.2]{sabbah_cimpa90}
+\begin{lem}
+\cite[Lem 5.2.1.]{sabbah_cimpa90}
+Es existiert eine Basis von $\cM_{\hat K}$ über $\hat K$ mit der Eigenschaften,
+dass die Matrix, die $x\partial_x$ beschreibt, nur Einträge in $\Cfx$ hat.
+\end{lem}
 \begin{proof}
-Klar
+Wähle einen zyklischen Vektor $m\in\cM_{\hat K}$ % TODO: richtiger Raum?
+ und betrachte die Basis $m,\partial_x m,\dots,\partial_x^{d-1}m$ (siehe Lemma
+\ref{lem:Zyklischer-Vektor}).
+Schreibe $\partial_x^dm=\sum_{i=0}^{d-1}(-b_i(x))\partial_x^im$ in
+Basisdarstellung mit Koeffizienten $b_i\in\hat K$.
+Also erfüllt $m$ die Gleichung
+$\partial_x^dm+\sum_{i=0}^{d-1}b_i(x)\partial_x^im=0$.
+
+\begin{comment} TODO: bis hier schon klar \end{comment}
+
+Tatsächlich kann man $b_i(x)=x^ib_i'(x)$ mit $b_i'\in \Cfx$ schreiben (wegen
+Regularität).
+
+Dies impliziert, dass $m,x\partial_xm,\dots,(x\partial_x)^{d-1}m$ ebenfalls
+eine Basis von $\cM_{\hat K}$ ist.
+
+Die Matrix von $x\partial_x$ zu dieser neuen Basis hat nur Einträge in $\Cfx$.
 \end{proof}
-\begin{lem} \cite[Ex 5.3.7]{sabbah_cimpa90}
-%TODO: move after slope definition!!!
-Falls $\cN$ regulär und nicht Null, dann ist die Menge der Slopes von
-$\cM\otimes\cN$ genau die Menge der Slopes von $\cM$.
+\begin{lem}
+\cite[Lem 5.2.2.]{sabbah_cimpa90}
+Es existiert sogar eine Basis von $\cM_{\hat K}$ über $\hat K$ so dass die
+Matrix zu $x\partial_x$ konstant ist.
 \end{lem}
 \begin{proof}
 TODO
 \end{proof}
+
+\begin{comment}
+$1=TT^{-1}$ $\rightsquigarrow$ $T'T^{-1}+T(T^{-1})'=0$\\
+$1=T^{-1}T$ $\rightsquigarrow$ $(T^{-1})'T+T^{-1}T'=0$
+\end{comment}
 
 \section{Newton Polygon} \label{sec:NewtonPolygon}
 % ist dies eine Invariante??
@@ -529,19 +545,25 @@ Man erkennt, dass $\cP(P_2)=\{0,\frac{2}{3}\}$ ist.
 
 \begin{bem}
 \cite[Bem 5.4]{ZulaBarbara}
-Für alle $f\in \Ckxl \backslash \{0\}$ gilt allgemein, dass das zu $P\in
+Für alle $f\in \cD_{\hat K}^\times$
+\begin{comment}
+  $f\in \Ckxl \backslash \{0\}$
+\end{comment}
+gilt allgemein, dass das zu $P\in
 \cD_{\hat K}$ gehörige Newton Polygon, bis auf vertikale Verschiebung mit dem
 von $f\cdot P$ übereinstimmt.
 \end{bem}
 \begin{proof}
 TODO
 \end{proof}
+\begin{comment}
 Damit Lässt sich das Newton Polygon, durch ein $f$, immer so verschieben, dass
 $(0,0)\in N(f\cdot P)$, und es gilt, dass
 \[
 \cD_K\cdot P=\cD_K\cdot(f\cdot P) \vartriangleleft \cD_K
 \]
 ist.
+\end{comment}
 
 \begin{defn}
 In einem Polynom 
@@ -645,6 +667,12 @@ mit $\cP(\cM_{\hat K}^{(i)})=\{\Lambda_i\}$.
 \begin{proof}
 \cite[Thm 5.3.1]{sabbah_cimpa90} oder \cite[5.15]{ZulaBarbara}
 \end{proof}
+\begin{bem}
+In Satz \ref{thm:Split-after-slopes} ist es wirklich notwendig formale
+Meromorphe Zusammenhänge zu betrachten, denn das Resultat gilt nicht für
+konvergente Meromorphe Zusammenhänge.
+\end{bem}
+\begin{comment}
 \begin{exmp}
 \cite[Ex 5.3.6]{sabbah_cimpa90}
 Sei $P=x(x\partial_x)^2+x\partial_x+\frac{1}{2}$. So sieht das Newton-Polygon
@@ -672,7 +700,6 @@ P &= x(x\partial_x)^2+x\partial_x+\frac{1}{2}\\
   &\dots\\
   &= P_1\cdot P_2
 \end{align*}
-\begin{comment}
 \paragraph{anders geschrieben}
 \begin{align*}
 P &= x(x\partial_x)^2+x\partial_x+\frac{1}{2}\\
@@ -695,9 +722,10 @@ wie folgt aus
 \end{center}
 \caption{Newton Polygon zu $P$}
 \end{figure}
-\end{comment}
 \end{exmp}
+\end{comment}
 
+\begin{comment}
 \begin{cor}
 \cite[Cor 5.2.6]{sabbah_cimpa90}
 Falls $\cM_{\hat K}$ ein regulärer formaler Meromorpher Zusammenhang ist, dann
@@ -706,13 +734,14 @@ Zusammenhängen. Wobei die elementaren formalen Zusammenhänge die sind, die zu
 passendem $\cD_{\hat K}/\cD_{\hat K}\cdot(x\partial_x-\alpha)^p$ isomorph
 sind.
 \end{cor}
+\end{comment}
 
 \subsection{Die Filtrierung $\,^\ell V\cD_{\hat K}$ und das $\ell$-Symbol}
 \begin{comment}
 TODO: mache alle Linearform $L$ zu $\ell$
 \end{comment}
 Sei $\Lambda=\frac{\lambda_0}{\lambda_1}\in \Q_{\geq 0}$ vollständig gekürtzt,
-also mit $\lambda_0$ und $\lambda_1$ in $\N$ relativ prim Definiere die
+also mit $\lambda_0$ und $\lambda_1$ in $\N$ relativ prim. Definiere die
 Linearform $\ell(s_0,s_1)=\lambda_0s_0+\lambda_1s_1$ in zwei Variablen, Sei
 $P\in\cD_{\hat K}$.  Falls $P=x^a\partial_x^b$ mit $a\in \Z$ und $b\in \N$
 setzen wir
@@ -751,7 +780,7 @@ als das $\ell$-Symbol Bezeichnet.
 Zum Beispiel ist $\sigma_\ell(x^a\partial_x^b)=x^a\xi^b$.
 \begin{bem}
 Bei \cite{sabbah_cimpa90} wird der Buchstabe $L$ anstatt $\ell$ für
-Linearformen verweden, dieser ist hier aber bereits für $\Cft$ reserviert.
+Linearformen verweden, dieser ist hier aber bereits für $\Ckt$ reserviert.
 Dementsprechend ist die Filtrierung dort als $\,^L V\cD_{\hat K}$ und das
 $\ell$-Symbol als $L$-Symbol zu finden.
 \end{bem}
@@ -787,50 +816,36 @@ TODO: ist $\ell$ Slope (gehört zu Slope) dann hat $\sigma_\ell(P)$ zumindest 2
 Monome
 \end{comment}
 
-\section{Formale Struktur regulärer Zusammenhänge}
-\cite[Chap 5.2]{sabbah_cimpa90}
-Sei $\cM_{\hat K}$ ein regulärer formaler Meromorpher Zusammenhang.
-\begin{lem}
-\cite[Lem 5.2.1.]{sabbah_cimpa90}
-Es existiert eine Basis von $\cM_{\hat K}$ über $\hat K$ mit der Eigenschaften,
-dass die Matrix, die $x\partial_x$ beschreibt, nur Einträge in $\Cfx$ hat.
-\end{lem}
+%TODO: titel: Operations on vector spaces with connection
+%TODO: verzweigung statt pull-back?
+\section{Operationen auf Meromorphen Zusammenhängen}
+\subsection{Tensorprodukt}
+\begin{prop} \cite[Prop 4.1.1]{SchneidersDmod}
+Seien $(\cM,\partial_\cM)$ und $(\cN,\partial_\cN)$ Meromorphe Zusammenhänge.
+Sei $n\otimes n\in \cM\otimes_K\cN$.
+Durch setzten von
+\[
+\partial_\otimes(m\otimes n)=\partial_\cM(m)\otimes n +m\otimes \partial_\cN(n)
+\]
+als die Wirkung von $\partial$ auf das $K$-Modul $\cM\otimes_K\cN$, wird
+$(\cM\otimes_K\cN,\partial)$ zu einem Meromorphen Zusammenhang.
+\end{prop}
 \begin{proof}
-Wähle einen zyklischen Vektor $m\in\cM_{\hat K}$ % TODO: richtiger Raum?
- und betrachte die Basis $m,\partial_x m,\dots,\partial_x^{d-1}m$ (siehe Lemma
-\ref{lem:Zyklischer-Vektor}).
-Schreibe $\partial_x^dm=\sum_{i=0}^{d-1}(-b_i(x))\partial_x^im$ in
-Basisdarstellung mit Koeffizienten $b_i\in\hat K$.
-Also erfüllt $m$ die Gleichung
-$\partial_x^dm+\sum_{i=0}^{d-1}b_i(x)\partial_x^im=0$.
-
-\begin{comment} bis hier schon klar \end{comment}
-
-Tatsächlich kann man $b_i(x)=x^ib_i'(x)$ mit $b_i'\in \Cfx$ schreiben (wegen
-Regularität).
-
-Dies impliziert, dass $m,x\partial_xm,\dots,(x\partial_x)^{d-1}m$ ebenfalls
-eine Basis von $\cM_{\hat K}$ ist.
-
-Die Matrix von $x\partial_x$ zu dieser neuen Basis hat nur Einträge in $\Cfx$.
+Klar
 \end{proof}
-\begin{lem}
-\cite[Lem 5.2.2.]{sabbah_cimpa90}
-Es existiert sogar eine Basis von $\cM_{\hat K}$ über $\hat K$ so dass die
-Matrix zu $x\partial_x$ konstant ist.
+\begin{lem} \cite[Ex 5.3.7]{sabbah_cimpa90}
+%TODO: move after slope definition!!!
+Falls $\cN$ regulär und nicht Null, dann ist die Menge der Slopes von
+$\cM\otimes\cN$ genau die Menge der Slopes von $\cM$.
 \end{lem}
 \begin{proof}
 TODO
 \end{proof}
 
-%TODO: titel: Operations on vector spaces with connection
-%TODO: verzweigung statt pull-back?
-\section{pull-back und push-forward}
+\subsection{pull-back und push-forward}
 \begin{comment}
-TODO: Variable zu x machen
-\end{comment}
 Nach \cite[1.a]{sabbah_Fourier-local} und \cite[1.3]{hotta2007d}.
-%
+\end{comment}
 Sei
 \begin{align*}
 \rho&:\C\rightarrow \C , t\mapsto x:=\rho(t) &\in t\Cft
@@ -1391,7 +1406,7 @@ Sei $\rho(u)=u^p=t$ und $\phi(t)$ gegeben.
 \end{align*}
 \end{comment}
 
-\section{Fouriertransformation}
+\subsection{Fouriertransformation}
 \begin{defn}[Fouriertransformation]
 \cite[Def 3.1]{Bloch_localfourier}
 \cite{GarciaLopez04}

@@ -7,6 +7,7 @@ module ComplRat
     , magnitude
     , magnitudeSq)
     where
+import Data.Ratio
 
 -- | Typ für komplexrationale Zahlen in kartesischer Darstellung.
 -- Der Konstruktor ist strikt in seinen beiden Argumenten.
@@ -37,6 +38,12 @@ magnitudeSq :: ComplRat -> Rational
 magnitudeSq (x :+: 0) = x*x
 magnitudeSq (0 :+: y) = y*y
 magnitudeSq (x :+: y) = x*x + (y*y)
+
+-- | 
+approxSize :: ComplRat -> Int
+approxSize c = sizeNumerator - sizeDenominator + 1
+  where sizeNumerator   = length $ show $ numerator $ magnitudeSq c
+        sizeDenominator = length $ show $ denominator $ magnitudeSq c
 
 -- TODO: approx. log
 
