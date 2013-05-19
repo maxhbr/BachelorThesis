@@ -1008,8 +1008,9 @@ $\rho^*\cD_{\hat K }=\hat L\otimes_{\hat K}\cD_{\hat K } \cong \cD_{\hat L }$
 als Meromorphe Zusammenhänge.
 \end{lem}
 \begin{proof}
-Wir wollen noch zeigen, dass $\partial_\otimes\circ\Phi = \Phi \circ
-\partial_t$ ist. Betrachte dazu das Diagram
+Wir wollen noch zeigen, dass $\partial_t\circ\Phi = \Phi \circ
+\partial_\otimes$ gilt,also dass $\Phi$ ein Morphismus von Meromorphen
+Zusammenhängen ist. Betrachte dazu das Diagram
 \begin{center}
 \begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
 \matrix (m) [
@@ -1031,8 +1032,8 @@ Wir wollen noch zeigen, dass $\partial_\otimes\circ\Phi = \Phi \circ
 ;
 \end{tikzpicture}
 \end{center}
-und für ein $1\otimes Q(x,\partial_x)\in\hat L\otimes_{\hat K}\cD_{\hat K }$
-folgt dann
+und für einene Elementartensor $f(t)\otimes Q(x,\partial_x)\in\hat
+L\otimes_{\hat K}\cD_{\hat K }$ folgt dann
 \begin{center}
 \begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
 \matrix (m) [
@@ -1042,22 +1043,28 @@ folgt dann
   %, text height=3em
   %, text depth=0.25em
 ]{
-1\otimes Q(x,\partial_x) &  & \rho'(t)\otimes \partial_xQ(x,\partial_x)\\
-& & \underset{=1}{\underbrace{\rho'(t)\cdot \rho'(t)^{-1}}}
+f(t)\otimes Q(x,\partial_x) &   
+  \partial_tf(t)\otimes Q(x,\partial_x) 
+  + \rho'(t)\otimes \partial_xQ(x,\partial_x)\\
+& \partial_tf(t)Q(x,\partial_x) 
+  + \underset{=1}{\underbrace{\rho'(t)\cdot \rho'(t)^{-1}}}
   \partial_tQ(\rho(t),\rho'(t)^{-q}\partial_t)\\
-Q(\rho(t),\rho'(t)^{-1}\partial_t) & 
-  \partial_tQ(\rho(t),\rho'(t)^{-q}\partial_t)\\
+f(t)Q(\rho(t),\rho'(t)^{-1}\partial_t) &  \partial_tf(t)Q(x,\partial_x) 
+  + \partial_tQ(\rho(t),\rho'(t)^{-q}\partial_t)\\
 };
 %\path (m-1-1) edge[white] node{$\%$} (m-2-2);
 \path[|->,font=\scriptsize,>=angle 90]
 (m-1-1) edge node[right]{$\Phi$} (m-3-1)
-(m-1-1) edge node[above]{$\partial_\otimes$} (m-1-3)
+(m-1-1) edge node[above]{$\partial_\otimes$} (m-1-2)
 (m-3-1) edge node[above]{$\partial_t$} (m-3-2)
-(m-1-3) edge node[right]{$\Phi$} (m-2-3)
+(m-1-2) edge node[right]{$\Phi$} (m-2-2)
+;
+\path[bend right=90]
+(m-3-2) edge node[descr]{$=$} (m-2-2)
 ;
 \end{tikzpicture}
 \end{center}
-\begin{comment} TODO \end{comment}
+also kommutiert das Diagram.
 \end{proof}
 \begin{comment}
 \begin{bem}

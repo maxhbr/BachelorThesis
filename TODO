@@ -72,6 +72,9 @@ meromZsh.tex:TODO
 meromZsh.tex:TODO: damit wird $\hat L$ zu einem $\hat K$ Vektorraum.
 meromZsh.tex:%TODO: ist das der zusammenhang oder die wirkung oder was?
 meromZsh.tex:%TODO: Pfeile
+meromZsh.tex:\begin{comment} TODO \end{comment}
+meromZsh.tex:\begin{comment} TODO \end{comment}
+meromZsh.tex:\begin{comment} TODO \end{comment}
 meromZsh.tex:%TODO: Pfeile
 meromZsh.tex:TODO
 meromZsh.tex:%TODO: warum hier alles Lokalisiert?
