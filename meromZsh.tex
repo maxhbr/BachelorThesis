@@ -949,9 +949,9 @@ Man erhält damit die Wirkung von $\partial_t=t^{-1}(t\partial_t)$.
 Für den Beweis von Lemma \ref{lem:pull-back-hilfslemma3} werden zunächst zwei
 kleine Lemmata bewiesen.
 
-\begin{lem} \label{lem:pull-back-hilfslemma1}
+\begin{lem} \label{lem:pull-back-hilfslemma1pre}
 Es gilt $\rho^*\cD_{\hat K }=\hat L\otimes_{\hat K}\cD_{\hat K } \cong
-\cD_{\hat L }$ mittels
+\cD_{\hat L }$ als $\cD_{\hat L}$-Moduln, mittels
 \begin{center}
 \begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
 \matrix (m) [
@@ -978,6 +978,86 @@ Es gilt $\rho^*\cD_{\hat K }=\hat L\otimes_{\hat K}\cD_{\hat K } \cong
 \end{center}
 \end{lem}
 \begin{proof}
+Prüfe zunächst die Injectivität. Sei $f(t)\otimes m(x,\partial_x)$ so, dass
+\begin{align*}
+0 &= \Phi(f(t)\otimes m(x,\partial_x))
+\\&= f(t)m(\rho(t),\rho'(t)^{-1}\partial_t)
+\end{align*}
+und, da hier alles Nullteilerfrei ist, ist die Bedingung äquivalent zur
+folgenden
+\begin{align*}
+\Leftrightarrow && 0&=f(t) &\text{oder}&& 0&=m(\rho(t),\rho'(t)^{-1}\partial_t)
+\\\Leftrightarrow& \dots
+\end{align*}
+\begin{comment} TODO \end{comment}
+Nun zur Surjektivität.
+Sei $g(t,\partial_t)=\sum_ka_k(t)\partial_t^k\in\cD_{\hat L}$ so gilt
+\begin{align*}
+g(t,\partial_t)&=\sum_ka_k(t)\partial_t^k
+\\&=\sum_ka_k(t)\underset{=1}{\underbrace{\rho'(t)\rho'(t)^{-1}}}\partial_t^k
+\\&=\rho'(t)\sum_ka_k(t)\rho'(t)^{-1}\partial_t^k
+\\&= \dots
+\end{align*}
+
+\begin{comment} TODO \end{comment}
+\end{proof}
+
+\begin{lem} \label{lem:pull-back-hilfslemma1}
+Mit $\Phi$ wie in \label{lem:pull-back-hilfslemma1pre} gilt sogar
+$\rho^*\cD_{\hat K }=\hat L\otimes_{\hat K}\cD_{\hat K } \cong \cD_{\hat L }$
+als Meromorphe Zusammenhänge.
+\end{lem}
+\begin{proof}
+Wir wollen noch zeigen, dass $\partial_\otimes\circ\Phi = \Phi \circ
+\partial_t$ ist. Betrachte dazu das Diagram
+\begin{center}
+\begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
+\matrix (m) [
+  matrix of math nodes
+  , row sep=2.5em
+  , column sep=5em
+  %, text height=3em
+  %, text depth=0.25em
+]{
+\hat L\otimes_{\hat K}\cD_{\hat K } & \hat L\otimes_{\hat K}\cD_{\hat K } \\
+\cD_{\hat L } & \cD_{\hat L }\\
+};
+%\path (m-1-1) edge[white] node{$\%$} (m-2-2);
+\path[->,font=\scriptsize,>=angle 90]
+(m-1-1) edge node[above]{$\partial_\otimes$} (m-1-2)
+(m-1-1) edge node[descr]{$\cong$} node[right]{$\Phi$} (m-2-1)
+(m-1-2) edge node[descr]{$\cong$} node[right]{$\Phi$} (m-2-2)
+(m-2-1) edge node[above]{$\partial_t$} (m-2-2)
+;
+\end{tikzpicture}
+\end{center}
+und für ein $1\otimes Q(x,\partial_x)\in\hat L\otimes_{\hat K}\cD_{\hat K }$
+folgt dann
+\begin{center}
+\begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
+\matrix (m) [
+  matrix of math nodes
+  , row sep=2.5em
+  , column sep=5em
+  %, text height=3em
+  %, text depth=0.25em
+]{
+1\otimes Q(x,\partial_x) &  & \rho'(t)\otimes \partial_xQ(x,\partial_x)\\
+& & \underset{=1}{\underbrace{\rho'(t)\cdot \rho'(t)^{-1}}}
+  \partial_tQ(\rho(t),\rho'(t)^{-q}\partial_t)\\
+Q(\rho(t),\rho'(t)^{-1}\partial_t) & 
+  \partial_tQ(\rho(t),\rho'(t)^{-q}\partial_t)\\
+};
+%\path (m-1-1) edge[white] node{$\%$} (m-2-2);
+\path[|->,font=\scriptsize,>=angle 90]
+(m-1-1) edge node[right]{$\Phi$} (m-3-1)
+(m-1-1) edge node[above]{$\partial_\otimes$} (m-1-3)
+(m-3-1) edge node[above]{$\partial_t$} (m-3-2)
+(m-1-3) edge node[right]{$\Phi$} (m-2-3)
+;
+\end{tikzpicture}
+\end{center}
+\begin{comment} TODO \end{comment}
 \end{proof}
 \begin{comment}
 \begin{bem}
@@ -990,6 +1070,7 @@ für Elementartensoren $1\otimes m\in \hat L\otimes_{\hat K}\cD_{\hat K}$
 &\overset{\Phi}{\mapsto} \underset{=1}{\underbrace{\rho'(t)\rho'(t)^{-1}}}
   \partial_t m(\rho(t),\rho'(t)^{-1}\partial_t) \\
 &= \partial_t m(\rho(t),\rho'(t)^{-1}\partial_t)\\
+&=\dots
 \end{align*}
 und somit (\ref{eq:pull-back-zusammenhang}) wie gewollt.
 \end{bem}
