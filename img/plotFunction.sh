@@ -1,7 +1,6 @@
 #!/bin/sh
-max=10000
-art[2]="betrag"; art[3]="cauchy"; art[4]="quot"; art[5]="fac"
-
+max=$1
+art[2]="betrag"; art[3]="cauchy"; art[4]="quot";
 for i in 2 3 4; do
   name="${art[i]}"
   gnuplot << EOF
@@ -16,4 +15,5 @@ set log xy
 plot for [fn in system("ls data/*")] fn every ::0::${max} using 1:${i} with lines title system("basename ".fn)
 EOF
   epstopdf "${name}.eps" --outfile "${name}.pdf"
+  rm "${name}.eps"
 done

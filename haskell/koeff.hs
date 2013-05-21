@@ -13,23 +13,15 @@ import Data.Time
 -- returns array with the coefficients of v(t)
 -- first element in array is koefficient from t^{-1}
 vKoeffs :: ComplRat -> [ComplRat]
-vKoeffs uMin2 = 1/2:+:0 : [vKoeff i|i <- [0..]]
-  where
-    -- returns n-th coefficient of v(t)
-    vKoeff :: Int -> ComplRat
-    vKoeff = memo vKoeff'
-    vKoeff' :: Int -> ComplRat
-    vKoeff' n | n >   0   = (vKoeff (n-1)*(fromIntegral n+1)+summe)/uMin2
-              | n ==  0   = -3/(uMin2*4)
-              | n == -1   = 1/2
-              | otherwise = 0
-              where summe = sum [vKoeff (k-1)*(vKoeff (n-k-1))|k <- [1..n-1]]
-
-    -- returns n-th coefficient of u(t)
-    uKoeff :: Int -> ComplRat
-    uKoeff n | n == -2   = uMin2
-             | n == -1   = -3/2
-             | otherwise = -(vKoeff n)
+vKoeffs uMin2 = 1/2:+:0 : [koeff i|i <- [0..]]
+  where koeff :: Int -> ComplRat
+        koeff = memo koeff'
+        koeff' :: Int -> ComplRat
+        koeff' n | n >   0   = (koeff (n-1)*(fromIntegral n+1)+summe)/uMin2
+                 | n ==  0   = -3/(uMin2*4)
+                 | n == -1   = 1/2
+                 | otherwise = 0
+                 where summe = sum [koeff (k-1)*(koeff (n-k-1))|k <- [1..n-1]]
 
 -- returns array with the coefficients of u(t)
 -- first element in array is koefficient from t^{-2}
@@ -70,9 +62,6 @@ main = do x <- getArgs
                                    , ("./data/u_-2=1.0e-4i" , (0:+:1.0e-4))
                                    , ("./data/u_-2=1.0e-5i" , (0:+:1.0e-5))
                                    ]
-
-testPrintData = printData 100 (0:+:1)
-testSaveData = saveData 100 ("./data/u_-2=i", (0:+:1))
 
 saveData :: Int -> (String, ComplRat) -> IO()
 saveData end (fn, uMin2) =

@@ -39,7 +39,7 @@ magnitudeSq (x :+: 0) = x*x
 magnitudeSq (0 :+: y) = y*y
 magnitudeSq (x :+: y) = x*x + (y*y)
 
--- | 
+-- | echos the approx. Size of the exponent
 approxSize :: ComplRat -> Int
 approxSize c = sizeNumerator - sizeDenominator + 1
   where sizeNumerator   = length $ show $ numerator $ magnitudeSq c

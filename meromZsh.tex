@@ -161,32 +161,10 @@ angeben, durch
 
 \section{Eigenschaften / Äquivalenz zu holonomen lokalisierten $\cD$-Moduln}
 %Hier nun einige Eigenschaften Meromorpher Zusammenhänge.
-\begin{comment}
-\cite[4.2]{sabbah_cimpa90}
-Let $\cM$ be a left $\cD$-module. First we consider it only as a
-$\C\{x\}$-module and let $\cM[x^{-1}]$ be the localized module.
-\end{comment}
-
-%TODO: reihenfolge bei sabbah anderst!!!
-\begin{lem}[Lemma vom zyklischen Vektor] \label{lem:Zyklischer-Vektor}
-\cite[Thm 4.3.3]{sabbah_cimpa90}
-\cite[Satz 4.8]{ZulaBarbara}
-Sei $\cM_K$ ein Meromorpher Zusammenhang. Es Existiert ein Element
-$m\in\cM_K$ und eine ganze Zahl $d$ so dass
-$m,\partial_xm,\dots,\partial_x^{d-1}m$ eine $K$-Basis von $\cM_K$ ist.
-\end{lem}
-\begin{proof}
-\cite[Satz 4.8]{ZulaBarbara}
-\end{proof}
-\begin{comment}
-TODO: Wie findet man einen Zyklischen Vektor\\
-TODO: wie bekommt man daraus das $P$
-\end{comment}
-
 \begin{thm}
 \cite[Thm 4.3.2]{sabbah_cimpa90}
-Ein Meromorpher Zusammenhang bestimmt ein holonomes lokalisiertes $\cD_K$-Modul
-und andersherum.
+Ein Meromorpher Zusammenhang bestimmt ein holonomes lokalisiertes
+$\cD_K$-Modul und andersherum.
 \end{thm}
 \begin{proof}
 \cite[Thm 4.3.2]{sabbah_cimpa90}
@@ -211,6 +189,30 @@ $\cM_K$.
 \]
 \end{rem}
 \end{comment}
+\begin{comment}
+\cite[4.2]{sabbah_cimpa90}
+Let $\cM$ be a left $\cD$-module. First we consider it only as a
+$\C\{x\}$-module and let $\cM[x^{-1}]$ be the localized module.
+\end{comment}
+
+%TODO: reihenfolge bei sabbah anderst!!!
+\begin{lem}[Lemma vom zyklischen Vektor] \label{lem:Zyklischer-Vektor}
+\cite[Thm 4.3.3]{sabbah_cimpa90}
+\cite[Satz 4.8]{ZulaBarbara}
+Sei $\cM_K$ ein Meromorpher Zusammenhang. Es Existiert ein Element
+$m\in\cM_K$ und eine ganze Zahl $d$ so dass
+$m,\partial_xm,\dots,\partial_x^{d-1}m$ eine $K$-Basis von $\cM_K$ ist.
+\end{lem}
+\begin{proof}
+\cite[Satz 4.8]{ZulaBarbara}
+\end{proof}
+\begin{cor}
+In der Situation von Lemma \ref{lem:Zyklischer-Vektor} gibt es ein $P\in
+\cD_K$ mit $\partial$-Grad von $P$ ist gleich $d$ und $P \cdot m=0$, in
+diesem Fall ist $P$ ein Minimalpolynom zu $\cM_K$, also gilt
+$\cM_K=\cD_K/\cD_K\cdot P$.
+\end{cor}
+
 \begin{thm}\label{thm:basic-splitting}
 \cite[Seite 64]{ZulaBarbara} %TODO: hat die sich hier verschrieben???
 Ist $P=P_1\cdot P_2$ mit $P_1,P_2\in \cD_K$ so gilt
@@ -517,7 +519,6 @@ Man erkennt, dass $\cP(P_2)=\{0,\frac{2}{3}\}$ ist.
 \end{enumerate}
 \end{exmp}
 \begin{figure}[htbp]
-\fbox{
   \begin{minipage}[hbt]{0,49\textwidth}
   \begin{center}
     \begin{tikzpicture}[scale=1,descr/.style={fill=white,inner sep=2.5pt}]
@@ -540,7 +541,6 @@ Man erkennt, dass $\cP(P_2)=\{0,\frac{2}{3}\}$ ist.
   \caption{Newton-Polygon zu $P_2$}
     \label{fig:Newton-Polygon2}
   \end{minipage}
-}
 \end{figure}
 
 \begin{bem}
@@ -679,13 +679,11 @@ Sei $P=x(x\partial_x)^2+x\partial_x+\frac{1}{2}$. So sieht das Newton-Polygon
 wie folgt aus
 \begin{figure}[H] % htbp
 \begin{center}
-\fbox{
   \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
   \def\myPoints{0/0,1/0,2/1}
   \def\myPath{ -- (1,0) -- node[descr]{$1$} (2,1)}
   \myPlotFunction{\myPoints}{\myPath}{2}{0}{1}{$N(P)$}
   \end{tikzpicture}
-}
 \end{center}
 \caption{Newton Polygon zu $P=x(x\partial_x)^2+x\partial_x+\frac{1}{2}$}
 \end{figure}
@@ -712,13 +710,11 @@ So sieht das Newton-Polygon
 wie folgt aus
 \begin{figure}[H]
 \begin{center}
-\fbox{
   \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
   \def\myPoints{0/0,1/0,1/1,2/1}
   \def\myPath{ -- (1,0) -- node[descr]{$1$} (2,1)}
   \myPlotFunction{\myPoints}{\myPath}{2}{0}{1}{$N(P)$}
   \end{tikzpicture}
-}
 \end{center}
 \caption{Newton Polygon zu $P$}
 \end{figure}
@@ -824,9 +820,9 @@ Monome
 Seien $(\cM,\partial_\cM)$ und $(\cN,\partial_\cN)$ Meromorphe Zusammenhänge.
 Sei $n\otimes n\in \cM\otimes_K\cN$.
 Durch setzten von
-\[
+\begin{equation} \label{eq:TensorAbleiten}
 \partial_\otimes(m\otimes n)=\partial_\cM(m)\otimes n +m\otimes \partial_\cN(n)
-\]
+\end{equation}
 als die Wirkung von $\partial$ auf das $K$-Modul $\cM\otimes_K\cN$, wird
 $(\cM\otimes_K\cN,\partial)$ zu einem Meromorphen Zusammenhang.
 \end{prop}
@@ -912,21 +908,15 @@ $\rho'(t)^{-1}\partial_t$ ist. In der Tat stimmt diese Vermutung, wie das
 folgende Lemma zeigt.
 \end{comment}
 %
-\begin{lem} \label{lem:pull-back-hilfslemma3}
+\begin{thm} \label{thm:pull-back-berechnung}
 %Wie erhält man den pull-back Zusammenhang bzw. wie ist er berechenbar?
 In der Situation von Lemma \ref{defn:pull-back}, mit
 $\cM_{\hat K}=\cD_{\hat K}/\cD_{\hat K}\cdot P(x,\partial_x)$ für ein
 $P(x,\partial_x)\in\cD_{\hat K}$, gilt
 \[\rho^*\cM_{\hat K}\cong \cD_{\hat L}\Big/\cD_{\hat L}\cdot
   P(\rho(t),\rho'(t)^{-1}\partial_t) \,. \]
-\begin{comment}
-also wird der Übergang beschrieben durch
-\begin{align*}
-x          &\rightarrow \rho(t) \\
-\partial_x &\rightarrow \rho'(t)^{-1}\partial_t
-\end{align*}
-\end{comment}
-\end{lem}
+Für $P(\rho(t),\rho'(t)^{-1}\partial_t)$ werden wir auch $\rho^*P$schreiben.
+\end{thm}
 \begin{comment}
 \cite[Seite 130]{coutinho1995primer} Holonomic modules are preserved under
 this construction.
@@ -946,11 +936,10 @@ m))+((t\frac{\partial\phi}{\partial t})\otimes m) \,.
 Man erhält damit die Wirkung von $\partial_t=t^{-1}(t\partial_t)$.
 \end{comment}
 
-Für den Beweis von Lemma \ref{lem:pull-back-hilfslemma3} werden zunächst zwei
-kleine Lemmata bewiesen.
+Für den Beweis von Satz \ref{thm:pull-back-berechnung} werden zunächst ein paar Lemmata bewiesen.
 
 \begin{lem} \label{lem:pull-back-hilfslemma1pre}
-Es gilt $\rho^*\cD_{\hat K }=\hat L\otimes_{\hat K}\cD_{\hat K } \cong
+Es gilt $\rho^*\cD_{\hat K }\bydef\hat L\otimes_{\hat K}\cD_{\hat K } \cong
 \cD_{\hat L }$ als $\cD_{\hat L}$-Moduln, mittels
 \begin{center}
 \begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
@@ -964,7 +953,7 @@ Es gilt $\rho^*\cD_{\hat K }=\hat L\otimes_{\hat K}\cD_{\hat K } \cong
   \Phi:\hat L\otimes_{\hat K}\cD_{\hat K }  & \cD_{\hat L } \\
   %1\otimes m(t,\partial_t) & m(\rho(u),\rho'(u)^{-1}\partial_u) \\
   %f(u)\otimes m(t,\partial_t) & f(u)m(\rho(u),\rho'(u)^{-1}\partial_u) \\
-  f(t)\otimes m(x,\partial_x) & f(t)m(\rho(t),\rho'(t)^{-1}\partial_t) \\
+  f(t)\otimes Q(x,\partial_x) & f(t)Q(\rho(t),\rho'(t)^{-1}\partial_t) \\
 };
 %TODO: Pfeile
 \path[->,font=\scriptsize,>=angle 90]
@@ -978,10 +967,11 @@ Es gilt $\rho^*\cD_{\hat K }=\hat L\otimes_{\hat K}\cD_{\hat K } \cong
 \end{center}
 \end{lem}
 \begin{proof}
-Prüfe zunächst die Injectivität. Sei $f(t)\otimes m(x,\partial_x)$ so, dass
+Prüfe zunächst die Injektivität. Sei $f(t)\otimes Q(x,\partial_x)\in
+\ker(\Phi)$ so, dass
 \begin{align*}
-0 &= \Phi(f(t)\otimes m(x,\partial_x))
-\\&= f(t)m(\rho(t),\rho'(t)^{-1}\partial_t)
+0 &= \Phi(f(t)\otimes Q(x,\partial_x))
+\\&= f(t)Q(\rho(t),\rho'(t)^{-1}\partial_t)
 \end{align*}
 und, da hier alles Nullteilerfrei ist, ist die Bedingung äquivalent zur
 folgenden
@@ -1003,13 +993,15 @@ g(t,\partial_t)&=\sum_ka_k(t)\partial_t^k
 \end{proof}
 
 \begin{lem} \label{lem:pull-back-hilfslemma1}
-Mit $\Phi$ wie in \label{lem:pull-back-hilfslemma1pre} gilt sogar
-$\rho^*\cD_{\hat K }=\hat L\otimes_{\hat K}\cD_{\hat K } \cong \cD_{\hat L }$
+Das in Lemma \ref{lem:pull-back-hilfslemma1pre} definierte $\Phi$ ist sogar ein
+Morphismus von Meromorphen Zusammenhängen, also gilt sogar
+$\rho^*\cD_{\hat K }\bydef\hat L\otimes_{\hat K}\cD_{\hat K } \cong \cD_{\hat L 
+}$
 als Meromorphe Zusammenhänge.
 \end{lem}
 \begin{proof}
 Wir wollen noch zeigen, dass $\partial_t\circ\Phi = \Phi \circ
-\partial_\otimes$ gilt,also dass $\Phi$ ein Morphismus von Meromorphen
+\partial_\otimes$ gilt, also dass $\Phi$ ein Morphismus von Meromorphen
 Zusammenhängen ist. Betrachte dazu das Diagram
 \begin{center}
 \begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
@@ -1023,7 +1015,6 @@ Zusammenhängen ist. Betrachte dazu das Diagram
 \hat L\otimes_{\hat K}\cD_{\hat K } & \hat L\otimes_{\hat K}\cD_{\hat K } \\
 \cD_{\hat L } & \cD_{\hat L }\\
 };
-%\path (m-1-1) edge[white] node{$\%$} (m-2-2);
 \path[->,font=\scriptsize,>=angle 90]
 (m-1-1) edge node[above]{$\partial_\otimes$} (m-1-2)
 (m-1-1) edge node[descr]{$\cong$} node[right]{$\Phi$} (m-2-1)
@@ -1039,7 +1030,7 @@ L\otimes_{\hat K}\cD_{\hat K }$ folgt dann
 \matrix (m) [
   matrix of math nodes
   , row sep=2.5em
-  , column sep=5em
+  , column sep=2em
   %, text height=3em
   %, text depth=0.25em
 ]{
@@ -1052,7 +1043,6 @@ f(t)\otimes Q(x,\partial_x) &
 f(t)Q(\rho(t),\rho'(t)^{-1}\partial_t) &  \partial_tf(t)Q(x,\partial_x) 
   + \partial_tQ(\rho(t),\rho'(t)^{-q}\partial_t)\\
 };
-%\path (m-1-1) edge[white] node{$\%$} (m-2-2);
 \path[|->,font=\scriptsize,>=angle 90]
 (m-1-1) edge node[right]{$\Phi$} (m-3-1)
 (m-1-1) edge node[above]{$\partial_\otimes$} (m-1-2)
@@ -1070,7 +1060,7 @@ also kommutiert das Diagram.
 \begin{bem}
 BENÜTZT BEREITS DAS NÄCHSTE LEMMA...
 
-Das soeben, in Lemma \ref{lem:pull-back-hilfslemma1}, definierte $\Phi$ erfüllt
+Das soeben, in Lemma \ref{lem:pull-back-hilfslemma1pre}, definierte $\Phi$ erfüllt
 für Elementartensoren $1\otimes m\in \hat L\otimes_{\hat K}\cD_{\hat K}$
 \begin{align*}
 \partial_u(1\otimes m) &\overset{\mbox{def}}{=} \rho'(t)\otimes\partial_x m \\
@@ -1100,22 +1090,70 @@ Sei $P(x,\partial_x)\in \cD_K$. In der Situation
 %TODO: Pfeile
 %\path (m-1-1) edge[white] node{$\%$} (m-2-2);
 \path[->,font=\scriptsize,>=angle 90]
-(m-1-1) edge node[above]{$\id\otimes\_\!\cdot\! P(t,\partial_t)$} (m-1-2)
+(m-1-1) edge node[above]{$\id\otimes\_\!\cdot\! P(x,\partial_x)$} (m-1-2)
 (m-1-1) edge node[descr]{$\cong$} node[right]{$\Phi$} (m-2-1)
 (m-1-2) edge node[descr]{$\cong$} node[right]{$\Phi$} (m-2-2)
 (m-2-1) edge node[above]{$\alpha$} (m-2-2)
 ;
 \end{tikzpicture}
 \end{center}
-mit $\Phi$ wie in Lemma \ref{lem:pull-back-hilfslemma1}
+mit $\Phi$ wie in Lemma \ref{lem:pull-back-hilfslemma1pre}
 macht $\alpha:=\_\!\cdot\! P(\rho(t),\rho'(t)^{-1}\partial_t)$ das Diagram
 kommutativ.
 \end{lem}
 \begin{proof} 
-TODO
+Betrachte ein $f(t)\otimes Q(x,\partial_x)\in\hat L\otimes_{\hat K}\cD_{\hat
+K}$. So gilt
+\begin{center}
+\begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
+\matrix (m) [
+  matrix of math nodes
+  , row sep=2.5em
+  , column sep=5em
+  %, text height=3em
+  %, text depth=0.25em
+]{
+f(t)\otimes Q(x,\partial_x) & f(t)\otimes Q(x,\partial_x)\cdot P(x,\partial_x)\\
+& f(t) Q(\rho(t),\rho'(t)^{-1}\partial_t)
+  \cdot P(\rho(t),\rho'(t)^{-1}\partial_t) \\
+};
+%TODO: Pfeile
+%\path (m-1-1) edge[white] node{$\%$} (m-2-2);
+\path[|->,font=\scriptsize,>=angle 90]
+(m-1-1) edge node[above]{$\id\otimes\_\!\cdot\! P(x,\partial_x)$} (m-1-2)
+(m-1-2) edge node[right]{$\Phi$} (m-2-2)
+;
+\end{tikzpicture}
+\end{center}
+und
+\begin{center}
+\begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
+\matrix (m) [
+  matrix of math nodes
+  , row sep=2.5em
+  , column sep=10em
+  %, text height=3em
+  %, text depth=0.25em
+]{
+f(t)\otimes Q(x,\partial_x) \\
+f(t) Q(\rho(t),\rho'(t)^{-1}\partial_t) &
+f(t) Q(\rho(t),\rho'(t)^{-1}\partial_t)
+  \cdot P(\rho(t),\rho'(t)^{-1}\partial_t) \\
+};
+%TODO: Pfeile
+%\path (m-1-1) edge[white] node{$\%$} (m-2-2);
+\path[|->,font=\scriptsize,>=angle 90]
+(m-1-1) edge node[right]{$\Phi$} (m-2-1)
+(m-2-1) edge node[above]{$\_\!\cdot\! P(\rho(t),\rho'(t)^{-1}\partial_t)$} 
+  (m-2-2)
+;
+\end{tikzpicture}
+\end{center}
+also kommutiert das Diagram mit $\alpha=\_\!\cdot\!
+P(\rho(t),\rho'(t)^{-1}\partial_t)$.
 \end{proof}
 
-\begin{proof}[zu Lemma \ref{lem:pull-back-hilfslemma3}]
+\begin{proof}[Beweis zu Satz \ref{thm:pull-back-berechnung}]
 %TODO: warum hier alles Lokalisiert?
 Sei $P\in\cD_{\hat K}$ und $\cM_{\hat K }:=\cD_{\hat K }/\cD_{\hat K }\cdot P$.
 Wir wollen zeigen, dass
@@ -1150,8 +1188,8 @@ Betrachte dazu die kurze Sequenz
 \end{tikzpicture}
 \end{center}
 %TODO: muss \Cful oder \Cftl flach sein???
-ist \textbf{exact}, weil $\cM_{\hat K } \cong\cD_{\hat K }\Big/\cD_{\hat K
-}\cdot P=\coker(\_\cdot P)$.  Weil $\hat K$ \textbf{flach} ist, da  Körper, ist
+ist exact, weil $\cM_{\hat K } \cong\cD_{\hat K }\Big/\cD_{\hat K
+}\cdot P=\coker(\_\cdot P)$.  Weil $\hat K$ flach ist, da  Körper, ist
 auch, nach anwenden des
 %exacten
 Funktors $\hat L\otimes_{\hat K}\_$, die Sequenz
@@ -1182,6 +1220,7 @@ Funktors $\hat L\otimes_{\hat K}\_$, die Sequenz
 \end{tikzpicture}
 \end{center}
 exact.
+\begin{comment}
 Deshalb ist
 \begin{align*}
 \rho^*\cM_{\hat K} &\cong \coker(\id\otimes\_\cdot P)
@@ -1191,7 +1230,8 @@ Deshalb ist
   \cdot (\id\otimes\_\!\cdot\!  P) \Big)
   & \mbox{(nach def. von $\coker$)}
 \end{align*}
-Also mit $\Phi$ wie in Lemma \ref{lem:pull-back-hilfslemma1} und
+\end{comment}
+Also mit $\Phi$ wie in Lemma \ref{lem:pull-back-hilfslemma1pre} und
 $Q(t,\partial_t):=P(\rho(t),\rho'(t)^{-1}\partial_t)$
 nach Lemma \ref{lem:pull-back-hilfslemma2}
 ergibt sich
@@ -1265,17 +1305,7 @@ die untere Zeile zu einer exacten Sequenz fortsetzen
   ;
 \end{tikzpicture}
 \end{center}
-und damit folgt die Behauptung.
-\begin{comment}
-Quelle?
-\end{comment}
-
-\begin{comment}
-\begin{itemize}
-\item warum sind die schon zusammenhänge isomorph?\\
-eventuell noch ein Lemma bei kurzen exacten Sequenzen hinzufügen
-\end{itemize}
-\end{comment}
+und damit folgt, wegen Isomorphie der Cokerne, die Behauptung.
 \end{proof}
 
 %
@@ -1304,67 +1334,35 @@ TODO: Hier weiter...
 Hier nun ein explizit berechneter pull-back.
 Wir wollen $\cM_{\hat K}:=\cD_{\hat K}/\cD_{\hat K}\cdot P$ bzgl. $P:=
 x^3\partial_x^2-4x^2\partial_x-1$ betrachten.
-Unser Ziel ist es hier ganzzahlige slopes zu erhalten.
+Unser Ziel ist es hier ganzzahlige Slopes zu erhalten.
 %TODO: erkläre wieso --> Elementare Zusammenhänge
 Es gilt $\slopes(P)=\{\frac{1}{2}\}$ (siehe Abbildung \ref{fig:Pull-Back1})
 und es ist $2$ der Hauptnenner aller Slopes.
 Wende den pull-back mit $\rho:t\rightarrow x:=t^2$ an.
-Zunächst ein paar Nebenrechnungen, damit wir Lemma
-\ref{lem:pull-back-hilfslemma3} einfacher anwenden können.
+Zunächst ein paar Nebenrechnungen, damit wir Satz
+\ref{thm:pull-back-berechnung} einfacher anwenden können.
 \begin{align*}
-\partial_x   &\rightarrow \frac{1}{\rho'(t)}\partial_t=\frac{1}{2t}\partial_t \\
-\partial_x^2 &\rightarrow (\frac{1}{2t}\partial_t)^2 \\
-             &= \frac{1}{2t}\partial_t (\frac{1}{2t}\partial_t) \\
-             &= \frac{1}{2t}(-\frac{1}{2t^2}\partial_t +
-               \frac{1}{2t}\partial_t^2) \\
-             &= \frac{1}{4t^2}\partial_t^2-\frac{1}{4t^3}\partial_t \\
+\partial_x   &\rightsquigarrow 
+  \frac{1}{\rho'(t)}\partial_t=\frac{1}{2t}\partial_t
+\\\partial_x^2 &\rightsquigarrow (\frac{1}{2t}\partial_t)^2
+  = \frac{1}{2t}\partial_t (\frac{1}{2t}\partial_t)
+  = \frac{1}{2t}(-\frac{1}{2t^2}\partial_t + \frac{1}{2t}\partial_t^2)
+  = \frac{1}{4t^2}\partial_t^2-\frac{1}{4t^3}\partial_t 
 \end{align*}
 also ergibt einsetzen
 \begin{align*}
-\rho^+P &= t^6(\frac{1}{4t^2}\partial_t^2-\frac{1}{4t^3}\partial_t)-
-          4t^{4}\frac{1}{2t}\partial_t-1\\
-        &= \frac{1}{4}t^4\partial_t^2-t^3\frac{1}{4u^3}\partial_t-
-          4t^{3}\frac{1}{2}\partial_t-1\\
-        &= \frac{1}{4}t^4\partial_t^2 -2\frac{1}{4}t^3\partial_t-1
+\rho^*P &= (t^2)^3(\frac{1}{4t^2}\partial_t^2-\frac{1}{4t^3}\partial_t)-
+    4(t^2)^2\frac{1}{2t}\partial_t-1
+\\&= \frac{1}{4}t^4\partial_t^2 \underbracket{-t^3\frac{1}{4}\partial_t-
+    4t^{3}\frac{1}{2}\partial_t}-1
+\\&= \frac{1}{4}t^4\partial_t^2 \overbracket{-2\frac{1}{4}t^3\partial_t}-1
 \end{align*}
 
-Also ist $\rho^+P= \frac{1}{4}t^4\partial_t^2 -\frac{1}{2}t^3\partial_t-1$ mit
-$ \slopes(\rho^+P)=\{1\} $ (siehe Abbildung \ref{fig:Pull-Back2}) und somit
+Also ist $\rho^*P= \frac{1}{4}t^4\partial_t^2 -\frac{1}{2}t^3\partial_t-1$ mit
+$ \slopes(\rho^*P)=\{1\} $ (siehe Abbildung \ref{fig:Pull-Back2}) und somit
 $\rho^*\cM_{\hat K}=\cD_{\hat L}/\cD_{\hat L}
 \cdot(\frac{1}{4}t^4\partial_t^2-\frac{1}{2}t^3\partial_t-1)$.
-\iffalse
-  \begin{figure}[H]
-  %TODO: nummer aus der referenz ist falsch
-  \label{fig:Pull-Back}
-  \caption{Zu Beispiel \ref{exmp:Pull-Back}}
-  \begin{center}
-  %\caption{Newton Polygon zu $P$ und $\rho^+P$}
-  \fbox{
-    \subfloat[Newton Polygon zu \newline $P=x^3\partial_x^2-4x^2\partial_x-1$]{
-      \label{fig:Pull-Back1}
-      \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
-      \def\myPoints{0/0, 1/1, 2/1}
-      \def\myPath{-- node[descr]{$\frac{1}{2}$} (2,1)}
-      \myPlotFunction{\myPoints}{\myPath}{2}{0}{2}{$N(P))$}
-      \end{tikzpicture}
-    }
-    \quad
-    \subfloat[Newton Polygon zu \newline $\rho^+P=%
-      \frac{1}{4}t^4\partial_t^2-\frac{1}{2}t^3\partial_t-1$]
-    {
-      \label{fig:Pull-Back2}
-      \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
-      \def\myPoints{0/0, 1/2, 2/2}
-      \def\myPath{-- node[descr]{$1$} (2,2)}
-      \myPlotFunction{\myPoints}{\myPath}{2}{0}{2}{$N(\rho^*P))$}
-      \end{tikzpicture}
-    }
-  }
-  \end{center}
-  \end{figure}
-\fi
 \begin{figure}[htbp]
-\fbox{
   \begin{minipage}[hbt]{0,49\textwidth}
   \begin{center}
     \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
@@ -1384,11 +1382,10 @@ $\rho^*\cM_{\hat K}=\cD_{\hat L}/\cD_{\hat L}
     \myPlotFunction{\myPoints}{\myPath}{2}{0}{2}{$N(\rho^*P))$}
     \end{tikzpicture}
   \end{center}
-  \caption{Newton Polygon zu \newline $\rho^+P=%
+  \caption{Newton Polygon zu \newline $\rho^*P=%
     \frac{1}{4}t^4\partial_t^2-\frac{1}{2}t^3\partial_t-1$}
   \label{fig:Pull-Back2}
   \end{minipage}
-}
 \end{figure}
 \end{exmp}
 
@@ -1510,10 +1507,63 @@ Ist $\cM_{\hat K}=\hat K / \hat K \cdot P$ so ist die Fouriertransformierte
 davon $\,^\cF\cM_{\hat K}=\hat K / \hat K \cdot \cF_P(x,\partial_x)$.
 \end{defn}
 \begin{exmp}
-Sei $P=t^2\partial_t+1$ dann ist die Fouriertransformierte davon $\cF_P=\dots$
-\begin{comment}
-TODO: hier weiter
-\end{comment}
+Sei $P=x^3\partial_x^4+x^2\partial_x^2+x$ dann ist die Fouriertransformierte
+davon
+\begin{align*}
+\cF_P&=\partial_z^3(-z)^4+\partial_z^2(-z)^2+\partial_z
+\\&=\underbracket{\partial_z^2z^2} + \underbracket{\partial_z^3z^4}+\partial_z
+\\&=\overbracket{z^4\partial_z^3 + \underbracket{[\partial_z^3,z^4]}}
+  + \overbracket{z^2\partial_z^2 + \underbracket{[\partial_z^2,z^2]}}
+  + \partial_z
+\\&\begin{aligned} 
+  =&z^4\partial_z^3 + \overbracket{\underbracket{
+    \sum_{i=1}^3\frac{4\cdot3\dots(5-i)\cdot 3 \cdot 2  \dots
+    (4-i)}{i!}z^{4-i}\partial_z^{3-i}
+  }} + z^2\partial_z^2 
+\\&\qquad+ \overbracket{\underbracket{
+    \sum_{i=1}^2\frac{2\cdot1\dots(3-i)\cdot 2 \cdot 1  \dots
+    (3-i)}{i!}z^{2-i}\partial_z^{2-i}
+  }}
+  + \partial_z
+\end{aligned}
+\\&=z^4\partial_z^3 + \overbracket{
+    12z^3\partial_z^2 + \frac{72}{2}z^2\partial_z + \frac{144}{6}z
+  }
+  + z^2\partial_z^2 + \overbracket{ 4z\partial_z + \frac{4}{2} } + \partial_z
+\\&=z^4\partial_z^3 
+  + (12z^3 + z^2)\partial_z^2 
+  + (36z^2 + 4z + 1)\partial_z
+  + 24z + 2 
+\end{align*}
+mit den Newton Polygonen wie in Abbildung \ref{fig:fourierA} und
+\ref{fig:fourierB}.
+\begin{figure}[htbp]
+  \begin{minipage}[hbt]{0,49\textwidth}
+  \begin{center}
+    \begin{tikzpicture}[scale=1,descr/.style={fill=white,inner sep=2.5pt}]
+    \def\myPoints{0/1,2/0,4/-1}
+    \def\myPath{-- (4,-1)}
+    \myPlotFunction{\myPoints}{\myPath}{4}{-1}{1}{}
+    \end{tikzpicture}
+  \end{center}
+  \caption{Newton-Polygon zu $P$}
+    \label{fig:fourierA}
+  \end{minipage}
+  \begin{minipage}[hbt]{0,49\textwidth}
+  \begin{center}
+    \begin{tikzpicture}[scale=1,descr/.style={fill=white,inner sep=2.5pt}]
+    \def\myPoints{0/0,0/1,%
+                  1/-1,1/0,1/1,%
+                  2/0,2/1,%
+                  3/1 }
+    \def\myPath{-- (1,-1) -- (3,1)}
+    \myPlotFunction{\myPoints}{\myPath}{3}{-1}{1}{}
+    \end{tikzpicture}
+  \end{center}
+  \caption{Newton-Polygon zu $\cF_P$}
+    \label{fig:fourierB}
+  \end{minipage}
+\end{figure}
 \end{exmp}
 
 % vim: set ft=tex :
