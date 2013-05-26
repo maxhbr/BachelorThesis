@@ -14,7 +14,6 @@ d-modul.tex:%TODO: was heißt holonom (holonomic)
 elem-mer-zsh.tex:%TODO: hier formal oder konvergent?
 elem-mer-zsh.tex:TODO
 elem-mer-zsh.tex:  %\mbox{\footnote{$(\xi^i)^p=1\forall i$}} % TODO: correct footnote
-elem-mer-zsh.tex:TODO: zeige das noch
 elem-mer-zsh.tex:%TODO: auch nicht formal
 elem-mer-zsh.tex:%TODO: verwendet hier schon das klassische Levelt-Turittin
 elem-mer-zsh.tex:TODO
@@ -46,8 +45,6 @@ meromZsh.tex:\partial(fu)=f'u+f\partial u %TODO: hier klammern um das letzte u ?
 meromZsh.tex:TODO: Wann sind die Isomorph\\
 meromZsh.tex:assoziierten Meromorphen Zusammenhang $(\cM_A,\partial_A)$ %TODO: improve notation
 meromZsh.tex:%TODO: reihenfolge bei sabbah anderst!!!
-meromZsh.tex:TODO: Wie findet man einen Zyklischen Vektor\\
-meromZsh.tex:TODO: wie bekommt man daraus das $P$
 meromZsh.tex:\cite[Seite 64]{ZulaBarbara} %TODO: hat die sich hier verschrieben???
 meromZsh.tex:%TODO: make this harpoon arrows
 meromZsh.tex:TODO, (3. Treffen)
@@ -75,7 +72,8 @@ meromZsh.tex:%TODO: Pfeile
 meromZsh.tex:\begin{comment} TODO \end{comment}
 meromZsh.tex:\begin{comment} TODO \end{comment}
 meromZsh.tex:%TODO: Pfeile
-meromZsh.tex:TODO
+meromZsh.tex:%TODO: Pfeile
+meromZsh.tex:%TODO: Pfeile
 meromZsh.tex:%TODO: warum hier alles Lokalisiert?
 meromZsh.tex:%TODO: muss \Cful oder \Cftl flach sein???
 meromZsh.tex:%TODO: Funktorialität von Pull-Back? NEIN: Funktorialität von tensor
@@ -84,9 +82,7 @@ meromZsh.tex:  %TODO: Pfeile
 meromZsh.tex:  %TODO: Pfeile
 meromZsh.tex:TODO: Hier weiter...
 meromZsh.tex:%TODO: erkläre wieso --> Elementare Zusammenhänge
-meromZsh.tex:  %TODO: nummer aus der referenz ist falsch
 meromZsh.tex:  & \mbox{(Rechenregeln Tensorprodukt)}\\ %TODO: hinzufügen
-meromZsh.tex:TODO: hier weiter
 rezept.tex:-\partial_z(f)\cdot z^2= %TODO: wegen klammerung?
 rezept.tex:%TODO: QUELLE!
 rezept.tex:  %TODO: hier kein grid
@@ -96,7 +92,6 @@ rezept.tex:und mit denn Kommutatorregeln %TODO: lemma? quelle?
 rezept.tex:anwenden wollen: %TODO: quelle? formel?
 rezept.tex:\begin{comment} TODO: mapsto pfeil?  \end{comment}
 rezept.tex:TODO: text
-rezept.tex:TODO
 rezept.tex_versions/v01_rezept.tex:-\partial_z(f)\cdot z^2= %TODO: wegen klammerung?
 rezept.tex_versions/v01_rezept.tex:%TODO; weiter ausführen, genauer, nebenrechnung
 rezept.tex_versions/v01_rezept.tex:TODO

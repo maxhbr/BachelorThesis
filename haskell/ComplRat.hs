@@ -5,7 +5,8 @@ module ComplRat
     , realPart
     , imagPart
     , magnitude
-    , magnitudeSq)
+    , magnitudeSq
+    , approxSize)
     where
 import Data.Ratio
 
@@ -30,6 +31,7 @@ imagPart (_ :+: y) =  y
 magnitude :: ComplRat -> Rational
 magnitude (x :+: 0) = abs x
 magnitude (0 :+: y) = abs y
+magnitude (_ :+: _) = error "Oops!"
 {-magnitude (x :+: y) = P.sqrt ( sqr x P.+ (sqr y) )-}
   {-where sqr z = z P.* z-}
 

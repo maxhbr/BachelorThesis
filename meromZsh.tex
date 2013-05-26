@@ -87,11 +87,11 @@ erfüllen soll.
 \end{bem}
 
 \begin{defn}
-Seien $(\cM_K,\partial_\cM)$ und $(\cN_K,\partial_\cN)$ zwei Meromorphe
-Zusammenhänge. Eine $K$-lineare Abbildung $\phi:\cM\rightarrow\cN$ ist ein
-Morphismus von Meromorphen Zusammenhängen, falls sie
+Seien $(\cM,\partial_\cM)$ und $(\cN,\partial_\cN)$ zwei Meromorphe
+Zusammenhänge über $k$. Eine $k$-lineare Abbildung $\phi:\cM\rightarrow\cN$ ist
+ein Morphismus von Meromorphen Zusammenhängen, falls sie
 $\phi\circ\partial_\cM=\phi\circ\partial_\cN$ erfüllt. In diesem Fall schreiben
-wir auch $\phi:(\cM_K,\partial_\cM)\rightarrow(\cN_K,\partial_\cN)$.
+wir auch $\phi:(\cM,\partial_\cM)\rightarrow(\cN,\partial_\cN)$.
 \end{defn}
 \begin{comment}
 TODO: Wann sind die Isomorph\\
@@ -100,10 +100,12 @@ $\cM\cong \cN$ und die Ableitungen kommutieren mit dem Isomorphismus
 
 \begin{comment}
 \begin{defn}
-Wir erhalten damit die Kategorie dier meromorphen Zusammenhänge über $\hat K$
-mit 
+Wir erhalten damit die Kategorie dier meromorphen Zusammenhänge über $k$
+mit
 \begin{align*}
-\text{Objekte: } & ()
+\text{Objekte: } & (M,\partial)\text{ meromorpher Zusammenhang über }k
+\\\text{Morphismen: } & (M,\partial)\overset{f}{\rightarrow}(M',\partial')
+  \text{ Morphismus von Meromorphen Zusammenhängen.}
 \end{align*}
 \end{defn}
 \end{comment}
@@ -399,40 +401,6 @@ dann, wenn es ein $T\in
 GL(r,K)$ gibt, mit $B=T^{-1}\cdot T'+T^{-1}AT$.
 \end{defn}
 
-\cite[Chap 5.2]{sabbah_cimpa90}
-\begin{lem}
-\cite[Lem 5.2.1.]{sabbah_cimpa90}
-Es existiert eine Basis von $\cM_{\hat K}$ über $\hat K$ mit der Eigenschaften,
-dass die Matrix, die $x\partial_x$ beschreibt, nur Einträge in $\Cfx$ hat.
-\end{lem}
-\begin{proof}
-Wähle einen zyklischen Vektor $m\in\cM_{\hat K}$ % TODO: richtiger Raum?
- und betrachte die Basis $m,\partial_x m,\dots,\partial_x^{d-1}m$ (siehe Lemma
-\ref{lem:Zyklischer-Vektor}).
-Schreibe $\partial_x^dm=\sum_{i=0}^{d-1}(-b_i(x))\partial_x^im$ in
-Basisdarstellung mit Koeffizienten $b_i\in\hat K$.
-Also erfüllt $m$ die Gleichung
-$\partial_x^dm+\sum_{i=0}^{d-1}b_i(x)\partial_x^im=0$.
-
-\begin{comment} TODO: bis hier schon klar \end{comment}
-
-Tatsächlich kann man $b_i(x)=x^ib_i'(x)$ mit $b_i'\in \Cfx$ schreiben (wegen
-Regularität).
-
-Dies impliziert, dass $m,x\partial_xm,\dots,(x\partial_x)^{d-1}m$ ebenfalls
-eine Basis von $\cM_{\hat K}$ ist.
-
-Die Matrix von $x\partial_x$ zu dieser neuen Basis hat nur Einträge in $\Cfx$.
-\end{proof}
-\begin{lem}
-\cite[Lem 5.2.2.]{sabbah_cimpa90}
-Es existiert sogar eine Basis von $\cM_{\hat K}$ über $\hat K$ so dass die
-Matrix zu $x\partial_x$ konstant ist.
-\end{lem}
-\begin{proof}
-TODO
-\end{proof}
-
 \begin{comment}
 $1=TT^{-1}$ $\rightsquigarrow$ $T'T^{-1}+T(T^{-1})'=0$\\
 $1=T^{-1}T$ $\rightsquigarrow$ $(T^{-1})'T+T^{-1}T'=0$
@@ -501,6 +469,7 @@ $P_1=x^{\textcolor{red}1}\partial_x^{\textcolor{blue}2}$.  Es ist leicht
 abzulesen, dass
 \begin{align*}
 \textcolor{blue}m &= \textcolor{blue}2 &
+\text{und}&&
 \textcolor{red}l  &= \textcolor{red}1
 \end{align*}
 so dass
@@ -533,7 +502,7 @@ Man erkennt, dass $\cP(P_2)=\{0,\frac{2}{3}\}$ ist.
   \begin{minipage}[hbt]{0,49\textwidth}
   \begin{center}
     \begin{tikzpicture}[scale=1,descr/.style={fill=white,inner sep=2.5pt}]
-    \def\myPoints{0/0,1/-2,2/-1,4/0}
+    \def\myPoints{0/0,1/-2,2/-1,4/0,4/1}
     \def\myPath{-- (1,-2) -- node[descr]{$\frac{2}{3}$} (4,0)}
     \myPlotFunction[coordsize]{\myPoints}{\myPath}{4}{-2}{-1}{$N(P_2)$}
     \end{tikzpicture}
@@ -816,7 +785,7 @@ Monome
 %TODO: verzweigung statt pull-back?
 \section{Operationen auf Meromorphen Zusammenhängen}
 \subsection{Tensorprodukt}
-\begin{prop} \cite[Prop 4.1.1]{SchneidersDmod}
+\begin{prop} \cite[Prop 4.1.1]{SchneidersDmod} \label{prop:tensorZusammenhang}
 Seien $(\cM,\partial_\cM)$ und $(\cN,\partial_\cN)$ Meromorphe Zusammenhänge.
 Sei $n\otimes n\in \cM\otimes_K\cN$.
 Durch setzten von
@@ -915,7 +884,8 @@ $\cM_{\hat K}=\cD_{\hat K}/\cD_{\hat K}\cdot P(x,\partial_x)$ für ein
 $P(x,\partial_x)\in\cD_{\hat K}$, gilt
 \[\rho^*\cM_{\hat K}\cong \cD_{\hat L}\Big/\cD_{\hat L}\cdot
   P(\rho(t),\rho'(t)^{-1}\partial_t) \,. \]
-Für $P(\rho(t),\rho'(t)^{-1}\partial_t)$ werden wir auch $\rho^*P$schreiben.
+Für $P(\rho(t),\rho'(t)^{-1}\partial_t)$ werden wir auch
+$\rho^*P(t,\partial_t)$ schreiben.
 \end{thm}
 \begin{comment}
 \cite[Seite 130]{coutinho1995primer} Holonomic modules are preserved under
@@ -940,7 +910,10 @@ Für den Beweis von Satz \ref{thm:pull-back-berechnung} werden zunächst ein paa
 
 \begin{lem} \label{lem:pull-back-hilfslemma1pre}
 Es gilt $\rho^*\cD_{\hat K }\bydef\hat L\otimes_{\hat K}\cD_{\hat K } \cong
-\cD_{\hat L }$ als $\cD_{\hat L}$-Moduln, mittels
+\cD_{\hat L }$ als $\cD_{\hat L}$-Vektorräume, mittels
+\begin{comment}
+VR oder Moduln??
+\end{comment}
 \begin{center}
 \begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
 \matrix (m) [
@@ -966,6 +939,70 @@ Es gilt $\rho^*\cD_{\hat K }\bydef\hat L\otimes_{\hat K}\cD_{\hat K } \cong
 \end{tikzpicture}
 \end{center}
 \end{lem}
+\begin{try}
+\begin{proof}
+Wir wollen zeigen, dass $\cD_{\hat L}$ die universelle Eigenschaft für das
+Tensorprodukt $\hat L\otimes_{\hat K}\cD_{\hat K }$ erfüllt, in diesem Fall
+folgt die Behauptung. Zunächst sei die bilineare Abbildung 
+\[
+\kappa: \hat
+L\times\cD_{\hat K }\rightarrow\cD_{\hat L},\, (f(t),Q(x,\partial_x))\mapsto
+f(t)Q(\rho(t),\rho'(t)^{-1}\partial_t)
+\]
+gegeben, und nach der universellen Eigenschaft des Tensorproduktes gibt es
+genau eine Lineare Abbildung, so dass das folgende Diagram kommutiert.
+\begin{center}
+\begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
+\matrix (m) [
+  matrix of math nodes
+  , row sep=3em
+  , column sep=3em
+  %, text height=3em
+  %, text depth=0.25em
+]{
+  \hat L\times\cD_{\hat K } & \hat L\otimes_{\hat K}\cD_{\hat K }\\
+  & \cD_{\hat L } \\
+};
+\path[->,font=\scriptsize,>=angle 90]
+(m-1-1) edge node[above]{$\otimes$} (m-1-2)
+        edge node[above]{$\kappa$} (m-2-2)
+;
+\path[->,dashed]
+(m-1-2) edge node[right]{$\exists!$} (m-2-2)
+;
+\end{tikzpicture}
+\end{center}
+Dieser so erhaltene eindeutige Morphismus ist genau unser $\Phi$.
+\begin{center}
+\begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
+\matrix (m) [
+  matrix of math nodes
+  , row sep=3em
+  , column sep=3em
+  %, text height=3em
+  %, text depth=0.25em
+]{
+  \hat L\times\cD_{\hat K } & \hat L\otimes_{\hat K}\cD_{\hat K }\\
+  & \cD_{\hat L } \\
+  & V \\
+};
+\path[->,font=\scriptsize,>=angle 90]
+(m-1-2) edge node[right]{$\Phi$} (m-2-2)
+(m-1-1) edge node[above]{$\otimes$} (m-1-2)
+        edge node[above]{$\kappa$} (m-2-2)
+        edge node[above]{$\gamma$} (m-3-2)
+;
+\path[->,dashed,bend left=60]
+(m-1-2) edge node[right]{$\exists!$} (m-3-2)
+;
+\path[->,dashed]
+(m-2-2) edge node[right]{$\exists?$} (m-3-2)
+;
+\end{tikzpicture}
+\end{center}
+\end{proof}
+\end{try}
+\begin{try}
 \begin{proof}
 Prüfe zunächst die Injektivität. Sei $f(t)\otimes Q(x,\partial_x)\in
 \ker(\Phi)$ so, dass
@@ -976,21 +1013,30 @@ Prüfe zunächst die Injektivität. Sei $f(t)\otimes Q(x,\partial_x)\in
 und, da hier alles Nullteilerfrei ist, ist die Bedingung äquivalent zur
 folgenden
 \begin{align*}
-\Leftrightarrow && 0&=f(t) &\text{oder}&& 0&=m(\rho(t),\rho'(t)^{-1}\partial_t)
-\\\Leftrightarrow& \dots
+\Leftrightarrow && 0&=f(t) &\text{oder}&& 0&=Q(\rho(t),\rho'(t)^{-1}\partial_t)
+\\\Leftrightarrow& &&\dots
+\\\Leftrightarrow&& 0&=f(t)\otimes Q(x,\partial_x)
 \end{align*}
 \begin{comment} TODO \end{comment}
 Nun zur Surjektivität.
 Sei $g(t,\partial_t)=\sum_ka_k(t)\partial_t^k\in\cD_{\hat L}$ so gilt
 \begin{align*}
 g(t,\partial_t)&=\sum_ka_k(t)\partial_t^k
-\\&=\sum_ka_k(t)\underset{=1}{\underbrace{\rho'(t)\rho'(t)^{-1}}}\partial_t^k
-\\&=\rho'(t)\sum_ka_k(t)\rho'(t)^{-1}\partial_t^k
-\\&= \dots
+\\&=\sum_ka_k(t)(\underset{=1}{\underbrace{\rho'(t)\rho'(t)^{-1}}})^k
+  \partial_t^k
+\\&=\sum_ka_k(t)\rho'(t)^k(\rho'(t)^{-1} \partial_t)^k
 \end{align*}
-
-\begin{comment} TODO \end{comment}
+und zerlege $a_k(t)\rho'(t)^k=\sum_{i=0}^{p-1}t^ia_{k,i}(t^p)$. Damit gilt dann
+\begin{align*}
+g(t,\partial_t)&= \sum_k\sum_{i=0}^{p-1}t^ia_{k,i}(t^p)
+  (\rho'(t)^{-1} \partial_t)^k
+\\&= \sum_{i=0}^{p-1}t^i\Big(\sum_ka_{k,i}(t^p)
+  (\rho'(t)^{-1} \partial_t)^k\Big)
+\\&= \Phi\Big(\sum_{i=0}^{p-1}t^i\otimes(\sum_ka_{k,i}(x)
+  (\partial_x)^k)\Big)
+\end{align*}
 \end{proof}
+\end{try}
 
 \begin{lem} \label{lem:pull-back-hilfslemma1}
 Das in Lemma \ref{lem:pull-back-hilfslemma1pre} definierte $\Phi$ ist sogar ein
@@ -1000,6 +1046,9 @@ $\rho^*\cD_{\hat K }\bydef\hat L\otimes_{\hat K}\cD_{\hat K } \cong \cD_{\hat L
 als Meromorphe Zusammenhänge.
 \end{lem}
 \begin{proof}
+Sei $\partial_t$ wie gewohnt und $\partial_\otimes$ der Zusammenhang auf 
+$\hat L\otimes_{\hat K}\cD_{\hat K }$, welcher wie in Proposition
+\ref{prop:tensorZusammenhang} definiert sei.
 Wir wollen noch zeigen, dass $\partial_t\circ\Phi = \Phi \circ
 \partial_\otimes$ gilt, also dass $\Phi$ ein Morphismus von Meromorphen
 Zusammenhängen ist. Betrachte dazu das Diagram
@@ -1024,7 +1073,11 @@ Zusammenhängen ist. Betrachte dazu das Diagram
 \end{tikzpicture}
 \end{center}
 und für einene Elementartensor $f(t)\otimes Q(x,\partial_x)\in\hat
-L\otimes_{\hat K}\cD_{\hat K }$ folgt dann
+L\otimes_{\hat K}\cD_{\hat K }$ 
+\begin{comment}
+Q wie in großen beweis später, Namenskollision
+\end{comment}
+folgt dann
 \begin{center}
 \begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
 \matrix (m) [
@@ -1336,8 +1389,7 @@ Wir wollen $\cM_{\hat K}:=\cD_{\hat K}/\cD_{\hat K}\cdot P$ bzgl. $P:=
 x^3\partial_x^2-4x^2\partial_x-1$ betrachten.
 Unser Ziel ist es hier ganzzahlige Slopes zu erhalten.
 %TODO: erkläre wieso --> Elementare Zusammenhänge
-Es gilt $\slopes(P)=\{\frac{1}{2}\}$ (siehe Abbildung \ref{fig:Pull-Back1})
-und es ist $2$ der Hauptnenner aller Slopes.
+Es gilt $\slopes(P)=\{\frac{1}{2}\}$ (siehe Abbildung \ref{fig:Pull-Back1}).
 Wende den pull-back mit $\rho:t\rightarrow x:=t^2$ an.
 Zunächst ein paar Nebenrechnungen, damit wir Satz
 \ref{thm:pull-back-berechnung} einfacher anwenden können.
@@ -1566,4 +1618,7 @@ mit den Newton Polygonen wie in Abbildung \ref{fig:fourierA} und
 \end{figure}
 \end{exmp}
 
+\begin{comment}
+\subsection{Betrachten bei Unendlich}
+\end{comment}
 % vim: set ft=tex :

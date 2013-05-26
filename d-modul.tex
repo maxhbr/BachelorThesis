@@ -269,10 +269,51 @@ endich dimensionaler Vektorraum ist, so ist schon $\cM=\{0\}$.
 \end{cor}
 \end{comment}
 
-\subsection{Holonome $\cD$-Moduln}
+\section{Holonome $\cD_k$-Moduln}
+\begin{defn}
+Sei $\cM_k$ ein links $\cD_k$-Modul. $\cM_k$ heißt \emph{holonom}, falls es ein
+Element $m\in\cM_k$ gibt, das $\cM_k$ als $\cD_k$-Modul erzeugt. Im speziellen
+folgt damit, dass $\cM_k\cong \cD_k/\mathfrak{a}$ für ein
+$0\neq\mathfrak{a}\vartriangleleft\cD_k$.
+\end{defn}
+\begin{bem}
+In \cite{coutinho1995primer} wird dies über die Dimension definiert, und bei
+\cite{sabbah_cimpa90} über die Carakteristische Varietät.
+\end{bem}
+
+\begin{bem} 
+Nach \cite[Prop 10.1.1]{coutinho1995primer} gilt
+\begin{itemize}
+\item Submoduln und Quotienten von holonomen $\cD_k$-Moduln sind holonom
+\item sowie endliche Summen von holonomen $\cD_k$-Moduln sind holonom
+\end{itemize}
+und laut \cite[Thm. 4.2.3]{sabbah_cimpa90} gilt, dass
+\begin{itemize}
+\item für ein holonomes $\cD_{\C\{x\}}$-Modul $\cM_{\C\{x\}}$
+(bzw. ein $\cD_{\Cfx}$-Modul $\cM_{\Cfx}$)
+ist die Lokalisierung
+\begin{align*}
+\cM_{\C\{x\}}[x^{-1}]&:=\cM_{\C\{x\}}\otimes_{\C\{x\}}K
+&&\text{(bzw. }\cM_{\Cfx}[x^{-1}]:=\cM_{\Cfx}\otimes_{\Cfx}\hat K\text{ ),}
+\end{align*}
+mit der $\cD_{\C\{x\}}$ (bzw. $\cD_{\Cfx}$) Modul Struktur durch
+\[
+\partial_x(m\otimes x^{-k})=((\partial_xm)\otimes x^{-k})-km\otimes x^{-k-1}
+\]
+wieder holonom.
+\end{itemize}
+\end{bem}
+
+\begin{thm}
+Sei $\cM_k$ ein holonomes $\cD_k$-Modul, dann gilt, dass seine Lokalisierung
+isomorph zu $\cD_k/\cD_k\cdot P$, mit einem $P\in \cD_k$ ungleich Null, ist.
+\end{thm}
+\begin{proof}
+Siehe \cite[Cor 4.2.8]{sabbah_cimpa90}.
+\end{proof}
+
 \begin{comment}
-TODO: defn of Car als Charakteristische Varietät
-\end{comment}
+\subsubsection{Alternative Definition B} %nach Sabbah
 \begin{defn} \cite[Def 3.3.1.]{sabbah_cimpa90}
 Sei $\cM$ lineares Differentialsystem
 (linear differential system) %TODO: defn
@@ -285,11 +326,10 @@ Ein $\cD$-Modul ist holonom genau dann, wenn $\dim_{gr^F\cD,0}gr^F\cM=1$.
 \begin{proof}
 Siehe \cite[Lem 3.3.8.]{sabbah_cimpa90}
 \end{proof}
-
-\subsubsection{Alternative Definition A} %nach Countinho
-\begin{comment}
-Countinho definiert die Carakteristische Varietät erst nach holonom
 \end{comment}
+
+\begin{comment}
+\subsubsection{Alternative Definition A} %nach Countinho
 \begin{defn}[Holonome $\cD$-Moduln]
 \cite[Chap 10 §1]{coutinho1995primer}
 Ein endlich genertierter $\cD$-Modul $\cM$ ist \emph{holonom}, falls $\cM=0$
@@ -303,62 +343,6 @@ Falls $\mathfrak{a}\neq\cD$, dann gilt nach der \emph{Bernstein's inequality}
 \cite[Chap 9 §4]{coutinho1995primer}, dass $d(\cD/\mathfrak{a})=1$. Somit ist
 $\cD/\mathfrak{a}$ ein holonomes $\cD$-Modul.
 \end{bem}
-\begin{bem}
-\cite[Prop 10.1.1]{coutinho1995primer}
-\begin{itemize}
-\item Submoduln und Quotienten von holonomen $\cD$-Moduln sind holonom.
-\item Endliche Summen von holonomen $\cD$-Moduln sind holonom.
-\end{itemize}
-\end{bem}
-
-\subsubsection{Alternative Definition B} %ohne information
-\begin{defn}
-Ein lokalisiertes $\cD$-Modul $\cM$ heißt \emph{holonom}, falls es ein
-$\mathfrak{a}\vartriangleleft \cD$ gibt, so dass
-\[
-\cM\cong \cD/\mathfrak{a} \,.
-\]
-%TODO: besser: D/D*P
-\end{defn}
-\begin{bem}
-In \cite{coutinho1995primer} wird dies über die Dimension definiert, und bei
-\cite{sabbah_cimpa90} über die Carakteristische Varietät.
-\end{bem}
-
-\begin{comment}
-\section{Lokalisierung von $\Ckx$-Moduln}
-\cite[Chap 4.1.]{sabbah_cimpa90}
-Sei $M$ ein $\Ckx$-Modul. Wir schreiben $M[x^{-1}]$ für den $K$-Vektor Raum
-$M\otimes_{\Ckx}K$. Im allgemeinen gilt, falls $M$ von andlichen Typ über
-$\Ckx$ ist, so ist $C[x^{-1}]$ von endlichem Typ über $K$. Bemerke aber, dass
-$M[x^{-1}]$ generell nicht von endlichem Typ über $\Ckx$ ist.
 \end{comment}
-
-\section{Lokalisierung eines $\cD$-Moduls}
-\cite[Chap 4.2.]{sabbah_cimpa90}
-%TODO: was heißt holonom (holonomic)
-Sei $\cM$ ein links $\cD$-Modul. Betrachte $\cM$ als $\C\{x\}$-Modul und
-definiere darauf
-\[ \cM[x^{-1}]:=\cM\otimes_{\C\{x\}}K \]
-als die Lokalisierung von $\cM$.
-\begin{prop} \cite[Prop 4.2.1.]{sabbah_cimpa90}
-$\cM[x^{-1}]$ erhält in natürlicher Weise eine $\cD$-Modul Struktur.
-\end{prop}
-\begin{proof} \cite[Prop 4.2.1.]{sabbah_cimpa90}
-mit:
-\[
-\partial_x(m\otimes x^{-k})=((\partial_xm)\otimes x^{-k})-km\otimes x^{-k-1}
-\]
-\begin{comment}
-beweis der $\cD$-linearität ist als übung gelassen
-\end{comment}
-\end{proof}
-\begin{cor}\cite[Cor 4.2.8.]{sabbah_cimpa90}
-Sei $\cM$ ein holonomes Modul. Dann ist die lokalisierung von $\cM$ isomorph zu
-$\cD/\cD\cdot P$ für ein $P\in\cD/\{0\}$
-\begin{comment}
-Formal??
-\end{comment}
-\end{cor}
 
 %vim: set ft=tex :

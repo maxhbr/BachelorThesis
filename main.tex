@@ -111,7 +111,11 @@
 
 \usepackage[german]{varioref}
 %\usepackage[nameinlink,german]{cleveref}
-\usepackage[colorlinks=true,linkcolor=black]{hyperref}
+\ifnum\myDevelopVariable=0
+  \usepackage[colorlinks=false,linkcolor=black,plainpages = false]{hyperref}
+\else
+  \usepackage[colorlinks=true,linkcolor=black,plainpages = false]{hyperref}
+\fi
 
 %% Autoref Names %%%%%%%%%%%%%%%%%
 %\crefname{lemma}{Lemma}{Lemmas}
@@ -204,7 +208,7 @@
 \def\cO{\ensuremath \mathcal{O}}
 \def\cP{\ensuremath \mathcal{P}}
 %\def\cQ{\ensuremath \mathcal{Q}}
-%\def\cR{\ensuremath \mathcal{R}}
+\def\cR{\ensuremath \mathcal{R}}
 %\def\cS{\ensuremath \mathcal{S}}
 %\def\cT{\ensuremath \mathcal{T}}
 %\def\cU{\ensuremath \mathcal{U}}
@@ -328,7 +332,9 @@
 \listoftables
 \endgroup
 
-\myinput{einleitung.tex}
+\ifnum\myDevelopVariable=0
+  \myinput{einleitung.tex}
+\fi
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \mainmatter
@@ -341,13 +347,15 @@
 
 \myinput{elem-mer-zsh.tex}
 
-\myinput{levelt-turrittin.tex}
+%\myinput{levelt-turrittin.tex}
 
 \myinput{rezept.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\myinput{schluss.tex}
+\ifnum\myDevelopVariable=0
+  \myinput{schluss.tex}
+\fi
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \appendix
@@ -368,6 +376,41 @@
 \begin{comment}
 TODO: Erklärung das das wirklich selbstgemacht ist
 \end{comment}
+
+\iffalse
+\newpage
+\begin{itemize}
+\item 
+\begin{align*}
+2i\sqrt{2a}t^{-2} - t^{-1} &= \sum_{n=-2}^\infty (u_n+v_n)t^n
+\\
+- 3 i\sqrt{2a}t^{-3} &= \sum_{n=-3}^\infty
+  \Big( (n+1)u_{n+1} + \sum_{k=0}^{n+3} v_{k-1}u_{n-k+1} \Big) t^{n}
+\end{align*}
+\item
+\begin{align*}
+\Rightarrow
+&&2i\sqrt{2a} &= u_{-2} + \underset{=0}{\underbrace{v_{-2}}} = u_{-2}
+&-1 &= u_{-1} + v_{-1}
+&0 &= u_n + v_n & \forall n \geq 0
+\end{align*}
+\begin{align*}
+\Rightarrow && v_{-1}=\frac{1}{2} &&\Rightarrow &&u_{-1}=-\frac{3}{2}
+\end{align*}
+\begin{align*}
+v_n &= - u_n = \frac{i}{2\sqrt{2a}}
+  \left((n-1)u_{n-1} + \sum_{k=0}^{n} v_{k-1}u_{n-k-1}\right) & \forall n \geq 0
+\end{align*}
+\item 
+\begin{align*}
+v_{-1}&=\frac{1}{2} & u_{-1}&=-\frac{3}{2}
+\\v_{0} = -u_{0} &= -\frac{3}{4u_{-2}}
+\\v_n = - u_n &= \frac{1}{u_{-2}}
+  \left((n+1)v_{n-1} + \sum_{k=1}^{n-1} v_{k-1}v_{n-k-1}\right)
+  & & \forall n > 0
+\end{align*}
+\end{itemize}
+\fi
 
 \end{document}
 % vim:set ft=tex foldmethod=marker foldmarker={{{,}}}:

@@ -37,11 +37,15 @@ genLine :: (Int, ComplRat, ComplRat) -> String
 genLine (i,v1,v2) = concat [ show  i                   , "\t"
                            , show $ betrag (i,v1,v2)   , "\t"
                            , show $ (cauchy (i,v1,v2)) , "\t"
-                           , show $ quot (i,v1,v2)     , "\n" ]
+                           , show $ quot (i,v1,v2)     , "\t"
+                           , show $ fac (i,v1,v2)      , "\t"
+                           , show $ approxSize v1      , "\n" ]
   where toDbl x        = fromRational x :: Double
         betrag (_,v,_) = fromRational $ magnitude v
         cauchy (i,v,_) = (fromRational $ magnitude v)**(1/(fromIntegral i))
         quot (_,v1,v2) = sqrt $ toDbl $ (magnitudeSq v2) / (magnitudeSq v1)
+        fac (i,v,_)    = fromRational $ (magnitude v) / 
+                                        (fromIntegral $ product [1..i])
 
 -- ############################################################################
 

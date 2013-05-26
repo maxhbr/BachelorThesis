@@ -1,5 +1,5 @@
 %!TeX root = main.tex
-\chapter{DIE Klasse der Fourier-Transformationen}
+\chapter{Explizite berechnung einer Levelt-Turrittin-Zerlegung}
 In diesem Kapitel werden Beispiele einer speziellen Klasse von $\cD$-Moduln
 diskutiert. Dazu wird im folgendem zu einem Beispiel unter anderem explizit der
 Beweis aus \cite{sabbah_cimpa90} zur Levelt-Turrittin-Zerlegung nachvollzogen.
@@ -20,11 +20,12 @@ aus
 \item und beginne mit $\sE^{\phi}$. Es gilt
 \begin{align*}
 \sE^{\phi} &= \cD_{\hat L}/\cD_{\hat L}\cdot (\partial_t-\frac{d}{dt}\phi(t))
-\\&=\cD_{\hat L}/\cD_{\hat L}\cdot (\underset{\in\C[t]\subset\cD_{\hat L}^*}
+\\&=\cD_{\hat L}/\cD_{\hat L}\cdot \Big(\underset{\in\C[t]\subset\cD_{\hat L}^*}
     {\underbrace{\mbox{\textbf{Hauptnenner von $\frac{d}{dt}\phi(t)$ }}}}
-  \cdot (\partial_t-\frac{d}{dt}\phi(t)))
-\\&=\cD_{\hat L}/\cD_{\hat L}\cdot ( \underset{=:Q(t,\partial_t)}{\underbrace{
-  t^{\max(I)+1} \cdot (\partial_t-\frac{d}{dt}\phi(t))}})
+  \cdot (\partial_t-\frac{d}{dt}\phi(t))\Big)
+\\&=\cD_{\hat L}/\cD_{\hat L}\cdot \Big(
+  \underset{=:Q(t,\partial_t)}{\underbrace{
+  t^{\max(I)+1} \cdot (\partial_t-\frac{d}{dt}\phi(t))}}\Big) \,.
 \end{align*}
 \begin{comment}
 Dies ändert den Meromorphen Zusammenhang nicht, weil $t^{\max(I)+1}$ eine
@@ -34,7 +35,7 @@ Einheit in $\cD_{\hat L}$ (und auch in $\cD_{L}$) ist.
 \begin{align*}
 \,^\cF\!\sE^{\phi}&=\cD_{\hat L}/\cD_{\hat L}\cdot{\cF_Q(z,\partial_z)}
 \\&\bydef \cD_{\hat L}/\cD_{\hat L}\cdot
-  \underset{\in\C[z]<\partial_z>}{\underbrace{Q(\partial_z,-z)}}
+  \underset{\in\C[z]<\partial_z>}{\underbrace{Q(\partial_z,-z)}} \,.
 \end{align*}
 \item Betrachte den Zusammenhang bei Unendlich, also wende den Übergang
 $x\rightsquigarrow z^{-1}$ an.\\
@@ -48,7 +49,7 @@ Es gilt
 \]
 also $ \partial_x\rightsquigarrow-z^2\partial_z $, und somit
 \[
-P_\phi(x,\partial_x):=\cF_Q(x^{-1},-x^2\partial_x) \in \C[t]<\partial_t>
+P_\phi(x,\partial_x):=\cF_Q(x^{-1},-x^2\partial_x) \in \C[t]<\partial_t> \,.
 \]
 \end{enumerate}
 Im folgendem werden wir den zum Minimalpolynom $P_\phi$ assoziierten formalen
@@ -61,7 +62,7 @@ I}\frac{a_k}{t^{k}}|I\subset\N\mbox{ endlich} ,a_k\in \C\}$ ist das
 Minimalpolynom von $\cM_\phi$ explizit gegeben durch
 \begin{align*}
 P_{\phi}(x,\partial_x) &=(-x^2\partial_x)^{\max(I)} (x\partial_x-1)
-   +\sum_{k\in I}k a_k(-x^2\partial_x)^{\max(I)-k} & \in \C[x]<\partial_x>
+   +\sum_{k\in I}k a_k(-x^2\partial_x)^{\max(I)-k} & \in \C[x]<\partial_x> \,.
 \end{align*}
 \end{lem}
 \begin{proof}
@@ -99,10 +100,10 @@ gewünschte Richtung.
 \begin{lem}
 Es gilt $\cP(\cM_{\phi})=\{\frac{q}{q+1}\}$.
 \end{lem}
+\begin{proof}
 \begin{comment}
-Allgemeiner? für allgemeine $\phi$??
+\cite[5.b.]{sabbah_Fourier-local}
 \end{comment}
-\begin{proof} \cite[5.b.]{sabbah_Fourier-local}
 Um zu zeigen, dass die Behauptung gilt, formen wir $P_{\phi}$ um und isolieren
 die Monome, die für das Newton-Polygon nicht von bedeutung sind und deshalb
 vernachlässigt werden können. Betrachte dazu die Konvexen Hüllen, die wie in
@@ -498,10 +499,10 @@ und mit $\psi(t)=i\sqrt{2a}t^{-1}$ ist $\psi'(t)=-i\sqrt{2a}t^{-2}$ und
 $\psi''(t)=2i\sqrt{2a}t^{-3}$. Also durch Einsetzen ergibt sich
 \begin{align*}
 P' &= \partial_t^2 - (t^{-1} + 2\psi'(t))\partial_t
-    + \psi'(t)t^{-1} + 2a -\psi''(t)
+    + \psi'(t)t^{-1} + 2at^{-4} -\psi''(t)
     + \psi'(t)^2
 \\&= \partial_t^2 - (t^{-1} - 2i\sqrt{2a}t^{-2})\partial_t - i\sqrt{2a}t^{-3}
-    + 2a^{-4} - 2i\sqrt{2a}t^{-3} + \underbracket{(-i\sqrt{2a}t^{-2})^2}
+    + 2at^{-4} - 2i\sqrt{2a}t^{-3} + \underbracket{(-i\sqrt{2a}t^{-2})^2}
 \\&= \partial_t^2 - (t^{-1} - 2i\sqrt{2a}t^{-2})\partial_t - 3i\sqrt{2a}t^{-3}
   + \underset{=0}{\underbrace{ 2at^{-4} \overbracket{- 2at^{-4}}}}
 \\&= \partial_t^2 - (t^{-1} - 2i\sqrt{2a}t^{-2})\partial_t - 3 i\sqrt{2a}t^{-3}
@@ -546,11 +547,11 @@ P'(t,\partial_t) &= \rho^*P(t,\partial_t-\frac{\partial \psi}{\partial t})
 \\&= t^4\partial_t^2 - (t^3-2i\sqrt{2a}t^{2})\partial_t - 3i\sqrt{2a}t
 \end{align*}
 \end{comment}
-
-Unser nächstes Ziel ist es, $\cN=\cD_{\hat L}/\cD_{\hat L}\cdot P'$ in zwei
-Meromorphe Zusammenhänge mit nur einem Slope zerlegen.  Betrachte hierzu das
-Minimalpolynom und zerlege dieses in ein Produkt
-$P'(t,\partial_t)=Q_1(t,\partial_t)\cdot Q_2(t,\partial_t)$.
+nachdem wir jetzt ein Minimalpolynom gefunden haben ist unser nächstes Ziel,
+$\cN=\cD_{\hat L}/\cD_{\hat L}\cdot P'$ in zwei Meromorphe Zusammenhänge mit
+nur einem Slope zerlegen.  Betrachte hierzu das Minimalpolynom und zerlege
+dieses in ein Produkt $P'(t,\partial_t)=Q_1(t,\partial_t)\cdot
+Q_2(t,\partial_t)$.
 
 Da der $\partial_t$-Grad von $P'$ genau $2$ ist, müssen die $Q_i$
 jeweils den Grad $1$ haben, um eine nichttriviale Zerlegung zu bekommen.
@@ -739,13 +740,15 @@ $v_{-1}=\frac{1}{2}$ sind durch
 v_n &= - u_n = \frac{i}{2\sqrt{2a}}
   \left((n-1)u_{n-1} + \sum_{k=0}^{n} v_{k-1}u_{n-k-1}\right) & \forall n \geq 0
 \end{align}
-die Koeffizienten von $v$ und $u$ vollständig bestimmt.
+die Koeffizienten von $v(t)$ und $u(t)$ vollständig bestimmt.
 
 Nun lässt sich diese Zerlegung mit $\sE^{-\psi(t)}$ zurücktwisten und erhalte
 damit die Zerlegung
 \begin{align*}
-\rho^+\cM_{\phi} &=
-  \cN_1\otimes\sE^{-\psi(t)}\oplus\cN_2\otimes\sE^{-\psi(t)}
+\rho^+\cM_{\phi} &\!\!\overset{\text{ \ref{cor:zurücktwisten}}}{=}\!\!
+  \underbracket{\rho^+\cM_{\phi}\otimes\sE^{\psi(t)}} \otimes\sE^{-\psi(t)}
+\\&= \overbracket{(\cN_1\oplus\cN_2)}\otimes\sE^{-\psi(t)}
+\\&= \cN_1\otimes\sE^{-\psi(t)}\oplus\cN_2\otimes\sE^{-\psi(t)}
 \\&= (\cD_{\hat L}/\cD_{\hat L}\cdot Q_1\otimes\sE^{-\psi(t)})
   \oplus(\cD_{\hat L}/\cD_{\hat L}\cdot Q_2\otimes\sE^{-\psi(t)})
 \end{align*}
@@ -754,7 +757,8 @@ Q_1\otimes\sE^{-\psi(t)}$ bereits ein Elementarer Meromorpher Zusammenhang.
 Betrachte also noch $\cD_{\hat L}/\cD_{\hat L}\cdot Q_2\otimes\sE^{-\psi(t)}$:
 \begin{align*}
 \cD_{\hat L}/\cD_{\hat L}\cdot Q_2\otimes\sE^{-\psi(t)}
-  &= \cD_{\hat L}/\cD_{\hat L}\cdot Q_2(t,\partial_t-i\sqrt{2a}t^{-2})
+  ~&\!\!\overset{\text{\ref{lem:twistRechenregel}}}{=}
+  \cD_{\hat L}/\cD_{\hat L}\cdot Q_2(t,\partial_t-i\sqrt{2a}t^{-2})
 \\&= \cD_{\hat L}/\cD_{\hat L}\cdot (\partial_t
   \underbracket{-i\sqrt{2a}t^{-2} + u(t)})
 \\&= \cD_{\hat L}/\cD_{\hat L}\cdot (\partial_t + \overbracket{i\sqrt{2a}t^{-2}
@@ -767,12 +771,16 @@ Damit ist der zweite Summand also auch ein Elementarer Meromorpher
 Zusammenhang.
 Also zerlegt sich $\cM$, nach einem pull-back mit $\rho:t\mapsto x=-2t^2$, in
 \[
-\rho^+\cM_{\phi} = \Bigg(\cD_{\hat L}/\cD_{\hat L}\cdot \Big(\partial_t
-  + \sum_{n=-1}^\infty v_nt^n\Big)\otimes\sE^{-\psi(t)}\Bigg)
-  \oplus \Bigg(\cD_{\hat L}/\cD_{\hat L}\cdot \Big(\partial_t
-  + \sum_{n=-1}^\infty u_nt^n\Big)\otimes\sE^{\psi(t)}\Bigg) \,.
+\rho^+\cM_{\phi} = \Bigg(
+  \underset{=:\cR_1}{\underbrace{\cD_{\hat L}/\cD_{\hat L}\cdot \Big(\partial_t
+  + \sum_{n=-1}^\infty v_nt^n\Big)}}\otimes\sE^{-\psi(t)}\Bigg)
+  \oplus \Bigg(
+  \underset{=:\cR_2}{\underbrace{\cD_{\hat L}/\cD_{\hat L}\cdot \Big(\partial_t
+  + \sum_{n=-1}^\infty u_nt^n\Big)}}\otimes\sE^{\psi(t)}\Bigg) \,.
 \]
-Damit ist die Levelt-Turrittin-Zerlegung vollständig gegeben.
+Nach zerlegen von $\cR_1$ und $\cR_2$ in eine direkte Summe von elementaren
+formalen Meromorphen Zusammenhängen, wie in Satz \ref{thm:regulärInDirSumme},
+ist die Levelt-Turrittin-Zerlegung vollständig gegeben.
 
 \subsection{Konvergenz der Summanden} \label{sec:konvergenzDerPotReihen}
 \begin{comment}
