@@ -7,16 +7,18 @@ d-modul.tex:%TODO: sabah-cimpa90.pdf  seite 3
 d-modul.tex:%TODO: ein teil des Beweises ist "left as an exersice"
 d-modul.tex:\begin{proof} TODO
 d-modul.tex:%TODO: Variable zu t machen?
-d-modul.tex:TODO: defn of Car als Charakteristische Varietät
 d-modul.tex:(linear differential system) %TODO: defn
-d-modul.tex:%TODO: besser: D/D*P
-d-modul.tex:%TODO: was heißt holonom (holonomic)
-elem-mer-zsh.tex:%TODO: hier formal oder konvergent?
-elem-mer-zsh.tex:TODO
+elem-mer-zsh.tex:Wähle einen zyklischen Vektor $m\in\cM_{\hat K}$ % TODO: richtiger Raum?
+elem-mer-zsh.tex:\begin{comment} TODO: bis hier schon klar \end{comment}
+elem-mer-zsh.tex:%TODO: rename to L-T-Theorem???
 elem-mer-zsh.tex:  %\mbox{\footnote{$(\xi^i)^p=1\forall i$}} % TODO: correct footnote
 elem-mer-zsh.tex:%TODO: auch nicht formal
 elem-mer-zsh.tex:%TODO: verwendet hier schon das klassische Levelt-Turittin
+elem-mer-zsh.tex: &=TODO
+elem-mer-zsh.tex:TODO: induktionsanfang und -schritt kennzeichnen
 elem-mer-zsh.tex:TODO
+elem-mer-zsh.tex:\begin{comment}TODO: Hier weiter \end{comment}
+elem-mer-zsh.tex:\begin{comment}TODO: Hier weiter \end{comment}
 grundlagen.tex:%TODO: Pfeile
 grundlagen.tex:  %TODO: Pfeile
 grundlagen.tex:%TODO: tensorprodukt / faserprodukt zum basiswechsel
@@ -24,10 +26,6 @@ grundlagen.tex:  %TODO: Pfeile
 grundlagen.tex:  %TODO: Pfeile
 grundlagen.tex:  %TODO: Pfeile
 haskell/ComplRat.hs:-- TODO: approx. log
-levelt-turrittin.tex:TODO: induktionsanfang und -schritt kennzeichnen
-levelt-turrittin.tex:TODO
-levelt-turrittin.tex:\begin{comment}TODO: Hier weiter \end{comment}
-levelt-turrittin.tex:\begin{comment}TODO: Hier weiter \end{comment}
 main/main.ps:w FJ(TODO,)30 b(\(3.)i(T)-8 b(re\033en\))p 3633 5576
 Übereinstimmungen in Binärdatei main/main.dvi.
 main.tex:  ,fontsize=11pt % TODO
@@ -53,9 +51,6 @@ meromZsh.tex:TODO, (3. Treffen)
 meromZsh.tex:%TODO: wieso gilt das?
 meromZsh.tex:%TODO: beobachtung...
 meromZsh.tex:%TODO: differenz ist linear
-meromZsh.tex:Wähle einen zyklischen Vektor $m\in\cM_{\hat K}$ % TODO: richtiger Raum?
-meromZsh.tex:\begin{comment} TODO: bis hier schon klar \end{comment}
-meromZsh.tex:TODO
 meromZsh.tex:%TODO: welche definition ist besser?
 meromZsh.tex:%TODO: zeige, das beide definitionen gleich sind
 meromZsh.tex:%TODO: bessere formulierung
@@ -69,7 +64,6 @@ meromZsh.tex:TODO
 meromZsh.tex:TODO: damit wird $\hat L$ zu einem $\hat K$ Vektorraum.
 meromZsh.tex:%TODO: ist das der zusammenhang oder die wirkung oder was?
 meromZsh.tex:%TODO: Pfeile
-meromZsh.tex:\begin{comment} TODO \end{comment}
 meromZsh.tex:\begin{comment} TODO \end{comment}
 meromZsh.tex:%TODO: Pfeile
 meromZsh.tex:%TODO: Pfeile
@@ -104,6 +98,10 @@ trash/myNewtonPoly2.sty:          %TODO
 trash/fromRezept.tex:TODO: $\lambda=\lambda_0$ ??
 trash/fromRezept.tex:TODO: $\lambda=\lambda_0$ ??
 trash/meromZsh.tex:  %TODO: auch nicht formal
+trash/levelt-turrittin.tex:TODO: induktionsanfang und -schritt kennzeichnen
+trash/levelt-turrittin.tex:TODO
+trash/levelt-turrittin.tex:\begin{comment}TODO: Hier weiter \end{comment}
+trash/levelt-turrittin.tex:\begin{comment}TODO: Hier weiter \end{comment}
 trash/lemma2-4.tex:  %\mbox{\footnote{$(\xi^i)^p=1\forall i$}} % TODO: correct footnote
 trash/lemma2-4.tex:TODO: zeige das noch
 trash/myNewtonPlot.sty:            %TODO
