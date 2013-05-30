@@ -10,7 +10,7 @@ betrachtet und zuletzt wird für konkrete Beispiele eine explizite Rechnung
 gegeben.
 
 \section{Rezept für allgemeine $\phi$} \label{sec:allgemeinProblem}
-Hier wollen wir nun eine Spezielle Klasse von Meromorphen Zusammenhängen, die
+Hier wollen wir nun eine Spezielle Klasse von meromorphen Zusammenhängen, die
 die durch das folgende Rezept entstehen.
 \begin{enumerate}
 \item Wähle zunächst ein $\phi$
@@ -28,7 +28,7 @@ aus
   t^{\max(I)+1} \cdot (\partial_t-\frac{d}{dt}\phi(t))}}\Big) \,.
 \end{align*}
 \begin{comment}
-Dies ändert den Meromorphen Zusammenhang nicht, weil $t^{\max(I)+1}$ eine
+Dies ändert den meromorphen Zusammenhang nicht, weil $t^{\max(I)+1}$ eine
 Einheit in $\cD_{\hat L}$ (und auch in $\cD_{L}$) ist.
 \end{comment}
 \item Fouriertransformiere $\sE^{\phi}$ und erhalte
@@ -53,7 +53,7 @@ P_\phi(x,\partial_x):=\cF_Q(x^{-1},-x^2\partial_x) \in \C[t]<\partial_t> \,.
 \]
 \end{enumerate}
 Im folgendem werden wir den zum Minimalpolynom $P_\phi$ assoziierten formalen
-Meromorphen Zusammenhang $\cM_\phi:=\cD_{\hat K}/\cD_{\hat K}\cdot P_{\phi}$
+meromorphen Zusammenhang $\cM_\phi:=\cD_{\hat K}/\cD_{\hat K}\cdot P_{\phi}$
 betrachten.
 
 \begin{lem}
@@ -117,7 +117,7 @@ H\Big(P_{\phi}(x,\partial_x)\Big) &= H\Big(\underbracket{(-x^2\partial_x)^{q}}
   \underbrace{\textbf{T.i.Q. von }x^{2q}\partial_x^q}})}
   (x\partial_x - 1) + \sum_{k\in I}k a_k(-x^2\partial_x)^{q-k} \Big)
 \\&= H\Big(\underset{\text{liefert keinen Beitrag}}{\underbrace{(-1)^q}}
-  \underbracket{x^{2q}\partial_x^q (x\partial_x - 1)} 
+  \underbracket{x^{2q}\partial_x^q (x\partial_x - 1)}
   + \sum_{k\in I}k a_k(-x^2\partial_x)^{q-k} \Big)
 \\&= H\Big(\overbracket{x^{2q}\underbracket{\partial_x^q x}\partial_x
   - x^{2q}\partial_x^q} + \sum_{k\in I}k a_k(-x^2\partial_x)^{q-k} \Big)
@@ -128,13 +128,13 @@ H\Big(P_{\phi}(x,\partial_x)\Big) &= H\Big(\underbracket{(-x^2\partial_x)^{q}}
   \underset{\text{im Quadranten von $x^{2q + 1}\partial_x^{q + 1}$,}}{
   \underbrace{qx^{2q}\partial_x^{q} - x^{2q}\partial_x^q}}}
   +\underbracket{ \sum_{k\in I}k a_k(-x^2\partial_x)^{q-k}} \Big)
-\\&= H\Big(x^{2q + 1}\partial_x^{q + 1} +\overbracket{ qa_q 
+\\&= H\Big(x^{2q + 1}\partial_x^{q + 1} +\overbracket{ qa_q
   + \sum_{k\in I\backslash\{q\}}k a_k(-x^2\partial_x)^{q-k}} \Big)
 \end{align*}
 Nun wollen wir noch zeigen, dass die Summe auch vernachlässigt werden kann.
 \paragraph{Behauptung:} Es gilt
 \[
-H\Big(x^{2q + 1}\partial_x^{q + 1} + qa_q 
+H\Big(x^{2q + 1}\partial_x^{q + 1} + qa_q
   + \sum_{k\in I\backslash\{q\}}k a_k(-x^2\partial_x)^{q-k} \Big)
 \subset H\Big(x^{2q + 1}\partial_x^{q + 1} + qa_q \Big)
 \]
@@ -161,18 +161,18 @@ Man sieht also, dass die Behauptung gilt.
   \def\myPath{ -- node[descr]{$\frac{q}{q+1}$} (6,5)}
   \myPlotFunction[nogrid]{\myPoints}{\myPath}{6}{0}{5}{}
   \draw [decorate,decoration={brace,amplitude=10pt,mirror},gray]
-    (6,0) -- (6,5.0) node [black,midway,xshift=0.5cm] 
+    (6,0) -- (6,5.0) node [black,midway,xshift=0.5cm]
     {\footnotesize $q$};
   \draw [decorate,decoration={brace,amplitude=10pt,mirror},gray]
-    (0,0) -- (6,0) node [black,midway,yshift=-0.5cm] 
+    (0,0) -- (6,0) node [black,midway,yshift=-0.5cm]
     {\footnotesize $q+1$};
 
   \draw [decorate,decoration={brace,amplitude=10pt},gray]
-    (3,5) -- (6,5) node [black,midway,yshift=0.5cm] 
+    (3,5) -- (6,5) node [black,midway,yshift=0.5cm]
     {\footnotesize $m+1$};
 
   \draw [decorate,decoration={brace,amplitude=10pt},gray]
-    (3,5) -- (3,3) node [black,midway,xshift=0.5cm] 
+    (3,5) -- (3,3) node [black,midway,xshift=0.5cm]
     {\footnotesize $m$};
 
   \fill[blue,opacity=.2] (-.5,5.5) rectangle (3,3);
@@ -184,14 +184,14 @@ Man sieht also, dass die Behauptung gilt.
 \end{figure}
 Mit der Behauptung gilt dann, dass
 \begin{align*}
-H\Big(P_{\phi}(x,\partial_x)\Big) 
-  &= H\Big(x^{2q + 1}\partial_x^{q + 1} + qa_q 
+H\Big(P_{\phi}(x,\partial_x)\Big)
+  &= H\Big(x^{2q + 1}\partial_x^{q + 1} + qa_q
   + \sum_{k\in I\backslash\{q\}}k a_k(-x^2\partial_x)^{q-k} \Big)
 \\&\overset{\text{Beh.}}{=} H\Big(x^{2q + 1}\partial_x^{q + 1} + qa_q \Big)
 \end{align*}
 Also ist
 \begin{align*}
-N\Big(P_{\phi}(x,\partial_x)\Big) 
+N\Big(P_{\phi}(x,\partial_x)\Big)
   &= N\Big(x^{2q + 1}\partial_x^{q + 1} + qa_q \Big) \,.
 \end{align*}
 womit die Behauptung des Lemmas folgt und das Newton-Polygon wie in Abbildung
@@ -367,15 +367,15 @@ L}\cdot(\rho^*P_{\phi}(t,\partial_t))$ gilt, so ist
 \end{align*}
 \end{lem}
 \end{comment}
-Zerlege nun wie in  Satz \ref{thm:Split-after-slopes} den Meromorphen
-Zusammenhang $\cN$ in $\cN=\bigoplus_i\cN_i$ wobei $\cN_i$ Meromorphe
+Zerlege nun wie in  Satz \ref{thm:Split-after-slopes} den meromorphen
+Zusammenhang $\cN$ in $\cN=\bigoplus_i\cN_i$ wobei $\cN_i$ meromorphe
 Zusammenhänge mit genau einem Slope sind.
 Twiste die $\cN_i$ jeweils mit $\sE^{-\psi}_{\hat L}$ und somit ist dann
 \[
 \rho^+\cM_{\phi}=\bigoplus_i\cN_i\otimes_{\hat L}\sE^{-\psi}_{\hat L} \,.
 \]
-Für jeden Summanden lässt sich nun, falls dieser nicht schon ein Elementarer
-Meromorpher Zusammenhang ist, Induktion anwenden.
+Für jeden Summanden lässt sich nun, falls dieser nicht schon ein elementarer
+meromorpher Zusammenhang ist, Induktion anwenden.
 
 \section{Levelt-Turrittin-Zerlegung für $\cM_{\phi}$ mit
   $\phi_1:=\frac{a}{x}$}
@@ -386,7 +386,7 @@ P_{\phi}(x,\partial_x) &=-x^2\partial_x (x\partial_x-1)+a
 \\&=-x^2\underbracket{\partial_xx}\partial_x+x^2\partial_x+a
 \\&=\underbracket{-x^2\overbracket{(x\partial_x+1)}\partial_x} + x^2\partial_x
   + a
-\\&=\overbracket{-x^3\partial_x^2 
+\\&=\overbracket{-x^3\partial_x^2
   \rlap{$\underbrace{\phantom{-x^2\partial_x+x^2\partial_x\,}}_{=0}$}
   - x^2\partial_x}+x^2\partial_x+a
 \\&=-x^3\partial_x^2+a
@@ -413,7 +413,7 @@ zu $\rho^+\cM_{\phi}$:
   &=t^{4}\partial_t^2+\underbracket{t^{3}\partial_t-2t^{3}\partial_t}+2a\\
   &=t^{4}\partial_t^2\overbracket{-t^{3}\partial_t}+2a
 \end{align*}
-und erhalte einen Meromorphen Zusammenhang $\rho^+\cM_{\phi}=\cD_{\hat
+und erhalte einen meromorphen Zusammenhang $\rho^+\cM_{\phi}=\cD_{\hat
 K}/\cD_{\hat K}\cdot\rho^*P_{\phi}$ mit genau dem Slope
 $1=\frac{1}{1}=:\frac{\lambda_0}{\lambda_1}$.
 \begin{figure}[H]
@@ -455,7 +455,7 @@ Vektor von $\rho^+\cM$ ist.
 Mit dem Lemma vom Zyklischem Vektor wollen wir nun ein Minimalpolynom zu $\cN$
 berechnen:
 \begin{align*}
-\partial_t^2(\bme\otimes 1) 
+\partial_t^2(\bme\otimes 1)
   &=\partial_t(\underbracket{\partial_t(\bme\otimes 1)})
 \\&\!\!\overset{(\ref{eq:TensorAbleiten})}{=}
     \partial_t(\overbracket{(\partial_t\bme)\otimes 1
@@ -474,16 +474,16 @@ berechnen:
     }
 \\&= (t^{-1} + 2\psi'(t)) \underbracket{(\partial_t \bme)\otimes 1}
     + (- 2at^{-4} + \psi''(t) + \psi'(t)^2) \bme\otimes 1
-\\&\!\!\overset{(\ref{eq:TensorAbleiten})}{=} 
+\\&\!\!\overset{(\ref{eq:TensorAbleiten})}{=}
     (t^{-1} + 2\psi'(t))\overbracket{(\partial_t (\bme\otimes 1)
-    - \bme\otimes \psi'(t))}+ (- 2at^{-4} + \psi''(t) + \psi'(t)^2) 
+    - \bme\otimes \psi'(t))}+ (- 2at^{-4} + \psi''(t) + \psi'(t)^2)
     \bme\otimes 1
 \\&\begin{aligned}
     &= (t^{-1} + 2\psi'(t))\partial_t (\bme\otimes 1)
     - (\psi'(t) t^{-1} + 2\psi'(t)^2)\bme\otimes 1\\
     &\qquad + (- 2at^{-4} + \psi''(t) + \psi'(t)^2) \bme\otimes 1 \\
   \end{aligned}
-\\&= \Big((t^{-1} + 2\psi'(t))\partial_t - \psi'(t) t^{-1} - 2\psi'(t)^2 
+\\&= \Big((t^{-1} + 2\psi'(t))\partial_t - \psi'(t) t^{-1} - 2\psi'(t)^2
     - 2at^{-4} + \psi''(t) + \psi'(t)^2\Big) \bme\otimes 1
 \\&= \Big((t^{-1} + 2\psi'(t))\partial_t - \psi'(t) t^{-1} - 2at^{-4}
     + \psi''(t) - \psi'(t)^2\Big) \bme\otimes 1
@@ -507,7 +507,7 @@ P' &= \partial_t^2 - (t^{-1} + 2\psi'(t))\partial_t
   + \underset{=0}{\underbrace{ 2at^{-4} \overbracket{- 2at^{-4}}}}
 \\&= \partial_t^2 - (t^{-1} - 2i\sqrt{2a}t^{-2})\partial_t - 3 i\sqrt{2a}t^{-3}
 \end{align*}
-mit, wie gewünscht, mehr als einem Slope.
+mit, wie gewünscht, einem regulärem Anteil.
 \begin{figure}[H]
 \begin{center}
   \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
@@ -519,14 +519,13 @@ mit, wie gewünscht, mehr als einem Slope.
 \caption{Newton Polygon zu $\cN$}
 \end{figure}
 \begin{comment}
-Alternative berechnung: mit Formel aus \cite[Seite 44]{DiplHedwig}
-\[
-P'(t,\partial_t)=\rho^*P(t,\partial_t-\frac{\partial \psi}{\partial t})
-\]
-es ist $\rho^*P(t,\partial_t)=t^4\partial_t^2-t^3\partial_t+2a$, und somit
+\begin{bem}
+Alternativ ließe sich ein Minimalpolynom von $\cN$ mit der Formel aus Lemma
+\ref{lem:twistRechenregel} berechnen. Denn mit
+$\rho^*P(t,\partial_t)=t^4\partial_t^2-t^3\partial_t+2a$, ist
 \begin{align*}
-P'(t,\partial_t) &= \rho^*P(t,\partial_t-\frac{\partial \psi}{\partial t})
-\\&=\rho^*P(t,\partial_t-\frac{-i\sqrt{2a}}{t^2})
+\rho^*P(t,\partial_t-\frac{\partial \psi}{\partial t})
+&=\rho^*P(t,\partial_t-\frac{-i\sqrt{2a}}{t^2})
 \\&= t^4\underbracket{(\partial_t+\frac{i\sqrt{2a}}{t^2})^2}
     \underbracket{- t^3(\partial_t+\frac{i\sqrt{2a}}{t^2})} + 2a
 \\&= t^4 \overbracket{\underbracket{
@@ -545,16 +544,24 @@ P'(t,\partial_t) &= \rho^*P(t,\partial_t-\frac{\partial \psi}{\partial t})
 \\&= t^4\partial_t^2 + i\sqrt{2a}t^{2}\partial_t + i\sqrt{2a}t^2\partial_t
     - 2i\sqrt{2a}t - t^3\partial_t - i\sqrt{2a}t
 \\&= t^4\partial_t^2 - (t^3-2i\sqrt{2a}t^{2})\partial_t - 3i\sqrt{2a}t
+\\&= t^4P'(t,\partial_t)
 \end{align*}
+\end{bem}
 \end{comment}
-nachdem wir jetzt ein Minimalpolynom gefunden haben ist unser nächstes Ziel,
-$\cN=\cD_{\hat L}/\cD_{\hat L}\cdot P'$ in zwei Meromorphe Zusammenhänge mit
+
+Nachdem wir jetzt ein Minimalpolynom gefunden haben ist unser nächstes Ziel,
+$\cN=\cD_{\hat L}/\cD_{\hat L}\cdot P'$ in zwei meromorphe Zusammenhänge mit
 nur einem Slope zerlegen.  Betrachte hierzu das Minimalpolynom und zerlege
 dieses in ein Produkt $P'(t,\partial_t)=Q_1(t,\partial_t)\cdot
 Q_2(t,\partial_t)$.
 
 Da der $\partial_t$-Grad von $P'$ genau $2$ ist, müssen die $Q_i$
 jeweils den Grad $1$ haben, um eine nichttriviale Zerlegung zu bekommen.
+Allgemein haben dir $Q_i$ also die Form
+\begin{align*}
+Q_1&:=\bar v(t) \partial_t + v(t) & Q_2&:=\bar u(t)\partial_t + u(t)
+& \mbox{mit } \bar v(t), v(t), \bar u(t), u(t)\in \hat L \,.
+\end{align*}
 \begin{beo} \label{beo:paarweise-verschieben}
 %TODO: move to theorie-teil??
 Ist $Q_1$ und $Q_2$ so ein solches Paar, dann ist für $\sigma\in \hat L$ das
@@ -569,10 +576,10 @@ P'=Q_1\cdot Q_2= Q_1\cdot
 \]
 \end{beo}
 Mit der Beobachtung \ref{beo:paarweise-verschieben} ist klar, dass wir den
-Faktor vor $\partial_t$ in $Q_2$ frei wählen können. Setze diesen also
-allgemein auf $1$ und erhalte
+Faktor vor $\partial_t$ in $Q_2$ frei wählen können. Setze $\bar u(t):=1$ und
+erhalte
 \begin{align*}
-Q_1&:=\bar v(t) \partial_t + v(t) & Q_2&:=\partial_t + u(t)
+Q_1&=\bar v(t) \partial_t + v(t) & Q_2&=\partial_t + u(t)
 & \mbox{mit } \bar v(t), v(t), u(t)\in \hat L
 \end{align*}
 %TODO: Namenskollision: u und v wie in Achsbeschriftung
@@ -582,16 +589,15 @@ und somit ist ist das Produkt gegeben durch
 Q_1\cdot Q_2&=\bar v(t) \partial_t^2 + \bar v(t)\partial_t u(t) +
   v(t)\partial_t + v(t)u(t)
 \\&\overset{!}{=} \partial_t^2 - (t^{-1} - 2i\sqrt{2a}t^{-2})\partial_t
-  - 3 i\sqrt{2a}t^{-3}
+  - 3 i\sqrt{2a}t^{-3} \,.
   \end{aligned}
 \end{equation}
 Damit ist ebenfalls $\bar v(t)=1$.
 
 Durch das Wissen über die Slopes der $Q_i$ erhalten wir noch Informationen über
-die Reihen $v(t):=\sum_n v_nt^n$ bzw. $u(t):=\sum_n u_nt^n$. Die beiden
-Polynome $Q_1$ und $Q_2$ enthalten $\partial_t$ als einziges Monom vom
-$\partial_t$-Grad $1$, deshalb ist $(1,-1)$ in beiden zugehörigen
-Newton-Polygonen enthalten.
+die Reihen $v(t):=\sum_n v_nt^n$ und $u(t):=\sum_n u_nt^n$. Die beiden Polynome
+$Q_1$ und $Q_2$ enthalten $\partial_t$ als einziges Monom vom $\partial_t$-Grad
+$1$, deshalb ist $(1,-1)$ in beiden zugehörigen Newton-Polygonen enthalten.
 Da $Q_1$ nur den Slope $0$ hat, muss das Newton-Polygon wie in Abbildung
 \ref{abb:Q_1} aussenen und somit wissen wir, dass $v_n=0$ für alle $n<-1$.
 Da $Q_2$ genau den Slope $1$ hat, ist das Newton-Polygon gegeben durch
@@ -631,9 +637,11 @@ und mit denn Kommutatorregeln %TODO: lemma? quelle?
 gilt
 \begin{align*}
 \partial_t \sum_{n=-2}^\infty u_n t^n &=
-  \sum_{n=-2}^\infty (u_nt^n\partial_t + [\partial_t,u_nt^n])
-\\&= \sum_{n=-2}^\infty (u_nt^n\partial_t + nu_nt^{n-1})
+  \sum_{n=-2}^\infty (u_nt^n\partial_t + \underbracket{[\partial_t,u_nt^n]})
+\\&\!\!\overset{{(\ref{eq:kommutator1})}}{=}
+  \sum_{n=-2}^\infty (u_nt^n\partial_t +\overbracket{ nu_nt^{n-1}})
 \\&= \sum_{n=-2}^\infty u_nt^n\partial_t + \sum_{n=-2}^\infty nu_nt^{n-1}
+%TODO: ist umsortieren immer erlaubt??
 \end{align*}
 Wenn wir dieses Ergenis nun in (\ref{eq:schritt200}) einsetzen ergibt sich
 \begin{equation} \label{eq:schritt300}
@@ -655,14 +663,16 @@ Betrachte nun das Letzte Glied, auf welches wir die Cauchy-Produktformel
 anwenden wollen: %TODO: quelle? formel?
 \begin{align*}
 \Big(\sum_{n=-1}^\infty v_nt^n \Big)\Big( \sum_{n=-2}^\infty u_n t^n \Big)
-  &\overbox{=}{Indexshift} t^{-3}\Big(\sum_{n=0}^\infty v_{n-1}t^{n} \Big)
-  \Big( \sum_{n=0}^\infty u_{n-2} t^{n} \Big)
-\\&\overbox{=}{Cauchy Produkt} t^{-3}\sum_{n=0}^\infty
-  \Big( \sum_{k=0}^n v_{k-1}t^{k} u_{n-k-2} t^{(n-k)} \Big)
+  &\overbox{=}{Indexshift} t^{-3}
+  \underbracket{\Big(\sum_{n=0}^\infty v_{n-1}t^{n} \Big)
+  \Big( \sum_{n=0}^\infty u_{n-2} t^{n} \Big)}
+\\&\overbox{=}{Cauchy Produkt} t^{-3} \overbracket{\sum_{n=0}^\infty
+  \Big( \sum_{k=0}^n v_{k-1}t^{k} u_{n-k-2} t^{(n-k)} \Big)}
 \\&= \sum_{n=0}^\infty \Big( \sum_{k=0}^n v_{k-1}u_{n-k-2}t^{k+(n-k)-3} \Big)
-\\&= \sum_{n=0}^\infty \Big( \sum_{k=0}^n v_{k-1} u_{n-k-2} \Big) t^{n-3}
-\\&\overbox{=}{Indexshift} 
-  \sum_{n=-3}^\infty \Big( \sum_{k=0}^{n+3} v_{k-1} u_{n-k+1} \Big) t^{n}
+\\&= \underbracket{
+  \sum_{n=0}^\infty \Big( \sum_{k=0}^n v_{k-1} u_{n-k-2} \Big) t^{n-3}}
+\\&\overbox{=}{Indexshift} \overbracket{
+  \sum_{n=-3}^\infty \Big( \sum_{k=0}^{n+3} v_{k-1} u_{n-k+1} \Big) t^{n} }
 \end{align*}
 Wenn wir auch diese Rechnung in (\ref{eq:schritt300}) integrieren, erhalten wir
 \begin{align*} \label{eq:schritt400}
@@ -717,15 +727,15 @@ Nun zum allgemeinem Koeffizienten vor $t^{n}$ mit $n>-3$:
 0&= (n+1)u_{n+1} + \underbracket{\sum_{k=0}^{n+3} v_{k-1}u_{n-k+1}}
 \\&= (n+1)u_{n+1} + \overbracket{(\sum_{k=0}^{n+2} v_{k-1}u_{n-k+1})
   + \underbracket{v_{n+3-1\phantom{\!\!)}}}\underbracket{u_{n-(n+3)+1}}}
-\\&= (n+1)u_{n+1} + (\sum_{k=0}^{n+2} v_{k-1}u_{n-k+1}) 
+\\&= (n+1)u_{n+1} + (\sum_{k=0}^{n+2} v_{k-1}u_{n-k+1})
   + \overbracket{v_{n+2}}\overbracket{u_{-2}}
 \\\Rightarrow v_{n+2}u_{-2}&=-\left((n+1)u_{n+1} + \sum_{k=0}^{n+2}
   v_{k-1}u_{n-k+1}\right)
 \\\overset{u_{-2}\neq 0}{\Rightarrow} v_{n+2} &= - \frac{1}{u_{-2}}
   \left((n+1)u_{n+1} + \sum_{k=0}^{n+2} v_{k-1}u_{n-k+1}\right)
 \end{align*}
-und nach passendem Indexshift $n+2\rightarrow n$ folgt
-\begin{comment} TODO: mapsto pfeil?  \end{comment}
+und nach passendem Indexshift folgt
+\begin{comment} $n+2\rightarrow n$  \end{comment}
 \begin{align*}
 \Rightarrow v_{n} &= - \frac{1}{u_{-2}}
   \left((n-1)u_{n-1} + \sum_{k=0}^{n} v_{k-1}u_{n-k-1}\right)
@@ -734,6 +744,10 @@ und nach passendem Indexshift $n+2\rightarrow n$ folgt
 \\&= \frac{i}{2\sqrt{2a}}
   \left((n-1)u_{n-1} + \sum_{k=0}^{n} v_{k-1}u_{n-k-1}\right)
 \end{align*}
+Also ist $\cN=\cN_1\oplus\cN_2$ mit 
+$\cN_1=\cD_{\hat L}/\cD_{\hat L}\cdot (\partial_t + \sum_{n=-1}^\infty v_nt^n)$
+und
+$\cN_2=\cD_{\hat L}/\cD_{\hat L}\cdot (\partial_t + \sum_{n=-2}^\infty u_nt^n)$
 Zusammen mit $u_{-2}=2i\sqrt{2a}$, $u_{-1}=-\frac{3}{2}$ und
 $v_{-1}=\frac{1}{2}$ sind durch
 \begin{align} \label{eq:induktiveFormel}
@@ -748,13 +762,13 @@ damit die Zerlegung
 \rho^+\cM_{\phi} &\!\!\overset{\text{ \ref{cor:zurücktwisten}}}{=}\!\!
   \underbracket{\rho^+\cM_{\phi}\otimes\sE^{\psi(t)}} \otimes\sE^{-\psi(t)}
 \\&= \overbracket{(\cN_1\oplus\cN_2)}\otimes\sE^{-\psi(t)}
-\\&= \cN_1\otimes\sE^{-\psi(t)}\oplus\cN_2\otimes\sE^{-\psi(t)}
-\\&= (\cD_{\hat L}/\cD_{\hat L}\cdot Q_1\otimes\sE^{-\psi(t)})
-  \oplus(\cD_{\hat L}/\cD_{\hat L}\cdot Q_2\otimes\sE^{-\psi(t)})
+\\&= \underbracket{\cN_1}\otimes\sE^{-\psi(t)}
+  \oplus\underbracket{\cN_2}\otimes\sE^{-\psi(t)}
+\\&= (\overbracket{\cD_{\hat L}/\cD_{\hat L}\cdot Q_1}\otimes\sE^{-\psi(t)})
+  \oplus(\overbracket{\cD_{\hat L}/\cD_{\hat L}\cdot Q_2}\otimes\sE^{-\psi(t)})
 \end{align*}
-und, da $Q_1$ regulär, ist $\cD_{\hat L}/\cD_{\hat L}\cdot
-Q_1\otimes\sE^{-\psi(t)}$ bereits ein Elementarer Meromorpher Zusammenhang.
-Betrachte also noch $\cD_{\hat L}/\cD_{\hat L}\cdot Q_2\otimes\sE^{-\psi(t)}$:
+wobei $Q_1$ bereits regulär. Betrachte also noch $\cD_{\hat L}/\cD_{\hat
+L}\cdot Q_2\otimes\sE^{-\psi(t)}$:
 \begin{align*}
 \cD_{\hat L}/\cD_{\hat L}\cdot Q_2\otimes\sE^{-\psi(t)}
   ~&\!\!\overset{\text{\ref{lem:twistRechenregel}}}{=}
@@ -763,12 +777,14 @@ Betrachte also noch $\cD_{\hat L}/\cD_{\hat L}\cdot Q_2\otimes\sE^{-\psi(t)}$:
   \underbracket{-i\sqrt{2a}t^{-2} + u(t)})
 \\&= \cD_{\hat L}/\cD_{\hat L}\cdot (\partial_t + \overbracket{i\sqrt{2a}t^{-2}
   +\sum_{n=-1}^\infty u_nt^n})
-\\&= \underset{\mbox{regulär}}{\underbrace{
+\\&\!\!\overset{\text{\ref{lem:twistRechenregel}}}{=} \underset{\mbox{regulär}}{\underbrace{
   \cD_{\hat L}/\cD_{\hat L}\cdot (\partial_t
   + \sum_{n=-1}^\infty u_nt^n)}}\otimes\sE^{\psi(t)}
 \end{align*}
-Damit ist der zweite Summand also auch ein Elementarer Meromorpher
+\begin{comment}
+Damit ist der zweite Summand also auch ein elementarer meromorpher
 Zusammenhang.
+\end{comment}
 Also zerlegt sich $\cM$, nach einem pull-back mit $\rho:t\mapsto x=-2t^2$, in
 \[
 \rho^+\cM_{\phi} = \Bigg(
@@ -779,57 +795,18 @@ Also zerlegt sich $\cM$, nach einem pull-back mit $\rho:t\mapsto x=-2t^2$, in
   + \sum_{n=-1}^\infty u_nt^n\Big)}}\otimes\sE^{\psi(t)}\Bigg) \,.
 \]
 Nach zerlegen von $\cR_1$ und $\cR_2$ in eine direkte Summe von elementaren
-formalen Meromorphen Zusammenhängen, wie in Satz \ref{thm:regulärInDirSumme},
+formalen meromorphen Zusammenhängen, wie in Satz \ref{thm:regulärInDirSumme},
 ist die Levelt-Turrittin-Zerlegung vollständig gegeben.
 
 \subsection{Konvergenz der Summanden} \label{sec:konvergenzDerPotReihen}
 \begin{comment}
-TODO: text
+TODO: text\\
+Es ist klar, dass die Potenzreihen nicht konvergent sein dürfen, trotzdem
+wollen wir die Potenzreihen auf Konvergenz untersuchen
 \end{comment}
-Es ist klar, dass 
-\begin{align*}
-Q_1\in\cD_{\hat L} \backslash\cD_L &\Leftrightarrow v(t) \in\hat L \backslash L
-&\mbox{bzw. } & &
-(\partial_t + \sum_{n=-1}^\infty u_nt^n)\in \cD_{\hat L} \backslash \cD_L
-&\Leftrightarrow u(t) \in \hat L \backslash L
-\end{align*}
-Deshalb wollen wir die Potenzreihen $v$ und $u$ und im besonderen deren
-konvergenzverhalten, noch genauer betrachten. 
-Wir betrachten wir den folgenden zwei klasischen Konvergenzkriterien.
-\begin{thm}[Wurzlkriterium nach Cauchy] \label{thm:convKrit}
-Sei $\sum_n a_n x^n$ eine Potenzreihe. Es gilt:
-\[
-\underset{n\rightarrow\infty}{\limsup} \sqrt[n]{|a_n|} = +\infty 
-\Rightarrow \text{ die Potenzreihe ist nirgends Konvergent.}
-\]
-\end{thm}
-\begin{proof}
-siehe \cite[§18, Satz 94]{KnoppReihen}.
-\end{proof}
-
-\begin{thm}[Quotientenkriterium]
-Sei $\sum_n a_n x^n$ eine Potenzreihe. Es gilt:
-\[
-\underset{n\rightarrow\infty}{\lim} \frac{|a_{n+1}|}{|a_n|} = 0
-\Rightarrow \text{ die Potenzreihe ist nirgends Konvergent.}
-\]
-\end{thm}
-\begin{proof}
-Es gilt, dass $\sum_na_nx^n$ für ein $x\in\C$ konvergent ist, falls
-\[
-\exists N\in\N:\forall n>N:\left|\frac{a_{n+1}x^{n+1}}{a_nx^n}\right|\leq\eta<1
-\]
-und das ist äquivalent zu 
-\[
-\underset{n\rightarrow\infty}{\lim} \left|\frac{a_{n+1}}{a_n}\right||x| < 1 \,.
-\]
-Also konvergiert die Reihe für alle $x$ mit
-$|x|<\underset{n\rightarrow\infty}{\lim} \left|\frac{a_{n+1}}{a_n}\right|$.
-\end{proof}
-
 Für $n>0$ gilt $v_{n-1}\overset{(\ref{eq:bedingung1c})}{=}-u_{n-1}$ und damit
-wollen wir die Formel noch weiter vereinfachen, um eine Version zu bekommen,
-die sich gut implementieren lässt.
+wollen wir die Formel (\ref{eq:induktiveFormel}) noch weiter vereinfachen, um
+eine Version zu bekommen, die sich gut implementieren lässt.
 Aus (\ref{eq:induktiveFormel}) ergeben sich zunächst für $n=0$ die
 Koeffizienten
 \begin{align*}
@@ -863,9 +840,9 @@ v_{0} &= -\frac{1}{u_{-2}} ((-1)u_{-1} + \sum_{k=0}^{0} v_{k-1}u_{-k-1})
     + \frac{12}{16}
     -\frac{9}{16}
     + \frac{36}{16})
-  \\&=-\frac{63}{16u_{-2}^3} 
-  \\&=-\frac{63}{16(2i\sqrt{2a})^3} 
-  \\&=\frac{63}{256ia\sqrt{2a}} 
+  \\&=-\frac{63}{16u_{-2}^3}
+  \\&=-\frac{63}{16(2i\sqrt{2a})^3}
+  \\&=\frac{63}{256ia\sqrt{2a}}
   \\&=-\frac{63}{256a\sqrt{2a}} = -u_2
   & \overset{a=\frac{1}{8}}{\approx} -3.9375i
   \end{align*}
@@ -915,46 +892,87 @@ v_{-1}&=\frac{1}{2} & u_{-1}&=-\frac{3}{2}
   \left((n+1)v_{n-1} + \sum_{k=1}^{n-1} v_{k-1}v_{n-k-1}\right)
   & & \forall n > 0
 \end{align*}
+Ein Haskell Modul, welches die Koeffizienten des Systems berechnet, kann wie
+folgt aussehen:
+%\begin{figure}[htbp]
+\lstinputlisting[language=HaskellUlisses
+                ,firstnumber=1
+                %,captionpos=b
+                ,caption=Koeffs.hs]{../haskell/Koeffs.hs}
+%\end{figure}
+Dieses Modul \texttt{Koeffs} stelle die Funktionen \texttt{vKoeffs} und
+\texttt{uKoeffs} bereit, welche zu einem gegebenem Wert von $u_{-2}$ eine
+unendliche Liste der Koeffizienten generieren. Die Einträge in der Liste sind
+vom Typ \texttt{CompRat}, welcher die Menge $\Q(i)$ implementiert.
+Hier ist \texttt{:+:} ein Infix-Konstruktor der Klasse \texttt{ComplRat} und
+erzeugt mit einem Aufruf der Form \texttt{a :+: b} eine Imaginärzahl, die
+$a+ib$ entspricht.
+\texttt{ComplRat} ermöglicht es, dass die Berechung ohne numerische Fehler
+erfolgt, da nie gerundet wird.
 
-\begin{comment}
-Um den Satz \ref{thm:convKrit} anzuwenden, betrachten wir
-\begin{align*}
-\sqrt[n]{|v_{n}|} &= \sqrt[n]{\left| - \frac{i}{2\sqrt{2a}}
-  \left((n+1)v_{n-1} + \sum_{k=1}^{n-1} v_{k-1}v_{n-k-1}\right) \right|}
-\\&= \sqrt[n]{\left| u_{-2} \right|}^{-1}
- \sqrt[n]{\left|(n+1)v_{n-1} + \sum_{k=1}^{n-1} v_{k-1}v_{n-k-1} \right|} 
-\end{align*}
-\end{comment}
-\begin{comment}
-In einer geeigneten Programmiersprache ist es nun einfach die $v_n$ und
-$u_n$ Numerisch zu berechnen. So wird ein geeigneter Quellcode in Anhang
-\ref{anh:Programm} vorgestellt. Mit diesen Programm wurde für verschiedene $a$
-numerisch die Beträge der Koeffizienten berechnet und in abhängigkeit von $n$
-in Abbildung \ref{fig:plotKoeffs} dargestellt.
-\end{comment}
+In folgender Abbildung sind die Beträge der Koeffizienten von $v(t)$ in
+Abhängigkeit von $n$ für verschiedene $u_{-2}$ angetragen.
 \begin{figure}[htbp]
   \centering
   \includegraphics[angle=270,width=\the\textwidth]{../img/betrag.pdf}
-  %\includegraphics[angle=270,width=\the\textwidth]{../img/koeff-logx.pdf}
-  \caption[Koeffizienten in abhängigkeit von $a$]
-   {Die Beträge der Koeffizienten für unterschiedliche $a$}
+  \caption%[Koeffizienten in abhängigkeit von $u_{-2}$]
+   {Die Beträge der $v_n$ in Abhängigkeit von $n$ für unterschiedliche
+     $u_{-2}$.}
   \label{fig:plotKoeffs}
 \end{figure}
+
+Nun zum Konvergenzverhalten. Es ist klar, dass
+\begin{align*}
+Q_1\in\cD_{\hat L} \backslash\cD_L &\Leftrightarrow v(t) \in\hat L \backslash L
+&\mbox{bzw. } & &
+(\partial_t + \sum_{n=-1}^\infty u_nt^n)\in \cD_{\hat L} \backslash \cD_L
+&\Leftrightarrow u(t) \in \hat L \backslash L
+\end{align*}
+Deshalb wollen wir die Potenzreihen $v$ und $u$ und im besonderen deren
+konvergenzverhalten, noch genauer betrachten.
+Außerdem gilt, dass $ v(t) \in\hat L \backslash L \Leftrightarrow u(t) \in \hat
+L \backslash L$.
+Wir betrachten wir den folgenden zwei klasischen Konvergenzkriterien.
+\begin{thm}[Wurzlkriterium nach Cauchy] \label{thm:convKrit}
+Sei $\sum_n a_n x^n$ eine Potenzreihe. Es gilt:
+\[
+\underset{n\rightarrow\infty}{\limsup} \sqrt[n]{|a_n|} = +\infty
+\Rightarrow \text{ die Potenzreihe ist nirgends Konvergent.}
+\]
+\end{thm}
+\begin{proof}
+siehe \cite[§18, Satz 94]{KnoppReihen}.
+\end{proof}
 \begin{figure}[htbp]
   \centering
   \includegraphics[angle=270,width=\the\textwidth]{../img/cauchy.pdf}
-  %\includegraphics[angle=270,width=\the\textwidth]{../img/koeff-logx.pdf}
-  %\caption[Koeffizienten in abhängigkeit von $a$]
-   %{Die Beträge der Koeffizienten für unterschiedliche $a$}
+  \caption{Wurzlkriterium angewendet auf die Koeffizienten}
   \label{fig:plotCauchyKoeffs}
 \end{figure}
+\begin{thm}[Quotientenkriterium]
+Sei $\sum_n a_n x^n$ eine Potenzreihe. Es gilt:
+\[
+\underset{n\rightarrow\infty}{\lim} \frac{|a_{n+1}|}{|a_n|} = 0
+\Rightarrow \text{ die Potenzreihe ist nirgends Konvergent.}
+\]
+\end{thm}
+\begin{proof}
+Es gilt, dass $\sum_na_nx^n$ für ein $x\in\C$ konvergent ist, falls
+\[
+\exists N\in\N:\forall n>N:\left|\frac{a_{n+1}x^{n+1}}{a_nx^n}\right|\leq\eta<1
+\]
+und das ist äquivalent zu
+\[
+\underset{n\rightarrow\infty}{\lim} \left|\frac{a_{n+1}}{a_n}\right||x| < 1 \,.
+\]
+Also konvergiert die Reihe für alle $x$ mit
+$|x|<\underset{n\rightarrow\infty}{\lim} \left|\frac{a_{n+1}}{a_n}\right|$.
+\end{proof}
 \begin{figure}[htbp]
   \centering
   \includegraphics[angle=270,width=\the\textwidth]{../img/quot.pdf}
-  %\includegraphics[angle=270,width=\the\textwidth]{../img/koeff-logx.pdf}
-  %\caption[Koeffizienten in abhängigkeit von $a$]
-   %{Die Beträge der Koeffizienten für unterschiedliche $a$}
-  \label{fig:plotCauchyKoeffs}
+  \caption{Quotientenkriterium angewendet auf die Koeffizienten}
+  \label{fig:plotQuotKoeffs}
 \end{figure}
 
 % vim: set ft=tex :

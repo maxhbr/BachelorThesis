@@ -127,7 +127,7 @@
 %%%%  MyDevelop  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \myinput{mydevelop.sty}
 \ifnum\myDevelopVariable=0
-  \cfoot{\today}
+  %\cfoot{\today}
 \fi
 
 %%%%  Listings  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -330,6 +330,8 @@
 \begingroup
 \let\clearpage\relax
 \listoftables
+%TODO: rename listings
+\lstlistoflistings
 \endgroup
 
 \ifnum\myDevelopVariable=0
@@ -364,6 +366,7 @@
 \myinput{anhang-lemma2-4.tex}
 \myinput{anhang-zu-rezept.tex}
 \myinput{anhang-berechnung.tex}
+\myinput{anhang-quellcode.tex}
 
 %\myinput{anhang-plot-newton-polygon.tex}
 

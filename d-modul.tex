@@ -23,11 +23,14 @@ nach $x$, so gilt
 \item $[ \partial_x,x] = \partial_xx-x\partial_x=1 $
 %und damit ist $\cD_k$ insbesondere nicht kommutativ.
 \item für $f\in k$ ist
-\[ [\partial_x,f] = \frac{\partial f}{\partial x} \,. \]
+\begin{equation} \label{eq:kommutator1}
+[\partial_x,f] = \frac{\partial f}{\partial x} \,. 
+\end{equation}
 \item Es gelten die Formeln\\
 \begin{align}
 [\partial_x,x^k]   &= kx^{k-1}
-  \label{eq:kommutator1}\\
+  %\label{eq:kommutator1}
+  \\
 [\partial_x^j,x]   &= j\partial_x^{j-1}
   \label{eq:kommutator2}\\
 [\partial_x^j,x^k] &= \sum_{i\geq1}\frac{k(k-1)\cdots(k-i+1)
@@ -89,7 +92,7 @@ K\bydef\Cfx[x^{-1}]$
 \begin{itemize}
 \item Es gilt $\cD[x^{-1}]=\cD_K$ und $\hat \cD[x^{-1}]=\cD_{\hat
 K}$
-\item Offensichtlich erhält $\cD_k$ in kanonischer weiße eine Ringstruktur,
+\item Offensichtlich erhält $\cD_k$ in kanonischer Weise eine Ringstruktur,
 dies ist in \cite[Kapittel 2 Section 1]{ZulaBarbara} genauer ausgeführt.
 \item $\cD_k$ ist nichtkommutativ.
 \end{itemize}
@@ -180,7 +183,7 @@ Treffen?
 Nur abgeschrieben
 \end{comment}
 \cite[Chap 1.1.]{kashiwara2003d}
-Sei $X$ eine $1$-Dimensionale complexe Mannigfaltigkeit und $\cO_X$ die Garbe
+Sei $X$ eine $1$-dimensionale komplexe Mannigfaltigkeit und $\cO_X$ die Garbe
 der holomorphen Funktionen auf $X$. Ein \emph{(holomorpher) differenzial
 Operator} auf $X$ ist ein Garben-Morphismus $P:\cO_X\rightarrow \cO_X$, lokal
 in der Koordinate $x$ und mit holomorphen Funktionen $a_n(x)$ als
@@ -194,7 +197,7 @@ hat höchstens Ordnung $m$, falls $\forall n\geq m: \alpha_n(x)\equiv0$.
 \begin{defn}
 Mit $\cD_X$ bezeichnen wir die \emph{Garbe von Differentialoperatoren} auf $X$.
 \end{defn}
-Die Garbe $\cD_X$ hat eine Ring Struktur mittels der Komposition als
+Die Garbe $\cD_X$ hat eine Ringstruktur mittels der Komposition als
 Multiplikation und $\cO_X$ ist ein Unterring von $\cD_X$. Sei $\Theta_X$ die
 Garbe der Vektorfelder über über $X$. Es gilt, dass $\Theta_X$ in $\cD_X$
 enthalten ist.  Bemerke auch, dass $\Theta_X$ ein links $\cO_X$-Untermodul,
@@ -207,7 +210,7 @@ als $\partial_x(x^n)=nx^{n-1}$ wirkt. Dann sind die Differentialoperatoren
 \begin{align*}
 \cD_X &= \C[x,\partial_x], & \mbox{mit} & & \partial_x x-x\partial_x & =1.
 \end{align*}
-Somit stimmt die Alternative Definition schon mal mit der Einfachen überein.
+Somit stimmt die alternative Definition bereits mit der einfachen überein.
 \end{prop}
 
 \begin{comment}
@@ -220,10 +223,10 @@ die $\C[x,\partial_x]$-Moduln. Sie werden geschrieben als $\cD-mod(\A^1)$
 
 \section{(Links) $\cD$-Moduln}
 Da $\cD$ ein nichtkommutativer Ring ist, muss man vorsichtig sein und zwischen
-links unr rechts $\cD$-Moduln unterschiden. Wenn ich im folgendem von
-$\cD$-Moduln rede, werde ich mich immer
+links und rechts $\cD$-Moduln unterschiden.
+Wenn im folgendem von $\cD$-Moduln gesprochen wird, werden immer
 %, wie auch \cite[Chapter 1.6.]{arapuraNotes},
-auf links $\cD$-Moduln beziehen.
+links $\cD$-Moduln gemeint.
 
 \begin{exmp}[links $\cD$-Moduln]
 % Sergey-Arkhipov-MAT1191_Lecture_Notes.pdf Chapter 2.1
@@ -278,7 +281,7 @@ $0\neq\mathfrak{a}\vartriangleleft\cD_k$.
 \end{defn}
 \begin{bem}
 In \cite{coutinho1995primer} wird dies über die Dimension definiert, und bei
-\cite{sabbah_cimpa90} über die Carakteristische Varietät.
+\cite{sabbah_cimpa90} über die charakteristische Varietät.
 \end{bem}
 
 \begin{bem} 

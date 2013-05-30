@@ -23,4 +23,4 @@ vKoeffs uMin2 = 1/2:+:0 : [koeff i|i <- [0..]]
 -- returns array with the coefficients of u(t)
 -- first element in array is koefficient from t^{-2}
 uKoeffs :: ComplRat -> [ComplRat]
-uKoeffs uMin2 = uMin2 : -3/2:+:0 : (tail $ vKoeffs uMin2)
+uKoeffs uMin2 = uMin2 : -3/2:+:0 : (map negate (tail $ vKoeffs uMin2))

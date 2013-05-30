@@ -1,15 +1,15 @@
 %!TeX root = main.tex
-\chapter{Elementare Meromorphe Zusammenhänge}
-\section{Elementare formale Meromorphe Zusammenhänge}
+\chapter{Elementare meromorphe Zusammenhänge}
+\section{Elementare formale meromorphe Zusammenhänge}
 \begin{defn}
-Ein \emph{elementarer formaler Meromorpher Zusammenhang} ist ein Zusammenhang
+Ein \emph{elementarer formaler meromorpher Zusammenhang} ist ein Zusammenhang
 $\cM$, welcher isomorph zu $\cD_{\hat K}/\cD_{\hat K}\cdot
 (x\partial_x-\alpha)^p$, mit passendem $\alpha$ und $p$, ist.
 \end{defn}
 
 \begin{lem}
 \cite[Lem 5.2.1.]{sabbah_cimpa90}
-Es existiert eine Basis von $\cM_{\hat K}$ über $\hat K$ mit der Eigenschaften,
+Es existiert eine Basis von $\cM_{\hat K}$ über $\hat K$ mit der Eigenschaft,
 dass die Matrix, die $x\partial_x$ beschreibt, nur Einträge in $\Cfx$ hat.
 \end{lem}
 \begin{proof}
@@ -42,18 +42,18 @@ Siehe \cite[Thm 5.2.2]{sabbah_cimpa90}
 
 \begin{thm} \label{thm:regulärInDirSumme}
 Ein regulärer formaler Zusammenhang $\cM_{\hat K}$ ist isomorph zu einer
-direkten Summe von elementaren formalen Meromorphen Zusammenhängen.
+direkten Summe von elementaren formalen meromorphen Zusammenhängen.
 \end{thm}
-\begin{proof}
-Siehe \cite[Cor. 5.2.6]{sabbah_cimpa90}. Indem man eine Basis von $\cM_{\hat
-K}$ wählt, so dass die Matrix zu $x\partial_x$ konstant ist. Diese Matrix kann
+\begin{proof}[Beweisskizze]
+Siehe \cite[Cor. 5.2.6]{sabbah_cimpa90}. Man wählt eine Basis von $\cM_{\hat
+K}$, in der die Matrix zu $x\partial_x$ konstant ist. Diese Matrix kann
 in Jordan Normalform gebracht werden und damit erhält man das Ergenis.
 \end{proof}
 
-\section{Elementare Meromorphe Zusammenhänge}
+\section{Elementare meromorphe Zusammenhänge}
 %TODO: rename to L-T-Theorem???
 \begin{comment}
-einführen als Bausteine oder kleinste Meromorphe Zusammenhänge
+einführen als Bausteine oder kleinste meromorphe Zusammenhänge
 \end{comment}
 \begin{comment}
 ALT:
@@ -77,7 +77,7 @@ im speziellen also $\partial_x\bme=\phi'$.
 \end{defn}
 \begin{bem}
 \begin{enumerate}
-\item Die $\sE_{\hat K}^\phi$ stellen so etwas, wie die einfachsten Meromorphen
+\item Die $\sE_{\hat K}^\phi$ stellen so etwas, wie die einfachsten meromorphen
 Zusammenhänge mit einem ganzzahligem Slope, dar.
 \item Wir werden oft $\bme=1$ als Basis nehmen.
 \item Auf die Angabe von des Rang 1 Vektorraums im Subscript wird, falls dieser
@@ -97,7 +97,6 @@ $\cP(\sE_{\hat K}^\phi)=
 \end{cases}
 $.
 \end{lem}
-\newpage
 \begin{proof} 
 Es ist 
 \begin{align*}
@@ -107,9 +106,9 @@ Es ist
   +\sum_{i=-{p}}^\infty (i+1)a_{i+1}x^{i}
 \end{align*}
 und damit wissen wir, dass die einzigen zwei Punkte, die Ecken des Newton
-Polygons sein können $(1,-1)$ und $(0,-(p+1))$ sind. Da einer der Punkte auf
-der Vertikalen Achse liegt, kann es insgesammt nur einen Slope $\Lambda$ gebem,
-und dieser berechnet sich wie folgt:
+Polygons sein können, $(1,-1)$ und $(0,-(p+1))$ sind. Da einer der Punkte auf
+der vertikalen Achse liegt, kann es insgesammt nur einen Slope $\Lambda$ geben,
+welcher sich wie folgt berechnet:
 \begin{align*}
 \Lambda&=\max\{0,\frac{-1-(-(p+1))}{1}\}
 \\&=\max\{0,p\}
@@ -150,7 +149,7 @@ Für alle $\phi \in \hat L$ gilt
 \end{lem}
 %
 \begin{proof}
-Wir wollen zeigen, dass das folgende Diagram, für einen passenden
+Wir wollen zeigen, dass das folgende Diagramm, für einen passenden
 Isomorphismus, kommutiert:
 \begin{center}
   \begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
@@ -222,7 +221,7 @@ t\partial_t\bme_k &=
   &=\sum_{i=0}^{p-1}\psi_i(t^p)(t^{-k}\otimes_{\hat K} t^{k} t^i \bme)\\
   &=\sum_{i=0}^{p-1}t^i\psi_i(t^p)(t^{-k-i}\otimes_{\hat K} t^{k+i} \bme)\\
   &= \sum_{i=0}^{p-1-k}t^i\psi_i(t^p)\bme_{k+i} +
-  \sum_{i=p-k}^{p-1}t^i\psi_i(t^p)\bme_{k+i-p}
+  \sum_{i=p-k}^{p-1}t^i\psi_i(t^p)\bme_{k+i-p} \,.
 \end{align*}
 Sei
 \[
@@ -231,7 +230,7 @@ V:=\begin{pmatrix}
 1 & 0\\
   & \ddots & \ddots\\
   &        & 1        & 0
-\end{pmatrix}
+\end{pmatrix} \,,
 \]
 so dass $\mathbf{e}\cdot V=(\bme_1,...,\bme_{p-1},\bme_0)$ gilt.
 Es gilt:
@@ -257,10 +256,10 @@ denn:
   t^{1}\psi_{1}(t^p) & t^{p-1}\psi_{p-1}(t^p)
   \end{pmatrix}
 } \\
-  &= \mathbf{e}\left[\sum_{j=0}^{p-1}t^j\psi_j(t^p)V^j\right]
+  &= \mathbf{e}\left[\sum_{j=0}^{p-1}t^j\psi_j(t^p)V^j\right] \,.
 \end{align*}
 Die Wirkung von $\partial_t$ auf die Basis $\mathbf{e}$ von
-$\rho^+\rho_+\sE^{\phi(t)}$ ist also Beschrieben durch
+$\rho^+\rho_+\sE^{\phi(t)}$ ist also beschrieben durch
 \[
 \partial_t\mathbf{e}=\mathbf{e}\left[\sum_{j=0}^{p-1}t^{j-1}\psi_jV^j\right]\,.
 \]
@@ -273,7 +272,7 @@ D:=TVT^{-1}=\begin{pmatrix}\xi^{0}\\
  &  &  & \xi^{p-1}
 \end{pmatrix} \,,
 \]
-mit $\xi^p=1$, bringen. Sei so ein $\xi$ ab jetzt Fixiert.
+mit $\xi^p=1$, bringen. Sei so ein $\xi$ ab jetzt fixiert. %TODO: besonderes xi?
 So dass gilt:
 \begin{align*}
   T\left[\sum_{j=0}^{p-1}t^{j-1}\psi_j(t^p)V^j\right]T^{-1} 
@@ -310,7 +309,7 @@ So dass gilt:
   \end{pmatrix}\\
 \end{align*}
 da $\phi'(t)=pt^{p-1}$.
-Damit wissen wir bereits, das im Diagram
+Damit wissen wir bereits, dass im Diagramm
 \begin{center}
   \begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
   \matrix (m) [
@@ -356,7 +355,7 @@ der mit $(\star)$ bezeichnete Teil kommutiert,
 wobei $\Phi:(0,\dots,0,\overbox{1}{k-te Stelle},0,\dots,0)\mapsto e_k$ der
 kanonische Basisisomorphismus und $e_k$ Basis von
 $\sE^{\phi\circ\mu_{\xi^{k-1}}}$.
-Um zu zeigen, dass das vollständige Diagram kommutiert, zeigen wir noch, dass
+Um zu zeigen, dass das vollständige Diagramm kommutiert, zeigen wir noch, dass
 \begin{align*}
 \partial_t(v) =\Phi\big(\Phi^{-1}(v)
   \cdot\left[\sum_{j=0}^{p-1}t^{j-1}\psi_j(t^p)D^j\right]\big)
@@ -393,17 +392,17 @@ und auf dem anderem Weg gilt:
     ;
   \end{tikzpicture}
 \end{center}
-Also kommutiert das Diagram und damit ist die Aussage gezeigt.
+Also kommutiert das Diagramm und damit ist die Aussage gezeigt.
 \end{proof}
 
 \begin{defn}
-Ein \emph{elementarer Meromorpher Zusammenhang} ist ein Zusammenhang $\cM$, für
+Ein \emph{elementarer meromorpher Zusammenhang} ist ein Zusammenhang $\cM$, für
 den es $\psi \in \Cfxl$, $\alpha\in\C$ und $p\in \N$ gibt, so dass
 \[
 \cM\cong \sE^{\psi}\otimes R_{\alpha,p}\,,
 \]
 mit $R_{\alpha,p}:=\cD/\cD(x\partial_x-\alpha)^p$, also ein elementarer
-formaler Meromorpher Zusammenhang, ist.
+formaler meromorpher Zusammenhang, ist.
 \end{defn}
 
 \begin{comment}
@@ -423,7 +422,7 @@ Siehe \cite[Lem 5.12]{DiplHedwig}
 \cite[Def 2.1]{sabbah_Fourier-local}
 Zu einem gegebenen $\rho\in t\C\llbracket t\rrbracket$, $\phi\in \hat L \bydef
 \C(\!(t)\!)$ und einem endlich dimensionalen $\hat L$-Vektorraum $R$ mit
-regulärem Zusammenhang $\nabla$, definieren wir den assoziierten Elementaren
+regulärem Zusammenhang $\nabla$, definieren wir den assoziierten elementaren
 endlich dimensionalen $\hat K$-Vektorraum mit Zusammenhang, durch:
 \[
 El(\rho,\phi,R)=\rho_+(\sE^\phi\otimes R)
@@ -460,12 +459,12 @@ Siehe \cite[Prop 3.1]{sabbah_Fourier-local}
 \end{proof}
 \end{comment}
 
-\section{Twisten von Meromorphen Zusammenhängen}
+\section{Twisten von meromorphen Zusammenhängen}
 \begin{comment}
 \cite[Chap 5 §2]{coutinho1995primer}
 \end{comment}
 \begin{lem}
-Sei $\cM=\cD_{\hat K}/\cD_{\hat K}\cdot P$ ein Meromorpher Zusammenhang mit $P$
+Sei $\cM=\cD_{\hat K}/\cD_{\hat K}\cdot P$ ein meromorpher Zusammenhang mit $P$
 von Grad $q$ und mit $\bme$ als ein zyklischer Vektor, so ist $\bme\otimes
 \underset{\in\hat K}{\underbrace{1}}$ ein zyklischer Vektor für
 $\cN:=\cM\otimes_{\hat K}\sE_{\hat K}^\psi$.
@@ -474,7 +473,7 @@ $\cN:=\cM\otimes_{\hat K}\sE_{\hat K}^\psi$.
 %Es sei $\bme$ ein zyklischer Vektor von $\cM$.
 Da der Grad von $P$ gleich $q$ ist, ist nach Lemma \ref{lem:twistRechenregel}
 auch $Q$ von grad $q$ und somit $\dim_{\hat K}\cN= q$.
-Also reicht zu zeigen, dass $\bme\otimes 1$, $\partial_x(\bme\otimes 1)$,
+Also reicht es zu zeigen, dass $\bme\otimes 1$, $\partial_x(\bme\otimes 1)$,
 $\partial_x^2(\bme\otimes 1)$,\dots, $\partial_x^{q-1}(\bme\otimes 1)$ ein
 linear unabhängiges System ist.  Es gilt
 \begin{align*}
@@ -528,6 +527,7 @@ und somit ist dann
 (\partial_x^{q-2}\bme)\otimes 1\\
 (\partial_x^{q-1}\bme)\otimes 1\\
 \end{pmatrix}
+\,.
 \]
 Da bekanntlich $\bme\otimes1$, $(\partial_x \bme)\otimes 1$,
 $(\partial_x^{2}\bme)\otimes 1$,\dots, $(\partial_x^{q-1}\bme)\otimes 1$ linear
@@ -536,7 +536,6 @@ unabhängig sind, gilt dies auch für $\bme\otimes 1$, $\partial_x(\bme\otimes
 Damit folgt die Behauptung.
 \end{proof}
 \begin{lem} \label{lem:twistRechenregel}
-\cite[Seite 44]{DiplHedwig}
 Sei $\cM_{\hat K}=\cD_{\hat K}/\cD_{\hat K}\cdot P(x,\partial_x)$ und sei
 $\phi\in \hat K$. So gilt
 \[
@@ -545,13 +544,17 @@ Q(x,\partial_x)
 \]
 mit $Q(x,\partial_x)=P(x,\partial_x-\frac{\partial \phi}{\partial x})$.
 \end{lem}
-\begin{proof}
+\begin{proof}[Beweisskizze]
 Zeige, dass $P(x,\partial_x-\frac{\partial \phi}{\partial x})\bme\otimes1=0$
-gilt, denn aus Gradgründen folgt damit die Behauptung.
+gilt, da $\bme\otimes1$ eine zyklischer Vektor folgt damit aus Gradgründen die
+Behauptung. Genauer ausgeführt wird dies in 
+\cite[Seiten 39 bis 44]{DiplHedwig}.
+\begin{comment}
 \begin{align*}
 P(x,\partial_x-\frac{\partial \phi}{\partial x})\bme\otimes1
  &=TODO
 \end{align*}
+\end{comment}
 \end{proof}
 \begin{cor} \label{cor:zurücktwisten}
 Sei $\cM_{\hat K}$ und $\phi$ wie in \ref{lem:twistRechenregel}, so gilt
@@ -570,12 +573,12 @@ Denn
   \otimes_{\hat K}\sE^{-\phi}
 \\&= \cD_{\hat K}/\cD_{\hat K} \cdot P(x,\partial_x\underset{=0}{\underbrace{
   -\frac{\partial \phi}{\partial x} -\frac{\partial (-\phi)}{\partial x}}})
-\\&= \cD_{\hat K}/\cD_{\hat K} \cdot P(x,\partial_x) = \cM_{\hat K}
+\\&= \cD_{\hat K}/\cD_{\hat K} \cdot P(x,\partial_x) = \cM_{\hat K} \,.
 \end{align*}
 \end{proof}
 
 \section{Levelt-\!Turrittin-\!Theorem}
-Das Levelt-Turrittin-Theorem ist ein Satz, der hilft, Meromorphe Zusammenhänge
+Das Levelt-Turrittin-Theorem ist ein Satz, der hilft, meromorphe Zusammenhänge
 in ihre irreduziblen Komponenten zu zerlegen.
 
 \begin{comment}
@@ -583,10 +586,10 @@ in ihre irreduziblen Komponenten zu zerlegen.
 \end{comment}
 \begin{thm}
 \cite[Thm 5.4.7]{sabbah_cimpa90}
-Sie $\cM_{\hat K}$ ein formaler Meromorpher Zusammenhang. So gibt es eine
+Sie $\cM_{\hat K}$ ein formaler meromorpher Zusammenhang. So gibt es eine
 ganze Zahl $p$ so dass der Zusammenhang $\cM_{\hat L}:=\rho^+\cM_{\hat K}$,
 mit $\rho:t\mapsto x:=t^p$, isomorph zu einer direkten Summe von formalen
-elementaren Meromorphen Zusammenhänge
+elementaren meromorphen Zusammenhänge
 ist.
 \end{thm}
 Der folgende Beweis stammt hauptsächlich aus \cite[Seite 35]{sabbah_cimpa90}.
@@ -600,7 +603,7 @@ $\kappa=\infty$ gesetzt, falls der größte Slope nicht Ganzzahlig ist.
 TODO: induktionsanfang und -schritt kennzeichnen
 \end{comment}
 Wir nehmen oBdA an, dass $\cM_{\hat K}$ genau einen Slope $\Lambda$ hat, sonst
-Teile $\cM_{\hat K}$ mittels Satz \ref{thm:Split-after-slopes} in Meromorphe
+Teile $\cM_{\hat K}$ mittels Satz \ref{thm:Split-after-slopes} in meromorphe
 Zusammenhänge mit je einem Slope und wende jeweils die Induktion an.
 Mit $\Lambda=:\frac{\lambda_0}{\lambda_1}$ (vollständig gekürtzt) Definieren
 wir die dem Slope entsprechende Linearform
@@ -683,7 +686,7 @@ den zweiten Unterfall des ersten Fall an.
 \subsection{Sabbah's Refined version}
 \begin{prop}
 \cite[Prop 3.1]{sabbah_Fourier-local}
-Jeder irreduzible endlich dimensionale formale Meromorphe Zusammenhang
+Jeder irreduzible endlich dimensionale formale meromorphe Zusammenhang
 $\cM_{\hat L}$ ist isomorph zu $\rho_+(\sE^\phi\otimes_{\hat K} S)$, wobei
 $\phi\in x^{-1}\C[x^-1]$, $\rho:x\mapsto t=x^p$ mit grad $p\geq1$ minimal bzgl.
 $\phi$ (siehe \cite[Rem 2.8]{sabbah_Fourier-local}), und $S$ ist ein Rang $1$
@@ -695,7 +698,7 @@ $\hat K$-Vektor Raum mit regulärem Zusammenhang.
 
 \begin{thm}[Refined Turrittin-Levelt]
 \cite[Cor 3.3]{sabbah_Fourier-local}
-Jeder endlich dimensionale Meromorphe Zusammenhang $\cM_{\hat K}$ kann in
+Jeder endlich dimensionale meromorphe Zusammenhang $\cM_{\hat K}$ kann in
 eindutiger weiße geschrieben werden als direkte Summe $\bigoplus
 El(\rho,\phi,R)\bydef\bigoplus\rho_+(\sE^\phi)\otimes R$, so dass
 jedes $\rho_+\sE^\phi$ irreduzibel ist und keine zwei $\rho_+\sE^\phi$ isomorph

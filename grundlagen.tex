@@ -6,7 +6,7 @@ Hier werde ich mich auf \cite{sabbah_cimpa90} und \cite{coutinho1995primer}
 beziehen.
 \end{comment}
 
-Wir betrachten $\C$ hier als Complexe Mannigfaltigkeit mit der Klassischen
+Wir betrachten $\C$ hier als Komplexe Mannigfaltigkeit mit der klassischen
 Topologie.
 In dieser Arbeit spielen die folgenden Funktionenräume eine große Rolle:
 \begin{itemize}
@@ -24,7 +24,7 @@ Funktionen. (bei \cite{hotta2007d} mit $\tilde K$ bezeichnet)
 Wobei offensichtlich die Inclulsionen $\C[x]\subsetneq\C\{x\}\subsetneq\Cfx$
 und $K\subsetneq\hat K$ gelten.
 
-Es bezeichnet der Hut ($ \, \hat \,\, $) das jeweils formale äquivalent zu
+Es bezeichnet der Hut ($ \, \hat \,\, $) das jeweils formale Äquivalent zu
 einem konvergentem Objekt.
 
 \iffalse
@@ -66,18 +66,18 @@ Für $v=(v_1,\dots,v_n)$ ein Vektor, bezeichnet
   v_{n}
 \end{pmatrix}
 \]
-den Transponierten Vektor. Es bezeichnet $M(n\times m,k)$ die Menge der $n$ mal
-$m$ Dimensionalen Matritzen mit Einträgen in $k$.
+den transponierten Vektor. Es bezeichnet $M(n\times m,k)$ die Menge der $n$ mal
+$m$ dimensionalen Matritzen mit Einträgen in $k$.
 
 Sei $R$ ein Ring, dann bezeichnet $R^\times$ die Einheitengruppe von $R$.
 
 \begin{defn}[Direkte Summe] \cite[4(Categories).5.1]{stacks-project}
-Seien $x,y\in \Ob(\cC)$, eine \emph{Direkte Summe} oder das \emph{coprodukt}
+Seien $x,y\in \Ob(\cC)$, eine \emph{direkte Summe}, oder das \emph{Coprodukt}
 von $x$ und $y$ ist ein Objekt $x\oplus y\in \Ob(\cC)$ zusammen mit
-Morphismen $i\in\Mor_\cC(x,x\oplus y)$ und $j\in\Mor_\cC(y,x\oplus y)$ so
+Morphismen $i\in\Mor_\cC(x,x\oplus y)$ und $j\in\Mor_\cC(y,x\oplus y)$, so
 dass die folgende universelle Eigenschaft gilt: für jedes $w\in Ob(\cC)$ mit
 Morphismen $\alpha\in\Mor_\cC(x,w)$ und $\beta\in\Mor_\cC(y,w)$ existiert ein
-eindeutiges $\gamma\in\Mor_\cC(x\oplus y,w)$ so dass das Diagram
+eindeutiges $\gamma\in\Mor_\cC(x\oplus y,w)$, so dass das Diagramm
 \begin{center}
 \begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
 \matrix (m) [
@@ -109,7 +109,6 @@ kommutiert.
 \begin{defn}[Tensorprodukt]
 \cite[3(Algebra).11.21]{stacks-project}
 % von Vorlesung Algebra 2
-
 \begin{center}
 \begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
   \matrix (m) [
@@ -143,7 +142,7 @@ n\otimes m & \mapsto & n\otimes f(m)
 \]
 \end{defn}
 \begin{bem} \label{bem:Rechenregeln-Tensorprodukt}
-Hier ein paar Rechenregeln für das Tensorprodukt,
+Hier einige Rechenregeln für das Tensorprodukt,
 \begin{align}
 (M\otimes_R N)\otimes_S L &\cong M\otimes_R (N \otimes_S L)
   \label{bem:Rechenregeln-Tensorprodukt1}\\
@@ -157,7 +156,7 @@ N\otimes_R(M/\im(f)) &\cong N\otimes_R M / \im(\id_{R}\otimes f)
 \end{bem}
 %TODO: tensorprodukt / faserprodukt zum basiswechsel
 
-\begin{defn}[Exacte Sequenz]
+\begin{defn}[Exakte Sequenz]
 Eine Sequenz
 \begin{center}
 \begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
@@ -188,11 +187,11 @@ Eine Sequenz
   ;
 \end{tikzpicture}
 \end{center}
-heißt exact, wenn für alle $i$ gilt, dass
+heißt exakt, wenn für alle $i$ gilt, dass
 $\im(f_{i-1})=\ker{f_i}$.
 \end{defn}
-\begin{defn}[Kurze exacte Sequenz]
-Eine kurze exacte Sequenz ist eine Sequenz
+\begin{defn}[Kurze exakte Sequenz]
+Eine kurze exakte Sequenz ist eine Sequenz
 \begin{center}
 \begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
   \matrix (m) [
@@ -202,7 +201,7 @@ Eine kurze exacte Sequenz ist eine Sequenz
     %, text height=3em
     %, text depth=0.25em
   ]{
-    0 & M' & M & M'' & 0 \\
+    0 & M' & M & M'' & 0 \,,\\
   };
   %TODO: Pfeile
   \path[->,font=\scriptsize,>=angle 90]
@@ -213,7 +212,7 @@ Eine kurze exacte Sequenz ist eine Sequenz
   ;
 \end{tikzpicture}
 \end{center}
-welche exact ist.
+welche exakt ist.
 \end{defn}
 
 \begin{defn}[Kokern]
@@ -247,7 +246,7 @@ Ist $f:M'\rightarrow M$ eine injektive Abbildung, so ist
   ;
 \end{tikzpicture}
 \end{center}
-eine kurze exacte Sequenz und $M/f(M')=\coker(f)$ ist der \emph{Kokern} von
+eine kurze exakte Sequenz und $M/f(M')=\coker(f)$ ist der \emph{Kokern} von
 $f$.
 \end{prop}
 \begin{proof}

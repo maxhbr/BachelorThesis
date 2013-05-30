@@ -6,8 +6,8 @@ module ComplRat
     , imagPart
     , magnitude
     , magnitudeSq
-    , approxSize)
-    where
+    , showLaTeX
+    ) where
 import Data.Ratio
 
 -- | Typ für komplexrationale Zahlen in kartesischer Darstellung.
@@ -16,41 +16,41 @@ data ComplRat = !Rational :+: !Rational
     deriving (Eq)
 
 -- -----------------------------------------------------------------------------
--- Functions over ComplRat
+-- Funktionen
 
--- | Extracts the real part of a complex number.
+-- | Gibt den reelen Teil einer gegebenen complexen Zahl zurück
 realPart :: ComplRat -> Rational
 realPart (x :+: _) =  x
 
--- | Extracts the imaginary part of a complex number.
+-- | Gibt den imaginären Teil einer gegebenen complexen Zahl zurück
 imagPart :: ComplRat -> Rational
 imagPart (_ :+: y) =  y
 
--- | The nonnegative magnitude of a complex number.
--- only for pure real or pure complex numbers
+-- | Der nichtnegative Betrag einer complexen Zahl
+-- nur für rein reele oder complexe Zahlen, da es sonst, aufgrund der fehlenden
+-- Wurzel, zu problemen kommt
 magnitude :: ComplRat -> Rational
 magnitude (x :+: 0) = abs x
 magnitude (0 :+: y) = abs y
-magnitude (_ :+: _) = error "Oops!"
+magnitude (_ :+: _) = error "Oops! Use magnitudeSq instead."
 {-magnitude (x :+: y) = P.sqrt ( sqr x P.+ (sqr y) )-}
   {-where sqr z = z P.* z-}
 
--- | The square of magnitude of a complex number.
+-- | Das quadrat des Betrags einer complexen Zahl
+-- ist für alle complexen zahlen geeignet
 magnitudeSq :: ComplRat -> Rational
-magnitudeSq (x :+: 0) = x*x
-magnitudeSq (0 :+: y) = y*y
-magnitudeSq (x :+: y) = x*x + (y*y)
+magnitudeSq (x :+: y) = x*x + y*y
 
--- | echos the approx. Size of the exponent
-approxSize :: ComplRat -> Int
-approxSize c = sizeNumerator - sizeDenominator + 1
-  where sizeNumerator   = length $ show $ numerator $ magnitudeSq c
-        sizeDenominator = length $ show $ denominator $ magnitudeSq c
-
--- TODO: approx. log
+-- | Gibt zu einem Element in ComplRat die entsprechende LaTeX Notation zurück
+showLaTeX :: ComplRat -> String
+showLaTeX (0 :+: 0) = "0"
+showLaTeX (x :+: 0) = "\\frac{" ++ (show $ numerator x) ++ "}{"
+                                ++ (show $ denominator x) ++ "}"
+showLaTeX (0 :+: y) = showLaTeX (y:+:0) ++ "i"
+showLaTeX (x :+: y) = showLaTeX (x:+:0) ++ "+" ++ showLaTeX (y:+:0) ++ "i"
 
 -- -----------------------------------------------------------------------------
--- Instances of ComplRat
+-- Instanzen von ComplRat
 
 instance Show ComplRat where
     show (x :+: y) | y == 0    = show x
@@ -68,5 +68,4 @@ instance Num ComplRat where
 instance  Fractional ComplRat  where
   fromRational r      = fromRational r :+: 0
   (a :+: b)/(c :+: d) = ((a*c + (b*d))/n) :+: ((b*c - (a*d))/n)
-    where sqr z = z * z
-          n     = sqr c + (sqr d)
+    where n = c*c + d*d
