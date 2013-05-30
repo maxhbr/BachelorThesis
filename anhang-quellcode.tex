@@ -1,0 +1,99 @@
+\chapter{Quelltexte}
+
+\section{ComplRat.hs}
+Das Modul \text{ComplRat} implementiert die Zahlen $\Q(i)$.
+\lstinputlisting[language=HaskellUlisses
+                ,firstnumber=1
+                %,captionpos=b
+                ,caption=ComplRat.hs]{../haskell/ComplRat.hs}
+Hier ist \texttt{:+:} ein Infix-Konstruktor der Klasse \texttt{ComplRat} und
+erzeugt mit einem Aufruf der Form \texttt{a :+: b} eine Imaginärzahl, die
+$a+ib$ entspricht.
+
+\section{Koeffs.hs}
+Dieses Modul \texttt{Koeffs} stelle die Funktionen \texttt{vKoeffs} und
+\texttt{uKoeffs} bereit, welche zu einem gegebenem Wert von $u_{-2}$ eine
+unendliche Liste der Koeffizienten generieren. Die Einträge in der Liste sind
+vom Typ \texttt{ComplRat}.
+\texttt{ComplRat} ermöglicht es, dass die Berechung ohne numerische Fehler
+erfolgt, da nie gerundet wird.
+\lstinputlisting[language=HaskellUlisses
+                ,firstnumber=1
+                %,captionpos=b
+                ,caption=Koeffs.hs]{../haskell/Koeffs.hs}
+Beispielhaft kann man mit dem folgendem Programm die Koeffizienten von $v(t)$,
+zu $u_{-2}=i$, erzeugen lassen.
+\lstinputlisting[language=HaskellUlisses
+                ,firstnumber=1
+                %,captionpos=b
+                ,caption=testKoeffs.hs]{../haskell/testKoeffs.hs}
+Ist der Code in einer Datei \textbf{/Pfad/zu/testKoeffs.hs} gespeicher, so
+lässt er sich in Unix-Artigen Systemen beispielsweise mit den folgenden
+Befehlen compilieren und ausführen.
+\begin{lstlisting}[style=Bash]
+$ ghc --make /Pfad/zu/testKoeffs.hs
+$ /Pfad/zu/testKoeffs 15
+\end{lstlisting}
+Durch das Ausführen berechnet das Programm die Koeffizienten von $v$ bis zum
+Index $15$ und gibt in der Konsole das folgende aus
+\begin{lstlisting}[style=Bash]
+n       | v_n
+--------+----------------------------------------------------------------------
+-1      | 1 % 2
+0       | (0 % 1+i3 % 4)
+1       | 3 % 2
+2       | (0 % 1+i(-63) % 16)
+3       | (-27) % 2
+4       | (0 % 1+i1899 % 32)
+5       | 324 % 1
+6       | (0 % 1+i(-543483) % 256)
+7       | (-32427) % 2
+8       | (0 % 1+i72251109 % 512)
+9       | 2752623 % 2
+10      | (0 % 1+i(-30413055339) % 2048)
+11      | (-175490226) % 1
+12      | (0 % 1+i9228545313147 % 4096)
+13      | 31217145174 % 1
+14      | (0 % 1+i(-30419533530730323) % 65536)
+15      | (-14741904895227) % 2
+\end{lstlisting}
+Übersetzt in unsere Zahlenschreibweise ergibt sich daraus die folgende Tabelle:
+%\ref{tab:koeff_a=0.125}
+\begin{table}[H] %htbp]
+\begin{center}
+\begin{tabular}{|r||r|}
+\hline
+n        & $v_n$
+\\\hline\hline
+  -1 & $\frac{1}{2}$
+\\0  & $\frac{3}{4}i$
+\\1  & $\frac{3}{2}$
+\\2  & $-\frac{63}{16}i$
+\\3  & $-\frac{27}{2}$
+\\4  & $\frac{1899}{32}i$
+\\5  & $\frac{342}{1}$
+\\6  & $-\frac{543483}{256}i$
+\\7  & $-\frac{32427}{2}$
+\\8  & $\frac{72251109}{512}i$
+\\9  & $\frac{2752623}{2}$
+\\10 & $-\frac{30413055339}{2048}i$
+\\11 & $-\frac{175490226}{1}$
+\\12 & $\frac{9228545313147}{4096}i$
+\\13 & $\frac{31217145174}{1}$
+\\14 & $-\frac{30419533530730323}{65536}i$
+\\15 & $-\frac{14741904895227}{2}$
+\\\hline
+\end{tabular}
+\caption{Numerisch berechnete Koeffizienten von $v(t)$ für $u_{-2}=i$ bzw.
+  $a=\frac{1}{8}$}
+\label{tab:koeff_a=0.125}
+\end{center}
+\end{table}
+
+\section{GenDataToFile.hs}
+\lstinputlisting[language=HaskellUlisses
+                ,firstnumber=1
+                %,captionpos=b
+                ,caption=Main.hs]{../haskell/Main.hs}
+
+% vim: set ft=tex :

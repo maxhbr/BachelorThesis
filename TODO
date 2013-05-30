@@ -11,6 +11,7 @@ d-modul.tex:(linear differential system) %TODO: defn
 elem-mer-zsh.tex:Wähle einen zyklischen Vektor $m\in\cM_{\hat K}$ % TODO: richtiger Raum?
 elem-mer-zsh.tex:\begin{comment} TODO: bis hier schon klar \end{comment}
 elem-mer-zsh.tex:%TODO: rename to L-T-Theorem???
+elem-mer-zsh.tex:mit $\xi^p=1$, bringen. Sei so ein $\xi$ ab jetzt fixiert. %TODO: besonderes xi?
 elem-mer-zsh.tex:  %\mbox{\footnote{$(\xi^i)^p=1\forall i$}} % TODO: correct footnote
 elem-mer-zsh.tex:%TODO: auch nicht formal
 elem-mer-zsh.tex:%TODO: verwendet hier schon das klassische Levelt-Turittin
@@ -25,23 +26,23 @@ grundlagen.tex:%TODO: tensorprodukt / faserprodukt zum basiswechsel
 grundlagen.tex:  %TODO: Pfeile
 grundlagen.tex:  %TODO: Pfeile
 grundlagen.tex:  %TODO: Pfeile
-haskell/ComplRat.hs:-- TODO: approx. log
 main/main.ps:w FJ(TODO,)30 b(\(3.)i(T)-8 b(re\033en\))p 3633 5576
 Übereinstimmungen in Binärdatei main/main.dvi.
 main.tex:  ,fontsize=11pt % TODO
 main.tex:%TODO: replace def --> newcommand
 main.tex:%TODO: set titel variable??
+main.tex:%TODO: rename listings
 main.tex:TODO: Erklärung das das wirklich selbstgemacht ist
-meromZsh.tex:% TODO; wie darf ich einen Meromorphen verändern, (das P verändern) ohne das
+meromZsh.tex:% TODO; wie darf ich einen meromorphen verändern, (das P verändern) ohne das
 meromZsh.tex:% TODO: \cM = \cM_K ... replace
-meromZsh.tex:% TODO: Dimension eines Meromorphen Zusammenhang
+meromZsh.tex:% TODO: Dimension eines meromorphen Zusammenhang
 meromZsh.tex:%TODO: \tilde cO --> \tilde \cO
 meromZsh.tex:%TODO: partial oder d
 meromZsh.tex:TODO: zeige, das der lösungsraum die eigenschaften von $\cD$-Moduln erfüllt\\
 meromZsh.tex:Lösungen in $\Ckx$. %TODO: oder \tilde\cO
 meromZsh.tex:\partial(fu)=f'u+f\partial u %TODO: hier klammern um das letzte u ?
 meromZsh.tex:TODO: Wann sind die Isomorph\\
-meromZsh.tex:assoziierten Meromorphen Zusammenhang $(\cM_A,\partial_A)$ %TODO: improve notation
+meromZsh.tex:assoziierten meromorphen Zusammenhang $(\cM_A,\partial_A)$ %TODO: improve notation
 meromZsh.tex:%TODO: reihenfolge bei sabbah anderst!!!
 meromZsh.tex:\cite[Seite 64]{ZulaBarbara} %TODO: hat die sich hier verschrieben???
 meromZsh.tex:%TODO: make this harpoon arrows
@@ -56,6 +57,7 @@ meromZsh.tex:%TODO: zeige, das beide definitionen gleich sind
 meromZsh.tex:%TODO: bessere formulierung
 meromZsh.tex:TODO
 meromZsh.tex:TODO: mache alle Linearform $L$ zu $\ell$
+meromZsh.tex:TODO
 meromZsh.tex:TODO: ist $\ell$ Slope (gehört zu Slope) dann hat $\sigma_\ell(P)$ zumindest 2
 meromZsh.tex:%TODO: titel: Operations on vector spaces with connection
 meromZsh.tex:%TODO: verzweigung statt pull-back?
@@ -64,7 +66,9 @@ meromZsh.tex:TODO
 meromZsh.tex:TODO: damit wird $\hat L$ zu einem $\hat K$ Vektorraum.
 meromZsh.tex:%TODO: ist das der zusammenhang oder die wirkung oder was?
 meromZsh.tex:%TODO: Pfeile
+meromZsh.tex:\\\Leftrightarrow& &&\dots %TODO
 meromZsh.tex:\begin{comment} TODO \end{comment}
+meromZsh.tex:\end{tikzpicture} , %TODO: hier wirklich ein Komma??
 meromZsh.tex:%TODO: Pfeile
 meromZsh.tex:%TODO: Pfeile
 meromZsh.tex:%TODO: Pfeile
@@ -83,9 +87,9 @@ rezept.tex:  %TODO: hier kein grid
 rezept.tex:%TODO: move to theorie-teil??
 rezept.tex:%TODO: Namenskollision: u und v wie in Achsbeschriftung
 rezept.tex:und mit denn Kommutatorregeln %TODO: lemma? quelle?
+rezept.tex:%TODO: ist umsortieren immer erlaubt??
 rezept.tex:anwenden wollen: %TODO: quelle? formel?
-rezept.tex:\begin{comment} TODO: mapsto pfeil?  \end{comment}
-rezept.tex:TODO: text
+rezept.tex:TODO: text\\
 rezept.tex_versions/v01_rezept.tex:-\partial_z(f)\cdot z^2= %TODO: wegen klammerung?
 rezept.tex_versions/v01_rezept.tex:%TODO; weiter ausführen, genauer, nebenrechnung
 rezept.tex_versions/v01_rezept.tex:TODO
