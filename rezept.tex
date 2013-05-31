@@ -823,29 +823,14 @@ v_{-1}&=\frac{1}{2} & u_{-1}&=-\frac{3}{2}
   \left((n+1)v_{n-1} + \sum_{k=1}^{n-1} v_{k-1}v_{n-k-1}\right)
   & & \forall n > 0
 \end{align*}
-Ein Haskell Modul, welches die Koeffizienten des Systems berechnet, kann wie
-folgt aussehen:
-%\begin{figure}[htbp]
-\lstinputlisting[language=HaskellUlisses
-                ,firstnumber=1
-                %,captionpos=b
-                ,caption=Koeffs.hs]{../haskell/Koeffs.hs}
-%\end{figure}
-Dieses Modul \texttt{Koeffs} stelle die Funktionen \texttt{vKoeffs} und
-\texttt{uKoeffs} bereit, welche zu einem gegebenem Wert von $u_{-2}$ eine
-unendliche Liste der Koeffizienten generieren. Die Einträge in der Liste sind
-vom Typ \texttt{CompRat}, welcher die Menge $\Q(i)$ implementiert.
-Hier ist \texttt{:+:} ein Infix-Konstruktor der Klasse \texttt{ComplRat} und
-erzeugt mit einem Aufruf der Form \texttt{a :+: b} eine Imaginärzahl, die
-$a+ib$ entspricht.
-\texttt{ComplRat} ermöglicht es, dass die Berechung ohne numerische Fehler
-erfolgt, da nie gerundet wird.
+Im Anhang wird in Abschnitt \ref{sec:Koeffs.hs} eine Haskell Modul vorgestellt,
+welches zu gegebenem $u_{-1}$ die Werte von $v(t)$ und $u(t)$ berechnet.
 
 In folgender Abbildung sind die Beträge der Koeffizienten von $v(t)$ in
 Abhängigkeit von $n$ für verschiedene $u_{-2}$ angetragen.
 \begin{figure}[htbp]
   \centering
-  \includegraphics[angle=270,width=\the\textwidth]{../img/betrag.pdf}
+  \includegraphics[angle=270,width=\the\textwidth]{../plot-betrag.pdf}
   \caption%[Koeffizienten in abhängigkeit von $u_{-2}$]
    {Die Beträge der $v_n$ in Abhängigkeit von $n$ für unterschiedliche
      $u_{-2}$.}
@@ -876,7 +861,7 @@ siehe \cite[§18, Satz 94]{KnoppReihen}.
 \end{proof}
 \begin{figure}[htbp]
   \centering
-  \includegraphics[angle=270,width=\the\textwidth]{../img/cauchy.pdf}
+  \includegraphics[angle=270,width=\the\textwidth]{../plot-cauchy.pdf}
   \caption{Wurzlkriterium angewendet auf die Koeffizienten}
   \label{fig:plotCauchyKoeffs}
 \end{figure}
@@ -901,7 +886,7 @@ $|x|<\underset{n\rightarrow\infty}{\lim} \left|\frac{a_{n+1}}{a_n}\right|$.
 \end{proof}
 \begin{figure}[htbp]
   \centering
-  \includegraphics[angle=270,width=\the\textwidth]{../img/quot.pdf}
+  \includegraphics[angle=270,width=\the\textwidth]{../plot-quot.pdf}
   \caption{Quotientenkriterium angewendet auf die Koeffizienten}
   \label{fig:plotQuotKoeffs}
 \end{figure}

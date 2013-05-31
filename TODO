@@ -36,6 +36,7 @@ main.tex:TODO: Erklärung das das wirklich selbstgemacht ist
 meromZsh.tex:% TODO; wie darf ich einen meromorphen verändern, (das P verändern) ohne das
 meromZsh.tex:% TODO: \cM = \cM_K ... replace
 meromZsh.tex:% TODO: Dimension eines meromorphen Zusammenhang
+meromZsh.tex:%TODO: erklären, erwähnen oder entfernen!
 meromZsh.tex:%TODO: \tilde cO --> \tilde \cO
 meromZsh.tex:%TODO: partial oder d
 meromZsh.tex:TODO: zeige, das der lösungsraum die eigenschaften von $\cD$-Moduln erfüllt\\
@@ -84,6 +85,7 @@ meromZsh.tex:  & \mbox{(Rechenregeln Tensorprodukt)}\\ %TODO: hinzufügen
 rezept.tex:-\partial_z(f)\cdot z^2= %TODO: wegen klammerung?
 rezept.tex:%TODO: QUELLE!
 rezept.tex:  %TODO: hier kein grid
+rezept.tex:TODO: hier weiter vereinfachen
 rezept.tex:%TODO: move to theorie-teil??
 rezept.tex:%TODO: Namenskollision: u und v wie in Achsbeschriftung
 rezept.tex:und mit denn Kommutatorregeln %TODO: lemma? quelle?

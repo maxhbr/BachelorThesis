@@ -2,10 +2,8 @@ module Main where
 import ComplRat
 import Koeffs
 
--- parallel
 import qualified Control.Monad.Parallel as P
 
--- for writing to file
 import System.Environment
 import System.IO
 import Data.Time
