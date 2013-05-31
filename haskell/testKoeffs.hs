@@ -12,7 +12,3 @@ main = do x <- getArgs
   where main' :: Int -> IO()
         main' end = mapM_ addLine $ zip [-1..end] $ vKoeffs uMin2
           where addLine (i,a) = putStrLn $ show i ++ "\t| " ++ show a
-
-test :: Int -> IO()
-test end = mapM_ addLine $ zip [-1..end] $ vKoeffs uMin2
-  where addLine (i,a) = putStrLn $ "\\\\" ++ show i ++ " & $" ++ showLaTeX a ++ "$"

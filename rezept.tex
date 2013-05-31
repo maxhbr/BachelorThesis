@@ -197,11 +197,6 @@ N\Big(P_{\phi}(x,\partial_x)\Big)
 womit die Behauptung des Lemmas folgt und das Newton-Polygon wie in Abbildung
 \ref{fig:Newton-PolygonP_phi} aussieht.
 \end{proof}
-\begin{comment}
-\begin{cor}
-Ordnung vom pull-back ist $0$
-\end{cor}
-\end{comment}
 Also ist, nach Lemma \ref{lem:slope-pb-multiplikation}, ein pull-back mit Grad
 $q+1$ hinreichend, um einen ganzzahligen Slope zu bekommen. Denn wir wissen,
 dass nach Anwenden eines solchem pull-backs die Slopes mit ${q+1}$
@@ -222,27 +217,32 @@ P_{\phi}(x,\partial_x) =(-x^2\partial_x)^{q} (x\partial_x-1)+qa \,,
 und sei $\rho:t\mapsto x:=-(q+1) t^{q+1}$. Damit gilt
 \begin{align*}
 \rho^+\cM_\phi &= \rho^+(\cD_{\hat K}/\cD_{\hat K}\cdot P_\phi(x,\partial_x))\\
-  &=\cD_{\hat K}/\cD_{\hat K}\cdot\rho^*P_\phi(x,\partial_x)\\
-  &=\cD_{\hat K}/\cD_{\hat K}\cdot P_\phi(\rho(t),\rho'(t)^{-1}\partial_t)\\
-  &=\cD_{\hat K}/\cD_{\hat K}
+  &=\cD_{\hat L}/\cD_{\hat L}\cdot\rho^*P_\phi(t,\partial_t)\\
+  &=\cD_{\hat L}/\cD_{\hat L}\cdot P_\phi(\rho(t),\rho'(t)^{-1}\partial_t)\\
+  &=\cD_{\hat L}/\cD_{\hat L}
     \cdot P_\phi\Big(-(q+1) t^{q+1},-\frac{1}{(q+1)^2t^q}\partial_t\Big)\\
-  &=\cD_{\hat K}/\cD_{\hat K} \!\cdot\! \Bigg((\underbracket{
+  &=\cD_{\hat L}/\cD_{\hat L} \!\cdot\! \Bigg((\underbracket{
     -(-(q+1) t^{q+1})^2\frac{-1}{(q+1)^2t^{q}}\partial_t})^{q}
     (\underbracket{-(q+1) t^{q+1}\frac{-1}{(q+1)^2t^{q}}\partial_t}-1)
     +qa\Bigg)\\
-  &=\cD_{\hat K}/\cD_{\hat K}
+  &=\cD_{\hat L}/\cD_{\hat L}
     \cdot\Bigg(\Big(\overbracket{
       \underset{=1}{\underbrace{\frac{(q+1)^2}{(q+1)^2}}}
       \underbracket{t^{2(q+1)-q}}\partial_t}\Big)^{q}
     (\overbracket{\frac{1}{q+1}t\partial_t}-1)+qa\Bigg)\\
-  &=\cD_{\hat K}/\cD_{\hat K}
+  &=\cD_{\hat L}/\cD_{\hat L}
     \cdot\Big((\overbracket{t^{q+2}}\partial_t)^{q}
     (\frac{1}{q+1}t\partial_t-1)+qa\Big)\\
-  &=\cD_{\hat K}/\cD_{\hat K}
+  &=\cD_{\hat L}/\cD_{\hat L}
     \cdot\Big((t^{q+2}\partial_t)^{q}
     (t\partial_t-(q+1))+(q+1)qa\Big)
 \end{align*}
 \end{proof}
+\begin{comment}
+\begin{cor}
+Ordnung vom pull-back ist $0$
+\end{cor}
+\end{comment}
 Definiere mittels
 $q=\frac{q}{1}=:\frac{\lambda_0}{\lambda_1}$ die  Linearform
 \[
@@ -276,96 +276,20 @@ Nullstelle von $\sigma_L(\rho^*P_\phi)$.
 Setze $\psi(x):=(\beta/\lambda_0)t^{-\lambda_0}=(\beta/q)t^{-q}$ und
 betrachte
 \begin{align*}
-\cN:=\rho^+\cM_\phi\otimes_{\hat L}\sE_{\hat L}^\psi
-  &= \cD_{\hat L}/\cD_{\hat L}\cdot(\rho^*P_{\phi})
-    \otimes_{\hat L}\sE_{\hat L}^\psi \,.
-\end{align*}
-\begin{comment}
-\begin{lem}
-Sei $\bme$ ein zyklischer Vektor zu $\rho^+\cM_\phi$, so ist $\bme\otimes
-\underset{\in\hat L}{\underbrace{1}}\in\cN$ ein zyklischer Vektor für
-$\cN\bydef\rho^+\cM_\phi\otimes_{\hat L}\sE_{\hat L}^\psi$.
-\end{lem}
-\begin{proof}
-Es sei $\bme$ ein zyklischer Vektor von $\rho^+\cM_{\phi}$.
-Da der Grad von $\rho^*P_{\phi}$ gleich $q+1$ ist, ist auch die Dimension von
-$\rho^+\cM$ gleich $q+1$. Damit ist auch $\dim_K\cN=q+1$, also reicht zu
-zeigen, dass $\bme\otimes 1$, $\partial_t(\bme\otimes 1)$,
-$\partial_t^2(\bme\otimes 1)$, ,\dots, $\partial_t^{q}(\bme\otimes 1)$ ein
-linear unabhängiges System ist.  Es gilt
-\begin{align*}
-\partial_t(\bme\otimes 1) &= (\partial_t \bme)\otimes 1 + t\otimes \partial_t 1\\
-  &= (\partial_t \bme)\otimes 1 + \bme\otimes \psi'(t)\\
-  &= (\partial_t \bme)\otimes 1 +  \psi'(t)(\bme\otimes 1)\\
-\partial_t^2(\bme\otimes 1) &= \partial_t((\partial_t \bme)\otimes 1 +
-    \psi'(t)(\bme\otimes 1))\\
-  &= (\partial_t^2 \bme)\otimes 1 + (\partial_t \bme)\otimes \psi'(t)
-  + \psi''(t)(\bme\otimes 1)
-  + \psi'(t)((\partial_t \bme)\otimes 1 + \bme\otimes \psi'(t))\\
-  &= (\partial_t^2 \bme)\otimes 1
-  + \psi'(t)(\partial_t \bme)\otimes 1
-  + \psi''(t)(\bme\otimes 1)
-  + \psi'(t)(\partial_t \bme)\otimes 1
-  + \psi'(t)^2(\bme\otimes 1)\\
-  &= (\partial_t^2 \bme)\otimes 1
-  + 2\psi'(t)(\partial_t \bme)\otimes 1
-  + (\psi''(t) + \psi'(t)^2)(\bme\otimes 1)\\
-  &~\vdots\\
-\partial_t^{q}(\bme\otimes 1) &= (\partial_t^q \bme)\otimes 1
-  + \lambda_{q-1}(\partial_t^{q-1} \bme)\otimes 1
-  +\dots
-  + \lambda_{1}(\partial_t \bme)\otimes 1
-  + \lambda_0(\bme\otimes 1)\\
-\end{align*}
-und somit ist dann
-\[
-\begin{pmatrix}
-\bme\otimes 1\\
-\partial_t(\bme\otimes 1)\\
-\partial_t^2(\bme\otimes 1)\\
-\vdots\\
-\partial_t^{q-1}(\bme\otimes 1)\\
-\partial_t^{q}(\bme\otimes 1)\\
-\end{pmatrix}
-=
-\begin{pmatrix}
-1         & 0         & \cdots & \cdots & \cdots        & 0 \\
-\psi'(t)  & 1         & 0      &        &               & \vdots\\
-\star     & \star     & 1      & 0      &               & \vdots\\
-\vdots    &           & \ddots & \ddots & \ddots        & \vdots\\
-\star     & \cdots    & \cdots & \star  & 1             & 0\\
-\lambda_0 & \lambda_1 & \cdots & \cdots & \lambda_{q-1} & 1\\
-\end{pmatrix}
-\begin{pmatrix}
-\bme\otimes 1\\
-(\partial_t \bme)\otimes 1\\
-(\partial_t^{2}\bme)\otimes 1\\
-\vdots\\
-(\partial_t^{q-1}\bme)\otimes 1\\
-(\partial_t^{q}\bme)\otimes 1\\
-\end{pmatrix}
-\]
-Da bekanntlich $\bme\otimes1$, $(\partial_t \bme)\otimes 1$,
-$(\partial_t^{2}\bme)\otimes 1$,\dots, $(\partial_t^{q}\bme)\otimes 1$ linear
-unabhängig sind, gilt dies auch für $\bme\otimes 1$, $\partial_t(\bme\otimes
-1)$, $\partial_t^2(\bme\otimes 1)$, ,\dots, $\partial_t^{q}(\bme\otimes 1)$.
-Damit folgt die Behauptung.
-\end{proof}
-\end{comment}
-\begin{comment}
-\begin{lem}
-\cite[Seite 44]{DiplHedwig}
-Wenn $\rho^+\cM_\phi=\cD_{\hat L}/\cD_{\hat
-L}\cdot(\rho^*P_{\phi}(t,\partial_t))$ gilt, so ist
-\begin{align*}
-\cN\bydef\rho^+\cM_\phi\otimes\sE_{\hat L}^\psi
-  &=\cD_{\hat L}/\cD_{\hat
+\cN&:=\rho^+\cM_\phi\otimes_{\hat L}\sE_{\hat L}^\psi
+\\&= \cD_{\hat L}/\cD_{\hat L}\cdot(\rho^*P_{\phi}(t,\partial_t))
+    \otimes_{\hat L}\sE_{\hat L}^\psi
+\\&\overset{\ref{lem:twistRechenregel}}{=}
+  \cD_{\hat L}/\cD_{\hat L}\cdot(\rho^*P_{\phi}(t,\partial_t-\frac{\partial
+  \psi}{\partial t}))
+\\&=\cD_{\hat L}/\cD_{\hat
     L}\cdot(\rho^*P_{\phi}(t,\partial_t+\frac{\beta}{t^{\lambda+1}}))
 \\&=\cD_{\hat L}/\cD_{\hat L}\cdot
     (t^{q+2}(\partial_t+\frac{\beta}{t^{\lambda+1}}))^{q}
     (t(\partial_x+\frac{\beta}{t^{\lambda+1}})-(q+1))+(q+1)qa
 \end{align*}
-\end{lem}
+\begin{comment}
+TODO: hier weiter vereinfachen
 \end{comment}
 Zerlege nun wie in  Satz \ref{thm:Split-after-slopes} den meromorphen
 Zusammenhang $\cN$ in $\cN=\bigoplus_i\cN_i$ wobei $\cN_i$ meromorphe
@@ -376,11 +300,18 @@ Twiste die $\cN_i$ jeweils mit $\sE^{-\psi}_{\hat L}$ und somit ist dann
 \]
 Für jeden Summanden lässt sich nun, falls dieser nicht schon ein elementarer
 meromorpher Zusammenhang ist, Induktion anwenden.
+\begin{comment}
+nicht elementar, sondern regulär otimes E
+\end{comment}
 
 \section{Levelt-Turrittin-Zerlegung für $\cM_{\phi}$ mit
   $\phi_1:=\frac{a}{x}$}
+\begin{comment}
+rechtfertigen, das mehr gerechnet wird, als nötig
+\end{comment}
 Als konkreten Fall betrachten wir nun $\cM_{\phi}$ bezüglich
-$\phi_1:=\frac{a}{x}$. Es ist das zugehörigen Minimalpolynom gegeben durch
+$\phi_1:=\frac{a}{x}$. 
+Es ist das zugehörigen Minimalpolynom gegeben durch
 \begin{align*}
 P_{\phi}(x,\partial_x) &=-x^2\partial_x (x\partial_x-1)+a
 \\&=-x^2\underbracket{\partial_xx}\partial_x+x^2\partial_x+a
@@ -813,7 +744,7 @@ Koeffizienten
 v_{0} &= -\frac{1}{u_{-2}} ((-1)u_{-1} + \sum_{k=0}^{0} v_{k-1}u_{-k-1})
 \\&= -\frac{1}{u_{-2}} (\frac{3}{2} - \frac{3}{4})
 \\&= -\frac{3}{4u_{-2}}
-\\&\overset{(\ref{eq:bedingung1a})}{=} \frac{3i}{8\sqrt{2a}} = -u_{0}
+\\&\!\!\overset{(\ref{eq:bedingung1a})}{=} \frac{3i}{8\sqrt{2a}} = -u_{0}
 \end{align*}
   \begin{comment}
   Somit ergeben sich für $n=1$ die Koeffizienten
@@ -874,7 +805,7 @@ v_{n} &= -\frac{1}{u_{-2}}
 \\&= -\frac{1}{u_{-2}}
   \Big(\underbracket{(n-1)u_{n-1}} + \overbracket{v_{-1}\underbracket{u_{n-1}}
   + (\sum_{k=1}^{n-1} v_{k-1}\underbracket{u_{n-k-1}}) + v_{n-1}u_{-1}}\Big)
-\\&\overset{(\ref{eq:bedingung1c})}{=} -\frac{1}{u_{-2}}
+\\&\!\!\overset{(\ref{eq:bedingung1c})}{=} -\frac{1}{u_{-2}}
   \Big(\overbracket{-(n-1)v_{n-1}} + \underbracket{v_{-1}\overbracket{(-v_{n-1})}}
   + (\sum_{k=1}^{n-1} v_{k-1}\overbracket{(-v_{n-k-1})}
   + \underbracket{v_{n-1}u_{-1}}\Big)

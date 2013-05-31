@@ -7,29 +7,36 @@
 Sei $\cM$ ein $\cD$-Modul ungleich Null von endlichem Typ. Falls die
 links-Multiplikation mit $x$ bijektiv ist, so nennen wir $\cM$ einen
 meromorphen Zusammenhang. \cite[Chap 4]{sabbah_cimpa90}
+%TODO: erklären, erwähnen oder entfernen!
 
-\section{Systeme von ODEs und meromorphe Zusammenhänge}
+\paragraph{Systeme von ODEs}
 %TODO: \tilde cO --> \tilde \cO
+\begin{comment}
 \cite[Chap 5.1.1]{hotta2007d} %abgeschrieben
-Für eine Matrix $A(x)=(a_{ij}(x))_{ij}\in M(n\times n,K)$ betrachten wir das
-System von gewöhnlichen Differentialgleichungen (kurz ODEs)
+\end{comment}
+Für eine Matrix $A(x)=(a_{ij}(x))_{ij}\in M(n\times n,K)$ definieren wir das
+\emph{System von gewöhnlichen Differentialgleichungen (kurz ODEs)} als
 \begin{equation}
 \label{eq:KlassischesODE}
 %TODO: partial oder d
-\frac{d}{dx}u(x)=A(x)u(x)
+\frac{d}{dx}u(x)=A(x)u(x) \,,
 \end{equation}
-wobei $u(x)=\,^t(u_1(x),\dots,u_n(x))$ ein Spaltenvektor von unbekannten
-Funktionen. Wir werden (\ref{eq:KlassischesODE}) immer in einer Umgebung um
-$x=0\in\C$ betrachten. Als Lösungen von (\ref{eq:KlassischesODE}) betrachten
-wir Keime von holomorphen (aber möglicherweise mehrdeutigen)
+wobei $u(x)=\,^t(u_1(x),\dots,u_n(x))$ ein 
+Spaltenvektor\footnote{Für $v=(v_1,\dots,v_n)$ ein Vektor, bezeichnet 
+$ \,^tv:= \begin{pmatrix} v_{1}\\ \vdots\\ v_{n} \end{pmatrix} $
+den transponierten Vektor.}
+von unbekannten Funktionen. Wir werden (\ref{eq:KlassischesODE}) immer in
+einer Umgebung um $x=0\in\C$ betrachten. Als Lösungen von
+(\ref{eq:KlassischesODE}) betrachten wir Keime von holomorphen (aber
+möglicherweise mehrdeutigen) %mehrwertigen
  %but possibly multivalued auf
 Funktionen an $x=0$ (geschrieben als $\tilde\cO$).
 %auf der punktierten Scheibe
 %$B_\epsilon^*=\{x\in\C|0<|x|<\epsilon\}$, wobei $\epsilon>0$ klein genug sei.
- Wir sagen $v(x)=\,^t(v_1(x),\dots,v_n(x))$ ist
-eine Lösung von (\ref{eq:KlassischesODE}), falls $ v_i\in\tilde \cO$ für alle
-$i\in\{1,\dots,n\}$ und $v$ die Gleichung (\ref{eq:KlassischesODE}),
-auf einer Umgebung um die $0$, erfüllt.
+Wir sagen $v(x)=\,^t(v_1(x),\dots,v_n(x))$ ist eine Lösung von
+(\ref{eq:KlassischesODE}), falls $ v_i\in\tilde \cO$ für alle
+$i\in\{1,\dots,n\}$ und $v$ die Gleichung (\ref{eq:KlassischesODE}), auf einer
+Umgebung um die $0$, erfüllt.
 
 \begin{comment}
 TODO: zeige, das der lösungsraum die eigenschaften von $\cD$-Moduln erfüllt\\
@@ -55,7 +62,7 @@ Falls $u$ ein Lösung von $P$ ist, so ist $u$ auch Lösung von $Q\cdot P$ mit
 $Q\in \cD$. Also hängt die Lösung nur vom Links Ideal $\cD\cdot
 P\vartriangleleft\cD$ ab.
 
-\subsection{Meromorphe Zusammenhänge}
+\section{Meromorphe Zusammenhänge}
 Nun wollen wir dieses klassische Gebilde nun in die moderne Sprache der
 meromorphen Zusammenhänge übersetzen.
 %\section{Meromorpher Zusammenhang (Definition)}
@@ -111,18 +118,18 @@ mit
 \end{comment}
 
 \begin{bem}
-\begin{enumerate}
-\item Später wird man auf die Angabe von $\partial$ verzichten und einfach
-$\cM_K$ als den meromorphen Zusammenhang bezeichnen, auch wird manchmal auf die
-Angabe von $K$ verzichtet.
-\item \cite[Rem 5.1.2.]{hotta2007d}
+Später wird man auf die Angabe von $\partial$ verzichten und einfach $\cM_K$
+als den meromorphen Zusammenhang bezeichnen, auch wird manchmal auf die Angabe
+von $K$ verzichtet, sofern klar ist, welches $K$ gemeint ist.
+\begin{comment}
+\cite[Rem 5.1.2.]{hotta2007d}
 Die Bedingung (\ref{eq:Leibnitzregel}) ist zur schwächeren Bedingung
 \[
 \partial(fu)=f'u+f\partial u \,,
 \]
 welche für alle $f\in \tilde\cO$ und für alle $u\in \cM_K$ erfüllt sein muss,
 äquivalent.
-\end{enumerate}
+\end{comment}
 \end{bem}
 
 \begin{defn}[Zusammenhangsmatrix] \cite[Seite 129]{hotta2007d}
@@ -157,9 +164,17 @@ Umgekehrt können wir für jede Matrix $A(x)=(a_{ij}(x))$ den
 assoziierten meromorphen Zusammenhang $(\cM_A,\partial_A)$ %TODO: improve notation
 angeben durch
 \begin{align*}
-\cM_A & :=\bigoplus_{i=1}^n Ke_i \,, & \partial_A e_i &:=
--\sum_{i=1}^na_{ij}(x)e_i \,.
+\cM_A & :=\bigoplus_{i=1}^n Ke_i \,, 
+& \partial_A \sum_{i=1}^n u_ie_i &:= \sum_{i=1}^n\left(
+  \frac{\partial u_i}{\partial x}-\sum_{j=1}^na_{ij}(x)u_j \right)e_i \,.
 \end{align*}
+\iffalse
+  \begin{align*}
+  \cM_A & :=\bigoplus_{i=1}^n Ke_i \,, & \partial_A e_i &:=
+  -\sum_{i=1}^na_{ij}(x)e_i \,.
+  \end{align*}
+\fi
+Genauer ausgeführt wird dies beispielsweise in \cite[Sec 5.1]{hotta2007d}.
 
 \section{Eigenschaften / Äquivalenz zu holonomen lokalisierten $\cD$-Moduln}
 %Hier nun einige Eigenschaften meromorpher Zusammenhänge.

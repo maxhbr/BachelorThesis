@@ -15,14 +15,14 @@ Dieses Modul \texttt{Koeffs} stelle die Funktionen \texttt{vKoeffs} und
 \texttt{uKoeffs} bereit, welche zu einem gegebenem Wert von $u_{-2}$ eine
 unendliche Liste der Koeffizienten generieren. Die Einträge in der Liste sind
 vom Typ \texttt{ComplRat}.
-\texttt{ComplRat} ermöglicht es, dass die Berechung ohne numerische Fehler
-erfolgt, da nie gerundet wird.
+Dies ermöglicht es, dass die Berechung ohne numerische Fehler erfolgt, da nie
+gerundet wird.
 \lstinputlisting[language=HaskellUlisses
                 ,firstnumber=1
                 %,captionpos=b
                 ,caption=Koeffs.hs]{../haskell/Koeffs.hs}
 Beispielhaft kann man mit dem folgendem Programm die Koeffizienten von $v(t)$,
-zu $u_{-2}=i$, erzeugen lassen.
+zu $a=\frac{1}{8}$ also $u_{-2}=i=2i\sqrt{2a}$, erzeugen lassen.
 \lstinputlisting[language=HaskellUlisses
                 ,firstnumber=1
                 %,captionpos=b
@@ -90,10 +90,76 @@ n        & $v_n$
 \end{center}
 \end{table}
 
-\section{GenDataToFile.hs}
+\begin{comment}
+\begin{align*}
+v(t)&=
+  \frac{1}{2}t^{-1}+
+  \frac{3}{4}it^{0}+
+  \frac{3}{2}t^{1}+
+  \frac{-63}{16}it^{2}+
+  \frac{-27}{2}t^{3}+
+  \frac{1899}{32}it^{4}+
+  \frac{324}{1}t^{5}+
+  \frac{-543483}{256}it^{6}+
+\\&\qquad\frac{-32427}{2}t^{7}+
+  \frac{72251109}{512}it^{8}+
+  \frac{2752623}{2}t^{9}+
+  \frac{-30413055339}{2048}it^{10}+
+  \frac{-175490226}{1}t^{11}+
+\\&\qquad\frac{9228545313147}{4096}it^{12}+
+  \frac{31217145174}{1}t^{13}+
+  \frac{-30419533530730323}{65536}it^{14}+
+\\&\qquad\frac{-14741904895227}{2}t^{15}+
+  \frac{16317191917079376129}{131072}it^{16}+
+  \frac{4456057685561073}{2}t^{17}+
+\\&\qquad\frac{-22082325223708363779009}{524288}it^{18}+
+  \frac{-1677161966915352627}{2}t^{19}+
+\\&\qquad\frac{18391039987731669876160557}{1048576}it^{20}+
+  \frac{384452768592440499024}{1}t^{21}+
+\\&\qquad\frac{-73930258776609869550094166319}{8388608}it^{22}+
+  \frac{-210878717949731493002826}{1}t^{23}+
+\\&\qquad\frac{88204980719873920964105544038937}{16777216}it^{24}+
+  \frac{136346686011011135869054074}{1}t^{25}+
+\\&\qquad\frac{-246474684300724210330466557670749827}{67108864}it^{26}+
+\\&\qquad\frac{-102614997677451303311734530276}{1}t^{27}+
+\\&\qquad\frac{398608966820777951112056743321778108571}{134217728}it^{28}+
+\\&\qquad\frac{88929857099067937229443324337874}{1}t^{29}+
+\\&\qquad\frac{-11819876688678190917510659802435441505814403}{4294967296}it^{30}+
+  \dots
+\end{align*}
+\end{comment}
+
+\section{SaveToFile.hs}
 \lstinputlisting[language=HaskellUlisses
                 ,firstnumber=1
                 %,captionpos=b
-                ,caption=Main.hs]{../haskell/Main.hs}
+                ,caption=SaveToFile.hs]{../haskell/SaveToFile.hs}
+Das folgende Script nutzt 7 Prozessoren, um mit \texttt{SaveToFile.hs} die
+ersten 10000 werte zu berechnen. Anschließend werden mittels \texttt{gnuplot}
+die Plots als PDF erzeugt.
+\begin{lstlisting}[style=Bash,caption=GeneratePlots.sh]
+#!/bin/sh
+max=10000
+ghc --make -threaded ./SaveToFile.hs
+mkdir -p ./data
+./SaveToFile $max +RTS -N7
+mkdir -p ./plot
+art[2]="betrag"; art[3]="cauchy"; art[4]="quot";
+for i in 2 3 4; do
+  name="${art[i]}"
+  echo $name
+  gnuplot << EOF
+set samples 1001
+set key below
+set term push
+set term post enh color lw 1 12 "Times-Roman"
+set output "${name}.eps"
+set log xy
+plot for [fn in system("ls data/*")] fn every ::0::${max} using 1:${i} with lines title system("basename ".fn)
+EOF
+  epstopdf "${name}.eps" --outfile "./plot/${name}.pdf"
+  rm "${name}.eps"
+done
+\end{lstlisting}
 
 % vim: set ft=tex :
