@@ -14,7 +14,12 @@ meromorphen Zusammenhang. \cite[Chap 4]{sabbah_cimpa90}
 \begin{comment}
 \cite[Chap 5.1.1]{hotta2007d} %abgeschrieben
 \end{comment}
-Für eine Matrix $A(x)=(a_{ij}(x))_{ij}\in M(n\times n,K)$ definieren wir das
+Für eine Matrix $A(x)=(a_{ij}(x))_{ij}\in M(n\times n,K)$
+\footnote{
+Es bezeichnet $M(n\times m,k)$ die Menge der $n$ mal
+$m$ dimensionalen Matrizen mit Einträgen in $k$.
+}
+definieren wir das
 \emph{System von gewöhnlichen Differentialgleichungen (kurz ODEs)} als
 \begin{equation}
 \label{eq:KlassischesODE}
@@ -39,7 +44,7 @@ $i\in\{1,\dots,n\}$ und $v$ die Gleichung (\ref{eq:KlassischesODE}), auf einer
 Umgebung um die $0$, erfüllt.
 
 \begin{comment}
-TODO: zeige, das der lösungsraum die eigenschaften von $\cD$-Moduln erfüllt\\
+TODO: zeige, das der Lösungsraum die Eigenschaften von $\cD$-Moduln erfüllt\\
 siehe alternativer Zugang
 \end{comment}
 
@@ -68,7 +73,7 @@ meromorphen Zusammenhänge übersetzen.
 %\section{Meromorpher Zusammenhang (Definition)}
 %Quelle ist \cite{sabbah_cimpa90}
 \begin{defn}[Meromorpher Zusammenhang] \label{def:merom-zush}
-Ein \emph{meromorpher Zusammenhang} (bei $x=0$) ist ein Tuppel
+Ein \emph{meromorpher Zusammenhang} (bei $x=0$) ist ein Tupel
 $(\cM_K,\partial)$ und besteht aus folgenden Daten:
 \begin{itemize}
 \item $\cM_K$, ein endlich dimensionaler $K$-Vektor Raum
@@ -107,8 +112,7 @@ $\cM\cong \cN$ und die Ableitungen kommutieren mit dem Isomorphismus
 
 \begin{comment}
 \begin{defn}
-Wir erhalten damit die Kategorie dier meromorphen Zusammenhänge über $k$
-mit
+Wir erhalten damit die Kategorie der meromorphen Zusammenhänge über $k$ mit
 \begin{align*}
 \text{Objekte: } & (M,\partial)\text{ meromorpher Zusammenhang über }k
 \\\text{Morphismen: } & (M,\partial)\overset{f}{\rightarrow}(M',\partial')
@@ -211,7 +215,7 @@ Let $\cM$ be a left $\cD$-module. First we consider it only as a
 $\C\{x\}$-module and let $\cM[x^{-1}]$ be the localized module.
 \end{comment}
 
-%TODO: reihenfolge bei sabbah anderst!!!
+%TODO: Reihenfolge bei sabbah anderst!!!
 \begin{lem}[Lemma vom zyklischen Vektor] \label{lem:Zyklischer-Vektor}
 Sei $\cM_K$ ein meromorpher Zusammenhang. Es existiert ein Element
 $m\in\cM_K$ und eine ganze Zahl $d$ so dass
@@ -341,7 +345,7 @@ TODO, (3. Treffen)
 
 \begin{lem} Sei $\cM_K$ %\cong K^r
  ein endlich dimensionaler $K$-Vektor Raum mit $\partial_1$ und $\partial_2$
-zwei darauf definierte Derivationen, so gilt, die differenz zweier
+zwei darauf definierte Derivationen, so gilt, die Differenz zweier
 Derivationen ist $K$-linear.
 \end{lem}
 \begin{proof}
@@ -372,7 +376,6 @@ behauptet, $\partial=\frac{d}{dx}-A$.
 \end{proof}
 
 %TODO: beobachtung...
-
 %TODO: differenz ist linear
 
 \begin{prop}[Transformationsformel] \cite[Chap 5.1.1]{hotta2007d}
@@ -413,7 +416,8 @@ In der Situation
 \end{center}
 mit $\phi,\psi$ und $T$ $K$-Linear und $\partial,(\frac{d}{dx}+A)$ und
 $(\frac{d}{dx}+B)$ $\C$-Linear, gilt:\\
-Der meromorphe Zusammenhang. $\frac{d}{dx}+A$ auf $K^r$ wird durch Basiswechsel
+Der meromorphe Zusammenhang. $\frac{d}{dx}+A$ auf $K^r$ wird durch
+Basiswechsel
 $T\in GL(r,K)$ zu
 \[
 \frac{d}{dx}+(T^{-1}\cdot T'+T^{-1}AT) = \frac{d}{dx}+B
@@ -435,7 +439,7 @@ $1=T^{-1}T$ $\rightsquigarrow$ $(T^{-1})'T+T^{-1}T'=0$
 % gestohlen aus der ZulaBarbara Seite 46
 \begin{comment}
 Quelle: sabbah?\\
-sabbah mach alles formal, barbara mach alles konvergent
+sabbah mach alles formal, Barbara mach alles konvergent
 \end{comment}
 Jedes $P\in \cD_{\hat K}$, also insbesondere auch jedes $P\in\cD_K$, lässt sich
 eindeutig als
@@ -448,10 +452,10 @@ H(P):&=\underset{m,l\mbox{ mit }\alpha_{ml}\neq0}{\bigcup}\Big( (m,l-m) +
     \R_{\leq 0}\times \R_{\geq 0} \Big) \subset \R^2\\
   &=\underset{m\mbox{ mit }a_{m}\neq0}{\bigcup}\Big( (m,deg(a_m)-m) +
     \R_{\leq 0}\times \R_{\geq 0} \Big) \subset \R^2 \,.
-%TODO: welche definition ist besser?
+%TODO: welche Definition ist besser?
 \end{align*}
 
-\begin{defn} % aus der zula
+\begin{defn}
 Das Randpolygon der konvexen Hülle $\conv(H(P))$ von $H(P)$ heißt das
 \emph{Newton Polygon} von $P$ und wird als $N(P)$ geschrieben.
 \end{defn}
@@ -468,13 +472,13 @@ Randpolygon der konvexen Hülle von
 H'(P):=\underset{m\mbox{ mit }a_{m}\neq0}{\bigcup}\Big( (m,deg(a_m)) +
 \R_{\leq 0}\times \R_{\geq 0} \Big) \subset \R^2 \,.
 \]
-%TODO: zeige, das beide definitionen gleich sind
+%TODO: zeige, das beide Definitionen gleich sind
 \end{bem}
 
 \begin{defn} % aus der zula
 Die Menge $\slopes(P)$ sind die nicht-vertikalen Steigungen von $N(P)$, die
 sich echt rechts von $\{0\}\times\R$ befinden.\\ % der $y$-Achse
-%TODO: bessere formulierung
+%TODO: bessere Formulierung
 \begin{itemize}
 \item Schreibe $\cP(\cM)$ für die Menge der zu $\cM$ gehörigen slopes.
 \item P heißt \emph{regulär} oder \emph{regulär singulär} $:\Leftrightarrow$
@@ -540,6 +544,8 @@ Man erkennt, dass $\cP(P_2)=\{0,\frac{2}{3}\}$ ist.
 ZUM LÖSCHEN
 \begin{bem}
 Für alle $f\in \cD_{\hat K}^\times$
+\footnote{ Für einen Ring $R$, bezeichnet $R^\times$ die Einheitengruppe von
+$R$. }
 gilt allgemein, dass das zu $P\in
 \cD_{\hat K}$ gehörige Newton Polygon, bis auf vertikale Verschiebung mit dem
 von $f\cdot P$ übereinstimmt.
@@ -648,7 +654,7 @@ $\cP(P)=\cP(P_1)\cup\cP(P_2)$ und $\cP(P_1)\cap\cP(P_2)=\emptyset$
 \cite[Thm 5.3.1]{sabbah_cimpa90} \cite[5.15]{ZulaBarbara}
 Sei $\cM_{\hat{K}}$ ein formaler meromorpher Zusammenhang und sei
 $\cP(\cM_{\hat K})=\{\Lambda_1,\dots,\Lambda_r\}$ die Menge seiner
-slopes. Es exisitiert eine (bis auf Permutation) eindeutige Zerlegung
+slopes. Es existiert eine (bis auf Permutation) eindeutige Zerlegung
 \[
 \cM_{\hat K}=\bigoplus_{i=1}^r\cM_{\hat K}^{(i)}
 \]
@@ -678,7 +684,7 @@ wie folgt aus
 \end{center}
 \caption{Newton Polygon zu $P=x(x\partial_x)^2+x\partial_x+\frac{1}{2}$}
 \end{figure}
-mit den Slopes $\cP(P)=\{0,1\}=:\{\Lambda_1,\Lambda_2\}$. Nach dem Satz
+mit den slopes $\cP(P)=\{0,1\}=:\{\Lambda_1,\Lambda_2\}$. Nach dem Satz
 \ref{thm:Split-after-slopes} existiert eine Zerlegung $P=P_1\cdot P_2$ mit
 $\cP(P_1)=\{\Lambda_1\}$ und $\cP(P_2)=\{\Lambda_2\}$. Durch scharfes hinsehen
 erkennt man, dass
@@ -725,7 +731,7 @@ sind.
 
 \subsection{Die Filtrierung $\,^\ell V\cD_{\hat K}$ und das $\ell$-Symbol}
 \begin{comment}
-TODO: mache alle Linearform $L$ zu $\ell$
+TODO: mache alle Linearformen $L$ zu $\ell$
 \end{comment}
 Sei $\Lambda=\frac{\lambda_0}{\lambda_1}\in \Q_{\geq 0}$ vollständig gekürtzt,
 also mit $\lambda_0$ und $\lambda_1$ in $\N$ relativ prim. Definiere die
@@ -767,7 +773,7 @@ als das $\ell$-Symbol Bezeichnet.
 Zum Beispiel ist $\sigma_\ell(x^a\partial_x^b)=x^a\xi^b$.
 \begin{bem}
 Bei \cite{sabbah_cimpa90} wird der Buchstabe $L$ anstatt $\ell$ für
-Linearformen verwedet, dieser ist hier aber bereits für $\Ckt$ reserviert.
+Linearformen verwendet, dieser ist hier aber bereits für $\Ckt$ reserviert.
 Dementsprechend ist die Filtrierung dort als $\,^L V\cD_{\hat K}$ und das
 $\ell$-Symbol als $L$-Symbol zu finden.
 \end{bem}
@@ -808,6 +814,57 @@ Monome
 %TODO: verzweigung statt pull-back?
 \section{Operationen auf meromorphen Zusammenhängen}
 \subsection{Tensorprodukt}
+\begin{comment}
+\begin{defn}[Tensorprodukt]
+\cite[3(Algebra).11.21]{stacks-project}
+% von Vorlesung Algebra 2
+\begin{center}
+\begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
+  \matrix (m) [
+    matrix of math nodes
+    , row sep=2em
+    , column sep=3em
+    %, text height=3em
+    %, text depth=0.25em
+  ]{
+    M\times N & M\otimes_RN \\
+              & T \\
+  };
+  %TODO: Pfeile
+  \path[->,font=\scriptsize,>=angle 90]
+  (m-1-1) edge node[above]{$  $} (m-1-2)
+  (m-1-1) edge node[below]{$f$} (m-2-2)
+  ;
+  \path[->,font=\scriptsize,>=angle 90,dashed]
+  (m-1-2) edge node[right]{$\exists!\gamma$} (m-2-2)
+  ;
+\end{tikzpicture}
+\end{center}
+Für eine Abbildung $f:M\rightarrow M'$ definiere das Tensorprodukt davon über
+$R$ mit $N$ als
+\[
+\id_N \otimes f:
+\begin{array}[t]{ccc}
+N\otimes_{R}M & \rightarrow & N\otimes_{R}M'\\
+n\otimes m & \mapsto & n\otimes f(m)
+\end{array}
+\]
+\end{defn}
+\end{comment}
+\begin{bem} \label{bem:Rechenregeln-Tensorprodukt}
+Hier einige Rechenregeln für das Tensorprodukt,
+\begin{align}
+(M\otimes_R N)\otimes_S L &\cong M\otimes_R (N \otimes_S L)
+  \label{bem:Rechenregeln-Tensorprodukt1}\\
+M\otimes_R R &\cong M \label{bem:Rechenregeln-Tensorprodukt2}
+\end{align}
+Sei $f:M'\rightarrow M$ eine Abbildung, so gilt
+\begin{align}
+N\otimes_R(M/\im(f)) &\cong N\otimes_R M / \im(\id_{R}\otimes f)
+\label{bem:Rechenregeln-Tensorprodukt3}
+\end{align}
+\end{bem}
+
 \begin{prop} \cite[Prop 4.1.1]{SchneidersDmod} \label{prop:tensorZusammenhang}
 Seien $(\cM,\partial_\cM)$ und $(\cN,\partial_\cN)$ meromorphe Zusammenhänge.
 Sei $n\otimes n\in \cM\otimes_K\cN$.
@@ -870,7 +927,7 @@ $(\cM_{\hat K},\nabla)$ ist der Vektorraum
 \bydef\Cftl\otimes_{\Cfxl}\cM_{\Cfxl}
 \]
  mit dem \emph{pull-back Zusammenhang} $\rho^*\nabla$ definiert durch
-%TODO: ist das der zusammenhang oder die wirkung oder was?
+%TODO: ist das der Zusammenhang oder die Wirkung oder was?
 \begin{equation} \label{eq:pull-back-zusammenhang}
 \partial_t(1\otimes m):=\rho'(t)\otimes\partial_xm \,.
 \end{equation}
@@ -1096,7 +1153,7 @@ Zusammenhängen ist. Betrachte dazu das Diagramm
 und für einen Elementartensor $f(t)\otimes Q(x,\partial_x)\in\hat
 L\otimes_{\hat K}\cD_{\hat K }$
 \begin{comment}
-Q wie in großen beweis später, Namenskollision
+Q wie in großen Beweis später, Namenskollision
 \end{comment}
 folgt dann
 \begin{center}
@@ -1379,7 +1436,7 @@ die untere Zeile zu einer exakten Sequenz fortsetzen
   ;
 \end{tikzpicture}
 \end{center}
-und damit folgt, wegen Isomorphie der Cokerne, die Behauptung.
+und damit folgt, wegen Isomorphie der Kokerne, die Behauptung.
 \end{proof}
 
 %
@@ -1409,7 +1466,7 @@ H(P'(t,\partial_t)) &=H(P(\rho(t),\rho'(t)^{-1}\partial_t))
 \end{comment}
 %
 \begin{exmp}[pull-back]\label{exmp:Pull-Back}
-%from beispil/formal_b.tex
+%from Beispiel/formal_b.tex
 Hier nun ein explizit berechneter pull-back.
 Wir wollen $\cM_{\hat K}:=\cD_{\hat K}/\cD_{\hat K}\cdot P$ bzgl. $P:=
 x^3\partial_x^2-4x^2\partial_x-1$ betrachten.
@@ -1474,7 +1531,7 @@ Sei $\cN_{\hat L}$ ein endlich dimensionaler $\hat L$-VR mit Verknüpfung, so
 definiere den push-forward wie folgt.
 \begin{defn}[push-forward]
 \cite[1.a]{sabbah_Fourier-local}
-Der \emph{push-forward} oder das \emph{direktes Bil} $\rho_+\cN_{\hat L}$ von
+Der \emph{push-forward} oder das \emph{direktes Bild} $\rho_+\cN_{\hat L}$ von
 $\cN_{\hat L}$ ist
 \begin{itemize}
 \item der $\hat K$-VR $\rho_*\cN$ ist definiert als der $\C$-Vektor Raum
@@ -1588,7 +1645,7 @@ $P$ gegeben durch
 \end{comment}
 \end{defn}
 \begin{defn}[Fouriertransformation von lokalisierten holonomen D-Moduln]
-Ist $\cM_{\hat K}=\hat K / \hat K \cdot P$ so ist die fouriertransformierte
+Ist $\cM_{\hat K}=\hat K / \hat K \cdot P$ so ist die Fouriertransformierte
 davon $\,^\cF\cM_{\hat K}=\hat K / \hat K \cdot \cF_P(x,\partial_x)$.
 \end{defn}
 \begin{exmp}

@@ -6,73 +6,6 @@ Hier werde ich mich auf \cite{sabbah_cimpa90} und \cite{coutinho1995primer}
 beziehen.
 \end{comment}
 
-Wir betrachten $\C$ hier als Komplexe Mannigfaltigkeit mit der klassischen
-Topologie.
-In dieser Arbeit spielen die folgenden Funktionenräume eine große Rolle:
-\begin{itemize}
-\item $\C[x]:=\{ \sum^{N}_{i=1}a_ix^i | N\in \N \}$ die einfachen Potenzreihen
-\item $\C\{x\}:=\{ \sum^{\infty}_{i=1}a_ix^i | \mbox{pos.
-Konvergenzradius}\}$ (\cite[Chap 5.1.1]{hotta2007d})
-\item $\C\llbracket x\rrbracket:=\{ \sum^{\infty}_{i=1}a_ix^i \}$ die formalen
-Potenzreihen
-\item $K:=\Ckxl:=\C\{x\}[x^{-1}]$ der Ring der Laurent Reihen.
-\item $\hat{K}:=\Cfxl:=\C\llbracket x\rrbracket[x^{-1}]$ der Ring der
-formalen Laurent Reihen.
-\item $\tilde\cO$ als der Raum der Keime aller (möglicherweise mehrdeutigen)
-Funktionen. (bei \cite{hotta2007d} mit $\tilde K$ bezeichnet)
-\end{itemize}
-Wobei offensichtlich die Inclulsionen $\C[x]\subsetneq\C\{x\}\subsetneq\Cfx$
-und $K\subsetneq\hat K$ gelten.
-
-Es bezeichnet der Hut ($ \, \hat \,\, $) das jeweils formale Äquivalent zu
-einem konvergentem Objekt.
-
-\iffalse
-  \begin{comment}
-  \begin{lem}[Seite 2]
-  ein paar eigenschaften
-  \begin{enumerate}
-  \item $\C[x]$ ist ein graduierter Ring, durch die Grad der
-  Polynome. Diese graduierung induziert eine aufsteigende Filtrierung.
-
-  alle Ideale haben die form $(x-a)$ mit $a\in \C$
-  \item wenn $\mathfrak{m}$ das maximale Ideal von $\C[x]$ (erzeugt von
-  $x$ ist), so ist
-  \[
-    \C[[x]]=
-    \underset{k}{\underleftarrow{\lim}} \C[X]\backslash\mathfrak{m}^k
-  \]
-  The ring $\C[[x]]$ ist ein nöterscher lokaler Ring:
-  jede Potenzreihe mit konstantem term $\neq 0$ ist invertierbar.
-
-  Der ring ist ebenfalls ein diskreter ??? Ring (discrete valuation
-  ring)
-
-  Die Filtrierung nach grad des Maximalen Ideals, genannt
-  $\mathfrak{m}$-adische Fitration, ist die Filtrierung
-  $\mathfrak{m}^k=\{f\in \C[[x]]|v(f)\geq k\}$
-
-  und es gilt $gr_\mathfrak{m}(\C[[x]])=\C[x]$
-  \end{enumerate}
-  \end{lem}
-  \end{comment}
-\fi
-
-\begin{comment}
-Für $v=(v_1,\dots,v_n)$ ein Vektor, bezeichnet 
-\[
-\,^tv:= \begin{pmatrix}
-  v_{1}\\
-  \vdots\\
-  v_{n}
-\end{pmatrix}
-\]
-den transponierten Vektor. 
-\end{comment}
-Es bezeichnet $M(n\times m,k)$ die Menge der $n$ mal
-$m$ dimensionalen Matritzen mit Einträgen in $k$.
-
-Sei $R$ ein Ring, dann bezeichnet $R^\times$ die Einheitengruppe von $R$.
 
 \begin{defn}[Direkte Summe] \cite[4(Categories).5.1]{stacks-project}
 Seien $x,y\in \Ob(\cC)$, eine \emph{direkte Summe}, oder das \emph{Coprodukt}
@@ -108,56 +41,6 @@ eindeutiges $\gamma\in\Mor_\cC(x\oplus y,w)$, so dass das Diagramm
 \end{center}
 kommutiert.
 \end{defn}
-
-\begin{defn}[Tensorprodukt]
-\cite[3(Algebra).11.21]{stacks-project}
-% von Vorlesung Algebra 2
-\begin{center}
-\begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
-  \matrix (m) [
-    matrix of math nodes
-    , row sep=2em
-    , column sep=3em
-    %, text height=3em
-    %, text depth=0.25em
-  ]{
-    M\times N & M\otimes_RN \\
-              & T \\
-  };
-  %TODO: Pfeile
-  \path[->,font=\scriptsize,>=angle 90]
-  (m-1-1) edge node[above]{$  $} (m-1-2)
-  (m-1-1) edge node[below]{$f$} (m-2-2)
-  ;
-  \path[->,font=\scriptsize,>=angle 90,dashed]
-  (m-1-2) edge node[right]{$\exists!\gamma$} (m-2-2)
-  ;
-\end{tikzpicture}
-\end{center}
-Für eine Abbildung $f:M\rightarrow M'$ definiere das Tensorprodukt davon über
-$R$ mit $N$ als
-\[
-\id_N \otimes f:
-\begin{array}[t]{ccc}
-N\otimes_{R}M & \rightarrow & N\otimes_{R}M'\\
-n\otimes m & \mapsto & n\otimes f(m)
-\end{array}
-\]
-\end{defn}
-\begin{bem} \label{bem:Rechenregeln-Tensorprodukt}
-Hier einige Rechenregeln für das Tensorprodukt,
-\begin{align}
-(M\otimes_R N)\otimes_S L &\cong M\otimes_R (N \otimes_S L)
-  \label{bem:Rechenregeln-Tensorprodukt1}\\
-M\otimes_R R &\cong M \label{bem:Rechenregeln-Tensorprodukt2}
-\end{align}
-Sei $f:M'\rightarrow M$ eine Abbildung, so gilt
-\begin{align}
-N\otimes_R(M/\im(f)) &\cong N\otimes_R M / \im(\id_{R}\otimes f)
-\label{bem:Rechenregeln-Tensorprodukt3}
-\end{align}
-\end{bem}
-%TODO: tensorprodukt / faserprodukt zum basiswechsel
 
 \begin{defn}[Exakte Sequenz]
 Eine Sequenz
