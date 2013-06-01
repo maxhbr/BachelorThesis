@@ -928,9 +928,7 @@ Für den Beweis von Satz \ref{thm:pull-back-berechnung} werden zunächst ein paa
 \begin{lem} \label{lem:pull-back-hilfslemma1pre}
 Es gilt $\rho^*\cD_{\hat K }\bydef\hat L\otimes_{\hat K}\cD_{\hat K } \cong
 \cD_{\hat L }$ als $\cD_{\hat L}$-Vektorräume, mittels
-\begin{comment}
-VR oder Moduln??
-\end{comment}
+\begin{comment} TODO: VR oder Moduln??  \end{comment}
 \begin{center}
 \begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
 \matrix (m) [
@@ -956,7 +954,7 @@ VR oder Moduln??
 \end{tikzpicture}
 \end{center}
 \end{lem}
-\begin{try}
+\begin{comment}
 \begin{proof}
 Wir wollen zeigen, dass $\cD_{\hat L}$ die universelle Eigenschaft für das
 Tensorprodukt $\hat L\otimes_{\hat K}\cD_{\hat K }$ erfüllt, in diesem Fall
@@ -1018,8 +1016,7 @@ Dieser so erhaltene eindeutige Morphismus ist genau unser $\Phi$.
 \end{tikzpicture}
 \end{center}
 \end{proof}
-\end{try}
-\begin{try}
+\end{comment}
 \begin{proof}
 Prüfe zunächst die Injektivität. Sei $f(t)\otimes Q(x,\partial_x)\in
 \ker(\Phi)$ so, dass
@@ -1031,10 +1028,10 @@ und, da hier alles nullteilerfrei ist, ist die Bedingung äquivalent zur
 folgenden
 \begin{align*}
 \Leftrightarrow && 0&=f(t) &\text{oder}&& 0&=Q(\rho(t),\rho'(t)^{-1}\partial_t)
-\\\Leftrightarrow& &&\dots %TODO
+\\\Leftrightarrow && 0&=f(t) &\text{oder}&& 0&=Q(x,\partial_x)
 \\\Leftrightarrow&& 0&=f(t)\otimes Q(x,\partial_x) \,.
 \end{align*}
-\begin{comment} TODO \end{comment}
+\begin{comment} TODO: korrekt? \end{comment}
 Nun zur Surjektivität.
 Sei $g(t,\partial_t)=\sum_ka_k(t)\partial_t^k\in\cD_{\hat L}$ so gilt
 \begin{align*}
@@ -1053,7 +1050,6 @@ g(t,\partial_t)&= \sum_k\sum_{i=0}^{p-1}t^ia_{k,i}(t^p)
   (\partial_x)^k)\Big) \,.
 \end{align*}
 \end{proof}
-\end{try}
 
 \begin{lem} \label{lem:pull-back-hilfslemma1}
 Das in Lemma \ref{lem:pull-back-hilfslemma1pre} definierte $\Phi$ ist sogar ein
@@ -1380,24 +1376,29 @@ und damit folgt, wegen Isomorphie der Cokerne, die Behauptung.
 
 %
 \begin{lem}\label{lem:slope-pb-multiplikation}
-\cite[5.4.3]{sabbah_cimpa90}
 Sei $\cP(\cM_{\hat K})=\{\Lambda_1,\dots,\Lambda_r\}$ die Menge der Slopes von
 $\cM_{\hat K}$ und $\rho:t\mapsto x:=t^p$, dann gilt für $\cP(\rho^*\cM_{\hat
 K})=\{\Lambda_1',\dots,\Lambda_r'\}$, dass $\Lambda_n'=p\cdot\Lambda_n$.
 \end{lem}
 \begin{proof}
+Siehe \cite[5.4.3]{sabbah_cimpa90}.
+\end{proof}
+\begin{comment}
+\begin{proof}
 Sei $\cM_{\hat K}=\cD_{\hat K}\slash \cD_{\hat K}\cdot P$ mit $P=\sum
 a_i(x)\partial_x^i$, dann ist
 $\rho^*\cM_{\hat K}\cong\cD_{\hat L}\slash \cD_{\hat L}\cdot P'$ mit
 \begin{align*}
-P'(t,\partial_t) &=P(\rho(t),\rho'(t)^{-1}\partial_t)\\
-                 &=\sum a_i(\rho(t))(\rho'(t)^{-1}\partial_t)^i\\
-                 &=\sum a_i(t^p)((p\cdot t^{p-1})^{-1}\partial_t)^i
+H(P'(t,\partial_t)) &=H(P(\rho(t),\rho'(t)^{-1}\partial_t))
+\\&=H(\sum_i a_i(\rho(t))(\rho'(t)^{-1}\partial_t)^ii)
+\\&=H(\sum_i a_i(\rho(t))(\rho'(t)^{-1}\partial_t)^ii)
+\\&=H(\sum_i a_i(t^p)((p\cdot t^{p-1})^{-1}\partial_t)^i)
+\\&=H(\sum_i a_i(t^p)(p\cdot t^{p-1})^{-i}\partial_t^i)
+\\&=H(\sum_i a_i(t^p)t^{-i(p-1)}\partial_t^i)
+\\&=\dots %TODO: Hier weiter...
 \end{align*}
-\begin{comment}
-TODO: Hier weiter...
-\end{comment}
 \end{proof}
+\end{comment}
 %
 \begin{exmp}[pull-back]\label{exmp:Pull-Back}
 %from beispil/formal_b.tex
@@ -1541,11 +1542,13 @@ Es gilt die Projektionsformel
 \begin{proof}
 \begin{align*}
 \rho_+(\cN_{\hat L}\otimes_{\hat L}\rho^+\cM_{\hat K}) &=
-\rho_+(\cN_{\hat L}\otimes_{\hat L}(\hat L\otimes_{\hat K}\cM_{\hat L}))
+\rho_+(\underbracket{\cN_{\hat L}\otimes_{\hat L}(\hat L\otimes_{\hat
+  K}\cM_{\hat L})})
   & \mbox{(def von $\rho^+\cM_{\hat K}$)}\\
-&\cong\rho_+((\cN_{\hat L}\otimes_{\hat L}\hat L)\otimes_{\hat K}\cM_{\hat K})
+&\cong\rho_+(\overbracket{\underbracket{(\cN_{\hat L}\otimes_{\hat L}\hat L)}
+  \otimes_{\hat K}\cM_{\hat K}})
   & \mbox{(Rechenregeln Tensorprodukt)}\\ %TODO: hinzufügen
-&\cong \rho_+(\cN_{\hat L}\otimes_{\hat K}\cM_{\hat K})
+&\cong \rho_+(\overbracket{\cN_{\hat L}}\otimes_{\hat K}\cM_{\hat K})
   & \mbox{(Rechenregeln Tensorprodukt)}\\
 &= \rho_+\cN_{\hat L}\otimes_{\hat K}\cM_{\hat K}
   & \mbox{(?)}
