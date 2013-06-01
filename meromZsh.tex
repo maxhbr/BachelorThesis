@@ -21,8 +21,8 @@ Für eine Matrix $A(x)=(a_{ij}(x))_{ij}\in M(n\times n,K)$ definieren wir das
 %TODO: partial oder d
 \frac{d}{dx}u(x)=A(x)u(x) \,,
 \end{equation}
-wobei $u(x)=\,^t(u_1(x),\dots,u_n(x))$ ein 
-Spaltenvektor\footnote{Für $v=(v_1,\dots,v_n)$ ein Vektor, bezeichnet 
+wobei $u(x)=\,^t(u_1(x),\dots,u_n(x))$ ein
+Spaltenvektor\footnote{Für $v=(v_1,\dots,v_n)$ ein Vektor, bezeichnet
 $ \,^tv:= \begin{pmatrix} v_{1}\\ \vdots\\ v_{n} \end{pmatrix} $
 den transponierten Vektor.}
 von unbekannten Funktionen. Wir werden (\ref{eq:KlassischesODE}) immer in
@@ -164,7 +164,7 @@ Umgekehrt können wir für jede Matrix $A(x)=(a_{ij}(x))$ den
 assoziierten meromorphen Zusammenhang $(\cM_A,\partial_A)$ %TODO: improve notation
 angeben durch
 \begin{align*}
-\cM_A & :=\bigoplus_{i=1}^n Ke_i \,, 
+\cM_A & :=\bigoplus_{i=1}^n Ke_i \,,
 & \partial_A \sum_{i=1}^n u_ie_i &:= \sum_{i=1}^n\left(
   \frac{\partial u_i}{\partial x}-\sum_{j=1}^na_{ij}(x)u_j \right)e_i \,.
 \end{align*}
@@ -213,20 +213,30 @@ $\C\{x\}$-module and let $\cM[x^{-1}]$ be the localized module.
 
 %TODO: reihenfolge bei sabbah anderst!!!
 \begin{lem}[Lemma vom zyklischen Vektor] \label{lem:Zyklischer-Vektor}
-\cite[Thm 4.3.3]{sabbah_cimpa90}
-\cite[Satz 4.8]{ZulaBarbara}
 Sei $\cM_K$ ein meromorpher Zusammenhang. Es existiert ein Element
 $m\in\cM_K$ und eine ganze Zahl $d$ so dass
 $m,\partial_xm,\dots,\partial_x^{d-1}m$ eine $K$-Basis von $\cM_K$ ist.
 \end{lem}
 \begin{proof}
-\cite[Satz 4.8]{ZulaBarbara}
+Ein Beweis ist beispielsweise in \cite[Thm 4.3.3]{sabbah_cimpa90} oder
+ausführlicher in \cite[Satz 4.8]{ZulaBarbara}.
 \end{proof}
 \begin{cor}
 In der Situation von Lemma \ref{lem:Zyklischer-Vektor} gibt es ein $P\in
 \cD_K$ mit $\partial$-Grad von $P$ ist gleich $d$ und $P \cdot m=0$, in
 diesem Fall ist $P$ ein Minimalpolynom zu $\cM_K$, also gilt
-$\cM_K=\cD_K/\cD_K\cdot P$.
+$\cM_K=\cD_K/\cD_K\cdot P$. Explizit ergibt sich aus der Basisdarstellung
+\begin{align*}
+\partial_x^d m&= \alpha_{d-1}\partial_x^{d-1}m + \alpha_{d-2}\partial_x^{d-2}m
+  + \cdots + \alpha_1\partial_xm + \alpha_0m & \alpha_i\in K
+\end{align*}
+von $\partial_x^d m$, dass
+\[
+\cM_K=\cD_K/\cD_K\cdot( \underset{=:P}{\underbrace{
+  \partial^d - \alpha_{d-1}\partial_x^{d-1} - \alpha_{d-2}\partial_x^{d-2} -
+  \cdots - \alpha_1\partial_x - \alpha_0 }} )
+\]
+gilt.
 \end{cor}
 
 \begin{thm}\label{thm:basic-splitting}
@@ -511,7 +521,7 @@ Man erkennt, dass $\cP(P_2)=\{0,\frac{2}{3}\}$ ist.
     \end{tikzpicture}
   \end{center}
   \caption{Newton-Polygon zu $P_1=x\partial_x^2$}
-    \label{fig:Newton-Polygon1}
+  \label{fig:Newton-Polygon1}
   \end{minipage}
   \begin{minipage}[hbt]{0,49\textwidth}
   \begin{center}
@@ -522,23 +532,31 @@ Man erkennt, dass $\cP(P_2)=\{0,\frac{2}{3}\}$ ist.
     \end{tikzpicture}
   \end{center}
   \caption{Newton-Polygon zu $P_2$}
-    \label{fig:Newton-Polygon2}
+  \label{fig:Newton-Polygon2}
   \end{minipage}
 \end{figure}
 
-\begin{bem}
-\cite[Bem 5.4]{ZulaBarbara}
-Für alle $f\in \cD_{\hat K}^\times$
 \begin{comment}
-  $f\in \Ckxl \backslash \{0\}$
-\end{comment}
+ZUM LÖSCHEN
+\begin{bem}
+Für alle $f\in \cD_{\hat K}^\times$
 gilt allgemein, dass das zu $P\in
 \cD_{\hat K}$ gehörige Newton Polygon, bis auf vertikale Verschiebung mit dem
 von $f\cdot P$ übereinstimmt.
 \end{bem}
 \begin{proof}
-TODO
+Siehe \cite[Seite 25]{sabbah_cimpa90} bzw.
+\cite[Bem 5.4]{ZulaBarbara}.
+%TODO
 \end{proof}
+\end{comment}
+\begin{bem}
+Nach \cite[Seite 25]{sabbah_cimpa90} gilt, dass das Newton-Polygon, bis auf
+vertikales verschieben, nur von dem assoziierten meromorphen Zusammenhang
+abhängt.
+Dies wird auch in \cite[Bem 5.4]{ZulaBarbara} diskutiert.
+\end{bem}
+
 \begin{comment}
 Damit Lässt sich das Newton Polygon, durch ein $f$, immer so Verschieben, dass
 $(0,0)\in N(f\cdot P)$, und es gilt, dass
@@ -597,16 +615,6 @@ N((x^a\partial_x^b)^c)
 \end{align*}
 \end{exmp}
 \end{comment}
-
-\begin{lem}
-\cite[Seite 26]{sabbah_cimpa90}
-Das Newton-Polygon hängt, bis auf vertikales verschieben, nur von dem
-assoziierten meromorphen Zusammenhang ab.
-\begin{comment}
-ODER: assoziierte meromorphen Zusammenhänge haben gleiche Slopes aber sind
-möglicherweise vertikal verschoben.
-\end{comment}
-\end{lem}
 
 \begin{lem}
 %TOTO: sabbah redet hier schon immer von \hat K, ist das nötig?
@@ -1567,15 +1575,17 @@ Sei $\rho(u)=u^p=t$ und $\phi(t)$ gegeben.
 
 \subsection{Fouriertransformation}
 \begin{defn}[Fouriertransformation]
-\cite[Def 3.1]{Bloch_localfourier}
-\cite{GarciaLopez04}
-\cite[Def 6.1]{ZulaBarbara}
-Sei $P=\sum_{i=0}^da_i(x)\partial_x^i$. Dann ist die
+Sei $P=\sum_{i=0}^da_i(x)\partial_x^i$, dann ist die
 \emph{fouriertransformierte} von
 $P$ gegeben durch
 \[
-\cF_P:=\cF_P(z,\partial_z)=\sum_{i=0}^da_i(\partial_z)(-z)^i
+\cF_P:=\cF_P(z,\partial_z)=\sum_{i=0}^da_i(\partial_z)(-z)^i \,.
 \]
+\begin{comment}
+\cite[Def 3.1]{Bloch_localfourier}
+\cite{GarciaLopez04}
+\cite[Def 6.1]{ZulaBarbara}
+\end{comment}
 \end{defn}
 \begin{defn}[Fouriertransformation von lokalisierten holonomen D-Moduln]
 Ist $\cM_{\hat K}=\hat K / \hat K \cdot P$ so ist die fouriertransformierte

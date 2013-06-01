@@ -1,5 +1,5 @@
 %!TeX root = main.tex
-\chapter{Explizite berechnung einer Levelt-Turrittin-Zerlegung}
+\chapter{Explizite Berechnung einer Levelt-Turrittin-Zerlegung}
 In diesem Kapitel werden Beispiele einer speziellen Klasse von $\cD$-Moduln
 diskutiert. Dazu wird im folgendem zu einem Beispiel unter anderem explizit der
 Beweis aus \cite{sabbah_cimpa90} zur Levelt-Turrittin-Zerlegung nachvollzogen.
@@ -10,7 +10,7 @@ betrachtet und zuletzt wird für konkrete Beispiele eine explizite Rechnung
 gegeben.
 
 \section{Rezept für allgemeine $\phi$} \label{sec:allgemeinProblem}
-Hier wollen wir nun eine Spezielle Klasse von meromorphen Zusammenhängen, die
+Hier wollen wir nun eine spezielle Klasse von meromorphen Zusammenhängen, die
 die durch das folgende Rezept entstehen.
 \begin{enumerate}
 \item Wähle zunächst ein $\phi$
@@ -105,8 +105,8 @@ Es gilt $\cP(\cM_{\phi})=\{\frac{q}{q+1}\}$.
 \cite[5.b.]{sabbah_Fourier-local}
 \end{comment}
 Um zu zeigen, dass die Behauptung gilt, formen wir $P_{\phi}$ um und isolieren
-die Monome, die für das Newton-Polygon nicht von bedeutung sind und deshalb
-vernachlässigt werden können. Betrachte dazu die Konvexen Hüllen, die wie in
+die Monome, die für das Newton-Polygon nicht von Bedeutung sind und deshalb
+vernachlässigt werden können. Betrachte dazu die konvexen Hüllen, die wie in
 Abschnitt \ref{sec:NewtonPolygon} konstruiert werden. Sei $q:=\max(I)$.
 \begin{align*}
 H\Big(P_{\phi}(x,\partial_x)\Big) &= H\Big(\underbracket{(-x^2\partial_x)^{q}}
@@ -148,9 +148,9 @@ H(ma_m(-x^2\partial_x)^{q-m}) &= H(ma_m(-1)^q(x^{2(q-m)}\partial_x^{q-m}
 \\&=(q-m,q-m) + \R_{\leq 0}\times \R_{\geq 0}
 \end{align*}
 In Abbildung \ref{fig:Newton-PolygonP_phi} ist die Situation, die wir gerade
-betrachten dargestellt, mit $N(x^{2q + 1}\partial_x^{q + 1} + qa_q)$ in der
-gewohnten Farbe und in Blau ist $H(x^{2(q-m)}\partial_x^{q-m})$ eingezeichnet.
-Man sieht also, dass die Behauptung gilt.
+betrachten, mit $N(x^{2q + 1}\partial_x^{q + 1} + qa_q)$ in der gewohnten Farbe
+und $H(x^{2(q-m)}\partial_x^{q-m})$ in Blau, dargestellt.  Man sieht also, dass
+die Behauptung gilt.
 \hfill Beh.\ensuremath{\Box}
 
 \begin{figure}[htbp] % htbp
@@ -187,7 +187,7 @@ Mit der Behauptung gilt dann, dass
 H\Big(P_{\phi}(x,\partial_x)\Big)
   &= H\Big(x^{2q + 1}\partial_x^{q + 1} + qa_q
   + \sum_{k\in I\backslash\{q\}}k a_k(-x^2\partial_x)^{q-k} \Big)
-\\&\overset{\text{Beh.}}{=} H\Big(x^{2q + 1}\partial_x^{q + 1} + qa_q \Big)
+\\&\overset{\text{Beh.}}{=} H\Big(x^{2q + 1}\partial_x^{q + 1} + qa_q \Big) \,.
 \end{align*}
 Also ist
 \begin{align*}
@@ -258,8 +258,9 @@ Schon gezeigt, das $ord_\ell = 0$?
   &= \sum_{\{(i,j)\in\N\times\Z \mid \ell(i,i-j)=0\}}\alpha_{ij}t^j\xi^i\\
   &= \sum_{\{(i,j)\in\N\times\Z \mid (q+1)i-j=0\}}\alpha_{ij}t^j\xi^i
 \end{align*}
-Da $\hat L[\xi]$ kommutativ ist gilt hier, dass $(t^j\xi^i)^k=t^{jk}\xi^{ik}$ ist.
-Setze $\theta=t^{\lambda_0+\lambda_1}\xi^{\lambda_1}=t^{q+1}\xi$ so können wir
+Da $\hat L[\xi]$ kommutativ ist, gilt hier, dass $(t^j\xi^i)^k=t^{jk}\xi^{ik}$
+ist.  Setze $\theta=t^{\lambda_0+\lambda_1}\xi^{\lambda_1}=t^{q+1}\xi$ so,
+können wir
 \begin{align*}
 \sigma_L(\rho^*P_{\phi}) &= \sum_{k\geq 0}\alpha_k\theta^k & & \alpha_k\in\C
 \end{align*}
@@ -320,7 +321,7 @@ P_{\phi}(x,\partial_x) &=-x^2\partial_x (x\partial_x-1)+a
 \\&=\overbracket{-x^3\partial_x^2
   \rlap{$\underbrace{\phantom{-x^2\partial_x+x^2\partial_x\,}}_{=0}$}
   - x^2\partial_x}+x^2\partial_x+a
-\\&=-x^3\partial_x^2+a
+\\&=-x^3\partial_x^2+a \,.
 \end{align*}
 Erhalte daraus das Newton-Polygon mit den Slopes
 $\cP(\cM_{\phi})=\{\frac{1}{2}\}$.
@@ -366,7 +367,7 @@ $\sigma_\ell(\rho^*P_{\phi})\in \hat L[\xi]$ von $\rho^*P_{\phi}$.
   &= \sum_{\{(i,j)\mid 2i-j=0\}}\alpha_{ij}x^{j}\xi^i\\
   &= t^4\xi^2 + 2a
 \end{align*}
-Setze $\theta:=t^{\lambda_0+\lambda_1}\xi^{\lambda_1}=t^2\xi$ so erhalten wir
+Setze $\theta:=t^{\lambda_0+\lambda_1}\xi^{\lambda_1}=t^2\xi$, so erhalten wir
 \begin{align*}
 \sigma_\ell(\rho^*P_{\phi}) &= \theta^2 + 2a \,,
 \end{align*}
@@ -383,7 +384,7 @@ Vektor von $\rho^+\cM$ ist.
   \]
   und damit ist dann $\cN=\cD/\cD\cdot(\partial_t^2+a_1(t)\partial_t+a_0(t))$.
 \fi
-Mit dem Lemma vom Zyklischem Vektor wollen wir nun ein Minimalpolynom zu $\cN$
+Mit dem Lemma vom Zyklischen Vektor wollen wir nun ein Minimalpolynom zu $\cN$
 berechnen:
 \begin{align*}
 \partial_t^2(\bme\otimes 1)
@@ -480,7 +481,7 @@ $\rho^*P(t,\partial_t)=t^4\partial_t^2-t^3\partial_t+2a$, ist
 \end{bem}
 \end{comment}
 
-Nachdem wir jetzt ein Minimalpolynom gefunden haben ist unser nächstes Ziel,
+Nachdem wir jetzt ein Minimalpolynom gefunden haben, ist unser nächstes Ziel,
 $\cN=\cD_{\hat L}/\cD_{\hat L}\cdot P'$ in zwei meromorphe Zusammenhänge mit
 nur einem Slope zerlegen.  Betrachte hierzu das Minimalpolynom und zerlege
 dieses in ein Produkt $P'(t,\partial_t)=Q_1(t,\partial_t)\cdot
@@ -530,7 +531,7 @@ die Reihen $v(t):=\sum_n v_nt^n$ und $u(t):=\sum_n u_nt^n$. Die beiden Polynome
 $Q_1$ und $Q_2$ enthalten $\partial_t$ als einziges Monom vom $\partial_t$-Grad
 $1$, deshalb ist $(1,-1)$ in beiden zugehörigen Newton-Polygonen enthalten.
 Da $Q_1$ nur den Slope $0$ hat, muss das Newton-Polygon wie in Abbildung
-\ref{abb:Q_1} aussenen und somit wissen wir, dass $v_n=0$ für alle $n<-1$.
+\ref{abb:Q_1} aussehen und somit wissen wir, dass $v_n=0$ für alle $n<-1$.
 Da $Q_2$ genau den Slope $1$ hat, ist das Newton-Polygon gegeben durch
 Abbildung \ref{abb:Q_2}. Damit ist $u_n=0$ für alle $n<-2$ und $u_{-2}\neq0$.
 \begin{figure}[htbp]
@@ -574,7 +575,7 @@ gilt
 \\&= \sum_{n=-2}^\infty u_nt^n\partial_t + \sum_{n=-2}^\infty nu_nt^{n-1}
 %TODO: ist umsortieren immer erlaubt??
 \end{align*}
-Wenn wir dieses Ergenis nun in (\ref{eq:schritt200}) einsetzen ergibt sich
+Wenn wir dieses Ergebnis nun in (\ref{eq:schritt200}) einsetzen, ergibt sich
 \begin{equation} \label{eq:schritt300}
   \begin{aligned}
 Q_1\cdot Q_2&=\partial_t^2 + \sum_{n=-2}^\infty u_nt^n\partial_t
@@ -588,9 +589,10 @@ Q_1\cdot Q_2&=\partial_t^2 + \sum_{n=-2}^\infty u_nt^n\partial_t
 \\&=\partial_t^2 + \sum_{n=-2}^\infty (u_n+v_n)t^n \partial_t
   + \overbracket{\sum_{n=-3}^\infty (n+1)u_{n+1}t^{n}}
   + \Big(\sum_{n=-1}^\infty v_nt^n \Big)\Big( \sum_{n=-2}^\infty u_n t^n \Big)
+  \,.
   \end{aligned}
 \end{equation}
-Betrachte nun das Letzte Glied, auf welches wir die Cauchy-Produktformel
+Betrachte nun das letzte Glied, auf welches wir die Cauchy-Produktformel
 anwenden wollen: %TODO: quelle? formel?
 \begin{align*}
 \Big(\sum_{n=-1}^\infty v_nt^n \Big)\Big( \sum_{n=-2}^\infty u_n t^n \Big)
@@ -614,9 +616,9 @@ Q_1\cdot Q_2&=\partial_t^2 + \sum_{n=-2}^\infty (u_n+v_n)t^n \partial_t
   + \overbracket{\sum_{n=-3}^\infty
   \Big( (n+1)u_{n+1} + \sum_{k=0}^{n+3} v_{k-1}u_{n-k+1} \Big) t^{n}}
 \\&\overset{!}{=} \partial_t^2 - (t^{-1} - 2i\sqrt{2a}t^{-2})\partial_t
-  - 3 i\sqrt{2a}t^{-3}
+  - 3 i\sqrt{2a}t^{-3} \,.
 \end{align*}
-Nun haben wir ein Ergebnis, das sich Koeffizientenweise mit der gewünschten
+Damit haben wir ein Ergebnis, das sich Koeffizientenweise mit der gewünschten
 Formel vergleichen lässt:
 \begin{align}
 \label{eq:bedingung1}
@@ -627,8 +629,8 @@ Formel vergleichen lässt:
   \Big( (n+1)u_{n+1} + \sum_{k=0}^{n+3} v_{k-1}u_{n-k+1} \Big) t^{n}
 \end{align}
 Nun können wir mit (\ref{eq:bedingung1}) und (\ref{eq:bedingung2}) jeweils
-nochmals einen Koeffizientenvergleich machen und erhalten zunächst aus
-(\ref{eq:bedingung1}), dass
+nochmals einen Koeffizientenvergleich durchführen und erhalten zunächst aus
+(\ref{eq:bedingung1}), die Bedingungen
 \begin{align}
 2i\sqrt{2a} &= u_{-2} + \underset{=0}{\underbrace{v_{-2}}} = u_{-2}
 \label{eq:bedingung1a}
@@ -637,7 +639,7 @@ nochmals einen Koeffizientenvergleich machen und erhalten zunächst aus
 \\0 &= u_n + v_n & \forall n \geq 0
 \label{eq:bedingung1c}
 \end{align}
-Als nächstes wollen wir dieses Ergenis mit (\ref{eq:bedingung2}) kombinieren.
+welche wir als nächstes mit (\ref{eq:bedingung2}) kombinieren wollen.
 Betrachte zunächst die Vorfaktoren vor $t^{-3}$:
 \begin{align*}
 - 3 i\sqrt{2a} &= (-2)u_{-2} + \sum_{k=0}^{0} v_{k-1}u_{-3-k+1}
@@ -651,7 +653,7 @@ und somit
 \begin{align*}
 \overset{(\ref{eq:bedingung1b})}{\Rightarrow} -1 &=u_{-1}+v_{-1}
 \\ &=u_{-1}+\frac{1}{2}
-\\\Rightarrow u_{-1}&=-\frac{3}{2}
+\\\Rightarrow u_{-1}&=-\frac{3}{2} \,.
 \end{align*}
 Nun zum allgemeinem Koeffizienten vor $t^{n}$ mit $n>-3$:
 \begin{align*}
@@ -687,8 +689,8 @@ v_n &= - u_n = \frac{i}{2\sqrt{2a}}
 \end{align}
 die Koeffizienten von $v(t)$ und $u(t)$ vollständig bestimmt.
 
-Nun lässt sich diese Zerlegung mit $\sE^{-\psi(t)}$ zurücktwisten und erhalte
-damit die Zerlegung
+Nun lässt sich diese Zerlegung mit $\sE^{-\psi(t)}$ zurücktwisten und wir
+erhalten damit die Zerlegung
 \begin{align*}
 \rho^+\cM_{\phi} &\!\!\overset{\text{ \ref{cor:zurücktwisten}}}{=}\!\!
   \underbracket{\rho^+\cM_{\phi}\otimes\sE^{\psi(t)}} \otimes\sE^{-\psi(t)}
@@ -725,7 +727,7 @@ Also zerlegt sich $\cM$, nach einem pull-back mit $\rho:t\mapsto x=-2t^2$, in
   \underset{=:\cR_2}{\underbrace{\cD_{\hat L}/\cD_{\hat L}\cdot \Big(\partial_t
   + \sum_{n=-1}^\infty u_nt^n\Big)}}\otimes\sE^{\psi(t)}\Bigg) \,.
 \]
-Nach zerlegen von $\cR_1$ und $\cR_2$ in eine direkte Summe von elementaren
+Nach Zerlegen von $\cR_1$ und $\cR_2$ in eine direkte Summe von elementaren
 formalen meromorphen Zusammenhängen, wie in Satz \ref{thm:regulärInDirSumme},
 ist die Levelt-Turrittin-Zerlegung vollständig gegeben.
 
@@ -795,7 +797,7 @@ und analog, für $n=1$ und $n=2$
 v_1&= -\frac{3}{2u_{-2}^2} = \frac{3}{16a} = -u_1 &\mbox{und}
   & & v_2&= -\frac{63}{16u_{-2}^3} = -\frac{63i}{256a\sqrt{2a}} = -u_2 \,.
 \end{align*}
-Die letzten zwei Paare sind für die Berechnung nicht von bedeutung und dienen
+Die letzten zwei Paare sind für die Berechnung nicht von Bedeutung und dienen
 nur dazu, das Programm zu prüfen.
 \end{comment}
 Nun vereinfachen wir die Formel:
@@ -815,7 +817,7 @@ v_{n} &= -\frac{1}{u_{-2}}
   + \sum_{k=1}^{n-1} v_{k-1}v_{n-k-1}\Big)
 \\&= \frac{1}{u_{-2}} \Big((n+1)v_{n-1} + \sum_{k=1}^{n-1} v_{k-1}v_{n-k-1}\Big)
 \end{align*}
-Also, zu gegebenem $u_{-2}=2i\sqrt{2a}$, sind die Koeffizienten gegeben durch:
+Zu gegebenem $u_{-2}=2i\sqrt{2a}$, sind die Koeffizienten gegeben durch:
 \begin{align*}
 v_{-1}&=\frac{1}{2} & u_{-1}&=-\frac{3}{2}
 \\v_{0} = -u_{0} &= -\frac{3}{4u_{-2}}
@@ -826,8 +828,8 @@ v_{-1}&=\frac{1}{2} & u_{-1}&=-\frac{3}{2}
 Im Anhang wird in Abschnitt \ref{sec:Koeffs.hs} eine Haskell Modul vorgestellt,
 welches zu gegebenem $u_{-1}$ die Werte von $v(t)$ und $u(t)$ berechnet.
 
-In folgender Abbildung sind die Beträge der Koeffizienten von $v(t)$ in
-Abhängigkeit von $n$ für verschiedene $u_{-2}$ angetragen.
+In der Abbildung \ref{fig:plotKoeffs} sind die Beträge der Koeffizienten von
+$v(t)$ in Abhängigkeit von $n$ für verschiedene $u_{-2}$ angetragen.
 \begin{figure}[htbp]
   \centering
   \includegraphics[angle=270,width=\the\textwidth]{../plot-betrag.pdf}
@@ -844,16 +846,16 @@ Q_1\in\cD_{\hat L} \backslash\cD_L &\Leftrightarrow v(t) \in\hat L \backslash L
 (\partial_t + \sum_{n=-1}^\infty u_nt^n)\in \cD_{\hat L} \backslash \cD_L
 &\Leftrightarrow u(t) \in \hat L \backslash L
 \end{align*}
-Deshalb wollen wir die Potenzreihen $v$ und $u$ und im besonderen deren
-konvergenzverhalten, noch genauer betrachten.
+gilt. Deshalb wollen wir die Potenzreihen $v$ und $u$ und im besonderen deren
+Konvergenzverhalten, noch genauer betrachten.
 Außerdem gilt, dass $ v(t) \in\hat L \backslash L \Leftrightarrow u(t) \in \hat
 L \backslash L$.
-Wir betrachten wir den folgenden zwei klasischen Konvergenzkriterien.
+Wir betrachten die folgenden zwei klasischen Konvergenzkriterien.
 \begin{thm}[Wurzlkriterium nach Cauchy] \label{thm:convKrit}
 Sei $\sum_n a_n x^n$ eine Potenzreihe. Es gilt:
 \[
 \underset{n\rightarrow\infty}{\limsup} \sqrt[n]{|a_n|} = +\infty
-\Rightarrow \text{ die Potenzreihe ist nirgends Konvergent.}
+\Rightarrow \text{ die Potenzreihe ist nirgends konvergent.}
 \]
 \end{thm}
 \begin{proof}
@@ -869,7 +871,7 @@ siehe \cite[§18, Satz 94]{KnoppReihen}.
 Sei $\sum_n a_n x^n$ eine Potenzreihe. Es gilt:
 \[
 \underset{n\rightarrow\infty}{\lim} \frac{|a_{n+1}|}{|a_n|} = 0
-\Rightarrow \text{ die Potenzreihe ist nirgends Konvergent.}
+\Rightarrow \text{ die Potenzreihe ist nirgends konvergent.}
 \]
 \end{thm}
 \begin{proof}
