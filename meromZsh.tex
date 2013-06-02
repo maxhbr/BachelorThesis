@@ -4,51 +4,80 @@
 % TODO: \cM = \cM_K ... replace
 % TODO: Dimension eines meromorphen Zusammenhang
 \chapter{Meromorphe Zusammenhänge}
+\begin{comment}
 Sei $\cM$ ein $\cD$-Modul ungleich Null von endlichem Typ. Falls die
 links-Multiplikation mit $x$ bijektiv ist, so nennen wir $\cM$ einen
 meromorphen Zusammenhang. \cite[Chap 4]{sabbah_cimpa90}
 %TODO: erklären, erwähnen oder entfernen!
+\end{comment}
 
-\paragraph{Systeme von ODEs}
-%TODO: \tilde cO --> \tilde \cO
 \begin{comment}
 \cite[Chap 5.1.1]{hotta2007d} %abgeschrieben
 \end{comment}
-Für eine Matrix $A(x)=(a_{ij}(x))_{ij}\in M(n\times n,K)$
+Wir beginnen mit der klassischen Theorie von Gewöhnlichen
+Differentialgleichungen.
+Sei $V$ ein geeigneter Funktionenraum, beispielsweise der Raum der holomorphen
+Funktionen.
+%TODO: posibly multivalued
+\begin{defn}[Systeme von ODEs]
+Für eine Matrix $A=(a_{ij}(x))_{ij}\in M(n\times n,K)$
 \footnote{
 Es bezeichnet $M(n\times m,k)$ die Menge der $n$ mal
 $m$ dimensionalen Matrizen mit Einträgen in $k$.
 }
 definieren wir das
-\emph{System von gewöhnlichen Differentialgleichungen (kurz ODEs)} als
+\emph{System von gewöhnlichen Differentialgleichungen (kurz System von ODEs)}
+als
 \begin{equation}
 \label{eq:KlassischesODE}
 %TODO: partial oder d
-\frac{d}{dx}u(x)=A(x)u(x) \,,
+\frac{d}{dx}u(x)=Au(x) \,,
 \end{equation}
 wobei $u(x)=\,^t(u_1(x),\dots,u_n(x))$ ein
 Spaltenvektor\footnote{Für $v=(v_1,\dots,v_n)$ ein Vektor, bezeichnet
 $ \,^tv:= \begin{pmatrix} v_{1}\\ \vdots\\ v_{n} \end{pmatrix} $
-den transponierten Vektor.}
-von unbekannten Funktionen. Wir werden (\ref{eq:KlassischesODE}) immer in
-einer Umgebung um $x=0\in\C$ betrachten. Als Lösungen von
-(\ref{eq:KlassischesODE}) betrachten wir Keime von holomorphen (aber
-möglicherweise mehrdeutigen) %mehrwertigen
- %but possibly multivalued auf
-Funktionen an $x=0$ (geschrieben als $\tilde\cO$).
-%auf der punktierten Scheibe
-%$B_\epsilon^*=\{x\in\C|0<|x|<\epsilon\}$, wobei $\epsilon>0$ klein genug sei.
-Wir sagen $v(x)=\,^t(v_1(x),\dots,v_n(x))$ ist eine Lösung von
-(\ref{eq:KlassischesODE}), falls $ v_i\in\tilde \cO$ für alle
+den transponierten Vektor.} von unbekannten Funktionen.
+Wir sagen $v(x)=\,^t(v_1(x),\dots,v_n(x))$ ist eine \emph{Lösung} von
+(\ref{eq:KlassischesODE}), falls $ v_i\in V$ für alle
 $i\in\{1,\dots,n\}$ und $v$ die Gleichung (\ref{eq:KlassischesODE}), auf einer
 Umgebung um die $0$, erfüllt.
+\end{defn}
+
+Durch setzen von $w(x)=Tu(x)$ für eine invertierbare Matrix $T\in GL(n,K)$
+erhält man aus \ref{eq:KlassischesODE} das System 
+\[
+\frac{d}{dx}w(x)=(T^{-1}AT - T^{-1}\frac{d}{dx}T)w(x) \,,
+\]
+und deshalb erhalten wir die folgende Definition.
+\begin{defn}[Differenziell Äquivalent]
+Man nennt $A$ und $B\in M(n\times n,K)$ \emph{(differenziell) äquivalent}
+($A\sim B$) genau dann, wenn es ein $T\in GL(n,K)$ gibt, mit
+$B=T^{-1}AT-T^{-1}\frac{d}{dx}T$.
+Dementsprechend sind zwei Systeme von ODEs äquivalent, wenn ihre zugeordneten
+Matrizen differenziell äquivalent sind.
+\end{defn}
 
 \begin{comment}
-TODO: zeige, das der Lösungsraum die Eigenschaften von $\cD$-Moduln erfüllt\\
-siehe alternativer Zugang
+$1=TT^{-1}$ $\rightsquigarrow$ $T'T^{-1}+T(T^{-1})'=0$\\
+$1=T^{-1}T$ $\rightsquigarrow$ $(T^{-1})'T+T^{-1}T'=0$
 \end{comment}
 
-\subsubsection{Alternativer Zugang}
+Mit elementarer Theorie über Gewöhnliche Differentialgleichungen lässt sich
+ein System von ODEs in eine einzige ODE der Form
+\begin{equation} \label{eq:UmgeformteODE}
+(\underset{=:P}{\underbrace{ a_n\partial_x^n + a_{n-1}\partial_x^{n-1} +
+  \cdots + a_1\partial_x + a_0}})\cdot u(t)=0 \,,
+\end{equation}
+mit $a_i\in K$ für alle $i\in\{0,\dots,n\}$, umschreiben. Dieses so erhaltene
+$P\in\cD_K$ ist ein sogenannter linearer Differentialoperator und es gilt
+\begin{align*}
+v(x) \text{ ist Lösung von } P\cdot u(x)=0
+&&\Rightarrow && \forall Q\in \cD_K \text{ ist } v(x) \text{ Lösung von }
+QP\cdot u(x)=0 \,.
+\end{align*}
+Also ist eine Lösung von $P\cdot u(x)=0$ auch eine Lösung von $Q\cdot u(x)=0$
+für alle $Q\in\cD_K\cdot P\vartriangleleft \cD_K$.
+
 \begin{comment}
 Sei $P$ ein linearer Differentialoperator mit Koeffizienten in $a_i(x)\in\Ckx$
 geschrieben als $P=\sum^{d}_{i=0}{a_{i}(x)\partial_x^i}$.
@@ -59,18 +88,9 @@ Falls $0$ kein singulärer Punkt ist, hat $P$ genau $d$ über $\C$ Unabhängige
 Lösungen in $\Ckx$. %TODO: oder \tilde\cO
 \end{comment}
 
-\cite[3.1.1]{sabbah_cimpa90} Sei $\cF$ ein Funktionenraum, auf dem die
-Differentialoperatoren $\cD$ wirken. Ein Element $u\in \cF$ ist Lösung von
-$P\in\cD$ falls $P\cdot u=0$ gilt.
-
-Falls $u$ ein Lösung von $P$ ist, so ist $u$ auch Lösung von $Q\cdot P$ mit
-$Q\in \cD$. Also hängt die Lösung nur vom Links Ideal $\cD\cdot
-P\vartriangleleft\cD$ ab.
-
 \section{Meromorphe Zusammenhänge}
 Nun wollen wir dieses klassische Gebilde nun in die moderne Sprache der
 meromorphen Zusammenhänge übersetzen.
-%\section{Meromorpher Zusammenhang (Definition)}
 %Quelle ist \cite{sabbah_cimpa90}
 \begin{defn}[Meromorpher Zusammenhang] \label{def:merom-zush}
 Ein \emph{meromorpher Zusammenhang} (bei $x=0$) ist ein Tupel
@@ -86,7 +106,7 @@ und $u\in \cM_K$ die \emph{Leibnitzregel}
 erfüllen soll.
 \end{itemize}
 \end{defn}
-\begin{bem}[Formaler meromorpher Zusammenhang]
+\begin{bem} %[Formaler meromorpher Zusammenhang]
 Analog definiert man einen \emph{formalen meromorphen Zusammenhang}
 $(\cM_{\hat K},\partial)$ bestehend, analog wie in Definition
 \ref{def:merom-zush}, aus folgenden Daten:
@@ -98,19 +118,22 @@ erfüllen soll.
 \end{itemize}
 \end{bem}
 
+\begin{bem}
+Später wird man auf die Angabe von $\partial$ verzichten und einfach $\cM_K$
+als den meromorphen Zusammenhang bezeichnen, auch wird manchmal auf die Angabe
+von $K$ im Subscript verzichtet, sofern klar ist, welches $K$ gemeint ist.
+\end{bem}
+
 \begin{defn}
 Seien $(\cM,\partial_\cM)$ und $(\cN,\partial_\cN)$ zwei meromorphe
-Zusammenhänge über $k$. Eine $k$-lineare Abbildung $\phi:\cM\rightarrow\cN$ ist
-ein Morphismus von meromorphen Zusammenhängen, falls sie
-$\phi\circ\partial_\cM=\phi\circ\partial_\cN$ erfüllt. In diesem Fall schreiben
-wir auch $\phi:(\cM,\partial_\cM)\rightarrow(\cN,\partial_\cN)$.
+Zusammenhänge über $k$. Eine $k$-lineare Abbildung $\phi:\cM\rightarrow\cN$
+ist ein Morphismus von meromorphen Zusammenhängen, falls sie
+$\phi\circ\partial_\cM=\phi\circ\partial_\cN$ erfüllt. In diesem Fall
+schreiben wir auch $\phi:(\cM,\partial_\cM)\rightarrow(\cN,\partial_\cN)$.
+Ein solcher Morphismus ist ein Isomorphismus, falls die Abbildung
+$\phi:\cM\rightarrow\cN$ ein Isomorphismus von $k$-Vektorräumen ist.
 \end{defn}
-\begin{comment}
-TODO: Wann sind die Isomorph\\
-$\cM\cong \cN$ und die Ableitungen kommutieren mit dem Isomorphismus
-\end{comment}
 
-\begin{comment}
 \begin{defn}
 Wir erhalten damit die Kategorie der meromorphen Zusammenhänge über $k$ mit
 \begin{align*}
@@ -119,76 +142,161 @@ Wir erhalten damit die Kategorie der meromorphen Zusammenhänge über $k$ mit
   \text{ Morphismus von meromorphen Zusammenhängen.}
 \end{align*}
 \end{defn}
-\end{comment}
 
-\begin{bem}
-Später wird man auf die Angabe von $\partial$ verzichten und einfach $\cM_K$
-als den meromorphen Zusammenhang bezeichnen, auch wird manchmal auf die Angabe
-von $K$ verzichtet, sofern klar ist, welches $K$ gemeint ist.
+\begin{lem} Sei $\cM_K$ ein endlich dimensionaler $K$-Vektor Raum mit
+$\partial_1$ und $\partial_2$ zwei darauf definierte Derivationen, so gilt, die
+Differenz zweier Derivationen ist $K$-linear.
+\end{lem}
+\begin{proof}
+Seien $\partial_1$ und $\partial_2$ zwei Derivationen auf $\cM_K$.
+Da $\partial_1$ und $\partial_2$ $\C$-linear, ist $\partial_1-\partial_2$
+$\C$-linear, also muss nur noch gezeigt werden, dass
+$(\partial_1-\partial_2)(fu)=f\cdot(\partial_1-\partial_2)(u)$ $\forall f\in
+K$ und $u\in\cM_K$ gilt.\\
+%TODO: wieso gilt das?
+\begin{align*}
+(\partial_1-\partial_2)(fu) &= \partial_1(fu)-\partial_2(fu)\\
+&= f'u+f\partial_1u-f'u-f\partial_2u\\
+&= \underset{=0}{\underbrace{f'u-f'u}}+f\cdot(\partial_1u-\partial_2u)\\
+&= f\cdot(\partial_1-\partial_2)(u)\\
+\end{align*}
+\end{proof}
 \begin{comment}
-\cite[Rem 5.1.2.]{hotta2007d}
-Die Bedingung (\ref{eq:Leibnitzregel}) ist zur schwächeren Bedingung
-\[
-\partial(fu)=f'u+f\partial u \,,
-\]
-welche für alle $f\in \tilde\cO$ und für alle $u\in \cM_K$ erfüllt sein muss,
-äquivalent.
+\begin{cor}
+Für $(K^r,\partial)$ ein meromorpher Zusammenhang existiert ein $A\in M(r\times
+r,K)$, so dass $\partial=\frac{d}{dx}-A$.
+\end{cor}
+\begin{proof}
+Es sei $(K^r,\partial)$ ein meromorpher Zusammenhang.  So ist
+$\frac{d}{dx}-\partial:K^r\rightarrow K^r$ $K$-linear, also lässt sich durch
+eine Matrix $A\in M(r\times r,K)$ darstellen
+%$\frac{d}{dx}-\partial=A$
+, also ist, wie
+behauptet, $\partial=\frac{d}{dx}-A$.
+\end{proof}
 \end{comment}
-\end{bem}
 
-\begin{defn}[Zusammenhangsmatrix] \cite[Seite 129]{hotta2007d}
+\begin{comment}
+\cite[Seite 129]{hotta2007d}
+\end{comment}
+\begin{defn}[Zusammenhangsmatrix]
 Sei $(\cM_K,\partial)$ ein meromorpher Zusammenhang so wähle eine $K$-Basis
 $\{e_i\}_{i\in\{1,\dots,n\}}$ von $\cM$. Dann ist die
 \emph{Zusammenhangsmatrix bzgl. der Basis $\{e_i\}_{i\in\{1,\dots,n\}}$} die
-Matrix $A(x)=(a_{ij}(x))_{i,j\in\{1,\dots,n\}}\in M(n\times n,K)$ definiert
+Matrix $A=(a_{ij}(x))_{i,j\in\{1,\dots,n\}}\in M(n\times n,K)$ definiert
 durch
 %\[ \partial e_j=-\sum_{i=1}^na_{ij}(x)e_i \,. \]
 \[ a_{ij}(x) = -^te_i \partial e_j \,. \]
 \end{defn}
 
-Also ist, bezüglich der Basis $\{e_i\}_{i\in\{1,\dots,n\}}$, die Wirkung von
+Damit ist, bezüglich der Basis $\{e_i\}_{i\in\{1,\dots,n\}}$, die Wirkung von
 $\partial$ auf $u=:\,^t(u_1,\dots,u_n)$ beschrieben durch
-\[
-\partial(u) = \partial \Big( \sum_{i=1}^nu_i(x)e_i \Big)
-\overbox{=}{??}\sum_{i=1}^n \Big( u_i'(x)-
-\sum_{j=1}^na_{ij}u_j(x) \Big)e_i \,.
-\]
-Einfache Umformungen zeigen, dass die Bedingung $\partial u(x)=0$, für
-$u(x)\in \sum_{i=1}^n u_ie_i\in \tilde \cO \otimes_K\cM$, äquivalent zu der
-Gleichung
-\begin{equation*}
-u'(x)=A(x)u(x)
-\end{equation*}
-für $u(x)=\,^t(u_1(x),\dots,u_n(x))\in\tilde \cO^n$. Damit haben wir gesehen,
-dass jeder meromorphe Zusammanhang $(\cM,\partial)$ ausgestattet mit einer
-$K$-Basis $\{e_i\}_{i\in\{1,\dots,n\}}$ von $\cM$ zu einem ODE zugeordnet
-werden kann.
-
-Umgekehrt können wir für jede Matrix $A(x)=(a_{ij}(x))$ den
-assoziierten meromorphen Zusammenhang $(\cM_A,\partial_A)$ %TODO: improve notation
-angeben durch
-\begin{align*}
-\cM_A & :=\bigoplus_{i=1}^n Ke_i \,,
-& \partial_A \sum_{i=1}^n u_ie_i &:= \sum_{i=1}^n\left(
-  \frac{\partial u_i}{\partial x}-\sum_{j=1}^na_{ij}(x)u_j \right)e_i \,.
-\end{align*}
 \iffalse
-  \begin{align*}
-  \cM_A & :=\bigoplus_{i=1}^n Ke_i \,, & \partial_A e_i &:=
-  -\sum_{i=1}^na_{ij}(x)e_i \,.
-  \end{align*}
+  \[
+  \partial(u) = \partial \Big( \sum_{i=1}^nu_i(x)e_i \Big)
+  =\sum_{i=1}^n \Big( u_i'(x)-\sum_{j=1}^na_{ij}u_j(x) \Big)e_i \,.
+  \]
 \fi
-Genauer ausgeführt wird dies beispielsweise in \cite[Sec 5.1]{hotta2007d}.
+\begin{align*}
+\partial(u) &= \partial \Big( \sum_{i=1}^nu_i(x)e_i \Big)
+\\&=\sum_{i=1}^n \Big( u_i'(x)-\sum_{j=1}^na_{ij}u_j(x) \Big)e_i
+\\&=\underbracket{\sum_{i=1}^n u_i'(x)e_i} 
+  - \underbracket{\sum_{i=1}^n\sum_{j=1}^na_{ij}u_j(x)e_i}
+\\&=\overbracket{u'(x)} 
+  - \overbracket{Au(x)}
+\end{align*}
+Damit ist die Bedingung $\partial u(x)=0$, für $u(x)= \sum_{i=1}^n u_ie_i$,
+äquivalent zu der Gleichung
+\begin{equation*}
+u'(x)=Au(x)
+\end{equation*}
+für $u(x)=\,^t(u_1(x),\dots,u_n(x))$. Damit haben wir gesehen,
+dass jeder meromorphe Zusammanhang $(\cM,\partial)$ ausgestattet mit einer
+$K$-Basis $\{e_i\}_{i\in\{1,\dots,n\}}$ von $\cM$ zu einem System von
+gewöhnlichen Differentialgleichungen zugeordnet werden kann.
 
-\section{Eigenschaften / Äquivalenz zu holonomen lokalisierten $\cD$-Moduln}
+\begin{comment}
+\begin{prop}[Transformationsformel] \cite[Chap 5.1.1]{hotta2007d}
+In der Situation
+\begin{center}
+\begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
+\matrix (m) [
+  matrix of math nodes
+  , row sep=3em
+  , column sep=3em
+  %, text height=3em
+  %, text depth=0.25em
+]
+{
+  K^r &   &   & K^r \\
+      & M & M & \\
+  K^r &   &   & K^r \\
+};
+\path[->,font=\scriptsize,>=angle 90]
+(m-1-1) edge node[descr]{$\cong$} node[above]{$\phi$} (m-2-2)
+(m-3-1) edge node[descr]{$\cong$} node[above]{$\psi$} (m-2-2)
+(m-1-4) edge node[descr]{$\cong$} node[above]{$\phi$} (m-2-3)
+(m-3-4) edge node[descr]{$\cong$} node[above]{$\psi$} (m-2-3)
+
+(m-2-2) edge node[above]{$\partial$} (m-2-3)
+
+(m-1-1) edge node[above]{$\frac{d}{dz}+A$} (m-1-4)
+(m-3-1) edge node[above]{$\frac{d}{dz}+B$} (m-3-4)
+
+(m-3-1) edge node[descr]{$\cong$} node[right]{$T$} (m-1-1)
+(m-3-4) edge node[descr]{$\cong$} node[left]{$T$} (m-1-4)
+;
+
+\path[>=stealth,|->]
+;
+\end{tikzpicture}
+\end{center}
+mit $\phi,\psi$ und $T$ $K$-Linear und $\partial,(\frac{d}{dx}+A)$ und
+$(\frac{d}{dx}+B)$ $\C$-Linear, gilt:\\
+Der meromorphe Zusammenhang. $\frac{d}{dx}+A$ auf $K^r$ wird durch
+Basiswechsel
+$T\in GL(r,K)$ zu
+\[
+\frac{d}{dx}+(T^{-1}\cdot T'+T^{-1}AT) = \frac{d}{dx}+B
+\]
+\end{prop}
+\end{comment}
+
+\begin{defn}
+Wenn wir umgekehrt mit einer Matrix $A=(a_{ij}(x))\in M(n\times n,K)$,
+welche eine System von ODEs beschreibt, beginnen, können wir durch
+\begin{align*}
+\cM_A & :=\bigoplus_{i=1}^n Ke_i &&\text{und}
+& \partial_A \sum_{i=1}^n u_ie_i &:= \sum_{i=1}^n\left(
+  \frac{\partial u_i}{\partial x}-\sum_{j=1}^na_{ij}(x)u_j \right)e_i
+\end{align*}
+den \emph{assoziierten meromorphen Zusammenhang} $(\cM_A,\partial_A)$ definieren.
+\end{defn}
+\begin{lem}
+Sind $A_1,$ $A_2\in M(n\times n,K)$ zwei Matrizen, die zwei Systeme von ODEs
+beschreiben, dann gilt
+\begin{align*}
+\frac{d}{dx}u(x)=A_1u(x) && \text{ ist äquivalent zu }
+  && \frac{d}{dx}u(x)=A_2u(x)
+\end{align*}
+genau dann, wenn
+\begin{align*}
+(\cM_{A_1},\partial_{A_1}) && \text{ ist äquivalent zu }
+  && (\cM_{A_2},\partial_{A_2}) \,.
+\end{align*}
+\end{lem}
+Damit haben wir eine Eins zu Eins Beziehung zwischen meromorphen
+Zusammenhängen und Systemen von ODEs.
+Genauer betrachtet wird dies beispielsweise in \cite[Sec 5.1]{hotta2007d}.
+
+\section{Äquivalenz zu holonomen lokalisierten $\cD$-Moduln}
 %Hier nun einige Eigenschaften meromorpher Zusammenhänge.
 \begin{thm}
-\cite[Thm 4.3.2]{sabbah_cimpa90}
 Ein meromorpher Zusammenhang bestimmt ein holonomes lokalisiertes
 $\cD_K$-Modul und umgekehrt.
 \end{thm}
 \begin{proof}
-\cite[Thm 4.3.2]{sabbah_cimpa90}
+Dies wird beispielsweise in \cite[Thm 4.3.2]{sabbah_cimpa90} bewiesen.
 \end{proof}
 
 \begin{lemdef}
@@ -269,171 +377,6 @@ Sei $P=P_1\cdot P_2$ mit $P_1,P_2\in \cD_K$ wie in Satz
 \end{align*}
 \end{proof}
 
-\begin{lem}
-Sei $(\cM_K,\partial)$ ein gegebener meromorpher Zusammenhang, und $\phi$ ein
-Basisisomorphismus von $K^r$ nach $\cM_K$, also in der Situation
-\begin{center}
-\begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
-\matrix (m) [
-  matrix of math nodes
-  , row sep=3em
-  , column sep=3em
-  %, text height=3em
-  %, text depth=0.25em
-]
-{
-  \cM_K & \cM_K \\
-  K^r   & K^r \\
-};
-\path[->,font=\scriptsize,>=angle 90]
-(m-1-1) edge node[above]{$\partial$} (m-1-2)
-(m-2-1) edge node[above]{$\phi^{-1}\circ\partial\circ\phi$} (m-2-2)
-;
-%TODO: make this harpoon arrows
-\path[->,font=\scriptsize,>=angle 90]
-(m-2-1) edge node[descr]{$\cong$} node[right]{$\phi$} (m-1-1)
-(m-2-2) edge node[descr]{$\cong$} node[left]{$\phi$} (m-1-2)
-;
-
-\path[>=stealth,|->]
-;
-\end{tikzpicture}
-\end{center}
-gilt: $(K^r,\phi^{-1}\circ\partial\circ\phi)$ ist ebenfalls ein meromorpher Zusammenhang.
-\end{lem}
-\begin{proof}
-TODO, (3. Treffen)
-\end{proof}
-\begin{comment} %Allgemeiner
-\begin{lem}
-Sei $(\cM_K,\partial)$ ein gegebener meromorpher Zusammenhang, und
-$\phi:\cM\rightarrow\cN$ ein Isomorphismus so ist
-$(\cN,\phi^{-1}\circ\partial\circ\phi)$ ein zu $(\cM_K,\partial)$ isomorpher
-Zusammenhang.
-\begin{center}
-\begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
-\matrix (m) [
-  matrix of math nodes
-  , row sep=3em
-  , column sep=3em
-  %, text height=3em
-  %, text depth=0.25em
-]
-{
-  \cM_K & \cM_K \\
-  \cN   & \cN \\
-};
-\path[->,font=\scriptsize,>=angle 90]
-(m-1-1) edge node[above]{$\partial$} (m-1-2)
-(m-2-1) edge node[above]{$\phi^{-1}\circ\partial\circ\phi$} (m-2-2)
-;
-%TODO: make this harpoon arrows
-\path[->,font=\scriptsize,>=angle 90]
-(m-2-1) edge node[descr]{$\cong$} node[right]{$\phi$} (m-1-1)
-(m-2-2) edge node[descr]{$\cong$} node[left]{$\phi$} (m-1-2)
-;
-
-\path[>=stealth,|->]
-;
-\end{tikzpicture}
-\end{center}
-\end{lem}
-\begin{proof}
-TODO, (3. Treffen)
-\end{proof}
-\end{comment}
-
-\begin{lem} Sei $\cM_K$ %\cong K^r
- ein endlich dimensionaler $K$-Vektor Raum mit $\partial_1$ und $\partial_2$
-zwei darauf definierte Derivationen, so gilt, die Differenz zweier
-Derivationen ist $K$-linear.
-\end{lem}
-\begin{proof}
-Seien $\partial_1$ und $\partial_2$ zwei Derivationen auf $\cM_K$.
-Da $\partial_1$ und $\partial_2$ $\C$-linear, ist $\partial_1-\partial_2$
-$\C$-linear, also muss nur noch gezeigt werden, dass
-$(\partial_1-\partial_2)(fu)=f\cdot(\partial_1-\partial_2)(u)$ $\forall f\in
-K$ und $u\in\cM_K$ gilt.\\
-%TODO: wieso gilt das?
-\begin{align*}
-(\partial_1-\partial_2)(fu) &= \partial_1(fu)-\partial_2(fu)\\
-&= f'u+f\partial_1u-f'u-f\partial_2u\\
-&= \underset{=0}{\underbrace{f'u-f'u}}+f\cdot(\partial_1u-\partial_2u)\\
-&= f\cdot(\partial_1-\partial_2)(u)\\
-\end{align*}
-\end{proof}
-\begin{cor}
-Für $(K^r,\partial)$ ein meromorpher Zusammenhang existiert ein $A\in M(r\times
-r,K)$, so dass $\partial=\frac{d}{dx}-A$.
-\end{cor}
-\begin{proof}
-Es sei $(K^r,\partial)$ ein meromorpher Zusammenhang.  So ist
-$\frac{d}{dx}-\partial:K^r\rightarrow K^r$ $K$-linear, also lässt sich durch
-eine Matrix $A\in M(r\times r,K)$ darstellen
-%$\frac{d}{dx}-\partial=A$
-, also ist, wie
-behauptet, $\partial=\frac{d}{dx}-A$.
-\end{proof}
-
-%TODO: beobachtung...
-%TODO: differenz ist linear
-
-\begin{prop}[Transformationsformel] \cite[Chap 5.1.1]{hotta2007d}
-In der Situation
-
-\begin{center}
-\begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
-\matrix (m) [
-  matrix of math nodes
-  , row sep=3em
-  , column sep=3em
-  %, text height=3em
-  %, text depth=0.25em
-]
-{
-  K^r &   &   & K^r \\
-      & M & M & \\
-  K^r &   &   & K^r \\
-};
-\path[->,font=\scriptsize,>=angle 90]
-(m-1-1) edge node[descr]{$\cong$} node[above]{$\phi$} (m-2-2)
-(m-3-1) edge node[descr]{$\cong$} node[above]{$\psi$} (m-2-2)
-(m-1-4) edge node[descr]{$\cong$} node[above]{$\phi$} (m-2-3)
-(m-3-4) edge node[descr]{$\cong$} node[above]{$\psi$} (m-2-3)
-
-(m-2-2) edge node[above]{$\partial$} (m-2-3)
-
-(m-1-1) edge node[above]{$\frac{d}{dz}+A$} (m-1-4)
-(m-3-1) edge node[above]{$\frac{d}{dz}+B$} (m-3-4)
-
-(m-3-1) edge node[descr]{$\cong$} node[right]{$T$} (m-1-1)
-(m-3-4) edge node[descr]{$\cong$} node[left]{$T$} (m-1-4)
-;
-
-\path[>=stealth,|->]
-;
-\end{tikzpicture}
-\end{center}
-mit $\phi,\psi$ und $T$ $K$-Linear und $\partial,(\frac{d}{dx}+A)$ und
-$(\frac{d}{dx}+B)$ $\C$-Linear, gilt:\\
-Der meromorphe Zusammenhang. $\frac{d}{dx}+A$ auf $K^r$ wird durch
-Basiswechsel
-$T\in GL(r,K)$ zu
-\[
-\frac{d}{dx}+(T^{-1}\cdot T'+T^{-1}AT) = \frac{d}{dx}+B
-\]
-\end{prop}
-\begin{defn}[Differenziell Äquivalent]
-Man nennt $A$ und $B$ \emph{differenziell Äquivalent} ($A\sim B$) genau
-dann, wenn es ein $T\in
-GL(r,K)$ gibt, mit $B=T^{-1}\cdot T'+T^{-1}AT$.
-\end{defn}
-
-\begin{comment}
-$1=TT^{-1}$ $\rightsquigarrow$ $T'T^{-1}+T(T^{-1})'=0$\\
-$1=T^{-1}T$ $\rightsquigarrow$ $(T^{-1})'T+T^{-1}T'=0$
-\end{comment}
-
 \section{Newton Polygon} \label{sec:NewtonPolygon}
 % ist dies eine Invariante??
 % gestohlen aus der ZulaBarbara Seite 46
@@ -492,9 +435,9 @@ $\cM_K\cong\cD_K/\cD_K\cdot P$).
 
 \begin{exmp} \label{exmp:Newton-Polygon}
 \begin{enumerate}
-\item Ein besonders einfaches Beispiel ist
-$P_1=x^{\textcolor{red}1}\partial_x^{\textcolor{blue}2}$.  Es ist leicht
-abzulesen, dass
+\item Ein einfaches Beispiel ist
+$P_1=x^{\textcolor{red}1}\partial_x^{\textcolor{blue}2}$.  Es ist abzulesen,
+dass
 \begin{align*}
 \textcolor{blue}m &= \textcolor{blue}2 &
 \text{und}&&
@@ -505,10 +448,13 @@ so dass
 H(P_1)=\Big( (\textcolor{blue}{2},\textcolor{red}{1}-\textcolor{blue}{2}) +
 \R_{\leq 0}\times \R_{\geq 0} \Big) =\{(u,v)\in\R^2|u\leq 2, v\geq -1\} \,.
 \]
-In Abbildung \ref{fig:Newton-Polygon1} ist $H(P_1)$ (blau) sowie das Newton
-Polygon eingezeichnet. Offensichtlich ist $\slopes(P_1)=\{0\}$ und damit ist
-$P_1$ regulär singulär.
-\item \cite[Bsp 5.3. 2.]{ZulaBarbara}
+In Abbildung \ref{fig:Newton-Polygon1} ist der Quadrant, der zum Monom
+$x\partial_x^2$ gehört (blau) sowie das Newton Polygon eingezeichnet.
+Offensichtlich ist $\slopes(P_1)=\{0\}$ und damit ist $P_1$ regulär singulär.
+\item 
+\begin{comment}
+\cite[Bsp 5.3. 2.]{ZulaBarbara}
+\end{comment}
 Sei $P_2=x^4(x+1)\partial_x^4+x\partial_x^2+\frac{1}{x}\partial_x+1$, so kann
 man das entsprechende Newton Polygon konstruieren.
 Das Newton Polygon wurde in Abbildung \ref{fig:Newton-Polygon2} visualisiert.

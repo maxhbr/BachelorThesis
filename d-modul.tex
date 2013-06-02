@@ -89,7 +89,7 @@ diesen Ring auch als
 $k=K:=\C\{x\}[x^{-1}]$ der Ring der Laurent Reihen
 \item $\cD_{\hat K}:=\Cfxl<\partial_x>$ falls $k=\hat
 K:=\Cfx[x^{-1}]$ der Ring der formalen Laurent Reihen
-\footnote{Wird mit $\hat\cD_{\hat K}$ bezeichnet, in \cite{ZulaBarbara}.}.
+\footnote{Wird in \cite{ZulaBarbara} mit $\hat\cD_{\hat K}$ bezeichnet.}.
 \end{itemize}
 \end{defn}
 \begin{bem}
@@ -210,8 +210,9 @@ aber kein rechts $\cO_X$-Untermodul ist.
 
 \begin{prop}
 \cite[Exmp 1.1]{ArkhipovDmod}
-Sei $X=\A^1=\C$, $\cO_X=\C[t]$ und $\Theta_X=\C[x]\partial_x$. Wobei $\partial_x$
-als $\partial_x(x^n)=nx^{n-1}$ wirkt. Dann sind die Differentialoperatoren
+Sei $X=\A^1=\C$, $\cO_X=\C[t]$ und $\Theta_X=\C[x]\partial_x$. Wobei
+$\partial_x$ als $\partial_x(x^n)=nx^{n-1}$ wirkt. Dann sind die
+Differentialoperatoren
 \begin{align*}
 \cD_X &= \C[x,\partial_x], & \mbox{mit} & & \partial_x x-x\partial_x & =1.
 \end{align*}
@@ -233,9 +234,12 @@ Wenn im folgendem von $\cD$-Moduln gesprochen wird, werden immer
 %, wie auch \cite[Chapter 1.6.]{arapuraNotes},
 links $\cD$-Moduln gemeint.
 
-\begin{exmp}[links $\cD$-Moduln]
+\begin{exmp}
+Hier ein paar Beispiele für (links) $\cD$-Moduln
 % Sergey-Arkhipov-MAT1191_Lecture_Notes.pdf Chapter 2.1
+\begin{comment}
 \cite[Exmp 2.2]{ArkhipovDmod}
+\end{comment}
 %Sei $X=\A^1$ und $\sO_X=\C[t]$.
 \begin{enumerate}
 %
@@ -244,21 +248,27 @@ links $\cD$-Moduln gemeint.
 \item $\cM=\C[x]$ oder $\cM=\C[x,x^{-1}]$ jeweils durch $x\cdot x^{m}=x^{m+1}$
 und $\partial(x^m)=mx^{m-1}$
 %
-\item \cite[Exmp 2.2]{ArkhipovDmod}
-Führe formal, also ohne analytischen Hintergrund, ein Symbol
+\item
+Führe formal, also ohne analytischen Hintergrund, ein Objekt
 $\exp(\lambda x)$ ein, mit $\partial(f(x)\exp(\lambda x))=\frac{\partial
 f}{\partial x}\exp(\lambda x)+f\lambda\exp(\lambda x)$.  So ist
-$\cM=\sO_X\exp(\lambda x)$ ein $\cD$-Modul.
+$\cM=\C[x]\exp(\lambda x)$ ein $\cD$-Modul.
 %
-\item \cite[Exmp 3.1.4]{ginzburg}
+\begin{comment}
+\cite[Exmp 2.2]{ArkhipovDmod}
+\end{comment}
+\item 
 Führe formal ein Symbol $\log(x)$ mit den Eigenschaften
 $\partial_x\log(x)=\frac{1}{x}$ ein. Erhalte nun das $\cD$-Modul
-$\C[x]\log(x)+\C[x,x^{-1}]$. Dieses Modul ist über $\cD$ erzeugt durch
-$\log(x)$ und man hat
+$\C[x]\log(x)+\C[x,x^{-1}]$. Dieses Modul ist über $\cD$ durch $\log(x)$
+erzeugt und man hat
 \[
 \C[x]\log(x)+\C[x,x^{-1}]=\cD\cdot\log(x)=\cD\slash\cD(\partial_x x\partial_x) \,.
 \]
 %
+\begin{comment}
+\cite[Exmp 3.1.4]{ginzburg}
+\end{comment}
 \end{enumerate}
 %TODO: Variable zu t machen?
 \end{exmp}
@@ -285,8 +295,8 @@ folgt damit, dass $\cM_k\cong \cD_k/\mathfrak{a}$ für ein
 $0\neq\mathfrak{a}\vartriangleleft\cD_k$.
 \end{defn}
 \begin{bem}
-In \cite{coutinho1995primer} wird dies über die Dimension definiert, und bei
-\cite{sabbah_cimpa90} über die charakteristische Varietät.
+In \cite{coutinho1995primer} wird der Begriff holonom über die Dimension
+definiert und bei \cite{sabbah_cimpa90} über die charakteristische Varietät.
 \end{bem}
 
 \begin{bem} 

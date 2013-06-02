@@ -1,31 +1,47 @@
 anhang-plot-newton-polygon.tex:          %TODO
 anhang-plot-newton-polygon.tex:          %TODO
+anhang-quellcode.tex:set term push #TODO: unnötig?
 beispiele/formal_b.tex:%TODO: besserer Titel
 beispiele/formal_b.tex:  %TODO: rightarrow oder mapsto?
 beispiele/formal_b.tex:        -\partial_t(f)\cdot t^2= %TODO: wegen klammerung?
 d-modul.tex:%TODO: sabah-cimpa90.pdf  seite 3
 d-modul.tex:%TODO: ein teil des Beweises ist "left as an exersice"
-d-modul.tex:\begin{proof} TODO
+d-modul.tex:TODO: Treffen?
 d-modul.tex:%TODO: Variable zu t machen?
 d-modul.tex:(linear differential system) %TODO: defn
 elem-mer-zsh.tex:Wähle einen zyklischen Vektor $m\in\cM_{\hat K}$ % TODO: richtiger Raum?
 elem-mer-zsh.tex:\begin{comment} TODO: bis hier schon klar \end{comment}
 elem-mer-zsh.tex:%TODO: rename to L-T-Theorem???
 elem-mer-zsh.tex:mit $\xi^p=1$, bringen. Sei so ein $\xi$ ab jetzt fixiert. %TODO: besonderes xi?
-elem-mer-zsh.tex:  %\mbox{\footnote{$(\xi^i)^p=1\forall i$}} % TODO: correct footnote
 elem-mer-zsh.tex:%TODO: auch nicht formal
 elem-mer-zsh.tex:%TODO: verwendet hier schon das klassische Levelt-Turittin
 elem-mer-zsh.tex: &=TODO
-elem-mer-zsh.tex:TODO: induktionsanfang und -schritt kennzeichnen
+elem-mer-zsh.tex:TODO: Induktionsanfang und -schritt kennzeichnen
 elem-mer-zsh.tex:TODO
 elem-mer-zsh.tex:\begin{comment}TODO: Hier weiter \end{comment}
 elem-mer-zsh.tex:\begin{comment}TODO: Hier weiter \end{comment}
 grundlagen.tex:%TODO: Pfeile
 grundlagen.tex:  %TODO: Pfeile
-grundlagen.tex:%TODO: tensorprodukt / faserprodukt zum basiswechsel
 grundlagen.tex:  %TODO: Pfeile
 grundlagen.tex:  %TODO: Pfeile
-grundlagen.tex:  %TODO: Pfeile
+main/final.log:          term push #TODO: unnötig?
+main/final.log:                     TODO: unnötig?
+main/final.log:l.154 set term push #TODO:
+main/final.log:l.154 set term push #TODO: 
+main/final.log:l.154 set term push #TODO: 
+main/final.log:l.154 set term push #TODO: unnö
+main/final.log:l.154 set term push #TODO: unnö
+main/final.log:l.154 set term push #TODO: unnötig?
+main/final.log:l.154 set term push #TODO: unnötig?
+main/main.log:          term push #TODO: unnötig?
+main/main.log:                     TODO: unnötig?
+main/main.log:l.154 set term push #TODO:
+main/main.log:l.154 set term push #TODO: 
+main/main.log:l.154 set term push #TODO: 
+main/main.log:l.154 set term push #TODO: unnö
+main/main.log:l.154 set term push #TODO: unnö
+main/main.log:l.154 set term push #TODO: unnötig?
+main/main.log:l.154 set term push #TODO: unnötig?
 main/main.ps:w FJ(TODO,)30 b(\(3.)i(T)-8 b(re\033en\))p 3633 5576
 Übereinstimmungen in Binärdatei main/main.dvi.
 main.tex:  ,fontsize=11pt % TODO
@@ -39,12 +55,12 @@ meromZsh.tex:% TODO: Dimension eines meromorphen Zusammenhang
 meromZsh.tex:%TODO: erklären, erwähnen oder entfernen!
 meromZsh.tex:%TODO: \tilde cO --> \tilde \cO
 meromZsh.tex:%TODO: partial oder d
-meromZsh.tex:TODO: zeige, das der lösungsraum die eigenschaften von $\cD$-Moduln erfüllt\\
+meromZsh.tex:TODO: zeige, das der Lösungsraum die Eigenschaften von $\cD$-Moduln erfüllt\\
 meromZsh.tex:Lösungen in $\Ckx$. %TODO: oder \tilde\cO
 meromZsh.tex:\partial(fu)=f'u+f\partial u %TODO: hier klammern um das letzte u ?
 meromZsh.tex:TODO: Wann sind die Isomorph\\
 meromZsh.tex:assoziierten meromorphen Zusammenhang $(\cM_A,\partial_A)$ %TODO: improve notation
-meromZsh.tex:%TODO: reihenfolge bei sabbah anderst!!!
+meromZsh.tex:%TODO: Reihenfolge bei sabbah anderst!!!
 meromZsh.tex:\cite[Seite 64]{ZulaBarbara} %TODO: hat die sich hier verschrieben???
 meromZsh.tex:%TODO: make this harpoon arrows
 meromZsh.tex:TODO, (3. Treffen)
@@ -53,19 +69,20 @@ meromZsh.tex:TODO, (3. Treffen)
 meromZsh.tex:%TODO: wieso gilt das?
 meromZsh.tex:%TODO: beobachtung...
 meromZsh.tex:%TODO: differenz ist linear
-meromZsh.tex:%TODO: welche definition ist besser?
-meromZsh.tex:%TODO: zeige, das beide definitionen gleich sind
-meromZsh.tex:%TODO: bessere formulierung
-meromZsh.tex:TODO
-meromZsh.tex:TODO: mache alle Linearform $L$ zu $\ell$
+meromZsh.tex:%TODO: welche Definition ist besser?
+meromZsh.tex:%TODO: zeige, das beide Definitionen gleich sind
+meromZsh.tex:%TODO: bessere Formulierung
+meromZsh.tex:%TODO
+meromZsh.tex:TODO: mache alle Linearformen $L$ zu $\ell$
 meromZsh.tex:TODO
 meromZsh.tex:TODO: ist $\ell$ Slope (gehört zu Slope) dann hat $\sigma_\ell(P)$ zumindest 2
 meromZsh.tex:%TODO: titel: Operations on vector spaces with connection
 meromZsh.tex:%TODO: verzweigung statt pull-back?
+meromZsh.tex:  %TODO: Pfeile
 meromZsh.tex:%TODO: move after slope definition!!!
 meromZsh.tex:TODO
 meromZsh.tex:TODO: damit wird $\hat L$ zu einem $\hat K$ Vektorraum.
-meromZsh.tex:%TODO: ist das der zusammenhang oder die wirkung oder was?
+meromZsh.tex:%TODO: ist das der Zusammenhang oder die Wirkung oder was?
 meromZsh.tex:\begin{comment} TODO: VR oder Moduln??  \end{comment}
 meromZsh.tex:%TODO: Pfeile
 meromZsh.tex:\begin{comment} TODO: korrekt? \end{comment}
@@ -85,6 +102,7 @@ meromZsh.tex:  & \mbox{(Rechenregeln Tensorprodukt)}\\ %TODO: hinzufügen
 rezept.tex:-\partial_z(f)\cdot z^2= %TODO: wegen klammerung?
 rezept.tex:%TODO: QUELLE!
 rezept.tex:  %TODO: hier kein grid
+rezept.tex:Wobei $\epsilon\in\C^\times$\footnote{ %TODO: sieht komisch aus
 rezept.tex:TODO: hier weiter vereinfachen
 rezept.tex:%TODO: move to theorie-teil??
 rezept.tex:%TODO: Namenskollision: u und v wie in Achsbeschriftung
