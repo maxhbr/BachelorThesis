@@ -333,7 +333,7 @@ $m,\partial_xm,\dots,\partial_x^{d-1}m$ eine $K$-Basis von $\cM_K$ ist.
 Ein Beweis ist beispielsweise in \cite[Thm 4.3.3]{sabbah_cimpa90} oder
 ausführlicher in \cite[Satz 4.8]{ZulaBarbara}.
 \end{proof}
-\begin{cor}
+\begin{cor} \label{cor:Zyklischer-Vektor}
 In der Situation von Lemma \ref{lem:Zyklischer-Vektor} gibt es ein $P\in
 \cD_K$ mit $\partial$-Grad von $P$ ist gleich $d$ und $P \cdot m=0$, in
 diesem Fall ist $P$ ein Minimalpolynom zu $\cM_K$, also gilt
@@ -486,37 +486,19 @@ Man erkennt, dass $\cP(P_2)=\{0,\frac{2}{3}\}$ ist.
   \end{minipage}
 \end{figure}
 
-\begin{comment}
-ZUM LÖSCHEN
 \begin{bem}
-Für alle $f\in \cD_{\hat K}^\times$
-\footnote{ Für einen Ring $R$, bezeichnet $R^\times$ die Einheitengruppe von
-$R$. }
-gilt allgemein, dass das zu $P\in
-\cD_{\hat K}$ gehörige Newton Polygon, bis auf vertikale Verschiebung mit dem
-von $f\cdot P$ übereinstimmt.
-\end{bem}
-\begin{proof}
-Siehe \cite[Seite 25]{sabbah_cimpa90} bzw.
-\cite[Bem 5.4]{ZulaBarbara}.
-%TODO
-\end{proof}
-\end{comment}
-\begin{bem}
+Sei $P$ ein Minimalpolynom zu $\cM_K$.
+Für jedes $f\in\cD_K^\times$\footnote{
+Für einen Ring $R$, bezeichnet $R^\times$ die Einheitengruppe von $R$.
+} gilt, dass $f\cdot P$ ebenfalls ein Minimalpolynom von $cM_K$ ist, denn 
+$\cD_K\cdot P=\cD_K\cdot (f\cdot P)\vartriangleleft \cD_K$.
+Allerdings sind die zugehörigen Newton-Polygone möglicherweise vertikal
+verschoben.\\
 Nach \cite[Seite 25]{sabbah_cimpa90} gilt, dass das Newton-Polygon, bis auf
 vertikales verschieben, nur von dem assoziierten meromorphen Zusammenhang
 abhängt.
 Dies wird auch in \cite[Bem 5.4]{ZulaBarbara} diskutiert.
 \end{bem}
-
-\begin{comment}
-Damit Lässt sich das Newton Polygon, durch ein $f$, immer so Verschieben, dass
-$(0,0)\in N(f\cdot P)$, und es gilt, dass
-\[
-\cD_K\cdot P=\cD_K\cdot(f\cdot P) \vartriangleleft \cD_K
-\]
-ist.
-\end{comment}
 
 \begin{defn}
 In einem Polynom
@@ -568,6 +550,8 @@ N((x^a\partial_x^b)^c)
 \end{exmp}
 \end{comment}
 
+\begin{comment}
+
 \begin{lem}
 %TOTO: sabbah redet hier schon immer von \hat K, ist das nötig?
 \cite[5.1]{sabbah_cimpa90} %Seite 25f
@@ -576,9 +560,8 @@ N((x^a\partial_x^b)^c)
 \item Wenn man eine exakte Sequenz
 $0\rightarrow{\cM'}_K\rightarrow{\cM}_K\rightarrow{\cM''}_K\rightarrow0$
 hat, so gilt $\cP(\cM_K)=\cP({\cM'}_K)\cup\cP({\cM''}_K)$.
-\begin{comment}
-Siehe auch \cite[Thm 5.3.4]{sabbah_cimpa90}
-
+\end{enumerate} % es gibt noch 2 weitere punkte
+Siehe auch \cite[Thm 5.3.4]{sabbah_cimpa90},
 Dort Steht:\\
 Wir erhalten die Exakte Sequenz
 \[
@@ -591,13 +574,10 @@ Wir erhalten die Exakte Sequenz
 \cite[Thm 5.3.4]{sabbah_cimpa90}
 $\cP(P)=\cP(P_1)\cup\cP(P_2)$ und $\cP(P_1)\cap\cP(P_2)=\emptyset$
 \end{cor}
-\end{comment}
-% es gibt noch 2 weitere punkte
-\end{enumerate}
 \end{lem}
+\end{comment}
 
 \begin{thm} \label{thm:Split-after-slopes}
-\cite[Thm 5.3.1]{sabbah_cimpa90} \cite[5.15]{ZulaBarbara}
 Sei $\cM_{\hat{K}}$ ein formaler meromorpher Zusammenhang und sei
 $\cP(\cM_{\hat K})=\{\Lambda_1,\dots,\Lambda_r\}$ die Menge seiner
 slopes. Es existiert eine (bis auf Permutation) eindeutige Zerlegung
@@ -608,7 +588,8 @@ in formale meromorphe Zusammenhänge
 mit $\cP(\cM_{\hat K}^{(i)})=\{\Lambda_i\}$.
 \end{thm}
 \begin{proof}
-\cite[Thm 5.3.1]{sabbah_cimpa90} oder \cite[5.15]{ZulaBarbara}
+Einen Beweis hierfür findet man in \cite[Thm 5.3.1]{sabbah_cimpa90} oder
+\cite[5.15]{ZulaBarbara}.
 \end{proof}
 \begin{bem}
 In Satz \ref{thm:Split-after-slopes} ist es wirklich notwendig, formale
@@ -662,17 +643,6 @@ wie folgt aus
 \caption{Newton Polygon zu $P$}
 \end{figure}
 \end{exmp}
-\end{comment}
-
-\begin{comment}
-\begin{cor}
-\cite[Cor 5.2.6]{sabbah_cimpa90}
-Falls $\cM_{\hat K}$ ein regulärer formaler meromorpher Zusammenhang ist, dann
-ist $\cM_{\hat K}$ isomorph zu einer direkten Summe von elementaren formalen
-Zusammenhängen. Wobei die elementaren formalen Zusammenhänge die sind, die zu
-passendem $\cD_{\hat K}/\cD_{\hat K}\cdot(x\partial_x-\alpha)^p$ isomorph
-sind.
-\end{cor}
 \end{comment}
 
 \subsection{Die Filtrierung $\,^\ell V\cD_{\hat K}$ und das $\ell$-Symbol}
@@ -811,7 +781,7 @@ N\otimes_R(M/\im(f)) &\cong N\otimes_R M / \im(\id_{R}\otimes f)
 \end{align}
 \end{bem}
 
-\begin{prop} \cite[Prop 4.1.1]{SchneidersDmod} \label{prop:tensorZusammenhang}
+\begin{prop} \label{prop:tensorZusammenhang}
 Seien $(\cM,\partial_\cM)$ und $(\cN,\partial_\cN)$ meromorphe Zusammenhänge.
 Sei $n\otimes n\in \cM\otimes_K\cN$.
 Durch Setzten von
@@ -820,6 +790,9 @@ Durch Setzten von
 \end{equation}
 als die Wirkung von $\partial$ auf das $K$-Modul $\cM\otimes_K\cN$, wird
 $(\cM\otimes_K\cN,\partial)$ zu einem meromorphen Zusammenhang.
+\begin{comment}
+\cite[Prop 4.1.1]{SchneidersDmod}
+\end{comment}
 \end{prop}
 \begin{comment}
 \begin{proof}
@@ -864,8 +837,10 @@ Sei $\cM_{\hat K}$ ein endlich dimensionaler $\Cftl$ Vektorraum ausgestattet mit
 einem Zusammenhang $\nabla$.
 %
 \begin{defn}[pull-back] \label{defn:pull-back}
+\begin{comment}
 \cite[1.a]{sabbah_Fourier-local} und
 \cite[Page 34]{sabbah_cimpa90}
+\end{comment}
 Der \emph{pull-back} oder das \emph{inverse Bild} $\rho^{+}\cM_{\hat K}$ von
 $(\cM_{\hat K},\nabla)$ ist der Vektorraum
 \[
@@ -903,6 +878,22 @@ Also gilt $\partial_t(f(t)m) = \rho'(u)^{-1}\partial_u(f(t)m)$ und somit
 lässt sich vermuten, dass die Wirkung von $\partial_x$ gleich der Wirkung von
 $\rho'(t)^{-1}\partial_t$ ist. In der Tat stimmt diese Vermutung, wie das
 folgende Lemma zeigt.
+\end{comment}
+\begin{comment}
+Sei $f(x)m=f(\rho(t))m\in\rho^*\cM_{\hat K}$. Es gilt, dass
+\begin{align*}
+\partial_x(f(x)m) &= \partial_{\rho(t)}(f(\rho(t))m) \\
+  &= f'(\rho(t))\cdot \underset{=1}
+  {\underbrace{\frac{\partial(f(t))}{\partial(f(t))}}}m +
+  f(\rho(t))\underset{=\partial_x} {\underbrace{\partial_{\rho(t)}}}m
+\\&= f'(\rho(t))m + f(\rho(t))\partial_x m
+\\&= f'(t^p)m+f(t^p)\frac{1}{pt^{p-1}}\partial_t m
+\\&= \underbracket{\frac{1}{pt^{p-1}}}\partial_t(f(\underbracket{t^p})m)
+\\&=\overbracket{\rho'(t)^{-1}}\partial_t(f(\overbracket{x})m) 
+\end{align*}
+und damit lässt sich vermuten, dass die Wirkung von $\partial_x$ genau die
+Wirkung von $\rho'(t)^{-1}\partial_t$ ist. In der Tat ist dies, nach dem
+folgenden Satz, wahr.
 \end{comment}
 %
 \begin{thm} \label{thm:pull-back-berechnung}
@@ -1060,6 +1051,7 @@ g(t,\partial_t)&= \sum_k\sum_{i=0}^{p-1}t^ia_{k,i}(t^p)
 \\&= \Phi\Big(\sum_{i=0}^{p-1}t^i\otimes(\sum_ka_{k,i}(x)
   (\partial_x)^k)\Big) \,.
 \end{align*}
+Damit haben wir ein Urbild gefunden und die Surjektivität gezeigt.
 \end{proof}
 
 \begin{lem} \label{lem:pull-back-hilfslemma1}
@@ -1384,7 +1376,6 @@ die untere Zeile zu einer exakten Sequenz fortsetzen
 \end{center}
 und damit folgt, wegen Isomorphie der Kokerne, die Behauptung.
 \end{proof}
-
 %
 \begin{lem}\label{lem:slope-pb-multiplikation}
 Sei $\cP(\cM_{\hat K})=\{\Lambda_1,\dots,\Lambda_r\}$ die Menge der Slopes von
@@ -1392,7 +1383,7 @@ $\cM_{\hat K}$ und $\rho:t\mapsto x:=t^p$, dann gilt für $\cP(\rho^*\cM_{\hat
 K})=\{\Lambda_1',\dots,\Lambda_r'\}$, dass $\Lambda_n'=p\cdot\Lambda_n$.
 \end{lem}
 \begin{proof}
-Siehe \cite[5.4.3]{sabbah_cimpa90}.
+Siehe \cite[5.4.3]{sabbah_cimpa90} für einen Beweis.
 \end{proof}
 \begin{comment}
 \begin{proof}
@@ -1476,7 +1467,6 @@ $\rho^*\cM_{\hat K}=\cD_{\hat L}/\cD_{\hat L}
 Sei $\cN_{\hat L}$ ein endlich dimensionaler $\hat L$-VR mit Verknüpfung, so
 definiere den push-forward wie folgt.
 \begin{defn}[push-forward]
-\cite[1.a]{sabbah_Fourier-local}
 Der \emph{push-forward} oder das \emph{direktes Bild} $\rho_+\cN_{\hat L}$ von
 $\cN_{\hat L}$ ist
 \begin{itemize}
@@ -1562,19 +1552,8 @@ Es gilt die Projektionsformel
 &\cong \rho_+(\overbracket{\cN_{\hat L}}\otimes_{\hat K}\cM_{\hat K})
   & \mbox{(Rechenregeln Tensorprodukt)}\\
 &= \rho_+\cN_{\hat L}\otimes_{\hat K}\cM_{\hat K}
-  & \mbox{(?)}
 \end{align*}
 \end{proof}
-
-\begin{comment}
-%von treffen ? auf seite 1
-Sei $\rho(u)=u^p=t$ und $\phi(t)$ gegeben.
-\begin{align*}
-\rho^+\sE^{\phi(t)}&=\sE^{\phi(\rho(u))}=\sE^{\phi(u^p)}\\
-\rho^+\rho_+\sE^{\phi(u)}
-&=\underset{\zeta\in\mu_p}{\bigoplus}\sE^{\phi(\zeta\cdot u)}\\
-\end{align*}
-\end{comment}
 
 \subsection{Fouriertransformation}
 \begin{defn}[Fouriertransformation]

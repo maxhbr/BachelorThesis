@@ -269,9 +269,7 @@ schreiben, welches wir als nächsten Schritt faktorisieren
 \sigma_L(\rho^*P_\phi)
   =\epsilon\prod_{\beta\mbox{ Nullstelle}}(\theta-\beta)^{\gamma_\beta}\,.
 \]
-Wobei $\epsilon\in\C^\times$\footnote{ %TODO: sieht komisch aus
-Für einen Ring $R$, bezeichnet $R^\times$ die Einheitengruppe von $R$.
-}
+Wobei $\epsilon\in\C^\times$
 eine Konstante ist.
 Sei $\beta$  eine der Nullstellen.
 Da $\ord_\ell(\rho^*P_\phi)=0$ und der einzige Slope von $\rho^*P_\phi$ nicht
@@ -283,7 +281,7 @@ betrachte
 \cN&:=\rho^+\cM_\phi\otimes_{\hat L}\sE_{\hat L}^\psi
 \\&= \cD_{\hat L}/\cD_{\hat L}\cdot(\rho^*P_{\phi}(t,\partial_t))
     \otimes_{\hat L}\sE_{\hat L}^\psi
-\\&\overset{\ref{lem:twistRechenregel}}{=}
+\\&\!\!\overset{\ref{lem:twistRechenregel}}{=}
   \cD_{\hat L}/\cD_{\hat L}\cdot(\rho^*P_{\phi}(t,\partial_t-\frac{\partial
   \psi}{\partial t}))
 \\&=\cD_{\hat L}/\cD_{\hat
@@ -387,8 +385,12 @@ Vektor von $\rho^+\cM$ ist.
   \]
   und damit ist dann $\cN=\cD/\cD\cdot(\partial_t^2+a_1(t)\partial_t+a_0(t))$.
 \fi
-Mit dem Lemma vom Zyklischen Vektor wollen wir nun ein Minimalpolynom zu $\cN$
-berechnen:
+Mit dem Lemma vom Zyklischen Vektor, bzw. dem Korollar
+\ref{cor:Zyklischer-Vektor}, wollen wir nun ein Minimalpolynom zu $\cN$
+berechnen\footnote{
+Dies wäre auch schneller, aber weit weniger interessanter, mit Lemma
+\ref{lem:twistRechenregel} möglich.
+}:
 \begin{align*}
 \partial_t^2(\bme\otimes 1)
   &=\partial_t(\underbracket{\partial_t(\bme\otimes 1)})
