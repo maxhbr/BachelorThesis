@@ -11,11 +11,11 @@ d-modul.tex:%TODO: Variable zu t machen?
 d-modul.tex:(linear differential system) %TODO: defn
 elem-mer-zsh.tex:Wähle einen zyklischen Vektor $m\in\cM_{\hat K}$ % TODO: richtiger Raum?
 elem-mer-zsh.tex:\begin{comment} TODO: bis hier schon klar \end{comment}
-elem-mer-zsh.tex:%TODO: rename to L-T-Theorem???
+elem-mer-zsh.tex: &=TODO
 elem-mer-zsh.tex:mit $\xi^p=1$, bringen. Sei so ein $\xi$ ab jetzt fixiert. %TODO: besonderes xi?
+elem-mer-zsh.tex:%TODO: rename to L-T-Theorem???
 elem-mer-zsh.tex:%TODO: auch nicht formal
 elem-mer-zsh.tex:%TODO: verwendet hier schon das klassische Levelt-Turittin
-elem-mer-zsh.tex: &=TODO
 elem-mer-zsh.tex:TODO: Induktionsanfang und -schritt kennzeichnen
 elem-mer-zsh.tex:TODO
 elem-mer-zsh.tex:\begin{comment}TODO: Hier weiter \end{comment}
@@ -53,26 +53,16 @@ meromZsh.tex:% TODO; wie darf ich einen meromorphen verändern, (das P veränder
 meromZsh.tex:% TODO: \cM = \cM_K ... replace
 meromZsh.tex:% TODO: Dimension eines meromorphen Zusammenhang
 meromZsh.tex:%TODO: erklären, erwähnen oder entfernen!
-meromZsh.tex:%TODO: \tilde cO --> \tilde \cO
+meromZsh.tex:%TODO: posibly multivalued
 meromZsh.tex:%TODO: partial oder d
-meromZsh.tex:TODO: zeige, das der Lösungsraum die Eigenschaften von $\cD$-Moduln erfüllt\\
 meromZsh.tex:Lösungen in $\Ckx$. %TODO: oder \tilde\cO
 meromZsh.tex:\partial(fu)=f'u+f\partial u %TODO: hier klammern um das letzte u ?
-meromZsh.tex:TODO: Wann sind die Isomorph\\
-meromZsh.tex:assoziierten meromorphen Zusammenhang $(\cM_A,\partial_A)$ %TODO: improve notation
+meromZsh.tex:%TODO: wieso gilt das?
 meromZsh.tex:%TODO: Reihenfolge bei sabbah anderst!!!
 meromZsh.tex:\cite[Seite 64]{ZulaBarbara} %TODO: hat die sich hier verschrieben???
-meromZsh.tex:%TODO: make this harpoon arrows
-meromZsh.tex:TODO, (3. Treffen)
-meromZsh.tex:%TODO: make this harpoon arrows
-meromZsh.tex:TODO, (3. Treffen)
-meromZsh.tex:%TODO: wieso gilt das?
-meromZsh.tex:%TODO: beobachtung...
-meromZsh.tex:%TODO: differenz ist linear
 meromZsh.tex:%TODO: welche Definition ist besser?
 meromZsh.tex:%TODO: zeige, das beide Definitionen gleich sind
 meromZsh.tex:%TODO: bessere Formulierung
-meromZsh.tex:%TODO
 meromZsh.tex:TODO: mache alle Linearformen $L$ zu $\ell$
 meromZsh.tex:TODO
 meromZsh.tex:TODO: ist $\ell$ Slope (gehört zu Slope) dann hat $\sigma_\ell(P)$ zumindest 2
@@ -102,7 +92,6 @@ meromZsh.tex:  & \mbox{(Rechenregeln Tensorprodukt)}\\ %TODO: hinzufügen
 rezept.tex:-\partial_z(f)\cdot z^2= %TODO: wegen klammerung?
 rezept.tex:%TODO: QUELLE!
 rezept.tex:  %TODO: hier kein grid
-rezept.tex:Wobei $\epsilon\in\C^\times$\footnote{ %TODO: sieht komisch aus
 rezept.tex:TODO: hier weiter vereinfachen
 rezept.tex:%TODO: move to theorie-teil??
 rezept.tex:%TODO: Namenskollision: u und v wie in Achsbeschriftung
