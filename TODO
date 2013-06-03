@@ -11,9 +11,6 @@ d-modul.tex:%TODO: Variable zu t machen?
 d-modul.tex:(linear differential system) %TODO: defn
 elem-mer-zsh.tex:Wähle einen zyklischen Vektor $m\in\cM_{\hat K}$ % TODO: richtiger Raum?
 elem-mer-zsh.tex:\begin{comment} TODO: bis hier schon klar \end{comment}
-elem-mer-zsh.tex: &=TODO
-elem-mer-zsh.tex:mit $\xi^p=1$, bringen. Sei so ein $\xi$ ab jetzt fixiert. %TODO: besonderes xi?
-elem-mer-zsh.tex:%TODO: rename to L-T-Theorem???
 elem-mer-zsh.tex:%TODO: auch nicht formal
 elem-mer-zsh.tex:%TODO: verwendet hier schon das klassische Levelt-Turittin
 elem-mer-zsh.tex:TODO: Induktionsanfang und -schritt kennzeichnen
@@ -66,29 +63,71 @@ meromZsh.tex:%TODO: bessere Formulierung
 meromZsh.tex:TODO: mache alle Linearformen $L$ zu $\ell$
 meromZsh.tex:TODO
 meromZsh.tex:TODO: ist $\ell$ Slope (gehört zu Slope) dann hat $\sigma_\ell(P)$ zumindest 2
-meromZsh.tex:%TODO: titel: Operations on vector spaces with connection
-meromZsh.tex:%TODO: verzweigung statt pull-back?
-meromZsh.tex:  %TODO: Pfeile
-meromZsh.tex:%TODO: move after slope definition!!!
-meromZsh.tex:TODO
-meromZsh.tex:TODO: damit wird $\hat L$ zu einem $\hat K$ Vektorraum.
-meromZsh.tex:%TODO: ist das der Zusammenhang oder die Wirkung oder was?
-meromZsh.tex:\begin{comment} TODO: VR oder Moduln??  \end{comment}
-meromZsh.tex:%TODO: Pfeile
-meromZsh.tex:\begin{comment} TODO: korrekt? \end{comment}
-meromZsh.tex:\end{tikzpicture} , %TODO: hier wirklich ein Komma??
-meromZsh.tex:%TODO: Pfeile
-meromZsh.tex:%TODO: Pfeile
-meromZsh.tex:%TODO: Pfeile
-meromZsh.tex:%TODO: warum hier alles Lokalisiert?
-meromZsh.tex:%TODO: muss \Cful oder \Cftl flach sein???
-meromZsh.tex:%TODO: Funktorialität von Pull-Back? NEIN: Funktorialität von tensor
-meromZsh.tex:  %TODO: Pfeile
-meromZsh.tex:  %TODO: Pfeile
-meromZsh.tex:  %TODO: Pfeile
-meromZsh.tex:\\&=\dots %TODO: Hier weiter...
-meromZsh.tex:%TODO: erkläre wieso --> Elementare Zusammenhänge
-meromZsh.tex:  & \mbox{(Rechenregeln Tensorprodukt)}\\ %TODO: hinzufügen
+meromZsh.tex_versions/v01_meromZsh.tex:% TODO; wie darf ich einen meromorphen verändern, (das P verändern) ohne das
+meromZsh.tex_versions/v01_meromZsh.tex:% TODO: \cM = \cM_K ... replace
+meromZsh.tex_versions/v01_meromZsh.tex:% TODO: Dimension eines meromorphen Zusammenhang
+meromZsh.tex_versions/v01_meromZsh.tex:%TODO: erklären, erwähnen oder entfernen!
+meromZsh.tex_versions/v01_meromZsh.tex:%TODO: posibly multivalued
+meromZsh.tex_versions/v01_meromZsh.tex:%TODO: partial oder d
+meromZsh.tex_versions/v01_meromZsh.tex:Lösungen in $\Ckx$. %TODO: oder \tilde\cO
+meromZsh.tex_versions/v01_meromZsh.tex:\partial(fu)=f'u+f\partial u %TODO: hier klammern um das letzte u ?
+meromZsh.tex_versions/v01_meromZsh.tex:%TODO: wieso gilt das?
+meromZsh.tex_versions/v01_meromZsh.tex:%TODO: Reihenfolge bei sabbah anderst!!!
+meromZsh.tex_versions/v01_meromZsh.tex:\cite[Seite 64]{ZulaBarbara} %TODO: hat die sich hier verschrieben???
+meromZsh.tex_versions/v01_meromZsh.tex:%TODO: welche Definition ist besser?
+meromZsh.tex_versions/v01_meromZsh.tex:%TODO: zeige, das beide Definitionen gleich sind
+meromZsh.tex_versions/v01_meromZsh.tex:%TODO: bessere Formulierung
+meromZsh.tex_versions/v01_meromZsh.tex:TODO: mache alle Linearformen $L$ zu $\ell$
+meromZsh.tex_versions/v01_meromZsh.tex:TODO
+meromZsh.tex_versions/v01_meromZsh.tex:TODO: ist $\ell$ Slope (gehört zu Slope) dann hat $\sigma_\ell(P)$ zumindest 2
+meromZsh.tex_versions/v01_meromZsh.tex:%TODO: titel: Operations on vector spaces with connection
+meromZsh.tex_versions/v01_meromZsh.tex:%TODO: verzweigung statt pull-back?
+meromZsh.tex_versions/v01_meromZsh.tex:  %TODO: Pfeile
+meromZsh.tex_versions/v01_meromZsh.tex:%TODO: move after slope definition!!!
+meromZsh.tex_versions/v01_meromZsh.tex:TODO
+meromZsh.tex_versions/v01_meromZsh.tex:TODO: damit wird $\hat L$ zu einem $\hat K$ Vektorraum.
+meromZsh.tex_versions/v01_meromZsh.tex:%TODO: ist das der Zusammenhang oder die Wirkung oder was?
+meromZsh.tex_versions/v01_meromZsh.tex:\begin{comment} TODO: VR oder Moduln??  \end{comment}
+meromZsh.tex_versions/v01_meromZsh.tex:%TODO: Pfeile
+meromZsh.tex_versions/v01_meromZsh.tex:\begin{comment} TODO: korrekt? \end{comment}
+meromZsh.tex_versions/v01_meromZsh.tex:\end{tikzpicture} , %TODO: hier wirklich ein Komma??
+meromZsh.tex_versions/v01_meromZsh.tex:%TODO: Pfeile
+meromZsh.tex_versions/v01_meromZsh.tex:%TODO: Pfeile
+meromZsh.tex_versions/v01_meromZsh.tex:%TODO: Pfeile
+meromZsh.tex_versions/v01_meromZsh.tex:%TODO: warum hier alles Lokalisiert?
+meromZsh.tex_versions/v01_meromZsh.tex:%TODO: muss \Cful oder \Cftl flach sein???
+meromZsh.tex_versions/v01_meromZsh.tex:%TODO: Funktorialität von Pull-Back? NEIN: Funktorialität von tensor
+meromZsh.tex_versions/v01_meromZsh.tex:  %TODO: Pfeile
+meromZsh.tex_versions/v01_meromZsh.tex:  %TODO: Pfeile
+meromZsh.tex_versions/v01_meromZsh.tex:  %TODO: Pfeile
+meromZsh.tex_versions/v01_meromZsh.tex:\\&=\dots %TODO: Hier weiter...
+meromZsh.tex_versions/v01_meromZsh.tex:%TODO: erkläre wieso --> Elementare Zusammenhänge
+meromZsh.tex_versions/v01_meromZsh.tex:  & \mbox{(Rechenregeln Tensorprodukt)}\\ %TODO: hinzufügen
+meromZsh.tex_versions/v01_meromZsh.tex: &=TODO
+meromZsh.tex_versions/v01_meromZsh.tex:mit $\xi^p=1$, bringen. Sei so ein $\xi$ ab jetzt fixiert. %TODO: besonderes xi?
+operationen.tex:  %TODO: Pfeile
+operationen.tex:%TODO: move after slope definition!!!
+operationen.tex:TODO
+operationen.tex:TODO: damit wird $\hat L$ zu einem $\hat K$ Vektorraum.
+operationen.tex:%TODO: ist das der Zusammenhang oder die Wirkung oder was?
+operationen.tex:\begin{comment} TODO: VR oder Moduln??  \end{comment}
+operationen.tex:%TODO: Pfeile
+operationen.tex:\begin{comment} TODO: korrekt? \end{comment}
+operationen.tex:\end{tikzpicture} , %TODO: hier wirklich ein Komma??
+operationen.tex:%TODO: Pfeile
+operationen.tex:%TODO: Pfeile
+operationen.tex:%TODO: Pfeile
+operationen.tex:%TODO: warum hier alles Lokalisiert?
+operationen.tex:%TODO: muss \Cful oder \Cftl flach sein???
+operationen.tex:%TODO: Funktorialität von Pull-Back? NEIN: Funktorialität von tensor
+operationen.tex:  %TODO: Pfeile
+operationen.tex:  %TODO: Pfeile
+operationen.tex:  %TODO: Pfeile
+operationen.tex:\\&=\dots %TODO: Hier weiter...
+operationen.tex:%TODO: erkläre wieso --> Elementare Zusammenhänge
+operationen.tex:  & \mbox{(Rechenregeln Tensorprodukt)}\\ %TODO: hinzufügen
+operationen.tex: &=TODO
+operationen.tex:mit $\xi^p=1$, bringen. Sei so ein $\xi$ ab jetzt fixiert. %TODO: besonderes xi?
 rezept.tex:-\partial_z(f)\cdot z^2= %TODO: wegen klammerung?
 rezept.tex:%TODO: QUELLE!
 rezept.tex:  %TODO: hier kein grid
