@@ -1,11 +1,16 @@
 %!TeX root = main.tex
-\chapter{Elementare meromorphe Zusammenhänge}
-\section{Elementare formale meromorphe Zusammenhänge}
+\chapter{Levelt-\!Turrittin-\!Theorem}
+\section{Elementare meromorphe Zusammenhänge}
+%\section{Elementare formale meromorphe Zusammenhänge}
 \begin{defn}
-Ein \emph{elementarer formaler meromorpher Zusammenhang} ist ein Zusammenhang
+Ein \emph{elementarer regulärer meromorpher Zusammenhang} ist ein Zusammenhang
 $\cM$, welcher isomorph zu $\cD_{\hat K}/\cD_{\hat K}\cdot
 (x\partial_x-\alpha)^p$, mit passendem $\alpha$ und $p$, ist.
 \end{defn}
+\begin{bem}
+Es ist leicht zu sehen, dass jeder elementare reguläre meromorphe Zusammenhang
+tatsächlich auch regulär ist.
+\end{bem}
 
 \begin{lem}
 Es existiert eine Basis von $\cM_{\hat K}$ über $\hat K$ mit der Eigenschaft,
@@ -39,7 +44,7 @@ Siehe \cite[Thm 5.2.2]{sabbah_cimpa90}.
 
 \begin{thm} \label{thm:regulärInDirSumme}
 Ein regulärer formaler Zusammenhang $\cM_{\hat K}$ ist isomorph zu einer
-direkten Summe von elementaren formalen meromorphen Zusammenhängen.
+direkten Summe von elementaren regulären meromorphen Zusammenhängen.
 \end{thm}
 \begin{proof}[Beweisskizze]
 Man wählt eine Basis von $\cM_{\hat K}$, in der die Matrix zu $x\partial_x$
@@ -48,12 +53,12 @@ erhält man das Ergebnis.
 Ausgeführt wurde das in \cite[Cor. 5.2.6]{sabbah_cimpa90}.
 \end{proof}
 
-\section{Elementare meromorphe Zusammenhänge}
-%TODO: rename to L-T-Theorem???
 \begin{comment}
 einführen als Bausteine oder kleinste meromorphe Zusammenhänge
 \end{comment}
 
+Durch twisten der elementaren regulären meromorphen Zusammenhänge erhält man
+wie folgt die elementaren meromorphen Zusammenhänge.
 \begin{defn} \label{defn:elemMerZsh}
 Ein \emph{elementarer meromorpher Zusammenhang} ist ein Zusammenhang $\cM$, für
 den es $\psi \in \Cfxl$, $\alpha\in\C$ und $p\in \N$ gibt, so dass
@@ -61,7 +66,7 @@ den es $\psi \in \Cfxl$, $\alpha\in\C$ und $p\in \N$ gibt, so dass
 \cM\cong \sE^{\psi}\otimes R_{\alpha,p}\,,
 \]
 mit $R_{\alpha,p}:=\cD/\cD(x\partial_x-\alpha)^p$, also ein elementarer
-formaler meromorpher Zusammenhang, ist.
+regulärer meromorpher Zusammenhang, ist.
 \end{defn}
 
 \begin{lem} In der Situation von Definition \ref{defn:elemMerZsh} gilt

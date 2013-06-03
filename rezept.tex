@@ -1,5 +1,5 @@
 %!TeX root = main.tex
-\chapter{Explizite Berechnung einer Levelt-Turrittin-Zerlegung}
+\chapter{Explizite Berechnung einer Levelt-\!Turrittin-Zerlegung}
 In diesem Kapitel werden Beispiele einer speziellen Klasse von $\cD$-Moduln
 diskutiert. Dazu wird im folgendem zu einem Beispiel unter anderem explizit der
 Beweis aus \cite{sabbah_cimpa90} zur Levelt-Turrittin-Zerlegung nachvollzogen.
@@ -243,8 +243,23 @@ und sei $\rho:t\mapsto x:=-(q+1) t^{q+1}$. Damit gilt
 Ordnung vom pull-back ist $0$
 \end{cor}
 \end{comment}
-Definiere mittels
-$q=\frac{q}{1}=:\frac{\lambda_0}{\lambda_1}$ die Linearform
+Das so erhaltene $\rho^+\cM_\phi$ wollen wir, wenn nötig, noch weiter
+zerlegen. Dazu würden wir gerne den Satz \ref{thm:Split-after-slopes} anwenden,
+leider haben wir momentan genau einen slope.
+Hier hilft uns aber ein Trick, nach Korollar \ref{cor:zurücktwisten} gilt
+$
+\rho^+\cM_{\phi}
+  =\rho^+\cM_{\phi}\otimes_{\hat K}\sE^{\psi}\otimes_{\hat K}\sE^{-\psi}
+$,
+wobei $\cN:=\cM_{\phi}\otimes_{\hat K}\sE^{\psi}$ möglicherweise mehr als
+einen Slope hat. Genau diesen Sonderfall wollen wir, um mit Satz
+\ref{thm:Split-after-slopes} die Zerlegung $\cN=\bigoplus_i\cN_i$ zu erhalten
+und damit ist dann
+\[
+\rho^+\cM_{\phi}=\bigoplus_i\cN_i\otimes_{\hat L}\sE^{-\psi}_{\hat L} \,.
+\]
+Definiere dazu, mittels
+$q=\frac{q}{1}=:\frac{\lambda_0}{\lambda_1}$, die Linearform
 \[
 \ell(s_0,s_1)=\lambda_0s_0+\lambda_1s_1=qs_0+s_1 \,.
 \]
@@ -262,16 +277,20 @@ Da $\hat L[\xi]$ kommutativ ist, gilt hier, dass $(t^j\xi^i)^k=t^{jk}\xi^{ik}$
 ist.  Setze $\theta=t^{\lambda_0+\lambda_1}\xi^{\lambda_1}=t^{q+1}\xi$ so,
 können wir
 \begin{align*}
-\sigma_L(\rho^*P_{\phi}) &= \sum_{k\geq 0}\alpha_k\theta^k & & \alpha_k\in\C
+\sigma_L(\rho^*P_{\phi})(\theta) 
+  &= \sum_{k\geq 0}\alpha_k\theta^k & & \alpha_k\in\C
 \end{align*}
-schreiben, welches wir als nächsten Schritt faktorisieren
+schreiben.
+\begin{comment}
+, welches wir als nächsten Schritt faktorisieren
 \[
 \sigma_L(\rho^*P_\phi)
   =\epsilon\prod_{\beta\mbox{ Nullstelle}}(\theta-\beta)^{\gamma_\beta}\,.
 \]
 Wobei $\epsilon\in\C^\times$
 eine Konstante ist.
-Sei $\beta$  eine der Nullstellen.
+\end{comment}
+Sei $\beta$  eine der Nullstellen von $\sigma_L(\rho^*P_{\phi})(\theta)$.
 Da $\ord_\ell(\rho^*P_\phi)=0$ und der einzige Slope von $\rho^*P_\phi$ nicht
 gleich $0$ ist, gilt offensichtlich, dass $\alpha_0\neq0$. Also ist $0$ keine
 Nullstelle von $\sigma_L(\rho^*P_\phi)$.
@@ -361,7 +380,9 @@ $1=\frac{1}{1}=:\frac{\lambda_0}{\lambda_1}$.
 \end{figure}
 
 Definiere die Linearform $\ell(s_0,s_1):=\lambda_0s_0+\lambda_1s_1=s_0+s_1$.
-Berechne nun die \emph{Determinanten Gleichung}
+Wir suchen nun ein $\psi$, so dass der Twist $\rho^+\cM_{\phi}\otimes\sE^\psi$
+mehr als einen slope hat, damit wir entlang der slopes zerlegen können.
+Berechne dazu die \emph{Determinanten Gleichung}
 $\sigma_\ell(\rho^*P_{\phi})\in \hat L[\xi]$ von $\rho^*P_{\phi}$.
 \begin{align*}
 \sigma_\ell(\rho^*P_{\phi})
