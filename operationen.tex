@@ -196,7 +196,8 @@ m))+((t\frac{\partial\phi}{\partial t})\otimes m) \,.
 Man erhält damit die Wirkung von $\partial_t=t^{-1}(t\partial_t)$.
 \end{comment}
 
-Für den Beweis von Satz \ref{thm:pull-back-berechnung} werden zunächst ein paar Lemmata bewiesen.
+Für den Beweis von Satz \ref{thm:pull-back-berechnung} werden zunächst somit
+Lemmata bewiesen.
 
 \begin{lem} \label{lem:pull-back-hilfslemma1pre}
 Es gilt $\rho^*\cD_{\hat K }\bydef\hat L\otimes_{\hat K}\cD_{\hat K } \cong
@@ -306,7 +307,7 @@ folgenden
 \end{align*}
 \begin{comment} TODO: korrekt? \end{comment}
 Nun zur Surjektivität.
-Sei $g(t,\partial_t)=\sum_ka_k(t)\partial_t^k\in\cD_{\hat L}$ so gilt
+Sei $g(t,\partial_t)=\sum_ka_k(t)\partial_t^k\in\cD_{\hat L}$, so gilt
 \begin{align*}
 g(t,\partial_t)&=\sum_ka_k(t)\partial_t^k
 \\&=\sum_ka_k(t)(\underset{=1}{\underbrace{\rho'(t)\rho'(t)^{-1}}})^k
@@ -322,7 +323,7 @@ g(t,\partial_t)&= \sum_k\sum_{i=0}^{p-1}t^ia_{k,i}(t^p)
 \\&= \Phi\Big(\sum_{i=0}^{p-1}t^i\otimes(\sum_ka_{k,i}(x)
   (\partial_x)^k)\Big) \,.
 \end{align*}
-Damit haben wir ein Urbild gefunden und die Surjektivität gezeigt.
+Somit haben wir ein Urbild gefunden und die Surjektivität gezeigt.
 \end{proof}
 
 \begin{lem} \label{lem:pull-back-hilfslemma1}
@@ -478,7 +479,7 @@ und
 f(t)\otimes Q(x,\partial_x) \\
 f(t) Q(\rho(t),\rho'(t)^{-1}\partial_t) &
 f(t) Q(\rho(t),\rho'(t)^{-1}\partial_t)
-  \cdot P(\rho(t),\rho'(t)^{-1}\partial_t) \\
+  \cdot P(\rho(t),\rho'(t)^{-1}\partial_t) \,, \\
 };
 %TODO: Pfeile
 %\path (m-1-1) edge[white] node{$\%$} (m-2-2);
@@ -678,11 +679,11 @@ H(P'(t,\partial_t)) &=H(P(\rho(t),\rho'(t)^{-1}\partial_t))
 Hier nun ein explizit berechneter pull-back.
 Wir wollen $\cM_{\hat K}:=\cD_{\hat K}/\cD_{\hat K}\cdot P$ bzgl. $P:=
 x^3\partial_x^2-4x^2\partial_x-1$ betrachten.
-Unser Ziel ist es hier ganzzahlige Slopes zu erhalten.
+Unser Ziel ist es, hier ganzzahlige Slopes zu erhalten.
 %TODO: erkläre wieso --> Elementare Zusammenhänge
 Es gilt $\slopes(P)=\{\frac{1}{2}\}$ (siehe Abbildung \ref{fig:Pull-Back1}).
 Wende den pull-back mit $\rho:t\rightarrow x:=t^2$ an.
-Zunächst ein paar Nebenrechnungen, damit wir Satz
+Zunächst einige Nebenrechnungen, damit wir Satz
 \ref{thm:pull-back-berechnung} einfacher anwenden können:
 \begin{align*}
 \partial_x   &\rightsquigarrow
@@ -822,15 +823,14 @@ Es gilt die Projektionsformel
   & \mbox{(Rechenregeln Tensorprodukt)}\\ %TODO: hinzufügen
 &\cong \rho_+(\overbracket{\cN_{\hat L}}\otimes_{\hat K}\cM_{\hat K})
   & \mbox{(Rechenregeln Tensorprodukt)}\\
-&= \rho_+\cN_{\hat L}\otimes_{\hat K}\cM_{\hat K}
+&= \rho_+\cN_{\hat L}\otimes_{\hat K}\cM_{\hat K} \,.
 \end{align*}
 \end{proof}
 
 \section{Fouriertransformation}
 \begin{defn}[Fouriertransformation]
 Sei $P=\sum_{i=0}^da_i(x)\partial_x^i$, dann ist die
-\emph{fouriertransformierte} von
-$P$ gegeben durch
+\emph{fouriertransformierte} von $P$ gegeben durch
 \[
 \cF_P:=\cF_P(z,\partial_z)=\sum_{i=0}^da_i(\partial_z)(-z)^i \,.
 \]
@@ -909,26 +909,16 @@ mit den Newton Polygonen wie in Abbildung \ref{fig:fourierA} und
 \end{comment}
 
 \section{Twisten von meromorphen Zusammenhängen}
-\begin{comment}
-ALT:
-\begin{defn}
-\cite[1.a]{sabbah_Fourier-local}
-Sei $\phi\in\hat K$.
-Wir schreiben $\sE_{\hat K}^\phi$ für den (formalen) Rang 1 Vektorraum $\Cfxl
-\bydef \hat K$ ausgestattet mit dem Zusammenhang
-$\nabla=\partial_x+\partial_x\phi$, im speziellen also
-$\nabla_{\partial_x}1=\partial_x1=\phi'$.\\
-\end{defn}
-\end{comment}
 \begin{defn} \label{defn:rang1Vr}
-\cite[1.a]{sabbah_Fourier-local}
 Sei $\phi\in\hat K$.
 Wir schreiben $\sE_{\hat K}^\phi$ für den (formalen) Rang 1 Vektorraum 
-$\bme\cdot\hat K$, wobei $\bme\in\sE_{\hat K}^\phi$ Basis ist, ausgestattet mit
-$\partial_x(f\cdot \bme)
-=(\frac{\partial f}{\partial x}+f\cdot\frac{\partial\phi}{\partial
-x})\cdot\bme$, 
-im speziellen also $\partial_x\bme=\phi'$.
+$\bme\cdot\hat K$, wobei $\bme\in\sE_{\hat K}^\phi$ Basis ist, ausgestattet
+mit $\partial_x(f\cdot \bme) =(\frac{\partial f}{\partial
+x}+f\cdot\frac{\partial\phi}{\partial x})\cdot\bme$, im speziellen also
+$\partial_x\bme=\phi'$.
+\begin{comment}
+nach \cite[1.a]{sabbah_Fourier-local}
+\end{comment}
 \end{defn}
 \begin{bem}
 \begin{enumerate}
@@ -1076,7 +1066,7 @@ Q(x,\partial_x)
 \]
 mit $Q(x,\partial_x)=P(x,\partial_x-\frac{\partial \phi}{\partial x})$.
 \end{lem}
-\begin{proof}[Beweisskizze]
+\begin{proof}[Beweisidee]
 Zeige, dass $P(x,\partial_x-\frac{\partial \phi}{\partial x})\bme\otimes1=0$
 gilt, da $\bme\otimes1$ eine zyklischer Vektor ist folgt damit aus Gradgründen
 die Behauptung. Genauer ausgeführt wird dies in \cite[Seiten 39 bis
@@ -1109,9 +1099,17 @@ Denn
 \end{align*}
 \end{proof}
 
+Nun wollen wir noch das Lemma 2.4 aus \cite[Lem 2.4]{sabbah_Fourier-local}
+beweisen. 
+\begin{comment}
+TODO: text löschen?
+\end{comment}
+Dieses Lemma wird im weiteren nicht weiter verwendet, deshalb kann ein Leser,
+der nur an den letzten Kapitteln interesiert ist, den Beweis überspringen.
+Jedoch werden im Beweis mehrere interesannte Tricks verwendet, die diesen auf
+jeden Fall lesenswert machen.
 Sei $\rho:t\mapsto x:=t^p$ und $\mu_\xi:t\mapsto\xi t$.
 \begin{lem}
-\cite[Lem 2.4]{sabbah_Fourier-local}
 Für alle $\phi \in \hat L$ gilt
 \[
 \rho^+\rho_+\sE^\phi=\bigoplus_{\xi^p=1}\sE^{\phi\circ\mu_\xi} \,.

@@ -14,7 +14,7 @@ meromorphen Zusammenhang. \cite[Chap 4]{sabbah_cimpa90}
 \begin{comment}
 \cite[Chap 5.1.1]{hotta2007d} %abgeschrieben
 \end{comment}
-Wir beginnen mit der klassischen Theorie von Gewöhnlichen
+Wir beginnen mit der klassischen Theorie von gewöhnlichen
 Differentialgleichungen.
 Sei $V$ ein geeigneter Funktionenraum, beispielsweise der Raum der holomorphen
 Funktionen.
@@ -36,14 +36,14 @@ als
 wobei $u(x)=\,^t(u_1(x),\dots,u_n(x))$ ein
 Spaltenvektor\footnote{Für $v=(v_1,\dots,v_n)$ ein Vektor, bezeichnet
 $ \,^tv:= \begin{pmatrix} v_{1}\\ \vdots\\ v_{n} \end{pmatrix} $
-den transponierten Vektor.} von unbekannten Funktionen.
+den transponierten Vektor.} von unbekannten Funktionen ist.
 Wir sagen $v(x)=\,^t(v_1(x),\dots,v_n(x))$ ist eine \emph{Lösung} von
 (\ref{eq:KlassischesODE}), falls $ v_i\in V$ für alle
 $i\in\{1,\dots,n\}$ und $v$ die Gleichung (\ref{eq:KlassischesODE}), auf einer
 Umgebung um die $0$, erfüllt.
 \end{defn}
 
-Durch setzen von $w(x)=Tu(x)$ für eine invertierbare Matrix $T\in GL(n,K)$
+Durch Setzen von $w(x)=Tu(x)$ für eine invertierbare Matrix $T\in GL(n,K)$
 erhält man aus \ref{eq:KlassischesODE} das System 
 \[
 \frac{d}{dx}w(x)=(T^{-1}AT - T^{-1}\frac{d}{dx}T)w(x) \,,
@@ -62,7 +62,7 @@ $1=TT^{-1}$ $\rightsquigarrow$ $T'T^{-1}+T(T^{-1})'=0$\\
 $1=T^{-1}T$ $\rightsquigarrow$ $(T^{-1})'T+T^{-1}T'=0$
 \end{comment}
 
-Mit elementarer Theorie über Gewöhnliche Differentialgleichungen lässt sich
+Mit elementarer Theorie über gewöhnliche Differentialgleichungen lässt sich
 ein System von ODEs in eine einzige ODE der Form
 \begin{equation} \label{eq:UmgeformteODE}
 (\underset{=:P}{\underbrace{ a_n\partial_x^n + a_{n-1}\partial_x^{n-1} +
@@ -89,7 +89,7 @@ Lösungen in $\Ckx$. %TODO: oder \tilde\cO
 \end{comment}
 
 \section{Meromorphe Zusammenhänge}
-Nun wollen wir dieses klassische Gebilde nun in die moderne Sprache der
+Nun wollen wir dieses klassische Gebilde in die moderne Sprache der
 meromorphen Zusammenhänge übersetzen.
 %Quelle ist \cite{sabbah_cimpa90}
 \begin{defn}[Meromorpher Zusammenhang] \label{def:merom-zush}
@@ -158,7 +158,7 @@ K$ und $u\in\cM_K$ gilt.\\
 (\partial_1-\partial_2)(fu) &= \partial_1(fu)-\partial_2(fu)\\
 &= f'u+f\partial_1u-f'u-f\partial_2u\\
 &= \underset{=0}{\underbrace{f'u-f'u}}+f\cdot(\partial_1u-\partial_2u)\\
-&= f\cdot(\partial_1-\partial_2)(u)\\
+&= f\cdot(\partial_1-\partial_2)(u) \,.
 \end{align*}
 \end{proof}
 \begin{comment}
@@ -202,10 +202,9 @@ $\partial$ auf $u=:\,^t(u_1,\dots,u_n)$ beschrieben durch
 \\&=\sum_{i=1}^n \Big( u_i'(x)-\sum_{j=1}^na_{ij}u_j(x) \Big)e_i
 \\&=\underbracket{\sum_{i=1}^n u_i'(x)e_i} 
   - \underbracket{\sum_{i=1}^n\sum_{j=1}^na_{ij}u_j(x)e_i}
-\\&=\overbracket{u'(x)} 
-  - \overbracket{Au(x)}
+\\&=\overbracket{u'(x)} - \overbracket{Au(x)} \,.
 \end{align*}
-Damit ist die Bedingung $\partial u(x)=0$, für $u(x)= \sum_{i=1}^n u_ie_i$,
+Somit ist die Bedingung $\partial u(x)=0$, für $u(x)= \sum_{i=1}^n u_ie_i$
 äquivalent zu der Gleichung
 \begin{equation*}
 u'(x)=Au(x)
@@ -302,8 +301,8 @@ Dies wird beispielsweise in \cite[Thm 4.3.2]{sabbah_cimpa90} bewiesen.
 \begin{lemdef}
 \cite[Satz 4.12]{ZulaBarbara}
 \cite[Thm 4.3.2]{sabbah_cimpa90}
-Ist $\cM_K$ ein meromorpher Zusammenhang, dann existiert ein $P\in\cD_K$ so
-dass $\cM_K\cong\cD_K/\cD_K\cdot P$. So ein wird $P$ dann als
+Ist $\cM_K$ ein meromorpher Zusammenhang, dann existiert ein $P\in\cD_K$, so
+dass $\cM_K\cong\cD_K/\cD_K\cdot P$. So ein $P$ wird dann als
 \emph{Minimalpolynom} von $\cM_K$ bezeichnet.
 \end{lemdef}
 \begin{proof}
@@ -365,7 +364,7 @@ Ist $P=P_1\cdot P_2$ mit $P_1,P_2\in \cD_K$ so gilt
 Sei $P=P_1\cdot P_2$ mit $P_1,P_2\in \cD_K$ wie in Satz
 \ref{thm:basic-splitting} so gilt
 \[
-\cD_K/\cD_K\cdot (P_1\cdot P_2) \cong \cD_K/\cD_K\cdot (P_2 \cdot P_1)
+\cD_K/\cD_K\cdot (P_1\cdot P_2) \cong \cD_K/\cD_K\cdot (P_2 \cdot P_1) \,.
 \]
 \end{cor}
 \begin{proof} Denn:
@@ -373,7 +372,7 @@ Sei $P=P_1\cdot P_2$ mit $P_1,P_2\in \cD_K$ wie in Satz
 \cD_K/\cD_K\cdot P &= \cD_K/\cD_K\cdot (P_1\cdot P_2)\\
   &\cong \cD_K/\cD_K\cdot P_1 \oplus \cD_K/\cD_K\cdot P_2\\
   &= \cD_K/\cD_K\cdot P_2 \oplus \cD_K/\cD_K\cdot P_1\\
-  &\cong \cD_K/\cD_K\cdot (P_2 \cdot P_1)
+  &\cong \cD_K/\cD_K\cdot (P_2 \cdot P_1) \,.
 \end{align*}
 \end{proof}
 
@@ -495,7 +494,7 @@ $\cD_K\cdot P=\cD_K\cdot (f\cdot P)\vartriangleleft \cD_K$.
 Allerdings sind die zugehörigen Newton-Polygone möglicherweise vertikal
 verschoben.\\
 Nach \cite[Seite 25]{sabbah_cimpa90} gilt, dass das Newton-Polygon, bis auf
-vertikales verschieben, nur von dem assoziierten meromorphen Zusammenhang
+vertikales Verschieben, nur von dem assoziierten meromorphen Zusammenhang
 abhängt.
 Dies wird auch in \cite[Bem 5.4]{ZulaBarbara} diskutiert.
 \end{bem}
@@ -505,7 +504,7 @@ In einem Polynom
 $P=\epsilon x^{p}\partial_x^{q}
 +\sum^{n}_{k=0}\big(\sum^{\infty}_{l=-N}{\alpha_{kl}x^l\big)\partial_x^k}$,
 mit $\epsilon, \alpha_{kl}\in \C, p,q \in \Z$ sind die restlichen Monome
-\emph{Therme im Quadranten} von $\epsilon x^{p}\partial_x^{q}$, falls für alle
+\emph{Terme im Quadranten} von $\epsilon x^{p}\partial_x^{q}$, falls für alle
 $k\in\N$ und $l\in\Z_{\geq -N}$ mit $\alpha_{kl}\neq 0$ gilt:
 $k \leq q$ und $l-k \geq p-q$.
 \end{defn}
@@ -529,10 +528,10 @@ H(P)&=H(\epsilon x^{p}\partial_x^{q}
 \\&=H(\epsilon x^{p}\partial_x^{q})
 \\\Rightarrow N(P)&=N(\epsilon x^{p}\partial_x^{q}) \,.
 \end{align*}
-Also können Therme, die sich bereits im Quadranten eines anderen Therms
-befinden und nicht der Therm selbst sind, vernachlässigt werden, wenn das
+Also können Terme, die sich bereits im Quadranten eines anderen Terms
+befinden und nicht der Term selbst sind, vernachlässigt werden, wenn das
 Newton-Polygon gesucht ist. Das \textbf{T.i.Q.} ist eine hier Abkürzung für
-Therme im Quadranten.
+Terme im Quadranten.
 \end{itemize}
 \end{bem}
 \begin{comment}
@@ -684,7 +683,7 @@ $\xi$, dann ist der Ring isomorph zu $\hat K[\xi]$.
 %
 Sei $P\in \cD_{\hat K}$, so ist $\sigma_\ell(P)$ definiert als die Klasse von
 $P$ in $gr_{\ord_\ell(P)}^{\,^\ell V}\cD_{\hat K}$. $\sigma_\ell$ wird hierbei
-als das $\ell$-Symbol Bezeichnet.
+als das $\ell$-Symbol bezeichnet.
 \end{defn}
 Zum Beispiel ist $\sigma_\ell(x^a\partial_x^b)=x^a\xi^b$.
 \begin{bem}
