@@ -28,7 +28,7 @@ if [[ ! -n "$TMUX" ]] ; then
   #sleep 5
   #git pull
 
-  grep -r --exclude='TODO' "TODO" * > TODO
+  grep --exclude='TODO' "TODO" * > TODO
   wc -l TODO
   echo
 

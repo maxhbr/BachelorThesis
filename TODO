@@ -1,9 +1,6 @@
 anhang-plot-newton-polygon.tex:          %TODO
 anhang-plot-newton-polygon.tex:          %TODO
 anhang-quellcode.tex:set term push #TODO: unnötig?
-beispiele/formal_b.tex:%TODO: besserer Titel
-beispiele/formal_b.tex:  %TODO: rightarrow oder mapsto?
-beispiele/formal_b.tex:        -\partial_t(f)\cdot t^2= %TODO: wegen klammerung?
 d-modul.tex:%TODO: sabah-cimpa90.pdf  seite 3
 d-modul.tex:%TODO: ein teil des Beweises ist "left as an exersice"
 d-modul.tex:TODO: Treffen?
@@ -21,26 +18,6 @@ grundlagen.tex:%TODO: Pfeile
 grundlagen.tex:  %TODO: Pfeile
 grundlagen.tex:  %TODO: Pfeile
 grundlagen.tex:  %TODO: Pfeile
-main/final.log:          term push #TODO: unnötig?
-main/final.log:                     TODO: unnötig?
-main/final.log:l.154 set term push #TODO:
-main/final.log:l.154 set term push #TODO: 
-main/final.log:l.154 set term push #TODO: 
-main/final.log:l.154 set term push #TODO: unnö
-main/final.log:l.154 set term push #TODO: unnö
-main/final.log:l.154 set term push #TODO: unnötig?
-main/final.log:l.154 set term push #TODO: unnötig?
-main/main.log:          term push #TODO: unnötig?
-main/main.log:                     TODO: unnötig?
-main/main.log:l.154 set term push #TODO:
-main/main.log:l.154 set term push #TODO: 
-main/main.log:l.154 set term push #TODO: 
-main/main.log:l.154 set term push #TODO: unnö
-main/main.log:l.154 set term push #TODO: unnö
-main/main.log:l.154 set term push #TODO: unnötig?
-main/main.log:l.154 set term push #TODO: unnötig?
-main/main.ps:w FJ(TODO,)30 b(\(3.)i(T)-8 b(re\033en\))p 3633 5576
-Übereinstimmungen in Binärdatei main/main.dvi.
 main.tex:  ,fontsize=11pt % TODO
 main.tex:%TODO: replace def --> newcommand
 main.tex:%TODO: set titel variable??
@@ -63,48 +40,6 @@ meromZsh.tex:%TODO: bessere Formulierung
 meromZsh.tex:TODO: mache alle Linearformen $L$ zu $\ell$
 meromZsh.tex:TODO
 meromZsh.tex:TODO: ist $\ell$ Slope (gehört zu Slope) dann hat $\sigma_\ell(P)$ zumindest 2
-meromZsh.tex_versions/v01_meromZsh.tex:% TODO; wie darf ich einen meromorphen verändern, (das P verändern) ohne das
-meromZsh.tex_versions/v01_meromZsh.tex:% TODO: \cM = \cM_K ... replace
-meromZsh.tex_versions/v01_meromZsh.tex:% TODO: Dimension eines meromorphen Zusammenhang
-meromZsh.tex_versions/v01_meromZsh.tex:%TODO: erklären, erwähnen oder entfernen!
-meromZsh.tex_versions/v01_meromZsh.tex:%TODO: posibly multivalued
-meromZsh.tex_versions/v01_meromZsh.tex:%TODO: partial oder d
-meromZsh.tex_versions/v01_meromZsh.tex:Lösungen in $\Ckx$. %TODO: oder \tilde\cO
-meromZsh.tex_versions/v01_meromZsh.tex:\partial(fu)=f'u+f\partial u %TODO: hier klammern um das letzte u ?
-meromZsh.tex_versions/v01_meromZsh.tex:%TODO: wieso gilt das?
-meromZsh.tex_versions/v01_meromZsh.tex:%TODO: Reihenfolge bei sabbah anderst!!!
-meromZsh.tex_versions/v01_meromZsh.tex:\cite[Seite 64]{ZulaBarbara} %TODO: hat die sich hier verschrieben???
-meromZsh.tex_versions/v01_meromZsh.tex:%TODO: welche Definition ist besser?
-meromZsh.tex_versions/v01_meromZsh.tex:%TODO: zeige, das beide Definitionen gleich sind
-meromZsh.tex_versions/v01_meromZsh.tex:%TODO: bessere Formulierung
-meromZsh.tex_versions/v01_meromZsh.tex:TODO: mache alle Linearformen $L$ zu $\ell$
-meromZsh.tex_versions/v01_meromZsh.tex:TODO
-meromZsh.tex_versions/v01_meromZsh.tex:TODO: ist $\ell$ Slope (gehört zu Slope) dann hat $\sigma_\ell(P)$ zumindest 2
-meromZsh.tex_versions/v01_meromZsh.tex:%TODO: titel: Operations on vector spaces with connection
-meromZsh.tex_versions/v01_meromZsh.tex:%TODO: verzweigung statt pull-back?
-meromZsh.tex_versions/v01_meromZsh.tex:  %TODO: Pfeile
-meromZsh.tex_versions/v01_meromZsh.tex:%TODO: move after slope definition!!!
-meromZsh.tex_versions/v01_meromZsh.tex:TODO
-meromZsh.tex_versions/v01_meromZsh.tex:TODO: damit wird $\hat L$ zu einem $\hat K$ Vektorraum.
-meromZsh.tex_versions/v01_meromZsh.tex:%TODO: ist das der Zusammenhang oder die Wirkung oder was?
-meromZsh.tex_versions/v01_meromZsh.tex:\begin{comment} TODO: VR oder Moduln??  \end{comment}
-meromZsh.tex_versions/v01_meromZsh.tex:%TODO: Pfeile
-meromZsh.tex_versions/v01_meromZsh.tex:\begin{comment} TODO: korrekt? \end{comment}
-meromZsh.tex_versions/v01_meromZsh.tex:\end{tikzpicture} , %TODO: hier wirklich ein Komma??
-meromZsh.tex_versions/v01_meromZsh.tex:%TODO: Pfeile
-meromZsh.tex_versions/v01_meromZsh.tex:%TODO: Pfeile
-meromZsh.tex_versions/v01_meromZsh.tex:%TODO: Pfeile
-meromZsh.tex_versions/v01_meromZsh.tex:%TODO: warum hier alles Lokalisiert?
-meromZsh.tex_versions/v01_meromZsh.tex:%TODO: muss \Cful oder \Cftl flach sein???
-meromZsh.tex_versions/v01_meromZsh.tex:%TODO: Funktorialität von Pull-Back? NEIN: Funktorialität von tensor
-meromZsh.tex_versions/v01_meromZsh.tex:  %TODO: Pfeile
-meromZsh.tex_versions/v01_meromZsh.tex:  %TODO: Pfeile
-meromZsh.tex_versions/v01_meromZsh.tex:  %TODO: Pfeile
-meromZsh.tex_versions/v01_meromZsh.tex:\\&=\dots %TODO: Hier weiter...
-meromZsh.tex_versions/v01_meromZsh.tex:%TODO: erkläre wieso --> Elementare Zusammenhänge
-meromZsh.tex_versions/v01_meromZsh.tex:  & \mbox{(Rechenregeln Tensorprodukt)}\\ %TODO: hinzufügen
-meromZsh.tex_versions/v01_meromZsh.tex: &=TODO
-meromZsh.tex_versions/v01_meromZsh.tex:mit $\xi^p=1$, bringen. Sei so ein $\xi$ ab jetzt fixiert. %TODO: besonderes xi?
 operationen.tex:  %TODO: Pfeile
 operationen.tex:%TODO: move after slope definition!!!
 operationen.tex:TODO
@@ -138,29 +73,8 @@ rezept.tex:und mit denn Kommutatorregeln %TODO: lemma? quelle?
 rezept.tex:%TODO: ist umsortieren immer erlaubt??
 rezept.tex:anwenden wollen: %TODO: quelle? formel?
 rezept.tex:TODO: text\\
-rezept.tex_versions/v01_rezept.tex:-\partial_z(f)\cdot z^2= %TODO: wegen klammerung?
-rezept.tex_versions/v01_rezept.tex:%TODO; weiter ausführen, genauer, nebenrechnung
-rezept.tex_versions/v01_rezept.tex:TODO
-rezept.tex_versions/v01_rezept.tex:TODO: bei Hedwig ist es $\beta/\lambda \cdot x^{-\lambda}$
-rezept.tex_versions/v01_rezept.tex:%TODO: Dies geht, weil $\hat K[\xi]$ kommutativ ist. ????
-rezept.tex_versions/v01_rezept.tex:%TODO: darf ich hier die Ableitung anwenden
 titel.tex:%TODO; titelpage bitte nicht seitlich versetzt
-trash/myNewtonPoly2.sty:          %TODO
-trash/myNewtonPoly2.sty:          %TODO
-trash/fromRezept.tex:TODO: $\lambda=\lambda_0$ ??
-trash/fromRezept.tex:TODO: $\lambda=\lambda_0$ ??
-trash/meromZsh.tex:  %TODO: auch nicht formal
-trash/levelt-turrittin.tex:TODO: induktionsanfang und -schritt kennzeichnen
-trash/levelt-turrittin.tex:TODO
-trash/levelt-turrittin.tex:\begin{comment}TODO: Hier weiter \end{comment}
-trash/levelt-turrittin.tex:\begin{comment}TODO: Hier weiter \end{comment}
-trash/lemma2-4.tex:  %\mbox{\footnote{$(\xi^i)^p=1\forall i$}} % TODO: correct footnote
-trash/lemma2-4.tex:TODO: zeige das noch
-trash/myNewtonPlot.sty:            %TODO
-trash/myNewtonPlot.sty:            %TODO
-trash/myNewtonPoly.sty:          %TODO
-trash/myNewtonPoly.sty:          %TODO
-workflow:  grep -r --exclude='TODO' "TODO" * > TODO
+workflow:  grep --exclude='TODO' "TODO" * > TODO
 workflow:  wc -l TODO
 workflow:      grep -r --exclude='TODO' "TODO" * > TODO
 workflow:      wc -l TODO
