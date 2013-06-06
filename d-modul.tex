@@ -2,10 +2,10 @@
 % das gleiche wie Meromorphe zusammenhänge?
 
 \chapter{Moduln über $\cD_k$}
-Ich werde hier die Weyl Algebra, wie in \cite[Chapter~1]{sabbah_cimpa90}, in
-einer Veränderlichen einführen. Ähnlich wird dies auch in
-\cite[Kapittel~2]{ZulaBarbara} eingeführt. Allgemeiner und in mehreren
-Veränderlichen wird die Weyl-Algebra beispielsweise in
+In diesem Kapittel wird die Weyl Algebra, wie in
+\cite[Chapter~1]{sabbah_cimpa90}, in einer Veränderlichen einführen. Ähnlich
+wie auch in \cite[Kapittel~2]{ZulaBarbara}. Allgemeiner und in
+mehreren Veränderlichen wird die Weyl-Algebra beispielsweise in
 \cite[Chapter~1]{coutinho1995primer} definiert.
 
 \begin{defn}[Kommutator]%zula seite 15
@@ -68,11 +68,19 @@ Kommutations-Relation zwischen dem \emph{Ableitungsoperator} und dem
 wobei die rechte Seite die Multiplikation mit $\frac{\partial f}{\partial x}$,
 also dem bereits abgeleiteten $f$, darstellt. Dies bedeutet, für alle
 $g\in\C[x]$ hat man
-\[
+\begin{align*}
 [\frac{\partial}{\partial x},f]\cdot g
-=\frac{\partial fg}{\partial x} - f\frac{\partial g}{\partial x}
-=\frac{\partial f}{\partial x} \cdot g \,.
-\]
+  &=\underbracket{\frac{\partial (fg)}{\partial x}}
+    - f\cdot \frac{\partial g}{\partial x}
+\\&= \overbracket{\frac{\partial f}{\partial x}\cdot g
+  + \rlap{$\underbrace{\phantom{
+  f\cdot \frac{\partial g}{\partial x}
+  - f\cdot \frac{\partial g}{\partial x}
+  }}_{=0}$}
+  f\cdot \frac{\partial g}{\partial x}}
+  - f\cdot \frac{\partial g}{\partial x}
+\\&=\frac{\partial f}{\partial x} \cdot g \,.
+\end{align*}
 \begin{defn}
 Definiere nun den Ring $\cD_k$ als die Quotientenalgebra der freien Algebra,
 welche von dem Koeffizientenring in $k$ zusammen mit dem Element $\partial_x$,
@@ -189,9 +197,9 @@ Nur abgeschrieben
 \end{comment}
 \cite[Chap 1.1.]{kashiwara2003d}
 Sei $X$ eine $1$-dimensionale komplexe Mannigfaltigkeit und $\cO_X$ die Garbe
-der holomorphen Funktionen auf $X$. Ein \emph{(holomorpher) differenzial
-Operator} auf $X$ ist ein Garben-Morphismus $P:\cO_X\rightarrow \cO_X$, lokal
-in der Koordinate $x$ und mit holomorphen Funktionen $a_n(x)$ als
+der holomorphen Funktionen auf $X$. Ein \emph{(holomorpher)
+Differenzialoperator} auf $X$ ist ein Garben-Morphismus $P:\cO_X\rightarrow
+\cO_X$, lokal in der Koordinate $x$ und mit holomorphen Funktionen $a_n(x)$ als
 \[
 (Pu)(x)=\sum_{n\geq0}a_n(x)\partial_x^nu(x)
 \]
@@ -205,7 +213,7 @@ Mit $\cD_X$ bezeichnen wir die \emph{Garbe von Differentialoperatoren} auf $X$.
 Die Garbe $\cD_X$ hat eine Ringstruktur mittels der Komposition als
 Multiplikation und $\cO_X$ ist ein Unterring von $\cD_X$. Sei $\Theta_X$ die
 Garbe der Vektorfelder über $X$. Es gilt, dass $\Theta_X$ in $\cD_X$
-enthalten ist.  Bemerke auch, dass $\Theta_X$ ein links $\cO_X$-Untermodul,
+enthalten ist.  Bemerke auch, dass $\Theta_X$ ein Links-$\cO_X$-Untermodul,
 aber kein rechts $\cO_X$-Untermodul ist.
 
 \begin{prop}
@@ -222,20 +230,20 @@ Somit stimmt die alternative Definition bereits mit der einfachen überein.
 \begin{comment}
 \begin{defn} \cite[Defn 2.1]{ArkhipovDmod}
 Sei $X=\A^1$, $\cO_X=\C[x]$ und $\cD_X=[x,\partial_x]$ mit der Relation
-$[\partial_x,x]=1$. Dann definieren wir die links $\cD$-Moduln über $\A^1$ als
+$[\partial_x,x]=1$. Dann definieren wir die Links-$\cD$-Moduln über $\A^1$ als
 die $\C[x,\partial_x]$-Moduln. Sie werden geschrieben als $\cD-mod(\A^1)$
 \end{defn}
 \end{comment}
 
-\section{(Links) $\cD$-Moduln}
+\section{(Links-) $\cD$-Moduln}
 Da $\cD$ ein nichtkommutativer Ring ist, muss man vorsichtig sein und zwischen
-links und rechts $\cD$-Moduln unterscheiden.
+Links- und Rechts-$\cD$-Moduln unterscheiden.
 Wenn im folgendem von $\cD$-Moduln gesprochen wird, werden immer
 %, wie auch \cite[Chapter 1.6.]{arapuraNotes},
-links $\cD$-Moduln gemeint.
+Links-$\cD$-Moduln gemeint.
 
 \begin{exmp}
-Hier einige Beispiele für (links) $\cD$-Moduln
+Hier einige Beispiele für (Links-) $\cD$-Moduln
 % Sergey-Arkhipov-MAT1191_Lecture_Notes.pdf Chapter 2.1
 \begin{comment}
 \cite[Exmp 2.2]{ArkhipovDmod}
@@ -243,7 +251,7 @@ Hier einige Beispiele für (links) $\cD$-Moduln
 %Sei $X=\A^1$ und $\sO_X=\C[t]$.
 \begin{enumerate}
 %
-\item $\cD$ ist ein links und rechts $\cD$-Modul
+\item $\cD$ ist ein Links- und Rechts-$\cD$-Modul
 %
 \item $\cM=\C[x]$ oder $\cM=\C[x,x^{-1}]$ jeweils durch $x\cdot x^{m}=x^{m+1}$
 und $\partial(x^m)=mx^{m-1}$
@@ -275,24 +283,24 @@ erzeugt und man hat
 
 \begin{comment}
 \begin{lem}\cite[Lem 2.3.3.]{sabbah_cimpa90}
-Sei $\cM$ ein links $\cD$-Modul von endlichem Typ, welches auch von endlichem
+Sei $\cM$ ein Links-$\cD$-Modul von endlichem Typ, welches auch von endlichem
 Typ über $\Ckx$ ist. Dann ist $\cM$ bereits ein freies $\C\{x\}$-Modul.
 \end{lem}
 \begin{proof}
 Siehe \cite[Lem 2.3.3.]{sabbah_cimpa90}.
 \end{proof}
 \begin{cor} \cite[Cor 2.3.4.]{sabbah_cimpa90}
-Falls $\cM$ ein links $\cD$-Modul von endlichem Typ, welches außerdem ein
+Falls $\cM$ ein Links-$\cD$-Modul von endlichem Typ, welches außerdem ein
 endlich dimensionaler Vektorraum ist, so ist schon $\cM=\{0\}$.
 \end{cor}
 \end{comment}
 
 \section{Holonome $\cD_k$-Moduln}
 \begin{defn}
-Sei $\cM_k$ ein links $\cD_k$-Modul. $\cM_k$ heißt \emph{holonom}, falls es ein
-Element $m\in\cM_k$ gibt, das $\cM_k$ als $\cD_k$-Modul erzeugt. Im speziellen
-folgt damit, dass $\cM_k\cong \cD_k/\mathfrak{a}$ für ein
-$0\neq\mathfrak{a}\vartriangleleft\cD_k$.
+Sei $\cM_k$ ein Links-$\cD_k$-Modul ungleich $\cD_k$. $\cM_k$ heißt
+\emph{holonom}, falls es ein Element $m\in\cM_k$ gibt, das $\cM_k$ als
+$\cD_k$-Modul erzeugt. Im speziellen folgt damit, dass $\cM_k\cong
+\cD_k/\mathfrak{a}$ für ein $0\neq\mathfrak{a}\vartriangleleft\cD_k$.
 \end{defn}
 \begin{bem}
 In \cite{coutinho1995primer} wird der Begriff holonom über die Dimension

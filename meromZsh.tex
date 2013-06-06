@@ -43,8 +43,8 @@ $i\in\{1,\dots,n\}$ und $v$ die Gleichung (\ref{eq:KlassischesODE}), auf einer
 Umgebung um die $0$, erfüllt.
 \end{defn}
 
-Durch Setzen von $w(x)=Tu(x)$ für eine invertierbare Matrix $T\in GL(n,K)$
-erhält man aus \ref{eq:KlassischesODE} das System 
+Durch Setzen von $w(x):=Tu(x)$ für eine invertierbare Matrix $T\in GL(n,K)$
+erhält man aus \ref{eq:KlassischesODE} das äquivalente System
 \[
 \frac{d}{dx}w(x)=(T^{-1}AT - T^{-1}\frac{d}{dx}T)w(x) \,,
 \]
@@ -186,21 +186,18 @@ $\{e_i\}_{i\in\{1,\dots,n\}}$ von $\cM$. Dann ist die
 Matrix $A=(a_{ij}(x))_{i,j\in\{1,\dots,n\}}\in M(n\times n,K)$ definiert
 durch
 %\[ \partial e_j=-\sum_{i=1}^na_{ij}(x)e_i \,. \]
-\[ a_{ij}(x) = -^te_i \partial e_j \,. \]
+\[ 
+a_{ij}(x) := -^te_i \partial e_j \,. 
+\]
 \end{defn}
 
 Damit ist, bezüglich der Basis $\{e_i\}_{i\in\{1,\dots,n\}}$, die Wirkung von
 $\partial$ auf $u=:\,^t(u_1,\dots,u_n)$ beschrieben durch
-\iffalse
-  \[
-  \partial(u) = \partial \Big( \sum_{i=1}^nu_i(x)e_i \Big)
-  =\sum_{i=1}^n \Big( u_i'(x)-\sum_{j=1}^na_{ij}u_j(x) \Big)e_i \,.
-  \]
-\fi
+$\partial(u)&=u'(x) - Au(x)$, denn
 \begin{align*}
 \partial(u) &= \partial \Big( \sum_{i=1}^nu_i(x)e_i \Big)
 \\&=\sum_{i=1}^n \Big( u_i'(x)-\sum_{j=1}^na_{ij}u_j(x) \Big)e_i
-\\&=\underbracket{\sum_{i=1}^n u_i'(x)e_i} 
+\\&=\underbracket{\sum_{i=1}^n u_i'(x)e_i}
   - \underbracket{\sum_{i=1}^n\sum_{j=1}^na_{ij}u_j(x)e_i}
 \\&=\overbracket{u'(x)} - \overbracket{Au(x)} \,.
 \end{align*}
@@ -271,6 +268,9 @@ welche eine System von ODEs beschreibt, beginnen, können wir durch
 \end{align*}
 den \emph{assoziierten meromorphen Zusammenhang} $(\cM_A,\partial_A)$ definieren.
 \end{defn}
+\begin{comment}
+TODO: zueinander inverse bijektionen?
+\end{comment}
 \begin{lem}
 Sind $A_1,$ $A_2\in M(n\times n,K)$ zwei Matrizen, die zwei Systeme von ODEs
 beschreiben, dann gilt
@@ -299,28 +299,19 @@ Dies wird beispielsweise in \cite[Thm 4.3.2]{sabbah_cimpa90} bewiesen.
 \end{proof}
 
 \begin{lemdef}
-\cite[Satz 4.12]{ZulaBarbara}
-\cite[Thm 4.3.2]{sabbah_cimpa90}
 Ist $\cM_K$ ein meromorpher Zusammenhang, dann existiert ein $P\in\cD_K$, so
 dass $\cM_K\cong\cD_K/\cD_K\cdot P$. So ein $P$ wird dann als
 \emph{Minimalpolynom} von $\cM_K$ bezeichnet.
 \end{lemdef}
 \begin{proof}
-\cite[Satz 4.12]{ZulaBarbara}
+Siehe \cite[Satz 4.12]{ZulaBarbara}.
+\begin{comment}
+\cite[Thm 4.3.2]{sabbah_cimpa90}
+\end{comment}
 \end{proof}
-\begin{comment}
-\begin{rem}
-\cite[Proof of Theorem 5.4.7]{sabbah_cimpa90}
-\[
-\dim_{\hat K}\cM_{\hat K} =\deg P \mbox{ wenn } \cM_{\hat K}=\cD/\cD\cdot P
-\]
-\end{rem}
-\end{comment}
-\begin{comment}
-\cite[4.2]{sabbah_cimpa90}
-Let $\cM$ be a left $\cD$-module. First we consider it only as a
-$\C\{x\}$-module and let $\cM[x^{-1}]$ be the localized module.
-\end{comment}
+\begin{bem}
+Dieses so definierte Minimalpolynom ist nicht eindeutig.
+\end{bem}
 
 %TODO: Reihenfolge bei sabbah anderst!!!
 \begin{lem}[Lemma vom zyklischen Vektor] \label{lem:Zyklischer-Vektor}
@@ -351,22 +342,26 @@ gilt.
 \end{cor}
 
 \begin{thm}\label{thm:basic-splitting}
-\cite[Seite 64]{ZulaBarbara} %TODO: hat die sich hier verschrieben???
 Ist $P=P_1\cdot P_2$ mit $P_1,P_2\in \cD_K$ so gilt
 \[
 \cD_K/\cD_K\cdot P \cong \cD_K/\cD_K\cdot P_1 \oplus \cD_K/\cD_K\cdot P_2 \,.
 \]
 \end{thm}
 \begin{proof}
+Beweisen wird dies in
 \cite[Seite 57-64]{ZulaBarbara}
+oder auch in \cite[Seite 30-32]{sabbah_cimpa90}.
 \end{proof}
-\begin{cor}
+\begin{cor} \ref{cor:moduluKomutativität}
 Sei $P=P_1\cdot P_2$ mit $P_1,P_2\in \cD_K$ wie in Satz
 \ref{thm:basic-splitting} so gilt
 \[
 \cD_K/\cD_K\cdot (P_1\cdot P_2) \cong \cD_K/\cD_K\cdot (P_2 \cdot P_1) \,.
 \]
 \end{cor}
+\begin{comment}
+TODO: verweise auf dieses Korollar
+\end{comment}
 \begin{proof} Denn:
 \begin{align*}
 \cD_K/\cD_K\cdot P &= \cD_K/\cD_K\cdot (P_1\cdot P_2)\\
@@ -387,8 +382,10 @@ Jedes $P\in \cD_{\hat K}$, also insbesondere auch jedes $P\in\cD_K$, lässt sich
 eindeutig als
 \[
 P=\sum^{n}_{k=0}a_k(x)\partial_x^k}
-=\sum^{n}_{k=0}\big(\sum^{\infty}_{l=-N}{\alpha_{kl}x^l\big)\partial_x^k} \]
-mit $\alpha_{ml}\in\C$ schreiben. Betrachte das zu $P$ dazugehörige
+=\sum^{n}_{k=0}\big(\sum^{\infty}_{l=-N}{\alpha_{kl}x^l\big)\partial_x^k} 
+\]
+mit $a_k\in \hat K$ bzw. $\alpha_{kl}\in\C$ schreiben. Betrachte das zu $P$
+dazugehörige
 \begin{align*}
 H(P):&=\underset{m,l\mbox{ mit }\alpha_{ml}\neq0}{\bigcup}\Big( (m,l-m) +
     \R_{\leq 0}\times \R_{\geq 0} \Big) \subset \R^2\\
@@ -397,7 +394,7 @@ H(P):&=\underset{m,l\mbox{ mit }\alpha_{ml}\neq0}{\bigcup}\Big( (m,l-m) +
 %TODO: welche Definition ist besser?
 \end{align*}
 
-\begin{defn}
+\begin{defn} \label{defn:NP}
 Das Randpolygon der konvexen Hülle $\conv(H(P))$ von $H(P)$ heißt das
 \emph{Newton Polygon} von $P$ und wird als $N(P)$ geschrieben.
 \end{defn}
@@ -414,15 +411,18 @@ Randpolygon der konvexen Hülle von
 H'(P):=\underset{m\mbox{ mit }a_{m}\neq0}{\bigcup}\Big( (m,deg(a_m)) +
 \R_{\leq 0}\times \R_{\geq 0} \Big) \subset \R^2 \,.
 \]
+Es bemerkt auch, das seine Definition, bis auf möglicherweise vertikales
+verschieben, zu Definition \ref{defn:NP} äquivalent ist.
 %TODO: zeige, das beide Definitionen gleich sind
 \end{bem}
 
 \begin{defn} % aus der zula
-Die Menge $\slopes(P)$ sind die nicht-vertikalen Steigungen von $N(P)$, die
-sich echt rechts von $\{0\}\times\R$ befinden.\\ % der $y$-Achse
+Die Menge $\slopes(P)$ (genannt \emph{Slopes}) sind die nicht-vertikalen
+Steigungen von $N(P)$, die sich echt rechts von $\{0\}\times\R$ befinden.
+% der $y$-Achse
 %TODO: bessere Formulierung
 \begin{itemize}
-\item Schreibe $\cP(\cM)$ für die Menge der zu $\cM$ gehörigen slopes.
+\item Schreibe $\cP(\cM)$ für die Menge der zu $\cM$ gehörigen Slopes.
 \item P heißt \emph{regulär} oder \emph{regulär singulär} $:\Leftrightarrow$
 $\slopes(P)=\{0\}$ oder $\deg P=0$, sonst \emph{irregulär singulär}.
 \item Ein meromorpher Zusammenhang $\cM_{\hat K}$ (bzw. $\cM_K$) heißt regulär
@@ -450,7 +450,7 @@ H(P_1)=\Big( (\textcolor{blue}{2},\textcolor{red}{1}-\textcolor{blue}{2}) +
 In Abbildung \ref{fig:Newton-Polygon1} ist der Quadrant, der zum Monom
 $x\partial_x^2$ gehört (blau) sowie das Newton Polygon eingezeichnet.
 Offensichtlich ist $\slopes(P_1)=\{0\}$ und damit ist $P_1$ regulär singulär.
-\item 
+\item
 \begin{comment}
 \cite[Bsp 5.3. 2.]{ZulaBarbara}
 \end{comment}
@@ -489,7 +489,7 @@ Man erkennt, dass $\cP(P_2)=\{0,\frac{2}{3}\}$ ist.
 Sei $P$ ein Minimalpolynom zu $\cM_K$.
 Für jedes $f\in\cD_K^\times$\footnote{
 Für einen Ring $R$, bezeichnet $R^\times$ die Einheitengruppe von $R$.
-} gilt, dass $f\cdot P$ ebenfalls ein Minimalpolynom von $cM_K$ ist, denn 
+} gilt, dass $f\cdot P$ ebenfalls ein Minimalpolynom von $cM_K$ ist, denn
 $\cD_K\cdot P=\cD_K\cdot (f\cdot P)\vartriangleleft \cD_K$.
 Allerdings sind die zugehörigen Newton-Polygone möglicherweise vertikal
 verschoben.\\
@@ -510,7 +510,7 @@ $k \leq q$ und $l-k \geq p-q$.
 \end{defn}
 \begin{bem}
 \begin{itemize}
-\item Anschaulich bedeutet das, dass
+\item Anschaulich bedeutet dies, dass
 \[
 H(\epsilon x^{p}\partial_x^{q})
 =\Big( (q,p-q) + \R_{\leq 0} \times \R_{\geq 0} \Big) \supset
@@ -579,7 +579,7 @@ $\cP(P)=\cP(P_1)\cup\cP(P_2)$ und $\cP(P_1)\cap\cP(P_2)=\emptyset$
 \begin{thm} \label{thm:Split-after-slopes}
 Sei $\cM_{\hat{K}}$ ein formaler meromorpher Zusammenhang und sei
 $\cP(\cM_{\hat K})=\{\Lambda_1,\dots,\Lambda_r\}$ die Menge seiner
-slopes. Es existiert eine (bis auf Permutation) eindeutige Zerlegung
+Slopes. Es existiert eine (bis auf Permutation) eindeutige Zerlegung
 \[
 \cM_{\hat K}=\bigoplus_{i=1}^r\cM_{\hat K}^{(i)}
 \]
@@ -712,7 +712,7 @@ Die Funktion
 \omega_P:[0,\infty)\rightarrow\R, \omega_P(t):=\inf\{v-tu \mid (u.v) \in N(P)\}
 \]
 heißt Stützfunktion und wird in \cite{ZulaBarbara} als Alternative zu dieser
-Ordnung verwendet.
+Filtrierung verwendet.
 \end{defn}
 \begin{bem}
 Wenn $\ell(x_0,s_1)$ wie oben aus $\Lambda$ entstanden ist, so gilt

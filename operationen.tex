@@ -66,17 +66,21 @@ $(\cM\otimes_K\cN,\partial)$ zu einem meromorphen Zusammenhang.
 \end{comment}
 \end{prop}
 \begin{comment}
+TODO: Zeige universelle Eigenschaft
+\end{comment}
+\begin{comment}
 \begin{proof}
 Klar
 \end{proof}
 \end{comment}
-\begin{lem} \cite[Ex 5.3.7]{sabbah_cimpa90}
+\begin{lem} 
 %TODO: move after slope definition!!!
 Falls $\cN$ regulär und nicht Null, dann ist die Menge der Slopes von
 $\cM\otimes\cN$ genau die Menge der Slopes von $\cM$.
 \end{lem}
 \begin{proof}
-TODO
+Siehe \cite[Ex 5.3.7]{sabbah_cimpa90}
+\\TODO
 \end{proof}
 
 \section{pull-back und push-forward}
@@ -196,7 +200,7 @@ m))+((t\frac{\partial\phi}{\partial t})\otimes m) \,.
 Man erhält damit die Wirkung von $\partial_t=t^{-1}(t\partial_t)$.
 \end{comment}
 
-Für den Beweis von Satz \ref{thm:pull-back-berechnung} werden zunächst somit
+Für den Beweis von Satz \ref{thm:pull-back-berechnung} werden zunächst einige
 Lemmata bewiesen.
 
 \begin{lem} \label{lem:pull-back-hilfslemma1pre}
@@ -293,7 +297,9 @@ Dieser so erhaltene eindeutige Morphismus ist genau unser $\Phi$.
 \end{comment}
 \begin{proof}
 Prüfe zunächst die Injektivität. Sei $f(t)\otimes Q(x,\partial_x)\in
-\ker(\Phi)$ so, dass
+\ker(\Phi)$\footnote{
+$\ker(\Phi):=\{x\in \hat L\otimes_{\hat K }\cD_{\hat K }\mid \Phi(x)=0\}$
+} so, dass
 \begin{align*}
 0 &= \Phi(f(t)\otimes Q(x,\partial_x))
 \\&= f(t)Q(\rho(t),\rho'(t)^{-1}\partial_t)
@@ -404,7 +410,7 @@ BENÜTZT BEREITS DAS NÄCHSTE LEMMA...
 Das soeben, in Lemma \ref{lem:pull-back-hilfslemma1pre}, definierte $\Phi$ erfüllt
 für Elementartensoren $1\otimes m\in \hat L\otimes_{\hat K}\cD_{\hat K}$
 \begin{align*}
-\partial_u(1\otimes m) &\overset{\mbox{def}}{=} \rho'(t)\otimes\partial_x m \\
+\partial_u(1\otimes m) &\bydef \rho'(t)\otimes\partial_x m \\
 &\overset{\Phi}{\mapsto} \underset{=1}{\underbrace{\rho'(t)\rho'(t)^{-1}}}
   \partial_t m(\rho(t),\rho'(t)^{-1}\partial_t) \\
 &= \partial_t m(\rho(t),\rho'(t)^{-1}\partial_t)\\
@@ -498,9 +504,9 @@ P(\rho(t),\rho'(t)^{-1}\partial_t)$.
 %TODO: warum hier alles Lokalisiert?
 Sei $P\in\cD_{\hat K}$ und $\cM_{\hat K }:=\cD_{\hat K }/\cD_{\hat K }\cdot P$.
 Wir wollen zeigen, dass
-\begin{align*}
-\rho^*\cM_{\hat K } &\overset{!}{\cong}\cD_{\hat L }/\cD_{\hat L }\cdot Q
-\end{align*}
+\[
+\rho^*\cM_{\hat K }\cong\cD_{\hat L }/\cD_{\hat L }\cdot Q
+\]
 für $Q=P(\rho(t),\rho'(t)^{-1}\partial_t)$ gilt.
 Betrachte dazu die kurze Sequenz
 \begin{center}
@@ -512,9 +518,9 @@ Betrachte dazu die kurze Sequenz
     %, text height=3em
     %, text depth=0.25em
   ]{
-  0 & \cD_{\hat K } & \cD_{\hat K } & \cM_{\hat K }            & 0\\
-    & u             & u\cdot P \\
-    &               & u             & u\mod\cD_{\hat K}\cdot P \\
+  0 & \cD_{\hat K }    & \cD_{\hat K } & \cM_{\hat K }               & 0\\
+    & \phantom{P}\!\!u & u\cdot P \\
+    &                  & u             & u\mod\cD_{\hat K}\cdot P \\
   };
   \path[->,font=\scriptsize,>=angle 90]
   (m-1-1) edge (m-1-2)
@@ -528,12 +534,9 @@ Betrachte dazu die kurze Sequenz
   ;
 \end{tikzpicture}
 \end{center}
-%TODO: muss \Cful oder \Cftl flach sein???
-ist exakt, weil $\cM_{\hat K } \cong\cD_{\hat K }\Big/\cD_{\hat K
-}\cdot P=\coker(\_\cdot P)$.  Weil $\hat K$ flach ist, da  Körper, ist
-auch, nach Anwenden des
-%exakten
-Funktors $\hat L\otimes_{\hat K}\_$, die Sequenz
+ist exakt, weil $\cM_{\hat K } \cong\cD_{\hat K }\Big/\cD_{\hat K }\cdot
+P=\coker(\_\cdot P)$.  Weil $\hat L$ flach über den Körper $\hat K$ ist, ist
+auch, nach Anwenden des Funktors $\hat L\otimes_{\hat K}\_$, die Sequenz
 %TODO: Funktorialität von Pull-Back? NEIN: Funktorialität von tensor
 \begin{center}
 \begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
@@ -608,7 +611,7 @@ ergibt sich
   ;
 \end{tikzpicture}
 \end{center}
-als kommutatives Diagramm. Nun, weil $\_\!\cdot\! Q$ injektiv ist, lässt sich
+als kommutatives Diagramm. Nun, da $\_\!\cdot\! Q$ injektiv ist, lässt sich
 die untere Zeile zu einer exakten Sequenz fortsetzen
 \begin{center}
 \begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
@@ -652,7 +655,7 @@ und damit folgt, wegen Isomorphie der Kokerne, die Behauptung.
 \begin{lem}\label{lem:slope-pb-multiplikation}
 Sei $\cP(\cM_{\hat K})=\{\Lambda_1,\dots,\Lambda_r\}$ die Menge der Slopes von
 $\cM_{\hat K}$ und $\rho:t\mapsto x:=t^p$, dann gilt für $\cP(\rho^*\cM_{\hat
-K})=\{\Lambda_1',\dots,\Lambda_r'\}$, dass $\Lambda_n'=p\cdot\Lambda_n$.
+K})=\{\Lambda_1',\dots,\Lambda_r'\}$, dass $\Lambda_i'=p\cdot\Lambda_i$.
 \end{lem}
 \begin{proof}
 Siehe \cite[5.4.3]{sabbah_cimpa90} für einen Beweis.
@@ -1105,8 +1108,8 @@ beweisen.
 TODO: text löschen?
 \end{comment}
 Dieses Lemma wird im weiteren nicht weiter verwendet, deshalb kann ein Leser,
-der nur an den letzten Kapitteln interesiert ist, den Beweis überspringen.
-Jedoch werden im Beweis mehrere interesannte Tricks verwendet, die diesen auf
+der nur an den letzten Kapiteln interesiert ist, den Beweis überspringen.
+Jedoch werden im Beweis mehrere interessante Tricks verwendet, die diesen auf
 jeden Fall lesenswert machen.
 Sei $\rho:t\mapsto x:=t^p$ und $\mu_\xi:t\mapsto\xi t$.
 \begin{lem}
