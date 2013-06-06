@@ -32,8 +32,9 @@ meromZsh.tex:%TODO: partial oder d
 meromZsh.tex:Lösungen in $\Ckx$. %TODO: oder \tilde\cO
 meromZsh.tex:\partial(fu)=f'u+f\partial u %TODO: hier klammern um das letzte u ?
 meromZsh.tex:%TODO: wieso gilt das?
+meromZsh.tex:TODO: zueinander inverse bijektionen?
 meromZsh.tex:%TODO: Reihenfolge bei sabbah anderst!!!
-meromZsh.tex:\cite[Seite 64]{ZulaBarbara} %TODO: hat die sich hier verschrieben???
+meromZsh.tex:TODO: verweise auf dieses Korollar
 meromZsh.tex:%TODO: welche Definition ist besser?
 meromZsh.tex:%TODO: zeige, das beide Definitionen gleich sind
 meromZsh.tex:%TODO: bessere Formulierung
@@ -41,8 +42,9 @@ meromZsh.tex:TODO: mache alle Linearformen $L$ zu $\ell$
 meromZsh.tex:TODO
 meromZsh.tex:TODO: ist $\ell$ Slope (gehört zu Slope) dann hat $\sigma_\ell(P)$ zumindest 2
 operationen.tex:  %TODO: Pfeile
+operationen.tex:TODO: Zeige universelle Eigenschaft
 operationen.tex:%TODO: move after slope definition!!!
-operationen.tex:TODO
+operationen.tex:\\TODO
 operationen.tex:TODO: damit wird $\hat L$ zu einem $\hat K$ Vektorraum.
 operationen.tex:%TODO: ist das der Zusammenhang oder die Wirkung oder was?
 operationen.tex:\begin{comment} TODO: VR oder Moduln??  \end{comment}
@@ -53,7 +55,6 @@ operationen.tex:%TODO: Pfeile
 operationen.tex:%TODO: Pfeile
 operationen.tex:%TODO: Pfeile
 operationen.tex:%TODO: warum hier alles Lokalisiert?
-operationen.tex:%TODO: muss \Cful oder \Cftl flach sein???
 operationen.tex:%TODO: Funktorialität von Pull-Back? NEIN: Funktorialität von tensor
 operationen.tex:  %TODO: Pfeile
 operationen.tex:  %TODO: Pfeile
