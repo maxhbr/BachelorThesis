@@ -42,7 +42,7 @@ Matrix zu $x\partial_x$ konstant ist.
 Siehe \cite[Thm 5.2.2]{sabbah_cimpa90}.
 \end{proof}
 
-\begin{thm} \label{thm:regulärInDirSumme}
+\begin{thm} \label{thm:regulaerInDirSumme}
 Ein regulärer formaler Zusammenhang $\cM_{\hat K}$ ist isomorph zu einer
 direkten Summe von elementaren regulären meromorphen Zusammenhängen.
 \end{thm}
@@ -126,6 +126,87 @@ Siehe \cite[Prop 3.1]{sabbah_Fourier-local}
 \end{proof}
 \end{comment}
 
+\section{Die Filtrierung $\,^\ell V\cD_{\hat K}$ und das $\ell$-Symbol}
+\begin{comment}
+TODO: mache alle Linearformen $L$ zu $\ell$
+\end{comment}
+Sei $\Lambda=\frac{\lambda_0}{\lambda_1}\in \Q_{\geq 0}$ vollständig gekürtzt,
+also mit $\lambda_0$ und $\lambda_1$ in $\N$ relativ prim. Definiere die
+Linearform $\ell(s_0,s_1)=\lambda_0s_0+\lambda_1s_1$ in zwei Variablen, sei
+$P\in\cD_{\hat K}$.  Falls $P=x^a\partial_x^b$ mit $a\in \Z$ und $b\in \N$,
+setzen wir
+\[
+\ord_\ell(P)=\ell(b,b-a)
+\]
+und falls $P=\sum_{i=0}^d b_i(x)\partial_x^i$ mit $b_i\in\hat K$, setzen wir
+\[
+\ord_\ell(P)=\max_{\{i\mid a_i\neq 0\}} \ell(i,i-v(b_i))\,.
+%Hier ist ein fehler im Sabbah script a_i <-> b_i
+\]
+\begin{defn}[Die Filtrierung $\,^\ell V\cD_{\hat K}$]
+\cite[Seite 25]{sabbah_cimpa90}
+Nun können wir die aufsteigende Filtration $\,^\ell V\cD_{\hat K}$, welche mit
+$\Z$ indiziert ist, durch
+\[
+\,^\ell V_\lambda\cD_{\hat K}:=\{P\in\cD_{\hat K}\mid \ord_\ell(P)\leq \lambda\}
+\]
+definieren.
+\end{defn}
+\begin{bem}
+Man hat $\ord_\ell(PQ)=\ord_\ell(P)+\ord_\ell(Q)$ und falls $\lambda_0\neq 0$,
+hat man auch, das $\ord_\ell([P,Q])\leq \ord_\ell(P)+\ord_\ell(Q)-1$.
+\end{bem}
+\begin{defn}[$\ell$-Symbol]
+\cite[Seite 25]{sabbah_cimpa90}
+Falls $\lambda_0\neq 0$, ist der gradierte Ring $gr^{\,^\ell V}\cD_{\hat
+K}\bydef \bigoplus_{\lambda \in \Z}gr_\lambda^{\,^\ell V}\cD_{\hat K}$ ein
+kommutativer Ring. Bezeichne die Klasse von $\partial_x$ in dem Ring durch
+$\xi$, dann ist der Ring isomorph zu $\hat K[\xi]$.
+%
+Sei $P\in \cD_{\hat K}$, so ist $\sigma_\ell(P)$ definiert als die Klasse von
+$P$ in $gr_{\ord_\ell(P)}^{\,^\ell V}\cD_{\hat K}$. $\sigma_\ell$ wird hierbei
+als das $\ell$-Symbol bezeichnet.
+\end{defn}
+Zum Beispiel ist $\sigma_\ell(x^a\partial_x^b)=x^a\xi^b$.
+\begin{bem}
+Bei \cite{sabbah_cimpa90} wird der Buchstabe $L$ anstatt $\ell$ für
+Linearformen verwendet, dieser ist hier aber bereits für $\Ckt$ reserviert.
+Dementsprechend ist die Filtrierung dort als $\,^L V\cD_{\hat K}$ und das
+$\ell$-Symbol als $L$-Symbol zu finden.
+\end{bem}
+\begin{bem}
+Ist $P\in \cD_{\hat K}$ geschrieben als
+$P=\sum_i\sum_j\alpha_{ij}x^j\partial_x^i$.
+So erhält man $\sigma_\ell(P)$ durch die Setzung
+\[
+\sigma_\ell(P)=\sum_{\{(i,j)\mid\ell(i,i-j)=\ord_\ell(P)\}}\alpha_{ij}x^j\xi^i \,.
+\]
+\end{bem}
+\begin{proof}
+TODO
+\end{proof}
+\begin{comment}
+Ich will die Linearform vermeiden und direkt die skalare Steigung verwenden
+\end{comment}
+\begin{defn}[Stützfunktion]
+Die Funktion
+\[
+\omega_P:[0,\infty)\rightarrow\R, \omega_P(t):=\inf\{v-tu \mid (u.v) \in N(P)\}
+\]
+heißt Stützfunktion und wird in \cite{ZulaBarbara} als Alternative zu dieser
+Filtrierung verwendet.
+\end{defn}
+\begin{bem}
+Wenn $\ell(x_0,s_1)$ wie oben aus $\Lambda$ entstanden ist, so gilt
+\[
+\omega_P(\Lambda)=ord_\ell(P) \,.
+\]
+\end{bem}
+\begin{comment}
+TODO: ist $\ell$ Slope (gehört zu Slope) dann hat $\sigma_\ell(P)$ zumindest 2
+Monome
+\end{comment}
+
 \section{Levelt-\!Turrittin-\!Theorem}
 \begin{comment}
 Das Levelt-Turrittin-Theorem ist ein Satz, der hilft, meromorphe Zusammenhänge
@@ -147,8 +228,8 @@ Der folgende Beweis stammt hauptsächlich aus \cite[Seite 35]{sabbah_cimpa90}.
 \begin{proof}
 Zum Beweis wird Induktion auf die lexicographisch geordnetem Paare
 $(\dim_{\hat K}\cM_{\hat K},\kappa)$ angewendet. Wobei
-$\kappa\in\N\cup\{\infty\}$ dem größtem Slope von $\cM_{\hat K}$ entspricht. Es
-wird $\kappa=\infty$ gesetzt, falls der größte Slope nicht ganzzahlig ist.
+$\kappa\in\N\cup\{\infty\}$ dem größtem Slope von $\cM_{\hat K}$, falls dieser
+ganzzahlig ist, entspricht. Sonsts wird $\kappa=\infty$ gesetzt.
 
 \begin{comment}
 TODO: Induktionsanfang und -schritt kennzeichnen
@@ -170,7 +251,7 @@ Schreibe
 \sigma_L(P)&=\sum_{L(i,i-j)=\ord_L(P)}\alpha_{ij}x^j\xi^i\\
   &=\sum_{L(i,i-j)=0}\alpha_{ij}x^j\xi^i \,.
 \end{align*}
-Sei $\theta:=x^{\lambda_0+\lambda_1}}xi^{\lambda_1}$ so können wir
+Sei $\theta:=x^{\lambda_0+\lambda_1}xi^{\lambda_1}$ so können wir
 \[
 \sigma_L(P) = \sum_{k\geq 0}\alpha_k\theta^k
 \]

@@ -1081,7 +1081,7 @@ P(x,\partial_x-\frac{\partial \phi}{\partial x})\bme\otimes1
 \end{align*}
 \end{comment}
 \end{proof}
-\begin{cor} \label{cor:zurücktwisten}
+\begin{cor} \label{cor:zuruecktwisten}
 Sei $\cM_{\hat K}$ und $\phi$ wie in \ref{lem:twistRechenregel}, so gilt
 \[
 \cM_{\hat K}\otimes_{\hat K}\sE^{\phi}\otimes_{\hat K}\sE^{-\phi}=\cM_{\hat K}\,.
@@ -1208,7 +1208,7 @@ V:=\begin{pmatrix}
 so dass $\mathbf{e}\cdot V=(\bme_1,...,\bme_{p-1},\bme_0)$ gilt.
 Es gilt
 \[
-t\partial_t\mathbf{e}=\mathbf{e}\left[\sum_{j=0}^{p-1}t^j\psi_jV^j}\right] \,,
+t\partial_t\mathbf{e}=\mathbf{e}\left[\sum_{j=0}^{p-1}t^j\psi_jV^j\right] \,,
 \]
 denn:
 \begin{align*}
@@ -1254,19 +1254,19 @@ So dass gilt:
   &=
 {
   \footnotesize
-  \begin{pmatrix}\sum_{j=0}^{p-1}t^{j-1}\psi_{j}(t^p)\\
-    & \sum_{j=0}^{p-1}t^{j-1}\psi_{j}(t^p)\left(\xi^{1}\right)^{j}\\
-    & & \ddots\\
-    &  &  & \sum_{j=0}^{p-1}t^{j-1}\psi_{j}(t^p)\left(\xi^{p-1}\right)^{j}
+  \begin{pmatrix}\sum_{j=0}^{p-1}t^{j-1}\psi_{j}(t^p)\!\!\!\!\\
+    & \!\!\!\!\sum_{j=0}^{p-1}t^{j-1}\psi_{j}(t^p)\left(\xi^{1}\right)^{j}\!\!\!\!\\
+    & & \!\!\!\!\ddots\!\!\!\!\\
+    &  &  & \!\!\!\!\sum_{j=0}^{p-1}t^{j-1}\psi_{j}(t^p)\left(\xi^{p-1}\right)^{j}
   \end{pmatrix}
 }\\
   &=
 {
   \footnotesize
-  \begin{pmatrix}\sum_{j=0}^{p-1}t^{j-1}\psi_{j}(t^p)\\
-    & \sum_{j=0}^{p-1}(t\xi^1)^{j-1}\psi_{j}(t^p)\xi^{1}\\
-    & & \ddots\\
-    &  &  & \sum_{j=0}^{p-1}(t\xi^{p-1})^{j-1}\psi_{j}(t^p)\xi^{p-1}
+  \begin{pmatrix}\sum_{j=0}^{p-1}t^{j-1}\psi_{j}(t^p)\!\!\!\!\\
+    & \!\!\!\!\sum_{j=0}^{p-1}(t\xi^1)^{j-1}\psi_{j}(t^p)\xi^{1}\!\!\!\!\\
+    & & \!\!\!\!\ddots\!\!\!\!\\
+    &  &  & \!\!\!\!\sum_{j=0}^{p-1}(t\xi^{p-1})^{j-1}\psi_{j}(t^p)\xi^{p-1}
   \end{pmatrix}
 }\\
   &= \begin{pmatrix}\phi'(t)\\
@@ -1337,8 +1337,7 @@ gilt. Es reicht zu zeigen, dass die Aussage für alle Basiselemente $e_k$ gilt.
 Nach Definition \ref{defn:rang1Vr} gilt
 \begin{align*}
 \partial_t e_k &= \myubracket{(\phi\circ\mu_{\xi^{k-1}})'(t)}e_k
-\\&\overbox{=}{Kettenregel}
-  \myobracket{\myubracket{\phi(\mu_{\xi^{k-1}}')}
+\\&= \myobracket{\myubracket{\phi(\mu_{\xi^{k-1}}')}
   \cdot\myubracket{\phi'(t)}}e_k
 \\&=\myobracket{(\xi^{k-1})^p}\cdot\myobracket{(pt^{p-1})}e_k
 \\&=p(\xi^{k-1}t)^{p-1}\xi^{k-1}e_k

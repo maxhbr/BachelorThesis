@@ -61,12 +61,12 @@
 %%%%  myobracket/myubracket  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{mathtools}
 \iffalse
-  \newcommand{\myobracket}[1]{ \overbracket[0.7]{ #1 } }
-  \newcommand{\myubracket}[1]{ \underbracket[0.7]{ #1 } }
+  \newcommand{\myobracket}[1]{ \overbracket[0.7pt]{ #1 } }
+  \newcommand{\myubracket}[1]{ \underbracket[0.7pt]{ #1 } }
 \else
   \newcommand{\myobracket}[1]{%
     \textcolor{gray}{%
-      \overbracket[0.7]{%
+      \overbracket[0.7pt]{%
         \textcolor{black}{%
           #1%
         }%
@@ -75,7 +75,7 @@
   }
   \newcommand{\myubracket}[1]{%
     \textcolor{gray}{%
-      \underbracket[0.7]{%
+      \underbracket[0.7pt]{%
         \textcolor{black}{%
           #1%
         }%

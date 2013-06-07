@@ -245,8 +245,8 @@ Ordnung vom pull-back ist $0$
 \end{comment}
 Das so erhaltene $\rho^+\cM_\phi$ wollen wir, wenn nötig, noch weiter
 zerlegen. Dazu würden wir gerne den Satz \ref{thm:Split-after-slopes} anwenden,
-leider haben wir momentan genau einen slope.
-Hier hilft uns aber ein Trick, nach Korollar \ref{cor:zurücktwisten} gilt
+leider haben wir momentan genau einen Slope.
+Hier hilft uns aber ein Trick, nach Korollar \ref{cor:zuruecktwisten} gilt
 $
 \rho^+\cM_{\phi}
   =\rho^+\cM_{\phi}\otimes_{\hat K}\sE^{\psi}\otimes_{\hat K}\sE^{-\psi}
@@ -542,14 +542,12 @@ Q_1&=\bar v(t) \partial_t + v(t) & Q_2&=\partial_t + u(t)
 \end{align*}
 %TODO: Namenskollision: u und v wie in Achsbeschriftung
 und somit ist ist das Produkt gegeben durch
-\begin{equation} \label{eq:schritt100}
-  \begin{aligned}
+\begin{align} \label{eq:schritt100}
 Q_1\cdot Q_2&=\bar v(t) \partial_t^2 + \bar v(t)\partial_t u(t) +
   v(t)\partial_t + v(t)u(t)
-\\&\overset{!}{=} \partial_t^2 - (t^{-1} - 2i\sqrt{2a}t^{-2})\partial_t
+\notag\\&\overset{!}{=} \partial_t^2 - (t^{-1} - 2i\sqrt{2a}t^{-2})\partial_t
   - 3 i\sqrt{2a}t^{-3} \,.
-  \end{aligned}
-\end{equation}
+\end{align}
 Damit ist ebenfalls $\bar v(t)=1$.
 
 Durch das Wissen über die Slopes der $Q_i$ erhalten wir noch Informationen über
@@ -602,8 +600,7 @@ gilt
 %TODO: ist umsortieren immer erlaubt??
 \end{align*}
 Wenn wir dieses Ergebnis nun in (\ref{eq:schritt200}) einsetzen, ergibt sich
-\begin{equation} \label{eq:schritt300}
-  \begin{aligned}
+\begin{align} \label{eq:schritt300}
 Q_1\cdot Q_2&=\partial_t^2 + \sum_{n=-2}^\infty u_nt^n\partial_t
   + \myubracket{\sum_{n=-2}^\infty nu_nt^{n-1}}
   + \sum_{n=-1}^\infty v_nt^n \partial_t
@@ -612,29 +609,30 @@ Q_1\cdot Q_2&=\partial_t^2 + \sum_{n=-2}^\infty u_nt^n\partial_t
   %+ \sum_{n=-1}^\infty v_nt^n)} \partial_t
   %+ \myubracket{\sum_{n=-2}^\infty nu_nt^{n-1}}
   %+ \Big(\sum_{n=-1}^\infty v_nt^n \Big)\Big( \sum_{n=-2}^\infty u_n t^n \Big)
-\\&=\partial_t^2 + \sum_{n=-2}^\infty (u_n+v_n)t^n \partial_t
+\notag\\
+&=\partial_t^2 + \sum_{n=-2}^\infty (u_n+v_n)t^n \partial_t
   + \myobracket{\sum_{n=-3}^\infty (n+1)u_{n+1}t^{n}}
   + \Big(\sum_{n=-1}^\infty v_nt^n \Big)\Big( \sum_{n=-2}^\infty u_n t^n \Big)
   \,.
-  \end{aligned}
-\end{equation}
+  %TODO: formel zu lang, label in nächster zeile
+\end{align}
 Betrachte nun das letzte Glied, auf welches wir die Cauchy-Produktformel
 anwenden wollen: %TODO: quelle? formel?
 \begin{align*}
 \Big(\sum_{n=-1}^\infty v_nt^n \Big)\Big( \sum_{n=-2}^\infty u_n t^n \Big)
-  &\overbox{=}{Indexshift} t^{-3}
+  &= t^{-3}
   \myubracket{\Big(\sum_{n=0}^\infty v_{n-1}t^{n} \Big)
   \Big( \sum_{n=0}^\infty u_{n-2} t^{n} \Big)}
-\\&\overbox{=}{Cauchy Produkt} t^{-3} \myobracket{\sum_{n=0}^\infty
+\\&= t^{-3} \myobracket{\sum_{n=0}^\infty
   \Big( \sum_{k=0}^n v_{k-1}t^{k} u_{n-k-2} t^{(n-k)} \Big)}
 \\&= \sum_{n=0}^\infty \Big( \sum_{k=0}^n v_{k-1}u_{n-k-2}t^{k+(n-k)-3} \Big)
 \\&= \myubracket{
   \sum_{n=0}^\infty \Big( \sum_{k=0}^n v_{k-1} u_{n-k-2} \Big) t^{n-3}}
-\\&\overbox{=}{Indexshift} \myobracket{
+\\&= \myobracket{
   \sum_{n=-3}^\infty \Big( \sum_{k=0}^{n+3} v_{k-1} u_{n-k+1} \Big) t^{n} }
 \end{align*}
 Wenn wir auch diese Rechnung in (\ref{eq:schritt300}) integrieren, erhalten wir
-\begin{align*} \label{eq:schritt400}
+\begin{align*} %\label{eq:schritt400}
 Q_1\cdot Q_2&=\partial_t^2 + \sum_{n=-2}^\infty (u_n+v_n)t^n \partial_t
   + \myubracket{\sum_{n=-3}^\infty (n+1)u_{n+1}t^{n}
   + \sum_{n=-3}^\infty \Big( \sum_{k=0}^{n+3} v_{k-1}u_{n-k+1} \Big) t^{n}}
@@ -647,12 +645,11 @@ Q_1\cdot Q_2&=\partial_t^2 + \sum_{n=-2}^\infty (u_n+v_n)t^n \partial_t
 Damit haben wir ein Ergebnis, das sich Koeffizientenweise mit der gewünschten
 Formel vergleichen lässt:
 \begin{align}
-\label{eq:bedingung1}
 2i\sqrt{2a}t^{-2} - t^{-1} &= \sum_{n=-2}^\infty (u_n+v_n)t^n
-\\
-\label{eq:bedingung2}
+\label{eq:bedingung1}\\
 - 3 i\sqrt{2a}t^{-3} &= \sum_{n=-3}^\infty
   \Big( (n+1)u_{n+1} + \sum_{k=0}^{n+3} v_{k-1}u_{n-k+1} \Big) t^{n}
+\label{eq:bedingung2}
 \end{align}
 Nun können wir mit (\ref{eq:bedingung1}) und (\ref{eq:bedingung2}) jeweils
 nochmals einen Koeffizientenvergleich durchführen und erhalten zunächst aus
@@ -718,7 +715,7 @@ die Koeffizienten von $v(t)$ und $u(t)$ vollständig bestimmt.
 Nun lässt sich diese Zerlegung mit $\sE^{-\psi(t)}$ zurücktwisten und wir
 erhalten damit die Zerlegung
 \begin{align*}
-\rho^+\cM_{\phi} &\!\!\overset{\text{ \ref{cor:zurücktwisten}}}{=}\!\!
+\rho^+\cM_{\phi} &\!\!\overset{\text{ \ref{cor:zuruecktwisten}}}{=}\!\!
   \myubracket{\rho^+\cM_{\phi}\otimes\sE^{\psi(t)}} \otimes\sE^{-\psi(t)}
 \\&= \myobracket{(\cN_1\oplus\cN_2)}\otimes\sE^{-\psi(t)}
 \\&= \myubracket{\cN_1}\otimes\sE^{-\psi(t)}
@@ -754,7 +751,7 @@ Also zerlegt sich $\cM$, nach einem pull-back mit $\rho:t\mapsto x=-2t^2$, in
   + \sum_{n=-1}^\infty u_nt^n\Big)}}\otimes\sE^{\psi(t)}\Bigg) \,.
 \]
 Nach Zerlegen von $\cR_1$ und $\cR_2$ in eine direkte Summe von elementaren
-formalen meromorphen Zusammenhängen, wie in Satz \ref{thm:regulärInDirSumme},
+formalen meromorphen Zusammenhängen, wie in Satz \ref{thm:regulaerInDirSumme},
 ist die Levelt-Turrittin-Zerlegung vollständig gegeben.
 
 \subsection{Konvergenz der Summanden} \label{sec:konvergenzDerPotReihen}
