@@ -163,8 +163,8 @@ Sei $f(x)m=f(\rho(t))m\in\rho^*\cM_{\hat K}$. Es gilt, dass
   f(\rho(t))\underset{=\partial_x} {\underbrace{\partial_{\rho(t)}}}m
 \\&= f'(\rho(t))m + f(\rho(t))\partial_x m
 \\&= f'(t^p)m+f(t^p)\frac{1}{pt^{p-1}}\partial_t m
-\\&= \underbracket{\frac{1}{pt^{p-1}}}\partial_t(f(\underbracket{t^p})m)
-\\&=\overbracket{\rho'(t)^{-1}}\partial_t(f(\overbracket{x})m) 
+\\&= \myubracket{\frac{1}{pt^{p-1}}}\partial_t(f(\myubracket{t^p})m)
+\\&=\myobracket{\rho'(t)^{-1}}\partial_t(f(\myobracket{x})m) 
 \end{align*}
 und damit lässt sich vermuten, dass die Wirkung von $\partial_x$ genau die
 Wirkung von $\rho'(t)^{-1}\partial_t$ ist. In der Tat ist dies, nach dem
@@ -700,9 +700,9 @@ Also ergibt Einsetzen
 \begin{align*}
 \rho^*P &= (t^2)^3(\frac{1}{4t^2}\partial_t^2-\frac{1}{4t^3}\partial_t)-
     4(t^2)^2\frac{1}{2t}\partial_t-1
-\\&= \frac{1}{4}t^4\partial_t^2 \underbracket{-t^3\frac{1}{4}\partial_t-
+\\&= \frac{1}{4}t^4\partial_t^2 \myubracket{-t^3\frac{1}{4}\partial_t-
     4t^{3}\frac{1}{2}\partial_t}-1
-\\&= \frac{1}{4}t^4\partial_t^2 \overbracket{-2\frac{1}{4}t^3\partial_t}-1 \,.
+\\&= \frac{1}{4}t^4\partial_t^2 \myobracket{-2\frac{1}{4}t^3\partial_t}-1 \,.
 \end{align*}
 %
 Also ist $\rho^*P= \frac{1}{4}t^4\partial_t^2 -\frac{1}{2}t^3\partial_t-1$ mit
@@ -818,13 +818,13 @@ Es gilt die Projektionsformel
 \begin{proof}
 \begin{align*}
 \rho_+(\cN_{\hat L}\otimes_{\hat L}\rho^+\cM_{\hat K}) &=
-\rho_+(\underbracket{\cN_{\hat L}\otimes_{\hat L}(\hat L\otimes_{\hat
+\rho_+(\myubracket{\cN_{\hat L}\otimes_{\hat L}(\hat L\otimes_{\hat
   K}\cM_{\hat L})})
   & \mbox{(def von $\rho^+\cM_{\hat K}$)}\\
-&\cong\rho_+(\overbracket{\underbracket{(\cN_{\hat L}\otimes_{\hat L}\hat L)}
+&\cong\rho_+(\myobracket{\myubracket{(\cN_{\hat L}\otimes_{\hat L}\hat L)}
   \otimes_{\hat K}\cM_{\hat K}})
   & \mbox{(Rechenregeln Tensorprodukt)}\\ %TODO: hinzufügen
-&\cong \rho_+(\overbracket{\cN_{\hat L}}\otimes_{\hat K}\cM_{\hat K})
+&\cong \rho_+(\myobracket{\cN_{\hat L}}\otimes_{\hat K}\cM_{\hat K})
   & \mbox{(Rechenregeln Tensorprodukt)}\\
 &= \rho_+\cN_{\hat L}\otimes_{\hat K}\cM_{\hat K} \,.
 \end{align*}
@@ -852,25 +852,25 @@ Sei $P=x^3\partial_x^4+x^2\partial_x^2+x$ dann ist die Fouriertransformierte
 davon
 \begin{align*}
 \cF_P&=\partial_z^3(-z)^4+\partial_z^2(-z)^2+\partial_z
-\\&=\underbracket{\partial_z^2z^2} + \underbracket{\partial_z^3z^4}+\partial_z
-\\&=\overbracket{z^4\partial_z^3 + \underbracket{[\partial_z^3,z^4]}}
-  + \overbracket{z^2\partial_z^2 + \underbracket{[\partial_z^2,z^2]}}
+\\&=\myubracket{\partial_z^2z^2} + \myubracket{\partial_z^3z^4}+\partial_z
+\\&=\myobracket{z^4\partial_z^3 + \myubracket{[\partial_z^3,z^4]}}
+  + \myobracket{z^2\partial_z^2 + \myubracket{[\partial_z^2,z^2]}}
   + \partial_z
 \\&\begin{aligned}
-  =&z^4\partial_z^3 + \overbracket{\underbracket{
+  =&z^4\partial_z^3 + \myobracket{\myubracket{
     \sum_{i=1}^3\frac{4\cdot3\dots(5-i)\cdot 3 \cdot 2  \dots
     (4-i)}{i!}z^{4-i}\partial_z^{3-i}
   }} + z^2\partial_z^2
-\\&\qquad+ \overbracket{\underbracket{
+\\&\qquad+ \myobracket{\myubracket{
     \sum_{i=1}^2\frac{2\cdot1\dots(3-i)\cdot 2 \cdot 1  \dots
     (3-i)}{i!}z^{2-i}\partial_z^{2-i}
   }}
   + \partial_z
 \end{aligned}
-\\&=z^4\partial_z^3 + \overbracket{
+\\&=z^4\partial_z^3 + \myobracket{
     12z^3\partial_z^2 + \frac{72}{2}z^2\partial_z + \frac{144}{6}z
   }
-  + z^2\partial_z^2 + \overbracket{ 4z\partial_z + \frac{4}{2} } + \partial_z
+  + z^2\partial_z^2 + \myobracket{ 4z\partial_z + \frac{4}{2} } + \partial_z
 \\&=z^4\partial_z^3
   + (12z^3 + z^2)\partial_z^2
   + (36z^2 + 4z + 1)\partial_z
@@ -1153,8 +1153,8 @@ K$-Basis von $\rho_+\sE^\phi$.
 Es gilt 
 \begin{equation} \label{eq:2-4-basisAbleitung}
 \begin{aligned}
-\partial_xt^{k}\bme &= \rho'(t)^{-1}\underbracket{\partial_tt^{k}}\bme
-\\&= \rho'(t)^{-1}\overbracket{(t^{k}\partial_t + kt^{k-1})}\bme \,.
+\partial_xt^{k}\bme &= \rho'(t)^{-1}\myubracket{\partial_tt^{k}}\bme
+\\&= \rho'(t)^{-1}\myobracket{(t^{k}\partial_t + kt^{k-1})}\bme \,.
 \end{aligned}
 \end{equation}
 Durch die Setzung $\bme_k:=t^{-k}\otimes_{\hat K}t^k\bme$ wird die Familie
@@ -1173,24 +1173,24 @@ t\partial_t\bme_k= \sum_{i=0}^{p-1-k}t^i\psi_i(t^p)\bme_{k+1} +
 denn:
 \begin{align*}
 t\partial_t\bme_k &= 
-  t\underbracket{\partial_t(t^{-k}\otimes_{\hat K}t^k\bme)}\\
+  t\myubracket{\partial_t(t^{-k}\otimes_{\hat K}t^k\bme)}\\
   &\!\!\overset{(\ref{eq:TensorAbleiten})}{=} 
-    t\overbracket{(-kt^{-k-1}\otimes_{\hat K}t^k\bme +
-    pt^{p-1}\cdot t^{-k}\otimes_{\hat K}\underbracket{\partial_x
+    t\myobracket{(-kt^{-k-1}\otimes_{\hat K}t^k\bme +
+    pt^{p-1}\cdot t^{-k}\otimes_{\hat K}\myubracket{\partial_x
     (\underset{\in\rho_+\sE^\phi}{\underbrace{t^k\bme}})})}\\
   &\!\!\overset{(\ref{eq:2-4-basisAbleitung})}{=} -kt^{-k}\otimes_{\hat K}t^k\bme +
-    pt^{p-1}t^{-k+1}\otimes_{\hat K}\overbracket{(pt^{p-1})^{-1} (kt^{k-1}\bme
+    pt^{p-1}t^{-k+1}\otimes_{\hat K}\myobracket{(pt^{p-1})^{-1} (kt^{k-1}\bme
     + t^k\phi'(t)\bme)}\\
   &= -kt^{-k}\otimes_{\hat K}t^k\bme +
-    \underbracket{t^{-k+1}\otimes_{\hat K}(kt^{k-1}\bme + t^k\phi'(t)\bme)}\\
+    \myubracket{t^{-k+1}\otimes_{\hat K}(kt^{k-1}\bme + t^k\phi'(t)\bme)}\\
   &= \underset{=0}{\underbrace{-kt^{-k}\otimes_{\hat K}t^k\bme +
-    \rlap{$\overbracket{\phantom{x^x\qquad\qquad\qquad\qquad\qquad\qquad\qquad%
+    \rlap{$\myobracket{\phantom{x^x\qquad\qquad\qquad\qquad\qquad\qquad\qquad%
       \,\,\,\,\,\,\,\,}}$}
     t^{-k+1}\otimes_{\hat K}kt^{k-1}\bme}} +
     t^{-k+1}\otimes_{\hat K}t^k\phi'(t)\bme\\
-  &= t^{-k}\otimes_{\hat K}t^{k}\underbracket{t\phi'(t)}\bme\\
+  &= t^{-k}\otimes_{\hat K}t^{k}\myubracket{t\phi'(t)}\bme\\
   &\!\!\overset{(\ref{eq:2-4-gleichung1})}{=}t^{-k}\otimes_{\hat K}
-    t^{k} \overbracket{\sum_{i=0}^{p-1}t^i\psi_i(t^p)} \bme\\
+    t^{k} \myobracket{\sum_{i=0}^{p-1}t^i\psi_i(t^p)} \bme\\
   &=\sum_{i=0}^{p-1}\psi_i(t^p)(t^{-k}\otimes_{\hat K} t^{k} t^i \bme)\\
   &=\sum_{i=0}^{p-1}t^i\psi_i(t^p)(t^{-k-i}\otimes_{\hat K} t^{k+i} \bme)\\
   &= \sum_{i=0}^{p-1-k}t^i\psi_i(t^p)\bme_{k+i} +
@@ -1336,11 +1336,11 @@ Um zu zeigen, dass das vollständige Diagramm kommutiert, zeigen wir noch, dass
 gilt. Es reicht zu zeigen, dass die Aussage für alle Basiselemente $e_k$ gilt.
 Nach Definition \ref{defn:rang1Vr} gilt
 \begin{align*}
-\partial_t e_k &= \underbracket{(\phi\circ\mu_{\xi^{k-1}})'(t)}e_k
+\partial_t e_k &= \myubracket{(\phi\circ\mu_{\xi^{k-1}})'(t)}e_k
 \\&\overbox{=}{Kettenregel}
-  \overbracket{\underbracket{\phi(\mu_{\xi^{k-1}}')}
-  \cdot\underbracket{\phi'(t)}}e_k
-\\&=\overbracket{(\xi^{k-1})^p}\cdot\overbracket{(pt^{p-1})}e_k
+  \myobracket{\myubracket{\phi(\mu_{\xi^{k-1}}')}
+  \cdot\myubracket{\phi'(t)}}e_k
+\\&=\myobracket{(\xi^{k-1})^p}\cdot\myobracket{(pt^{p-1})}e_k
 \\&=p(\xi^{k-1}t)^{p-1}\xi^{k-1}e_k
 \end{align*}
 und auf dem anderem Weg gilt:

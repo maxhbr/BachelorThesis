@@ -1,19 +1,19 @@
 \chapter{Genaueres zu $(x^2\partial_x)^{k}$} \label{chap:zu-rezept}
 Nun wollen wir noch $(x^2\partial_x)^{k+1}$ besser verstehen.
 \begin{align*}
-(x^2\partial_x)^{k+1} &=x^2\underbracket{\partial_xx^2}\partial_x
+(x^2\partial_x)^{k+1} &=x^2\myubracket{\partial_xx^2}\partial_x
                         (x^2\partial_x)^{k-1}\\
-                      &=x^2\overbracket{(2x+x^{2}\partial_x)}\partial_x
+                      &=x^2\myobracket{(2x+x^{2}\partial_x)}\partial_x
                         (x^2\partial_x)^{k-1}\\
                       &=(2x^3\partial_x+x^{4}\partial_x^2)
                         (x^2\partial_x)^{k-1}\\
                       &=(2x^3\partial_x+x^{4}\partial_x^2)(x^2\partial_x)
                         (x^2\partial_x)^{k-2}\\
-                      &=(2x^3\underbracket{\partial_xx^2}\partial_x
-                        +x^{4}\underbracket{\partial_x^2x^2}\partial_x)
+                      &=(2x^3\myubracket{\partial_xx^2}\partial_x
+                        +x^{4}\myubracket{\partial_x^2x^2}\partial_x)
                         (x^2\partial_x)^{k-2}\\
-                      &=(2x^3\overbracket{(2x+x^{2}\partial_x)}\partial_x
-                        +x^{4}\overbracket{(2x\partial_x+1+x^2\partial_x^2)}
+                      &=(2x^3\myobracket{(2x+x^{2}\partial_x)}\partial_x
+                        +x^{4}\myobracket{(2x\partial_x+1+x^2\partial_x^2)}
                         \partial_x) (x^2\partial_x)^{k-2}\\
                       &=(4x^4\partial_x+2x^{5}\partial_x^2
                         +2x^{5}\partial_x^2

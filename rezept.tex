@@ -68,11 +68,11 @@ P_{\phi}(x,\partial_x) &=(-x^2\partial_x)^{\max(I)} (x\partial_x-1)
 \begin{proof}
 Sei $\phi=\sum_{k\in I}\frac{a_k}{t^{k}}$, so ist
 \begin{align*}
-Q(t,\partial_t) &= t^{\max(I)+1}(\partial_t\underbracket{-\frac{d}{dt}\phi(t)})
+Q(t,\partial_t) &= t^{\max(I)+1}(\partial_t\myubracket{-\frac{d}{dt}\phi(t)})
 \\&=t^{\max(I)+1}\Big(
-    \partial_t+\overbracket{\sum_{k\in I} k\frac{a_k}{t^{k+1}}}\Big)
+    \partial_t+\myobracket{\sum_{k\in I} k\frac{a_k}{t^{k+1}}}\Big)
 %\\&=t^{\max(I)+1}\partial_t
-  %+ \sum_{k\in I} k\underbracket{\frac{a_k}{t^{k-\max(I)}}}
+  %+ \sum_{k\in I} k\myubracket{\frac{a_k}{t^{k-\max(I)}}}
 \\&=t^{\max(I)+1}\partial_t +\sum_{k\in I}k a_k t^{\max(I)-k}
   & \in \C[t]<\partial_t>
 \\\cF_Q(z,\partial_z) &=Q(\partial_z,-z)
@@ -81,14 +81,14 @@ Q(t,\partial_t) &= t^{\max(I)+1}(\partial_t\underbracket{-\frac{d}{dt}\phi(t)})
 und damit ist
 \begin{align*}
 P_{\phi}(x,\partial_x) &=\cF_Q(x^{-1},-x^2\partial_x)
-\\&=\underbracket{-(-x^2\partial_x)^{\max(I)+1}x^{-1}}
+\\&=\myubracket{-(-x^2\partial_x)^{\max(I)+1}x^{-1}}
   +\sum_{k\in I}k a_k(-x^2\partial_x)^{\max(I)-k}
-\\&=\overbracket{(-x^2\partial_x)^{\max(I)} x^2\underbracket{\partial_xx^{-1}}}
+\\&=\myobracket{(-x^2\partial_x)^{\max(I)} x^2\myubracket{\partial_xx^{-1}}}
    +\sum_{k\in I}k a_k(-x^2\partial_x)^{\max(I)-k}
 \\&=(-x^2\partial_x)^{\max(I)}
-   \underbracket{ x^2 \overbracket{(x^{-1}\partial_x-x^{-2})} }
+   \myubracket{ x^2 \myobracket{(x^{-1}\partial_x-x^{-2})} }
    +\sum_{k\in I}k a_k(-x^2\partial_x)^{\max(I)-k}
-\\&=(-x^2\partial_x)^{\max(I)} \overbracket{(x\partial_x-1)}
+\\&=(-x^2\partial_x)^{\max(I)} \myobracket{(x\partial_x-1)}
    +\sum_{k\in I}k a_k(-x^2\partial_x)^{\max(I)-k}
   & \in \C[x]<\partial_x>
 \end{align*}
@@ -109,26 +109,26 @@ die Monome, die für das Newton-Polygon nicht von Bedeutung sind und deshalb
 vernachlässigt werden können. Betrachte dazu die konvexen Hüllen, die wie in
 Abschnitt \ref{sec:NewtonPolygon} konstruiert werden. Sei $q:=\max(I)$.
 \begin{align*}
-H\Big(P_{\phi}(x,\partial_x)\Big) &= H\Big(\underbracket{(-x^2\partial_x)^{q}}
+H\Big(P_{\phi}(x,\partial_x)\Big) &= H\Big(\myubracket{(-x^2\partial_x)^{q}}
   (x\partial_x-1) + \sum_{k\in I}k a_k(-x^2\partial_x)^{q-k}\Big)
 %TODO: QUELLE!
-\\&= H\Big(\overbracket{(-1)^q(x^{2q}\partial_x^q
+\\&= H\Big(\myobracket{(-1)^q(x^{2q}\partial_x^q
   + \underset{\text{liefern keinen Beitrag}}{
   \underbrace{\textbf{T.i.Q. von }x^{2q}\partial_x^q}})}
   (x\partial_x - 1) + \sum_{k\in I}k a_k(-x^2\partial_x)^{q-k} \Big)
 \\&= H\Big(\underset{\text{liefert keinen Beitrag}}{\underbrace{(-1)^q}}
-  \underbracket{x^{2q}\partial_x^q (x\partial_x - 1)}
+  \myubracket{x^{2q}\partial_x^q (x\partial_x - 1)}
   + \sum_{k\in I}k a_k(-x^2\partial_x)^{q-k} \Big)
-\\&= H\Big(\overbracket{x^{2q}\underbracket{\partial_x^q x}\partial_x
+\\&= H\Big(\myobracket{x^{2q}\myubracket{\partial_x^q x}\partial_x
   - x^{2q}\partial_x^q} + \sum_{k\in I}k a_k(-x^2\partial_x)^{q-k} \Big)
-\\&= H\Big(x^{2q}\overbracket{(x\partial_x^q + q\partial_x^{q-1})}\partial_x
+\\&= H\Big(x^{2q}\myobracket{(x\partial_x^q + q\partial_x^{q-1})}\partial_x
   - x^{2q}\partial_x^q + \sum_{k\in I}k a_k(-x^2\partial_x)^{q-k} \Big)
 \\&= H\Big(x^{2q + 1}\partial_x^{q + 1}
   + \underset{\text{sind also vernachlässigbar}}{
   \underset{\text{im Quadranten von $x^{2q + 1}\partial_x^{q + 1}$,}}{
   \underbrace{qx^{2q}\partial_x^{q} - x^{2q}\partial_x^q}}}
-  +\underbracket{ \sum_{k\in I}k a_k(-x^2\partial_x)^{q-k}} \Big)
-\\&= H\Big(x^{2q + 1}\partial_x^{q + 1} +\overbracket{ qa_q
+  +\myubracket{ \sum_{k\in I}k a_k(-x^2\partial_x)^{q-k}} \Big)
+\\&= H\Big(x^{2q + 1}\partial_x^{q + 1} +\myobracket{ qa_q
   + \sum_{k\in I\backslash\{q\}}k a_k(-x^2\partial_x)^{q-k}} \Big)
 \end{align*}
 Nun wollen wir noch zeigen, dass die Summe auch vernachlässigt werden kann.
@@ -221,17 +221,17 @@ und sei $\rho:t\mapsto x:=-(q+1) t^{q+1}$. Damit gilt
   &=\cD_{\hat L}/\cD_{\hat L}\cdot P_\phi(\rho(t),\rho'(t)^{-1}\partial_t)\\
   &=\cD_{\hat L}/\cD_{\hat L}
     \cdot P_\phi\Big(-(q+1) t^{q+1},-\frac{1}{(q+1)^2t^q}\partial_t\Big)\\
-  &=\cD_{\hat L}/\cD_{\hat L} \!\cdot\! \Bigg((\underbracket{
+  &=\cD_{\hat L}/\cD_{\hat L} \!\cdot\! \Bigg((\myubracket{
     -(-(q+1) t^{q+1})^2\frac{-1}{(q+1)^2t^{q}}\partial_t})^{q}
-    (\underbracket{-(q+1) t^{q+1}\frac{-1}{(q+1)^2t^{q}}\partial_t}-1)
+    (\myubracket{-(q+1) t^{q+1}\frac{-1}{(q+1)^2t^{q}}\partial_t}-1)
     +qa\Bigg)\\
   &=\cD_{\hat L}/\cD_{\hat L}
-    \cdot\Bigg(\Big(\overbracket{
+    \cdot\Bigg(\Big(\myobracket{
       \underset{=1}{\underbrace{\frac{(q+1)^2}{(q+1)^2}}}
-      \underbracket{t^{2(q+1)-q}}\partial_t}\Big)^{q}
-    (\overbracket{\frac{1}{q+1}t\partial_t}-1)+qa\Bigg)\\
+      \myubracket{t^{2(q+1)-q}}\partial_t}\Big)^{q}
+    (\myobracket{\frac{1}{q+1}t\partial_t}-1)+qa\Bigg)\\
   &=\cD_{\hat L}/\cD_{\hat L}
-    \cdot\Big((\overbracket{t^{q+2}}\partial_t)^{q}
+    \cdot\Big((\myobracket{t^{q+2}}\partial_t)^{q}
     (\frac{1}{q+1}t\partial_t-1)+qa\Big)\\
   &=\cD_{\hat L}/\cD_{\hat L}
     \cdot\Big((t^{q+2}\partial_t)^{q}
@@ -335,10 +335,10 @@ $\phi_1:=\frac{a}{x}$.
 Es ist das zugehörigen Minimalpolynom gegeben durch
 \begin{align*}
 P_{\phi}(x,\partial_x) &=-x^2\partial_x (x\partial_x-1)+a
-\\&=-x^2\underbracket{\partial_xx}\partial_x+x^2\partial_x+a
-\\&=\underbracket{-x^2\overbracket{(x\partial_x+1)}\partial_x} + x^2\partial_x
+\\&=-x^2\myubracket{\partial_xx}\partial_x+x^2\partial_x+a
+\\&=\myubracket{-x^2\myobracket{(x\partial_x+1)}\partial_x} + x^2\partial_x
   + a
-\\&=\overbracket{-x^3\partial_x^2
+\\&=\myobracket{-x^3\partial_x^2
   \rlap{$\underbrace{\phantom{-x^2\partial_x+x^2\partial_x\,}}_{=0}$}
   - x^2\partial_x}+x^2\partial_x+a
 \\&=-x^3\partial_x^2+a \,.
@@ -360,10 +360,10 @@ zu $\rho^+\cM_{\phi}$:
 \begin{align*}
 \rho^*P_{\phi}(x,\partial_x)
   &=t^{3}\partial_t(t\partial_t-2)+2a\\
-  &=t^{3}\underbracket{\partial_tt}\partial_t-2t^{3}\partial_t+2a\\
-  &=t^{3}\overbracket{(t\partial_t+1)}\partial_t-2t^{3}\partial_t+2a\\
-  &=t^{4}\partial_t^2+\underbracket{t^{3}\partial_t-2t^{3}\partial_t}+2a\\
-  &=t^{4}\partial_t^2\overbracket{-t^{3}\partial_t}+2a
+  &=t^{3}\myubracket{\partial_tt}\partial_t-2t^{3}\partial_t+2a\\
+  &=t^{3}\myobracket{(t\partial_t+1)}\partial_t-2t^{3}\partial_t+2a\\
+  &=t^{4}\partial_t^2+\myubracket{t^{3}\partial_t-2t^{3}\partial_t}+2a\\
+  &=t^{4}\partial_t^2\myobracket{-t^{3}\partial_t}+2a
 \end{align*}
 und erhalte einen meromorphen Zusammenhang $\rho^+\cM_{\phi}=\cD_{\hat
 K}/\cD_{\hat K}\cdot\rho^*P_{\phi}$ mit genau dem Slope
@@ -414,26 +414,26 @@ Dies wäre auch schneller, aber weit weniger interessanter, mit Lemma
 }:
 \begin{align*}
 \partial_t^2(\bme\otimes 1)
-  &=\partial_t(\underbracket{\partial_t(\bme\otimes 1)})
+  &=\partial_t(\myubracket{\partial_t(\bme\otimes 1)})
 \\&\!\!\overset{(\ref{eq:TensorAbleiten})}{=}
-    \partial_t(\overbracket{(\partial_t\bme)\otimes 1
+    \partial_t(\myobracket{(\partial_t\bme)\otimes 1
     + \bme\otimes \psi'(t)})
 \\&\!\!\overset{(\ref{eq:TensorAbleiten})}{=}
-    (\underbracket{\partial_t^2 \bme})\otimes 1
-    + \underbracket{(\partial_t \bme)\otimes \psi'(t)
+    (\myubracket{\partial_t^2 \bme})\otimes 1
+    + \myubracket{(\partial_t \bme)\otimes \psi'(t)
     +               (\partial_t \bme)\otimes \psi'(t)}
     + \bme\otimes\underset{\in K}{\underbrace{(\psi''(t) + \psi'(t)^2)}}
-\\&= \underbracket{(\overbracket{(t^{-1}\partial_t - 2at^{-4}) \bme})\otimes 1}
-    + \overbracket{2\psi'(t) (\partial_t \bme)\otimes 1}
-    + \underbracket{(\psi''(t) + \psi'(t)^2)\bme\otimes 1}
-\\&= \overbracket{ (t^{-1}\partial_t \bme)\otimes 1 - 2at^{-4} \bme\otimes 1 }
-    + 2\psi'(t) (\partial_t \bme)\otimes 1 + \overbracket{
+\\&= \myubracket{(\myobracket{(t^{-1}\partial_t - 2at^{-4}) \bme})\otimes 1}
+    + \myobracket{2\psi'(t) (\partial_t \bme)\otimes 1}
+    + \myubracket{(\psi''(t) + \psi'(t)^2)\bme\otimes 1}
+\\&= \myobracket{ (t^{-1}\partial_t \bme)\otimes 1 - 2at^{-4} \bme\otimes 1 }
+    + 2\psi'(t) (\partial_t \bme)\otimes 1 + \myobracket{
       \psi''(t) \bme\otimes 1 + \psi'(t)^2 \bme\otimes 1
     }
-\\&= (t^{-1} + 2\psi'(t)) \underbracket{(\partial_t \bme)\otimes 1}
+\\&= (t^{-1} + 2\psi'(t)) \myubracket{(\partial_t \bme)\otimes 1}
     + (- 2at^{-4} + \psi''(t) + \psi'(t)^2) \bme\otimes 1
 \\&\!\!\overset{(\ref{eq:TensorAbleiten})}{=}
-    (t^{-1} + 2\psi'(t))\overbracket{(\partial_t (\bme\otimes 1)
+    (t^{-1} + 2\psi'(t))\myobracket{(\partial_t (\bme\otimes 1)
     - \bme\otimes \psi'(t))}+ (- 2at^{-4} + \psi''(t) + \psi'(t)^2)
     \bme\otimes 1
 \\&\begin{aligned}
@@ -460,9 +460,9 @@ P' &= \partial_t^2 - (t^{-1} + 2\psi'(t))\partial_t
     + \psi'(t)t^{-1} + 2at^{-4} -\psi''(t)
     + \psi'(t)^2
 \\&= \partial_t^2 - (t^{-1} - 2i\sqrt{2a}t^{-2})\partial_t - i\sqrt{2a}t^{-3}
-    + 2at^{-4} - 2i\sqrt{2a}t^{-3} + \underbracket{(-i\sqrt{2a}t^{-2})^2}
+    + 2at^{-4} - 2i\sqrt{2a}t^{-3} + \myubracket{(-i\sqrt{2a}t^{-2})^2}
 \\&= \partial_t^2 - (t^{-1} - 2i\sqrt{2a}t^{-2})\partial_t - 3i\sqrt{2a}t^{-3}
-  + \underset{=0}{\underbrace{ 2at^{-4} \overbracket{- 2at^{-4}}}}
+  + \underset{=0}{\underbrace{ 2at^{-4} \myobracket{- 2at^{-4}}}}
 \\&= \partial_t^2 - (t^{-1} - 2i\sqrt{2a}t^{-2})\partial_t - 3 i\sqrt{2a}t^{-3}
 \end{align*}
 mit, wie gewünscht, einem regulärem Anteil.
@@ -484,20 +484,20 @@ $\rho^*P(t,\partial_t)=t^4\partial_t^2-t^3\partial_t+2a$, ist
 \begin{align*}
 \rho^*P(t,\partial_t-\frac{\partial \psi}{\partial t})
 &=\rho^*P(t,\partial_t-\frac{-i\sqrt{2a}}{t^2})
-\\&= t^4\underbracket{(\partial_t+\frac{i\sqrt{2a}}{t^2})^2}
-    \underbracket{- t^3(\partial_t+\frac{i\sqrt{2a}}{t^2})} + 2a
-\\&= t^4 \overbracket{\underbracket{
+\\&= t^4\myubracket{(\partial_t+\frac{i\sqrt{2a}}{t^2})^2}
+    \myubracket{- t^3(\partial_t+\frac{i\sqrt{2a}}{t^2})} + 2a
+\\&= t^4 \myobracket{\myubracket{
       (\partial_t+i\sqrt{2a}t^{-2})(\partial_t+i\sqrt{2a}t^{-2})
-    }} \overbracket{ - t^3\partial_t - i\sqrt{2a}t} + 2a
-\\&= t^4 \overbracket{ (\partial_t^2 + i\sqrt{2a}t^{-2}\partial_t
-      +\partial_ti\sqrt{2a}t^{-2} + \underbracket{(i\sqrt{2a}t^{-2})^2)}
+    }} \myobracket{ - t^3\partial_t - i\sqrt{2a}t} + 2a
+\\&= t^4 \myobracket{ (\partial_t^2 + i\sqrt{2a}t^{-2}\partial_t
+      +\partial_ti\sqrt{2a}t^{-2} + \myubracket{(i\sqrt{2a}t^{-2})^2)}
     } - t^3\partial_t - i\sqrt{2a}t + 2a
 \\&= t^4\partial_t^2 + i\sqrt{2a}t^{2}\partial_t
-    + i\sqrt{2a}t^4\underbracket{\partial_tt^{-2}} \overbracket{-2at^{-4}}t^4
+    + i\sqrt{2a}t^4\myubracket{\partial_tt^{-2}} \myobracket{-2at^{-4}}t^4
     - t^3\partial_t
     - i\sqrt{2a}t + 2a
 \\&= t^4\partial_t^2 + i\sqrt{2a}t^{2}\partial_t
-    + i\sqrt{2a}t^4\overbracket{(t^{-2}\partial_t-2t^{-3})} - t^3\partial_t
+    + i\sqrt{2a}t^4\myobracket{(t^{-2}\partial_t-2t^{-3})} - t^3\partial_t
     - i\sqrt{2a}t
 \\&= t^4\partial_t^2 + i\sqrt{2a}t^{2}\partial_t + i\sqrt{2a}t^2\partial_t
     - 2i\sqrt{2a}t - t^3\partial_t - i\sqrt{2a}t
@@ -595,9 +595,9 @@ und mit denn Kommutatorregeln %TODO: lemma? quelle?
 gilt
 \begin{align*}
 \partial_t \sum_{n=-2}^\infty u_n t^n &=
-  \sum_{n=-2}^\infty (u_nt^n\partial_t + \underbracket{[\partial_t,u_nt^n]})
+  \sum_{n=-2}^\infty (u_nt^n\partial_t + \myubracket{[\partial_t,u_nt^n]})
 \\&\!\!\overset{{(\ref{eq:kommutator1})}}{=}
-  \sum_{n=-2}^\infty (u_nt^n\partial_t +\overbracket{ nu_nt^{n-1}})
+  \sum_{n=-2}^\infty (u_nt^n\partial_t +\myobracket{ nu_nt^{n-1}})
 \\&= \sum_{n=-2}^\infty u_nt^n\partial_t + \sum_{n=-2}^\infty nu_nt^{n-1}
 %TODO: ist umsortieren immer erlaubt??
 \end{align*}
@@ -605,15 +605,15 @@ Wenn wir dieses Ergebnis nun in (\ref{eq:schritt200}) einsetzen, ergibt sich
 \begin{equation} \label{eq:schritt300}
   \begin{aligned}
 Q_1\cdot Q_2&=\partial_t^2 + \sum_{n=-2}^\infty u_nt^n\partial_t
-  + \underbracket{\sum_{n=-2}^\infty nu_nt^{n-1}}
+  + \myubracket{\sum_{n=-2}^\infty nu_nt^{n-1}}
   + \sum_{n=-1}^\infty v_nt^n \partial_t
   + \Big(\sum_{n=-1}^\infty v_nt^n \Big)\Big( \sum_{n=-2}^\infty u_n t^n \Big)
-%\\&=\partial_t^2 + \underbracket{(\sum_{n=-2}^\infty u_nt^n
+%\\&=\partial_t^2 + \myubracket{(\sum_{n=-2}^\infty u_nt^n
   %+ \sum_{n=-1}^\infty v_nt^n)} \partial_t
-  %+ \underbracket{\sum_{n=-2}^\infty nu_nt^{n-1}}
+  %+ \myubracket{\sum_{n=-2}^\infty nu_nt^{n-1}}
   %+ \Big(\sum_{n=-1}^\infty v_nt^n \Big)\Big( \sum_{n=-2}^\infty u_n t^n \Big)
 \\&=\partial_t^2 + \sum_{n=-2}^\infty (u_n+v_n)t^n \partial_t
-  + \overbracket{\sum_{n=-3}^\infty (n+1)u_{n+1}t^{n}}
+  + \myobracket{\sum_{n=-3}^\infty (n+1)u_{n+1}t^{n}}
   + \Big(\sum_{n=-1}^\infty v_nt^n \Big)\Big( \sum_{n=-2}^\infty u_n t^n \Big)
   \,.
   \end{aligned}
@@ -623,23 +623,23 @@ anwenden wollen: %TODO: quelle? formel?
 \begin{align*}
 \Big(\sum_{n=-1}^\infty v_nt^n \Big)\Big( \sum_{n=-2}^\infty u_n t^n \Big)
   &\overbox{=}{Indexshift} t^{-3}
-  \underbracket{\Big(\sum_{n=0}^\infty v_{n-1}t^{n} \Big)
+  \myubracket{\Big(\sum_{n=0}^\infty v_{n-1}t^{n} \Big)
   \Big( \sum_{n=0}^\infty u_{n-2} t^{n} \Big)}
-\\&\overbox{=}{Cauchy Produkt} t^{-3} \overbracket{\sum_{n=0}^\infty
+\\&\overbox{=}{Cauchy Produkt} t^{-3} \myobracket{\sum_{n=0}^\infty
   \Big( \sum_{k=0}^n v_{k-1}t^{k} u_{n-k-2} t^{(n-k)} \Big)}
 \\&= \sum_{n=0}^\infty \Big( \sum_{k=0}^n v_{k-1}u_{n-k-2}t^{k+(n-k)-3} \Big)
-\\&= \underbracket{
+\\&= \myubracket{
   \sum_{n=0}^\infty \Big( \sum_{k=0}^n v_{k-1} u_{n-k-2} \Big) t^{n-3}}
-\\&\overbox{=}{Indexshift} \overbracket{
+\\&\overbox{=}{Indexshift} \myobracket{
   \sum_{n=-3}^\infty \Big( \sum_{k=0}^{n+3} v_{k-1} u_{n-k+1} \Big) t^{n} }
 \end{align*}
 Wenn wir auch diese Rechnung in (\ref{eq:schritt300}) integrieren, erhalten wir
 \begin{align*} \label{eq:schritt400}
 Q_1\cdot Q_2&=\partial_t^2 + \sum_{n=-2}^\infty (u_n+v_n)t^n \partial_t
-  + \underbracket{\sum_{n=-3}^\infty (n+1)u_{n+1}t^{n}
+  + \myubracket{\sum_{n=-3}^\infty (n+1)u_{n+1}t^{n}
   + \sum_{n=-3}^\infty \Big( \sum_{k=0}^{n+3} v_{k-1}u_{n-k+1} \Big) t^{n}}
 \\&=\partial_t^2 + \sum_{n=-2}^\infty (u_n+v_n)t^n \partial_t
-  + \overbracket{\sum_{n=-3}^\infty
+  + \myobracket{\sum_{n=-3}^\infty
   \Big( (n+1)u_{n+1} + \sum_{k=0}^{n+3} v_{k-1}u_{n-k+1} \Big) t^{n}}
 \\&\overset{!}{=} \partial_t^2 - (t^{-1} - 2i\sqrt{2a}t^{-2})\partial_t
   - 3 i\sqrt{2a}t^{-3} \,.
@@ -683,11 +683,11 @@ und somit
 \end{align*}
 Nun zum allgemeinem Koeffizienten vor $t^{n}$ mit $n>-3$:
 \begin{align*}
-0&= (n+1)u_{n+1} + \underbracket{\sum_{k=0}^{n+3} v_{k-1}u_{n-k+1}}
-\\&= (n+1)u_{n+1} + \overbracket{(\sum_{k=0}^{n+2} v_{k-1}u_{n-k+1})
-  + \underbracket{v_{n+3-1\phantom{\!\!)}}}\underbracket{u_{n-(n+3)+1}}}
+0&= (n+1)u_{n+1} + \myubracket{\sum_{k=0}^{n+3} v_{k-1}u_{n-k+1}}
+\\&= (n+1)u_{n+1} + \myobracket{(\sum_{k=0}^{n+2} v_{k-1}u_{n-k+1})
+  + \myubracket{v_{n+3-1\phantom{\!\!)}}}\myubracket{u_{n-(n+3)+1}}}
 \\&= (n+1)u_{n+1} + (\sum_{k=0}^{n+2} v_{k-1}u_{n-k+1})
-  + \overbracket{v_{n+2}}\overbracket{u_{-2}}
+  + \myobracket{v_{n+2}}\myobracket{u_{-2}}
 \\\Rightarrow v_{n+2}u_{-2}&=-\left((n+1)u_{n+1} + \sum_{k=0}^{n+2}
   v_{k-1}u_{n-k+1}\right)
 \\\overset{u_{-2}\neq 0}{\Rightarrow} v_{n+2} &= - \frac{1}{u_{-2}}
@@ -719,12 +719,12 @@ Nun lässt sich diese Zerlegung mit $\sE^{-\psi(t)}$ zurücktwisten und wir
 erhalten damit die Zerlegung
 \begin{align*}
 \rho^+\cM_{\phi} &\!\!\overset{\text{ \ref{cor:zurücktwisten}}}{=}\!\!
-  \underbracket{\rho^+\cM_{\phi}\otimes\sE^{\psi(t)}} \otimes\sE^{-\psi(t)}
-\\&= \overbracket{(\cN_1\oplus\cN_2)}\otimes\sE^{-\psi(t)}
-\\&= \underbracket{\cN_1}\otimes\sE^{-\psi(t)}
-  \oplus\underbracket{\cN_2}\otimes\sE^{-\psi(t)}
-\\&= (\overbracket{\cD_{\hat L}/\cD_{\hat L}\cdot Q_1}\otimes\sE^{-\psi(t)})
-  \oplus(\overbracket{\cD_{\hat L}/\cD_{\hat L}\cdot Q_2}\otimes\sE^{-\psi(t)})
+  \myubracket{\rho^+\cM_{\phi}\otimes\sE^{\psi(t)}} \otimes\sE^{-\psi(t)}
+\\&= \myobracket{(\cN_1\oplus\cN_2)}\otimes\sE^{-\psi(t)}
+\\&= \myubracket{\cN_1}\otimes\sE^{-\psi(t)}
+  \oplus\myubracket{\cN_2}\otimes\sE^{-\psi(t)}
+\\&= (\myobracket{\cD_{\hat L}/\cD_{\hat L}\cdot Q_1}\otimes\sE^{-\psi(t)})
+  \oplus(\myobracket{\cD_{\hat L}/\cD_{\hat L}\cdot Q_2}\otimes\sE^{-\psi(t)})
 \end{align*}
 wobei $Q_1$ bereits regulär. Betrachte also noch $\cD_{\hat L}/\cD_{\hat
 L}\cdot Q_2\otimes\sE^{-\psi(t)}$:
@@ -733,8 +733,8 @@ L}\cdot Q_2\otimes\sE^{-\psi(t)}$:
   ~&\!\!\overset{\text{\ref{lem:twistRechenregel}}}{=}
   \cD_{\hat L}/\cD_{\hat L}\cdot Q_2(t,\partial_t-i\sqrt{2a}t^{-2})
 \\&= \cD_{\hat L}/\cD_{\hat L}\cdot (\partial_t
-  \underbracket{-i\sqrt{2a}t^{-2} + u(t)})
-\\&= \cD_{\hat L}/\cD_{\hat L}\cdot (\partial_t + \overbracket{i\sqrt{2a}t^{-2}
+  \myubracket{-i\sqrt{2a}t^{-2} + u(t)})
+\\&= \cD_{\hat L}/\cD_{\hat L}\cdot (\partial_t + \myobracket{i\sqrt{2a}t^{-2}
   +\sum_{n=-1}^\infty u_nt^n})
 \\&\!\!\overset{\text{\ref{lem:twistRechenregel}}}{=} \underset{\mbox{regulär}}{\underbrace{
   \cD_{\hat L}/\cD_{\hat L}\cdot (\partial_t
@@ -808,9 +808,9 @@ v_{0} &= -\frac{1}{u_{-2}} ((-1)u_{-1} + \sum_{k=0}^{0} v_{k-1}u_{-k-1})
   und für $n=3$ ist
   \begin{align*}
   v_3 &=-\frac{1}{u_{-2}} ((3-1)u_{3-1} + \sum_{k=0}^{3} v_{k-1}u_{3-k-1})
-  \\&\approx -u_{-2}^{-4}(\underbracket{-\frac{63}{8}-\frac{1}{2}v_2}
+  \\&\approx -u_{-2}^{-4}(\myubracket{-\frac{63}{8}-\frac{1}{2}v_2}
     -v_0v_1-v_1v_0-\frac{3}{2}v_2)
-  \\&=-u_{-2}^{-4}(\overbracket{-\frac{(4-1)63}{32}}
+  \\&=-u_{-2}^{-4}(\myobracket{-\frac{(4-1)63}{32}}
     -2\frac{-3}{4}\frac{-3}{2}-\frac{3}{2}\frac{-63}{16})
   \\&=-\frac{-(4-1)63-8\cdot9+3\cdot63}{32u_{-2}^{4}}
   \\&=-\frac{-8\cdot9}{8\cdot 4u_{-2}^{4}}
@@ -829,19 +829,19 @@ nur dazu, das Programm zu prüfen.
 Nun vereinfachen wir die Formel:
 \begin{align*}
 v_{n} &= -\frac{1}{u_{-2}}
-  \Big((n-1)u_{n-1} + \underbracket{\sum_{k=0}^{n} v_{k-1}u_{n-k-1}}\Big)
+  \Big((n-1)u_{n-1} + \myubracket{\sum_{k=0}^{n} v_{k-1}u_{n-k-1}}\Big)
 \\&= -\frac{1}{u_{-2}}
-  \Big(\underbracket{(n-1)u_{n-1}} + \overbracket{v_{-1}\underbracket{u_{n-1}}
-  + (\sum_{k=1}^{n-1} v_{k-1}\underbracket{u_{n-k-1}}) + v_{n-1}u_{-1}}\Big)
+  \Big(\myubracket{(n-1)u_{n-1}} + \myobracket{v_{-1}\myubracket{u_{n-1}}
+  + (\sum_{k=1}^{n-1} v_{k-1}\myubracket{u_{n-k-1}}) + v_{n-1}u_{-1}}\Big)
 \\&\!\!\overset{(\ref{eq:bedingung1c})}{=} -\frac{1}{u_{-2}}
-  \Big(\overbracket{-(n-1)v_{n-1}} + \underbracket{v_{-1}\overbracket{(-v_{n-1})}}
-  + (\sum_{k=1}^{n-1} v_{k-1}\overbracket{(-v_{n-k-1})}
-  + \underbracket{v_{n-1}u_{-1}}\Big)
-\\&= -\frac{1}{u_{-2}} \Big(-(n-1)v_{n-1} \overbracket{-\frac{1}{2}v_{n-1}}
-  - \sum_{k=1}^{n-1} v_{k-1}v_{n-k-1} \overbracket{- \frac{3}{2} v_{n-1}}\Big)
+  \Big(\myobracket{-(n-1)v_{n-1}} + \myubracket{v_{-1}\myobracket{(-v_{n-1})}}
+  + (\sum_{k=1}^{n-1} v_{k-1}\myobracket{(-v_{n-k-1})}
+  + \myubracket{v_{n-1}u_{-1}}\Big)
+\\&= -\frac{1}{u_{-2}} \Big(-(n-1)v_{n-1} \myobracket{-\frac{1}{2}v_{n-1}}
+  - \sum_{k=1}^{n-1} v_{k-1}v_{n-k-1} \myobracket{- \frac{3}{2} v_{n-1}}\Big)
 \\&= \frac{1}{u_{-2}} \Big((n-1+\frac{1}{2}+\frac{3}{2})v_{n-1}
   + \sum_{k=1}^{n-1} v_{k-1}v_{n-k-1}\Big)
-\\&= \frac{1}{u_{-2}} \Big((n+1)v_{n-1} + \sum_{k=1}^{n-1} v_{k-1}v_{n-k-1}\Big)
+\\&=\frac{1}{u_{-2}} \Big((n+1)v_{n-1} + \sum_{k=1}^{n-1} v_{k-1}v_{n-k-1}\Big)
 \end{align*}
 Zu gegebenem $u_{-2}=2i\sqrt{2a}$, sind die Koeffizienten gegeben durch:
 \begin{align*}
@@ -885,7 +885,7 @@ Sei $\sum_n a_n x^n$ eine Potenzreihe. Es gilt:
 \]
 \end{thm}
 \begin{proof}
-siehe \cite[§18, Satz 94]{KnoppReihen}.
+Siehe \cite[§18, Satz 94]{KnoppReihen}.
 \end{proof}
 \begin{figure}[htbp]
   \centering
@@ -896,10 +896,11 @@ siehe \cite[§18, Satz 94]{KnoppReihen}.
 \begin{thm}[Quotientenkriterium]
 Sei $\sum_n a_n x^n$ eine Potenzreihe. Es gilt:
 \[
-\underset{n\rightarrow\infty}{\lim} \frac{|a_{n+1}|}{|a_n|} = 0
+\underset{n\rightarrow\infty}{\lim} \frac{|a_{n}|}{|a_{n+1}|} = 0
 \Rightarrow \text{ die Potenzreihe ist nirgends konvergent.}
 \]
 \end{thm}
+\begin{comment}
 \begin{proof}
 Es gilt, dass $\sum_na_nx^n$ für ein $x\in\C$ konvergent ist, falls
 \[
@@ -907,11 +908,12 @@ Es gilt, dass $\sum_na_nx^n$ für ein $x\in\C$ konvergent ist, falls
 \]
 und das ist äquivalent zu
 \[
-\underset{n\rightarrow\infty}{\lim} \left|\frac{a_{n+1}}{a_n}\right||x| < 1 \,.
+\underset{n\rightarrow\infty}{\limsup} \left|\frac{a_{n+1}}{a_n}\right||x| < 1 \,.
 \]
 Also konvergiert die Reihe für alle $x$ mit
 $|x|<\underset{n\rightarrow\infty}{\lim} \left|\frac{a_{n+1}}{a_n}\right|$.
 \end{proof}
+\end{comment}
 \begin{figure}[htbp]
   \centering
   \includegraphics[angle=270,width=\the\textwidth]{../plot-quot.pdf}

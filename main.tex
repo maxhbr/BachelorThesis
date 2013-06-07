@@ -58,18 +58,64 @@
 \usepackage{stmaryrd}
 %simplewick
 
-%%%%  over/underbracket  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%  myobracket/myubracket  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{mathtools}
-%\renewcommand{\overbracket}[1]{#1}
-%\renewcommand{\underbracket}[1]{#1}
+\iffalse
+  \newcommand{\myobracket}[1]{ \overbracket[0.7]{ #1 } }
+  \newcommand{\myubracket}[1]{ \underbracket[0.7]{ #1 } }
+\else
+  \newcommand{\myobracket}[1]{%
+    \textcolor{gray}{%
+      \overbracket[0.7]{%
+        \textcolor{black}{%
+          #1%
+        }%
+      }%
+    }%
+  }
+  \newcommand{\myubracket}[1]{%
+    \textcolor{gray}{%
+      \underbracket[0.7]{%
+        \textcolor{black}{%
+          #1%
+        }%
+      }%
+    }%
+  }
+\fi
 
 %%%%  Ploting  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{tikz}
 \usetikzlibrary{matrix,arrows, calc, decorations.pathmorphing,%
   decorations.pathreplacing }
-\usepackage{float}
 
 \myinput{myPlotFunction.sty}
+
+%%%%  figures  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{float}
+%TODO: decorate floats
+\newcommand{\myfigurestart}{
+  %\textcolor{lightgray}{\hrule height 2pt}
+  \hline
+  \vspace{3mm}
+}
+\newcommand{\myfigureend}{
+  \vspace{3mm}
+  \hline
+  %\textcolor{lightgray}{\hrule height 2pt}
+}
+
+%\usepackage{lipsum}% http://ctan.org/pkg/lipsum
+%\usepackage{mdframed}% http://ctan.org/pkg/mdframed
+%\usepackage{xcolor}% http://ctan.org/pkg/xcolor
+%\newenvironment{inline}{
+  %\begin{figure}[h!]
+    %\begin{mdframed}[backgroundcolor=back!5]
+    %\vspace{10pt}%
+%}{%
+    %\end{mdframed}
+  %\end{figure}
+%}
 
 %%%%  Theoreme Styles  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \makeatletter
