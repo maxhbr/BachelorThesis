@@ -269,7 +269,7 @@ die \emph{Determinanten Gleichung} $\sigma_\ell(\rho^*P_{\phi})\in \hat L[\xi]$.
 Schon gezeigt, das $ord_\ell = 0$?
 \end{comment}
 \begin{align*}
-\sigma_L(\rho^*P_{\phi})
+\sigma_\ell(\rho^*P_{\phi})
   &= \sum_{\{(i,j)\in\N\times\Z \mid \ell(i,i-j)=0\}}\alpha_{ij}t^j\xi^i\\
   &= \sum_{\{(i,j)\in\N\times\Z \mid (q+1)i-j=0\}}\alpha_{ij}t^j\xi^i
 \end{align*}
@@ -277,23 +277,23 @@ Da $\hat L[\xi]$ kommutativ ist, gilt hier, dass $(t^j\xi^i)^k=t^{jk}\xi^{ik}$
 ist.  Setze $\theta=t^{\lambda_0+\lambda_1}\xi^{\lambda_1}=t^{q+1}\xi$ so,
 können wir
 \begin{align*}
-\sigma_L(\rho^*P_{\phi})(\theta) 
+\sigma_\ell(\rho^*P_{\phi})(\theta) 
   &= \sum_{k\geq 0}\alpha_k\theta^k & & \alpha_k\in\C
 \end{align*}
 schreiben.
 \begin{comment}
 , welches wir als nächsten Schritt faktorisieren
 \[
-\sigma_L(\rho^*P_\phi)
+\sigma_\ell(\rho^*P_\phi)
   =\epsilon\prod_{\beta\mbox{ Nullstelle}}(\theta-\beta)^{\gamma_\beta}\,.
 \]
 Wobei $\epsilon\in\C^\times$
 eine Konstante ist.
 \end{comment}
-Sei $\beta$  eine der Nullstellen von $\sigma_L(\rho^*P_{\phi})(\theta)$.
+Sei $\beta$  eine der Nullstellen von $\sigma_\ell(\rho^*P_{\phi})(\theta)$.
 Da $\ord_\ell(\rho^*P_\phi)=0$ und der einzige Slope von $\rho^*P_\phi$ nicht
 gleich $0$ ist, gilt offensichtlich, dass $\alpha_0\neq0$. Also ist $0$ keine
-Nullstelle von $\sigma_L(\rho^*P_\phi)$.
+Nullstelle von $\sigma_\ell(\rho^*P_\phi)$.
 Setze $\psi(x):=(\beta/\lambda_0)t^{-\lambda_0}=(\beta/q)t^{-q}$ und
 betrachte
 \begin{align*}
@@ -304,10 +304,10 @@ betrachte
   \cD_{\hat L}/\cD_{\hat L}\cdot(\rho^*P_{\phi}(t,\partial_t-\frac{\partial
   \psi}{\partial t}))
 \\&=\cD_{\hat L}/\cD_{\hat
-    L}\cdot(\rho^*P_{\phi}(t,\partial_t+\frac{\beta}{t^{\lambda+1}}))
+    L}\cdot(\rho^*P_{\phi}(t,\partial_t+\frac{\beta}{t^{q+1}}))
 \\&=\cD_{\hat L}/\cD_{\hat L}\cdot
-    (t^{q+2}(\partial_t+\frac{\beta}{t^{\lambda+1}}))^{q}
-    (t(\partial_x+\frac{\beta}{t^{\lambda+1}})-(q+1))+(q+1)qa
+    \left((t^{q+2}(\partial_t+\frac{\beta}{t^{q+1}}))^{q}
+    (t(\partial_x+\frac{\beta}{t^{q+1}})-(q+1))+(q+1)qa \right)
 \end{align*}
 \begin{comment}
 TODO: hier weiter vereinfachen
@@ -465,7 +465,7 @@ P' &= \partial_t^2 - (t^{-1} + 2\psi'(t))\partial_t
   + \underset{=0}{\underbrace{ 2at^{-4} \myobracket{- 2at^{-4}}}}
 \\&= \partial_t^2 - (t^{-1} - 2i\sqrt{2a}t^{-2})\partial_t - 3 i\sqrt{2a}t^{-3}
 \end{align*}
-mit, wie gewünscht, mehr als einem Slope.
+mit, wie gewünscht, mehr als einem Slope (siehe Abbildung \ref{fig:afterTwist}).
 \begin{figure}[H]
 \begin{center}
   \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
@@ -475,6 +475,7 @@ mit, wie gewünscht, mehr als einem Slope.
   \end{tikzpicture}
 \end{center}
 \caption{Newton Polygon zu $\cN$}
+\label{fig:afterTwist}
 \end{figure}
 \begin{comment}
 \begin{bem}

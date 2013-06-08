@@ -224,12 +224,15 @@ mit $\rho:t\mapsto x:=t^p$, isomorph zu einer direkten Summe von formalen
 elementaren meromorphen Zusammenhänge
 ist.
 \end{thm}
+\begin{comment}
 Der folgende Beweis stammt hauptsächlich aus \cite[Seite 35]{sabbah_cimpa90}.
-\begin{proof}
+\end{comment}
+\begin{proof}[Beweisskizze]
 Zum Beweis wird Induktion auf die lexicographisch geordnetem Paare
 $(\dim_{\hat K}\cM_{\hat K},\kappa)$ angewendet. Wobei
 $\kappa\in\N\cup\{\infty\}$ dem größtem Slope von $\cM_{\hat K}$, falls dieser
-ganzzahlig ist, entspricht. Sonsts wird $\kappa=\infty$ gesetzt.
+ganzzahlig ist, entspricht. Sonsts wird $\kappa=\infty$ gesetzt. In jedem
+Induktionsschritt wird entweder die Dimension oder das $\kappa$ verringert.
 
 \begin{comment}
 TODO: Induktionsanfang und -schritt kennzeichnen
@@ -239,80 +242,78 @@ Teile $\cM_{\hat K}$ mittels Satz \ref{thm:Split-after-slopes} in meromorphe
 Zusammenhänge mit je einem Slope und wende jeweils die Induktion an.
 Mit $\Lambda=:\frac{\lambda_0}{\lambda_1}$ (vollständig gekürtzt) definieren
 wir die dem Slope entsprechende Linearform
-$L(s_0,s_1):=\lambda_0s_0+\lambda_1s_1$.  Wir nennen $\sigma_L(P)\in \hat
-K[\xi]$ die \emph{Determinanten Gleichung} von $P$. Da $L$ zu einem Slope von
-$P$ gehört, besteht $\sigma_L(P)$ aus zumindest zwei Monomen.
-\begin{comment}
-and is homogeneous of degree $\ord_L(P)=0$ because $P$ is chosen with
-coefficients in $\Cfx$, one of them, being a unit.
-\end{comment}
+$\ell(s_0,s_1):=\lambda_0s_0+\lambda_1s_1$.  
+Wir nehmen oBdA auch an, dass $\ord_\ell(P)=0$. Dies geht nach Bemerkung
+\ref{bem:NPverschieben}.
+Da $\ell$ zu einem Slope von
+$P$ gehört, besteht $\sigma_\ell(P)$ aus zumindest zwei Monomen.
 Schreibe
 \begin{align*}
-\sigma_L(P)&=\sum_{L(i,i-j)=\ord_L(P)}\alpha_{ij}x^j\xi^i\\
-  &=\sum_{L(i,i-j)=0}\alpha_{ij}x^j\xi^i \,.
+\sigma_L(P)&=\sum_{\ell(i,i-j)=\ord_\ell(P)}\alpha_{ij}x^j\xi^i\\
+  &=\sum_{\ell(i,i-j)=0}\alpha_{ij}x^j\xi^i
 \end{align*}
-Sei $\theta:=x^{\lambda_0+\lambda_1}xi^{\lambda_1}$ so können wir
+und setze $\theta:=x^{\lambda_0+\lambda_1}xi^{\lambda_1}$ so erhalten wir
 \[
-\sigma_L(P) = \sum_{k\geq 0}\alpha_k\theta^k
+\sigma_\ell(P) = \sum_{k\geq 0}\alpha_k\theta^k \,,
 \]
-schreiben, wobei $\alpha_0\neq0$ ist.
+wobei $\alpha_0\neq0$ ist.
 
 \paragraph{Erster Fall: $\lambda_1=1$.} Das bedeutet, dass der Slope ganzzahlig
 ist. Betrachte die Faktorisierung
 \[
-\sigma_L(P)=\epsilon\prod_{\beta}(\theta-\beta)^{\gamma_\beta}\,.
+\sigma_\ell(P)=
+  \epsilon\prod_{\beta\text{ Nullstelle}}(\theta-\beta)^{\gamma_\beta}\,.
 \]
-Wobei $\epsilon\in\C$ eine Konstante ist.  Sei $\beta_0$  eine der Nullstellen,
-so setze $R(z):=(\beta_0/(\lambda_0+1))z^{\lambda_0+1}$ und betrachte
-$\cM_{\hat K}\otimes \cF_{\hat K}^R$.
-\begin{comment}
-AB HIER VLT NICHT RICHTIG, nur versuch
-\end{comment}
-Falls $P(x,\partial_x)\cdot e=0$ gilt
-\[
-P\Big(x,\partial_x-\frac{\partial R(x^{-1})}{\partial x}\Big)
-  \cdot e\otimes e(R)=0
-\]
-und hier haben wir 
+Wobei $\epsilon\in\C^\times$ eine Konstante ist.  Sei $\beta$  eine der
+Nullstellen, so setze $\psi(x):=(\beta_0/\lambda_0)x^{-\lambda_0}$ und
+betrachte $\cM_{\hat K}\otimes_{\hat K} \sE_{\hat K}^{\psi}$.
+Sei $P$ ein Minimalpolynom von $\cM_{\hat K}$, dann ist nach Lemma
+\ref{lem:twistRechenregel} ein Minimalpolynom von 
+$\cM_{\hat K}\otimes_{\hat K} \sE_{\hat K}^{\psi}$ gegeben durch
 \begin{align*}
-\frac{\partial R(x^{-1})}{\partial x} 
-  &=\frac{\partial(\frac{\beta_0}{\lambda_0+1}x^{-(\lambda_0+1)})}{\partial
-  x}\\
-  &=-\beta_0z^{-(\lambda_0+2)} \,.
+P'(x,\partial_x)&=P(x,\partial_x-\frac{\partial \psi}{\partial x})
+\\&=P(x,\partial_x+\frac{\beta}{x^{\lambda_0+1}})
 \end{align*}
-Schreibe $P'=P(x,\partial_x+\beta_0x^{-(\lambda_0+2)})$.
-\begin{lem}
-Es gilt, dass $P'$ Koeffizienten in $\Cfx$ hat.
-\end{lem}
-\begin{proof}
-TODO
-\end{proof}
-Des weiteren ist $\sigma_L(P')=\sum_{k\geq 0}\alpha_k(\theta+\beta_0)^k$. Wir
-unterscheiden nun 2 Unterfälle:
+mit Koeffizienten in
+$\Cfx$.
+Des weiteren ist $\sigma_\ell(P')=\sum_{k\geq 0}\alpha_k(\theta+\beta_0)^k$.
+Wir unterscheiden nun 2 Unterfälle:
 \begin{enumerate}
-\item \textbf{Die Determinanten Gleichung $\sigma_L(P)$ hat nur eine
+\item \textbf{Die Determinanten Gleichung $\sigma_\ell(P)$ hat nur eine
 Nullstelle.}
+In diesem fall wurde die maximale Steigung echt verringert.
 \begin{comment}TODO: Hier weiter \end{comment}
-\item \textbf{Die Determinanten Gleichung $\sigma_L(P)$ hat mehrere
+\item \textbf{Die Determinanten Gleichung $\sigma_\ell(P)$ hat mehrere
 Nullstellen.}
+In diesem fall hat $\cM_{\hat K}\otimes_{\hat K} \sE_{\hat K}^{\psi}$ mehr als
+einen Slope und kann deshalb mit Satz \ref{thm:Split-after-slopes} in eine
+direkte Summe von Meromorphen Zusammenhängen, mit echt niedrigerer Dimension,
+zerlegt werden.
 \begin{comment}TODO: Hier weiter \end{comment}
 \end{enumerate}
+In beiden Unterfällen muss danach das Twisten, nach Anwenden der Induktion,
+durch ein tensorieren mit $\sE_{\hat K}^{-\psi}$ rückgängig gemacht werden.
 
-\paragraph{Zweiter Fall: $\lambda_1\neq1$.} In diesem Fall ist einzige Slope
-$\Lambda$ nicht ganzzahlig. Mache deshalb einen pull-back mit $\lambda_1$. Sei
-$\rho:t\mapsto x:=t^{\lambda_1}$ und erhalte $P'$ so dass $\rho^*\cM_{\hat
-K}=\cD_{\hat L}/\cD_{\hat L}\cdot P'$.
+\paragraph{Zweiter Fall: $\lambda_1\neq1$ (bzw. $\kappa = +\infty$).} 
+In diesem Fall ist einzige Slope $\Lambda$ nicht ganzzahlig. Mache deshalb
+einen pull-back mit $\lambda_1$. Sei $\rho:t\mapsto x:=t^{\lambda_1}$ und
+erhalte $P'$ so dass $\rho^*\cM_{\hat K}=\cD_{\hat L}/\cD_{\hat L}\cdot P'$.
 Nach Lemma \ref{lem:slope-pb-multiplikation} hat $P'$ den einen Slope
-$\Lambda\cdot\lambda_1=\lambda_0$.
-Damit können wir nun die zugehörige Linearform $L':=\lambda_0s_0+s_1$
+$\Lambda'=\Lambda\cdot\lambda_1=\lambda_0\in\N$.
+\begin{comment}
+Damit können wir nun die zugehörige Linearform $\ell':=\lambda_0s_0+s_1$
 definieren. Es gilt dass
 \[
-\sigma_{L'}(P')=\dots
+\sigma_{\ell'}(P')=\dots
 \]
 ist, welches zumindest zwei unterschiedliche Nullstellen hat. Nun wendet man
 den zweiten Unterfall des ersten Fall an.
-
+\end{comment}
 \end{proof} % ende von beweis zu levelt aus sabbah_cimpa90
+\begin{bem}
+Eine sehr detailierte Version dieses Beweises, ist beispielsweise in \cite[Thm
+5.16]{DiplHedwig} zu finden.
+\end{bem}
 
 \begin{comment}
 \subsection{Sabbah's Refined version}
