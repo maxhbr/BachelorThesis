@@ -128,23 +128,35 @@ Siehe \cite[Prop 3.1]{sabbah_Fourier-local}
 
 \section{Die Filtrierung $\,^\ell V\cD_{\hat K}$ und das $\ell$-Symbol}
 \begin{comment}
-TODO: mache alle Linearformen $L$ zu $\ell$
+TODO: Problem mit vertikaler verschiebung? kompensieren??
 \end{comment}
+Dieser Abschnitt bezieht sicht auf \cite[Seite 25]{sabbah_cimpa90} und
+beschreibt das $\ell$-Symbol, welches im Beweis des Levelt-Turittin Theorems
+verwendung findet.\\
 Sei $\Lambda=\frac{\lambda_0}{\lambda_1}\in \Q_{\geq 0}$ vollständig gekürtzt,
 also mit $\lambda_0$ und $\lambda_1$ in $\N$ relativ prim. Definiere die
 Linearform $\ell(s_0,s_1)=\lambda_0s_0+\lambda_1s_1$ in zwei Variablen, sei
 $P\in\cD_{\hat K}$.  Falls $P=x^a\partial_x^b$ mit $a\in \Z$ und $b\in \N$,
 setzen wir
 \[
-\ord_\ell(P)=\ell(b,b-a)
+\ord_\ell(P):=\ell(b,b-a)
 \]
 und falls $P=\sum_{i=0}^d b_i(x)\partial_x^i$ mit $b_i\in\hat K$, setzen wir
 \[
-\ord_\ell(P)=\max_{\{i\mid a_i\neq 0\}} \ell(i,i-v(b_i))\,.
+\ord_\ell(P):=\max_{\{i\mid a_i\neq 0\}} \ell(i,i-v(b_i))\,.
 %Hier ist ein fehler im Sabbah script a_i <-> b_i
 \]
+
+\begin{bem}
+Seien $P$ ein linearer Differenzialoperator und
+$\ell(s_0,s_1)=\lambda_0s_0+\lambda_1s_1$ gegeben.
+Betrachte die Geradenschar $g_a(x)=\frac{\lambda_0}{\lambda_1}+a$, dann gibt es
+genau ein $a$, welches minimal unter der Eigenschaft, das Newton-Polygon zu $P$
+zu berühren bzw. zu schneiden, ist.
+Dieses so definierte $a$ entspricht $\ord_\ell(P)$.
+\end{bem}
+
 \begin{defn}[Die Filtrierung $\,^\ell V\cD_{\hat K}$]
-\cite[Seite 25]{sabbah_cimpa90}
 Nun können wir die aufsteigende Filtration $\,^\ell V\cD_{\hat K}$, welche mit
 $\Z$ indiziert ist, durch
 \[
@@ -157,7 +169,6 @@ Man hat $\ord_\ell(PQ)=\ord_\ell(P)+\ord_\ell(Q)$ und falls $\lambda_0\neq 0$,
 hat man auch, das $\ord_\ell([P,Q])\leq \ord_\ell(P)+\ord_\ell(Q)-1$.
 \end{bem}
 \begin{defn}[$\ell$-Symbol]
-\cite[Seite 25]{sabbah_cimpa90}
 Falls $\lambda_0\neq 0$, ist der gradierte Ring $gr^{\,^\ell V}\cD_{\hat
 K}\bydef \bigoplus_{\lambda \in \Z}gr_\lambda^{\,^\ell V}\cD_{\hat K}$ ein
 kommutativer Ring. Bezeichne die Klasse von $\partial_x$ in dem Ring durch

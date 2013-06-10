@@ -18,7 +18,6 @@ levelt-turrittin.tex:TODO: mache alle Linearformen $L$ zu $\ell$
 levelt-turrittin.tex:TODO
 levelt-turrittin.tex:TODO: ist $\ell$ Slope (gehört zu Slope) dann hat $\sigma_\ell(P)$ zumindest 2
 levelt-turrittin.tex:TODO: Induktionsanfang und -schritt kennzeichnen
-levelt-turrittin.tex:TODO
 levelt-turrittin.tex:\begin{comment}TODO: Hier weiter \end{comment}
 levelt-turrittin.tex:\begin{comment}TODO: Hier weiter \end{comment}
 main.tex:  ,fontsize=11pt % TODO
@@ -26,7 +25,6 @@ main.tex:%TODO: decorate floats
 main.tex:%TODO: replace def --> newcommand
 main.tex:%TODO: set titel variable??
 main.tex:%TODO: rename listings
-main.tex:TODO: Erklärung das das wirklich selbstgemacht ist
 meromZsh.tex:% TODO; wie darf ich einen meromorphen verändern, (das P verändern) ohne das
 meromZsh.tex:% TODO: \cM = \cM_K ... replace
 meromZsh.tex:% TODO: Dimension eines meromorphen Zusammenhang

@@ -79,8 +79,10 @@ Falls $\cN$ regulär und nicht Null, dann ist die Menge der Slopes von
 $\cM\otimes\cN$ genau die Menge der Slopes von $\cM$.
 \end{lem}
 \begin{proof}
-Siehe \cite[Ex 5.3.7]{sabbah_cimpa90}
-\\TODO
+Siehe \cite[Ex 5.3.7]{sabbah_cimpa90}.
+\begin{comment}
+TODO
+\end{comment}
 \end{proof}
 
 \section{pull-back und push-forward}
@@ -108,7 +110,10 @@ K$) ist.
 \begin{comment}
 TODO: damit wird $\hat L$ zu einem $\hat K$ Vektorraum.
 \end{comment}
-Sei $\cM_{\hat K}$ ein endlich dimensionaler $\Cftl$ Vektorraum ausgestattet mit
+\begin{comment}
+TODO: $\nable$ zu $\partial_x$ ???? dann $\partial_t=\rho^*\partial_x$???
+\end{comment}
+Sei $\cM_{\hat K}$ ein endlich dimensionaler $\Cfxl$ Vektorraum ausgestattet mit
 einem Zusammenhang $\nabla$.
 %
 \begin{defn}[pull-back] \label{defn:pull-back}
@@ -170,7 +175,9 @@ und damit lässt sich vermuten, dass die Wirkung von $\partial_x$ genau die
 Wirkung von $\rho'(t)^{-1}\partial_t$ ist. In der Tat ist dies, nach dem
 folgenden Satz, wahr.
 \end{comment}
-%
+
+Der folgende Satz zeigt, wie man mit dem pull-back rechnen lässt, bzw.
+wie man konkret ein entsprechendes Minimalpolynom berechnen kann.
 \begin{thm} \label{thm:pull-back-berechnung}
 %Wie erhält man den pull-back Zusammenhang bzw. wie ist er berechenbar?
 In der Situation von Lemma \ref{defn:pull-back}, mit
@@ -590,7 +597,7 @@ ergibt sich
   ]{
   0 & \hat L\otimes_{\hat K}\cD_{\hat K}
     & \hat L\otimes_{\hat K}\cD_{\hat K}
-    & \hat L\otimes_{\hat K}\cM_{\hat K}
+    & \rho^*\cM_{\hat K}
     & 0\\
  & \cD_{\hat L }
     & \cD_{\hat L }
@@ -624,7 +631,7 @@ die untere Zeile zu einer exakten Sequenz fortsetzen
   ]{
   0 & \hat L\otimes_{\hat K}\cD_{\hat K}
     & \hat L\otimes_{\hat K}\cD_{\hat K}
-    & \hat L\otimes_{\hat K}\cM_{\hat K}
+    & \rho^*\cM_{\hat K}
     & 0\\
   0 & \cD_{\hat L }
     & \cD_{\hat L }
@@ -677,9 +684,8 @@ H(P'(t,\partial_t)) &=H(P(\rho(t),\rho'(t)^{-1}\partial_t))
 \end{proof}
 \end{comment}
 %
-\begin{exmp}[pull-back]\label{exmp:Pull-Back}
-%from Beispiel/formal_b.tex
 Hier nun ein explizit berechneter pull-back.
+\begin{exmp}\label{exmp:Pull-Back}
 Wir wollen $\cM_{\hat K}:=\cD_{\hat K}/\cD_{\hat K}\cdot P$ bzgl. $P:=
 x^3\partial_x^2-4x^2\partial_x-1$ betrachten.
 Unser Ziel ist es, hier ganzzahlige Slopes zu erhalten.
@@ -718,8 +724,8 @@ $\rho^*\cM_{\hat K}=\cD_{\hat L}/\cD_{\hat L}
     \myPlotFunction{\myPoints}{\myPath}{2}{0}{2}{$N(P))$}
     \end{tikzpicture}
   \end{center}
-  \caption[Newton Polygon zu $P=x^3\partial_x^2-4x^2\partial_x-1$]
-    {Newton Polygon zu \newline $P=x^3\partial_x^2-4x^2\partial_x-1$}
+  \caption[Newton-Polygon zu $P=x^3\partial_x^2-4x^2\partial_x-1$]
+    {Newton-Polygon zu \newline $P=x^3\partial_x^2-4x^2\partial_x-1$}
   \label{fig:Pull-Back1}
   \end{minipage}
   \begin{minipage}[hbt]{0,49\textwidth}
@@ -730,9 +736,9 @@ $\rho^*\cM_{\hat K}=\cD_{\hat L}/\cD_{\hat L}
     \myPlotFunction{\myPoints}{\myPath}{2}{0}{2}{$N(\rho^*P))$}
     \end{tikzpicture}
   \end{center}
-  \caption[Newton Polygon zu $\rho^*P=%
+  \caption[Newton-Polygon zu $\rho^*P=%
     \frac{1}{4}t^4\partial_t^2-\frac{1}{2}t^3\partial_t-1$]
-    {Newton Polygon zu \newline $\rho^*P=%
+    {Newton-Polygon zu \newline $\rho^*P=%
     \frac{1}{4}t^4\partial_t^2-\frac{1}{2}t^3\partial_t-1$}
   \label{fig:Pull-Back2}
   \end{minipage}
@@ -741,6 +747,9 @@ $\rho^*\cM_{\hat K}=\cD_{\hat L}/\cD_{\hat L}
 
 Sei $\cN_{\hat L}$ ein endlich dimensionaler $\hat L$-VR mit Verknüpfung, so
 definiere den push-forward wie folgt.
+\begin{comment}
+TODO: korregieren, besser formulieren
+\end{comment}
 \begin{defn}[push-forward]
 Der \emph{push-forward} oder das \emph{direktes Bild} $\rho_+\cN_{\hat L}$ von
 $\cN_{\hat L}$ ist
@@ -844,8 +853,9 @@ Sei $P=\sum_{i=0}^da_i(x)\partial_x^i$, dann ist die
 \end{comment}
 \end{defn}
 \begin{defn}[Fouriertransformation von lokalisierten holonomen D-Moduln]
-Ist $\cM_{\hat K}=\hat K / \hat K \cdot P$ so ist die Fouriertransformierte
-davon $\,^\cF\cM_{\hat K}=\hat K / \hat K \cdot \cF_P(x,\partial_x)$.
+Ist $\cM_{\hat K}\cong\hat K / \hat K \cdot P$ so ist die Fouriertransformierte
+davon definiert als  $\,^\cF\cM_{\hat K}:=\hat K / \hat K \cdot
+\cF_P(x,\partial_x)$.
 \end{defn}
 \begin{exmp}
 Sei $P=x^3\partial_x^4+x^2\partial_x^2+x$ dann ist die Fouriertransformierte
@@ -876,7 +886,7 @@ davon
   + (36z^2 + 4z + 1)\partial_z
   + 24z + 2
 \end{align*}
-mit den Newton Polygonen wie in Abbildung \ref{fig:fourierA} und
+mit den Newton-Polygonen wie in Abbildung \ref{fig:fourierA} und
 \ref{fig:fourierB}.
 \begin{figure}[htbp]
   \begin{minipage}[hbt]{0,49\textwidth}
@@ -957,9 +967,9 @@ Es ist
   +\sum_{i=-{p}}^\infty (i+1)a_{i+1}x^{i}
 \end{align*}
 und damit wissen wir, dass die einzigen zwei Punkte, die Ecken des Newton
-Polygons sein können, $(1,-1)$ und $(0,-(p+1))$ sind. Da einer der Punkte auf
-der vertikalen Achse liegt, kann es insgesamt nur einen Slope $\Lambda$ geben,
-welcher sich wie folgt berechnet:
+Polygons sein können, $(1,-1)$ und $(0,-(p+1))$ sind. Da einer der relevanten
+Punkte auf der vertikalen Achse liegt, kann es insgesamt nur einen Slope
+$\Lambda$ geben, welcher sich wie folgt berechnet:
 \begin{align*}
 \Lambda&=\max\{0,\frac{-1-(-(p+1))}{1}\}
 \\&=\max\{0,p\}
@@ -978,7 +988,7 @@ welcher sich wie folgt berechnet:
   \myPlotFunction[nogrid]{\myPoints}{\myPath}{1}{-6}{0}{$N(\sE_{\hat K}^\phi)$}
   \end{tikzpicture}
 \end{center}
-\caption{Newton Polygon zu $\sE_{\hat K}^\phi$}
+\caption{Newton-Polygon zu $\sE_{\hat K}^\phi$}
 \end{figure}
 \fi
 \end{proof}
@@ -993,9 +1003,8 @@ wenn $\phi\equiv\psi \mod \Cfx$.
 \end{comment}
 \begin{lem}
 Sei $\cM=\cD_{\hat K}/\cD_{\hat K}\cdot P$ ein meromorpher Zusammenhang mit $P$
-von Grad $q$ und mit $\bme$ als ein zyklischer Vektor, so ist $\bme\otimes
-\underset{\in\hat K}{\underbrace{1}}$ ein zyklischer Vektor für
-$\cN:=\cM\otimes_{\hat K}\sE_{\hat K}^\psi$.
+von Grad $q$ und mit $\bme$ als ein zyklischer Vektor, so ist $\bme\otimes1$
+ein zyklischer Vektor für $\cN:=\cM\otimes_{\hat K}\sE_{\hat K}^\psi$.
 \end{lem}
 \begin{proof}
 %Es sei $\bme$ ein zyklischer Vektor von $\cM$.
@@ -1114,8 +1123,8 @@ Dieses Lemma wird im weiteren nicht weiter verwendet, deshalb kann ein Leser,
 der nur an den letzten Kapiteln interesiert ist, den Beweis überspringen.
 Jedoch werden im Beweis mehrere interessante Tricks verwendet, die diesen auf
 jeden Fall lesenswert machen.
-Sei $\rho:t\mapsto x:=t^p$ und $\mu_\xi:t\mapsto\xi t$.
 \begin{lem}
+Sei $\rho:t\mapsto x:=t^p$ und $\mu_\xi:t\mapsto\xi t$.
 Für alle $\phi \in \hat L$ gilt
 \[
 \rho^+\rho_+\sE^\phi=\bigoplus_{\xi^p=1}\sE^{\phi\circ\mu_\xi} \,.

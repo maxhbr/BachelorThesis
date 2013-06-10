@@ -4,6 +4,33 @@
 % TODO: \cM = \cM_K ... replace
 % TODO: Dimension eines meromorphen Zusammenhang
 \chapter{Meromorphe Zusammenhänge}
+
+In diesem Kapittel werden wir das Konzept der meromorphen Zusammenhänge
+einführen und die folgenden zwei Eins-zu-Eins Entsprechungen besprechen:
+\begin{center}
+\begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
+\matrix (m) [
+  matrix of math nodes
+  , row sep=-.5em
+  , column sep=6em
+  %, text height=3em
+  %, text depth=0.25em
+]
+{
+  \text{Systeme} & \text{Meromorphe}    & \text{Lokalisierte}\\
+  \text{von}     & \text{Zusammenhänge} & \text{holonome}    \\
+  \text{ODEs}    &                      & \text{$\cD$-Moduln}\\
+};
+\path[<->,font=\scriptsize,>=angle 90]
+ (m-2-1) edge node[descr]{$1-1$} (m-2-2)
+ (m-2-2) edge node[descr]{$1-1$} (m-2-3)
+;
+
+\end{tikzpicture}
+\end{center}
+Zum Schluss des Kapittels werden noch die Newton-Polygone eingeführt, welche
+als Invarianten für meromorphe Zusammenhänge fungieren sollen.
+
 \begin{comment}
 Sei $\cM$ ein $\cD$-Modul ungleich Null von endlichem Typ. Falls die
 links-Multiplikation mit $x$ bijektiv ist, so nennen wir $\cM$ einen
@@ -42,12 +69,14 @@ $i\in\{1,\dots,n\}$ und $v$ die Gleichung (\ref{eq:KlassischesODE}), auf einer
 Umgebung um die $0$, erfüllt.
 \end{defn}
 
-Durch Setzen von $w(x):=Tu(x)$ für eine invertierbare Matrix $T\in GL(n,K)$
+Durch Setzen von $w(x):=Tu(x)$, für eine invertierbare Matrix $T\in
+GL(n,K)$\footnote{$GL(n,K)$ bezeichnet die Menge der invertierbaren Matrizen in
+$M(n\times n,K)$.},
 erhält man aus \ref{eq:KlassischesODE} das äquivalente System
 \[
 \frac{d}{dx}w(x)=(T^{-1}AT - T^{-1}\frac{d}{dx}T)w(x) \,,
 \]
-und deshalb erhalten wir die folgende Definition.
+und damit erhalten wir die folgende Definition.
 \begin{defn}[Differenziell Äquivalent]
 Man nennt $A$ und $B\in M(n\times n,K)$ \emph{(differenziell) äquivalent}
 ($A\sim B$) genau dann, wenn es ein $T\in GL(n,K)$ gibt, mit
@@ -76,6 +105,9 @@ QP\cdot u(x)=0 \,.
 \end{align*}
 Also ist eine Lösung von $P\cdot u(x)=0$ auch eine Lösung von $Q\cdot u(x)=0$
 für alle $Q\in\cD_K\cdot P\vartriangleleft \cD_K$.
+Diese Eigenschaft, dass ein linearer Differentialoperator $P$, ein Ideal
+bestimmt, wollen wir nun nutzen, um das Problem der Differentialgleichungen
+algebraisch zu betrachten.
 
 \begin{comment}
 Sei $P$ ein linearer Differentialoperator mit Koeffizienten in $a_i(x)\in\Ckx$
@@ -95,7 +127,7 @@ meromorphen Zusammenhänge übersetzen.
 Ein \emph{meromorpher Zusammenhang} (bei $x=0$) ist ein Tupel
 $(\cM_K,\partial)$ und besteht aus folgenden Daten:
 \begin{itemize}
-\item $\cM_K$, ein endlich dimensionaler $K$-Vektor Raum
+\item $\cM_K$, ein endlich dimensionaler $K$-Vektor Raum und
 \item einer $\C$-linearen Abbildung $\partial:\cM_K\rightarrow \cM_K$,
 genannt \emph{Derivation} oder \emph{Zusammenhang}, welche für alle $f\in K$
 und $u\in \cM_K$ die \emph{Leibnitzregel}
@@ -107,10 +139,10 @@ erfüllen soll.
 \end{defn}
 \begin{bem} %[Formaler meromorpher Zusammenhang]
 Analog definiert man einen \emph{formalen meromorphen Zusammenhang}
-$(\cM_{\hat K},\partial)$ bestehend, analog wie in Definition
+$(\cM_{\hat K},\partial)$ bestehend, genau wie in Definition
 \ref{def:merom-zush}, aus folgenden Daten:
 \begin{itemize}
-\item $\cM_{\hat K}$, ein endlich dimensionaler $\hat K$-Vektor Raum
+\item $\cM_{\hat K}$, ein endlich dimensionaler $\hat K$-Vektor Raum und
 \item einer $\C$-linearen Derivation $\partial:\cM_{\hat K}\rightarrow
 \cM_{\hat K}$, welche die \emph{Leibnitzregel} (\ref{eq:Leibnitzregel})
 erfüllen soll.
@@ -118,9 +150,16 @@ erfüllen soll.
 \end{bem}
 
 \begin{bem}
-Später wird man auf die Angabe von $\partial$ verzichten und einfach $\cM_K$
-als den meromorphen Zusammenhang bezeichnen, auch wird manchmal auf die Angabe
-von $K$ im Subscript verzichtet, sofern klar ist, welches $K$ gemeint ist.
+Alle in dieser Arbeit vorgestellten Resultate, welche für meromorphe
+Zusammenhänge gelten, gelten auch für formale meromorphe Zusammenhänge.
+Anderstherum gilt dies aber nicht, ein Beispiel hierfür ist
+Satz \ref{thm:Split-after-slopes}.
+\end{bem}
+\begin{bem}
+Später wird man auf die Angabe von $\partial$ verzichten und einfach
+$\cM_K$ als den meromorphen Zusammenhang bezeichnen, auch wird manchmal auf die
+Angabe von $K$ im Subscript verzichtet, sofern klar ist, welches $K$ gemeint
+ist.
 \end{bem}
 
 \begin{defn}
@@ -133,6 +172,9 @@ Ein solcher Morphismus ist ein Isomorphismus, falls die Abbildung
 $\phi:\cM\rightarrow\cN$ ein Isomorphismus von $k$-Vektorräumen ist.
 \end{defn}
 
+\begin{comment}
+TODO: entfernen
+\end{comment}
 \begin{defn}
 Wir erhalten damit die Kategorie der meromorphen Zusammenhänge über $k$ mit
 \begin{align*}
@@ -160,21 +202,8 @@ K$ und $u\in\cM_K$ gilt.\\
 &= f\cdot(\partial_1-\partial_2)(u) \,.
 \end{align*}
 \end{proof}
-\begin{comment}
-\begin{cor}
-Für $(K^r,\partial)$ ein meromorpher Zusammenhang existiert ein $A\in M(r\times
-r,K)$, so dass $\partial=\frac{d}{dx}-A$.
-\end{cor}
-\begin{proof}
-Es sei $(K^r,\partial)$ ein meromorpher Zusammenhang.  So ist
-$\frac{d}{dx}-\partial:K^r\rightarrow K^r$ $K$-linear, also lässt sich durch
-eine Matrix $A\in M(r\times r,K)$ darstellen
-%$\frac{d}{dx}-\partial=A$
-, also ist, wie
-behauptet, $\partial=\frac{d}{dx}-A$.
-\end{proof}
-\end{comment}
-
+Dieser lineare Unterschied zweier Derivationen lässt sich als Matrix
+darstellen, und so kommt man zur folgenden Definition
 \begin{comment}
 \cite[Seite 129]{hotta2007d}
 \end{comment}
@@ -283,27 +312,30 @@ genau dann, wenn
   && (\cM_{A_2},\partial_{A_2}) \,.
 \end{align*}
 \end{lem}
-Damit haben wir eine Eins zu Eins Beziehung zwischen meromorphen
+Damit haben wir eine Eins-zu-Eins Beziehung zwischen meromorphen
 Zusammenhängen und Systemen von ODEs.
-Genauer betrachtet wird dies beispielsweise in \cite[Sec 5.1]{hotta2007d}.
+Genauer betrachtet wird dies beispielsweise in \cite[Sec 5.1]{hotta2007d} oder
+auch in \cite[Sec 3]{sabbah_cimpa90}.
 
 \section{Äquivalenz zu holonomen lokalisierten $\cD$-Moduln}
-%Hier nun einige Eigenschaften meromorpher Zusammenhänge.
-\begin{thm}
-Ein meromorpher Zusammenhang bestimmt ein holonomes lokalisiertes
-$\cD_K$-Modul und umgekehrt.
-\end{thm}
-\begin{proof}
-Dies wird beispielsweise in \cite[Thm 4.3.2]{sabbah_cimpa90} bewiesen.
-\end{proof}
 
+\begin{lem}[Lemma vom zyklischen Vektor] \label{lem:Zyklischer-Vektor}
+Sei $\cM_K$ ein meromorpher Zusammenhang. Es existiert ein Element
+$m\in\cM_K$ und eine ganze Zahl $d$ so dass
+$m,\partial_xm,\dots,\partial_x^{d-1}m$ eine $K$-Basis von $\cM_K$ ist.
+\end{lem}
+
+\begin{proof}
+Ein Beweis ist beispielsweise in \cite[Thm 4.3.3]{sabbah_cimpa90} oder
+ausführlicher in \cite[Satz 4.8]{ZulaBarbara}.
+\end{proof}
 \begin{lemdef}
 Ist $\cM_K$ ein meromorpher Zusammenhang, dann existiert ein $P\in\cD_K$, so
 dass $\cM_K\cong\cD_K/\cD_K\cdot P$. So ein $P$ wird dann als
 \emph{Minimalpolynom} von $\cM_K$ bezeichnet.
 \end{lemdef}
 \begin{proof}
-Siehe \cite[Satz 4.12]{ZulaBarbara}.
+Siehe dazu \cite[Satz 4.12]{ZulaBarbara}.
 \begin{comment}
 \cite[Thm 4.3.2]{sabbah_cimpa90}
 \end{comment}
@@ -312,33 +344,26 @@ Siehe \cite[Satz 4.12]{ZulaBarbara}.
 Dieses so definierte Minimalpolynom ist nicht eindeutig.
 \end{bem}
 
-%TODO: Reihenfolge bei sabbah anderst!!!
-\begin{lem}[Lemma vom zyklischen Vektor] \label{lem:Zyklischer-Vektor}
-Sei $\cM_K$ ein meromorpher Zusammenhang. Es existiert ein Element
-$m\in\cM_K$ und eine ganze Zahl $d$ so dass
-$m,\partial_xm,\dots,\partial_x^{d-1}m$ eine $K$-Basis von $\cM_K$ ist.
-\end{lem}
-\begin{proof}
-Ein Beweis ist beispielsweise in \cite[Thm 4.3.3]{sabbah_cimpa90} oder
-ausführlicher in \cite[Satz 4.8]{ZulaBarbara}.
-\end{proof}
-\begin{cor} \label{cor:Zyklischer-Vektor}
+\begin{prop} \label{prop:Zyklischer-Vektor}
 In der Situation von Lemma \ref{lem:Zyklischer-Vektor} gibt es ein $P\in
 \cD_K$ mit $\partial$-Grad von $P$ ist gleich $d$ und $P \cdot m=0$, in
 diesem Fall ist $P$ ein Minimalpolynom zu $\cM_K$, also gilt
-$\cM_K=\cD_K/\cD_K\cdot P$. Explizit ergibt sich aus der Basisdarstellung
+$\cM_K\cong\cD_K/\cD_K\cdot P$. Explizit ergibt sich aus der Basisdarstellung
 \begin{align*}
 \partial_x^d m&= \alpha_{d-1}\partial_x^{d-1}m + \alpha_{d-2}\partial_x^{d-2}m
   + \cdots + \alpha_1\partial_xm + \alpha_0m & \alpha_i\in K
 \end{align*}
 von $\partial_x^d m$, dass
 \[
-\cM_K=\cD_K/\cD_K\cdot( \underset{=:P}{\underbrace{
+\cM_K=\cD_K/\cD_K\cdot( \underset{=:Q}{\underbrace{
   \partial^d - \alpha_{d-1}\partial_x^{d-1} - \alpha_{d-2}\partial_x^{d-2} -
   \cdots - \alpha_1\partial_x - \alpha_0 }} )
 \]
-gilt.
-\end{cor}
+gilt und damit $Q$ so ein mögliches Minimalpolynom ist.
+\begin{comment}
+Ist irgendwie nicht gut :(
+\end{comment}
+\end{prop}
 
 \begin{thm}\label{thm:basic-splitting}
 Ist $P=P_1\cdot P_2$ mit $P_1,P_2\in \cD_K$ so gilt
@@ -370,15 +395,19 @@ TODO: verweise auf dieses Korollar
 \end{align*}
 \end{proof}
 
-\section{Newton Polygon} \label{sec:NewtonPolygon}
+\begin{thm}
+Ein meromorpher Zusammenhang bestimmt ein holonomes lokalisiertes
+$\cD_K$-Modul und umgekehrt.
+\end{thm}
+\begin{proof}
+Dies wird beispielsweise in \cite[Thm 4.3.2]{sabbah_cimpa90} bewiesen.
+\end{proof}
+
+\section{Newton-Polygon} \label{sec:NewtonPolygon}
 % ist dies eine Invariante??
 % gestohlen aus der ZulaBarbara Seite 46
-\begin{comment}
-Quelle: sabbah?\\
-sabbah mach alles formal, Barbara mach alles konvergent
-\end{comment}
 Jedes $P\in \cD_{\hat K}$, also insbesondere auch jedes $P\in\cD_K$, lässt sich
-eindeutig als
+nach Proposition \ref{prop:weyl_eindeutige_schreibung} eindeutig als
 \[
 P=\sum^{n}_{k=0}a_k(x)\partial_x^k
 =\sum^{n}_{k=0}\big(\sum^{\infty}_{l=-N}{\alpha_{kl}x^l\big)\partial_x^k} 
@@ -386,16 +415,16 @@ P=\sum^{n}_{k=0}a_k(x)\partial_x^k
 mit $a_k\in \hat K$ bzw. $\alpha_{kl}\in\C$ schreiben. Betrachte das zu $P$
 dazugehörige
 \begin{align*}
-H(P):&=\underset{m,l\mbox{ mit }\alpha_{ml}\neq0}{\bigcup}\Big( (m,l-m) +
-    \R_{\leq 0}\times \R_{\geq 0} \Big) \subset \R^2\\
-  &=\underset{m\mbox{ mit }a_{m}\neq0}{\bigcup}\Big( (m,deg(a_m)-m) +
-    \R_{\leq 0}\times \R_{\geq 0} \Big) \subset \R^2 \,.
+H(P):&=\underset{m,l\mbox{ \footnotesize mit }\alpha_{ml}\neq0}{\bigcup}
+  \Big( (m,l-m) + \R_{\leq 0}\times \R_{\geq 0} \Big) \subset \R^2\\
+  &=\underset{m\mbox{ \footnotesize mit }a_{m}\neq0}{\bigcup}
+  \Big( (m,deg(a_m)-m) + \R_{\leq 0}\times \R_{\geq 0} \Big) \subset \R^2 \,.
 %TODO: welche Definition ist besser?
 \end{align*}
 
 \begin{defn} \label{defn:NP}
 Das Randpolygon der konvexen Hülle $\conv(H(P))$ von $H(P)$ heißt das
-\emph{Newton Polygon} von $P$ und wird als $N(P)$ geschrieben.
+\emph{Newton-Polygon} von $P$ und wird als $N(P)$ geschrieben.
 \end{defn}
 
 \begin{bem}
@@ -407,8 +436,8 @@ P=\sum_ka_k(x)(x\partial_x)^k
 mit $a_k(x)\in \Ckx$ und definiert das Newton-Polygon als das
 Randpolygon der konvexen Hülle von
 \[
-H'(P):=\underset{m\mbox{ mit }a_{m}\neq0}{\bigcup}\Big( (m,deg(a_m)) +
-\R_{\leq 0}\times \R_{\geq 0} \Big) \subset \R^2 \,.
+H'(P):=\underset{m\mbox{ \footnotesize mit }a_{m}\neq0}{\bigcup}
+  \Big( (m,deg(a_m)) + \R_{\leq 0}\times \R_{\geq 0} \Big) \subset \R^2 \,.
 \]
 Es bemerkt auch, das seine Definition, bis auf möglicherweise vertikales
 verschieben, zu Definition \ref{defn:NP} äquivalent ist.
@@ -447,15 +476,15 @@ H(P_1)=\Big( (\textcolor{blue}{2},\textcolor{red}{1}-\textcolor{blue}{2}) +
 \R_{\leq 0}\times \R_{\geq 0} \Big) =\{(u,v)\in\R^2|u\leq 2, v\geq -1\} \,.
 \]
 In Abbildung \ref{fig:Newton-Polygon1} ist der Quadrant, der zum Monom
-$x\partial_x^2$ gehört (blau) sowie das Newton Polygon eingezeichnet.
+$x\partial_x^2$ gehört (blau) sowie das Newton-Polygon eingezeichnet.
 Offensichtlich ist $\slopes(P_1)=\{0\}$ und damit ist $P_1$ regulär singulär.
 \item
 \begin{comment}
 \cite[Bsp 5.3. 2.]{ZulaBarbara}
 \end{comment}
 Sei $P_2=x^4(x+1)\partial_x^4+x\partial_x^2+\frac{1}{x}\partial_x+1$, so kann
-man das entsprechende Newton Polygon konstruieren.
-Das Newton Polygon wurde in Abbildung \ref{fig:Newton-Polygon2} visualisiert.
+man das entsprechende Newton-Polygon konstruieren.
+Das Newton-Polygon wurde in Abbildung \ref{fig:Newton-Polygon2} visualisiert.
 Man erkennt, dass $\cP(P_2)=\{0,\frac{2}{3}\}$ ist.
 \end{enumerate}
 \begin{figure}[htbp] 
@@ -505,17 +534,24 @@ verschoben.\\
 Nach \cite[Seite 25]{sabbah_cimpa90} gilt, dass das Newton-Polygon, bis auf
 vertikales Verschieben, nur von dem assoziierten meromorphen Zusammenhang
 abhängt.
-Dies wird auch in \cite[Bem 5.4]{ZulaBarbara} diskutiert.
+Dies wird auch in \cite[Bem 5.4]{ZulaBarbara} thematisiert.
 \end{bem}
 
 \begin{defn}
+Seien $\epsilon x^{p}\partial_x^{q}$ und $\epsilon' x^{p'}\partial_x^{q'}$ zwei
+Monome aus $\cD_{\hat K}$, also mit $\epsilon, \epsilon'\in \C$ und $p,q,p',q'
+\in \Z$. Man sagt, dass $\epsilon' x^{p'}\partial_x^{q'}$ ein \emph{Term im
+Quadranten} von $\epsilon x^{p}\partial_x^{q}$ ist, falls $p'\geq p$ und
+$q'\leq q$ gilt.
+\begin{comment}
 In einem Polynom
 $P=\epsilon x^{p}\partial_x^{q}
 +\sum^{n}_{k=0}\big(\sum^{\infty}_{l=-N}{\alpha_{kl}x^l\big)\partial_x^k}$,
-mit $\epsilon, \alpha_{kl}\in \C, p,q \in \Z$ sind die restlichen Monome
+mit $\alpha_{kl}\in \C$ sind die restlichen Monome
 \emph{Terme im Quadranten} von $\epsilon x^{p}\partial_x^{q}$, falls für alle
-$k\in\N$ und $l\in\Z_{\geq -N}$ mit $\alpha_{kl}\neq 0$ gilt:
-$k \leq q$ und $l-k \geq p-q$.
+einzelnen Monome schon Terme im Quadranten von $\epsilon x^{p}\partial_x^{q}$
+sind.
+\end{comment}
 \end{defn}
 \begin{bem}
 \begin{itemize}
@@ -523,17 +559,13 @@ $k \leq q$ und $l-k \geq p-q$.
 \[
 H(\epsilon x^{p}\partial_x^{q})
 =\Big( (q,p-q) + \R_{\leq 0} \times \R_{\geq 0} \Big) \supset
-\Big( (k,l-k) + \R_{\leq 0} \times \R_{\geq 0} \Big)
-=H(\alpha_{kl}x^l\partial_x^k)
-\,,
+\Big( (q',p'-q') + \R_{\leq 0} \times \R_{\geq 0} \Big)
+=H(\epsilon' x^{p'}\partial_x^{q'}) \,.
 \]
-für alle relevanten $k$ und $l$.
 \item Sei $P$ ein Polynom, bei dem alle Koeffizienten im Quadranten von
 $\epsilon x^{p}\partial_x^{q}$ sind, dann gilt:
 \begin{align*}
-H(P)&=H(\epsilon x^{p}\partial_x^{q}
-  +\sum^{n}_{k=0}\big(\sum^{\infty}_{l=-N}{\alpha_{kl}x^l\big)\partial_x^k})
-\\&=H(\epsilon x^{p}\partial_x^{q} + \textbf{T.i.Q. von }x^{p}\partial_x^{q})
+H(P)&=H(\epsilon x^{p}\partial_x^{q} + \textbf{T.i.Q. von }x^{p}\partial_x^{q})
 \\&=H(\epsilon x^{p}\partial_x^{q})
 \\\Rightarrow N(P)&=N(\epsilon x^{p}\partial_x^{q}) \,.
 \end{align*}
@@ -559,16 +591,18 @@ N((x^a\partial_x^b)^c)
 \end{comment}
 
 \begin{comment}
-
+Nach \cite[Sec 5.1]{sabbah_cimpa90} gelten die folgenden zwei Aussagen
 \begin{lem}
 %TOTO: sabbah redet hier schon immer von \hat K, ist das nötig?
-\cite[5.1]{sabbah_cimpa90} %Seite 25f
 \begin{enumerate}
 \item $\cP(\cM_K)$ ist nicht Leer, wenn $\cM_K\neq\{0\}$
 \item Wenn man eine exakte Sequenz
 $0\rightarrow{\cM'}_K\rightarrow{\cM}_K\rightarrow{\cM''}_K\rightarrow0$
 hat, so gilt $\cP(\cM_K)=\cP({\cM'}_K)\cup\cP({\cM''}_K)$.
 \end{enumerate} % es gibt noch 2 weitere punkte
+\end{lem}
+\end{comment}
+\begin{comment}
 Siehe auch \cite[Thm 5.3.4]{sabbah_cimpa90},
 Dort Steht:\\
 Wir erhalten die Exakte Sequenz
@@ -582,15 +616,17 @@ Wir erhalten die Exakte Sequenz
 \cite[Thm 5.3.4]{sabbah_cimpa90}
 $\cP(P)=\cP(P_1)\cup\cP(P_2)$ und $\cP(P_1)\cap\cP(P_2)=\emptyset$
 \end{cor}
-\end{lem}
 \end{comment}
 
+Ein erster Schritt zur Levelt-Turrittin-Zerlegung ist der folgende Satz, er
+erlaubt es, meromorphe Zusammenhänge \anfzeichen{entlang der Slopes} zu
+zerlegen.
 \begin{thm} \label{thm:Split-after-slopes}
 Sei $\cM_{\hat{K}}$ ein formaler meromorpher Zusammenhang und sei
 $\cP(\cM_{\hat K})=\{\Lambda_1,\dots,\Lambda_r\}$ die Menge seiner
 Slopes. Es existiert eine (bis auf Permutation) eindeutige Zerlegung
 \[
-\cM_{\hat K}=\bigoplus_{i=1}^r\cM_{\hat K}^{(i)}
+\cM_{\hat K}\cong\bigoplus_{i=1}^r\cM_{\hat K}^{(i)}
 \]
 in formale meromorphe Zusammenhänge
 mit $\cP(\cM_{\hat K}^{(i)})=\{\Lambda_i\}$.
@@ -617,7 +653,7 @@ wie folgt aus
   \myPlotFunction{\myPoints}{\myPath}{2}{0}{1}{$N(P)$}
   \end{tikzpicture}
 \end{center}
-\caption{Newton Polygon zu $P=x(x\partial_x)^2+x\partial_x+\frac{1}{2}$}
+\caption{Newton-Polygon zu $P=x(x\partial_x)^2+x\partial_x+\frac{1}{2}$}
 \end{figure}
 mit den Slopes $\cP(P)=\{0,1\}=:\{\Lambda_1,\Lambda_2\}$. Nach dem Satz
 \ref{thm:Split-after-slopes} existiert eine Zerlegung $P=P_1\cdot P_2$ mit
@@ -648,7 +684,7 @@ wie folgt aus
   \myPlotFunction{\myPoints}{\myPath}{2}{0}{1}{$N(P)$}
   \end{tikzpicture}
 \end{center}
-\caption{Newton Polygon zu $P$}
+\caption{Newton-Polygon zu $P$}
 \end{figure}
 \end{exmp}
 \end{comment}

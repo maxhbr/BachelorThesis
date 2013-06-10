@@ -85,26 +85,25 @@ $g\in\C[x]$ hat man
 Definiere nun den Ring $\cD_k$ als die Quotientenalgebra der freien Algebra,
 welche von dem Koeffizientenring in $k$ zusammen mit dem Element $\partial_x$,
 erzeugt wird, Modulo der Relation \eqref{eq:weyl_relation}.  Wir schreiben
-diesen Ring auch als
+diesen Ring auch als:
 \begin{itemize}
-\item $A_1(\C):=\C[x]<\partial_x>$ falls $k=\C[x]:=\{ \sum^{N}_{i=1}a_ix^i \mid
-  N\in \N \}$, und nennen ihn die \emph{Weyl Algebra}
-\item $\cD:=\C\{x\}<\partial_x>$ falls $k=\C\{x\}:=\{ \sum^{\infty}_{i=1}a_ix^i
-  \mid \mbox{pos.  Konvergenzradius}\}$ die konvergenten Potenzreihen
-\item $\hat\cD:=\Cfx<\partial_x>$ falls $k=\Cfx:=\{\sum^{\infty}_{i=1}a_ix^i\}$
-  die formalen Potenzreihen
-\item $\cD_K:=\Ckxl<\partial_x>$ falls
-$k=K:=\C\{x\}[x^{-1}]$ der Ring der Laurent Reihen
-\item $\cD_{\hat K}:=\Cfxl<\partial_x>$ falls $k=\hat
-K:=\Cfx[x^{-1}]$ der Ring der formalen Laurent Reihen
+\item $A_1(\C)$ falls $k=\C[x]:=\{ \sum^{N}_{i=1}a_ix^i \mid N\in \N \}$, und
+nennen ihn die \emph{Weyl Algebra}.
+\item $\cD$ falls $k=\C\{x\}:=\{ \sum^{\infty}_{i=1}a_ix^i \mid \mbox{pos.
+Konvergenzradius}\}$ die konvergenten Potenzreihen.
+\item $\hat\cD$ falls $k=\Cfx:=\{\sum^{\infty}_{i=1}a_ix^i\}$ die formalen
+Potenzreihen.
+\item $\cD_K$ falls $k=K:=\Ckxl:=\C\{x\}[x^{-1}]$ der Ring der Laurent Reihen.
+\item $\cD_{\hat K}$ falls $k=\hat K:=\Cfxl:=\Cfx[x^{-1}]$ der Ring der
+formalen Laurent Reihen
 \footnote{Wird in \cite{ZulaBarbara} mit $\hat\cD_{\hat K}$ bezeichnet.}.
 \end{itemize}
 \end{defn}
 \begin{bem}
 \begin{enumerate}
 \item Es bezeichnet der Hut ($ \, \hat \,\, $) das jeweils formale Pendant
-zu einem konvergentem Objekt. Dementsprechend könnte man auch $\Cfx=\hat{\Ckx}$
-schreiben.
+zu einem konvergentem Objekt. Dementsprechend könnte man auch $\Cfx$ für
+$\hat{\Ckx}$ schreiben.
 \item Es gilt $\cD[x^{-1}]=\cD_K$ und $\hat \cD[x^{-1}]=\cD_{\hat K}$.
 \item Offensichtlich erhält $\cD_k$ in kanonischer Weise eine nichtkommutative
 Ringstruktur, dies ist in \cite[Kapittel 2 Section 1]{ZulaBarbara} genauer
@@ -143,8 +142,6 @@ als den \emph{Grad (oder den $\partial_x$-Grad)}
 von $P$.
 \end{defn}
 \begin{comment}
-Unabhängigkeit von Schreibung? Sabbah Script!
-\end{comment}
 In natürlicher Weise erhält man die aufsteigende Filtrierung
 $F_N\cD:=\{P\in\cD|\deg P\leq N\}$ mit
 \[
@@ -154,14 +151,12 @@ F_{1}\cD\subset\cdots\subset\cD
 und erhalte $gr_k^F\cD\bydef F_N\cD\slash F_{N-1}\cD
 =\{P\in\cD|\deg P=N\}\cong\C\{x\}$.
 
-\begin{proof}
-Sei $P\in F_N\cD$, so betrachte den Isomorphismus:
-\[
-F_N\cD\slash F_{N-1}\cD\rightarrow \C\{x\}; [P]=P+F_{N-1}\cD\mapsto a_n(x) \,.
-\]
+\begin{proof}[Beweisidee]
+Sei $P\in F_N\cD$, so betrachte den Isomorphismus $F_N\cD\slash
+F_{N-1}\cD\rightarrow \C\{x\}$ definiert durch $[P]=P+F_{N-1}\cD\mapsto
+a_n(x)$.
 \end{proof}
 
-\begin{comment}
 \begin{prop}
 Es gilt:
 \begin{center}
@@ -243,11 +238,6 @@ Links-$\cD$-Moduln gemeint.
 
 \begin{exmp}
 Hier einige Beispiele für (Links-) $\cD$-Moduln
-% Sergey-Arkhipov-MAT1191_Lecture_Notes.pdf Chapter 2.1
-\begin{comment}
-\cite[Exmp 2.2]{ArkhipovDmod}
-\end{comment}
-%Sei $X=\A^1$ und $\sO_X=\C[t]$.
 \begin{enumerate}
 %
 \item $\cD$ ist ein Links- und Rechts-$\cD$-Modul
@@ -255,8 +245,7 @@ Hier einige Beispiele für (Links-) $\cD$-Moduln
 \item $\cM=\C[x]$ oder $\cM=\C[x,x^{-1}]$ jeweils durch $x\cdot x^{m}=x^{m+1}$
 und $\partial(x^m)=mx^{m-1}$
 %
-\item
-Führe formal, also ohne analytischen Hintergrund, ein Objekt
+\item Führe formal, also ohne analytischen Hintergrund, ein Objekt
 $\exp(\lambda x)$ ein, mit $\partial(f(x)\exp(\lambda x))=\frac{\partial
 f}{\partial x}\exp(\lambda x)+f\lambda\exp(\lambda x)$.  So ist
 $\cM=\C[x]\exp(\lambda x)$ ein $\cD$-Modul.
@@ -264,8 +253,7 @@ $\cM=\C[x]\exp(\lambda x)$ ein $\cD$-Modul.
 \begin{comment}
 \cite[Exmp 2.2]{ArkhipovDmod}
 \end{comment}
-\item 
-Führe formal ein Symbol $\log(x)$ mit den Eigenschaften
+\item Führe analog ein Symbol $\log(x)$ mit den Eigenschaften
 $\partial_x\log(x)=\frac{1}{x}$ ein. Erhalte nun das $\cD$-Modul
 $\C[x]\log(x)+\C[x,x^{-1}]$. Dieses Modul ist über $\cD$ durch $\log(x)$
 erzeugt und man hat
@@ -302,6 +290,10 @@ $\cD_k$-Modul erzeugt. Im speziellen folgt damit, dass $\cM_k\cong
 \cD_k/\mathfrak{a}$ für ein $0\neq\mathfrak{a}\vartriangleleft\cD_k$.
 \end{defn}
 \begin{bem}
+\begin{comment}
+Dies hier ist eine sehr vereinfachte, aber für unsere Zwecke völlig
+ausreichende, Definition von holonom.
+\end{comment}
 In \cite{coutinho1995primer} wird der Begriff holonom über die Dimension
 definiert und bei \cite{sabbah_cimpa90} über die charakteristische Varietät.
 \end{bem}

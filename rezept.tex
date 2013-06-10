@@ -179,7 +179,8 @@ die Behauptung gilt.
   \draw[color=blue,thick] (-.5,3) --(3,3) -- (3,5.5);
   \end{tikzpicture}
 \end{center}
-\caption{Newton-Polygon zu $P_{\phi}$ mit $H(x^{2(q-m)}\partial_x^{q-m})$}
+\caption{Newton-Polygon zu $P_{\phi}$ zusammen mit
+  $H(x^{2(q-m)}\partial_x^{q-m})$}
 \label{fig:Newton-PolygonP_phi}
 \end{figure}
 Mit der Behauptung gilt dann, dass
@@ -187,7 +188,8 @@ Mit der Behauptung gilt dann, dass
 H\Big(P_{\phi}(x,\partial_x)\Big)
   &= H\Big(x^{2q + 1}\partial_x^{q + 1} + qa_q
   + \sum_{k\in I\backslash\{q\}}k a_k(-x^2\partial_x)^{q-k} \Big)
-\\&\overset{\text{Beh.}}{=} H\Big(x^{2q + 1}\partial_x^{q + 1} + qa_q \Big) \,.
+\\&\!\!\overset{\text{Beh.}}{=} H\Big(x^{2q + 1}\partial_x^{q + 1} + qa_q \Big)
+  \,.
 \end{align*}
 Also ist
 \begin{align*}
@@ -353,7 +355,7 @@ $\cP(\cM_{\phi})=\{\frac{1}{2}\}$.
   \myPlotFunction{\myPoints}{\myPath}{2}{0}{1}{$N(P_{\phi})$}
   \end{tikzpicture}
 \end{center}
-\caption{Newton Polygon zu $P_{\phi}$}
+\caption{Newton-Polygon zu $P_{\phi}$}
 \end{figure}
 Berechne nun zu $\rho:t\mapsto x:=-2t^2$ ein Minimalpolynom $\rho^*P_{\phi}$
 zu $\rho^+\cM_{\phi}$:
@@ -376,7 +378,7 @@ $1=\frac{1}{1}=:\frac{\lambda_0}{\lambda_1}$.
   \myPlotFunction{\myPoints}{\myPath}{2}{0}{2}{$N(\rho^*P_{\phi})$}
   \end{tikzpicture}
 \end{center}
-\caption{Newton Polygon zu $\rho^*P_{\phi}$}
+\caption{Newton-Polygon zu $\rho^*P_{\phi}$}
 \end{figure}
 
 Definiere die Linearform $\ell(s_0,s_1):=\lambda_0s_0+\lambda_1s_1=s_0+s_1$.
@@ -406,8 +408,8 @@ Vektor von $\rho^+\cM$ ist.
   \]
   und damit ist dann $\cN=\cD/\cD\cdot(\partial_t^2+a_1(t)\partial_t+a_0(t))$.
 \fi
-Mit dem Lemma vom Zyklischen Vektor, bzw. dem Korollar
-\ref{cor:Zyklischer-Vektor}, wollen wir nun ein Minimalpolynom zu $\cN$
+Mit dem Lemma vom Zyklischen Vektor, bzw. der Proposition
+\ref{prop:Zyklischer-Vektor}, wollen wir nun ein Minimalpolynom zu $\cN$
 berechnen\footnote{
 Dies wäre auch schneller, aber weit weniger interessanter, mit Lemma
 \ref{lem:twistRechenregel} möglich.
@@ -474,7 +476,7 @@ mit, wie gewünscht, mehr als einem Slope (siehe Abbildung \ref{fig:afterTwist})
   \myPlotFunction{\myPoints}{\myPath}{2}{-3}{-2}{$N(P')$}
   \end{tikzpicture}
 \end{center}
-\caption{Newton Polygon zu $\cN$}
+\caption{Newton-Polygon zu $\cN$}
 \label{fig:afterTwist}
 \end{figure}
 \begin{comment}
