@@ -1,12 +1,34 @@
 %!TeX root = main.tex
 \chapter{Levelt-\!Turrittin-\!Theorem}
+Nun zum wichtigsten Satz in dieser Arbeit. Das Levelt-Turrittin-Theorem sagt,
+dass sich jeder meromorphe Zusammenhang $\cM$, nach einem möglicherweise
+nötigem pull-back, in eine direkte Summe von \glqq elementaren\grqq{}
+meromorphen Zusammenhängen zerlegen lässt.\\
+Zunächst soll geklärt werden, was die richtigen elementaren meromorphen
+Zusammenhänge sind.
 \section{Elementare meromorphe Zusammenhänge}
-%\section{Elementare formale meromorphe Zusammenhänge}
 \begin{defn}
 Ein \emph{elementarer regulärer meromorpher Zusammenhang} ist ein Zusammenhang
 $\cM$, welcher isomorph zu $\cD_{\hat K}/\cD_{\hat K}\cdot
 (x\partial_x-\alpha)^p$, mit passendem $\alpha$ und $p$, ist.
 \end{defn}
+\iffalse
+\begin{figure}[htbp]
+  \begin{center}
+    \begin{tikzpicture}[scale=1,descr/.style={fill=white,inner sep=2.5pt}]
+    \def\myPoints{}
+    \def\myPath{ -- (3,0)}
+    \myPlotFunction[nogrid]{\myPoints}{\myPath}{3}{0}{0}{
+      $N((x\partial_x-\alpha)^p)$
+    }
+
+    \draw (3,0) -- (3,-.2);
+    \node[below] at (3,-.2) {\footnotesize$p$};
+    \end{tikzpicture}
+  \end{center}
+  \caption{Newton-Polygon zu Elementarem regulärem meromorphem Zusammenhang.}
+\end{figure}
+\fi
 \begin{bem}
 Es ist leicht zu sehen, dass jeder elementare reguläre meromorphe Zusammenhang
 tatsächlich auch regulär ist.
@@ -28,19 +50,17 @@ Basisdarstellung mit Koeffizienten $b_i\in\hat K$.
 Also erfüllt $m$ die Gleichung
 $\partial_x^dm+\sum_{i=0}^{d-1}b_i(x)\partial_x^im=0$.\\
 \begin{comment} TODO: bis hier schon klar \end{comment}
-Tatsächlich kann man $b_i(x)=x^ib_i'(x)$ mit $b_i'\in \Cfx$ schreiben (wegen
-Regularität).\\
+Tatsächlich kann man, wegen Regularität, $b_i(x)=x^ib_i'(x)$ mit $b_i'\in \Cfx$
+schreiben.\\
 Dies impliziert, dass $m,x\partial_xm,\dots,(x\partial_x)^{d-1}m$ ebenfalls
 eine Basis von $\cM_{\hat K}$ ist.\\
 Die Matrix von $x\partial_x$ zu dieser neuen Basis hat nur Einträge in $\Cfx$.
 \end{proof}
+Nach \cite[Thm 5.2.2]{sabbah_cimpa90} gilt sogar das folgende Lemma.
 \begin{lem}
 Es existiert sogar eine Basis von $\cM_{\hat K}$ über $\hat K$ so dass die
 Matrix zu $x\partial_x$ konstant ist.
 \end{lem}
-\begin{proof}
-Siehe \cite[Thm 5.2.2]{sabbah_cimpa90}.
-\end{proof}
 
 \begin{thm} \label{thm:regulaerInDirSumme}
 Ein regulärer formaler Zusammenhang $\cM_{\hat K}$ ist isomorph zu einer
@@ -128,7 +148,7 @@ Siehe \cite[Prop 3.1]{sabbah_Fourier-local}
 
 \section{Die Filtrierung $\,^\ell V\cD_{\hat K}$ und das $\ell$-Symbol}
 Dieser Abschnitt bezieht sicht auf \cite[Seite 25]{sabbah_cimpa90} und
-beschreibt das $\ell$-Symbol, welches im Beweis des Levelt-Turittin Theorems
+beschreibt das $\ell$-Symbol, welches im Beweis des Levelt-Turittin-Theorems
 verwendung findet.\\
 Sei $\Lambda=\frac{\lambda_0}{\lambda_1}\in \Q_{\geq 0}$ vollständig gekürtzt,
 also mit $\lambda_0$ und $\lambda_1$ in $\N$ relativ prim. Definiere die
@@ -316,16 +336,11 @@ Das Levelt-Turrittin-Theorem ist ein Satz, der hilft, meromorphe Zusammenhänge
 in ihre irreduziblen Komponenten zu zerlegen.
 \end{comment}
 
-\begin{comment}
-\subsection{Klassische Version}
-\end{comment}
-\begin{thm}
-\cite[Thm 5.4.7]{sabbah_cimpa90}
+\begin{thm} \cite[Thm 5.4.7]{sabbah_cimpa90} \label{thm:LT}
 Sei $\cM_{\hat K}$ ein formaler meromorpher Zusammenhang, so gibt es eine
 ganze Zahl $p$, so dass der Zusammenhang $\cM_{\hat L}:=\rho^+\cM_{\hat K}$,
 mit $\rho:t\mapsto x:=t^p$, isomorph zu einer direkten Summe von formalen
-elementaren meromorphen Zusammenhänge
-ist.
+elementaren meromorphen Zusammenhänge ist.
 \end{thm}
 \begin{comment}
 Der folgende Beweis stammt hauptsächlich aus \cite[Seite 35]{sabbah_cimpa90}.

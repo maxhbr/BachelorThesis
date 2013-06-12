@@ -1,61 +1,53 @@
 %!TeX root = main.tex
 \chapter{Explizite Berechnung einer Levelt-\!Turrittin-Zerlegung}
-In diesem Kapitel werden Beispiele einer speziellen Klasse von $\cD$-Moduln
-diskutiert. Dazu wird im folgendem zu einem Beispiel unter anderem explizit der
-Beweis aus \cite{sabbah_cimpa90} zur Levelt-Turrittin-Zerlegung nachvollzogen.
-
-Es wird zunächst ein allgemeines Rezept gegeben, welches zu gegebenem $\phi$
-D-Moduln ergibt. Im laufe des Kapitels werden immer speziellere $\phi$
-betrachtet und zuletzt wird für konkrete Beispiele eine explizite Rechnung
-gegeben.
-
-\section{Rezept für allgemeine $\phi$} \label{sec:allgemeinProblem}
-Hier wollen wir nun eine spezielle Klasse von meromorphen Zusammenhängen, die
-die durch das folgende Rezept entstehen.
+In diesem Kapitel soll für spezielle meromorphe Zusammenhänge, zunächst
+allgemein und ab Abschnitt \ref{sec:LT-speziell} für einen konkreten
+Zusammenhang, die Levelt-Turrittin-Zerlegung berechnet werden.\\
+Hier wird zunächst ein allgemeines Rezept gegeben, welches zu gegebenem $\phi$
+einen meromorphen Zusammenhang liefert:
 \begin{enumerate}
-\item Wähle zunächst ein $\phi$
+\item[Schritt 1:] Wähle zunächst ein $\phi$
 $\in\{\phi=\sum_{k\in I}\frac{a_k}{t^{k}}|I\subset\N\mbox{ endlich}
 ,a_k\in \C\}$
 aus
-\item und beginne mit $\sE^{\phi}$. Es gilt
+\item[Schritt 2:] und beginne mit $\sE^{\phi}$. Es gilt
 \begin{align*}
 \sE^{\phi} &= \cD_{\hat L}/\cD_{\hat L}\cdot (\partial_t-\frac{d}{dt}\phi(t))
 \\&=\cD_{\hat L}/\cD_{\hat L}\cdot \Big(\underset{\in\C[t]\subset\cD_{\hat L}^*}
     {\underbrace{\mbox{\textbf{Hauptnenner von $\frac{d}{dt}\phi(t)$ }}}}
   \cdot (\partial_t-\frac{d}{dt}\phi(t))\Big)
 \\&=\cD_{\hat L}/\cD_{\hat L}\cdot \Big(
-  \underset{=:Q(t,\partial_t)}{\underbrace{
+  \underset{=:Q(t,\partial_t) \in \C[t]<\partial_t> }{\underbrace{
   t^{\max(I)+1} \cdot (\partial_t-\frac{d}{dt}\phi(t))}}\Big) \,.
 \end{align*}
 \begin{comment}
 Dies ändert den meromorphen Zusammenhang nicht, weil $t^{\max(I)+1}$ eine
 Einheit in $\cD_{\hat L}$ (und auch in $\cD_{L}$) ist.
 \end{comment}
-\item Fouriertransformiere $\sE^{\phi}$ und erhalte
+\item[Schritt 3:] Fouriertransformiere $\sE^{\phi}$ und erhalte
 \begin{align*}
 \,^\cF\!\sE^{\phi}&=\cD_{\hat L}/\cD_{\hat L}\cdot{\cF_Q(z,\partial_z)}
 \\&\bydef \cD_{\hat L}/\cD_{\hat L}\cdot
   \underset{\in\C[z]<\partial_z>}{\underbrace{Q(\partial_z,-z)}} \,.
 \end{align*}
-\item Betrachte den Zusammenhang bei Unendlich, also wende den Übergang
-$x\rightsquigarrow z^{-1}$ an.\\
-Was passiert mit der Ableitung $\partial_x$?
-Es gilt
+\item[Schritt 4:] Betrachte den Zusammenhang bei Unendlich und somit erhalte
+das entsprechende Minimalpolynom
 \[
-\partial_x (f(\frac{1}{x}))=
-\partial_z(f)\cdot (-\frac{1}{x^2})=
--\partial_z(f)\cdot z^2= %TODO: wegen klammerung?
-- z^2 \cdot \partial_z(f)
-\]
-also $ \partial_x\rightsquigarrow-z^2\partial_z $, und somit
-\[
-P_\phi(x,\partial_x):=\cF_Q(x^{-1},-x^2\partial_x) \in \C[t]<\partial_t> \,.
+P_\phi(x,\partial_x):= \cF_Q^\infty(x,\partial_x)
+  \bydef \cF_Q(x^{-1},-x^2\partial_x) \in \C[x]<\partial_x> \,.
 \]
 \end{enumerate}
 Im folgendem werden wir den zum Minimalpolynom $P_\phi$ assoziierten formalen
 meromorphen Zusammenhang $\cM_\phi:=\cD_{\hat K}/\cD_{\hat K}\cdot P_{\phi}$
 betrachten.
+\begin{comment}
+Im laufe des Kapitels werden dazu immer speziellere $\phi$
+betrachtet und zuletzt wird für ein konkretes Beispiel eine explizite Rechnung
+gegeben.
+\end{comment}
 
+\section{Betrachte $\cM_\phi$ für allgemeine $\phi$}
+\label{sec:allgemeinProblem}
 \begin{lem}
 Zu einem $\phi=\sum_{k\in I}\frac{a_k}{t^{k}}\in \{\phi=\sum_{k\in
 I}\frac{a_k}{t^{k}}|I\subset\N\mbox{ endlich} ,a_k\in \C\}$ ist das
@@ -328,7 +320,7 @@ nicht elementar, sondern regulär otimes E
 \end{comment}
 
 \section{Levelt-Turrittin-Zerlegung für $\cM_{\phi}$ mit
-  $\phi_1:=\frac{a}{x}$}
+  $\phi_1:=\frac{a}{x}$} \label{sec:LT-speziell}
 \begin{comment}
 rechtfertigen, das mehr gerechnet wird, als nötig
 \end{comment}
