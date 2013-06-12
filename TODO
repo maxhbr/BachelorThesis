@@ -61,10 +61,10 @@ operationen.tex:\\&=\dots %TODO: Hier weiter...
 operationen.tex:%TODO: erkläre wieso --> Elementare Zusammenhänge
 operationen.tex:TODO: korregieren, besser formulieren
 operationen.tex:  & \mbox{(Rechenregeln Tensorprodukt)}\\ %TODO: hinzufügen
+operationen.tex:-\partial_z(f)\cdot z^2= %TODO: wegen klammerung?
 operationen.tex: &=TODO
 operationen.tex:TODO: text löschen?
 operationen.tex:mit $\xi^p=1$, bringen. Sei so ein $\xi$ ab jetzt fixiert. %TODO: besonderes xi?
-rezept.tex:-\partial_z(f)\cdot z^2= %TODO: wegen klammerung?
 rezept.tex:%TODO: QUELLE!
 rezept.tex:  %TODO: hier kein grid
 rezept.tex:TODO: hier weiter vereinfachen
