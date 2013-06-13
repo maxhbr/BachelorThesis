@@ -327,7 +327,7 @@ $m,\partial_xm,\dots,\partial_x^{d-1}m$ eine $K$-Basis von $\cM_K$ ist.
 
 \begin{proof}
 Ein Beweis ist beispielsweise in \cite[Thm 4.3.3]{sabbah_cimpa90} oder
-ausführlicher in \cite[Satz 4.8]{ZulaBarbara}.
+ausführlicher in \cite[Satz 4.8]{ZulaBarbara} zu finden.
 \end{proof}
 \begin{lemdef}
 Ist $\cM_K$ ein meromorpher Zusammenhang, dann existiert ein $P\in\cD_K$, so
@@ -345,25 +345,42 @@ Dieses so definierte Minimalpolynom ist nicht eindeutig.
 \end{bem}
 
 \begin{prop} \label{prop:Zyklischer-Vektor}
+In der Situation von Lemma \ref{lem:Zyklischer-Vektor} sei
+\begin{align*}
+\partial_x^d m&= \alpha_{d-1}\partial_x^{d-1}m + \alpha_{d-2}\partial_x^{d-2}m
+  + \cdots + \alpha_1\partial_xm + \alpha_0m & \alpha_i\in K
+\end{align*}
+eine Basisdarstellung von $\partial_x^dm$, dann ist
+\begin{align*}
+\Big( \underset{=:P}{\underbrace{
+  \partial_x^d-\alpha_{d-1}\partial_x^{d-1}-\alpha_{d-2}\partial_x^{d-2}
+  - \cdots - \alpha_1\partial_x - \alpha_0 }} \Big)m&=0 \,.
+\end{align*}
+Da der $\partial_x$-Grad von $P$ gleich $d$ ist, folgt, dass $P$ ein
+Minimalpolynom ist. Also gilt $\cM_K\cong\cD_K/\cD_K\cdot P$.
+\end{prop}
+\begin{comment}
+\begin{prop}
 In der Situation von Lemma \ref{lem:Zyklischer-Vektor} gibt es ein $P\in
 \cD_K$ mit $\partial$-Grad von $P$ ist gleich $d$ und $P \cdot m=0$, in
 diesem Fall ist $P$ ein Minimalpolynom zu $\cM_K$, also gilt
-$\cM_K\cong\cD_K/\cD_K\cdot P$. Explizit ergibt sich aus der Basisdarstellung
+$\cM_K\cong\cD_K/\cD_K\cdot P$. 
+\end{prop}
+\begin{proof}
+Explizit ergibt sich aus der Basisdarstellung
 \begin{align*}
 \partial_x^d m&= \alpha_{d-1}\partial_x^{d-1}m + \alpha_{d-2}\partial_x^{d-2}m
   + \cdots + \alpha_1\partial_xm + \alpha_0m & \alpha_i\in K
 \end{align*}
 von $\partial_x^d m$, dass
 \[
-\cM_K=\cD_K/\cD_K\cdot( \underset{=:Q}{\underbrace{
+\cM_K\cong\cD_K/\cD_K\cdot( \underset{=:Q}{\underbrace{
   \partial^d - \alpha_{d-1}\partial_x^{d-1} - \alpha_{d-2}\partial_x^{d-2} -
   \cdots - \alpha_1\partial_x - \alpha_0 }} )
 \]
-gilt und damit $Q$ so ein mögliches Minimalpolynom ist.
-\begin{comment}
-Ist irgendwie nicht gut :(
+gilt und damit $P:=Q$ so ein Minimalpolynom ist.
+\end{proof}
 \end{comment}
-\end{prop}
 
 \begin{thm}\label{thm:basic-splitting}
 Ist $P=P_1\cdot P_2$ mit $P_1,P_2\in \cD_K$ so gilt

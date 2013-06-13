@@ -2,6 +2,8 @@ module Main where
 import ComplRat
 import Koeffs
 
+import Data.Number.CReal
+
 import qualified Control.Monad.Parallel as P
 
 import System.Environment
@@ -18,10 +20,10 @@ main = do x <- getArgs
                                {-, ("./data/u_-2=100i"    , (0:+:100))-}
                                {-, ("./data/u_-2=10i"     , (0:+:10))-}
                                {-, ("./data/u_-2=1.0e-1i" , (0:+:1.0e-1))-}
-                               , ("./data/u_-2=1.0e-2i" , (0:+:1.0e-2))
+                               {-, ("./data/u_-2=1.0e-2i" , (0:+:1.0e-2))-}
                                {-, ("./data/u_-2=1.0e-3i" , (0:+:1.0e-3))-}
-                               {-, ("./data/u_-2=1.0e-4i" , (0:+:1.0e-4))-}
-                               {-, ("./data/u_-2=1.0e-5i" , (0:+:1.0e-5))-}
+                               , ("./data/u_-2=1.0e-4i" , (0:+:1.0e-4))
+                               , ("./data/u_-2=1.0e-5i" , (0:+:1.0e-5))
                                ]
 
     saveData :: Int -> (String, ComplRat) -> IO()
@@ -43,7 +45,7 @@ main = do x <- getArgs
             genItemBetrag (_,v,_) = show $ fromRational $ magnitude v
 
             genItemCauchy :: (Int, ComplRat, ComplRat) -> String
-            genItemCauchy (i,v,_) = show $ genItemCauchy'**(1/(fromIntegral i))
+            genItemCauchy (i,v,_) = showCReal 10 $ genItemCauchy'**(1/(fromIntegral i))
               where genItemCauchy' = fromRational $ magnitude v
 
             genItemQuot :: (Int, ComplRat, ComplRat) -> String

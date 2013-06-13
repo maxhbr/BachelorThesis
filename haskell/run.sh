@@ -10,7 +10,7 @@ if [ $# -gt 0 ]; then
   fi
 fi
 
-if false; then
+if true; then
   ghc --make -threaded ./SaveToFile.hs
   mkdir -p ./data
   rm ./data/u_*
@@ -48,12 +48,10 @@ set term push
 set term post enh color lw 1 12 "Times-Roman"
 set output "${name}.eps"
 
-f(x,y)=(x*x*x - 2*x*y + y*y*y>0)?1:1/0 
-
 set yrange [0.00001:1e10]
 
 set log xy
-plot 10**(ceil(300/x)) with filledcurve y1=10^300 lt rgb "#DDDDDD" ,\
+plot 10**(ceil(300/x)) with filledcurve y1=10^300 lt rgb "#DDDDDD" title "",\
   for [fn in system("ls data/*")] fn every ::0::${max} using 1:3\
     with lines title system("basename ".fn)
 #splot [-2:2] [-2:2] f(x,y) t 'x^3 - 2xy + y^3>0'

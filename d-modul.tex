@@ -41,17 +41,17 @@ so gilt
 \end{enumerate}
 \end{prop}
 \begin{proof}
-\begin{enumerate}
-\item Klar.
-\item Für ein Testobjekt $g\in k$ ist
-\[
-[\partial_x,f]\cdot g=\partial_x(fg)-f\partial_xg=
-  (\partial_xf)g+\underset{=0}{\underbrace{ 
-  f(\partial_xg)-f(\partial_xg)}}=
-  (\partial_xf)g \,.
-\]
-\item Siehe \cite[1.2.4.]{sabbah_cimpa90} oder \cite[Kor 2.8]{ZulaBarbara}.
-\end{enumerate}
+Die erste Aussage ist klar. Für die zweite Aussage gilt für ein Testobjekt
+$g\in k$:
+\begin{align*}
+[\partial_x,f]\cdot g&=\myubracket{\partial_x(fg)}-f\partial_xg
+\\&= \myobracket{(\partial_xf)g
+  +\rlap{$\underset{=0}{\underbrace{ \phantom{f(\partial_xg)-f(\partial_xg)}}}$}
+  f(\partial_xg)}-f(\partial_xg)
+\\&= (\partial_xf)g \,.
+\end{align*}
+Der rest der Proposition wird beispielsweise in \cite[1.2.4.]{sabbah_cimpa90}
+oder \cite[Kor 2.8]{ZulaBarbara} bewiesen.
 \end{proof}
 
 \section{Weyl-Algebra und der Ring $\cD_k$}
@@ -95,8 +95,8 @@ Konvergenzradius}\}$ die konvergenten Potenzreihen.
 Potenzreihen.
 \item $\cD_K$ falls $k=K:=\Ckxl:=\C\{x\}[x^{-1}]$ der Ring der Laurent Reihen.
 \item $\cD_{\hat K}$ falls $k=\hat K:=\Cfxl:=\Cfx[x^{-1}]$ der Ring der
-formalen Laurent Reihen
-\footnote{Wird in \cite{ZulaBarbara} mit $\hat\cD_{\hat K}$ bezeichnet.}.
+formalen Laurent Reihen\footnote{Wird in \cite{ZulaBarbara} mit $\hat\cD_{\hat
+K}$ bezeichnet.}.
 \end{itemize}
 \end{defn}
 \begin{bem}

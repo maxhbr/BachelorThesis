@@ -875,9 +875,16 @@ Sei $\sum_n a_n x^n$ eine Potenzreihe. Es gilt:
 \begin{proof}
 Siehe \cite[§18, Satz 94]{KnoppReihen}.
 \end{proof}
+In der Abbildung \ref{fig:plotCauchyKoeffs} sind, für verschiedene $u_{-2}$ die
+Numerischen Werte von $\sqrt[n]{|a_n|}$ in Abhängigkeit von $n$ angetragen.
+Der graue Bereich ist leider außerhalb der Rechengenauigkeit, da mit zu großen
+Fließkommazahlen gerechnet werden muss.
+Der graue Bereich ist hier näherungsweise gegeben durch
+$\{(x,n)\in\R\times\N\mid x>10^{300/n}\}$, da die größte Zahl im Zahlenbereich
+näherungsweise $10^{300}$ entspricht.
 \begin{figure}[htbp]
   \centering
-  \includegraphics[angle=270,width=\the\textwidth]{../plot-cauchy.pdf}
+  \includegraphics[angle=270,width=\the\textwidth]{../plot-cauchy-shaded.pdf}
   \caption{Wurzlkriterium angewendet auf die Koeffizienten}
   \label{fig:plotCauchyKoeffs}
 \end{figure}
