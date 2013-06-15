@@ -127,7 +127,7 @@ H\Big(x^{2q + 1}\partial_x^{q + 1} + qa_q
 \subset H\Big(x^{2q + 1}\partial_x^{q + 1} + qa_q \Big)
 \]
 \paragraph{Denn:}
-Betrachte zu einem $m\in I\backslash \{q\}$, einen Summanten
+Betrachte zu einem $m\in I\backslash \{q\}$, einen Summanden
 $ma_m(-x^2\partial_x)^{q-m}$ aus der Summe:
 \begin{align*}
 H(ma_m(-x^2\partial_x)^{q-m}) &= H(ma_m(-1)^q(x^{2(q-m)}\partial_x^{q-m}
@@ -305,7 +305,13 @@ TODO: hier weiter vereinfachen
 Zerlege nun wie in  Satz \ref{thm:Split-after-slopes} den meromorphen
 Zusammenhang $\cN$ in $\cN=\bigoplus_i\cN_i$ wobei $\cN_i$ meromorphe
 Zusammenhänge mit genau einem Slope sind.
-Twiste die $\cN_i$ jeweils mit $\sE^{-\psi}_{\hat L}$ und somit ist dann
+Zerlege jedes reguläre $\cN_i$ möglichst weit mittels dem Satz
+\ref{thm:regulaerInDirSumme}.
+\begin{comment}
+TODO: hier weiter umformulieren, $\tilde\cN_i$ einführen.
+\end{comment}
+Nutze Korollar \ref{cor:zuruecktwisten} und twiste die $\cN_i$ jeweils mit
+$\sE^{-\psi}_{\hat L}$ und somit ist dann
 \[
 \rho^+\cM_{\phi}=\bigoplus_i\cN_i\otimes_{\hat L}\sE^{-\psi}_{\hat L} \,.
 \]
@@ -399,7 +405,7 @@ Vektor von $\rho^+\cM$ ist.
 Mit dem Lemma vom Zyklischen Vektor, bzw. der Proposition
 \ref{prop:Zyklischer-Vektor}, wollen wir nun ein Minimalpolynom zu $\cN$
 berechnen\footnote{
-Dies wäre auch schneller, aber weit weniger interessanter, mit Lemma
+Dies wäre auch schneller, aber weit weniger interessant, mit Lemma
 \ref{lem:twistRechenregel} möglich.
 }:
 \begin{align*}
@@ -505,14 +511,13 @@ dieses in ein Produkt $P'(t,\partial_t)=Q_1(t,\partial_t)\cdot
 Q_2(t,\partial_t)$.
 
 Da der $\partial_t$-Grad von $P'$ genau $2$ ist, müssen die $Q_i$
-jeweils den Grad $1$ haben, um eine nichttriviale Zerlegung zu bekommen.
+jeweils den Grad $1$ haben, um eine echte nichttriviale Zerlegung zu bekommen.
 Allgemein haben dir $Q_i$ also die Form
 \begin{align*}
 Q_1&:=\bar v(t) \partial_t + v(t) & Q_2&:=\bar u(t)\partial_t + u(t)
 & \mbox{mit } \bar v(t), v(t), \bar u(t), u(t)\in \hat L \,.
 \end{align*}
 \begin{beo} \label{beo:paarweise-verschieben}
-%TODO: move to theorie-teil??
 Ist $Q_1$ und $Q_2$ so ein solches Paar, dann ist für $\sigma\in \hat L$ das
 Paar $\bar Q_1:=Q_1\cdot \sigma^{-1}$ und $\bar Q_2:=\sigma\cdot Q_2$ ebenfalls
 eine Zerlegung, denn
@@ -853,17 +858,18 @@ $v(t)$ in Abhängigkeit von $n$ für verschiedene $u_{-2}$ angetragen.
   \label{fig:plotKoeffs}
 \end{figure}
 
-Nun zum Konvergenzverhalten. Es ist klar, dass
+Nun wollen wir das Konvergenzverhalten genauer betrachten. Es gilt, dass
 \begin{align*}
 Q_1\in\cD_{\hat L} \backslash\cD_L &\Leftrightarrow v(t) \in\hat L \backslash L
 &\mbox{bzw. } & &
 (\partial_t + \sum_{n=-1}^\infty u_nt^n)\in \cD_{\hat L} \backslash \cD_L
-&\Leftrightarrow u(t) \in \hat L \backslash L
+&\Leftrightarrow u(t) \in \hat L \backslash L \,.
 \end{align*}
-gilt. Deshalb wollen wir die Potenzreihen $v$ und $u$ und im besonderen deren
-Konvergenzverhalten, noch genauer betrachten.
+%Deshalb wollen wir die Potenzreihen $v$ und $u$ und im besonderen deren
+%Konvergenzverhalten, noch genauer betrachten.
 Außerdem gilt, dass $ v(t) \in\hat L \backslash L \Leftrightarrow u(t) \in \hat
 L \backslash L$.
+Also reicht es eine der beiden Potenzreihen zu untersuchen.
 Wir betrachten die folgenden zwei klassischen Konvergenzkriterien.
 \begin{thm}[Wurzlkriterium nach Cauchy] \label{thm:convKrit}
 Sei $\sum_n a_n x^n$ eine Potenzreihe. Es gilt:

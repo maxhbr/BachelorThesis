@@ -163,6 +163,7 @@
 %\usepackage[nameinlink,german]{cleveref}
 \ifnum\myDevelopVariable=0
   \usepackage[colorlinks=false,linkcolor=black,plainpages = false]{hyperref}
+  %\linespread{1.5}
 \else
   \usepackage[colorlinks=true,linkcolor=black,plainpages = false]{hyperref}
 \fi
@@ -376,17 +377,19 @@
 
 \tableofcontents{}
 
-\begingroup
-\let\clearpage\relax
 \listoffigures
+
 \listoftables
 %TODO: rename listings
+\begingroup
+\let\clearpage\relax
+\vfill
 \lstlistoflistings
+\vfill
+\vfill
 \endgroup
 
-\ifnum\myDevelopVariable=0
-  \myinput{einleitung.tex}
-\fi
+\myinput{einleitung.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \mainmatter
@@ -405,9 +408,8 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\ifnum\myDevelopVariable=0
-  \myinput{schluss.tex}
-\fi
+%\addcontentsline{toc}{chapter}{Schluss}
+\myinput{schluss.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \appendix

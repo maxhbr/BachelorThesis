@@ -110,6 +110,11 @@ Ringstruktur, dies ist in \cite[Kapittel 2 Section 1]{ZulaBarbara} genauer
 ausgeführt.
 \end{enumerate}
 \end{bem}
+\begin{bem} \label{bem:konvToFormal}
+Jede Aussage bzw. Definition, die in dieser Arbeit über $K$ bzw. $\cD_K$
+getroffen wird, gilt auch über $\hat K$ bzw. $\cD_{\hat K}$. Die andere
+Richtung gilt allgemein nicht.
+\end{bem}
 
 \begin{prop} \label{prop:weyl_eindeutige_schreibung}
 Jedes Element in $\cD_k$ kann auf eindeutige
@@ -229,7 +234,7 @@ die $\C[x,\partial_x]$-Moduln. Sie werden geschrieben als $\cD-mod(\A^1)$
 \end{defn}
 \end{comment}
 
-\section{(Links-) $\cD$-Moduln}
+%\section{(Links-) $\cD$-Moduln}
 Da $\cD$ ein nichtkommutativer Ring ist, muss man vorsichtig sein und zwischen
 Links- und Rechts-$\cD$-Moduln unterscheiden.
 Wenn im folgendem von $\cD$-Moduln gesprochen wird, werden immer
@@ -260,7 +265,9 @@ erzeugt und man hat
 \[
 \C[x]\log(x)+\C[x,x^{-1}]=\cD\cdot\log(x)=\cD\slash\cD(\partial_x x\partial_x) \,.
 \]
-%
+\begin{comment}
+TODO: prüfen
+\end{comment}
 \begin{comment}
 \cite[Exmp 3.1.4]{ginzburg}
 \end{comment}
@@ -283,9 +290,12 @@ endlich dimensionaler Vektorraum ist, so ist schon $\cM=\{0\}$.
 \end{comment}
 
 \section{Holonome $\cD_k$-Moduln}
+Hier werden die Holonomen $\cD_k$-Moduln nur sehr einfach und ohne viel
+Hintergrund eingeführt, da wir diese Theorie nicht benötigen. Eine
+detailreichere Definition ist bei \cite[Def. 3.3.1]{sabbah_cimpa90} zu finden.
 \begin{defn}
 Sei $\cM_k$ ein Links-$\cD_k$-Modul ungleich $\cD_k$. $\cM_k$ heißt
-\emph{holonom}, falls es ein Element $m\in\cM_k$ gibt, das $\cM_k$ als
+\emph{holonom}, falls es ein Torsions-Element $m\in\cM_k$ gibt, das $\cM_k$ als
 $\cD_k$-Modul erzeugt. Im speziellen folgt damit, dass $\cM_k\cong
 \cD_k/\mathfrak{a}$ für ein $0\neq\mathfrak{a}\vartriangleleft\cD_k$.
 \end{defn}
@@ -296,6 +306,7 @@ ausreichende, Definition von holonom.
 \end{comment}
 In \cite{coutinho1995primer} wird der Begriff holonom über die Dimension
 definiert und bei \cite{sabbah_cimpa90} über die charakteristische Varietät.
+Letzteres ist die übliche Definition, da sich diese gut verallgemeinern lässt.
 \end{bem}
 
 \begin{bem} 

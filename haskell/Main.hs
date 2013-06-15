@@ -2,7 +2,10 @@ module Main where
 import ComplRat
 import Koeffs
 
--- parallel
+-- from numbers
+import Data.Number.CReal (Creal)
+
+-- from monad-parallel
 import qualified Control.Monad.Parallel as P
 
 -- for writing to file
@@ -15,17 +18,19 @@ genLine (i,v1,v2) = concat [ show  i                 , "\t"
                            , genItemBetrag (i,v1,v2) , "\t"
                            , genItemCauchy (i,v1,v2) , "\t"
                            , genItemQuot (i,v1,v2)   , "\n" ]
-  where
-    genItemBetrag :: (Int, ComplRat, ComplRat) -> String
-    genItemBetrag (_,v,_) = show $ fromRational $ magnitude v
+  where realMag = fromRational $ magnitude v1 :: CReal
 
-    genItemCauchy :: (Int, ComplRat, ComplRat) -> String
-    genItemCauchy (i,v,_) = show $ genItemCauchy'**(1 / (fromIntegral i))
-      where genItemCauchy' = fromRational $ magnitude v
+        genItemBetrag :: (Int, ComplRat, ComplRat) -> String
+        genItemBetrag (_,v,_) = show $ realMag
 
-    genItemQuot :: (Int, ComplRat, ComplRat) -> String
-    genItemQuot (_,v1,v2) = show $ sqrt $ fromRational $ genItemQuot'
-      where genItemQuot' = magnitudeSq v2 / magnitudeSq v1
+        genItemCauchy :: (Int, ComplRat, ComplRat) -> String
+        genItemCauchy (i,v,_)
+          | i == 0    = show $ realMag
+          | otherwise = show $ realMag**(1 / (fromIntegral i))
+
+        genItemQuot :: (Int, ComplRat, ComplRat) -> String
+        genItemQuot (_,v1,v2) = show $ sqrt $ fromRational $ genItemQuot'
+          where genItemQuot' = magnitudeSq v2 / magnitudeSq v1
 
 -- ############################################################################
 
@@ -49,8 +54,7 @@ saveData end (fn, uMin2) =
         triples = zip3 [0..] (tail vals) vals
 
 main :: IO()
-main = do x <- getArgs
-          P.sequence_ (main' $ head $ map (\x -> read x :: Int) x)
+main = do x <- getArgs; P.sequence_ $ main' $ (read $ head x :: Int)
   where main' x = map (saveData x) [ ("./data/u_-2=i"       , (0:+:1))
                                    {-, ("./data/u_-2=10000i"  , (0:+:10000))-}
                                    {-, ("./data/u_-2=1000i"   , (0:+:1000))-}

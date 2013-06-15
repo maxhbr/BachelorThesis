@@ -817,7 +817,9 @@ Abbildung \ref{fig:Push-Forward2})
 \end{comment}
 
 \begin{thm} \label{thm:Projektionsformel}
+\begin{comment}
 \cite[1.a]{sabbah_Fourier-local}
+\end{comment}
 Es gilt die Projektionsformel
 \begin{equation} \label{eq:Projektionsformel}
 \rho_+(\cN_{\hat L}\otimes_{\hat L}\rho^+\cM_{\hat K}) \cong
@@ -826,15 +828,14 @@ Es gilt die Projektionsformel
 \end{thm}
 \begin{proof}
 \begin{align*}
-\rho_+(\cN_{\hat L}\otimes_{\hat L}\rho^+\cM_{\hat K}) &=
-\rho_+(\myubracket{\cN_{\hat L}\otimes_{\hat L}(\hat L\otimes_{\hat
-  K}\cM_{\hat L})})
-  & \mbox{(def von $\rho^+\cM_{\hat K}$)}\\
-&\cong\rho_+(\myobracket{\myubracket{(\cN_{\hat L}\otimes_{\hat L}\hat L)}
-  \otimes_{\hat K}\cM_{\hat K}})
-  & \mbox{(Rechenregeln Tensorprodukt)}\\ %TODO: hinzufügen
-&\cong \rho_+(\myobracket{\cN_{\hat L}}\otimes_{\hat K}\cM_{\hat K})
-  & \mbox{(Rechenregeln Tensorprodukt)}\\
+\rho_+(\cN_{\hat L}\otimes_{\hat L}\rho^+\cM_{\hat K}) 
+  &\bydef \rho_+(\myubracket{\cN_{\hat L}\otimes_{\hat L}(\hat L\otimes_{\hat
+  K}\cM_{\hat L})}) \\
+&\!\!\overset{(\ref{bem:Rechenregeln-Tensorprodukt1})}{\cong}
+  \rho_+(\myobracket{\myubracket{(\cN_{\hat L}\otimes_{\hat L}\hat L)}
+  \otimes_{\hat K}\cM_{\hat K}}) \\
+&\!\!\overset{(\ref{bem:Rechenregeln-Tensorprodukt2})}{\cong}
+  \rho_+(\myobracket{\cN_{\hat L}}\otimes_{\hat K}\cM_{\hat K}) \\
 &= \rho_+\cN_{\hat L}\otimes_{\hat K}\cM_{\hat K} \,.
 \end{align*}
 \end{proof}
@@ -852,7 +853,7 @@ Sei $P=\sum_{i=0}^da_i(x)\partial_x^i$, dann ist die
 \cite[Def 6.1]{ZulaBarbara}
 \end{comment}
 \end{defn}
-\begin{defn}[Fouriertransformation von lokalisierten holonomen D-Moduln]
+\begin{defn} %[Fouriertransformation von lokalisierten holonomen D-Moduln]
 Ist $\cM_{\hat K}\cong\hat K / \hat K \cdot P$ so ist die Fouriertransformierte
 davon definiert als  $\,^\cF\cM_{\hat K}:=\hat K / \hat K \cdot
 \cF_P(x,\partial_x)$.
