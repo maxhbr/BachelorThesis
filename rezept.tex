@@ -81,9 +81,23 @@ P_{\phi}(x,\partial_x) &=\cF_Q(x^{-1},-x^2\partial_x)
   & \in \C[x]<\partial_x>
 \end{align*}
 \end{proof}
+\begin{comment}
 Im Anhang \ref{chap:zu-rezept} wird das $(x^2\partial_x)^{k}$ genauer
 diskutiert. Dies führt aber hier an dieser Stelle nicht mehr weiter in die
 gewünschte Richtung.
+\end{comment}
+\begin{bem}
+Nach \cite[Chap 4]{comtet1974advanced} lässt sich $(x^2\partial_x)^k$ durch
+ausnutzen der Stirling-Zahlen wie folgt umschreiben:
+\[
+(x^2\partial_x)^k=\sum_{i=1}^k\binom{k-1}{i-1}\frac{k!}{i!}x^{k+i}\partial_x^i
+\]
+Diese Formel schön genug, um erwähnt zu werden, wird aber im weiteren so nicht
+verwendet.
+\begin{comment}
+TODO: prüfen für kleine zahlen!!!
+\end{comment}
+\end{bem}
 
 \begin{lem}
 Es gilt $\cP(\cM_{\phi})=\{\frac{q}{q+1}\}$.
@@ -844,6 +858,49 @@ v_{-1}&=\frac{1}{2} & u_{-1}&=-\frac{3}{2}
   \left((n+1)v_{n-1} + \sum_{k=1}^{n-1} v_{k-1}v_{n-k-1}\right)
   & & \forall n > 0
 \end{align*}
+\begin{comment}
+WEITER VEREINFACHEN:\\
+\begin{align*}
+v_{-1}&=\frac{1}{2} & u_{-1}&=-\frac{3}{2}
+\\v_{0} = -u_{0} &= -\frac{3}{4u_{-2}}
+\\v_n = - u_n &= \frac{1}{u_{-2}}
+  \left((n+1)v_{n-1} + \sum_{k=1}^{n-1} v_{k-1}v_{n-k-1}\right)
+  & & \forall n > 0
+\end{align*}
+Dies können wir, wie folgt, weiter umschreiben und setzte dazu
+\begin{align*}
+v_{i}&:=\frac{1}{u_{-2}^{i+1}}\tilde v_i
+  &u_{i}&:=\frac{1}{u_{-2}^{i+1}}\tilde u_i
+  & & \forall n > -1
+\end{align*}
+Dann gilt:
+\begin{align*}
+\tilde v_{-1}&:=\frac{1}{2} & \tilde u_{-1}&:=-\frac{3}{2}
+\\\tilde v_{0} := -\tilde u_{0} &:= -\frac{3}{4}
+\end{align*}
+und mit
+\begin{align*}
+v_n &= \frac{1}{u_{-2}}
+  \left((n+1)v_{n-1} + \sum_{k=1}^{n-1} v_{k-1}v_{n-k-1}\right)
+\\&= \frac{1}{u_{-2}}
+  \left(
+  (n+1)\frac{1}{u_{-2}^{n}}\tilde u_{n-1}
+  + \sum_{k=1}^{n-1}
+    \frac{1}{u_{-2}^{k}}\tilde v_{k-1}
+    \frac{1}{u_{-2}^{n-k}}\tilde v_{n-k-1}
+  \right)
+\\&= \frac{1}{u_{-2}^{n+1}}
+  \Bigg( \underset{=:\tilde v_n =:-\tilde u_n}{\underbrace{ 
+  (n+1)\tilde u_{n-1} + \sum_{k=1}^{n-1} \tilde v_{k-1} \tilde v_{n-k-1}
+  }} \Bigg)
+\end{align*}
+definieren wir
+\begin{align*}
+\tilde v_n := -\tilde u_n &:=
+  (n+1)\tilde v_{n-1} + \sum_{k=1}^{n-1}\tilde v_{k-1}\tilde v_{n-k-1}
+  & & \forall n > 0
+\end{align*}
+\end{comment}
 Im Anhang wird in Abschnitt \ref{sec:Koeffs.hs} eine Haskell Modul vorgestellt,
 welches zu gegebenem $u_{-1}$ die Werte von $v(t)$ und $u(t)$ berechnet.
 

@@ -4,6 +4,7 @@ anhang-quellcode.tex:set term push #TODO: unnötig?
 d-modul.tex:%TODO: sabah-cimpa90.pdf  seite 3
 d-modul.tex:%TODO: ein teil des Beweises ist "left as an exersice"
 d-modul.tex:TODO: Treffen?
+d-modul.tex:TODO: prüfen
 d-modul.tex:%TODO: Variable zu t machen?
 d-modul.tex:(linear differential system) %TODO: defn
 grundlagen.tex:%TODO: Pfeile
@@ -60,7 +61,6 @@ operationen.tex:  %TODO: Pfeile
 operationen.tex:\\&=\dots %TODO: Hier weiter...
 operationen.tex:%TODO: erkläre wieso --> Elementare Zusammenhänge
 operationen.tex:TODO: korregieren, besser formulieren
-operationen.tex:  & \mbox{(Rechenregeln Tensorprodukt)}\\ %TODO: hinzufügen
 operationen.tex:-\partial_z(f)\cdot z^2= %TODO: wegen klammerung?
 operationen.tex: &=TODO
 operationen.tex:TODO: text löschen?
@@ -68,13 +68,14 @@ operationen.tex:mit $\xi^p=1$, bringen. Sei so ein $\xi$ ab jetzt fixiert. %TODO
 rezept.tex:%TODO: QUELLE!
 rezept.tex:  %TODO: hier kein grid
 rezept.tex:TODO: hier weiter vereinfachen
-rezept.tex:%TODO: move to theorie-teil??
+rezept.tex:TODO: hier weiter umformulieren, $\tilde\cN_i$ einführen.
 rezept.tex:%TODO: Namenskollision: u und v wie in Achsbeschriftung
 rezept.tex:und mit denn Kommutatorregeln %TODO: lemma? quelle?
 rezept.tex:%TODO: ist umsortieren immer erlaubt??
 rezept.tex:  %TODO: formel zu lang, label in nächster zeile
 rezept.tex:anwenden wollen: %TODO: quelle? formel?
 rezept.tex:TODO: text\\
+schluss.tex:%TODO: nummerierung gewollt?
 titel.tex:%TODO; titelpage bitte nicht seitlich versetzt
 workflow:  grep --exclude='TODO' "TODO" * > TODO
 workflow:  wc -l TODO
