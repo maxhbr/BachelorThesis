@@ -80,13 +80,13 @@ einführen als Bausteine oder kleinste meromorphe Zusammenhänge
 Durch twisten der elementaren regulären meromorphen Zusammenhänge erhält man
 wie folgt die elementaren meromorphen Zusammenhänge.
 \begin{defn} \label{defn:elemMerZsh}
-Ein \emph{elementarer meromorpher Zusammenhang} ist ein Zusammenhang $\cM$, für
-den es $\psi \in \Cfxl$, $\alpha\in\C$ und $p\in \N$ gibt, so dass
+Ein \emph{elementarer meromorpher Zusammenhang} ist ein Zusammenhang $\cM_{\hat
+K}$, für den es $\psi \in \hat K$, $\alpha\in\C$ und $p\in \N$ gibt, so dass
 \[
 \cM\cong \sE^{\psi}\otimes R_{\alpha,p}\,,
 \]
-mit $R_{\alpha,p}:=\cD/\cD(x\partial_x-\alpha)^p$, also ein elementarer
-regulärer meromorpher Zusammenhang, ist.
+mit $R_{\alpha,p}:=\cD_{\hat K}/\cD_{\hat K}(x\partial_x-\alpha)^p$, also ein
+elementarer regulärer meromorpher Zusammenhang, ist.
 \end{defn}
 
 \begin{lem} In der Situation von Definition \ref{defn:elemMerZsh} gilt
@@ -95,10 +95,12 @@ $\sE^{\psi}\otimes R_{\alpha,p}\cong
 \end{lem}
 \begin{proof} Denn
 \begin{align*}
-\sE^{\psi}\otimes R_{\alpha,p}&=\sE^{\psi}\otimes\cD/\cD(x\partial_x-\alpha)^p
-\\&\!\!\overset{\ref{lem:twistRechenregel}}{=}
-  \cD/\cD(x(\partial_x-\frac{\partial \psi}{\partial x})-\alpha)^p
-\\&=\cD/\cD(x\partial_x-(\alpha+x\frac{\partial \psi}{\partial x}))^p \,.
+\sE^{\psi}\otimes R_{\alpha,p}
+  &=\sE^{\psi}\otimes\cD_{\hat K}/\cD_{\hat K}(x\partial_x-\alpha)^p
+\\&\!\!\overset{\ref{lem:twistRechenregel}}{=} \cD_{\hat K}/\cD_{\hat K}
+  (x(\partial_x-\frac{\partial \psi}{\partial x})-\alpha)^p
+\\&=\cD_{\hat K}/\cD_{\hat K}
+  (x\partial_x-(\alpha+x\frac{\partial \psi}{\partial x}))^p \,.
 \end{align*}
 \end{proof}
 
