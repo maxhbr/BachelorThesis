@@ -87,8 +87,8 @@ diskutiert. Dies führt aber hier an dieser Stelle nicht mehr weiter in die
 gewünschte Richtung.
 \end{comment}
 \begin{bem}
-Nach \cite[Chap 4]{comtet1974advanced} lässt sich $(x^2\partial_x)^k$ durch
-ausnutzen der Stirling-Zahlen wie folgt umschreiben:
+Nach \cite[Chap 4]{comtet1974advanced} lässt sich $(x^2\partial_x)^k$, mittels
+ausnutzen der Stirling-Zahlen, wie folgt umschreiben:
 \[
 (x^2\partial_x)^k=\sum_{i=1}^k\binom{k-1}{i-1}\frac{k!}{i!}x^{k+i}\partial_x^i
 \]
@@ -902,7 +902,7 @@ definieren wir
 \end{align*}
 \end{comment}
 Im Anhang wird in Abschnitt \ref{sec:Koeffs.hs} eine Haskell Modul vorgestellt,
-welches zu gegebenem $u_{-1}$ die Werte von $v(t)$ und $u(t)$ berechnet.
+welches zu gegebenem $u_{-2}$ die Werte von $v(t)$ und $u(t)$ berechnet.
 
 In der Abbildung \ref{fig:plotKoeffs} sind die Beträge der Koeffizienten von
 $v(t)$ in Abhängigkeit von $n$ für verschiedene $u_{-2}$ angetragen.
@@ -939,15 +939,17 @@ Sei $\sum_n a_n x^n$ eine Potenzreihe. Es gilt:
 Siehe \cite[§18, Satz 94]{KnoppReihen}.
 \end{proof}
 In der Abbildung \ref{fig:plotCauchyKoeffs} sind, für verschiedene $u_{-2}$ die
-Numerischen Werte von $\sqrt[n]{|a_n|}$ in Abhängigkeit von $n$ angetragen.
+numerischen Werte von $\sqrt[n]{|a_n|}$ in Abhängigkeit von $n$ angetragen.
+\begin{comment}
 Der graue Bereich ist leider außerhalb der Rechengenauigkeit, da mit zu großen
 Fließkommazahlen gerechnet werden muss.
 Der graue Bereich ist hier näherungsweise gegeben durch
 $\{(x,n)\in\R\times\N\mid x>10^{300/n}\}$, da die größte Zahl im Zahlenbereich
 näherungsweise $10^{300}$ entspricht.
+\end{comment}
 \begin{figure}[htbp]
   \centering
-  \includegraphics[angle=270,width=\the\textwidth]{../plot-cauchy-shaded.pdf}
+  \includegraphics[angle=270,width=\the\textwidth]{../plot-cauchy.pdf}
   \caption{Wurzlkriterium angewendet auf die Koeffizienten}
   \label{fig:plotCauchyKoeffs}
 \end{figure}
@@ -972,6 +974,11 @@ Also konvergiert die Reihe für alle $x$ mit
 $|x|<\underset{n\rightarrow\infty}{\lim} \left|\frac{a_{n+1}}{a_n}\right|$.
 \end{proof}
 \end{comment}
+In Abbildung \ref{fig:plotQuotKoeffs} sind, analog wie in Abbildung
+\ref{fig:plotCauchyKoeffs}, die Werte von $\frac{|a_{n}|}{|a_{n+1}|}$ in
+Abhängigkeit von $n$ eingezeichnet.
+Auch hier sieht es so aus, als konvergieren die Werte, wie erwartet, für jedes
+$u_{-2}$ gegen $0$.
 \begin{figure}[htbp]
   \centering
   \includegraphics[angle=270,width=\the\textwidth]{../plot-quot.pdf}
