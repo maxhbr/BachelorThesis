@@ -8,8 +8,8 @@ Zunächst soll geklärt werden, was die richtigen elementaren meromorphen
 Zusammenhänge sind.
 \section{Elementare meromorphe Zusammenhänge}
 \begin{defn}
-Ein \emph{elementarer regulärer meromorpher Zusammenhang} ist ein Zusammenhang
-$\cM$, welcher isomorph zu $\cD_{\hat K}/\cD_{\hat K}\cdot
+Ein \emph{elementarer regulärer (formaler) meromorpher Zusammenhang} ist ein
+Zusammenhang $\cM$, welcher isomorph zu $\cD_{\hat K}/\cD_{\hat K}\cdot
 (x\partial_x-\alpha)^p$, mit passendem $\alpha$ und $p$, ist.
 \end{defn}
 \iffalse
@@ -41,7 +41,7 @@ dass die Matrix, die $x\partial_x$ beschreibt, nur Einträge in $\Cfx$ hat.
 \begin{comment}
 \cite[Lem 5.2.1.]{sabbah_cimpa90}
 \end{comment}
-\begin{proof}
+\begin{proof}[Beweisskizze] 
 Wähle einen zyklischen Vektor $m\in\cM_{\hat K}$ % TODO: richtiger Raum?
  und betrachte die Basis $m,\partial_x m,\dots,\partial_x^{d-1}m$ (siehe Lemma
 \ref{lem:Zyklischer-Vektor}).
@@ -57,31 +57,26 @@ eine Basis von $\cM_{\hat K}$ ist.\\
 Die Matrix von $x\partial_x$ zu dieser neuen Basis hat nur Einträge in $\Cfx$.
 \end{proof}
 Nach \cite[Thm 5.2.2]{sabbah_cimpa90} gilt sogar das folgende Lemma.
-\begin{lem}
+\begin{lem} \label{lem:matrixKonstant}
 Es existiert sogar eine Basis von $\cM_{\hat K}$ über $\hat K$ so dass die
 Matrix zu $x\partial_x$ konstant ist.
 \end{lem}
 
+Durch nutzen von Lemma \ref{lem:matrixKonstant} erhält man eine Konstante
+Matrix, welche in Jordan Normalform gebracht werden kann. 
+Ausgeführt wurde das in \cite[Cor. 5.2.6]{sabbah_cimpa90}.
+Damit erhält man den folgenden Satz.
 \begin{thm} \label{thm:regulaerInDirSumme}
 Ein regulärer formaler Zusammenhang $\cM_{\hat K}$ ist isomorph zu einer
 direkten Summe von elementaren regulären meromorphen Zusammenhängen.
 \end{thm}
-\begin{proof}[Beweisskizze]
-Man wählt eine Basis von $\cM_{\hat K}$, in der die Matrix zu $x\partial_x$
-konstant ist. Diese Matrix kann in Jordan Normalform gebracht werden und damit
-erhält man das Ergebnis.
-Ausgeführt wurde das in \cite[Cor. 5.2.6]{sabbah_cimpa90}.
-\end{proof}
-
-\begin{comment}
-einführen als Bausteine oder kleinste meromorphe Zusammenhänge
-\end{comment}
 
 Durch twisten der elementaren regulären meromorphen Zusammenhänge erhält man
 wie folgt die elementaren meromorphen Zusammenhänge.
 \begin{defn} \label{defn:elemMerZsh}
-Ein \emph{elementarer meromorpher Zusammenhang} ist ein Zusammenhang $\cM_{\hat
-K}$, für den es $\psi \in \hat K$, $\alpha\in\C$ und $p\in \N$ gibt, so dass
+Ein \emph{elementarer (formaler) meromorpher Zusammenhang} ist ein Zusammenhang
+$\cM_{\hat K}$, für den es $\psi \in \hat K$, $\alpha\in\C$ und $p\in \N$ gibt,
+so dass
 \[
 \cM\cong \sE^{\psi}\otimes R_{\alpha,p}\,,
 \]
@@ -307,15 +302,10 @@ So erhält man $\sigma_\ell(P)$ durch die Setzung
 \sigma_\ell(P)=\sum_{\{(i,j)\mid\ell(i,i-j)=\ord_\ell(P)\}}\alpha_{ij}x^j\xi^i \,.
 \]
 \end{bem}
-\begin{comment}
-\begin{proof}
-TODO
-\end{proof}
-\end{comment}
 
 \begin{bem}
 Bei \cite{sabbah_cimpa90} wird der Buchstabe $L$ anstatt $\ell$ für
-Linearformen verwendet, dieser ist hier aber bereits für $\Ckt$ reserviert.
+Linearformen verwendet, dieser ist hier aber bereits für $\Cktl$ reserviert.
 Dementsprechend ist die Filtrierung dort als $\,^L V\cD_{\hat K}$ und das
 $\ell$-Symbol als $L$-Symbol zu finden.
 \end{bem}
@@ -326,7 +316,7 @@ Die Funktion
 \]
 heißt Stützfunktion und wird in \cite{ZulaBarbara} als Alternative zur hier
 definierten Filtrierung verwendet.
-Wenn $\ell(x_0,s_1)$ wie oben aus $\Lambda$ entstanden ist, so gilt
+Wenn $\ell(s_0,s_1)$ wie oben aus $\Lambda$ entstanden ist, so gilt
 \[
 \omega_P(\Lambda)=ord_\ell(P) \,.
 \]
@@ -367,7 +357,7 @@ TODO: Induktionsanfang und -schritt kennzeichnen
 \end{comment}
 Wir nehmen oBdA an, dass $\cM_{\hat K}$ genau einen Slope $\Lambda$ hat, sonst
 Teile $\cM_{\hat K}$ mittels Satz \ref{thm:Split-after-slopes} in meromorphe
-Zusammenhänge mit je einem Slope und wende jeweils die Induktion an.
+Zusammenhänge mit je einem Slope und wende jeweils die Induktion an.\\
 Mit $\Lambda=:\frac{\lambda_0}{\lambda_1}$ (vollständig gekürtzt) definieren
 wir die dem Slope entsprechende Linearform
 $\ell(s_0,s_1):=\lambda_0s_0+\lambda_1s_1$.  
