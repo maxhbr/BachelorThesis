@@ -85,7 +85,7 @@ TODO
 \end{comment}
 \end{proof}
 
-\section{pull-back und push-forward}
+\section{Pullback und Pushforward}
 \begin{comment}
 Nach \cite[1.a]{sabbah_Fourier-local} und \cite[1.3]{hotta2007d}.
 \end{comment}
@@ -116,32 +116,37 @@ TODO: $\nable$ zu $\partial_x$ ???? dann $\partial_t=\rho^*\partial_x$???
 Sei $\cM_{\hat K}$ ein endlich dimensionaler $\Cfxl$ Vektorraum ausgestattet mit
 einem Zusammenhang $\nabla$.
 %
-\begin{defn}[pull-back] \label{defn:pull-back}
+\begin{defn}[Pullback] \label{defn:pull-back}
 \begin{comment}
 \cite[1.a]{sabbah_Fourier-local} und
 \cite[Page 34]{sabbah_cimpa90}
 \end{comment}
-Der \emph{pull-back} oder das \emph{inverse Bild} $\rho^{+}\cM_{\hat K}$ von
+Der \emph{Pullback} oder das \emph{inverse Bild} $\rho^{+}\cM_{\hat K}$ von
 $(\cM_{\hat K},\nabla)$ ist der Vektorraum
 \[
 \rho^{*}\cM_{\hat K}:=\hat L\otimes_{\hat K}\cM_{\hat K}
 \bydef\Cftl\otimes_{\Cfxl}\cM_{\Cfxl}
 \]
- mit dem \emph{pull-back Zusammenhang} $\rho^*\nabla$ definiert durch
+ mit dem \emph{Pullback Zusammenhang} $\rho^*\nabla$ definiert durch
 %TODO: ist das der Zusammenhang oder die Wirkung oder was?
 \begin{equation} \label{eq:pull-back-zusammenhang}
 \partial_t(1\otimes m):=\rho'(t)\otimes\partial_xm \,.
 \end{equation}
 \end{defn}
-Für ein allgemeines $\phi\otimes m\in \rho^{*}\cM_{\hat K}$ gilt somit
+\begin{bem}
+\begin{itemize}
+\item Wir sagen ein Pullback ist vom Grad $q$, falls $\deg(\rho)=q$.
+\item Für ein allgemeines $\phi\otimes m\in \rho^{*}\cM_{\hat K}$ gilt
 \begin{equation} \label{eq:pull-back-zusammenhang-2}
 \partial_t(\phi\otimes m):=\rho'(t)(\phi\otimes\partial_xm) +
   \frac{\partial\phi}{\partial t}\otimes m \,.
 \end{equation}
+\end{itemize}
+\end{bem}
 \begin{comment}
-Nun wollen wir uns noch genauer mit dem pull-back beschäftigen, und stellen uns
+Nun wollen wir uns noch genauer mit dem Pullback beschäftigen, und stellen uns
 die Frage:
-\paragraph{Wie sieht die Wirkung der Derivation auf dem pull-back Zusammenhang
+\paragraph{Wie sieht die Wirkung der Derivation auf dem Pullback Zusammenhang
 aus?} Für $\rho(t)=t^p$ betrachten wir beispielsweise ein Element der Form
 $f(x)m=f(\rho(t))m\in\rho^*\cM_{\hat K}$, dann gilt
 \begin{align*}
@@ -176,10 +181,10 @@ Wirkung von $\rho'(t)^{-1}\partial_t$ ist. In der Tat ist dies, nach dem
 folgenden Satz, wahr.
 \end{comment}
 
-Der folgende Satz zeigt, wie sich mit dem pull-back rechnen lässt, bzw.
+Der folgende Satz zeigt, wie sich mit dem Pullback rechnen lässt, bzw.
 wie man konkret ein entsprechendes Minimalpolynom berechnen kann.
 \begin{thm} \label{thm:pull-back-berechnung}
-%Wie erhält man den pull-back Zusammenhang bzw. wie ist er berechenbar?
+%Wie erhält man den Pullback Zusammenhang bzw. wie ist er berechenbar?
 In der Situation von Lemma \ref{defn:pull-back}, mit
 $\cM_{\hat K}=\cD_{\hat K}/\cD_{\hat K}\cdot P(x,\partial_x)$ für ein
 $P(x,\partial_x)\in\cD_{\hat K}$, gilt
@@ -544,7 +549,7 @@ Betrachte dazu die kurze Sequenz
 ist exakt, weil $\cM_{\hat K } \cong\cD_{\hat K }\Big/\cD_{\hat K }\cdot
 P=\coker(\_\cdot P)$.  Weil $\hat L$ flach über den Körper $\hat K$ ist, ist
 auch, nach Anwenden des Funktors $\hat L\otimes_{\hat K}\_$, die Sequenz
-%TODO: Funktorialität von Pull-Back? NEIN: Funktorialität von tensor
+%TODO: Funktorialität von Pullback? NEIN: Funktorialität von tensor
 \begin{center}
 \begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
   \matrix (m) [
@@ -684,14 +689,14 @@ H(P'(t,\partial_t)) &=H(P(\rho(t),\rho'(t)^{-1}\partial_t))
 \end{proof}
 \end{comment}
 %
-Hier nun ein explizit berechneter pull-back.
+Hier nun ein explizit berechneter Pullback.
 \begin{exmp}\label{exmp:Pull-Back}
 Wir wollen $\cM_{\hat K}:=\cD_{\hat K}/\cD_{\hat K}\cdot P$ bzgl. $P:=
 x^3\partial_x^2-4x^2\partial_x-1$ betrachten.
 Unser Ziel ist es, hier ganzzahlige Slopes zu erhalten.
 %TODO: erkläre wieso --> Elementare Zusammenhänge
 Es gilt $\slopes(P)=\{\frac{1}{2}\}$ (siehe Abbildung \ref{fig:Pull-Back1}).
-Wende den pull-back mit $\rho:t\rightarrow x:=t^2$ an.
+Wende den Pullback mit $\rho:t\rightarrow x:=t^2$ an.
 Zunächst einige Nebenrechnungen, damit wir Satz
 \ref{thm:pull-back-berechnung} einfacher anwenden können:
 \begin{align*}
@@ -746,12 +751,12 @@ $\rho^*\cM_{\hat K}=\cD_{\hat L}/\cD_{\hat L}
 \end{exmp}
 
 Sei $\cN_{\hat L}$ ein endlich dimensionaler $\hat L$-VR mit Verknüpfung, so
-definiere den push-forward wie folgt.
+definiere den Pushforward wie folgt.
 \begin{comment}
 TODO: korregieren, besser formulieren
 \end{comment}
-\begin{defn}[push-forward]
-Der \emph{push-forward} oder das \emph{direktes Bild} $\rho_+\cN_{\hat L}$ von
+\begin{defn}[Pushforward]
+Der \emph{Pushforward} oder das \emph{direktes Bild} $\rho_+\cN_{\hat L}$ von
 $\cN_{\hat L}$ ist
 \begin{itemize}
 \item der $\hat K$-VR $\rho_*\cN$ ist definiert als der $\C$-Vektor Raum
@@ -791,7 +796,7 @@ $\rho'(t)^{-1}\partial_t$.
   \caption{Newton-Polygon zu $\rho_+P$}
   \label{fig:Push-Forward2}
   \end{minipage}
-\begin{exmp}[push-forward]\label{exmp:Push-Forward}
+\begin{exmp}[Pushforward]\label{exmp:Push-Forward}
 %ACHTUNG: variablem müssen noch geändert werden!\\
 %ACHTUNG: wenn das hier richtig wäre, müsste es zu einer dimensionsänderung
          %kommen!\\

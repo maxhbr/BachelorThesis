@@ -81,11 +81,11 @@ P_{\phi}(x,\partial_x) &=\cF_Q(x^{-1},-x^2\partial_x)
   & \in \C[x]<\partial_x>
 \end{align*}
 \end{proof}
-\begin{comment}
-Im Anhang \ref{chap:zu-rezept} wird das $(x^2\partial_x)^{k}$ genauer
-diskutiert. Dies führt aber hier an dieser Stelle nicht mehr weiter in die
-gewünschte Richtung.
-\end{comment}
+\iffalse
+  Im Anhang \ref{chap:zu-rezept} wird das $(x^2\partial_x)^{k}$ genauer
+  diskutiert. Dies führt aber hier an dieser Stelle nicht mehr weiter in die
+  gewünschte Richtung.
+\fi
 \begin{bem}
 Nach \cite[Chap 4]{comtet1974advanced} lässt sich $(x^2\partial_x)^k$, mittels
 ausnutzen der Stirling-Zahlen, wie folgt umschreiben:
@@ -100,7 +100,8 @@ TODO: prüfen für kleine zahlen!!!
 \end{bem}
 
 \begin{lem}
-Es gilt $\cP(\cM_{\phi})=\{\frac{q}{q+1}\}$.
+Zu einem $\phi=\sum_{k\in I}\frac{a_k}{t^{k}}$ gilt
+$\cP(\cM_{\phi})=\{\frac{q}{q+1}\}$, wobei $q=\max(I)$.
 \end{lem}
 \begin{proof}
 \begin{comment}
@@ -108,12 +109,11 @@ Es gilt $\cP(\cM_{\phi})=\{\frac{q}{q+1}\}$.
 \end{comment}
 Um zu zeigen, dass die Behauptung gilt, formen wir $P_{\phi}$ um und isolieren
 die Monome, die für das Newton-Polygon nicht von Bedeutung sind und deshalb
-vernachlässigt werden können. Betrachte dazu die konvexen Hüllen, die wie in
-Abschnitt \ref{sec:NewtonPolygon} konstruiert werden. Sei $q:=\max(I)$.
+vernachlässigt werden können. Betrachte dazu die konvexe Hülle zu $P_\phi$,
+die wie in Abschnitt \ref{sec:NewtonPolygon} konstruiert wird.
 \begin{align*}
 H\Big(P_{\phi}(x,\partial_x)\Big) &= H\Big(\myubracket{(-x^2\partial_x)^{q}}
   (x\partial_x-1) + \sum_{k\in I}k a_k(-x^2\partial_x)^{q-k}\Big)
-%TODO: QUELLE!
 \\&= H\Big(\myobracket{(-1)^q(x^{2q}\partial_x^q
   + \underset{\text{liefern keinen Beitrag}}{
   \underbrace{\textbf{T.i.Q. von }x^{2q}\partial_x^q}})}
@@ -131,10 +131,11 @@ H\Big(P_{\phi}(x,\partial_x)\Big) &= H\Big(\myubracket{(-x^2\partial_x)^{q}}
   \underbrace{qx^{2q}\partial_x^{q} - x^{2q}\partial_x^q}}}
   +\myubracket{ \sum_{k\in I}k a_k(-x^2\partial_x)^{q-k}} \Big)
 \\&= H\Big(x^{2q + 1}\partial_x^{q + 1} +\myobracket{ qa_q
-  + \sum_{k\in I\backslash\{q\}}k a_k(-x^2\partial_x)^{q-k}} \Big)
+  + \underset{(\star)}{\underbrace{
+  \sum_{k\in I\backslash\{q\}}k a_k(-x^2\partial_x)^{q-k}}}} \Big)
 \end{align*}
-Nun wollen wir noch zeigen, dass die Summe auch vernachlässigt werden kann.
-\paragraph{Behauptung:} Es gilt
+Nun wollen wir noch zeigen, dass die Summe $(\star)$ auch vernachlässigt werden
+kann.  \paragraph{Behauptung:} Es gilt
 \[
 H\Big(x^{2q + 1}\partial_x^{q + 1} + qa_q
   + \sum_{k\in I\backslash\{q\}}k a_k(-x^2\partial_x)^{q-k} \Big)
@@ -201,13 +202,13 @@ N\Big(P_{\phi}(x,\partial_x)\Big)
 womit die Behauptung des Lemmas folgt und das Newton-Polygon wie in Abbildung
 \ref{fig:Newton-PolygonP_phi} aussieht.
 \end{proof}
-Also ist, nach Lemma \ref{lem:slope-pb-multiplikation}, ein pull-back mit Grad
+Also ist, nach Lemma \ref{lem:slope-pb-multiplikation}, ein Pullback mit Grad
 $q+1$ hinreichend, um einen ganzzahligen Slope zu bekommen. Denn wir wissen,
-dass nach Anwenden eines solchem pull-backs die Slopes mit ${q+1}$
+dass nach Anwenden eines solchem Pullbacks die Slopes mit ${q+1}$
 multipliziert werden, also gilt $\cP(\rho^+\cM_\phi)=\{q\}\subset\N$.
 \begin{lem}
 Im Fall $\phi=\frac{a}{t^{q}}$ ist mit $\rho:t\mapsto x:=-(q+1) t^{q+1}$ der
-pull-back gegeben durch
+Pullback gegeben durch
 \[
 \rho^+\cM_\phi =\cD_{\hat K}/\cD_{\hat K} \cdot((t^{q+2}\partial_t)^{q}
     (t\partial_t-(q+1))+(q+1)qa) \,.
@@ -244,7 +245,7 @@ und sei $\rho:t\mapsto x:=-(q+1) t^{q+1}$. Damit gilt
 \end{proof}
 \begin{comment}
 \begin{cor}
-Ordnung vom pull-back ist $0$
+Ordnung vom Pullback ist $0$
 \end{cor}
 \end{comment}
 Das so erhaltene $\rho^+\cM_\phi$ wollen wir, wenn nötig, noch weiter
@@ -751,7 +752,7 @@ L}\cdot Q_2\otimes\sE^{-\psi(t)}$:
 Damit ist der zweite Summand also auch ein elementarer meromorpher
 Zusammenhang.
 \end{comment}
-Also zerlegt sich $\cM$, nach einem pull-back mit $\rho:t\mapsto x=-2t^2$, in
+Also zerlegt sich $\cM$, nach einem Pullback mit $\rho:t\mapsto x=-2t^2$, in
 \[
 \rho^+\cM_{\phi} = \Bigg(
   \underset{=:\cR_1}{\underbrace{\cD_{\hat L}/\cD_{\hat L}\cdot \Big(\partial_t

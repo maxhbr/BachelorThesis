@@ -2,23 +2,24 @@
 % das gleiche wie Meromorphe zusammenhänge?
 
 \chapter{Moduln über $\cD_k$}
-In diesem Kapittel wird die Weyl Algebra, wie in
-\cite[Chapter~1]{sabbah_cimpa90}, in einer Veränderlichen einführen. Ähnlich
-wie auch in \cite[Kapittel~2]{ZulaBarbara}. Allgemeiner und in
-mehreren Veränderlichen wird die Weyl-Algebra beispielsweise in
-\cite[Chapter~1]{coutinho1995primer} definiert.
+In diesem Kapitel wird die Weyl Algebra, wie in
+\cite[Chapter~1]{sabbah_cimpa90} oder in \cite[Kapittel~2]{ZulaBarbara} , in
+einer Veränderlichen einführen.  Allgemeiner und in mehreren Veränderlichen
+wird die Weyl-Algebra beispielsweise in \cite[Chapter~1]{coutinho1995primer}
+definiert.
 
 \begin{defn}[Kommutator]%zula seite 15
 Sei $R$ ein Ring. Für $a,b\in R$ wird
-\[[a,b]=a\cdot b-b\cdot a\]
+\[[a,b]:=a\cdot b-b\cdot a\]
 als der \emph{Kommutator von a und b} definiert.
 \end{defn}
 % komutativ, dann immer kommutator gleich 0
 
 \begin{prop} \label{prop:d-modul-komutator-regeln}
-Sei $k= \C[x]$ (bzw. $\Ckx$ bzw. $\Cfx$) ein Ring der Potenzreihen in $x$ über
-$\C$. Sei $\partial_x:k\rightarrow k$ der gewohnte Ableitungsoperator nach $x$,
-so gilt 
+Sei $k= \C[x]$ (bzw. $\Ckx$ bzw. $\Cfx$) ein Ring der Polynome (bzw. der
+konvergenten Potenzreihnen bzw. der formalen Potenzreihen) in $x$ über $\C$.
+Sei $\partial_x:k\rightarrow k$ der gewohnte Ableitungsoperator nach $x$, so
+gilt
 % geklaut aus Zula Barbara
 \begin{enumerate}
 \item $[ \partial_x,x] = \partial_xx-x\partial_x=1 $
@@ -50,7 +51,7 @@ $g\in k$:
   f(\partial_xg)}-f(\partial_xg)
 \\&= (\partial_xf)g \,.
 \end{align*}
-Der rest der Proposition wird beispielsweise in \cite[1.2.4.]{sabbah_cimpa90}
+Der Rest der Proposition wird beispielsweise in \cite[1.2.4.]{sabbah_cimpa90}
 oder \cite[Kor 2.8]{ZulaBarbara} bewiesen.
 \end{proof}
 
@@ -60,10 +61,10 @@ oder \cite[Kor 2.8]{ZulaBarbara} bewiesen.
 Sei dazu $\frac{\partial}{\partial x}=\partial_x$ der Ableitungsoperator nach
 $x$ und sei $f \in \C[x]$ (bzw. $\Ckx$ bzw. $\Cfx$).
 Man hat die folgende
-Kommutations-Relation zwischen dem \emph{Ableitungsoperator} und dem
-\emph{Multiplikations Operator} $f$:
+Kommutationsrelation zwischen dem \emph{Ableitungsoperator} und dem
+\emph{Multiplikationsoperator} $f$:
 \begin{equation}\label{eq:weyl_relation}
-[\frac{\partial}{\partial x},f]=\frac{\partial f}{\partial x}
+\left[\frac{\partial}{\partial x},f\right]=\frac{\partial f}{\partial x} \,,
 \end{equation}
 wobei die rechte Seite die Multiplikation mit $\frac{\partial f}{\partial x}$,
 also dem bereits abgeleiteten $f$, darstellt. Dies bedeutet, für alle
@@ -83,18 +84,18 @@ $g\in\C[x]$ hat man
 \end{align*}
 \begin{defn}
 Definiere nun den Ring $\cD_k$ als die Quotientenalgebra der freien Algebra,
-welche von dem Koeffizientenring in $k$ zusammen mit dem Element $\partial_x$,
-erzeugt wird, Modulo der Relation \eqref{eq:weyl_relation}.  Wir schreiben
+welche von dem Koeffizientenring in $k$ zusammen mit dem Element $\partial_x$
+erzeugt wird, modulo der Relation \eqref{eq:weyl_relation}.  Wir schreiben
 diesen Ring auch als:
 \begin{itemize}
-\item $A_1(\C)$ falls $k=\C[x]:=\{ \sum^{N}_{i=1}a_ix^i \mid N\in \N \}$, und
+\item $A_1(\C)$, falls $k=\C[x]:=\{ \sum^{N}_{i=0}a_ix^i \mid N\in \N \}$, und
 nennen ihn die \emph{Weyl Algebra}.
-\item $\cD$ falls $k=\C\{x\}:=\{ \sum^{\infty}_{i=1}a_ix^i \mid \mbox{pos.
+\item $\cD$, falls $k=\C\{x\}:=\{ \sum^{\infty}_{i=0}a_ix^i \mid \mbox{pos.
 Konvergenzradius}\}$ die konvergenten Potenzreihen.
-\item $\hat\cD$ falls $k=\Cfx:=\{\sum^{\infty}_{i=1}a_ix^i\}$ die formalen
+\item $\hat\cD$, falls $k=\Cfx:=\{\sum^{\infty}_{i=0}a_ix^i\}$ die formalen
 Potenzreihen.
-\item $\cD_K$ falls $k=K:=\Ckxl:=\C\{x\}[x^{-1}]$ der Ring der Laurent Reihen.
-\item $\cD_{\hat K}$ falls $k=\hat K:=\Cfxl:=\Cfx[x^{-1}]$ der Ring der
+\item $\cD_K$, falls $k=K:=\Ckxl:=\C\{x\}[x^{-1}]$ der Ring der Laurent Reihen.
+\item $\cD_{\hat K}$, falls $k=\hat K:=\Cfxl:=\Cfx[x^{-1}]$ der Ring der
 formalen Laurent Reihen\footnote{Wird in \cite{ZulaBarbara} mit $\hat\cD_{\hat
 K}$ bezeichnet.}.
 \end{itemize}
@@ -102,8 +103,8 @@ K}$ bezeichnet.}.
 \begin{bem}
 \begin{enumerate}
 \item Es bezeichnet der Hut ($ \, \hat \,\, $) das jeweils formale Pendant
-zu einem konvergentem Objekt. Dementsprechend könnte man auch $\Cfx$ für
-$\hat{\Ckx}$ schreiben.
+zu einem konvergenten Objekt. Dementsprechend könnte man auch $\hat{\Ckx}$ für
+$\Cfx$ schreiben.
 \item Es gilt $\cD[x^{-1}]=\cD_K$ und $\hat \cD[x^{-1}]=\cD_{\hat K}$.
 \item Offensichtlich erhält $\cD_k$ in kanonischer Weise eine nichtkommutative
 Ringstruktur, dies ist in \cite[Kapittel 2 Section 1]{ZulaBarbara} genauer
@@ -113,7 +114,7 @@ ausgeführt.
 \begin{bem} \label{bem:konvToFormal}
 Jede Aussage bzw. Definition, die in dieser Arbeit über $K$ bzw. $\cD_K$
 getroffen wird, gilt auch über $\hat K$ bzw. $\cD_{\hat K}$. Die andere
-Richtung gilt allgemein nicht.
+Richtung gilt im Allgemeinen nicht.
 \end{bem}
 
 \begin{prop} \label{prop:weyl_eindeutige_schreibung}
@@ -139,7 +140,7 @@ erst Filtrierung definieren und dadurch dann den Grad?
 \end{comment}
 \begin{defn}
 Sei $P=\sum_{i=0}^na_i(x)\partial_x^i$, wie in Proposition
-\ref{prop:weyl_eindeutige_schreibung}, gegeben, so definiere
+\ref{prop:weyl_eindeutige_schreibung} gegeben, so definiere
 \[
 \deg P:=\max\Big\{\{i\mid a_i\neq 0\}\cup\{-\infty\}\Big\}
 \]
@@ -237,31 +238,30 @@ die $\C[x,\partial_x]$-Moduln. Sie werden geschrieben als $\cD-mod(\A^1)$
 %\section{(Links-) $\cD$-Moduln}
 Da $\cD$ ein nichtkommutativer Ring ist, muss man vorsichtig sein und zwischen
 Links- und Rechts-$\cD$-Moduln unterscheiden.
-Wenn im folgendem von $\cD$-Moduln gesprochen wird, werden immer
-%, wie auch \cite[Chapter 1.6.]{arapuraNotes},
+Wenn im Folgendem von $\cD$-Moduln gesprochen wird, sind immer
 Links-$\cD$-Moduln gemeint.
 
 \begin{exmp}
 Hier einige Beispiele für (Links-) $\cD$-Moduln
 \begin{enumerate}
 %
-\item $\cD$ ist ein Links- und Rechts-$\cD$-Modul
+\item $\cD$ ist ein Links- und Rechts-$\cD$-Modul.
 %
-\item $\cM=\C[x]$ oder $\cM=\C[x,x^{-1}]$ jeweils durch $x\cdot x^{m}=x^{m+1}$
-und $\partial(x^m)=mx^{m-1}$
+\item $\cM=\C[x]$ oder $\cM=\C[x,x^{-1}]$ mit jeweils $x\cdot x^{m}=x^{m+1}$
+und $\partial_x(x^m)=mx^{m-1}$ ist ein Links-$\cD$-Modul.
 %
-\item Führe formal, also ohne analytischen Hintergrund, ein Objekt
+\item Führt man formal, also ohne analytischen Hintergrund, ein Objekt
 $\exp(\lambda x)$ ein, mit $\partial(f(x)\exp(\lambda x))=\frac{\partial
-f}{\partial x}\exp(\lambda x)+f\lambda\exp(\lambda x)$.  So ist
+f}{\partial x}\exp(\lambda x)+f\lambda\exp(\lambda x)$, so ist
 $\cM=\C[x]\exp(\lambda x)$ ein $\cD$-Modul.
 %
 \begin{comment}
 \cite[Exmp 2.2]{ArkhipovDmod}
 \end{comment}
-\item Führe analog ein Symbol $\log(x)$ mit den Eigenschaften
-$\partial_x\log(x)=\frac{1}{x}$ ein. Erhalte nun das $\cD$-Modul
+\item Führt man analog ein Symbol $\log(x)$ mit den Eigenschaften
+$\partial_x\log(x)=\frac{1}{x}$ ein, so erhält man nun den $\cD$-Moduln
 $\C[x]\log(x)+\C[x,x^{-1}]$. Dieses Modul ist über $\cD$ durch $\log(x)$
-erzeugt und man hat
+erzeugt und es gilt
 \[
 \C[x]\log(x)+\C[x,x^{-1}]=\cD\cdot\log(x)=\cD\slash\cD(\partial_x x\partial_x) \,.
 \]
@@ -290,13 +290,13 @@ endlich dimensionaler Vektorraum ist, so ist schon $\cM=\{0\}$.
 \end{comment}
 
 \section{Holonome $\cD_k$-Moduln}
-Hier werden die Holonomen $\cD_k$-Moduln nur sehr einfach und ohne viel
-Hintergrund eingeführt, da wir diese Theorie nicht benötigen. Eine
+In diesem Abschitt werden die Holonomen $\cD_k$-Moduln nur sehr einfach und
+ohne großen Hintergrund eingeführt, da wir diese Theorie nicht benötigen. Eine
 detailreichere Definition ist bei \cite[Def. 3.3.1]{sabbah_cimpa90} zu finden.
 \begin{defn}
 Sei $\cM_k$ ein Links-$\cD_k$-Modul ungleich $\cD_k$. $\cM_k$ heißt
-\emph{holonom}, falls es ein Torsions-Element $m\in\cM_k$ gibt, das $\cM_k$ als
-$\cD_k$-Modul erzeugt. Im speziellen folgt damit, dass $\cM_k\cong
+\emph{holonom}, falls es ein Torsionselement $m\in\cM_k$ gibt, das $\cM_k$ als
+$\cD_k$-Moduln erzeugt. Im Speziellen folgt damit, dass $\cM_k\cong
 \cD_k/\mathfrak{a}$ für ein $0\neq\mathfrak{a}\vartriangleleft\cD_k$.
 \end{defn}
 \begin{bem}
@@ -317,14 +317,14 @@ Nach \cite[Prop 10.1.1]{coutinho1995primer} gilt
 \end{itemize}
 und laut \cite[Thm. 4.2.3]{sabbah_cimpa90} gilt, dass
 \begin{itemize}
-\item für ein holonomes $\cD_{\C\{x\}}$-Modul $\cM_{\C\{x\}}$
-(bzw. ein $\cD_{\Cfx}$-Modul $\cM_{\Cfx}$)
+\item für einen holonomen $\cD_{\C\{x\}}$-Modul $\cM_{\C\{x\}}$
+(bzw. einen $\cD_{\Cfx}$-Moduln $\cM_{\Cfx}$)
 ist die Lokalisierung
 \begin{align*}
 \cM_{\C\{x\}}[x^{-1}]&:=\cM_{\C\{x\}}\otimes_{\C\{x\}}K
 &&\text{(bzw. }\cM_{\Cfx}[x^{-1}]:=\cM_{\Cfx}\otimes_{\Cfx}\hat K\text{ ),}
 \end{align*}
-mit der $\cD_{\C\{x\}}$ (bzw. $\cD_{\Cfx}$) Modul Struktur durch
+mit der $\cD_{\C\{x\}}-$ (bzw. $\cD_{\Cfx}$-) Modul-Struktur durch
 \[
 \partial_x(m\otimes x^{-k})=((\partial_xm)\otimes x^{-k})-km\otimes x^{-k-1}
 \]
