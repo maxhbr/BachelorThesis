@@ -28,7 +28,7 @@ matrix of math nodes
 
 \end{tikzpicture}
 \end{center}
-Zum Schluss des Kapittels werden noch die Newton-Polygone eingeführt, welche
+Zum Schluss des Kapitels werden noch die Newton-Polygone eingeführt, welche
 als Invarianten für meromorphe Zusammenhänge fungieren sollen.
 
 \begin{comment}
@@ -319,9 +319,9 @@ auch in \cite[Sec 3]{sabbah_cimpa90} betrachtet.
 
 \section{Äquivalenz zu holonomen lokalisierten $\cD$-Moduln}
 \begin{lem}[Lemma vom zyklischen Vektor] \label{lem:Zyklischer-Vektor}
-Sei $\cM_K$ ein meromorpher Zusammenhang. Es existiert ein Element
+Sei $(\cM_K,\partial)$ ein meromorpher Zusammenhang. Es existiert ein Element
 $m\in\cM_K$ und eine ganze Zahl $d$ so dass
-$m,\partial_xm,\dots,\partial_x^{d-1}m$ eine $K$-Basis von $\cM_K$ ist.
+$m,\partialm,\dots,\partial^{d-1}m$ eine $K$-Basis von $\cM_K$ ist.
 \end{lem}
 
 \begin{proof}
@@ -346,18 +346,32 @@ Dieses so definierte Minimalpolynom ist nicht eindeutig.
 \begin{prop} \label{prop:Zyklischer-Vektor}
 In der Situation von Lemma \ref{lem:Zyklischer-Vektor} sei
 \begin{align*}
-\partial_x^d m&= \alpha_{d-1}\partial_x^{d-1}m + \alpha_{d-2}\partial_x^{d-2}m
-  + \cdots + \alpha_1\partial_xm + \alpha_0m \,, & \alpha_i\in K
+\partial^d m&= \alpha_{d-1}\partial^{d-1}m + \alpha_{d-2}\partial^{d-2}m
+  + \cdots + \alpha_1\partial m + \alpha_0m \,, & \alpha_i\in K
 \end{align*}
-eine Basisdarstellung von $\partial_x^dm$, dann ist
+eine Basisdarstellung von $\partial^dm$, dann ist
 \begin{align*}
-\Big( \underset{=:P}{\underbrace{
+\cM_K\cong
+\cD_K/\cD_K\Big( \underset{=:P}{\underbrace{
   \partial_x^d-\alpha_{d-1}\partial_x^{d-1}-\alpha_{d-2}\partial_x^{d-2}
-  - \cdots - \alpha_1\partial_x - \alpha_0 }} \Big)m&=0 \,.
+  - \cdots - \alpha_1\partial_x - \alpha_0 }} \Big)\,.
 \end{align*}
+\begin{comment}
 Da der $\partial_x$-Grad von $P$ gleich $d$ ist, folgt, dass $P$ ein
 Minimalpolynom ist. Also gilt damit $\cM_K\cong\cD_K/\cD_K\cdot P$.
+\end{comment}
 \end{prop}
+\begin{proof}[Beweisskizze]
+Betrachte die surjektive Abbildung 
+\[
+\phi:\cD_K\rightarrow\cD_K\,, \sum_{i=0}^\infty a_i(x)\partial_x^i 
+  \mapsto \sum_{i=0}^\infty a_i(x)\partial_x^im \,.
+\]
+Nachdem gezeigt wurde, das $\phi$ $K$-Linear ist, reicht es zu zeigen, dass
+$\ker(\phi)=\cD\cdot P$. Nun folgt die Behauptung nach dem Homomorphiesatz.
+Vergleiche dazu \cite[Satz 4.12]{ZulaBarbara}.
+\end{proof}
+
 \begin{comment}
 \begin{prop}
 In der Situation von Lemma \ref{lem:Zyklischer-Vektor} gibt es ein $P\in
@@ -426,9 +440,9 @@ Jedes $P\in \cD_{\hat K}$, also insbesondere auch jedes $P\in\cD_K$, lässt sich
 nach Proposition \ref{prop:weyl_eindeutige_schreibung} eindeutig als
 \[
 P=\sum^{n}_{k=0}a_k(x)\partial_x^k
-=\sum^{n}_{k=0}\Big(\sum^{\infty}_{l=-N}{\alpha_{kl}x^l\Big)\partial_x^k} 
+=\sum^{n}_{k=0}\left(\sum^{\infty}_{l=-N}{\alpha_{kl}x^l\right)\partial_x^k} 
 \]
-mit $a_k\in \hat K$ bzw. $\alpha_{kl}\in\C$ schreiben. Betrachte das zu $P$
+mit $a_k(x)\in \hat K$ bzw. $\alpha_{kl}\in\C$ schreiben. Betrachte das zu $P$
 dazugehörige
 \begin{align*}
 H(P):&=\underset{m,l\mbox{ \footnotesize mit }\alpha_{ml}\neq0}{\bigcup}
@@ -440,14 +454,14 @@ H(P):&=\underset{m,l\mbox{ \footnotesize mit }\alpha_{ml}\neq0}{\bigcup}
 
 \begin{defn} \label{defn:NP}
 Das Randpolygon der konvexen Hülle $\conv(H(P))$ von $H(P)$ heißt das
-\emph{Newton-Polygon} von $P$ und wird als $N(P)$ geschrieben.
+\emph{Newton-Polygon} von $P$ und wird mit $N(P)$ bezeichnet.
 \end{defn}
 
 \begin{bem}
 Claude Sabbah definiert das Newton-Polygon in \cite[5.1]{sabbah_cimpa90}
 auf eine andere Weise. Er schreibt
 \[
-P=\sum_ka_k(x)(x\partial_x)^k
+P=\sum_{k=0}^n a_k(x)(x\partial_x)^k
 \]
 mit $a_k(x)\in \Ckx$ und definiert das Newton-Polygon als das
 Randpolygon der konvexen Hülle von
@@ -455,24 +469,25 @@ Randpolygon der konvexen Hülle von
 H'(P):=\underset{m\mbox{ \footnotesize mit }a_{m}\neq0}{\bigcup}
   \Big( (m,deg(a_m)) + \R_{\leq 0}\times \R_{\geq 0} \Big) \subset \R^2 \,.
 \]
-Es bemerkt auch, das seine Definition, bis auf möglicherweise vertikales
-verschieben, zu Definition \ref{defn:NP} äquivalent ist.
+Er bemerkt auch, dass seine Definition, bis auf möglicherweise vertikale
+Verschiebung, zu Definition \ref{defn:NP} äquivalent ist.
 %TODO: zeige, das beide Definitionen gleich sind
 \end{bem}
 
 \begin{defn} % aus der zula
-Die Menge $\slopes(P)$ (genannt \emph{Slopes}) sind die nicht-vertikalen
-Steigungen von $N(P)$, die sich echt rechts von $\{0\}\times\R$ befinden.
+Die Menge $\slopes(P)$ (genannt \emph{Slopes von $P$}) sind die
+nicht-vertikalen Steigungen von $N(P)$, die sich in der rechten Halbebene
+befinden.
 % der $y$-Achse
 %TODO: bessere Formulierung
 \begin{itemize}
-\item Schreibe $\cP(\cM)$ für die Menge der zu $\cM$ gehörigen Slopes.
 \item P heißt \emph{regulär} oder \emph{regulär singulär} $:\Leftrightarrow$
 $\slopes(P)=\{0\}$ oder $\deg P=0$, sonst \emph{irregulär singulär}.
 \item Ein meromorpher Zusammenhang $\cM_{\hat K}$ (bzw. $\cM_K$) heißt regulär
 singulär, falls es ein regulär singuläres $P\in \cD_{\hat K}$ (bzw. $P\in
 \cD_K$) gibt, mit $\cM_{\hat K}\cong\cD_{\hat K}/\cD_{\hat K}\cdot P$ (bzw.
 $\cM_K\cong\cD_K/\cD_K\cdot P$).
+\item Schreibe $\cP(\cM)$ für die Menge der zu $\cM$ gehörigen Slopes.
 \end{itemize}
 \end{defn}
 
@@ -484,7 +499,7 @@ dass
 \begin{align*}
 \textcolor{blue}m &= \textcolor{blue}2 &
 \text{und}&&
-\textcolor{red}l  &= \textcolor{red}1
+\textcolor{red}l  &= \textcolor{red}1 \,,
 \end{align*}
 so dass
 \[
@@ -498,10 +513,10 @@ Offensichtlich ist $\slopes(P_1)=\{0\}$ und damit ist $P_1$ regulär singulär.
 \begin{comment}
 \cite[Bsp 5.3. 2.]{ZulaBarbara}
 \end{comment}
-Sei $P_2=x^4(x+1)\partial_x^4+x\partial_x^2+\frac{1}{x}\partial_x+1$, so kann
-man das entsprechende Newton-Polygon konstruieren.
+Sei $P_2=x^4(x+1)\partial_x^4+x\partial_x^2+\frac{1}{x}\partial_x+1$.
 Das Newton-Polygon wurde in Abbildung \ref{fig:Newton-Polygon2} visualisiert.
 Man erkennt, dass $\cP(P_2)=\{0,\frac{2}{3}\}$ ist.
+Also ist $P_2$ irregulär singulär.
 \end{enumerate}
 \begin{figure}[htbp] 
   \begin{minipage}[hbt]{0,49\textwidth}
@@ -548,16 +563,15 @@ $\cD_K\cdot P=\cD_K\cdot (f\cdot P)\vartriangleleft \cD_K$.
 Allerdings sind die zugehörigen Newton-Polygone möglicherweise vertikal
 verschoben.\\
 Nach \cite[Seite 25]{sabbah_cimpa90} gilt, dass das Newton-Polygon, bis auf
-vertikales Verschieben, nur von dem assoziierten meromorphen Zusammenhang
-abhängt.
+vertikales Verschieben, nur vom assoziierten meromorphen Zusammenhang abhängt.
 Dies wird auch in \cite[Bem 5.4]{ZulaBarbara} thematisiert.
 \end{bem}
 
 \begin{defn}
 Seien $\epsilon x^{p}\partial_x^{q}$ und $\epsilon' x^{p'}\partial_x^{q'}$ zwei
-Monome aus $\cD_{K}$, also mit $\epsilon, \epsilon'\in \C$ und $p,q,p',q'
-\in \Z$. Man sagt, dass $\epsilon' x^{p'}\partial_x^{q'}$ ein \emph{Term im
-Quadranten} von $\epsilon x^{p}\partial_x^{q}$ ist, falls $p'\geq p$ und
+Monome aus $\cD_{K}$, also mit $\epsilon, \epsilon'\in \C$, $p,p' \in \Z$ und
+$q,q'\in \N_0$. Man sagt, dass $\epsilon' x^{p'}\partial_x^{q'}$ ein \emph{Term
+im Quadranten} von $\epsilon x^{p}\partial_x^{q}$ ist, falls $p'\geq p$ und
 $q'\leq q$ gilt.
 \begin{comment}
 In einem Polynom
@@ -581,36 +595,36 @@ H(\epsilon x^{p}\partial_x^{q})
 \item Sei $P$ ein Polynom, bei dem alle Koeffizienten im Quadranten von
 $\epsilon x^{p}\partial_x^{q}$ sind, dann gilt:
 \begin{align*}
-H(P)&=H(\epsilon x^{p}\partial_x^{q} + \textbf{T.i.Q. von }x^{p}\partial_x^{q})
-\\&=H(\epsilon x^{p}\partial_x^{q})
+H(P)&=H(\epsilon x^{p}\partial_x^{q} + \text{T.i.Q. von }x^{p}\partial_x^{q})
+=H(\epsilon x^{p}\partial_x^{q})
 \\\Rightarrow N(P)&=N(\epsilon x^{p}\partial_x^{q}) \,.
 \end{align*}
 Also können Terme, die sich bereits im Quadranten eines anderen Terms
 befinden und nicht der Term selbst sind, vernachlässigt werden, wenn das
-Newton-Polygon gesucht ist. Das \textbf{T.i.Q.} ist eine hier Abkürzung für
-Terme im Quadranten.
+Newton-Polygon gesucht ist. Das \text{T.i.Q.} ist eine hier die Abkürzung für
+\glqq{}Terme im Quadranten\grqq{}.
 \end{itemize}
 \end{bem}
 \begin{bem} \label{bem:commutateWithTiQ}
-Nach \cite{sabbah_cimpa90} gilt sogar, dass beim kommutieren von zwei
-elementen $a,b\in\cD_{\hat K}$ nur Elemente im gemeinsamen Quadranten
-auftauchen, also es gilt
+Nach \cite{sabbah_cimpa90} gilt sogar, dass beim Kommutieren von zwei
+Elementen $a,b\in\cD_{\hat K}$ nur Elemente im gemeinsamen Quadranten
+auftauchen. Es gilt also
 \[
-a\cdot b = b\cdot a +  \textbf{T.i.Q. von }b\cdot a \,.
+a\cdot b = b\cdot a +  \text{T.i.Q. von }b\cdot a \,.
 \]
-Damit sieht man auch, das kommutieren innerhalb von $P$ das Newton-Polygon zu
+Damit sieht man auch, dass Kommutieren innerhalb von $P$ das Newton-Polygon von
 $P$ nicht ändert.
 \end{bem}
 \begin{comment}
 \begin{exmp}
 \[
 (x^a\partial_x^b)^c
-=x^{ac}\partial_x^{bc}+\textbf{T.i.Q. von }x^{ac}\partial_x^{bc}
+=x^{ac}\partial_x^{bc}+\text{T.i.Q. von }x^{ac}\partial_x^{bc}
 \]
 und somit gilt
 \begin{align*}
 N((x^a\partial_x^b)^c)
-  &=N(x^{ac}\partial_x^{bc}+\textbf{T.i.Q. von }x^{ac}\partial_x^{bc})
+  &=N(x^{ac}\partial_x^{bc}+\text{T.i.Q. von }x^{ac}\partial_x^{bc})
 \\&=N(x^{ac}\partial_x^{bc})
 \end{align*}
 \end{exmp}
@@ -644,8 +658,8 @@ $\cP(P)=\cP(P_1)\cup\cP(P_2)$ und $\cP(P_1)\cap\cP(P_2)=\emptyset$
 \end{cor}
 \end{comment}
 
-Ein erster Schritt zur Levelt-Turrittin-Zerlegung ist der folgende Satz, er
-erlaubt es, meromorphe Zusammenhänge \anfzeichen{entlang der Slopes} zu
+Ein erster Schritt zur Levelt-Turrittin-Zerlegung ist der folgende Satz. Dieser
+erlaubt es meromorphe Zusammenhänge \anfzeichen{entlang der Slopes} zu
 zerlegen.
 \begin{thm} \label{thm:Split-after-slopes}
 Sei $\cM_{\hat{K}}$ ein formaler meromorpher Zusammenhang und sei
@@ -662,7 +676,7 @@ Einen Beweis hierfür findet man in \cite[Thm 5.3.1]{sabbah_cimpa90} oder
 \cite[5.15]{ZulaBarbara}.
 \end{proof}
 \begin{bem}
-In Satz \ref{thm:Split-after-slopes} ist es wirklich notwendig, formale
+In Satz \ref{thm:Split-after-slopes} ist es wirklich notwendig formale
 meromorphe Zusammenhänge zu betrachten, denn das Resultat gilt nicht für
 konvergente meromorphe Zusammenhänge.
 \end{bem}

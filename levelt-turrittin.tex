@@ -1,16 +1,16 @@
 %!TeX root = main.tex
 \chapter{Levelt-\!Turrittin-\!Theorem}
-Nun zum wichtigsten Satz in dieser Arbeit. Das Levelt-Turrittin-Theorem sagt,
+Nun zum wichtigsten Satz in dieser Arbeit. Das Levelt-Turrittin-Theorem besagt,
 dass sich jeder meromorphe Zusammenhang $\cM$, nach einem möglicherweise
-nötigem Pullback, in eine direkte Summe von \glqq elementaren\grqq{}
+nötigen Pullback, in eine direkte Summe von \glqq elementaren\grqq{}
 meromorphen Zusammenhängen zerlegen lässt.\\
-Zunächst soll geklärt werden, was die richtigen elementaren meromorphen
-Zusammenhänge sind.
+Zunächst soll geklärt werden, welche Zusammenhänge die \glqq richtigen\grqq{}
+elementaren meromorphen Zusammenhänge sind.
 \section{Elementare meromorphe Zusammenhänge}
 \begin{defn}
 Ein \emph{elementarer regulärer (formaler) meromorpher Zusammenhang} ist ein
 Zusammenhang $\cM$, welcher isomorph zu $\cD_{\hat K}/\cD_{\hat K}\cdot
-(x\partial_x-\alpha)^p$, mit passendem $\alpha$ und $p$, ist.
+(x\partial_x-\alpha)^p$, mit passendem $\alpha\in \C$ und $p\in\N$, ist.
 \end{defn}
 \iffalse
 \begin{figure}[htbp]
@@ -45,21 +45,21 @@ dass die Matrix, die $x\partial_x$ beschreibt, nur Einträge in $\Cfx$ hat.
 Wähle einen zyklischen Vektor $m\in\cM_{\hat K}$ % TODO: richtiger Raum?
  und betrachte die Basis $m,\partial_x m,\dots,\partial_x^{d-1}m$ (siehe Lemma
 \ref{lem:Zyklischer-Vektor}).
-Schreibe $\partial_x^dm=\sum_{i=0}^{d-1}(-b_i(x))\partial_x^im$ in
-Basisdarstellung mit Koeffizienten $b_i\in\hat K$.
+Schreibe $\partial_x^dm=\sum_{i=0}^{d-1}(-b_i(x))\partial_x^im$ mit
+Koeffizienten $b_i\in\hat K$.
 Also erfüllt $m$ die Gleichung
-$\partial_x^dm+\sum_{i=0}^{d-1}b_i(x)\partial_x^im=0$.\\
+$\partial_x^dm+\sum_{i=0}^{d-1}b_i(x)\partial_x^im=0$.
 \begin{comment} TODO: bis hier schon klar \end{comment}
 Tatsächlich kann man, wegen Regularität, $b_i(x)=x^ib_i'(x)$ mit $b_i'\in \Cfx$
-schreiben.\\
+schreiben.
 Dies impliziert, dass $m,x\partial_xm,\dots,(x\partial_x)^{d-1}m$ ebenfalls
-eine Basis von $\cM_{\hat K}$ ist.\\
+eine Basis von $\cM_{\hat K}$ ist.
 Die Matrix von $x\partial_x$ zu dieser neuen Basis hat nur Einträge in $\Cfx$.
 \end{proof}
 Nach \cite[Thm 5.2.2]{sabbah_cimpa90} gilt sogar das folgende Lemma.
 \begin{lem} \label{lem:matrixKonstant}
-Es existiert sogar eine Basis von $\cM_{\hat K}$ über $\hat K$ so dass die
-Matrix zu $x\partial_x$ konstant ist.
+Es existiert sogar eine Basis von $\cM_{\hat K}$ über $\hat K$, so dass die
+Matrix zu $x\partial_x$ Einträge in $\C$ hat, also konstant ist.
 \end{lem}
 
 Durch nutzen von Lemma \ref{lem:matrixKonstant} erhält man eine Konstante
@@ -71,7 +71,7 @@ Ein regulärer formaler Zusammenhang $\cM_{\hat K}$ ist isomorph zu einer
 direkten Summe von elementaren regulären meromorphen Zusammenhängen.
 \end{thm}
 
-Durch twisten der elementaren regulären meromorphen Zusammenhänge erhält man
+Durch Twisten der elementaren regulären meromorphen Zusammenhänge erhält man
 wie folgt die elementaren meromorphen Zusammenhänge.
 \begin{defn} \label{defn:elemMerZsh}
 Ein \emph{elementarer (formaler) meromorpher Zusammenhang} ist ein Zusammenhang
@@ -81,14 +81,15 @@ so dass
 \cM\cong \sE^{\psi}\otimes R_{\alpha,p}\,,
 \]
 mit $R_{\alpha,p}:=\cD_{\hat K}/\cD_{\hat K}(x\partial_x-\alpha)^p$, also ein
-elementarer regulärer meromorpher Zusammenhang, ist.
+elementarer regulärer meromorpher Zusammenhang ist.
 \end{defn}
 
 \begin{lem} In der Situation von Definition \ref{defn:elemMerZsh} gilt
 $\sE^{\psi}\otimes R_{\alpha,p}\cong
 \cD/\cD\cdot(x\partial_x-(\alpha+x\frac{\partial \psi}{\partial x}))^p$.
 \end{lem}
-\begin{proof} Denn
+\begin{proof}
+Es gilt
 \begin{align*}
 \sE^{\psi}\otimes R_{\alpha,p}
   &=\sE^{\psi}\otimes\cD_{\hat K}/\cD_{\hat K}(x\partial_x-\alpha)^p
@@ -144,13 +145,14 @@ Siehe \cite[Prop 3.1]{sabbah_Fourier-local}
 \end{comment}
 
 \section{Die Filtrierung $\,^\ell V\cD_{\hat K}$ und das $\ell$-Symbol}
-Dieser Abschnitt bezieht sicht auf \cite[Seite 25]{sabbah_cimpa90} und
+Dieser Abschnitt bezieht sich auf \cite[Seite 25]{sabbah_cimpa90} und
 beschreibt das $\ell$-Symbol, welches im Beweis des Levelt-Turittin-Theorems
-verwendung findet.\\
-Sei $\Lambda=\frac{\lambda_0}{\lambda_1}\in \Q_{\geq 0}$ vollständig gekürtzt,
-also mit $\lambda_0$ und $\lambda_1$ in $\N$ relativ prim. Definiere die
-Linearform $\ell(s_0,s_1)=\lambda_0s_0+\lambda_1s_1$. Sei $P\in\cD_{\hat K}$,
-falls $P=x^a\partial_x^b$ mit $a\in \Z$ und $b\in \N$, setzen wir
+Verwendung findet.\\
+Zu einer rationalen Zahl $\Lambda\geq0$ seien $\lambda_0\in\N_0$ und
+$\lambda_1\in \N$ relativ prim, so dass $\Lambda=\frac{\lambda_0}{\lambda_1}$.
+Definiere die Linearform $\ell(s_0,s_1):=\lambda_0s_0+\lambda_1s_1$.
+Sei $P\in\cD_{\hat K}$.
+Falls $P=x^a\partial_x^b$ mit $a\in \Z$ und $b\in \N$, setzen wir
 \[
 \ord_\ell(P):=\ell(b,b-a) 
 \]
@@ -170,14 +172,14 @@ unserer Schreibweise das Newton-Polygon nicht immer den Punkt $(0,0)$ enthält.
 Die folgende Bemerkung soll helfen, $\ord_\ell(P)$ bildlich zu verstehen.
 \begin{bem} \label{bem:bildlichlNorm}
 Sei $\ell(s_0,s_1)=\lambda_0s_0+\lambda_1s_1$ gegeben und
-$P$ ein linearer Differenzialoperator.
-Betrachte die Geradenschar $g_a(x):=\frac{\lambda_0}{\lambda_1}+a$, dann gibt es
-genau ein $a$, welches minimal unter der Eigenschaft, dass $g_a(x)$ das
-Newton-Polygon zu $P$ schneidet, ist.
-Dieses so gefundene $a$ entspricht genau dem $\ord_\ell(P)$.\\
-In Abbildung \ref{fig:bildlichlNorm} ist das ganze für $P=x^3\partial_x^2+1$
+$P$ ein linearer Differentialoperator.
+Betrachte die Geradenschar $g_a(x):=\frac{\lambda_0}{\lambda_1}+a$. Dann gibt es
+genau ein $a$, welches minimal unter der Eigenschaft ist, dass $g_a(x)$ das
+Newton-Polygon zu $P$ schneidet.
+Dieses so gefundene $a$ entspricht genau $\ord_\ell(P)$.\\
+In Abbildung \ref{fig:bildlichlNorm} ist dies für $P=x^3\partial_x^2+1$
 und $\lambda_0=\lambda_1=1$ bildlich dargestellt. Man liest ab, dass
-$\ord_\ell(P)=-1$.
+$\ord_\ell(P)=-1$ gilt.
 \begin{figure}[H] % htbp
     \begin{center}
       \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]

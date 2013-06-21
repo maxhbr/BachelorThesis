@@ -53,7 +53,7 @@ operationen.tex:%TODO: Pfeile
 operationen.tex:%TODO: Pfeile
 operationen.tex:%TODO: Pfeile
 operationen.tex:%TODO: warum hier alles Lokalisiert?
-operationen.tex:%TODO: Funktorialität von Pull-Back? NEIN: Funktorialität von tensor
+operationen.tex:%TODO: Funktorialität von Pullback? NEIN: Funktorialität von tensor
 operationen.tex:  %TODO: Pfeile
 operationen.tex:  %TODO: Pfeile
 operationen.tex:  %TODO: Pfeile
@@ -65,7 +65,6 @@ operationen.tex: &=TODO
 operationen.tex:TODO: text löschen?
 operationen.tex:mit $\xi^p=1$, bringen. Sei so ein $\xi$ ab jetzt fixiert. %TODO: besonderes xi?
 rezept.tex:TODO: prüfen für kleine zahlen!!!
-rezept.tex:%TODO: QUELLE!
 rezept.tex:  %TODO: hier kein grid
 rezept.tex:TODO: hier weiter vereinfachen
 rezept.tex:TODO: hier weiter umformulieren, $\tilde\cN_i$ einführen.

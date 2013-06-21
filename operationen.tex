@@ -47,7 +47,7 @@ M\otimes_R R &\cong M \label{bem:Rechenregeln-Tensorprodukt2}
 \end{align}
 Sei $f:M'\rightarrow M$ eine Abbildung, so gilt
 \begin{align}
-N\otimes_R(M/\im(f)) &\cong N\otimes_R M / \im(\id_{R}\otimes f)
+N\otimes_R(M/\im(f)) &\cong (N\otimes_R M) / \im(\id_{R}\otimes f)
 \label{bem:Rechenregeln-Tensorprodukt3}
 \end{align}
 \end{bem}
@@ -59,7 +59,7 @@ Durch Setzten von
 \begin{equation} \label{eq:TensorAbleiten}
 \partial_\otimes(m\otimes n)=\partial_\cM(m)\otimes n +m\otimes \partial_\cN(n)
 \end{equation}
-als die Wirkung von $\partial$ auf das $K$-Modul $\cM\otimes_K\cN$, wird
+als die Wirkung von $\partial$ auf dem $K$-Moduln $\cM\otimes_K\cN$, wird
 $(\cM\otimes_K\cN,\partial)$ zu einem meromorphen Zusammenhang.
 \begin{comment}
 \cite[Prop 4.1.1]{SchneidersDmod}
@@ -91,19 +91,19 @@ Nach \cite[1.a]{sabbah_Fourier-local} und \cite[1.3]{hotta2007d}.
 \end{comment}
 Es sei
 \begin{align*}
-\rho&:\C\rightarrow \C , t\mapsto x:=\rho(t) &\in t\Cft
+\rho&:\C\rightarrow \C ,~ t\mapsto x:=\rho(t) \qquad\in t\Cft
 \end{align*}
 eine polynomielle Abbildung mit  Bewertung $p\geq1$.
 Hier werden wir meistens $\rho(t)=t^p$ für ein $p\in \N$ betrachten. Diese
 Funktion induziert eine Abbildung
 \begin{align*}
-\rho^*&:\Ckx\hookrightarrow \Ckt, f \mapsto f\circ \rho & \mbox{bzw.} &&
-\rho^*&:\Cfx\hookrightarrow \Cft, f \mapsto f\circ \rho \,.
+\rho^*&:\Ckx\hookrightarrow \Ckt,~ f \mapsto f\circ \rho & \mbox{bzw.} &&
+\rho^*&:\Cfx\hookrightarrow \Cft,~ f \mapsto f\circ \rho \,.
 \end{align*}
 Analog erhalten wir
 \begin{align*}
-\rho^*&:K\hookrightarrow L:=\Cktl, f \mapsto f\circ \rho & \mbox{bzw.} &&
-\rho^*&:\hat K\hookrightarrow \hat L:=\Cftl, f \mapsto f\circ \rho \,,
+\rho^*&:K\hookrightarrow L:=\Cktl,~ f \mapsto f\circ \rho & \mbox{bzw.} &&
+\rho^*&:\hat K\hookrightarrow \hat L:=\Cftl,~ f \mapsto f\circ \rho \,,
 \end{align*}
 wobei $L$ (bzw. $\hat L$) eine endliche Körpererweiterung von $K$ (bzw. $\hat
 K$) ist.
@@ -309,15 +309,13 @@ Dieser so erhaltene eindeutige Morphismus ist genau unser $\Phi$.
 \end{comment}
 \begin{proof}
 Prüfe zunächst die Injektivität. Sei $f(t)\otimes Q(x,\partial_x)\in
-\ker(\Phi)$\footnote{
-$\ker(\Phi)$ bezeichnet den Kern von $\Phi$.
-} so, dass
+\ker(\Phi)$ so, dass
 \begin{align*}
 0 &= \Phi(f(t)\otimes Q(x,\partial_x))
 \\&= f(t)Q(\rho(t),\rho'(t)^{-1}\partial_t)
 \end{align*}
 und, da hier alles nullteilerfrei ist, ist die Bedingung äquivalent zur
-folgenden
+Folgenden
 \begin{align*}
 \Leftrightarrow && 0&=f(t) &\text{oder}&& 0&=Q(\rho(t),\rho'(t)^{-1}\partial_t)
 \\\Leftrightarrow && 0&=f(t) &\text{oder}&& 0&=Q(x,\partial_x)
@@ -462,7 +460,7 @@ kommutativ.
 \end{lem}
 \begin{proof}
 Betrachte ein $f(t)\otimes Q(x,\partial_x)\in\hat L\otimes_{\hat K}\cD_{\hat
-K}$. So gilt
+K}$, so gilt
 \begin{center}
 \begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
 \matrix (m) [
@@ -532,7 +530,7 @@ Betrachte dazu die kurze Sequenz
   ]{
   0 & \cD_{\hat K }    & \cD_{\hat K } & \cM_{\hat K }               & 0\\
     & \phantom{P}\!\!u & u\cdot P \\
-    &                  & u             & u\mod\cD_{\hat K}\cdot P \\
+    &                  & u             & u\mod\cD_{\hat K}\cdot P \,.\\
   };
   \path[->,font=\scriptsize,>=angle 90]
   (m-1-1) edge (m-1-2)
@@ -546,8 +544,8 @@ Betrachte dazu die kurze Sequenz
   ;
 \end{tikzpicture}
 \end{center}
-ist exakt, weil $\cM_{\hat K } \cong\cD_{\hat K }\Big/\cD_{\hat K }\cdot
-P=\coker(\_\cdot P)$.  Weil $\hat L$ flach über den Körper $\hat K$ ist, ist
+Diese ist exakt, da $\cM_{\hat K } \cong\cD_{\hat K }/\cD_{\hat K }\cdot
+P=\coker(\_\cdot P)$.  Weil $\hat L$ flach über dem Körper $\hat K$ ist, ist
 auch, nach Anwenden des Funktors $\hat L\otimes_{\hat K}\_$, die Sequenz
 %TODO: Funktorialität von Pullback? NEIN: Funktorialität von tensor
 \begin{center}
@@ -624,7 +622,7 @@ ergibt sich
 \end{tikzpicture}
 \end{center}
 als kommutatives Diagramm. Nun, da $\_\!\cdot\! Q$ injektiv ist, lässt sich
-die untere Zeile zu einer exakten Sequenz fortsetzen
+die untere Zeile zu einer exakten Sequenz 
 \begin{center}
 \begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
   \matrix (m) [
@@ -661,7 +659,7 @@ die untere Zeile zu einer exakten Sequenz fortsetzen
   ;
 \end{tikzpicture}
 \end{center}
-und damit folgt, wegen Isomorphie der Kokerne, die Behauptung.
+fortsetzen und damit folgt, wegen Isomorphie der Kokerne, die Behauptung.
 \end{proof}
 %
 \begin{lem}\label{lem:slope-pb-multiplikation}
@@ -691,18 +689,16 @@ H(P'(t,\partial_t)) &=H(P(\rho(t),\rho'(t)^{-1}\partial_t))
 %
 Hier nun ein explizit berechneter Pullback.
 \begin{exmp}\label{exmp:Pull-Back}
-Wir wollen $\cM_{\hat K}:=\cD_{\hat K}/\cD_{\hat K}\cdot P$ bzgl. $P:=
+Wir wollen $\cM_{\hat K}:=\cD_{\hat K}/\cD_{\hat K}\cdot P$ mit $P:=
 x^3\partial_x^2-4x^2\partial_x-1$ betrachten.
-Unser Ziel ist es, hier ganzzahlige Slopes zu erhalten.
+Unser Ziel ist es ganzzahlige Slopes zu erhalten.
 %TODO: erkläre wieso --> Elementare Zusammenhänge
-Es gilt $\slopes(P)=\{\frac{1}{2}\}$ (siehe Abbildung \ref{fig:Pull-Back1}).
+Es gilt $\cP(P)=\{\frac{1}{2}\}$ (siehe Abbildung \ref{fig:Pull-Back1}).
 Wende den Pullback mit $\rho:t\rightarrow x:=t^2$ an.
-Zunächst einige Nebenrechnungen, damit wir Satz
+Zunächst folgt eine Nebenrechnung, damit wir Satz
 \ref{thm:pull-back-berechnung} einfacher anwenden können:
 \begin{align*}
-\partial_x   &\rightsquigarrow
-  \frac{1}{\rho'(t)}\partial_t=\frac{1}{2t}\partial_t \,,
-\\\partial_x^2 &\rightsquigarrow (\frac{1}{2t}\partial_t)^2
+(\frac{1}{2t}\partial_t)^2
   = \frac{1}{2t}\partial_t (\frac{1}{2t}\partial_t)
   = \frac{1}{2t}(-\frac{1}{2t^2}\partial_t + \frac{1}{2t}\partial_t^2)
   = \frac{1}{4t^2}\partial_t^2-\frac{1}{4t^3}\partial_t \,.
@@ -716,7 +712,7 @@ Also ergibt Einsetzen
 \\&= \frac{1}{4}t^4\partial_t^2 \myobracket{-2\frac{1}{4}t^3\partial_t}-1 \,.
 \end{align*}
 %
-Also ist $\rho^*P= \frac{1}{4}t^4\partial_t^2 -\frac{1}{2}t^3\partial_t-1$ mit
+Also gilt $\rho^*P= \frac{1}{4}t^4\partial_t^2 -\frac{1}{2}t^3\partial_t-1$ mit
 $ \slopes(\rho^*P)=\{1\} $ (siehe Abbildung \ref{fig:Pull-Back2}) und somit
 $\rho^*\cM_{\hat K}=\cD_{\hat L}/\cD_{\hat L}
 \cdot(\frac{1}{4}t^4\partial_t^2-\frac{1}{2}t^3\partial_t-1)$.
@@ -750,26 +746,25 @@ $\rho^*\cM_{\hat K}=\cD_{\hat L}/\cD_{\hat L}
 \end{figure}
 \end{exmp}
 
-Sei $\cN_{\hat L}$ ein endlich dimensionaler $\hat L$-VR mit Verknüpfung, so
-definiere den Pushforward wie folgt.
+Sei $\cN_{\hat L}$ ein endlich dimensionaler $\hat L$-Vektorraum mit
+Zusammenhang, so definiere den Pushforward wie folgt.
 \begin{comment}
 TODO: korregieren, besser formulieren
 \end{comment}
 \begin{defn}[Pushforward]
-Der \emph{Pushforward} oder das \emph{direktes Bild} $\rho_+\cN_{\hat L}$ von
-$\cN_{\hat L}$ ist
+Der \emph{Pushforward} oder das \emph{direkte Bild} $\rho_+\cN_{\hat L}$ von
+$\cN_{\hat L}$ ist:
 \begin{itemize}
-\item der $\hat K$-VR $\rho_*\cN$ ist definiert als der $\C$-Vektor Raum
-$\cN_{\hat L}$ mit der $\hat K$-Vektor Raum Struktur durch
+\item Der $\hat K$-Vektorraum $\rho_*\cN$ ist definiert als der $\C$-Vektorraum
+$\cN_{\hat L}$ mit der $\hat K$-Vektorraumstruktur durch
 %$f(x)\cdot m:=f(\rho(t))m$
 die skalare Multiplikation
 $\begin{array}[t]{cccc}
-\cdot: & \hat{K}\times\cN_{\hat{L}} & \rightarrow & \cN_{\hat{L}}\\
- & (f(x),m) & \mapsto & f(x)\cdot m:=f(\rho(t))m
-\end{array}$ und
+\cdot: & \hat{K}\times\cN_{\hat{L}} & \rightarrow & \cN_{\hat{L}}\,,\\
+ & (f(x),m) & \mapsto & f(x)\cdot m:=f(\rho(t))m \,.
+\end{array}$
 % für alle m aus ???
-\item mit der Wirkung $\partial_x$ beschrieben durch
-$\rho'(t)^{-1}\partial_t$.
+\item Die Wirkung von $\partial_x$ ist gegeben durch $\rho'(t)^{-1}\partial_t$.
 \end{itemize}
 \end{defn}
 
@@ -848,7 +843,7 @@ Es gilt die Projektionsformel
 \section{Fouriertransformation}
 \begin{defn}[Fouriertransformation]
 Sei $P=\sum_{i=0}^da_i(x)\partial_x^i$, dann ist die
-\emph{fouriertransformierte} von $P$ gegeben durch
+\emph{Fouriertransformierte von $P$} gegeben durch
 \[
 \cF_P:=\cF_P(z,\partial_z)=\sum_{i=0}^da_i(\partial_z)(-z)^i \,.
 \]
@@ -859,9 +854,9 @@ Sei $P=\sum_{i=0}^da_i(x)\partial_x^i$, dann ist die
 \end{comment}
 \end{defn}
 \begin{defn} %[Fouriertransformation von lokalisierten holonomen D-Moduln]
-Ist $\cM_{\hat K}\cong\hat K / \hat K \cdot P$ so ist die Fouriertransformierte
-davon definiert als  $\,^\cF\cM_{\hat K}:=\hat K / \hat K \cdot
-\cF_P(x,\partial_x)$.
+Ist $\cM_{\hat K}\cong\hat K / \hat K \cdot P$, so ist die
+\emph{Fouriertransformierte von $\cM_{\hat K}$} definiert als  $\,^\cF\cM_{\hat
+K}:=\hat K / \hat K \cdot \cF_P(x,\partial_x)$.
 \end{defn}
 \begin{exmp}
 Sei $P=x^3\partial_x^4+x^2\partial_x^2+x$ dann ist die Fouriertransformierte
@@ -923,11 +918,11 @@ mit den Newton-Polygonen wie in Abbildung \ref{fig:fourierA} und
 \end{figure}
 \end{exmp}
 
-\section{Betrachten bei Unendlich}
+\section{Betrachtung bei Unendlich}
 Sei $P\in\cD_{\hat K}$ ein Minimalpolynom zum meromorphen Zusammenhang
 $\cM_{\hat K}$.\\
-Wir wollen den Übergang $x\rightsquigarrow z^{-1}$ durchführen, dies ist formal
-wie folgt defniniert.
+Wir wollen den Übergang $x\rightsquigarrow z^{-1}$ durchführen. 
+Dieser ist formal wie folgt definiert.
 \begin{defn}
 Wir definieren den \emph{Zusammenhang bei Unendlich $\cM_{\hat K}^\infty$} von
 $\cM_{\hat K}$ als den zu $P^\infty$ assoziierten Zusammenhang, wobei wir
@@ -950,14 +945,14 @@ P_\phi(x,\partial_x):=\cF_Q(x^{-1},-x^2\partial_x) \in \C[t]<\partial_t> \,.
 Vergleiche dazu beispielsweise \cite[Seite 70 Exmp. 2]{sabbah_cimpa90}.
 
 \begin{exmp}
-Sei $P=x^3\partial_x^4+x^2\partial_x^2+x$ dann ist $P^\infty$ gegeben durch
+Sei $P=x^3\partial_x^4+x^2\partial_x^2+x$, dann ist $P^\infty$ gegeben durch
 \begin{align*}
 P^\infty&=\myubracket{x^{-3}(-x^2\partial_x)^4}
   +\myubracket{x^{-2}(-x^2\partial_x)^2}+x^{-1}
-\\&=\myobracket{\myubracket{x^{-3+8}}\partial_x^4+\textbf{T.i.Q}}
-  +\myobracket{\myubracket{x^{-2+4}}\partial_x^2+\textbf{T.i.Q}} +x^{-1}
-\\&=\myobracket{x^{5}}\partial_x^4+\textbf{T.i.Q}
-  +\myobracket{x^{2}}\partial_x^2+\textbf{T.i.Q} +x^{-1}
+\\&=\myobracket{\myubracket{x^{-3+8}}\partial_x^4+\text{T.i.Q}}
+  +\myobracket{\myubracket{x^{-2+4}}\partial_x^2+\text{T.i.Q}} +x^{-1}
+\\&=\myobracket{x^{5}}\partial_x^4+\text{T.i.Q}
+  +\myobracket{x^{2}}\partial_x^2+\text{T.i.Q} +x^{-1}
 \end{align*}
 mit den Newton-Polygonen wie in Abbildung \ref{fig:inftA} und
 \ref{fig:inftB}.
@@ -990,10 +985,10 @@ mit den Newton-Polygonen wie in Abbildung \ref{fig:inftA} und
 \section{Twisten von meromorphen Zusammenhängen}
 \begin{defn} \label{defn:rang1Vr}
 Sei $\phi\in\hat K$.
-Wir schreiben $\sE_{\hat K}^\phi$ für den (formalen) Rang 1 Vektorraum 
-$\bme\cdot\hat K$, wobei $\bme\in\sE_{\hat K}^\phi$ Basis ist, ausgestattet
-mit $\partial_x(f\cdot \bme) =(\frac{\partial f}{\partial
-x}+f\cdot\frac{\partial\phi}{\partial x})\cdot\bme$, im speziellen also
+Wir schreiben $\sE_{\hat K}^\phi$ für den (formalen) Rang-1-Vektorraum 
+$\bme\cdot\hat K$, wobei $\bme\in\sE_{\hat K}^\phi$ eine Basis ist,
+ausgestattet mit $\partial_x(f\cdot \bme) =(\frac{\partial f}{\partial
+x}+f\cdot\frac{\partial\phi}{\partial x})\cdot\bme$, im Speziellen also
 $\partial_x\bme=\phi'$.
 \begin{comment}
 nach \cite[1.a]{sabbah_Fourier-local}
@@ -1028,8 +1023,8 @@ $.
 Es ist 
 \begin{align*}
 \phi'(x) &=\sum_{i=-p}^\infty ia_ix^{i-1}
-\\&=\sum_{i=-{p+1}}^\infty (i+1)a_{i+1}x^{i}
-\\&=\underset{\neq0}{\underbrace{-pa_{-p}}}x^{-(p+1)}
+  =\sum_{i=-(p+1)}^\infty (i+1)a_{i+1}x^{i}
+=\underset{\neq0}{\underbrace{-pa_{-p}}}x^{-(p+1)}
   +\sum_{i=-{p}}^\infty (i+1)a_{i+1}x^{i}
 \end{align*}
 und damit wissen wir, dass die einzigen zwei Punkte, die Ecken des Newton
@@ -1037,12 +1032,12 @@ Polygons sein können, $(1,-1)$ und $(0,-(p+1))$ sind. Da einer der relevanten
 Punkte auf der vertikalen Achse liegt, kann es insgesamt nur einen Slope
 $\Lambda$ geben, welcher sich wie folgt berechnet:
 \begin{align*}
-\Lambda&=\max\{0,\frac{-1-(-(p+1))}{1}\}
-\\&=\max\{0,p\}
-\\&=\begin{cases}
+\Lambda&=\max\left\{0,\frac{-1-(-(p+1))}{1}\right\}
+=\max\{0,p\}
+=\begin{cases}
   p &\text{, wenn }p\geq0
 \\0 &\text{, wenn }p<0
-\end{cases}
+\end{cases} \,.
 \end{align*}
 
 \iffalse
@@ -1069,13 +1064,13 @@ wenn $\phi\equiv\psi \mod \Cfx$.
 \end{comment}
 \begin{lem}
 Sei $\cM=\cD_{\hat K}/\cD_{\hat K}\cdot P$ ein meromorpher Zusammenhang mit $P$
-von Grad $q$ und mit $\bme$ als ein zyklischer Vektor, so ist $\bme\otimes1$
-ein zyklischer Vektor für $\cN:=\cM\otimes_{\hat K}\sE_{\hat K}^\psi$.
+von Grad $q$ und sei $\bme$ ein zyklischer Vektor. So ist $\bme\otimes1$ ein
+zyklischer Vektor für $\cN:=\cM\otimes_{\hat K}\sE_{\hat K}^\psi$.
 \end{lem}
 \begin{proof}
 %Es sei $\bme$ ein zyklischer Vektor von $\cM$.
 Da der Grad von $P$ gleich $q$ ist, ist nach Lemma \ref{lem:twistRechenregel}
-auch $Q$ von grad $q$ und somit $\dim_{\hat K}\cN= q$.
+auch $Q$ von Grad $q$ und somit $\dim_{\hat K}\cN= q$.
 Also reicht es zu zeigen, dass $\bme\otimes 1$, $\partial_x(\bme\otimes 1)$,
 $\partial_x^2(\bme\otimes 1)$,\dots, $\partial_x^{q-1}(\bme\otimes 1)$ ein
 linear unabhängiges System ist.  Es gilt
@@ -1103,7 +1098,8 @@ linear unabhängiges System ist.  Es gilt
   + \lambda_{1}(\partial_x \bme)\otimes 1
   + \lambda_0(\bme\otimes 1)\\
 \end{align*}
-und somit ist dann
+mit $\lambda_0,\dots,\lambda_{q-2}\in \hat K$.
+Somit gilt dann
 \[
 \begin{pmatrix}
 \bme\otimes 1\\
@@ -1149,8 +1145,8 @@ mit $Q(x,\partial_x)=P(x,\partial_x-\frac{\partial \phi}{\partial x})$.
 \end{lem}
 \begin{proof}[Beweisidee]
 Zeige, dass $P(x,\partial_x-\frac{\partial \phi}{\partial x})\bme\otimes1=0$
-gilt, da $\bme\otimes1$ eine zyklischer Vektor ist folgt damit aus Gradgründen
-die Behauptung. Genauer ausgeführt wird dies in \cite[Seiten 39 bis
+gilt. Da $\bme\otimes1$ eine zyklischer Vektor ist folgt aus Gradgründen die
+Behauptung. Genauer ausgeführt wird dies in \cite[Seiten 39 bis
 44]{DiplHedwig}.
 \begin{comment}
 \begin{align*}
@@ -1166,7 +1162,7 @@ Sei $\cM_{\hat K}$ und $\phi$ wie in \ref{lem:twistRechenregel}, so gilt
 \]
 \end{cor}
 \begin{proof}
-Denn
+Es gilt
 \begin{align*}
 \cM_{\hat K}\otimes_{\hat K}\sE^{\phi}\otimes_{\hat K}\sE^{-\phi}
   &= \cD_{\hat K}/\cD_{\hat K}\cdot P(x,\partial_x)
@@ -1180,13 +1176,13 @@ Denn
 \end{align*}
 \end{proof}
 
-Nun wollen wir noch das Lemma 2.4 aus \cite[Lem 2.4]{sabbah_Fourier-local}
-beweisen. 
+Nun wollen wir noch das folgenden Lemma aus \cite[Lem
+2.4]{sabbah_Fourier-local} beweisen. 
 \begin{comment}
 TODO: text löschen?
 \end{comment}
-Dieses Lemma wird im weiteren nicht weiter verwendet, deshalb kann ein Leser,
-der nur an den letzten Kapiteln interesiert ist, den Beweis überspringen.
+Dieses Lemma wird im Weiteren nicht weiter verwendet, deshalb kann ein Leser,
+der nur an den letzten Kapiteln interessiert ist, diesen Beweis überspringen.
 Jedoch werden im Beweis mehrere interessante Tricks verwendet, die diesen auf
 jeden Fall lesenswert machen.
 \begin{lem}
@@ -1198,8 +1194,8 @@ Für alle $\phi \in \hat L$ gilt
 \end{lem}
 %
 \begin{proof}
-Wir wollen zeigen, dass das folgende Diagramm, für einen passenden
-Isomorphismus, kommutiert:
+Wir wollen zeigen, dass das folgende Diagramm für einen passenden Isomorphismus
+kommutiert:
 \begin{center}
   \begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
   \matrix (m) [
@@ -1223,9 +1219,9 @@ Isomorphismus, kommutiert:
     ;
   \end{tikzpicture}
 \end{center}
-Es sei oBdA $\phi\in t^{-1}\C[t^{-1}]$, dies ist nach Bemerkung 
-\ref{bem:FormRang1VR} berechtigt.
-Wir wählen eine $\hat L$ Basis $\bme$ des Rang 1 $\hat L$-Vektorraum $\sE^\phi$
+Es sei oBdA $\phi\in t^{-1}\C[t^{-1}]$. Dies ist nach Bemerkung 
+\ref{bem:FormRang1VR} erlaubt.
+Wir wählen eine $\hat L$ Basis $\bme$ des Rang-1-$\hat L$-Vektorraum $\sE^\phi$
 und damit erhält man die Familie $\bme,t\bme,...,t^{p-1}\bme$ als $\hat
 K$-Basis von $\rho_+\sE^\phi$.
 Es gilt 
@@ -1236,11 +1232,11 @@ Es gilt
 \end{aligned}
 \end{equation}
 Durch die Setzung $\bme_k:=t^{-k}\otimes_{\hat K}t^k\bme$ wird die Familie
-$\mathbf{e}:=(\bme_0,...,\bme_{p-1})$ eine $\hat L$-Basis von
+$\underline{\bme}:=(\bme_0,...,\bme_{p-1})$ eine $\hat L$-Basis von
 $\rho^+\rho_+\sE^\phi$.
-Zerlege nun $t\phi'(t)$, wie in Anhang \ref{chap:aufteilung} beschrieben, in
+Zerlege nun $t\phi'(t)$ wie in Anhang \ref{chap:aufteilung} beschrieben in
 \begin{align} \label{eq:2-4-gleichung1}
-t\phi'(t)&=\sum_{j=0}^{p-1}t^j\psi_j(t^p) &\in t^{-2}\C[t^{-1}]
+t\phi'(t)&=\sum_{j=0}^{p-1}t^j\psi_j(t^p) \qquad\in t^{-2}\C[t^{-1}]
 \end{align}
 mit $\psi_j\in\C[x^{-1}]$ für alle $j>0$ und $\psi_0\in x^{-1}\C[x^{-1}]$.
 Damit gilt
@@ -1283,17 +1279,17 @@ V:=\begin{pmatrix}
   &        & 1        & 0
 \end{pmatrix} \,,
 \]
-so dass $\mathbf{e}\cdot V=(\bme_1,...,\bme_{p-1},\bme_0)$ gilt.
+so dass $\underline{\bme}\cdot V=(\bme_1,...,\bme_{p-1},\bme_0)$ gilt.
 Es gilt
 \[
-t\partial_t\mathbf{e}=\mathbf{e}\left[\sum_{j=0}^{p-1}t^j\psi_jV^j\right] \,,
+t\partial_t\underline{\bme}=\underline{\bme}\left[\sum_{j=0}^{p-1}t^j\psi_jV^j\right] \,,
 \]
 denn:
 \begin{align*}
-  t\partial_t\mathbf{e} &= (t\partial_t\bme_0,...,t\partial_t\bme_{p-1})\\
+  t\partial_t\underline{\bme} &= (t\partial_t\bme_0,...,t\partial_t\bme_{p-1})\\
   &= \Bigg(\sum_{i=0}^{p-1-k}t^i\psi_i(t^p)\bme_{k+1} +
     \sum_{i=p-k}^{p-1}t^i\psi_i(t^p)\bme_{k+i-p}\Bigg)_{k\in\{0,..,p-1\}}\\
-  &= \mathbf{e}
+  &= \underline{\bme}
 { %\small
   \footnotesize
   \begin{pmatrix}u^{p-1}\psi_{p-1}(t^p) && \cdots & t^{3}\psi_{3}(t^p) & t^{2}
@@ -1307,15 +1303,15 @@ denn:
   t^{1}\psi_{1}(t^p) & t^{p-1}\psi_{p-1}(t^p)
   \end{pmatrix}
 } \\
-  &= \mathbf{e}\left[\sum_{j=0}^{p-1}t^j\psi_j(t^p)V^j\right] \,.
+  &= \underline{\bme}\left[\sum_{j=0}^{p-1}t^j\psi_j(t^p)V^j\right] \,.
 \end{align*}
-Die Wirkung von $\partial_t$ auf die Basis $\mathbf{e}$ von
-$\rho^+\rho_+\sE^{\phi(t)}$ ist also beschrieben durch
+Die Wirkung von $\partial_t$ auf die Basis $\underline{\bme}$ von
+$\rho^+\rho_+\sE^{\phi(t)}$ wird also beschrieben durch
 \[
-\partial_t\mathbf{e}=\mathbf{e}\left[\sum_{j=0}^{p-1}t^{j-1}\psi_jV^j\right]\,.
+\partial_t\underline{\bme}=\underline{\bme}\left[\sum_{j=0}^{p-1}t^{j-1}\psi_jV^j\right]\,.
 \]
 Da $V$ das Minimalpolynom $\chi_V(X)=X^p-1$ hat, können wir diese Matrix durch
-Ähnlichkeitstransformation mit $T$ auf die Form
+Transformation mit $T$ auf die Form
 \[
 D:=TVT^{-1}=\begin{pmatrix}\xi^{0}\\
  & \xi^{1}\\
@@ -1324,7 +1320,7 @@ D:=TVT^{-1}=\begin{pmatrix}\xi^{0}\\
 \end{pmatrix} \,,
 \]
 mit $\xi^p=1$, bringen. Sei so ein $\xi$ ab jetzt fixiert. %TODO: besonderes xi?
-So dass gilt:
+So gilt:
 \begin{align*}
   T\left[\sum_{j=0}^{p-1}t^{j-1}\psi_j(t^p)V^j\right]T^{-1} 
   &= \left[\sum_{j=0}^{p-1}t^{j-1}\psi_j(t^p) (TVT^{-1})^j\right]\\
@@ -1348,15 +1344,16 @@ So dass gilt:
   \end{pmatrix}
 }\\
   &= \begin{pmatrix}\phi'(t)\\
-    & \phi'(\xi t)\xi^{1}\\
+    & \phi'(\xi^1 t)\xi^{1}\\
     & & \ddots\\
     &  &  & \phi'(\xi^{p-1} t)\xi^{p-1}
   \end{pmatrix}\\
   &= \begin{pmatrix} pt^{p-1}\\
-    & p(\xi t)^{p-1}\xi\\
+    & p(\xi^1 t)^{p-1}\xi\\
     & & \ddots\\
     &  &  & p(\xi^{p-1} t)^{p-1}\xi^{p-1}
-  \end{pmatrix}\\
+  \end{pmatrix}
+  \,,
 \end{align*}
 da $\phi'(t)=pt^{p-1}$.
 Damit wissen wir bereits, dass im Diagramm
@@ -1402,16 +1399,18 @@ Damit wissen wir bereits, dass im Diagramm
   \end{tikzpicture}
 \end{center}
 der mit $(\star)$ bezeichnete Teil kommutiert,
-wobei $\Phi:(0,\dots,0,\overbox{1}{k-te Stelle},0,\dots,0)\mapsto e_k$ der
-kanonische Basisisomorphismus und $e_k$ Basis von
-$\sE^{\phi\circ\mu_{\xi^{k-1}}}$.
+wobei $\Phi:(0,\dots,0,\overbox{1}{k-te Stelle},0,\dots,0)\mapsto \bme_k$ der
+kanonische Basisisomorphismus ist und $\bme_k$ Basis von
+$\sE^{\phi\circ\mu_{\xi^{k-1}}}$ ist.
 Um zu zeigen, dass das vollständige Diagramm kommutiert, zeigen wir noch, dass
 \begin{align*}
-\partial_t(v) =\Phi\big(\Phi^{-1}(v)
-  \cdot\left[\sum_{j=0}^{p-1}t^{j-1}\psi_j(t^p)D^j\right]\big)
-& & \forall v\in \bigoplus_{i=0}^{p-1}\sE^{\phi\circ\mu_{\xi^i}} \\
+\partial_t(v) &=\Phi\left(\Phi^{-1}(v)
+  \cdot\left[\sum_{j=0}^{p-1}t^{j-1}\psi_j(t^p)D^j\right]\right)
+\qquad \forall v\in \bigoplus_{i=0}^{p-1}\sE^{\phi\circ\mu_{\xi^i}} \\
 \end{align*}
-gilt. Es reicht zu zeigen, dass die Aussage für alle Basiselemente $e_k$ gilt.
+gilt.
+Es reicht zu zeigen, dass die Aussage für alle Basiselemente $\bme_k$ erfüllt
+ist.
 Nach Definition \ref{defn:rang1Vr} gilt
 \begin{align*}
 \partial_t e_k &= \myubracket{(\phi\circ\mu_{\xi^{k-1}})'(t)}e_k
@@ -1420,7 +1419,7 @@ Nach Definition \ref{defn:rang1Vr} gilt
 \\&=\myobracket{(\xi^{k-1})^p}\cdot\myobracket{(pt^{p-1})}e_k
 \\&=p(\xi^{k-1}t)^{p-1}\xi^{k-1}e_k
 \end{align*}
-und auf dem anderem Weg gilt:
+und auf dem anderen Weg gilt:
 \begin{center}
   \begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
   \matrix (m) [
