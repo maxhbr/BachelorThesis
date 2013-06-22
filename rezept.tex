@@ -5,12 +5,11 @@ allgemein und ab Abschnitt \ref{sec:LT-speziell} für einen konkreten
 Zusammenhang, die Levelt-Turrittin-Zerlegung berechnet werden.\\
 Hier wird zunächst ein allgemeines Rezept gegeben, welches zu gegebenem $\phi$
 einen meromorphen Zusammenhang liefert:
-\begin{enumerate}
-\item[Schritt 1:] Wähle zunächst ein $\phi$
+
+\paragraph{Schritt 1:} Wähle zunächst ein $\phi$
 $\in\{\phi=\sum_{k\in I}\frac{a_k}{t^{k}}|I\subset\N\mbox{ endlich}
 ,a_k\in \C\}$
-aus
-\item[Schritt 2:] und beginne mit $\sE^{\phi}$. Es gilt
+aus und beginne mit $\sE^{\phi}$. Es gilt
 \begin{align*}
 \sE^{\phi} &= \cD_{\hat L}/\cD_{\hat L}\cdot (\partial_t-\frac{d}{dt}\phi(t))
 \\&=\cD_{\hat L}/\cD_{\hat L}\cdot \Big(\underset{\in\C[t]\subset\cD_{\hat L}^*}
@@ -20,20 +19,55 @@ aus
   \underset{=:Q(t,\partial_t) \in \C[t]<\partial_t> }{\underbrace{
   t^{\max(I)+1} \cdot (\partial_t-\frac{d}{dt}\phi(t))}}\Big) \,.
 \end{align*}
-\item[Schritt 3:] Fouriertransformiere $\sE^{\phi}$ und erhalte
+\paragraph{Schritt 2:} Fouriertransformiere $\sE^{\phi}$ und erhalte
 \begin{align*}
 \,^\cF\!\sE^{\phi}&=\cD_{\Cfzl}/\cD_{\Cfzl}\cdot{\cF_Q(z,\partial_z)}
 \\&\bydef \cD_{\Cfzl}/\cD_{\Cfzl}\cdot
   \underset{\in\C[z]<\partial_z>}{\underbrace{Q(\partial_z,-z)}} \,.
 \end{align*}
-\item[Schritt 4:] Betrachte den Zusammenhang bei Unendlich und somit erhalte
-das entsprechende Minimalpolynom
+\paragraph{Schritt 3:} Betrachte den Zusammenhang bei Unendlich und erhalte
+somit das entsprechende Minimalpolynom
 \[
 P_\phi(x,\partial_x):= \cF_Q^\infty(x,\partial_x)
   \bydef \cF_Q(x^{-1},-x^2\partial_x) \in \C[x]<\partial_x> \,.
 \]
-\end{enumerate}
-Im folgendem werden wir den zum Minimalpolynom $P_\phi$ assoziierten formalen
+
+\iffalse
+  \begin{center}
+  \begin{minipage}[t]{0.8\textwidth}
+  \begin{enumerate}
+  \item[Schritt 1:] Wähle zunächst ein $\phi$
+  $\in\{\phi=\sum_{k\in I}\frac{a_k}{t^{k}}|I\subset\N\mbox{ endlich}
+  ,a_k\in \C\}$
+  aus
+  \item[Schritt 2:] und beginne mit $\sE^{\phi}$. Es gilt
+  \begin{align*}
+  \sE^{\phi} &= \cD_{\hat L}/\cD_{\hat L}\cdot (\partial_t-\frac{d}{dt}\phi(t))
+  \\&=\cD_{\hat L}/\cD_{\hat L}\cdot \Big(\underset{\in\C[t]\subset\cD_{\hat L}^*}
+      {\underbrace{\mbox{\textbf{Hauptnenner von $\frac{d}{dt}\phi(t)$ }}}}
+    \cdot (\partial_t-\frac{d}{dt}\phi(t))\Big)
+  \\&=\cD_{\hat L}/\cD_{\hat L}\cdot \Big(
+    \underset{=:Q(t,\partial_t) \in \C[t]<\partial_t> }{\underbrace{
+    t^{\max(I)+1} \cdot (\partial_t-\frac{d}{dt}\phi(t))}}\Big) \,.
+  \end{align*}
+  \item[Schritt 3:] Fouriertransformiere $\sE^{\phi}$ und erhalte
+  \begin{align*}
+  \,^\cF\!\sE^{\phi}&=\cD_{\Cfzl}/\cD_{\Cfzl}\cdot{\cF_Q(z,\partial_z)}
+  \\&\bydef \cD_{\Cfzl}/\cD_{\Cfzl}\cdot
+    \underset{\in\C[z]<\partial_z>}{\underbrace{Q(\partial_z,-z)}} \,.
+  \end{align*}
+  \item[Schritt 4:] Betrachte den Zusammenhang bei Unendlich und somit erhalte
+  das entsprechende Minimalpolynom
+  \[
+  P_\phi(x,\partial_x):= \cF_Q^\infty(x,\partial_x)
+    \bydef \cF_Q(x^{-1},-x^2\partial_x) \in \C[x]<\partial_x> \,.
+  \]
+  \end{enumerate}
+  \end{minipage}
+  \end{center}
+\fi
+
+Im Folgendem werden wir den zum Minimalpolynom $P_\phi$ assoziierten formalen
 meromorphen Zusammenhang $\cM_\phi:=\cD_{\hat K}/\cD_{\hat K}\cdot P_{\phi}$
 betrachten.
 \begin{comment}
@@ -50,7 +84,7 @@ I}\frac{a_k}{t^{k}}|I\subset\N\mbox{ endlich} ,a_k\in \C\}$ ist das
 Minimalpolynom von $\cM_\phi$ explizit gegeben durch
 \begin{align*}
 P_{\phi}(x,\partial_x) &=(-x^2\partial_x)^{\max(I)} (x\partial_x-1)
-   +\sum_{k\in I}k a_k(-x^2\partial_x)^{\max(I)-k} & \in \C[x]<\partial_x> \,.
+   +\sum_{k\in I}k a_k(-x^2\partial_x)^{\max(I)-k} \in \C[x]<\partial_x> \,.
 \end{align*}
 \end{lem}
 \begin{proof}
@@ -62,9 +96,9 @@ Q(t,\partial_t) &= t^{\max(I)+1}(\partial_t\myubracket{-\frac{d}{dt}\phi(t)})
 %\\&=t^{\max(I)+1}\partial_t
   %+ \sum_{k\in I} k\myubracket{\frac{a_k}{t^{k-\max(I)}}}
 \\&=t^{\max(I)+1}\partial_t +\sum_{k\in I}k a_k t^{\max(I)-k}
-  & \in \C[t]<\partial_t>
+  \in \C[t]<\partial_t>
 \\\cF_Q(z,\partial_z) &=Q(\partial_z,-z)
-\\&=-\partial_z^{\max(I)+1}z +\sum_{k\in I}k a_k\partial_z^{\max(I)-k}
+=-\partial_z^{\max(I)+1}z +\sum_{k\in I}k a_k\partial_z^{\max(I)-k}
 \end{align*}
 und damit ist
 \begin{align*}
@@ -78,7 +112,7 @@ P_{\phi}(x,\partial_x) &=\cF_Q(x^{-1},-x^2\partial_x)
    +\sum_{k\in I}k a_k(-x^2\partial_x)^{\max(I)-k}
 \\&=(-x^2\partial_x)^{\max(I)} \myobracket{(x\partial_x-1)}
    +\sum_{k\in I}k a_k(-x^2\partial_x)^{\max(I)-k}
-  & \in \C[x]<\partial_x>
+  \in \C[x]<\partial_x>
 \end{align*}
 \end{proof}
 \iffalse
@@ -87,12 +121,12 @@ P_{\phi}(x,\partial_x) &=\cF_Q(x^{-1},-x^2\partial_x)
   gewünschte Richtung.
 \fi
 \begin{bem}
-Nach \cite[Chap 4]{comtet1974advanced} lässt sich $(x^2\partial_x)^k$, mittels
-ausnutzen der Stirling-Zahlen, wie folgt umschreiben:
+Nach \cite[Chap 4]{comtet1974advanced} lässt sich $(x^2\partial_x)^k$ unter
+verwendung der Stirling-Zahlen wie folgt umschreiben:
 \[
 (x^2\partial_x)^k=\sum_{i=1}^k\binom{k-1}{i-1}\frac{k!}{i!}x^{k+i}\partial_x^i
 \]
-Diese Formel schön genug, um erwähnt zu werden, wird aber im weiteren so nicht
+Diese Formel, schön genug, um erwähnt zu werden, wird aber im Weiteren nicht
 verwendet.
 \begin{comment}
 TODO: prüfen für kleine zahlen!!!
@@ -204,7 +238,7 @@ womit die Behauptung des Lemmas folgt und das Newton-Polygon wie in Abbildung
 \end{proof}
 Also ist, nach Lemma \ref{lem:slope-pb-multiplikation}, ein Pullback mit Grad
 $q+1$ hinreichend, um einen ganzzahligen Slope zu bekommen. Denn wir wissen,
-dass nach Anwenden eines solchem Pullbacks die Slopes mit ${q+1}$
+dass nach Anwendung eines solchen Pullbacks die Slopes mit ${q+1}$
 multipliziert werden, also gilt $\cP(\rho^+\cM_\phi)=\{q\}\subset\N$.
 \begin{lem}
 Im Fall $\phi=\frac{a}{t^{q}}$ ist mit $\rho:t\mapsto x:=-(q+1) t^{q+1}$ der
@@ -249,17 +283,18 @@ Ordnung vom Pullback ist $0$
 \end{cor}
 \end{comment}
 Das so erhaltene $\rho^+\cM_\phi$ wollen wir, wenn nötig, noch weiter
-zerlegen. Dazu würden wir gerne den Satz \ref{thm:Split-after-slopes} anwenden,
-leider haben wir momentan genau einen Slope.
-Hier hilft uns aber ein Trick, nach Korollar \ref{cor:zuruecktwisten} gilt
+zerlegen. Dazu würden wir gerne Satz \ref{thm:Split-after-slopes} anwenden,
+leider haben wir momentan aber genau einen Slope.
+Hier hilft uns aber der folgende Trick. Nach Korollar \ref{cor:zuruecktwisten}
+gilt
 $
 \rho^+\cM_{\phi}
   =\rho^+\cM_{\phi}\otimes_{\hat K}\sE^{\psi}\otimes_{\hat K}\sE^{-\psi}
 $,
 wobei $\cN:=\cM_{\phi}\otimes_{\hat K}\sE^{\psi}$ möglicherweise mehr als
-einen Slope hat. Genau diesen Sonderfall wollen wir, um mit Satz
-\ref{thm:Split-after-slopes} die Zerlegung $\cN=\bigoplus_i\cN_i$ zu erhalten
-und damit ist dann
+einen Slope hat. Genau diesen Sonderfall möchten wir, um mit Satz
+\ref{thm:Split-after-slopes} die Zerlegung $\cN=\bigoplus_i\cN_i$ zu erhalten.
+Damit ist dann
 \[
 \rho^+\cM_{\phi}=\bigoplus_i\cN_i\otimes_{\hat L}\sE^{-\psi}_{\hat L} \,.
 \]
@@ -269,7 +304,7 @@ $q=\frac{q}{1}=:\frac{\lambda_0}{\lambda_1}$, die Linearform
 \ell(s_0,s_1)=\lambda_0s_0+\lambda_1s_1=qs_0+s_1 \,.
 \]
 Schreibe $\rho^*P_{\phi}=\sum_i\sum_j\alpha_{ij}t^j\partial_t^i$ und berechne
-die \emph{Determinanten Gleichung} $\sigma_\ell(\rho^*P_{\phi})\in \hat L[\xi]$.
+die \emph{Determinantengleichung} $\sigma_\ell(\rho^*P_{\phi})\in \hat L[\xi]$.
 \begin{comment}
 Schon gezeigt, das $ord_\ell = 0$?
 \end{comment}
@@ -279,11 +314,11 @@ Schon gezeigt, das $ord_\ell = 0$?
   &= \sum_{\{(i,j)\in\N\times\Z \mid (q+1)i-j=0\}}\alpha_{ij}t^j\xi^i
 \end{align*}
 Da $\hat L[\xi]$ kommutativ ist, gilt hier, dass $(t^j\xi^i)^k=t^{jk}\xi^{ik}$
-ist.  Setze $\theta=t^{\lambda_0+\lambda_1}\xi^{\lambda_1}=t^{q+1}\xi$ so,
+ist.  Setze $\theta=t^{\lambda_0+\lambda_1}\xi^{\lambda_1}=t^{q+1}\xi$, so
 können wir
 \begin{align*}
-\sigma_\ell(\rho^*P_{\phi})(\theta) 
-  &= \sum_{k\geq 0}\alpha_k\theta^k & & \alpha_k\in\C
+\sigma_\ell(\rho^*P_{\phi})(\theta)
+  &= \sum_{k\geq 0}\alpha_k\theta^k, \alpha_k\in\C
 \end{align*}
 schreiben.
 \begin{comment}
@@ -342,7 +377,7 @@ nicht elementar, sondern regulär otimes E
 rechtfertigen, das mehr gerechnet wird, als nötig
 \end{comment}
 Als konkreten Fall betrachten wir nun $\cM_{\phi}$ bezüglich
-$\phi_1:=\frac{a}{x}$. 
+$\phi_1:=\frac{a}{x}$.
 Es ist das zugehörigen Minimalpolynom gegeben durch
 \begin{align*}
 P_{\phi}(x,\partial_x) &=-x^2\partial_x (x\partial_x-1)+a
@@ -354,7 +389,7 @@ P_{\phi}(x,\partial_x) &=-x^2\partial_x (x\partial_x-1)+a
   - x^2\partial_x}+x^2\partial_x+a
 \\&=-x^3\partial_x^2+a \,.
 \end{align*}
-Erhalte daraus das Newton-Polygon mit den Slopes
+Wir Erhalten daraus das Newton-Polygon mit den Slopes
 $\cP(\cM_{\phi})=\{\frac{1}{2}\}$.
 \begin{figure}[H] % htbp
 \begin{center}
@@ -393,12 +428,11 @@ $1=\frac{1}{1}=:\frac{\lambda_0}{\lambda_1}$.
 Definiere die Linearform $\ell(s_0,s_1):=\lambda_0s_0+\lambda_1s_1=s_0+s_1$.
 Wir suchen nun ein $\psi$, so dass der Twist $\rho^+\cM_{\phi}\otimes_{\hat
 L}\sE^\psi$ mehr als einen Slope hat, damit wir entlang der Slopes zerlegen
-können.  Berechne dazu die \emph{Determinanten Gleichung}
+können.  Berechne dazu die \emph{Determinantengleichung}
 $\sigma_\ell(\rho^*P_{\phi})\in \hat L[\xi]$ von $\rho^*P_{\phi}$.
 \begin{align*}
 \sigma_\ell(\rho^*P_{\phi})
-  &= \sum_{\{(i,j)\mid 2i-j=0\}}\alpha_{ij}x^{j}\xi^i\\
-  &= t^4\xi^2 + 2a
+  &= \sum_{\{(i,j)\mid 2i-j=0\}}\alpha_{ij}x^{j}\xi^i = t^4\xi^2 + 2a
 \end{align*}
 Setze $\theta:=t^{\lambda_0+\lambda_1}\xi^{\lambda_1}=t^2\xi$, so erhalten wir
 \begin{align*}
@@ -417,7 +451,7 @@ Vektor von $\rho^+\cM$ ist.
   \]
   und damit ist dann $\cN=\cD/\cD\cdot(\partial_t^2+a_1(t)\partial_t+a_0(t))$.
 \fi
-Mit dem Lemma vom Zyklischen Vektor, bzw. der Proposition
+Mit dem Lemma vom zyklischen Vektor, bzw. der Proposition
 \ref{prop:Zyklischer-Vektor}, wollen wir nun ein Minimalpolynom zu $\cN$
 berechnen\footnote{
 Dies wäre auch schneller, aber weit weniger interessant, mit Lemma
@@ -519,21 +553,21 @@ $\rho^*P(t,\partial_t)=t^4\partial_t^2-t^3\partial_t+2a$, ist
 \end{bem}
 \end{comment}
 
-Nachdem wir jetzt ein Minimalpolynom gefunden haben, ist unser nächstes Ziel,
+Nachdem wir jetzt ein Minimalpolynom gefunden haben, ist unser nächstes Ziel
 $\cN=\cD_{\hat L}/\cD_{\hat L}\cdot P'$ in zwei meromorphe Zusammenhänge mit
 nur einem Slope zerlegen.  Betrachte hierzu das Minimalpolynom und zerlege
 dieses in ein Produkt $P'(t,\partial_t)=Q_1(t,\partial_t)\cdot
 Q_2(t,\partial_t)$.
 
-Da der $\partial_t$-Grad von $P'$ genau $2$ ist, müssen die $Q_i$
-jeweils den Grad $1$ haben, um eine echte nichttriviale Zerlegung zu bekommen.
-Allgemein haben dir $Q_i$ also die Form
+Da der $\partial_t$-Grad von $P'$ genau $2$ ist, müssen die $Q_i$ jeweils Grad
+$1$ haben, um eine echte nichttriviale Zerlegung zu bekommen.
+Allgemein haben die $Q_i$ also die Form
 \begin{align*}
 Q_1&:=\bar v(t) \partial_t + v(t) & Q_2&:=\bar u(t)\partial_t + u(t)
 & \mbox{mit } \bar v(t), v(t), \bar u(t), u(t)\in \hat L \,.
 \end{align*}
 \begin{beo} \label{beo:paarweise-verschieben}
-Ist $Q_1$ und $Q_2$ so ein solches Paar, dann ist für $\sigma\in \hat L$ das
+Ist $Q_1$ und $Q_2$ ein solches Paar, dann ist für $\sigma\in \hat L$ das
 Paar $\bar Q_1:=Q_1\cdot \sigma^{-1}$ und $\bar Q_2:=\sigma\cdot Q_2$ ebenfalls
 eine Zerlegung, denn
 \[
@@ -548,7 +582,7 @@ Mit der Beobachtung \ref{beo:paarweise-verschieben} ist klar, dass wir den
 Faktor vor $\partial_t$ in $Q_2$ frei wählen können. Setze $\bar u(t):=1$ und
 erhalte
 \begin{align*}
-Q_1&=\bar v(t) \partial_t + v(t) & Q_2&=\partial_t + u(t)
+Q_1&=\bar v(t) \partial_t + v(t) \,, & Q_2&=\partial_t + u(t)
 & \mbox{mit } \bar v(t), v(t), u(t)\in \hat L
 \end{align*}
 %TODO: Namenskollision: u und v wie in Achsbeschriftung
@@ -653,8 +687,8 @@ Q_1\cdot Q_2&=\partial_t^2 + \sum_{n=-2}^\infty (u_n+v_n)t^n \partial_t
 \\&\overset{!}{=} \partial_t^2 - (t^{-1} - 2i\sqrt{2a}t^{-2})\partial_t
   - 3 i\sqrt{2a}t^{-3} \,.
 \end{align*}
-Damit haben wir ein Ergebnis, das sich Koeffizientenweise mit der gewünschten
-Formel vergleichen lässt:
+Damit haben wir ein Ergebnis, das sich nun koeffizientenweise mit der
+gewünschten Formel vergleichen lässt:
 \begin{align}
 2i\sqrt{2a}t^{-2} - t^{-1} &= \sum_{n=-2}^\infty (u_n+v_n)t^n
 \label{eq:bedingung1}\\
@@ -664,32 +698,31 @@ Formel vergleichen lässt:
 \end{align}
 Nun können wir mit (\ref{eq:bedingung1}) und (\ref{eq:bedingung2}) jeweils
 nochmals einen Koeffizientenvergleich durchführen und erhalten zunächst aus
-(\ref{eq:bedingung1}), die Bedingungen
+(\ref{eq:bedingung1}) die Bedingungen
 \begin{align}
 2i\sqrt{2a} &= u_{-2} + \underset{=0}{\underbrace{v_{-2}}} = u_{-2}
 \label{eq:bedingung1a}
 \\-1 &= u_{-1} + v_{-1}
 \label{eq:bedingung1b}
-\\0 &= u_n + v_n & \forall n \geq 0
+\\0 &= u_n + v_n \qquad\forall n \geq 0
 \label{eq:bedingung1c}
 \end{align}
-welche wir als nächstes mit (\ref{eq:bedingung2}) kombinieren wollen.
+welche wir als Nächstes mit (\ref{eq:bedingung2}) kombinieren wollen.
 Betrachte zunächst die Vorfaktoren vor $t^{-3}$:
 \begin{align*}
 - 3 i\sqrt{2a} &= (-2)u_{-2} + \sum_{k=0}^{0} v_{k-1}u_{-3-k+1}
 \\&= -2u_{-2} + v_{-1}u_{-2}
 \\&\overset{(\ref{eq:bedingung1a})}{=} -2\cdot2i\sqrt{2a} + v_{-1}2i\sqrt{2a}
 \\\overset{a\neq0}{\Rightarrow} v_{-1}
-  &= \frac{4i\sqrt{2a}-3i\sqrt{2a}}{2i\sqrt{2a}}
-\\&= \frac{1}{2}
+  &= \frac{4i\sqrt{2a}-3i\sqrt{2a}}{2i\sqrt{2a}} = \frac{1}{2}
 \end{align*}
 und somit
 \begin{align*}
 \overset{(\ref{eq:bedingung1b})}{\Rightarrow} -1 &=u_{-1}+v_{-1}
-\\ &=u_{-1}+\frac{1}{2}
+  = u_{-1}+\frac{1}{2}
 \\\Rightarrow u_{-1}&=-\frac{3}{2} \,.
 \end{align*}
-Nun zum allgemeinem Koeffizienten vor $t^{n}$ mit $n>-3$:
+Nun zum allgemeinen Koeffizienten vor $t^{n}$ mit $n>-3$:
 \begin{align*}
 0&= (n+1)u_{n+1} + \myubracket{\sum_{k=0}^{n+3} v_{k-1}u_{n-k+1}}
 \\&= (n+1)u_{n+1} + \myobracket{(\sum_{k=0}^{n+2} v_{k-1}u_{n-k+1})
@@ -706,12 +739,12 @@ und nach passendem Indexshift folgt
 \begin{align*}
 \Rightarrow v_{n} &= - \frac{1}{u_{-2}}
   \left((n-1)u_{n-1} + \sum_{k=0}^{n} v_{k-1}u_{n-k-1}\right)
-\\&\overset{(\ref{eq:bedingung1a})}{=} - \frac{1}{2i\sqrt{2a}}
+\\&\!\!\overset{(\ref{eq:bedingung1a})}{=} - \frac{1}{2i\sqrt{2a}}
   \left((n-1)u_{n-1} + \sum_{k=0}^{n} v_{k-1}u_{n-k-1}\right)
 \\&= \frac{i}{2\sqrt{2a}}
   \left((n-1)u_{n-1} + \sum_{k=0}^{n} v_{k-1}u_{n-k-1}\right)
 \end{align*}
-Also ist $\cN=\cN_1\oplus\cN_2$ mit 
+Also ist $\cN=\cN_1\oplus\cN_2$ mit
 $\cN_1=\cD_{\hat L}/\cD_{\hat L}\cdot (\partial_t + \sum_{n=-1}^\infty v_nt^n)$
 und
 $\cN_2=\cD_{\hat L}/\cD_{\hat L}\cdot (\partial_t + \sum_{n=-2}^\infty u_nt^n)$
@@ -853,7 +886,7 @@ v_{n} &= -\frac{1}{u_{-2}}
 \end{align*}
 Zu gegebenem $u_{-2}=2i\sqrt{2a}$, sind die Koeffizienten gegeben durch:
 \begin{align*}
-v_{-1}&=\frac{1}{2} & u_{-1}&=-\frac{3}{2}
+v_{-1}&=\frac{1}{2} \,,~ u_{-1}=-\frac{3}{2}
 \\v_{0} = -u_{0} &= -\frac{3}{4u_{-2}}
 \\v_n = - u_n &= \frac{1}{u_{-2}}
   \left((n+1)v_{n-1} + \sum_{k=1}^{n-1} v_{k-1}v_{n-k-1}\right)
@@ -891,7 +924,7 @@ v_n &= \frac{1}{u_{-2}}
     \frac{1}{u_{-2}^{n-k}}\tilde v_{n-k-1}
   \right)
 \\&= \frac{1}{u_{-2}^{n+1}}
-  \Bigg( \underset{=:\tilde v_n =:-\tilde u_n}{\underbrace{ 
+  \Bigg( \underset{=:\tilde v_n =:-\tilde u_n}{\underbrace{
   (n+1)\tilde u_{n-1} + \sum_{k=1}^{n-1} \tilde v_{k-1} \tilde v_{n-k-1}
   }} \Bigg)
 \end{align*}
@@ -906,7 +939,7 @@ Im Anhang wird in Abschnitt \ref{sec:Koeffs.hs} eine Haskell Modul vorgestellt,
 welches zu gegebenem $u_{-2}$ die Werte von $v(t)$ und $u(t)$ berechnet.
 
 In der Abbildung \ref{fig:plotKoeffs} sind die Beträge der Koeffizienten von
-$v(t)$ in Abhängigkeit von $n$ für verschiedene $u_{-2}$ angetragen.
+$v(t)$ in Abhängigkeit von $n$ für verschiedene $u_{-2}$ aufgetragen.
 \begin{figure}[htbp]
   \centering
   \includegraphics[angle=270,width=\the\textwidth]{../plot-betrag.pdf}
@@ -930,17 +963,17 @@ L \backslash L$.
 Also reicht es eine der beiden Potenzreihen zu untersuchen.
 Wir betrachten die folgenden zwei klassischen Konvergenzkriterien.
 \begin{thm}[Wurzlkriterium nach Cauchy] \label{thm:convKrit}
-Sei $\sum_n a_n x^n$ eine Potenzreihe. Es gilt:
+Sei $\sum_{n=0}^\infty a_n x^n$ eine Potenzreihe. Es gilt:
 \[
 \underset{n\rightarrow\infty}{\limsup} \sqrt[n]{|a_n|} = +\infty
-\Rightarrow \text{ die Potenzreihe ist nirgends konvergent.}
+\Rightarrow \text{ die Potenzreihe ist nur in $0$ konvergent.}
 \]
 \end{thm}
 \begin{proof}
 Siehe \cite[§18, Satz 94]{KnoppReihen}.
 \end{proof}
-In der Abbildung \ref{fig:plotCauchyKoeffs} sind, für verschiedene $u_{-2}$ die
-numerischen Werte von $\sqrt[n]{|a_n|}$ in Abhängigkeit von $n$ angetragen.
+In der Abbildung \ref{fig:plotCauchyKoeffs} sind für verschiedene $u_{-2}$ die
+numerischen Werte von $\sqrt[n]{|a_n|}$ in Abhängigkeit von $n$ aufgetragen.
 \begin{comment}
 Der graue Bereich ist leider außerhalb der Rechengenauigkeit, da mit zu großen
 Fließkommazahlen gerechnet werden muss.
@@ -951,14 +984,15 @@ näherungsweise $10^{300}$ entspricht.
 \begin{figure}[htbp]
   \centering
   \includegraphics[angle=270,width=\the\textwidth]{../plot-cauchy.pdf}
-  \caption{Wurzlkriterium angewendet auf die Koeffizienten}
+  \caption{Wurzlkriterium angewandt auf die Koeffizienten}
   \label{fig:plotCauchyKoeffs}
 \end{figure}
 \begin{thm}[Quotientenkriterium]
-Sei $\sum_n a_n x^n$ eine Potenzreihe. Es gilt:
+Sei $\sum_{n=0}^\infty a_n x^n$ eine Potenzreihe und es existiert ein $N\in\N$
+so dass$a_n\neq0$ $\forall n \geq N$. Es gilt:
 \[
 \underset{n\rightarrow\infty}{\lim} \frac{|a_{n}|}{|a_{n+1}|} = 0
-\Rightarrow \text{ die Potenzreihe ist nirgends konvergent.}
+\Rightarrow \text{ die Potenzreihe ist nur in $0$ konvergent.}
 \]
 \end{thm}
 \begin{comment}

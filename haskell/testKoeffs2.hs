@@ -1,6 +1,6 @@
 module Main where
 import ComplRat
-import Koeffs
+import Koeffs2
 import System.Environment
 
 uMin2=(0:+:1)

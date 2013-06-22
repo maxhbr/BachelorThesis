@@ -2,13 +2,12 @@ module Main where
 import ComplRat
 import Koeffs
 
--- from numbers
+-- Aus dem Paket: numbers.
 import Data.Number.CReal (CReal)
 
--- from monad-parallel
+-- Aus dem Paket: monad-parallel.
 import qualified Control.Monad.Parallel as P (sequence_)
 
--- for writing to file
 import System.Environment
 import System.IO
 import Data.Time

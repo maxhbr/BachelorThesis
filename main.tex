@@ -42,6 +42,8 @@
 \usepackage[automark]{scrpage2} % Headline styles
 \usepackage[square,numbers]{natbib}
 
+\usepackage{url} % URLS in bibtex
+
 \pagestyle{scrheadings}
 %A better solution would be to use typearea package.
 
@@ -427,7 +429,8 @@
 \nocite{*}
 %\bibliographystyle{dinat}
 %\bibliographystyle{plain}
-\bibliographystyle{amsalpha}
+%\bibliographystyle{amsalpha} %oder geralpha
+\bibliographystyle{geralpha} %oder geralpha
 \bibliography{../main}
 
 \end{document}

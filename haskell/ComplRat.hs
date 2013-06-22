@@ -17,17 +17,17 @@ data ComplRat = !Rational :+: !Rational
 -- -----------------------------------------------------------------------------
 -- Funktionen
 
--- | Gibt den reelen Teil einer gegebenen complexen Zahl zurück
+-- | Gibt den reellen Teil einer gegebenen komplexen Zahl zurück.
 realPart :: ComplRat -> Rational
 realPart (x :+: _) =  x
 
--- | Gibt den imaginären Teil einer gegebenen complexen Zahl zurück
+-- | Gibt den imaginären Teil einer gegebenen komplexen Zahl zurück.
 imagPart :: ComplRat -> Rational
 imagPart (_ :+: y) =  y
 
--- | Der nichtnegative Betrag einer complexen Zahl
--- nur für rein reele oder complexe Zahlen, da es sonst, aufgrund der fehlenden
--- Wurzel, zu problemen kommt
+-- | Der nichtnegative Betrag einer komplexen Zahl.
+-- Nur für rein reelle oder complexe Zahlen, da es sonst, aufgrund der
+-- fehlenden Wurzel, zu Problemen kommt.
 magnitude :: ComplRat -> Rational
 magnitude (x :+: 0) = abs x
 magnitude (0 :+: y) = abs y
@@ -35,8 +35,8 @@ magnitude (_ :+: _) = error "Oops! Use magnitudeSq instead."
 {-magnitude (x :+: y) = P.sqrt ( sqr x P.+ (sqr y) )-}
   {-where sqr z = z P.* z-}
 
--- | Das quadrat des Betrags einer complexen Zahl
--- ist für alle complexen zahlen geeignet
+-- | Das Quadrat des Betrags einer komplexen rationalen Zahl
+-- ist für alle komplexen zahlen eine rationale Zahl.
 magnitudeSq :: ComplRat -> Rational
 magnitudeSq (x :+: y) = x*x + y*y
 
@@ -52,9 +52,8 @@ instance Num ComplRat where
     (x :+: y) * (x' :+: y') = (x*x' - y*y') :+: (x*y' + y*x')
     negate (x :+: y)        = negate x :+: negate y
     fromInteger i           = fromInteger i :+: 0
-    abs z                   =  magnitude z :+: 0
-    signum (0:+:0)          =  0
-    {-signum z@(x:+:y)        =  x P./ r :+: y P./ r  where r = magnitude z-}
+    abs z                   = magnitude z :+: 0
+    signum (0:+:0)          = 0
 
 instance  Fractional ComplRat  where
   fromRational r      = fromRational r :+: 0

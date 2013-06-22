@@ -11,7 +11,7 @@ erzeugt mit einem Aufruf der Form \texttt{a :+: b} eine Imaginärzahl, die
 $a+ib$ entspricht.
 
 \section{Koeffs.hs} \label{sec:Koeffs.hs}
-Dieses Modul \texttt{Koeffs} stelle die Funktionen \texttt{vKoeffs} und
+Das Modul \texttt{Koeffs} stellt die Funktionen \texttt{vKoeffs} und
 \texttt{uKoeffs} bereit, welche zu einem gegebenem Wert von
 $u_{-2}=:\texttt{uMin2}$ eine
 unendliche Liste der Koeffizienten generieren. Die Einträge in der Liste sind
@@ -22,21 +22,21 @@ gerundet wird.
                 ,firstnumber=1
                 %,captionpos=b
                 ,caption=Koeffs.hs]{../haskell/Koeffs.hs}
-Beispielhaft kann man mit dem folgendem Programm die Koeffizienten von $v(t)$,
-zu $a=\frac{1}{8}$ also $u_{-2}=i=2i\sqrt{2a}$, erzeugen lassen.
+Beispielhaft kann man mit dem folgendem Programm die Koeffizienten von $v(t)$
+zu $a=\frac{1}{8}$, also $u_{-2}=i=2i\sqrt{2a}$, erzeugen lassen.
 \lstinputlisting[language=HaskellUlisses
                 ,firstnumber=1
                 %,captionpos=b
                 ,caption=testKoeffs.hs]{../haskell/testKoeffs.hs}
-Ist der Code in einer Datei \textbf{/Pfad/zu/testKoeffs.hs} gespeicher, so
-lässt er sich in Unix-Artigen Systemen beispielsweise mit den folgenden
-Befehlen compilieren und ausführen.
+Ist der Code in einer Datei \textbf{/Pfad/zu/testKoeffs.hs} gespeichert, so
+lässt er sich in Unix-artigen Systemen beispielsweise mit den folgenden
+Befehlen kompilieren und ausführen.
 \begin{lstlisting}[style=Bash]
 $ ghc --make /Pfad/zu/testKoeffs.hs
 $ /Pfad/zu/testKoeffs 15
 \end{lstlisting}
 Durch das Ausführen berechnet das Programm die Koeffizienten von $v$ bis zum
-Index $15$ und gibt in der Konsole das folgende aus
+Index $15$ und gibt in der Konsole das Folgende aus
 \begin{lstlisting}[style=Bash]
 n       | v_n
 --------+----------------------------------------------------------------------
@@ -60,6 +60,7 @@ n       | v_n
 \end{lstlisting}
 Übersetzt in unsere Zahlenschreibweise ergibt sich daraus die folgende Tabelle:
 %\ref{tab:koeff_a=0.125}
+\renewcommand{\arraystretch}{1.15}
 \begin{table}[H] %htbp]
 \begin{center}
 \begin{tabular}{|r||r|}
@@ -138,11 +139,11 @@ v(t)&=
 
 In diesem Modul werden zusätzlich die Module \texttt{Data.Number.CReal} und
 \texttt{Control.Monad.Parallel} eingebunden.
-Die Datentyp \texttt{CReal} des ersten Moduls implementiert die Reellen Zahlen
-und wird verwendet, da die berechneten Zahlen den Zahlenbereich des Floating
-Datentypes übersteigen.
-Das zweite Modul stellt eine veränderte Version von \texttt{sequence\_} bereit,
-welches automatisch die ausführungen parallelisiert.
+Der Datentyp \texttt{CReal} des ersten Moduls implementiert die reellen Zahlen
+und wird verwendet, da die berechneten Zahlen den Zahlenbereich des
+Floating-Datentypes übersteigen.  Das zweite Modul stellt eine veränderte
+Version von \texttt{sequence\_} bereit, welche automatisch die Ausführungen
+parallelisiert.
 \begin{comment}
 Beide Pakete lassen sich mittels dem Cabal Befehl
 \begin{lstlisting}[style=Bash]
