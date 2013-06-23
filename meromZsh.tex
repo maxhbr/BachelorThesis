@@ -128,7 +128,7 @@ $(\cM_K,\partial)$ und besteht aus folgenden Daten:
 \begin{itemize}
 \item $\cM_K$, ein endlich dimensionaler $K$-Vektorraum und
 \item einer $\C$-linearen Abbildung $\partial:\cM_K\rightarrow \cM_K$,
-genannt \emph{Derivation} oder \emph{Zusammenhang}, welche für alle $f\in K$
+genannt \emph{Derivation}, welche für alle $f\in K$
 und $u\in \cM_K$ die \emph{Leibnitzregel}
 \begin{equation}\label{eq:Leibnitzregel}
 \partial(fu)=f'u+f\partial u %TODO: hier klammern um das letzte u ?
@@ -475,19 +475,20 @@ Verschiebung, zu Definition \ref{defn:NP} äquivalent ist.
 \end{bem}
 
 \begin{defn} % aus der zula
-Die Menge $\slopes(P)$ (genannt \emph{Slopes von $P$}) sind die
+Die Menge $\cP(P)$, genannt \emph{Slopes von $P$}, sind die
 nicht-vertikalen Steigungen von $N(P)$, die sich in der rechten Halbebene
 befinden.
 % der $y$-Achse
 %TODO: bessere Formulierung
 \begin{itemize}
+\item Ist $\cM\cong\cD_{\hat K}/\cD_{\hat K}\cdot P$ so definiere $\cP(P)$ als
+die zu $\cM$ gehörigen Slopes und schreibe dafür $\cP(\cM)$.
 \item P heißt \emph{regulär} oder \emph{regulär singulär} $:\Leftrightarrow$
-$\slopes(P)=\{0\}$ oder $\deg P=0$, sonst \emph{irregulär singulär}.
+$\cP(P)=\{0\}$ oder $\deg P=0$, sonst \emph{irregulär singulär}.
 \item Ein meromorpher Zusammenhang $\cM_{\hat K}$ (bzw. $\cM_K$) heißt regulär
 singulär, falls es ein regulär singuläres $P\in \cD_{\hat K}$ (bzw. $P\in
 \cD_K$) gibt, mit $\cM_{\hat K}\cong\cD_{\hat K}/\cD_{\hat K}\cdot P$ (bzw.
 $\cM_K\cong\cD_K/\cD_K\cdot P$).
-\item Schreibe $\cP(\cM)$ für die Menge der zu $\cM$ gehörigen Slopes.
 \end{itemize}
 \end{defn}
 
@@ -508,7 +509,7 @@ H(P_1)=\Big( (\textcolor{blue}{2},\textcolor{red}{1}-\textcolor{blue}{2}) +
 \]
 In Abbildung \ref{fig:Newton-Polygon1} ist der Quadrant, der zum Monom
 $x\partial_x^2$ gehört (blau) sowie das Newton-Polygon eingezeichnet.
-Offensichtlich ist $\slopes(P_1)=\{0\}$ und damit ist $P_1$ regulär singulär.
+Offensichtlich ist $\cP(P_1)=\{0\}$ und damit ist $P_1$ regulär singulär.
 \item
 \begin{comment}
 \cite[Bsp 5.3. 2.]{ZulaBarbara}

@@ -113,25 +113,24 @@ TODO: damit wird $\hat L$ zu einem $\hat K$ Vektorraum.
 \begin{comment}
 TODO: $\nable$ zu $\partial_x$ ???? dann $\partial_t=\rho^*\partial_x$???
 \end{comment}
-Sei $\cM_{\hat K}$ ein endlich dimensionaler $\Cfxl$ Vektorraum ausgestattet mit
-einem Zusammenhang $\nabla$.
+Sei $\cM_{\hat K}$ ein endlich dimensionaler $\Cfxl$ Vektorraum ausgestattet
+mit einer Derivation $\partial_x$.
 %
 \begin{defn}[Pullback] \label{defn:pull-back}
-\begin{comment}
-\cite[1.a]{sabbah_Fourier-local} und
-\cite[Page 34]{sabbah_cimpa90}
-\end{comment}
 Der \emph{Pullback} oder das \emph{inverse Bild} $\rho^{+}\cM_{\hat K}$ von
-$(\cM_{\hat K},\nabla)$ ist der Vektorraum
+$(\cM_{\hat K},\partial_x)$ ist der Vektorraum
 \[
 \rho^{*}\cM_{\hat K}:=\hat L\otimes_{\hat K}\cM_{\hat K}
 \bydef\Cftl\otimes_{\Cfxl}\cM_{\Cfxl}
 \]
- mit dem \emph{Pullback Zusammenhang} $\rho^*\nabla$ definiert durch
-%TODO: ist das der Zusammenhang oder die Wirkung oder was?
+mit der \emph{Pullback Derivation} $\partial_t:=\rho^*\partial_x$ definiert
+durch
 \begin{equation} \label{eq:pull-back-zusammenhang}
 \partial_t(1\otimes m):=\rho'(t)\otimes\partial_xm \,.
 \end{equation}
+\begin{comment}
+\cite[1.a]{sabbah_Fourier-local} und \cite[Page 34]{sabbah_cimpa90}
+\end{comment}
 \end{defn}
 \begin{bem}
 \begin{itemize}
@@ -343,14 +342,13 @@ Somit haben wir ein Urbild gefunden und die Surjektivität gezeigt.
 \end{proof}
 
 \begin{lem} \label{lem:pull-back-hilfslemma1}
-Das in Lemma \ref{lem:pull-back-hilfslemma1pre} definierte $\Phi$ ist sogar ein
-Morphismus von meromorphen Zusammenhängen, also gilt sogar
-$\rho^*\cD_{\hat K }\bydef\hat L\otimes_{\hat K}\cD_{\hat K } \cong \cD_{\hat L
-}$
+Das in Lemma \ref{lem:pull-back-hilfslemma1pre} definierte $\Phi$ ist sogar
+ein Morphismus von meromorphen Zusammenhängen, also gilt sogar
+$\rho^*\cD_{\hat K}\bydef\hat L\otimes_{\hat K}\cD_{\hat K }\cong\cD_{\hat L}$
 als meromorphe Zusammenhänge.
 \end{lem}
 \begin{proof}
-Sei $\partial_t$ wie gewohnt und $\partial_\otimes$ der Zusammenhang auf
+Sei $\partial_t$ wie gewohnt und $\partial_\otimes$ die Derivation auf
 $\hat L\otimes_{\hat K}\cD_{\hat K }$, welcher wie in Proposition
 \ref{prop:tensorZusammenhang} definiert sei.
 Wir wollen noch zeigen, dass $\partial_t\circ\Phi = \Phi \circ
@@ -713,7 +711,7 @@ Also ergibt Einsetzen
 \end{align*}
 %
 Also gilt $\rho^*P= \frac{1}{4}t^4\partial_t^2 -\frac{1}{2}t^3\partial_t-1$ mit
-$ \slopes(\rho^*P)=\{1\} $ (siehe Abbildung \ref{fig:Pull-Back2}) und somit
+$ \cP(\rho^*P)=\{1\} $ (siehe Abbildung \ref{fig:Pull-Back2}) und somit
 $\rho^*\cM_{\hat K}=\cD_{\hat L}/\cD_{\hat L}
 \cdot(\frac{1}{4}t^4\partial_t^2-\frac{1}{2}t^3\partial_t-1)$.
 \begin{figure}[htbp]
@@ -802,7 +800,7 @@ Für $\rho:t\rightarrow u^2$, $\phi=\frac{1}{u^2}$ betrachte
 (\underset{=:P}{\underbrace{\partial_u+\frac{2}{u^3}}})
 \end{align*}
 %also $P=\partial_u+\frac{2}{u^3}$
-mit $ \slopes(P)=\{2\} $ (siehe Abbildung \ref{fig:Push-Forward1}).
+mit $ \cP(P)=\{2\} $ (siehe Abbildung \ref{fig:Push-Forward1}).
 Bilde nun das Direkte Bild über $\rho$, betrachte dazu
 \begin{align*}
 \partial_u+\frac{2}{u^3} &= 2u(\frac{1}{2u}\partial_u+\frac{1}{u^4}) \\
@@ -811,7 +809,7 @@ Bilde nun das Direkte Bild über $\rho$, betrachte dazu
 \end{align*}
 Also ist
 $\rho_+\sE^\phi\cong \hat\cD/\hat\cD\cdot(\partial_t+\frac{1}{t^2})$
-mit $\rho_+P=\partial_t+\frac{1}{t^2}$ und $ \slopes(\rho_+P)=\{1\} $ (siehe
+mit $\rho_+P=\partial_t+\frac{1}{t^2}$ und $\cP(\rho_+P)=\{1\}$ (siehe
 Abbildung \ref{fig:Push-Forward2})
 \end{exmp}
 \end{comment}
