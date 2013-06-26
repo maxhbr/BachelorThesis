@@ -44,7 +44,6 @@ operationen.tex:%TODO: move after slope definition!!!
 operationen.tex:TODO
 operationen.tex:TODO: damit wird $\hat L$ zu einem $\hat K$ Vektorraum.
 operationen.tex:TODO: $\nable$ zu $\partial_x$ ???? dann $\partial_t=\rho^*\partial_x$???
-operationen.tex:%TODO: ist das der Zusammenhang oder die Wirkung oder was?
 operationen.tex:\begin{comment} TODO: VR oder Moduln??  \end{comment}
 operationen.tex:%TODO: Pfeile
 operationen.tex:\begin{comment} TODO: korrekt? \end{comment}

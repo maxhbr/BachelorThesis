@@ -1,13 +1,16 @@
 module Main where
 import ComplRat
--- Aus dem Paket: MemoTrie
-import Data.MemoTrie (memo)
+import Koeffs
+
 -- Aus dem Paket: numbers.
 import Data.Number.CReal (CReal)
+
 -- Aus dem Paket: monad-parallel.
 import qualified Control.Monad.Parallel as P (sequence_)
+
 import System.Environment
 import System.IO
+import Data.Time
 
 main :: IO()
 main = do x <- getArgs; P.sequence_ $ main' $ (read $ head x :: Int)
@@ -26,14 +29,16 @@ main = do x <- getArgs; P.sequence_ $ main' $ (read $ head x :: Int)
 
     saveData :: Int -> (String, ComplRat) -> IO()
     saveData end (fn, uMin2) =
-      do withFile fn WriteMode (\handle -> do
+      do start <- getCurrentTime
+         withFile fn WriteMode (\handle -> do
            hPutStr handle (concat $ take end $ map genLine triples))
-      where vals    = (1/2:+:0 : [vals' i|i <- [0..]])
-            vals' i = product [1/uMin2|j <- [1..(i+1)]] * (tildeKoeff i)
+         stop <- getCurrentTime
+         putStrLn $ fn ++ " " ++ (show $ diffUTCTime stop start)
+      where vals    = vKoeffs uMin2
             triples = zip3 [0..] (tail vals) vals
 
     genLine :: (Int, ComplRat, ComplRat) -> String
-    genLine (i,v1,v2) = concat [ show i                  , "\t"
+    genLine (i,v1,v2) = concat [ show  i                 , "\t"
                                , genItemBetrag (i,v1,v2) , "\t"
                                , genItemCauchy (i,v1,v2) , "\t"
                                , genItemQuot (i,v1,v2)   , "\n" ]
@@ -50,12 +55,3 @@ main = do x <- getArgs; P.sequence_ $ main' $ (read $ head x :: Int)
             genItemQuot :: (Int, ComplRat, ComplRat) -> String
             genItemQuot (_,v1,v2) = show $ sqrt $ fromRational $ genItemQuot'
               where genItemQuot' = magnitudeSq v2 / magnitudeSq v1
-
-tildeKoeff :: Int -> ComplRat
-tildeKoeff = memo tildeKoeff'
-tildeKoeff' :: Int -> ComplRat
-tildeKoeff' n | n >   0   = tildeKoeff (n-1)*(fromIntegral n+1)+
-                sum [tildeKoeff (k-1)*(tildeKoeff (n-k-1))|k <- [1..n-1]]
-              | n ==  0   = -3/(4)
-              | n == -1   = 1/2
-              | otherwise = 0

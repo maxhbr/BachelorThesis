@@ -1,6 +1,5 @@
 %!TeX root = main.tex
 % das gleiche wie Meromorphe zusammenhänge?
-
 \chapter{Moduln über $\cD_k$}
 In diesem Kapitel wird die Weyl Algebra, wie in
 \cite[Chapter~1]{sabbah_cimpa90} oder in \cite[Kapittel~2]{ZulaBarbara} , in
@@ -68,7 +67,8 @@ Kommutationsrelation zwischen dem \emph{Ableitungsoperator} und dem
 \end{equation}
 wobei die rechte Seite die Multiplikation mit $\frac{\partial f}{\partial x}$,
 also dem bereits abgeleiteten $f$, darstellt. Dies bedeutet, für alle
-$g\in\C[x]$ hat man
+$g\in\C[x]$ hat man $[\frac{\partial}{\partial x},f]\cdot g
+=\frac{\partial f}{\partial x} \cdot g$, denn
 \begin{align*}
 [\frac{\partial}{\partial x},f]\cdot g
   &=\myubracket{\frac{\partial (fg)}{\partial x}}
@@ -80,7 +80,7 @@ $g\in\C[x]$ hat man
   }}_{=0}$}
   f\cdot \frac{\partial g}{\partial x}}
   - f\cdot \frac{\partial g}{\partial x}
-\\&=\frac{\partial f}{\partial x} \cdot g \,.
+=\frac{\partial f}{\partial x} \cdot g \,.
 \end{align*}
 \begin{defn}
 Definiere nun den Ring $\cD_k$ als die Quotientenalgebra der freien Algebra,
@@ -238,7 +238,7 @@ die $\C[x,\partial_x]$-Moduln. Sie werden geschrieben als $\cD-mod(\A^1)$
 %\section{(Links-) $\cD$-Moduln}
 Da $\cD$ ein nichtkommutativer Ring ist, muss man vorsichtig sein und zwischen
 Links- und Rechts-$\cD$-Moduln unterscheiden.
-Wenn im Folgendem von $\cD$-Moduln gesprochen wird, sind immer
+Wenn im Folgendem von $\cD$-Moduln gesprochen wird, sind damit immer
 Links-$\cD$-Moduln gemeint.
 
 \begin{exmp}
@@ -332,7 +332,7 @@ wieder holonom.
 \end{itemize}
 \end{bem}
 
-\begin{thm}
+\begin{thm} \label{thm:lokalHoloZuQuot}
 Sei $\cM_k$ ein holonomes $\cD_k$-Modul, dann gilt, dass seine Lokalisierung
 isomorph zu $\cD_k/\cD_k\cdot P$, mit einem $P\in \cD_k$ ungleich Null, ist.
 \end{thm}

@@ -131,12 +131,14 @@ v(t)&=
 \end{align*}
 \end{comment}
 
-\section{SaveToFile.hs}
+\section{SaveToFile.hs} \label{sec:SaveToFile.hs}
+Das folgende Programm wurde verwendet um die Daten für die die Abbildungen
+\ref{fig:plotKoeffs}, \ref{fig:plotCauchyKoeffs} und \ref{fig:plotQuotKoeffs}
+zu erzeugen. Es speichert dazu die Werte zeilenweise in Textdateien. 
 \lstinputlisting[language=HaskellUlisses
                 ,firstnumber=1
                 %,captionpos=b
                 ,caption=SaveToFile.hs]{../haskell/SaveToFile.hs}
-
 In diesem Modul werden zusätzlich die Module \texttt{Data.Number.CReal} und
 \texttt{Control.Monad.Parallel} eingebunden.
 Der Datentyp \texttt{CReal} des ersten Moduls implementiert die reellen Zahlen
@@ -144,43 +146,17 @@ und wird verwendet, da die berechneten Zahlen den Zahlenbereich des
 Floating-Datentypes übersteigen.  Das zweite Modul stellt eine veränderte
 Version von \texttt{sequence\_} bereit, welche automatisch die Ausführungen
 parallelisiert.
-\begin{comment}
-Beide Pakete lassen sich mittels dem Cabal Befehl
-\begin{lstlisting}[style=Bash]
-cabal install numbers monad-parallel
-\end{lstlisting}
-installieren
-\end{comment}
 
-\iffalse
-Das folgende Script nutzt 7 Prozessoren, um mit \texttt{SaveToFile.hs} die
-ersten 10000 werte zu berechnen. Anschließend werden mittels \texttt{gnuplot}
-die Plots als PDF erzeugt.
-\begin{lstlisting}[style=Bash,caption=GeneratePlots.sh]
-#!/bin/sh
-max=10000
-ghc --make -threaded ./SaveToFile.hs
-mkdir -p ./data
-./SaveToFile $max +RTS -N7
-mkdir -p ./plot
-art[2]="betrag"; art[3]="cauchy"; art[4]="quot";
-for i in 2 3 4; do
-  name="${art[i]}"
-  echo $name
-  gnuplot << EOF
-set samples 1001
-set key below
-set term push #TODO: unnötig?
-set term post enh color lw 1 12 "Times-Roman"
-set output "${name}.eps"
-set log xy
-plot for [fn in system("ls data/*")] fn every ::0::${max} using 1:${i}\
-  with lines title system("basename ".fn)
-EOF
-  epstopdf "${name}.eps" --outfile "./plot/${name}.pdf"
-  rm "${name}.eps"
-done
+Auf Unix-artigen Systemen lässt sich durch die folgenden Befehle das Programm
+Kompilieren, danach wird ein Ordner erstellt, welcher nötig ist. Mit dem
+Letzten Befehlt wird das Programm ausgeführt, es nutzt dazu 8 Prozessorkerne
+(wegen dem \texttt{-N8}) und berechnet die ersten $10000$ Werte für die
+Abbildungen.
+\begin{lstlisting}[style=Bash]
+$ ghc --make -threaded /Pfad/zu/SaveToFile.hs
+$ mkdir -p /Pfad/zu/data
+$ /Pfad/zu/SaveToFile 10000 +RTS -N8
 \end{lstlisting}
-\fi
+
 
 % vim: set ft=tex :

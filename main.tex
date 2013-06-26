@@ -12,6 +12,10 @@
   %,landscape,twocolumn
 ]{scrbook}
 
+\clubpenalty = 10000
+\widowpenalty = 10000
+\displaywidowpenalty = 10000
+
 \usepackage[ngerman]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -29,7 +33,7 @@
 \usepackage[scale=0.75]{geometry}
 \setlength{\unitlength}{1mm}
 %\emergencystretch 2em
-\usepackage{multicol}
+%\usepackage{multicol}                        \
 
 \usepackage{lscape} % alt: pdflscape
 \usepackage{amsmath,amsthm,amssymb}
@@ -87,7 +91,8 @@
 \fi
 
 %%%%  Ploting  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{tikz}
+\usepackage{tikz}   
+\usepackage{tikz-cd}
 \usetikzlibrary{matrix,arrows, calc, decorations.pathmorphing,%
   decorations.pathreplacing }
 
@@ -128,9 +133,11 @@
 \newtheorem{lemma}[thm]{Lemma}
 \newtheorem{lem}[thm]{Lemma}
 \newtheorem{lemdef}[thm]{Lemma/Definition}
+\newtheorem{lemcor}[thm]{Lemma/Korollar}
+\newtheorem{defcor}[thm]{Definition/Korollar}
+\newtheorem{cor}[thm]{Korollar}
 \newtheorem{kor}[thm]{Korollar}
 \newtheorem{prop}[thm]{Proposition}
-\newtheorem{cor}[thm]{Korollar}
 
 \theoremstyle{definition}
 \newtheorem{defn}[thm]{Definition}
@@ -366,7 +373,7 @@
 
 \newcommand{\overbox}[2]{\ensuremath\begin{array}[b]{c}%
 \makebox[0pt]{\fbox{\scriptsize#2}}\\[-2pt]\text{\small$\downarrow$}\\[-3pt]%
-{\displaystyle#1}\end{array}}%
+{\displaystyle#1}\end{array}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

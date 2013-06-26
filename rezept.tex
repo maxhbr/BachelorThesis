@@ -752,7 +752,8 @@ Zusammen mit $u_{-2}=2i\sqrt{2a}$, $u_{-1}=-\frac{3}{2}$ und
 $v_{-1}=\frac{1}{2}$ sind durch
 \begin{align} \label{eq:induktiveFormel}
 v_n &= - u_n = \frac{i}{2\sqrt{2a}}
-  \left((n-1)u_{n-1} + \sum_{k=0}^{n} v_{k-1}u_{n-k-1}\right) & \forall n \geq 0
+  \left((n-1)u_{n-1} + \sum_{k=0}^{n} v_{k-1}u_{n-k-1}\right) 
+  \qquad \forall n \geq 0
 \end{align}
 die Koeffizienten von $v(t)$ und $u(t)$ vollständig bestimmt.
 
@@ -789,21 +790,18 @@ Also zerlegt sich $\cM$, nach einem Pullback mit $\rho:t\mapsto x=-2t^2$, in
 \[
 \rho^+\cM_{\phi} = \Bigg(
   \underset{=:\cR_1}{\underbrace{\cD_{\hat L}/\cD_{\hat L}\cdot \Big(\partial_t
-  + \sum_{n=-1}^\infty v_nt^n\Big)}}\otimes\sE^{-\psi(t)}\Bigg)
+  + \sum_{n=-1}^\infty v_nt^n\Big)}}\otimes\sE^{-\frac{i\sqrt{2a}}{t}}\Bigg)
   \oplus \Bigg(
   \underset{=:\cR_2}{\underbrace{\cD_{\hat L}/\cD_{\hat L}\cdot \Big(\partial_t
-  + \sum_{n=-1}^\infty u_nt^n\Big)}}\otimes\sE^{\psi(t)}\Bigg) \,.
+  + \sum_{n=-1}^\infty u_nt^n\Big)}}\otimes\sE^{\frac{i\sqrt{2a}}{t}}\Bigg) \,.
 \]
 Nach Zerlegen von $\cR_1$ und $\cR_2$ in eine direkte Summe von elementaren
 formalen meromorphen Zusammenhängen, wie in Satz \ref{thm:regulaerInDirSumme},
 ist die Levelt-Turrittin-Zerlegung vollständig gegeben.
 
 \subsection{Konvergenz der Summanden} \label{sec:konvergenzDerPotReihen}
-\begin{comment}
-TODO: text\\
-Es ist klar, dass die Potenzreihen nicht konvergent sein dürfen, trotzdem
-wollen wir die Potenzreihen auf Konvergenz untersuchen
-\end{comment}
+Nun wollen wir in diesem Unterabschnitt noch das Konvergenzverhalten 
+
 Für $n>0$ gilt $v_{n-1}\overset{(\ref{eq:bedingung1c})}{=}-u_{n-1}$ und damit
 wollen wir die Formel (\ref{eq:induktiveFormel}) noch weiter vereinfachen, um
 eine Version zu bekommen, die sich gut implementieren lässt.
@@ -892,27 +890,23 @@ v_{-1}&=\frac{1}{2} \,,~ u_{-1}=-\frac{3}{2}
   \left((n+1)v_{n-1} + \sum_{k=1}^{n-1} v_{k-1}v_{n-k-1}\right)
   & & \forall n > 0
 \end{align*}
-\begin{comment}
-WEITER VEREINFACHEN:\\
+Im Anhang wird in Abschnitt \ref{sec:Koeffs.hs} eine Haskell Modul vorgestellt,
+welches zu gegebenem $u_{-2}$ die Werte von $v(t)$ und $u(t)$ berechnet.
+Möchte man zu mehreren Werten von $u_{-2}$ gleichzeitig die entsprechenden
+$v_i$ bzw. $u_i$ berechnen, so kann man die Berechnung wie folgt noch
+effizienter gestalten, definiere dazu $\tilde v_i$ bzw. $\tilde u_i$ so, dass
+gilt:
 \begin{align*}
-v_{-1}&=\frac{1}{2} & u_{-1}&=-\frac{3}{2}
-\\v_{0} = -u_{0} &= -\frac{3}{4u_{-2}}
-\\v_n = - u_n &= \frac{1}{u_{-2}}
-  \left((n+1)v_{n-1} + \sum_{k=1}^{n-1} v_{k-1}v_{n-k-1}\right)
-  & & \forall n > 0
+v_{i}=\frac{1}{u_{-2}^{i+1}}\tilde v_i \text{ und }
+  u_{i}=\frac{1}{u_{-2}^{i+1}}\tilde u_i
+  \qquad \forall n > -1 \,.
 \end{align*}
-Dies können wir, wie folgt, weiter umschreiben und setzte dazu
+Dafür setzen wir
 \begin{align*}
-v_{i}&:=\frac{1}{u_{-2}^{i+1}}\tilde v_i
-  &u_{i}&:=\frac{1}{u_{-2}^{i+1}}\tilde u_i
-  & & \forall n > -1
+\tilde v_{-1}:=\frac{1}{2} ,~ \tilde u_{-1}:=-\frac{3}{2} \text{ und }
+\tilde v_{0} := -\tilde u_{0} := -\frac{3}{4}
 \end{align*}
-Dann gilt:
-\begin{align*}
-\tilde v_{-1}&:=\frac{1}{2} & \tilde u_{-1}&:=-\frac{3}{2}
-\\\tilde v_{0} := -\tilde u_{0} &:= -\frac{3}{4}
-\end{align*}
-und mit
+und wegen
 \begin{align*}
 v_n &= \frac{1}{u_{-2}}
   \left((n+1)v_{n-1} + \sum_{k=1}^{n-1} v_{k-1}v_{n-k-1}\right)
@@ -930,16 +924,17 @@ v_n &= \frac{1}{u_{-2}}
 \end{align*}
 definieren wir
 \begin{align*}
-\tilde v_n := -\tilde u_n &:=
+\tilde v_n := -\tilde u_n :=
   (n+1)\tilde v_{n-1} + \sum_{k=1}^{n-1}\tilde v_{k-1}\tilde v_{n-k-1}
-  & & \forall n > 0
+  \qquad \forall n > 0
 \end{align*}
-\end{comment}
-Im Anhang wird in Abschnitt \ref{sec:Koeffs.hs} eine Haskell Modul vorgestellt,
-welches zu gegebenem $u_{-2}$ die Werte von $v(t)$ und $u(t)$ berechnet.
-
+Der Abschnitt \ref{sec:SaveToFile.hs} enthält ein Programm, dass zum generieren
+der Werte für die folgenden Abbildungen genutzt wurde. Dieses Programm nutzt
+die soeben definierten $\tilde v_i$ zur Berechnung.
+\begin{comment}
 In der Abbildung \ref{fig:plotKoeffs} sind die Beträge der Koeffizienten von
 $v(t)$ in Abhängigkeit von $n$ für verschiedene $u_{-2}$ aufgetragen.
+\end{comment}
 \begin{figure}[htbp]
   \centering
   \includegraphics[angle=270,width=\the\textwidth]{../plot-betrag.pdf}
@@ -962,7 +957,7 @@ Außerdem gilt, dass $ v(t) \in\hat L \backslash L \Leftrightarrow u(t) \in \hat
 L \backslash L$.
 Also reicht es eine der beiden Potenzreihen zu untersuchen.
 Wir betrachten die folgenden zwei klassischen Konvergenzkriterien.
-\begin{thm}[Wurzlkriterium nach Cauchy] \label{thm:convKrit}
+\begin{thm}[Wurzelkriterium nach Cauchy] \label{thm:convKrit}
 Sei $\sum_{n=0}^\infty a_n x^n$ eine Potenzreihe. Es gilt:
 \[
 \underset{n\rightarrow\infty}{\limsup} \sqrt[n]{|a_n|} = +\infty
@@ -974,22 +969,17 @@ Siehe \cite[§18, Satz 94]{KnoppReihen}.
 \end{proof}
 In der Abbildung \ref{fig:plotCauchyKoeffs} sind für verschiedene $u_{-2}$ die
 numerischen Werte von $\sqrt[n]{|a_n|}$ in Abhängigkeit von $n$ aufgetragen.
-\begin{comment}
-Der graue Bereich ist leider außerhalb der Rechengenauigkeit, da mit zu großen
-Fließkommazahlen gerechnet werden muss.
-Der graue Bereich ist hier näherungsweise gegeben durch
-$\{(x,n)\in\R\times\N\mid x>10^{300/n}\}$, da die größte Zahl im Zahlenbereich
-näherungsweise $10^{300}$ entspricht.
-\end{comment}
+Man sieht, dass die Werte, soweit diese berechnet wurden, durchgehend steigen.
+Dies deutet darauf hin, dass der Konvergenzradius auch gegen $0$ geht.
 \begin{figure}[htbp]
   \centering
   \includegraphics[angle=270,width=\the\textwidth]{../plot-cauchy.pdf}
-  \caption{Wurzlkriterium angewandt auf die Koeffizienten}
+  \caption{Wurzelkriterium angewandt auf die Koeffizienten.}
   \label{fig:plotCauchyKoeffs}
 \end{figure}
 \begin{thm}[Quotientenkriterium]
 Sei $\sum_{n=0}^\infty a_n x^n$ eine Potenzreihe und es existiert ein $N\in\N$
-so dass$a_n\neq0$ $\forall n \geq N$. Es gilt:
+so dass $a_n\neq0$ $\forall n \geq N$. Es gilt:
 \[
 \underset{n\rightarrow\infty}{\lim} \frac{|a_{n}|}{|a_{n+1}|} = 0
 \Rightarrow \text{ die Potenzreihe ist nur in $0$ konvergent.}
@@ -1017,8 +1007,28 @@ $u_{-2}$ gegen $0$.
 \begin{figure}[htbp]
   \centering
   \includegraphics[angle=270,width=\the\textwidth]{../plot-quot.pdf}
-  \caption{Quotientenkriterium angewendet auf die Koeffizienten}
+  \caption{Quotientenkriterium angewendet auf die Koeffizienten.}
   \label{fig:plotQuotKoeffs}
 \end{figure}
+
+\section{Fazit / Ausblick}
+Die zwei geprüften Konvergenzkriterien weisen beide darauf hin, dass die
+Polynome $v(t)$ und $u(t)$ divergieren, also in $\hat L\backslash L$ liegen.
+Ein nächstes Ziel wäre es, eines der Konvergenzkriterien konkret anzuwenden, um
+den exacten Konvergenzradius Analytisch zu bestimmen.
+\begin{comment}
+%TODO: bekannt? woher?
+Dies bestätigt die ohnehin bekannte Aussage, dass in unserem Beispiel keine
+konvergente Zerlegung zu finden ist.
+\end{comment}
+
+
+\begin{comment}
+\begin{itemize}
+\item asymptotische Analysis
+\item Stokes Struktur
+\item nicht wirklich möglich, Aussagen zu treffen
+\end{itemize}
+\end{comment}
 
 % vim: set ft=tex :

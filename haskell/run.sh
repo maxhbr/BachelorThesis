@@ -10,14 +10,14 @@ if [ $# -gt 0 ]; then
   #fi
 fi
 
-if false; then
+if true; then
   ghc --make -threaded ./SaveToFile.hs
   mkdir -p ./data
   rm ./data/u_*
   ./SaveToFile $max +RTS -N3
 fi
 
-if true; then
+if false; then
   mkdir -p ./plot
   art[2]="betrag"; art[3]="cauchy"; art[4]="quot";
   for i in 2 3 4; do

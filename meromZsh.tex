@@ -3,7 +3,7 @@
 % sich effektiv was ändert?
 % TODO: \cM = \cM_K ... replace
 % TODO: Dimension eines meromorphen Zusammenhang
-\chapter{Meromorphe Zusammenhänge}
+\chapter{Meromorphe Zusammenhänge} \label{chap:meromZsh}
 
 In diesem Kapitel werden wir das Konzept der meromorphen Zusammenhänge
 einführen und die folgenden zwei Eins-zu-Eins Koerspondenzen besprechen:
@@ -102,11 +102,12 @@ v(x) \text{ ist Lösung von } P\cdot u(x)=0
 &&\Rightarrow && \forall Q\in \cD_K \text{ ist } v(x) \text{ Lösung von }
 QP\cdot u(x)=0 \,.
 \end{align*}
-Also ist eine Lösung von $P\cdot u(x)=0$ auch eine Lösung von $\tilde Q\cdot
-u(x)=0$ für alle $\tilde Q\in\cD_K\cdot P\vartriangleleft \cD_K$.
-Diese Eigenschaft, dass ein linearer Differentialoperator $P$ ein Ideal
-bestimmt, wollen wir nun nutzen, um das Problem der Differentialgleichungen
-algebraisch zu betrachten.
+Also ist eine Lösung von $P\cdot u(x)=0$
+für alle $\tilde Q\in\cD_K\cdot P\vartriangleleft \cD_K$
+auch eine Lösung von $\tilde Q\cdot u(x)=0$.
+Diese Eigenschaft, dass ein linearer Differentialoperator $P$ ein
+Ideal bestimmt, wollen wir nun nutzen, um das Problem der
+Differentialgleichungen algebraisch zu betrachten.
 
 \begin{comment}
 Sei $P$ ein linearer Differentialoperator mit Koeffizienten in $a_i(x)\in\Ckx$
@@ -301,16 +302,17 @@ TODO: zueinander inverse bijektionen?
 \end{comment}
 \begin{lem}
 Sind $A_1,$ $A_2\in M(n\times n,K)$ zwei Matrizen, die zwei Systeme von ODEs
-beschreiben, dann gilt
+beschreiben, dann gilt:
 \begin{align*}
 \frac{d}{dx}u(x)=A_1u(x) && \text{ ist äquivalent zu }
 && \frac{d}{dx}u(x)=A_2u(x)
 \end{align*}
 genau dann, wenn
 \begin{align*}
-(\cM_{A_1},\partial_{A_1}) && \text{ ist äquivalent zu }
-&& (\cM_{A_2},\partial_{A_2}) \,.
+(\cM_{A_1},\partial_{A_1}) && \text{ zu }
+&& (\cM_{A_2},\partial_{A_2})
 \end{align*}
+äquivalent ist.
 \end{lem}
 Damit haben wir eine Eins-zu-Eins-Beziehung zwischen meromorphen
 Zusammenhängen und Systemen von ODEs.
@@ -321,26 +323,38 @@ auch in \cite[Sec 3]{sabbah_cimpa90} betrachtet.
 \begin{lem}[Lemma vom zyklischen Vektor] \label{lem:Zyklischer-Vektor}
 Sei $(\cM_K,\partial)$ ein meromorpher Zusammenhang. Es existiert ein Element
 $m\in\cM_K$ und eine ganze Zahl $d$ so dass
-$m,\partialm,\dots,\partial^{d-1}m$ eine $K$-Basis von $\cM_K$ ist.
+$m,\partial m,\dots,\partial^{d-1}m$ eine $K$-Basis von $\cM_K$ ist.
 \end{lem}
 
 \begin{proof}
 Ein Beweis ist beispielsweise in \cite[Thm 4.3.3]{sabbah_cimpa90} oder
-ausführlicher in \cite[Satz 4.8]{ZulaBarbara} zu finden.
+ausführlicher in \cite[Satz 4.8]{ZulaBarbara} nachzulesen.
 \end{proof}
-\begin{lemdef}
-Ist $\cM_K$ ein meromorpher Zusammenhang, dann existiert ein $P\in\cD_K$, so
-dass $\cM_K\cong\cD_K/\cD_K\cdot P$. Solch $P$ wird als \emph{Minimalpolynom}
-von $\cM_K$ bezeichnet.
-\end{lemdef}
+
+\begin{thm}
+Ein meromorpher Zusammenhang bestimmt einen holonomen lokalisierten
+$\cD_K$-Moduln und umgekehrt.
+\end{thm}
 \begin{proof}
-Siehe dazu \cite[Satz 4.12]{ZulaBarbara}.
-\begin{comment}
-\cite[Thm 4.3.2]{sabbah_cimpa90}
-\end{comment}
+Dies wird beispielsweise in \cite[Thm 4.3.2]{sabbah_cimpa90} bewiesen.
 \end{proof}
-\begin{bem}
-Dieses so definierte Minimalpolynom ist nicht eindeutig.
+
+\begin{defcor}
+Ist $\cM_K$ ein meromorpher Zusammenhang, dann existiert nach Satz
+\ref{thm:lokalHoloZuQuot} ein $P\in\cD_K$, so
+dass $\cM_K\cong\cD_K/\cD_K\cdot P$. Solch ein $P$ wird als
+\emph{Minimalpolynom} von $\cM_K$ bezeichnet.
+\end{lemdef}
+Vergleiche dazu auch \cite[Satz 4.12]{ZulaBarbara}, dort wird diese Aussage
+ohne die Theorie der Lokalisierten holonomen $\cD$-Moduln bewiesen.
+\begin{bem} \label{bem:MiPoUneindeutigkeit}
+Dieses so definierte Minimalpolynom ist nicht eindeutig. Im Besonderen ist für
+jedes $f\in \cD_K^\times$\footnote{ Für einen Ring $R$, bezeichnet $R^\times$
+die Einheitengruppe von $R$.}
+\[
+\cD_K/\cD_K\cdot P \cong \cD_K/\cD_K\cdot (f\cdot P) \,,
+\]
+denn $\cD_K\cdot P=\cD_K\cdot (f\cdot P)\vartriangleleft \cD_K$.
 \end{bem}
 
 \begin{prop} \label{prop:Zyklischer-Vektor}
@@ -423,14 +437,6 @@ TODO: verweise auf dieses Korollar
   &= \cD_K/\cD_K\cdot P_2 \oplus \cD_K/\cD_K\cdot P_1\\
   &\cong \cD_K/\cD_K\cdot (P_2 \cdot P_1) \,.
 \end{align*}
-\end{proof}
-
-\begin{thm}
-Ein meromorpher Zusammenhang bestimmt einen holonomen lokalisierten
-$\cD_K$-Moduln und umgekehrt.
-\end{thm}
-\begin{proof}
-Dies wird beispielsweise in \cite[Thm 4.3.2]{sabbah_cimpa90} bewiesen.
 \end{proof}
 
 \section{Newton-Polygon} \label{sec:NewtonPolygon}
@@ -557,12 +563,10 @@ Zur vorstellung der Eigenschaft Regulär \dots
 
 \begin{bem} \label{bem:NPverschieben}
 Sei $P$ ein Minimalpolynom zu $\cM_K$.
-Für jedes $f\in\cD_K^\times$\footnote{
-Für einen Ring $R$, bezeichnet $R^\times$ die Einheitengruppe von $R$.
-} gilt, dass $f\cdot P$ ebenfalls ein Minimalpolynom von $\cM_K$ ist, denn
-$\cD_K\cdot P=\cD_K\cdot (f\cdot P)\vartriangleleft \cD_K$.
-Allerdings sind die zugehörigen Newton-Polygone möglicherweise vertikal
-verschoben.\\
+Für jedes $f\in\cD_K^\times$
+gilt nach \ref{bem:MiPoUneindeutigkeit}, dass $f\cdot P$ ebenfalls ein
+Minimalpolynom von $\cM_K$ ist.  Allerdings sind die zugehörigen Newton-Polygone
+möglicherweise vertikal verschoben.\\
 Nach \cite[Seite 25]{sabbah_cimpa90} gilt, dass das Newton-Polygon, bis auf
 vertikales Verschieben, nur vom assoziierten meromorphen Zusammenhang abhängt.
 Dies wird auch in \cite[Bem 5.4]{ZulaBarbara} thematisiert.
@@ -584,7 +588,7 @@ einzelnen Monome schon Terme im Quadranten von $\epsilon x^{p}\partial_x^{q}$
 sind.
 \end{comment}
 \end{defn}
-\begin{bem}
+\begin{bem} ~
 \begin{itemize}
 \item Anschaulich bedeutet dies, dass
 \[
