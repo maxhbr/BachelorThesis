@@ -1,8 +1,4 @@
 %!TeX root = main.tex
-% TODO; wie darf ich einen meromorphen verändern, (das P verändern) ohne das
-% sich effektiv was ändert?
-% TODO: \cM = \cM_K ... replace
-% TODO: Dimension eines meromorphen Zusammenhang
 \chapter{Meromorphe Zusammenhänge} \label{chap:meromZsh}
 
 In diesem Kapitel werden wir das Konzept der meromorphen Zusammenhänge
@@ -45,7 +41,6 @@ Wir beginnen mit der klassischen Theorie von gewöhnlichen
 Differentialgleichungen.
 Sei $V$ ein geeigneter Funktionenraum, beispielsweise der Raum der holomorphen
 Funktionen.
-%TODO: posibly multivalued
 \begin{defn}[Systeme von ODEs]
 Für eine Matrix $A=(a_{ij}(x))_{ij}\in M(n\times n,K)$\footnote{
 Es bezeichnet $M(n\times m,k)$ die Menge der $n\times m$-Matrizen mit Einträgen
@@ -116,7 +111,7 @@ Man sagt eine Funktion $u\in\cF$ ist Lösung von $P$, falls $u$ die Gleichung
 $Pu=0$ erfüllt.
 Man sagt $0$ ist ein singulärer Punkt falls $a_d(0)=0$.
 Falls $0$ kein singulärer Punkt ist, hat $P$ genau $d$ über $\C$ Unabhängige
-Lösungen in $\Ckx$. %TODO: oder \tilde\cO
+Lösungen in $\Ckx$.
 \end{comment}
 
 \section{Meromorphe Zusammenhänge}
@@ -132,11 +127,18 @@ $(\cM_K,\partial)$ und besteht aus folgenden Daten:
 genannt \emph{Derivation}, welche für alle $f\in K$
 und $u\in \cM_K$ die \emph{Leibnitzregel}
 \begin{equation}\label{eq:Leibnitzregel}
-\partial(fu)=f'u+f\partial u %TODO: hier klammern um das letzte u ?
+\partial(fu)=f'u+f\partial u
 \end{equation}
 erfüllen soll.
 \end{itemize}
 \end{defn}
+\begin{comment}
+\begin{bem}
+In \cite{sabbah_cimpa90} wird in die Zweite Stelle des Tupels ein Zusammenhang
+$\nabla$ geschrieben, in welchen ein Vektorfeld von $K$ eingesetzt wird.
+Es gilt, ... TODO
+\end{bem}
+\end{comment}
 \begin{bem} %[Formaler meromorpher Zusammenhang]
 Analog definiert man einen \emph{formalen meromorphen Zusammenhang}
 $(\cM_{\hat K},\partial)$ bestehend, genau wie in Definition
@@ -175,7 +177,6 @@ $\phi:\cM\rightarrow\cN$ ein Isomorphismus von $K$-Vektorräumen ist.
 
 \begin{comment}
 TODO: entfernen
-\end{comment}
 \begin{defn}
 Wir erhalten damit die Kategorie der meromorphen Zusammenhänge über $K$ mit
 \begin{align*}
@@ -184,10 +185,12 @@ Wir erhalten damit die Kategorie der meromorphen Zusammenhänge über $K$ mit
 \text{ Morphismus von meromorphen Zusammenhängen.}
 \end{align*}
 \end{defn}
+\end{comment}
 
-\begin{lem} Sei $\cM_K$ ein endlich dimensionaler $K$-Vektor Raum mit
-$\partial_1$ und $\partial_2$ zwei darauf definierte Derivationen, so gilt: Die
-Differenz zweier Derivationen ist $K$-linear.
+\begin{lem}
+Sei $\cM_K$ ein endlich dimensionaler $K$-Vektor Raum mit $\partial_1$ und
+$\partial_2$ zwei darauf definierte Derivationen, so gilt: Die Differenz zweier
+Derivationen ist $K$-linear.
 \end{lem}
 \begin{proof}
 Seien $\partial_1$ und $\partial_2$ zwei Derivationen auf $\cM_K$.
@@ -427,9 +430,6 @@ Sei $P=P_1\cdot P_2$ mit $P_1,P_2\in \cD_K$ wie in Satz
 \cD_K/\cD_K\cdot (P_1\cdot P_2) \cong \cD_K/\cD_K\cdot (P_2 \cdot P_1) \,.
 \]
 \end{cor}
-\begin{comment}
-TODO: verweise auf dieses Korollar
-\end{comment}
 \begin{proof} Denn:
 \begin{align*}
 \cD_K/\cD_K\cdot P &= \cD_K/\cD_K\cdot (P_1\cdot P_2)\\
@@ -441,7 +441,6 @@ TODO: verweise auf dieses Korollar
 
 \section{Newton-Polygon} \label{sec:NewtonPolygon}
 % ist dies eine Invariante??
-% gestohlen aus der ZulaBarbara Seite 46
 Jedes $P\in \cD_{\hat K}$, also insbesondere auch jedes $P\in\cD_K$, lässt sich
 nach Proposition \ref{prop:weyl_eindeutige_schreibung} eindeutig als
 \[
@@ -455,7 +454,6 @@ H(P):&=\underset{m,l\mbox{ \footnotesize mit }\alpha_{ml}\neq0}{\bigcup}
   \Big( (m,l-m) + \R_{\leq 0}\times \R_{\geq 0} \Big) \subset \R^2\\
   &=\underset{m\mbox{ \footnotesize mit }a_{m}\neq0}{\bigcup}
   \Big( (m,deg(a_m)-m) + \R_{\leq 0}\times \R_{\geq 0} \Big) \subset \R^2 \,.
-%TODO: welche Definition ist besser?
 \end{align*}
 
 \begin{defn} \label{defn:NP}
@@ -477,15 +475,12 @@ H'(P):=\underset{m\mbox{ \footnotesize mit }a_{m}\neq0}{\bigcup}
 \]
 Er bemerkt auch, dass seine Definition, bis auf möglicherweise vertikale
 Verschiebung, zu Definition \ref{defn:NP} äquivalent ist.
-%TODO: zeige, das beide Definitionen gleich sind
 \end{bem}
 
 \begin{defn} % aus der zula
 Die Menge $\cP(P)$, genannt \emph{Slopes von $P$}, sind die
 nicht-vertikalen Steigungen von $N(P)$, die sich in der rechten Halbebene
 befinden.
-% der $y$-Achse
-%TODO: bessere Formulierung
 \begin{itemize}
 \item Ist $\cM\cong\cD_{\hat K}/\cD_{\hat K}\cdot P$ so definiere $\cP(P)$ als
 die zu $\cM$ gehörigen Slopes und schreibe dafür $\cP(\cM)$.

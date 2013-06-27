@@ -1,6 +1,5 @@
 anhang-plot-newton-polygon.tex:          %TODO
 anhang-plot-newton-polygon.tex:          %TODO
-anhang-quellcode.tex:set term push #TODO: unnötig?
 d-modul.tex:%TODO: sabah-cimpa90.pdf  seite 3
 d-modul.tex:%TODO: ein teil des Beweises ist "left as an exersice"
 d-modul.tex:TODO: Treffen?
@@ -52,7 +51,6 @@ operationen.tex:%TODO: Pfeile
 operationen.tex:%TODO: Pfeile
 operationen.tex:%TODO: Pfeile
 operationen.tex:%TODO: warum hier alles Lokalisiert?
-operationen.tex:%TODO: Funktorialität von Pullback? NEIN: Funktorialität von tensor
 operationen.tex:  %TODO: Pfeile
 operationen.tex:  %TODO: Pfeile
 operationen.tex:  %TODO: Pfeile
@@ -72,7 +70,7 @@ rezept.tex:und mit denn Kommutatorregeln %TODO: lemma? quelle?
 rezept.tex:%TODO: ist umsortieren immer erlaubt??
 rezept.tex:  %TODO: formel zu lang, label in nächster zeile
 rezept.tex:anwenden wollen: %TODO: quelle? formel?
-rezept.tex:TODO: text\\
+rezept.tex:%TODO: bekannt? woher?
 schluss.tex:%TODO: nummerierung gewollt?
 titel.tex:%TODO; titelpage bitte nicht seitlich versetzt
 workflow:  grep --exclude='TODO' "TODO" * > TODO
