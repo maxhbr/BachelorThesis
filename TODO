@@ -1,17 +1,12 @@
 anhang-plot-newton-polygon.tex:          %TODO
 anhang-plot-newton-polygon.tex:          %TODO
 d-modul.tex:%TODO: sabah-cimpa90.pdf  seite 3
-d-modul.tex:%TODO: ein teil des Beweises ist "left as an exersice"
-d-modul.tex:TODO: Treffen?
-d-modul.tex:TODO: prüfen
-d-modul.tex:%TODO: Variable zu t machen?
 d-modul.tex:(linear differential system) %TODO: defn
 grundlagen.tex:%TODO: Pfeile
 grundlagen.tex:  %TODO: Pfeile
 grundlagen.tex:  %TODO: Pfeile
 grundlagen.tex:  %TODO: Pfeile
 levelt-turrittin.tex:Wähle einen zyklischen Vektor $m\in\cM_{\hat K}$ % TODO: richtiger Raum?
-levelt-turrittin.tex:\begin{comment} TODO: bis hier schon klar \end{comment}
 levelt-turrittin.tex:%TODO: auch nicht formal
 levelt-turrittin.tex:%TODO: verwendet hier schon das klassische Levelt-Turittin
 levelt-turrittin.tex:TODO: Induktionsanfang und -schritt kennzeichnen
@@ -22,31 +17,14 @@ main.tex:%TODO: decorate floats
 main.tex:%TODO: replace def --> newcommand
 main.tex:%TODO: set titel variable??
 main.tex:%TODO: rename listings
-meromZsh.tex:% TODO; wie darf ich einen meromorphen verändern, (das P verändern) ohne das
-meromZsh.tex:% TODO: \cM = \cM_K ... replace
-meromZsh.tex:% TODO: Dimension eines meromorphen Zusammenhang
 meromZsh.tex:%TODO: erklären, erwähnen oder entfernen!
-meromZsh.tex:%TODO: posibly multivalued
 meromZsh.tex:%TODO: partial oder d
-meromZsh.tex:Lösungen in $\Ckx$. %TODO: oder \tilde\cO
-meromZsh.tex:\partial(fu)=f'u+f\partial u %TODO: hier klammern um das letzte u ?
+meromZsh.tex:Es gilt, ... TODO
 meromZsh.tex:TODO: entfernen
 meromZsh.tex:%TODO: wieso gilt das?
 meromZsh.tex:TODO: zueinander inverse bijektionen?
-meromZsh.tex:TODO: verweise auf dieses Korollar
-meromZsh.tex:%TODO: welche Definition ist besser?
-meromZsh.tex:%TODO: zeige, das beide Definitionen gleich sind
-meromZsh.tex:%TODO: bessere Formulierung
-operationen.tex:  %TODO: Pfeile
-operationen.tex:TODO: Zeige universelle Eigenschaft
-operationen.tex:%TODO: move after slope definition!!!
-operationen.tex:TODO
-operationen.tex:TODO: damit wird $\hat L$ zu einem $\hat K$ Vektorraum.
 operationen.tex:TODO: $\nable$ zu $\partial_x$ ???? dann $\partial_t=\rho^*\partial_x$???
-operationen.tex:\begin{comment} TODO: VR oder Moduln??  \end{comment}
 operationen.tex:%TODO: Pfeile
-operationen.tex:\begin{comment} TODO: korrekt? \end{comment}
-operationen.tex:\end{tikzpicture} , %TODO: hier wirklich ein Komma??
 operationen.tex:%TODO: Pfeile
 operationen.tex:%TODO: Pfeile
 operationen.tex:%TODO: Pfeile
@@ -55,12 +33,7 @@ operationen.tex:  %TODO: Pfeile
 operationen.tex:  %TODO: Pfeile
 operationen.tex:  %TODO: Pfeile
 operationen.tex:\\&=\dots %TODO: Hier weiter...
-operationen.tex:%TODO: erkläre wieso --> Elementare Zusammenhänge
-operationen.tex:TODO: korregieren, besser formulieren
 operationen.tex:-\partial_z(f)\cdot z^2= %TODO: wegen klammerung?
-operationen.tex: &=TODO
-operationen.tex:TODO: text löschen?
-operationen.tex:mit $\xi^p=1$, bringen. Sei so ein $\xi$ ab jetzt fixiert. %TODO: besonderes xi?
 rezept.tex:TODO: prüfen für kleine zahlen!!!
 rezept.tex:  %TODO: hier kein grid
 rezept.tex:TODO: hier weiter vereinfachen

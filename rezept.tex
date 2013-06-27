@@ -122,7 +122,7 @@ P_{\phi}(x,\partial_x) &=\cF_Q(x^{-1},-x^2\partial_x)
 \fi
 \begin{bem}
 Nach \cite[Chap 4]{comtet1974advanced} lässt sich $(x^2\partial_x)^k$ unter
-verwendung der Stirling-Zahlen wie folgt umschreiben:
+Verwendung der Stirling-Zahlen wie folgt umschreiben:
 \[
 (x^2\partial_x)^k=\sum_{i=1}^k\binom{k-1}{i-1}\frac{k!}{i!}x^{k+i}\partial_x^i
 \]
@@ -801,7 +801,14 @@ formalen meromorphen Zusammenhängen, wie in Satz \ref{thm:regulaerInDirSumme},
 ist die Levelt-Turrittin-Zerlegung vollständig gegeben.
 
 \subsection{Konvergenz der Summanden} \label{sec:konvergenzDerPotReihen}
-Nun wollen wir in diesem Unterabschnitt noch das Konvergenzverhalten 
+Nun wollen wir in diesem Unterabschnitt noch das Konvergenzverhalten
+betrachten. Nach allgemeineren Resultaten, welche hier aber nicht erläuterten
+werden, ist es klar, dass echt formale Potenzreihen nötig sind.
+Nichtsdestotrotz wollen wir dies hier trotzdem weiter untersuchen. Das Werkzeug
+der Wahl hierfür ist, zwei klassische Konvergenzkriterien mit dem Computer zu
+\glqq{}prüfen\grqq{}. Natürlich darf man hier dann nicht von einem Beweis der
+sprechen, trotzdem werden die Ergebnisse darauf hindeuten, dass die Aussage
+stimmt.
 
 Für $n>0$ gilt $v_{n-1}\overset{(\ref{eq:bedingung1c})}{=}-u_{n-1}$ und damit
 wollen wir die Formel (\ref{eq:induktiveFormel}) noch weiter vereinfachen, um
@@ -1017,17 +1024,16 @@ Die zwei geprüften Konvergenzkriterien weisen beide darauf hin, dass die
 Polynome $v(t)$ und $u(t)$ divergieren, also in $\hat L\backslash L$ liegen.
 Ein nächstes Ziel wäre es, eines der Konvergenzkriterien konkret anzuwenden,
 um den exacten Konvergenzradius Analytisch zu bestimmen.
-
-Ganz unabhängig vom Konvergenzverhalten, welches in Abschnitt
-\ref{sec:konvergenzDerPotReihen} betrachtet wurde, kann das Ergebnis aus
-\ref{sec:LT-speziell} genutzt werden, um die Stokes Struktur von
-$\rho^+\cM_\phi$ zu berechnen.
 \begin{comment}
 %TODO: bekannt? woher?
 Dies bestätigt die ohnehin bekannte Aussage, dass in unserem Beispiel keine
 konvergente Zerlegung zu finden ist.
 \end{comment}
 
+Ganz unabhängig vom Konvergenzverhalten, welches in Abschnitt
+\ref{sec:konvergenzDerPotReihen} betrachtet wurde, kann das Ergebnis aus
+\ref{sec:LT-speziell} genutzt werden, um die Stokes Struktur von
+$\rho^+\cM_\phi$ zu berechnen.
 
 \begin{comment}
 \begin{itemize}

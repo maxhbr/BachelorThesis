@@ -2,27 +2,21 @@
 \chapter{Meromorphe Zusammenhänge} \label{chap:meromZsh}
 
 In diesem Kapitel werden wir das Konzept der meromorphen Zusammenhänge
-einführen und die folgenden zwei Eins-zu-Eins Koerspondenzen besprechen:
+einführen und die folgenden zwei Eins-zu-Eins Korrespondenzen besprechen:
 \begin{center}
-\begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
-\matrix (m) [
-matrix of math nodes
-, row sep=-.5em
-, column sep=6em
-%, text height=3em
-%, text depth=0.25em
-]
-{
-\text{Systeme} & \text{Meromorphe}    & \text{Lokalisierte}\\
-\text{von}     & \text{Zusammenhänge} & \text{holonome}    \\
-\text{ODEs}    &                      & \text{$\cD$-Moduln}\\
-};
-\path[<->,font=\scriptsize,>=angle 90]
-(m-2-1) edge node[descr]{$1:1$} (m-2-2)
-(m-2-2) edge node[descr]{$1:1$} (m-2-3)
-;
-
-\end{tikzpicture}
+\begin{tikzcd}[column sep=huge]
+  \left\{ \overset{\text{\normalsize Systeme}}{
+   \underset{\text{\normalsize ODEs}}{\text{von}}}
+   \right\} 
+   \arrow[leftrightarrow]{r}[description]{$1:1$}&
+  \left\{ \overset{\text{\normalsize Meromorphe}}{
+   \underset{\text{\normalsize Zusammenhänge}}{\phantom{0}}}
+   \right\} 
+   \arrow[leftrightarrow]{r}[description]{$1:1$}&
+  \left\{ \overset{\text{\normalsize Lokalisierte}}{
+   \underset{\text{\normalsize $\cD$-Moduln}}{\text{holonome}}}
+   \right\} \,.
+\end{tikzcd}
 \end{center}
 Zum Schluss des Kapitels werden noch die Newton-Polygone eingeführt, welche
 als Invarianten für meromorphe Zusammenhänge fungieren sollen.
@@ -317,7 +311,7 @@ genau dann, wenn
 \end{align*}
 äquivalent ist.
 \end{lem}
-Damit haben wir eine Eins-zu-Eins-Beziehung zwischen meromorphen
+Damit haben wir eine Eins-zu-Eins Korrespondenzen zwischen meromorphen
 Zusammenhängen und Systemen von ODEs.
 Genauer wird dies beispielsweise in \cite[Sec 5.1]{hotta2007d} oder
 auch in \cite[Sec 3]{sabbah_cimpa90} betrachtet.
