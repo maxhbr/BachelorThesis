@@ -329,7 +329,7 @@ ausführlicher in \cite[Satz 4.8]{ZulaBarbara} nachzulesen.
 \end{proof}
 
 \begin{thm}
-Ein meromorpher Zusammenhang bestimmt einen holonomen lokalisierten
+Ein meromorpher Zusammenhang bestimmt einen holonomen lokalisierten\linebreak
 $\cD_K$-Moduln und umgekehrt.
 \end{thm}
 \begin{proof}
@@ -358,15 +358,17 @@ denn $\cD_K\cdot P=\cD_K\cdot (f\cdot P)\vartriangleleft \cD_K$.
 In der Situation von Lemma \ref{lem:Zyklischer-Vektor} sei
 \begin{align*}
 \partial^d m&= \alpha_{d-1}\partial^{d-1}m + \alpha_{d-2}\partial^{d-2}m
-  + \cdots + \alpha_1\partial m + \alpha_0m \,, & \alpha_i\in K
+  + \cdots + \alpha_1\partial m + \alpha_0m \,, \qquad \alpha_i\in K
 \end{align*}
 eine Basisdarstellung von $\partial^dm$, dann ist
 \begin{align*}
 \cM_K\cong
-\cD_K/\cD_K\Big( \underset{=:P}{\underbrace{
+\cD_K/\cD_K\Big( \underset{=:P\in\cD_K}{\underbrace{
   \partial_x^d-\alpha_{d-1}\partial_x^{d-1}-\alpha_{d-2}\partial_x^{d-2}
-  - \cdots - \alpha_1\partial_x - \alpha_0 }} \Big)\,.
+  - \cdots - \alpha_1\partial_x - \alpha_0 }} \Big)\,,
 \end{align*}
+also $P=\partial_x^d-\alpha_{d-1}\partial_x^{d-1} - \cdots - \alpha_1\partial_x
+- \alpha_0$ ein Minimalpolynom.
 \begin{comment}
 Da der $\partial_x$-Grad von $P$ gleich $d$ ist, folgt, dass $P$ ein
 Minimalpolynom ist. Also gilt damit $\cM_K\cong\cD_K/\cD_K\cdot P$.
@@ -457,10 +459,7 @@ Das Randpolygon der konvexen Hülle $\conv(H(P))$ von $H(P)$ heißt das
 
 \begin{bem}
 Claude Sabbah definiert das Newton-Polygon in \cite[5.1]{sabbah_cimpa90}
-auf eine andere Weise. Er schreibt
-\[
-P=\sum_{k=0}^n a_k(x)(x\partial_x)^k
-\]
+auf eine andere Weise. Er schreibt $P=\sum_{k=0}^n a_k(x)(x\partial_x)^k$
 mit $a_k(x)\in \Ckx$ und definiert das Newton-Polygon als das
 Randpolygon der konvexen Hülle von
 \[
@@ -478,8 +477,9 @@ befinden.
 \begin{itemize}
 \item Ist $\cM\cong\cD_{\hat K}/\cD_{\hat K}\cdot P$ so definiere $\cP(P)$ als
 die zu $\cM$ gehörigen Slopes und schreibe dafür $\cP(\cM)$.
-\item P heißt \emph{regulär} oder \emph{regulär singulär} $:\Leftrightarrow$
-$\cP(P)=\{0\}$ oder $\deg P=0$, sonst \emph{irregulär singulär}.
+\item P heißt \emph{regulär singulär} oder nur \emph{regulär}
+$:\Leftrightarrow$ $\cP(P)=\{0\}$ oder $\deg P=0$, sonst \emph{irregulär
+  singulär}.
 \item Ein meromorpher Zusammenhang $\cM_{\hat K}$ (bzw. $\cM_K$) heißt regulär
 singulär, falls es ein regulär singuläres $P\in \cD_{\hat K}$ (bzw. $P\in
 \cD_K$) gibt, mit $\cM_{\hat K}\cong\cD_{\hat K}/\cD_{\hat K}\cdot P$ (bzw.
@@ -487,7 +487,7 @@ $\cM_K\cong\cD_K/\cD_K\cdot P$).
 \end{itemize}
 \end{defn}
 
-\begin{exmp} \label{exmp:Newton-Polygon}
+\begin{exmp} \label{exmp:Newton-Polygon} ~
 \begin{enumerate}
 \item Ein einfaches Beispiel ist
 $P_1=x^{\textcolor{red}1}\partial_x^{\textcolor{blue}2}$.  Es ist abzulesen,
@@ -505,7 +505,8 @@ Offensichtlich ist $\cP(P_1)=\{0\}$ und damit ist $P_1$ regulär singulär.
 \cite[Bsp 5.3. 2.]{ZulaBarbara}
 \end{comment}
 Sei $P_2=x^4(x+1)\partial_x^4+x\partial_x^2+\frac{1}{x}\partial_x+1$.
-Das Newton-Polygon wurde in Abbildung \ref{fig:Newton-Polygon2} visualisiert.
+Das Newton-Polygon zu $P_2$ wurde in Abbildung \ref{fig:Newton-Polygon2}
+visualisiert.
 Man erkennt, dass $\cP(P_2)=\{0,\frac{2}{3}\}$ ist.
 Also ist $P_2$ irregulär singulär.
 \end{enumerate}
@@ -586,8 +587,8 @@ $\epsilon x^{p}\partial_x^{q}$ sind, dann gilt:
 \begin{align*}
 H(P)&=H(\epsilon x^{p}\partial_x^{q} + \text{T.i.Q. von }x^{p}\partial_x^{q})
 =H(\epsilon x^{p}\partial_x^{q})
-\\\Rightarrow N(P)&=N(\epsilon x^{p}\partial_x^{q}) \,.
 \end{align*}
+und damit folgt, dass $N(P)=N(\epsilon x^{p}\partial_x^{q})$ ist.
 Also können Terme, die sich bereits im Quadranten eines anderen Terms
 befinden und nicht der Term selbst sind, vernachlässigt werden, wenn das
 Newton-Polygon gesucht ist. Das \text{T.i.Q.} ist eine hier die Abkürzung für
@@ -596,7 +597,7 @@ Newton-Polygon gesucht ist. Das \text{T.i.Q.} ist eine hier die Abkürzung für
 \end{bem}
 \begin{bem} \label{bem:commutateWithTiQ}
 Nach \cite{sabbah_cimpa90} gilt sogar, dass beim Kommutieren von zwei
-Elementen $a,b\in\cD_{\hat K}$ nur Elemente im gemeinsamen Quadranten
+Elementen\linebreak $a,b\in\cD_{\hat K}$ nur Elemente im gemeinsamen Quadranten
 auftauchen. Es gilt also
 \[
 a\cdot b = b\cdot a +  \text{T.i.Q. von }b\cdot a \,.

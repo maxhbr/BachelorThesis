@@ -23,7 +23,6 @@ meromZsh.tex:Es gilt, ... TODO
 meromZsh.tex:TODO: entfernen
 meromZsh.tex:%TODO: wieso gilt das?
 meromZsh.tex:TODO: zueinander inverse bijektionen?
-operationen.tex:TODO: $\nable$ zu $\partial_x$ ???? dann $\partial_t=\rho^*\partial_x$???
 operationen.tex:%TODO: Pfeile
 operationen.tex:%TODO: Pfeile
 operationen.tex:%TODO: Pfeile
@@ -43,8 +42,7 @@ rezept.tex:und mit denn Kommutatorregeln %TODO: lemma? quelle?
 rezept.tex:%TODO: ist umsortieren immer erlaubt??
 rezept.tex:  %TODO: formel zu lang, label in nächster zeile
 rezept.tex:anwenden wollen: %TODO: quelle? formel?
-rezept.tex:%TODO: bekannt? woher?
-schluss.tex:%TODO: nummerierung gewollt?
+schluss.tex:%TODO: bekannt? woher?
 titel.tex:%TODO; titelpage bitte nicht seitlich versetzt
 workflow:  grep --exclude='TODO' "TODO" * > TODO
 workflow:  wc -l TODO

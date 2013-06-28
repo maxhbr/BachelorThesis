@@ -53,7 +53,7 @@ N\otimes_R(M/\im(f)) &\cong (N\otimes_R M) / \im(\id_{R}\otimes f)
 
 \begin{prop} \label{prop:tensorZusammenhang}
 Seien $(\cM,\partial_\cM)$ und $(\cN,\partial_\cN)$ meromorphe Zusammenhänge.
-Sei $n\otimes n\in \cM\otimes_K\cN$.
+Sei\linebreak $n\otimes n\in \cM\otimes_K\cN$.
 Durch Setzen von
 \begin{equation} \label{eq:TensorAbleiten}
 \partial_\otimes(m\otimes n)=\partial_\cM(m)\otimes n +m\otimes \partial_\cN(n)
@@ -66,9 +66,11 @@ Vergleiche dazu beispielsweise \cite[Prop 4.1.1]{SchneidersDmod}.
 Falls $\cN$ regulär und nicht Null, dann ist die Menge der Slopes von
 $\cM\otimes\cN$ genau die Menge der Slopes von $\cM$.
 \end{lem}
+\begin{comment}
 \begin{proof}
 Siehe dazu \cite[Ex 5.3.7]{sabbah_cimpa90}.
 \end{proof}
+\end{comment}
 
 \section{Pullback und Pushforward}
 \begin{comment}
@@ -165,7 +167,7 @@ wie man konkret ein entsprechendes Minimalpolynom berechnen kann.
 \begin{thm} \label{thm:pull-back-berechnung}
 %Wie erhält man den Pullback Zusammenhang bzw. wie ist er berechenbar?
 In der Situation von Lemma \ref{defn:pull-back}, mit
-$\cM_{\hat K}=\cD_{\hat K}/\cD_{\hat K}\cdot P(x,\partial_x)$ für ein
+$\cM_{\hat K}=\cD_{\hat K}/\cD_{\hat K}\cdot P(x,\partial_x)$ für ein\linebreak
 $P(x,\partial_x)\in\cD_{\hat K}$, gilt
 \[\rho^*\cM_{\hat K}\cong \cD_{\hat L}\Big/\cD_{\hat L}\cdot
   P(\rho(t),\rho'(t)^{-1}\partial_t) \,. \]
@@ -386,7 +388,7 @@ $a_k(t)\rho'(t)^k=\sum_{i=0}^{p-1}t^ia_{k,i}(t^p)$. Damit gilt
 \end{align*}
 Somit haben wir ein Urbild gefunden und die Surjektivität gezeigt.
 \end{proof}
-
+\pagebreak
 \begin{lem} \label{lem:pull-back-hilfslemma1}
 Das in Lemma \ref{lem:pull-back-hilfslemma1pre} definierte $\Phi$ ist
 zusätzlich ein Morphismus von meromorphen Zusammenhängen, also gilt sogar
@@ -502,6 +504,7 @@ mit $\Phi$ wie in Lemma \ref{lem:pull-back-hilfslemma1pre}
 macht $\alpha:=\_\!\cdot\! P(\rho(t),\rho'(t)^{-1}\partial_t)$ das Diagramm
 kommutativ.
 \end{lem}
+\pagebreak
 \begin{proof}
 Betrachte ein $f(t)\otimes Q(x,\partial_x)\in\hat L\otimes_{\hat K}\cD_{\hat
 K}$, so gilt
@@ -757,8 +760,8 @@ Also ergibt Einsetzen
 \end{align*}
 %
 Also gilt $\rho^*P= \frac{1}{4}t^4\partial_t^2 -\frac{9}{4}t^3\partial_t-1$ mit
-$ \cP(\rho^*P)=\{1\} $ (siehe Abbildung \ref{fig:Pull-Back2}) und somit
-$\rho^*\cM_{\hat K}=\cD_{\hat L}/\cD_{\hat L}
+$ \cP(\rho^*P)=\{1\} $ (siehe Abbildung \ref{fig:Pull-Back2}) und somit ist der
+Pullback gegeben durch $\rho^*\cM_{\hat K}=\cD_{\hat L}/\cD_{\hat L}
 \cdot(\frac{1}{4}t^4\partial_t^2-\frac{9}{4}t^3\partial_t-1)$.
 \begin{figure}[htbp]
   \begin{minipage}[hbt]{0,49\textwidth}
@@ -963,8 +966,9 @@ mit den Newton-Polygonen wie in Abbildung \ref{fig:fourierA} und
 
 \section{Betrachtung bei Unendlich}
 Sei $P\in\cD_{\hat K}$ ein Minimalpolynom zum meromorphen Zusammenhang
-$\cM_{\hat K}$.\\
-Wir wollen den Übergang $x\rightsquigarrow z^{-1}$ durchführen. 
+$\cM_{\hat K}$.
+Wir wollen den Zusammenhang bei Unendlich betrachten und dazu den Übergang
+$x\rightsquigarrow z^{-1}$ durchführen. 
 Dieser ist formal wie folgt definiert.
 \begin{defn}
 Wir definieren den \emph{Zusammenhang bei Unendlich $\cM_{\hat K}^\infty$} von
@@ -1037,7 +1041,7 @@ $\partial_x\bme=\phi'$.
 nach \cite[1.a]{sabbah_Fourier-local}
 \end{comment}
 \end{defn}
-\begin{bem}
+\begin{bem} ~
 \begin{enumerate}
 %\item Die $\sE_{\hat K}^\phi$ stellen so etwas, wie die einfachsten
 %meromorphen Zusammenhänge mit einem ganzzahligem Slope, dar.
@@ -1071,11 +1075,13 @@ Es ist
   +\sum_{i=-{p}}^\infty (i+1)a_{i+1}x^{i}
 \end{align*}
 und damit wissen wir, dass die einzigen zwei Punkte, die Ecken des Newton
-Polygons sein können, $(1,-1)$ und $(0,-(p+1))$ sind. Da einer der relevanten
+Polygons sein können, $(1,\textcolor{blue}{-1})$ und
+$(0,\textcolor{red}{-(p+1)})$ sind. Da einer der relevanten
 Punkte auf der vertikalen Achse liegt, kann es insgesamt nur einen Slope
 $\Lambda$ geben, welcher sich wie folgt berechnet:
 \begin{align*}
-\Lambda&=\max\left\{0,\frac{-1-(-(p+1))}{1}\right\}
+\Lambda&=\max\left\{0,\frac{
+  \textcolor{blue}{-1}-(\textcolor{red}{-(p+1)})}{1}\right\}
 =\max\{0,p\}
 =\begin{cases}
   p &\text{, wenn }p\geq0
@@ -1452,6 +1458,8 @@ Nach Definition \ref{defn:rang1Vr} gilt
 \\&=\myobracket{(\xi^{k-1})^p}\cdot\myobracket{(pt^{p-1})}e_k
 \\&=p(\xi^{k-1}t)^{p-1}\xi^{k-1}e_k
 \end{align*}
+
+\pagebreak
 und auf dem anderen Weg gilt:
 \begin{center}
   \begin{tikzpicture} [scale=3.3, descr/.style={fill=white,inner sep=2.5pt} ]
