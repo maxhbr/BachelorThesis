@@ -1,5 +1,5 @@
 %!TeX root = main.tex
-\chapter{Operationen auf meromorphen Zusammenhängen}
+\chapter{Operationen auf meromorphen Zusammenhängen} \label{chap:operationen}
 \section{Tensorprodukt}
 \begin{comment}
 \begin{defn}[Tensorprodukt]
@@ -93,9 +93,6 @@ Analog erhalten wir
 wobei $L$ (bzw. $\hat L$) eine endliche Körpererweiterung von $K$ (bzw. $\hat
 K$) ist.
 Damit wird $\hat L$ kanonisch zu einem $\hat K$ Vektorraum.
-\begin{comment}
-TODO: $\nable$ zu $\partial_x$ ???? dann $\partial_t=\rho^*\partial_x$???
-\end{comment}
 Sei $\cM_{\hat K}$ ein endlich dimensionaler $\Cfxl$ Vektorraum ausgestattet
 mit einer Derivation $\partial_x$.
 %
@@ -289,6 +286,7 @@ Dieser so erhaltene eindeutige Morphismus ist genau unser $\Phi$.
 \end{proof}
 \end{comment}
 \begin{proof}
+\begin{comment}
 Prüfe zunächst die Injektivität. Sei $f(t)\otimes Q(x,\partial_x)\in
 \ker(\Phi)$ so, dass
 \begin{align*}
@@ -302,6 +300,39 @@ Folgenden
 \\\Leftrightarrow && 0&=f(t) &\text{oder}&& 0&=Q(x,\partial_x)
 \\\Leftrightarrow&& 0&=f(t)\otimes Q(x,\partial_x) \,.
 \end{align*}
+\end{comment}
+Prüfe zunächst die Injektivität. Sei 
+$\sum_{k=0}^{p-1}t^k\otimes Q_k(x,\partial_x)$ ein allgemeines Element,
+welches
+\begin{align*}
+0 &= \Phi\Big(\sum_{k=0}^{p-1}t^k\otimes Q_k(x,\partial_x)\Big)
+\end{align*}
+erfüllt, also im $\ker(\Phi)$ liegt. Es ist
+\begin{align*}
+\Phi\Big(\sum_{k=0}^{p-1}t^k\otimes Q_k(x,\partial_x)\Big)
+  &= \sum_{k=0}^{p-1}t^k Q_k(\rho(t),\rho'(t)^{-1}\partial_t) =0
+\end{align*}
+eine eindeutige Zerlegung des Bildes, wobei jede Potenz von $t$ in nur genau
+einem Summanden vorkommt. Also ist diese Summe gleich $0$, genau dann, wenn
+jeder einzelne Summand verschwindet. Also
+\begin{align*}
+\Phi\Big(\sum_{k=0}^{p-1}t^k\otimes Q_k(x,\partial_x)\Big)&=0
+&\Leftrightarrow&&
+\Phi\Big(t^k\otimes Q_k(x,\partial_x)\Big)=0 
+\qquad\forall k\in\{0,\dots,p-1\}
+\end{align*}
+und, da hier alles nullteilerfrei ist und da $t^k\neq0\in \hat L$ $\forall k$,
+ist die Bedingung äquivalent zu
+\begin{align*}
+\Leftrightarrow\qquad 0&=Q_k(\rho(t),\rho'(t)^{-1}\partial_t)
+  \qquad\forall k\in\{0,\dots,p-1\}
+\\\Leftrightarrow\qquad 0&=Q_k(x,\partial_x)
+  \qquad\forall k\in\{0,\dots,p-1\}
+\\\Leftrightarrow\qquad 0&=t^k\otimes Q_k(x,\partial_x) 
+  \qquad\forall k\in\{0,\dots,p-1\} \,.
+\end{align*}
+Damit folgt, dass $\sum_{k=0}^{p-1}t^k\otimes Q_k(x,\partial_x)=0$, womit die
+Injektivität gezeigt ist.
 \begin{comment}
 Nun zur Surjektivität.
 Sei $g(t,\partial_t)=\sum_ka_k(t)\partial_t^k\in\cD_{\hat L}$, so gilt
@@ -778,6 +809,7 @@ $\begin{array}[t]{cccc}
 \end{itemize}
 \end{defn}
 
+\iffalse
 \begin{comment}
   \begin{minipage}[hbt]{0,49\textwidth}
   \begin{center}
@@ -825,6 +857,7 @@ mit $\rho_+P=\partial_t+\frac{1}{t^2}$ und $\cP(\rho_+P)=\{1\}$ (siehe
 Abbildung \ref{fig:Push-Forward2})
 \end{exmp}
 \end{comment}
+\fi
 
 \begin{thm} \label{thm:Projektionsformel}
 \begin{comment}

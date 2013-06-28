@@ -133,7 +133,7 @@ TODO: prüfen für kleine zahlen!!!
 \end{comment}
 \end{bem}
 
-\begin{lem}
+\begin{lem} \label{lem:allgemeinSlope}
 Zu einem $\phi=\sum_{k\in I}\frac{a_k}{t^{k}}$ gilt
 $\cP(\cM_{\phi})=\{\frac{q}{q+1}\}$, wobei $q=\max(I)$.
 \end{lem}
@@ -260,9 +260,9 @@ und sei $\rho:t\mapsto x:=-(q+1) t^{q+1}$. Damit gilt
   &=\cD_{\hat L}/\cD_{\hat L}\cdot P_\phi(\rho(t),\rho'(t)^{-1}\partial_t)\\
   &=\cD_{\hat L}/\cD_{\hat L}
     \cdot P_\phi\Big(-(q+1) t^{q+1},-\frac{1}{(q+1)^2t^q}\partial_t\Big)\\
-  &=\cD_{\hat L}/\cD_{\hat L} \!\cdot\! \Bigg((\myubracket{
-    -(-(q+1) t^{q+1})^2\frac{-1}{(q+1)^2t^{q}}\partial_t})^{q}
-    (\myubracket{-(q+1) t^{q+1}\frac{-1}{(q+1)^2t^{q}}\partial_t}-1)
+  &=\cD_{\hat L}/\cD_{\hat L} \!\cdot\! \Bigg(\Big(\myubracket{
+    -(-(q+1) t^{q+1})^2\frac{-1}{(q+1)^2t^{q}}\partial_t}\Big)^{q}
+    \Big(\myubracket{-(q+1) t^{q+1}\frac{-1}{(q+1)^2t^{q}}\partial_t}-1\Big)
     +qa\Bigg)\\
   &=\cD_{\hat L}/\cD_{\hat L}
     \cdot\Bigg(\Big(\myobracket{
@@ -305,13 +305,12 @@ $q=\frac{q}{1}=:\frac{\lambda_0}{\lambda_1}$, die Linearform
 \]
 Schreibe $\rho^*P_{\phi}=\sum_i\sum_j\alpha_{ij}t^j\partial_t^i$ und berechne
 die \emph{Determinantengleichung} $\sigma_\ell(\rho^*P_{\phi})\in \hat L[\xi]$.
-\begin{comment}
-Schon gezeigt, das $ord_\ell = 0$?
-\end{comment}
+Aus dem Beweis von Lemma \ref{lem:allgemeinSlope} ist ersichtlich, dass hier
+$ord_\ell = 0$ gilt, und damit
 \begin{align*}
 \sigma_\ell(\rho^*P_{\phi})
   &= \sum_{\{(i,j)\in\N\times\Z \mid \ell(i,i-j)=0\}}\alpha_{ij}t^j\xi^i\\
-  &= \sum_{\{(i,j)\in\N\times\Z \mid (q+1)i-j=0\}}\alpha_{ij}t^j\xi^i
+  &= \sum_{\{(i,j)\in\N\times\Z \mid (q+1)i-j=0\}}\alpha_{ij}t^j\xi^i \,.
 \end{align*}
 Da $\hat L[\xi]$ kommutativ ist, gilt hier, dass $(t^j\xi^i)^k=t^{jk}\xi^{ik}$
 ist.  Setze $\theta=t^{\lambda_0+\lambda_1}\xi^{\lambda_1}=t^{q+1}\xi$, so
@@ -788,22 +787,25 @@ Damit ist der zweite Summand also auch ein elementarer meromorpher
 Zusammenhang.
 \end{comment}
 Also zerlegt sich $\cM$, nach einem Pullback mit $\rho:t\mapsto x=-2t^2$, in
-\[
+\begin{equation} \label{eq:finaleZerlegung}
 \rho^+\cM_{\phi} = \Bigg(
-  \underset{=:\cR_1}{\underbrace{\cD_{\hat L}/\cD_{\hat L}\cdot \Big(\partial_t
+  \underset{=:R_1}{\underbrace{\cD_{\hat L}/\cD_{\hat L}\cdot \Big(\partial_t
   + \sum_{n=-1}^\infty v_nt^n\Big)}}\otimes\sE^{-\frac{i\sqrt{2a}}{t}}\Bigg)
   \oplus \Bigg(
-  \underset{=:\cR_2}{\underbrace{\cD_{\hat L}/\cD_{\hat L}\cdot \Big(\partial_t
+  \underset{=:R_2}{\underbrace{\cD_{\hat L}/\cD_{\hat L}\cdot \Big(\partial_t
   + \sum_{n=-1}^\infty u_nt^n\Big)}}\otimes\sE^{\frac{i\sqrt{2a}}{t}}\Bigg) \,.
-\]
-Nach Zerlegen von $\cR_1$ und $\cR_2$ in eine direkte Summe von elementaren
-formalen meromorphen Zusammenhängen, wie in Satz \ref{thm:regulaerInDirSumme},
-ist die Levelt-Turrittin-Zerlegung vollständig gegeben.
+\end{equation}
+Nach Zerlegen von $R_1$ und $R_2$ in eine direkte Summe von elementaren
+formalen meromorphen Zusammenhängen, wie in Satz \ref{thm:regulaerInDirSumme}
+beschrieben, ist die Levelt-Turrittin-Zerlegung vollständig gegeben.
 
-\subsection{Konvergenz der Summanden} \label{sec:konvergenzDerPotReihen}
-Nun wollen wir in diesem Unterabschnitt noch das Konvergenzverhalten
-betrachten. Nach allgemeineren Resultaten, welche hier aber nicht erläuterten
-werden, ist es klar, dass echt formale Potenzreihen nötig sind.
+\section{Konvergenzbetrachtung am Beispiel $\cM_{\phi}$ mit
+  $\phi_1:=\frac{a}{x}$} \label{sec:konvergenzDerPotReihen}
+Nun wollen wir in diesem Abschnitt noch das Konvergenzverhalten
+betrachten.
+Dieses Beispiel wurde auch schon in einem Brief von Takuro Mochizuki an
+Giovanni Morando angesprochen. Demnach wurde mittels Monodromiebetrachtung
+gezeigt, dass die Zerlegung nicht konvergent möglich ist.
 Nichtsdestotrotz wollen wir dies hier trotzdem weiter untersuchen. Das Werkzeug
 der Wahl hierfür ist, zwei klassische Konvergenzkriterien mit dem Computer zu
 \glqq{}prüfen\grqq{}. Natürlich darf man hier dann nicht von einem Beweis der
@@ -1012,35 +1014,13 @@ In Abbildung \ref{fig:plotQuotKoeffs} sind, analog wie in Abbildung
 Abhängigkeit von $n$ eingezeichnet.
 Auch hier sieht es so aus, als konvergieren die Werte, wie erwartet, für jedes
 $u_{-2}$ gegen $0$.
+Die zwei geprüften Konvergenzkriterien weisen also beide darauf hin, dass die
+Polynome $v(t)$ und $u(t)$ divergieren, also in $\hat L\backslash L$ liegen.
 \begin{figure}[htbp]
   \centering
   \includegraphics[angle=270,width=\the\textwidth]{../plot-quot.pdf}
   \caption{Quotientenkriterium angewendet auf die Koeffizienten.}
   \label{fig:plotQuotKoeffs}
 \end{figure}
-
-\section{Fazit / Ausblick}
-Die zwei geprüften Konvergenzkriterien weisen beide darauf hin, dass die
-Polynome $v(t)$ und $u(t)$ divergieren, also in $\hat L\backslash L$ liegen.
-Ein nächstes Ziel wäre es, eines der Konvergenzkriterien konkret anzuwenden,
-um den exacten Konvergenzradius Analytisch zu bestimmen.
-\begin{comment}
-%TODO: bekannt? woher?
-Dies bestätigt die ohnehin bekannte Aussage, dass in unserem Beispiel keine
-konvergente Zerlegung zu finden ist.
-\end{comment}
-
-Ganz unabhängig vom Konvergenzverhalten, welches in Abschnitt
-\ref{sec:konvergenzDerPotReihen} betrachtet wurde, kann das Ergebnis aus
-\ref{sec:LT-speziell} genutzt werden, um die Stokes Struktur von
-$\rho^+\cM_\phi$ zu berechnen.
-
-\begin{comment}
-\begin{itemize}
-\item asymptotische Analysis
-\item Stokes Struktur
-\item nicht wirklich möglich, Aussagen zu treffen
-\end{itemize}
-\end{comment}
 
 % vim: set ft=tex :

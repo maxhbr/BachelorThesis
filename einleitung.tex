@@ -2,66 +2,86 @@
 
 Die Theorie der $\cD$-Moduln ist aus einem Versuch, Systeme von partiellen
 Differentialgleichungen algebraisch zu betrachten, entstanden. Seit den 1960er
-Jahren wurde diese Theorie von beispielsweise B. Malgrange, J. Bernstein, J.E.
-Björk, M.Sato, T. Kawai und M. Kashiwara entwickelt und vorangetrieben.
-Auch aktuell wird noch viel auf diesem Thema geforscht, so ist hier vor allem
+Jahren wurde diese Theorie von beispielsweise B. Malgrange, J. Bernstein, P.
+Deligne M.Sato, und M. Kashiwara entwickelt und vorangetrieben.
+Auch aktuell wird viel auf diesem Thema geforscht, so ist hier vor allem
 C. Sabbah zu erwähnen, der auch zwei der Hauptquellen dieser Arbeit, namentlich
 \cite{sabbah_cimpa90} und \cite{sabbah_Fourier-local}, verfasst hat.
 
 Eines der wichtigsten Resultate für $\cD$-Moduln ist die
-Riemann-Hilbert-Korrespondenz. Sie beschreibt die Kategorienäquivalenzen
-\begin{center}
-\begin{tikzcd}[column sep=huge]
-  \left\{ \overset{\text{\normalsize Regulär singuläre}}{
-   \underset{\text{\normalsize holonome $\cD$-Moduln}}{\phantom{0}}}
-   \right\}\arrow[yshift=0.7ex]{r}{\textbf{DR}}&
-  \left\{ \text{Perverse Garben} \right\} \,,
-   \right\}\arrow[yshift=-0.7ex]{l}
-\end{tikzcd}
-\end{center}
-wobei \textbf{DR} der de Rahm Funktor ist.
-Für unseren Fall, da wir uns auf meromorphe Zusammenhänge bzw. lokalisierte
-holonome $\cD$-Moduln beschränken wollen, ergibt sich
+Riemann-Hilbert-Korrespondenz. Sie beschreibt mittels des de-Rahm-Funktor
+\textbf{DR} die Kategorienäquivalenz
 \begin{center}
 \begin{tikzcd}[column sep=large]
-  \left\{ \overset{\text{\normalsize Regulär singuläre}}{
-   \underset{\text{\normalsize holonome $\cD$-Moduln}}{\text{lokalisierte}}}
-   \right\} \arrow[leftrightarrow]{r}[description]{$1:1$}&
+  & \left\{ \overset{\text{\normalsize Regulär singuläre}}{
+   \underset{\text{\normalsize holonome $\cD$-Moduln}}{\phantom{0}}}
+   \right\}\arrow[yshift=0.7ex]{r}{\textbf{DR}}&
+  \left\{ \text{Perverse Garben} \right\}
+   \arrow[yshift=-0.7ex]{l}\\
   \left\{ \overset{\text{\normalsize Regulär singuläre}}{
    \underset{\text{\normalsize Zusammenhänge}}{\text{meromorphe}}}
-   \right\}\arrow[yshift=0.7ex]{r}&
+   \right\} \arrow[leftrightarrow]{r}[description]{$1:1$}&
+  \left\{ \overset{\text{\normalsize Regulär singuläre}}{
+   \underset{\text{\normalsize holonome $\cD$-Moduln}}{\text{lokalisierte}}}
+   \right\}\arrow[yshift=0.7ex]{r} \arrow[hook]{u}&
   \left\{ \text{Lokale Systeme} \right\} \,.
-   \right\}\arrow[yshift=-0.7ex]{l}
+   \arrow[yshift=-0.7ex]{l} \arrow[hook]{u}
 \end{tikzcd}
 \end{center}
+\iffalse
+  \begin{center}
+  \begin{tikzcd}[column sep=huge]
+    \left\{ \overset{\text{\normalsize Regulär singuläre}}{
+     \underset{\text{\normalsize holonome $\cD$-Moduln}}{\phantom{0}}}
+     \right\}\arrow[yshift=0.7ex]{r}{\textbf{DR}}&
+    \left\{ \text{Perverse Garben} \right\} \,,
+     \right\}\arrow[yshift=-0.7ex]{l}
+  \end{tikzcd}
+  \end{center}
+  wobei \textbf{DR} der de-Rahm-Funktor ist.
+  Für unseren Fall, da wir uns auf meromorphe Zusammenhänge bzw. lokalisierte
+  holonome $\cD$-Moduln beschränken wollen, ergibt sich
+  \begin{center}
+  \begin{tikzcd}[column sep=large]
+    \left\{ \overset{\text{\normalsize Regulär singuläre}}{
+     \underset{\text{\normalsize holonome $\cD$-Moduln}}{\text{lokalisierte}}}
+     \right\} \arrow[leftrightarrow]{r}[description]{$1:1$}&
+    \left\{ \overset{\text{\normalsize Regulär singuläre}}{
+     \underset{\text{\normalsize Zusammenhänge}}{\text{meromorphe}}}
+     \right\}\arrow[yshift=0.7ex]{r}&
+    \left\{ \text{Lokale Systeme} \right\} \,.
+     \right\}\arrow[yshift=-0.7ex]{l}
+  \end{tikzcd}
+  \end{center}
+\fi
 Vergleiche hierzu \cite[Sec 6]{REFKashiwara1984} oder \cite[Thm
 7.2.1]{hotta2007d}.
 Dieses bekannte Resultat über regulär singuläre holonome $\cD$-Moduln,
 lässt sich leider nicht kanonisch auf irregulär singuläre fortsetzen.
-Einen Ansatz, um ein solches Ergebnis für irregulär singuläre meromorphe
-Zusammenhänge trotzdem zu erhalten, liefert die Theorie der Stokes-Strukturen.
-Durch die Stokes Struktur wird die Änderung der asymtotischen Lösung auf
-Sektoren der Pole Kodiert.
-Vergleiche dazu beispielsweise \cite{sabbah2013introduction} oder
-\cite{citeulike:8523004}.
+Allerdings gibt es für irregulär singuläre holonome $\cD$-Moduln bzw. irregulär
+singuläre meromorphe Zusammenhänge das Levelt-Turrittin-Theorem als wichtige
+Strukturaussage. 
+Diese soll im Rahmen dieser Arbeit genauer betrachtet werden.
+Das Levelt-Turrittin-Theorem beschreibt, wie sich ein formaler meromorpher
+Zusammenhang $\cM$ nach einem möglicherweise notwendigem Pullback in die
+direkte Summe
+\[
+\cM \cong \bigoplus_{i=0}^n \sE^{\psi_i}\otimes R_i
+\]
+zerlegen lässt.
+Die $\sE^{\psi_i}\otimes R_i$ stellen dabei elementare meromorphe Zusammenhänge
+dar und $R_i$ ist jeweils einer der bereits erwähnten regulär singulären
+meromorphen Zusammenhänge.
 
-Das berechnen solch einer Stokes-Struktur ist im Allgemeinem schwer, ein
-Versuch dies zu vereinfachen ist, den fraglichen meromorphen Zusammenhang
-zunächst in gewisse elementare meromorphe Zusammenhänge zu zerlegen.
-Dies macht man in der Hoffnung, dass man für diese die Strukturen einfacher
-berechnen kann.
-Ein Satz der solch eine Zerlegung definiert bzw. beschreibt ist das
-Levelt-Turrittin-Theorem.
-\begin{comment}
-Die Levelt-Turrittin-Zerlegung ist eine sogenannte Slope-Filtration. Diese
-Klasse, der Slope-Filtrationen wird in \cite{0812.3921} betrachtet.
-\end{comment}
 Das Ziel dieser Arbeit ist es, in die Theorie der $\cD$-Moduln (Kapitel
 \ref{chap:dModuln}) bzw. der meromorphen Zusammenhänge (Kapitel
-\ref{chap:meromZsh}) kurz einzuführen und danach eine
-Levelt-Turrittin-Zerlegung explizit an einem Beispiel auszuführen und zu
-berechnen. Die Riemann-Hilbert-Korrespondenz und die Theorie der
-Stokes-Strukturen werden in dieser Arbeit nicht weiter betrachtet.
+\ref{chap:meromZsh} und \ref{chap:operationen}) kurz einzuführen und danach
+eine Levelt-Turrittin-Zerlegung explizit an einem Beispiel auszuführen und zu
+berechnen.
+\begin{comment}
+Die Riemann-Hilbert-Korrespondenz und die Theorie der Stokes-Strukturen werden
+in dieser Arbeit nicht weiter betrachtet.
+\end{comment}
 
 \begin{comment}
 Es wird in dieser Arbeit kein Vorwissen über $\cD$-Moduln bzw. meromorphe
@@ -72,7 +92,7 @@ Kapiteln eingeführt.
 Im ersten Kapitel wird sehr knapp die Theorie der $\cD$-Moduln eingeführt, da
 uns diese im später sehr nützlich sein wird. Hier wurde, vor allem bei der
 Definition von holonomen $\cD$-Moduln, viel Hintergrund weggelassen, da dieser
-nicht in den Rahmen einer solchen Arbeit passt.\\
+zum Verständniss dieser Arbeit nicht nötig ist.\\
 \begin{comment} \end{comment}
 Im zweiten Kapitel werden die meromorphen Zusammenhänge definiert, diese sind
 das wichtigste mathematische Objekt in dieser Arbeit.
@@ -87,7 +107,7 @@ Fouriertransformation, die sogenannte Betrachtung bei Unendlich und das Twisten
 eines meromorphen Zusammenhangs.
 Diese Operationen werden in den folgenden zwei Kapiteln Verwendung finden.\\
 \begin{comment} \end{comment}
-Im vierten Kapitel soll das bereits erwähnte Levelt-Turrittin-Theorem
+Im vierten Kapitel soll das bereits motivierte Levelt-Turrittin-Theorem
 vorgestellt werden, welches es erlaubt, einen meromorphen Zusammenhang in
 elementare meromorphe Zusammenhänge zu zerlegen.\\
 \begin{comment} \end{comment}
@@ -98,11 +118,8 @@ beschreibt.
 Zu diesen Zusammenhängen werden zunächst allgemeine Aussagen getroffen bevor in
 Abschnitt \ref{sec:LT-speziell} ganz konkret eine Levelt-Turrittin-Zerlegung zu
 einem meromorphen Zusammenhang berechnet wird.
-
-Die im letzten Kapitel explizit berechnete Levelt-Turrittin-Zerlegung könnte
-weiter verwendet werden, um die entsprechende Stokes-Struktur explizit zu
-berechnen. Dies würde sich beispielsweise gut als Thema für eine weiterführende
-Arbeit eignen.
+Zuletzt wird in Abschnitt \ref{sec:konvergenzDerPotReihen} das
+Konvergenzverhalten der berechneten noch genauer betrachtet.
 
 \begin{comment}
 Ich möchte diese Stelle nutzen, um Herrn Prof. Dr. Hien dafür zu danken, dass

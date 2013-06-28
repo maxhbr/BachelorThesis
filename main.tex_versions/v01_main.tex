@@ -28,14 +28,12 @@
 %\usepackage{mathptmx}
 %\usepackage[scaled=.92]{helvet}
 %\usepackage{courier}
-
 %\linespread{1.5}
 
 \usepackage[scale=0.75]{geometry}
 \setlength{\unitlength}{1mm}
 %\emergencystretch 2em
 %\usepackage{multicol}                        \
-
 
 \usepackage{lscape} % alt: pdflscape
 \usepackage{amsmath,amsthm,amssymb}
@@ -389,11 +387,8 @@
 \myinput{titel.tex}
 \restoregeometry
 
-%\newpage \thispagestyle{empty} \mbox{}
-
 \tableofcontents{}
 
-\iffalse
 \listoffigures
 
 \listoftables
@@ -405,9 +400,6 @@
 \vfill
 \vfill
 \endgroup
-\fi
-
-\newpage \thispagestyle{empty} \mbox{}
 
 \myinput{einleitung.tex}
 
@@ -429,7 +421,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %\addcontentsline{toc}{chapter}{Schluss}
-\myinput{schluss.tex}
+%\myinput{schluss.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \pagebreak
@@ -449,11 +441,6 @@
 %\bibliographystyle{amsalpha}
 \bibliographystyle{geralpha}
 \bibliography{../main}
-%\begingroup
-%\let\clearpage\relax
-%\renewcommand\bibname{Sekundärquellen}
-%\bibliography{../second}
-%\endgroup
 
 \end{document}
 % vim:set ft=tex foldmethod=marker foldmarker={{{,}}}:
