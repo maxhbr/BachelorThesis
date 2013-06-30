@@ -1,7 +1,10 @@
 \chapter{Quelltexte}
+Als gutes Buch zum Thema Haskell empfiehlt sich \cite{Haskell1} von Graham Hutton.
 
 \section{ComplRat.hs}
 Das Modul \text{ComplRat} implementiert die Zahlen $\Q(i)$.
+Jede Zahl wird ist intern Tupel von Zahlen vom Typ \texttt{Rational}. Dieser
+Zahlentyp ermöglicht es, mit Brüchen von beliebiger Genauigkeit zu rechnen.
 \lstinputlisting[language=HaskellUlisses
                 ,firstnumber=1
                 %,captionpos=b
@@ -33,10 +36,10 @@ lässt er sich in Unix-artigen Systemen beispielsweise mit den folgenden
 Befehlen kompilieren und ausführen.
 \begin{lstlisting}[style=Bash]
 $ ghc --make /Pfad/zu/testKoeffs.hs
-$ /Pfad/zu/testKoeffs 15
+$ /Pfad/zu/testKoeffs 13
 \end{lstlisting}
 Durch das Ausführen berechnet das Programm die Koeffizienten von $v$ bis zum
-Index $15$ und gibt in der Konsole das Folgende aus
+Index $13$ und gibt in der Konsole das Folgende aus
 \begin{lstlisting}[style=Bash]
 n       | v_n
 --------+----------------------------------------------------------------------
@@ -55,35 +58,55 @@ n       | v_n
 11      | (-175490226) % 1
 12      | (0 % 1+i9228545313147 % 4096)
 13      | 31217145174 % 1
-14      | (0 % 1+i(-30419533530730323) % 65536)
-15      | (-14741904895227) % 2
 \end{lstlisting}
 Übersetzt in unsere Zahlenschreibweise ergibt sich daraus die folgende Tabelle:
 %\ref{tab:koeff_a=0.125}
-\renewcommand{\arraystretch}{1.15}
+\renewcommand{\arraystretch}{1.4}
 \begin{table}[H] %htbp]
 \begin{center}
-\begin{tabular}{|r||r|}
+\begin{tabular}{|r||r|r|r|r|r|r|}
 \hline
-n        & $v_n$
-\\\hline\hline
-  -1 & $\frac{1}{2}$
-\\0  & $\frac{3}{4}i$
-\\1  & $\frac{3}{2}$
-\\2  & $-\frac{63}{16}i$
-\\3  & $-\frac{27}{2}$
-\\4  & $\frac{1899}{32}i$
-\\5  & $342$
-\\6  & $-\frac{543483}{256}i$
-\\7  & $-\frac{32427}{2}$
-\\8  & $\frac{72251109}{512}i$
-\\9  & $\frac{2752623}{2}$
-\\10 & $-\frac{30413055339}{2048}i$
-\\11 & $-175490226$
-\\12 & $\frac{9228545313147}{4096}i$
-\\13 & $31217145174$
-\\14 & $-\frac{30419533530730323}{65536}i$
-\\15 & $-\frac{14741904895227}{2}$
+\cellcolor{gray!50} n \rowcolor{gray!20}
+&-1 &0 &1 &2 &3
+\\ \hline
+\cellcolor{gray!50} $v_n$
+& $\frac{1}{2}$
+& $\frac{3}{4}i$
+& $\frac{3}{2}$
+& $-\frac{63}{16}i$
+& $-\frac{27}{2}$
+\\\hline
+%\end{tabular}
+%\begin{tabular}{|r||r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|}
+\hline
+\cellcolor{gray!50} n \rowcolor{gray!20}
+& 4 & 5 & 6 & 7 & 8
+\\ \hline
+\cellcolor{gray!50} $v_n$
+& $\frac{1899}{32}i$
+& $342$
+& $-\frac{543483}{256}i$
+& $-\frac{32427}{2}$
+& $\frac{72251109}{512}i$
+\\\hline
+%\end{tabular}
+%\begin{tabular}{|r||r|r|r|r|r|r|r|r|r|r|r|r|r|r|r|}
+\hline
+\cellcolor{gray!50} n \rowcolor{gray!20}
+& 9 & 10 & 11 & 12 & 13
+%& 14
+%& 15
+%& \dots
+\\ \hline
+\cellcolor{gray!50} $v_n$
+& $-175490226$
+& $\frac{9228545313147}{4096}i$
+& $31217145174$
+& $-\frac{30419533530730323}{65536}i$
+& $-\frac{14741904895227}{2}$
+%& $\frac{2752623}{2}$
+%& $-\frac{30413055339}{2048}i$
+%& \dots
 \\\hline
 \end{tabular}
 \caption{Numerisch berechnete Koeffizienten von $v(t)$ für $u_{-2}=i$ bzw.
@@ -91,6 +114,7 @@ n        & $v_n$
 \label{tab:koeff_a=0.125}
 \end{center}
 \end{table}
+
 
 \begin{comment}
 \begin{align*}
@@ -134,7 +158,7 @@ v(t)&=
 \section{SaveToFile.hs} \label{sec:SaveToFile.hs}
 Das folgende Programm wurde verwendet um die Daten für die die Abbildungen
 \ref{fig:plotKoeffs}, \ref{fig:plotCauchyKoeffs} und \ref{fig:plotQuotKoeffs}
-zu erzeugen. Es speichert dazu die Werte zeilenweise in Textdateien. 
+zu erzeugen. Es speichert dazu die Werte zeilenweise in Textdateien.
 \lstinputlisting[language=HaskellUlisses
                 ,firstnumber=1
                 %,captionpos=b
@@ -155,8 +179,17 @@ Abbildungen.
 \begin{lstlisting}[style=Bash]
 $ ghc --make -threaded /Pfad/zu/SaveToFile.hs
 $ mkdir -p /Pfad/zu/data
-$ /Pfad/zu/SaveToFile 10000 +RTS -N8
+%$ /Pfad/zu/SaveToFile 10000 +RTS -N8
 \end{lstlisting}
+Zum erzeugen der Daten für die eingebunden Grafiken lief Dieses Programm
+insgesammt $740$ Stunden verteilt auf $8$ Prozessorkernen mit jeweils
+$2.27$GHz.
+Dabei hat es insgesamt $75000$ Zeilen an Werten erzeugt, wobei der längste
+Eintrag in einer Zeile $66028$ Zeichen lang war.
+Die entsandenen Textdateien hatten zusammen eine Größe von $1,2$GB.
+
+Erstellt wurden die Graphen mit \texttt{Gnuplot} und auch sonst wurde zum
+erstellen dieser Arbeit ausschließlich freie Software verwendet.
 
 
 % vim: set ft=tex :

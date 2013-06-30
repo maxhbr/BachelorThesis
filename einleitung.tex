@@ -3,13 +3,13 @@
 Die Theorie der $\cD$-Moduln ist aus einem Versuch, Systeme von partiellen
 Differentialgleichungen algebraisch zu betrachten, entstanden. Seit den 1960er
 Jahren wurde diese Theorie von beispielsweise B. Malgrange, J. Bernstein, P.
-Deligne M.Sato, und M. Kashiwara entwickelt und vorangetrieben.
+Deligne, M.Sato, und M. Kashiwara entwickelt und vorangetrieben.
 Auch aktuell wird viel auf diesem Thema geforscht, so ist hier vor allem
 C. Sabbah zu erwähnen, der auch zwei der Hauptquellen dieser Arbeit, namentlich
 \cite{sabbah_cimpa90} und \cite{sabbah_Fourier-local}, verfasst hat.
 
 Eines der wichtigsten Resultate für $\cD$-Moduln ist die
-Riemann-Hilbert-Korrespondenz. Sie beschreibt mittels des de-Rahm-Funktor
+Riemann-Hilbert-Korrespondenz. Sie beschreibt mittels des de-Rahm-Funktors
 \textbf{DR} die Kategorienäquivalenz
 \begin{center}
 \begin{tikzcd}[column sep=large]
@@ -56,18 +56,20 @@ Riemann-Hilbert-Korrespondenz. Sie beschreibt mittels des de-Rahm-Funktor
 \fi
 Vergleiche hierzu \cite[Sec 6]{REFKashiwara1984} oder \cite[Thm
 7.2.1]{hotta2007d}.
-Dieses bekannte Resultat über regulär singuläre holonome $\cD$-Moduln,
-lässt sich leider nicht kanonisch auf irregulär singuläre fortsetzen.
-Allerdings gibt es für irregulär singuläre holonome $\cD$-Moduln bzw. irregulär
-singuläre meromorphe Zusammenhänge das Levelt-Turrittin-Theorem als wichtige
-Strukturaussage. 
-Diese soll im Rahmen dieser Arbeit genauer betrachtet werden.
+
+Allerdings lässt sich dieses Resultat über regulär singuläre holonome
+$\cD$-Moduln leider nicht kanonisch auf irregulär singuläre fortsetzen.
+Jedoch gibt es zumindest für formale irregulär singuläre $\cD$-Moduln bzw. 
+formale irregulär singuläre meromorphe Zusammenhänge eine allgemeine
+Strukturaussage: das Levelt-Turrittin-Theorem, welches im Rahmen dieser Arbeit
+genauer betrachtet werden soll.
+
 Das Levelt-Turrittin-Theorem beschreibt, wie sich ein formaler meromorpher
 Zusammenhang $\cM$ nach einem möglicherweise notwendigem Pullback in die
 direkte Summe
-\[
-\cM \cong \bigoplus_{i=0}^n \sE^{\psi_i}\otimes R_i
-\]
+\begin{center}
+$ \cM \cong \bigoplus_{i=0}^n \sE^{\psi_i}\otimes R_i $
+\end{center}
 zerlegen lässt.
 Die $\sE^{\psi_i}\otimes R_i$ stellen dabei elementare meromorphe Zusammenhänge
 dar und $R_i$ ist jeweils einer der bereits erwähnten regulär singulären
@@ -89,37 +91,43 @@ Zusammenhänge vorausgesetzt, diese beiden Begriffe werden in den ersten Zwei
 Kapiteln eingeführt.
 \end{comment}
 
-Im ersten Kapitel wird sehr knapp die Theorie der $\cD$-Moduln eingeführt, da
-uns diese im später sehr nützlich sein wird. Hier wurde, vor allem bei der
-Definition von holonomen $\cD$-Moduln, viel Hintergrund weggelassen, da dieser
-zum Verständniss dieser Arbeit nicht nötig ist.\\
+Im ersten Kapitel erfolgt ein kurzer Überblick über die Theorie der
+$\cD$-Moduln, dabei wird der Schwerpunkt auf diejenigen Themen gelegt, die für
+das weitere Verständnis der Arbeit nötig sind. Eine ausführliche Einführung,
+z.B. zur genauen Definition von Holonomie, kann in \cite{sabbah_cimpa90} oder
+in \cite{hotta2007d} nachgeschlagen werden.\\
+\iffalse
+  Im ersten Kapitel wird sehr knapp die Theorie der $\cD$-Moduln eingeführt, da
+  uns diese im später sehr nützlich sein wird. Hier wurde, vor allem bei der
+  Definition von holonomen $\cD$-Moduln, viel Hintergrund weggelassen, da
+  dieser zum Verständnis dieser Arbeit nicht nötig ist.\\
+\fi
 \begin{comment} \end{comment}
-Im zweiten Kapitel werden die meromorphen Zusammenhänge definiert, diese sind
-das wichtigste mathematische Objekt in dieser Arbeit.
-Ein wichtiges Resultat in diesem Kapitel, ist die Eins-zu-Eins Korrespondenz
-von meromorphen Zusammenhängen zu holonomen lokalisierten $\cD$-Moduln, da man
-mit letzteren gut rechnen kann.\\
+Im zweiten Kapitel werden die meromorphen Zusammenhänge definiert.
+Diese sind das wichtigste mathematische Objekt in dieser Arbeit.
+Ein wichtiges Resultat in diesem Kapitel ist die Eins-zu-Eins Korrespondenz
+von meromorphen Zusammenhängen zu holonomen lokalisierten $\cD$-Moduln.\\
 \begin{comment} \end{comment}
 Das dritte Kapitel beschäftigt sich ausschließlich mit Operationen auf
 meromorphen Zusammenhängen.
 Vorgestellt werden Tensorprodukt, Pullback und Pushforward,
-Fouriertransformation, die sogenannte Betrachtung bei Unendlich und das Twisten
+Fouriertransformation, die sogenannte \glqq{}Betrachtung bei Unendlich\grqq{} und das Twisten
 eines meromorphen Zusammenhangs.
 Diese Operationen werden in den folgenden zwei Kapiteln Verwendung finden.\\
 \begin{comment} \end{comment}
-Im vierten Kapitel soll das bereits motivierte Levelt-Turrittin-Theorem
-vorgestellt werden, welches es erlaubt, einen meromorphen Zusammenhang in
-elementare meromorphe Zusammenhänge zu zerlegen.\\
+Im vierten Kapitel soll das Levelt-Turrittin-Theorem vorgestellt werden.
+Es erlaubt, einen meromorphen Zusammenhang in elementare meromorphe
+Zusammenhänge zu zerlegen.\\
 \begin{comment} \end{comment}
-Das letzte Kapitel hat das Ziel die Levelt-Turrittin-Zerlegung auf eine Klasse
+Das letzte Kapitel hat das Ziel, die Levelt-Turrittin-Zerlegung auf eine Klasse
 von meromorphen Zusammenhängen anzuwenden.
 Dazu wird zu Beginn ein Rezept gegeben, welches die gewünschten Zusammenhänge
 beschreibt.
-Zu diesen Zusammenhängen werden zunächst allgemeine Aussagen getroffen bevor in
-Abschnitt \ref{sec:LT-speziell} ganz konkret eine Levelt-Turrittin-Zerlegung zu
-einem meromorphen Zusammenhang berechnet wird.
+Zu diesen Zusammenhängen werden zunächst allgemeine Aussagen getroffen, bevor
+in Abschnitt \ref{sec:LT-speziell} ganz konkret eine Levelt-Turrittin-Zerlegung
+zu einem meromorphen Zusammenhang berechnet wird.
 Zuletzt wird in Abschnitt \ref{sec:konvergenzDerPotReihen} das
-Konvergenzverhalten der berechneten noch genauer betrachtet.
+Konvergenzverhalten der berechneten Zusammenhänge analysiert.
 
 \begin{comment}
 Ich möchte diese Stelle nutzen, um Herrn Prof. Dr. Hien dafür zu danken, dass

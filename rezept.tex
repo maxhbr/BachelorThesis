@@ -96,8 +96,11 @@ Q(t,\partial_t) &= t^{\max(I)+1}(\partial_t\myubracket{-\frac{d}{dt}\phi(t)})
 %\\&=t^{\max(I)+1}\partial_t
   %+ \sum_{k\in I} k\myubracket{\frac{a_k}{t^{k-\max(I)}}}
 \\&=t^{\max(I)+1}\partial_t +\sum_{k\in I}k a_k t^{\max(I)-k}
-  \in \C[t]<\partial_t>
-\\\cF_Q(z,\partial_z) &=Q(\partial_z,-z)
+  \in \C[t]<\partial_t>\,.
+\end{align*}
+Die Fouriertransformiere aus Schritt 2 ist somit gegeben durch
+\begin{align*}
+\cF_Q(z,\partial_z) &=Q(\partial_z,-z)
 =-\partial_z^{\max(I)+1}z +\sum_{k\in I}k a_k\partial_z^{\max(I)-k}
 \end{align*}
 und damit ist
@@ -133,6 +136,7 @@ TODO: prüfen für kleine zahlen!!!
 \end{comment}
 \end{bem}
 
+\pagebreak
 \begin{lem} \label{lem:allgemeinSlope}
 Zu einem $\phi=\sum_{k\in I}\frac{a_k}{t^{k}}$ gilt
 $\cP(\cM_{\phi})=\{\frac{q}{q+1}\}$, wobei $q=\max(I)$.
@@ -166,14 +170,14 @@ H\Big(P_{\phi}(x,\partial_x)\Big) &= H\Big(\myubracket{(-x^2\partial_x)^{q}}
   +\myubracket{ \sum_{k\in I}k a_k(-x^2\partial_x)^{q-k}} \Big)
 \\&= H\Big(x^{2q + 1}\partial_x^{q + 1} +\myobracket{ qa_q
   + \underset{(\star)}{\underbrace{
-  \sum_{k\in I\backslash\{q\}}k a_k(-x^2\partial_x)^{q-k}}}} \Big)
+  \sum_{k\in I\backslash\{q\}}k a_k(-x^2\partial_x)^{q-k}}}} \Big) \,.
 \end{align*}
 Nun wollen wir noch zeigen, dass die Summe $(\star)$ auch vernachlässigt werden
 kann.  \paragraph{Behauptung:} Es gilt
 \[
 H\Big(x^{2q + 1}\partial_x^{q + 1} + qa_q
   + \sum_{k\in I\backslash\{q\}}k a_k(-x^2\partial_x)^{q-k} \Big)
-\subset H\Big(x^{2q + 1}\partial_x^{q + 1} + qa_q \Big)
+\subset H\Big(x^{2q + 1}\partial_x^{q + 1} + qa_q \Big) \,.
 \]
 \paragraph{Denn:}
 Betrachte zu einem $m\in I\backslash \{q\}$, einen Summanden
@@ -182,7 +186,7 @@ $ma_m(-x^2\partial_x)^{q-m}$ aus der Summe:
 H(ma_m(-x^2\partial_x)^{q-m}) &= H(ma_m(-1)^q(x^{2(q-m)}\partial_x^{q-m}
   +\textbf{T.i.Q. von }x^{2(q-m)}\partial_x^{q-m}))
 \\&=H(x^{2(q-m)}\partial_x^{q-m})
-\\&=(q-m,q-m) + \R_{\leq 0}\times \R_{\geq 0}
+\\&=(q-m,q-m) + \R_{\leq 0}\times \R_{\geq 0} \,.
 \end{align*}
 In Abbildung \ref{fig:Newton-PolygonP_phi} ist die Situation, die wir gerade
 betrachten, mit $N(x^{2q + 1}\partial_x^{q + 1} + qa_q)$ in der gewohnten Farbe
@@ -217,7 +221,7 @@ die Behauptung gilt.
   \end{tikzpicture}
 \end{center}
 \caption{Newton-Polygon zu $P_{\phi}$ zusammen mit
-  $H(x^{2(q-m)}\partial_x^{q-m})$}
+  $H(x^{2(q-m)}\partial_x^{q-m})$.}
 \label{fig:Newton-PolygonP_phi}
 \end{figure}
 Mit der Behauptung gilt dann, dass
@@ -225,7 +229,7 @@ Mit der Behauptung gilt dann, dass
 H\Big(P_{\phi}(x,\partial_x)\Big)
   &= H\Big(x^{2q + 1}\partial_x^{q + 1} + qa_q
   + \sum_{k\in I\backslash\{q\}}k a_k(-x^2\partial_x)^{q-k} \Big)
-\\&\!\!\overset{\text{Beh.}}{=} H\Big(x^{2q + 1}\partial_x^{q + 1} + qa_q \Big)
+  \overset{\text{Beh.}}{=} H\Big(x^{2q + 1}\partial_x^{q + 1} + qa_q \Big)
   \,.
 \end{align*}
 Also ist
@@ -233,8 +237,9 @@ Also ist
 N\Big(P_{\phi}(x,\partial_x)\Big)
   &= N\Big(x^{2q + 1}\partial_x^{q + 1} + qa_q \Big) \,.
 \end{align*}
-womit die Behauptung des Lemmas folgt und das Newton-Polygon wie in Abbildung
-\ref{fig:Newton-PolygonP_phi} aussieht.
+womit die Behauptung des Lemmas folgt und somit das Newton-Polygon zu
+$P_{\phi}(x,\partial_x)$ wie in Abbildung \ref{fig:Newton-PolygonP_phi}
+aussieht.
 \end{proof}
 Also ist, nach Lemma \ref{lem:slope-pb-multiplikation}, ein Pullback mit Grad
 $q+1$ hinreichend, um einen ganzzahligen Slope zu bekommen. Denn wir wissen,
@@ -274,7 +279,7 @@ und sei $\rho:t\mapsto x:=-(q+1) t^{q+1}$. Damit gilt
     (\frac{1}{q+1}t\partial_t-1)+qa\Big)\\
   &=\cD_{\hat L}/\cD_{\hat L}
     \cdot\Big((t^{q+2}\partial_t)^{q}
-    (t\partial_t-(q+1))+(q+1)qa\Big)
+    (t\partial_t-(q+1))+(q+1)qa\Big) \,.
 \end{align*}
 \end{proof}
 \begin{comment}
@@ -286,19 +291,17 @@ Das so erhaltene $\rho^+\cM_\phi$ wollen wir, wenn nötig, noch weiter
 zerlegen. Dazu würden wir gerne Satz \ref{thm:Split-after-slopes} anwenden,
 leider haben wir momentan aber genau einen Slope.
 Hier hilft uns aber der folgende Trick. Nach Korollar \ref{cor:zuruecktwisten}
-gilt
-$
-\rho^+\cM_{\phi}
-  =\rho^+\cM_{\phi}\otimes_{\hat K}\sE^{\psi}\otimes_{\hat K}\sE^{-\psi}
-$,
+gilt $ \rho^+\cM_{\phi}
+  \cong\rho^+\cM_{\phi}\otimes_{\hat K}\sE^{\psi}\otimes_{\hat K}\sE^{-\psi} $,
 wobei $\cN:=\cM_{\phi}\otimes_{\hat K}\sE^{\psi}$ möglicherweise mehr als
-einen Slope hat. Genau diesen Sonderfall möchten wir, um mit Satz
+einen Slope hat. Genau diesen Sonderfall möchten wir ausnutzen, um mit Satz
 \ref{thm:Split-after-slopes} die Zerlegung $\cN=\bigoplus_i\cN_i$ zu erhalten.
 Damit ist dann
 \[
-\rho^+\cM_{\phi}=\bigoplus_i\cN_i\otimes_{\hat L}\sE^{-\psi}_{\hat L} \,.
+\rho^+\cM_{\phi}\cong\bigoplus_i\cN_i\otimes_{\hat L}\sE^{-\psi}_{\hat L} \,.
 \]
-Definiere dazu, mittels
+Nun wollen wir, wie im Beweis von Satz \ref{thm:LT} beschrieben, ein passendes
+$\psi$ finden. Definiere dazu, mittels
 $q=\frac{q}{1}=:\frac{\lambda_0}{\lambda_1}$, die Linearform
 \[
 \ell(s_0,s_1)=\lambda_0s_0+\lambda_1s_1=qs_0+s_1 \,.
@@ -309,15 +312,15 @@ Aus dem Beweis von Lemma \ref{lem:allgemeinSlope} ist ersichtlich, dass hier
 $ord_\ell = 0$ gilt, und damit
 \begin{align*}
 \sigma_\ell(\rho^*P_{\phi})
-  &= \sum_{\{(i,j)\in\N\times\Z \mid \ell(i,i-j)=0\}}\alpha_{ij}t^j\xi^i\\
-  &= \sum_{\{(i,j)\in\N\times\Z \mid (q+1)i-j=0\}}\alpha_{ij}t^j\xi^i \,.
+  &= \sum_{\{(i,j)\in\N\times\Z \mid \ell(i,i-j)=0\}}\alpha_{ij}t^j\xi^i
+  = \sum_{\{(i,j)\in\N\times\Z \mid (q+1)i-j=0\}}\alpha_{ij}t^j\xi^i \,.
 \end{align*}
 Da $\hat L[\xi]$ kommutativ ist, gilt hier, dass $(t^j\xi^i)^k=t^{jk}\xi^{ik}$
 ist.  Setze $\theta=t^{\lambda_0+\lambda_1}\xi^{\lambda_1}=t^{q+1}\xi$, so
 können wir
 \begin{align*}
 \sigma_\ell(\rho^*P_{\phi})(\theta)
-  &= \sum_{k\geq 0}\alpha_k\theta^k, \alpha_k\in\C
+  &= \sum_{k\geq 0}\alpha_k\theta^k \,, \qquad \alpha_k\in\C
 \end{align*}
 schreiben.
 \begin{comment}
@@ -333,13 +336,13 @@ Sei $\beta$  eine der Nullstellen von $\sigma_\ell(\rho^*P_{\phi})(\theta)$.
 Da $\ord_\ell(\rho^*P_\phi)=0$ und der einzige Slope von $\rho^*P_\phi$ nicht
 gleich $0$ ist, gilt offensichtlich, dass $\alpha_0\neq0$. Also ist $0$ keine
 Nullstelle von $\sigma_\ell(\rho^*P_\phi)$.
-Setze $\psi(x):=(\beta/\lambda_0)t^{-\lambda_0}=(\beta/q)t^{-q}$ und
+Definiere $\psi(x):=(\beta/\lambda_0)t^{-\lambda_0}=(\beta/q)t^{-q}$ und
 betrachte
 \begin{align*}
 \cN&:=\rho^+\cM_\phi\otimes_{\hat L}\sE_{\hat L}^\psi
 \\&= \cD_{\hat L}/\cD_{\hat L}\cdot(\rho^*P_{\phi}(t,\partial_t))
     \otimes_{\hat L}\sE_{\hat L}^\psi
-\\&\!\!\overset{\ref{lem:twistRechenregel}}{=}
+\\&\!\!\overset{\ref{lem:twistRechenregel}}{\cong}
   \cD_{\hat L}/\cD_{\hat L}\cdot(\rho^*P_{\phi}(t,\partial_t-\frac{\partial
   \psi}{\partial t}))
 \\&=\cD_{\hat L}/\cD_{\hat
@@ -352,17 +355,14 @@ betrachte
 TODO: hier weiter vereinfachen
 \end{comment}
 Zerlege nun wie in  Satz \ref{thm:Split-after-slopes} den meromorphen
-Zusammenhang $\cN$ in $\cN=\bigoplus_i\cN_i$ wobei $\cN_i$ meromorphe
+Zusammenhang $\cN$ in $\cN\cong\bigoplus_i\cN_i$ wobei $\cN_i$ meromorphe
 Zusammenhänge mit genau einem Slope sind.
-Zerlege jedes reguläre $\cN_i$ möglichst weit mittels dem Satz
-\ref{thm:regulaerInDirSumme}.
-\begin{comment}
-TODO: hier weiter umformulieren, $\tilde\cN_i$ einführen.
-\end{comment}
+OBdA sei jedes reguläre $\cN_i$ möglichst weit mittels dem Satz
+\ref{thm:regulaerInDirSumme} zerlegt.
 Nutze Korollar \ref{cor:zuruecktwisten} und twiste die $\cN_i$ jeweils mit
 $\sE^{-\psi}_{\hat L}$ und somit ist dann
 \[
-\rho^+\cM_{\phi}=\bigoplus_i\cN_i\otimes_{\hat L}\sE^{-\psi}_{\hat L} \,.
+\rho^+\cM_{\phi}\cong\bigoplus_i\cN_i\otimes_{\hat L}\sE^{-\psi}_{\hat L} \,.
 \]
 Für jeden Summanden lässt sich nun, falls dieser nicht schon ein elementarer
 meromorpher Zusammenhang ist, Induktion anwenden.
@@ -388,18 +388,14 @@ P_{\phi}(x,\partial_x) &=-x^2\partial_x (x\partial_x-1)+a
   - x^2\partial_x}+x^2\partial_x+a
 \\&=-x^3\partial_x^2+a \,.
 \end{align*}
-Wir Erhalten daraus das Newton-Polygon mit den Slopes
-$\cP(\cM_{\phi})=\{\frac{1}{2}\}$.
-\begin{figure}[H] % htbp
-\begin{center}
-  \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
-  \def\myPoints{0/0,2/1}
-  \def\myPath{ -- node[descr]{$\frac{1}{2}$} (2,1)}
-  \myPlotFunction{\myPoints}{\myPath}{2}{0}{1}{$N(P_{\phi})$}
-  \end{tikzpicture}
-\end{center}
-\caption{Newton-Polygon zu $P_{\phi}$}
-\end{figure}
+%Wir erhalten daraus das Newton-Polygon mit den Slopes
+%$\cP(\cM_{\phi})=\{\frac{1}{2}\}$, wie in
+%Abbildung \ref{fig:pPhi}
+%eingezeichnet.
+Wir lesen ab, dass $\cM_{\phi}$ genau die Slopes
+$\cP(\cM_{\phi})=\{\frac{1}{2}\}$ hat. Das Newton-Polygon dazu ist in Abbildung
+\ref{fig:pPhi} abgebildet.
+
 Berechne nun zu $\rho:t\mapsto x:=-2t^2$ ein Minimalpolynom $\rho^*P_{\phi}$
 zu $\rho^+\cM_{\phi}$:
 \begin{align*}
@@ -410,30 +406,47 @@ zu $\rho^+\cM_{\phi}$:
   &=t^{4}\partial_t^2+\myubracket{t^{3}\partial_t-2t^{3}\partial_t}+2a\\
   &=t^{4}\partial_t^2\myobracket{-t^{3}\partial_t}+2a
 \end{align*}
-und erhalte einen meromorphen Zusammenhang $\rho^+\cM_{\phi}=\cD_{\hat
-L}/\cD_{\hat L}\cdot\rho^*P_{\phi}$ mit genau dem Slope
-$1=\frac{1}{1}=:\frac{\lambda_0}{\lambda_1}$.
-\begin{figure}[H]
-\begin{center}
-  \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
-  \def\myPoints{0/0,1/2,2/2}
-  \def\myPath{ -- node[descr]{$1$} (2,2)}
-  \myPlotFunction{\myPoints}{\myPath}{2}{0}{2}{$N(\rho^*P_{\phi})$}
-  \end{tikzpicture}
-\end{center}
-\caption{Newton-Polygon zu $\rho^*P_{\phi}$}
+und erhalte einen meromorphen Zusammenhang $\rho^+\cM_{\phi}\cong\cD_{\hat
+L}/\cD_{\hat L}\cdot\rho^*P_{\phi}$ mit dem Slope
+$1$ (Siehe Abbildung \ref{fig:rhopPhi}).
+\begin{figure}[htb]
+  \begin{minipage}[hbt]{0,49\textwidth}
+    \begin{center}
+      \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
+      \def\myPoints{0/0,2/1}
+      \def\myPath{ -- node[descr]{$\frac{1}{2}$} (2,1)}
+      \myPlotFunction{\myPoints}{\myPath}{2}{0}{1}{$N(P_{\phi})$}
+      \end{tikzpicture}
+    \end{center}
+    \caption{Newton-Polygon zu $P_{\phi}$.} \label{fig:pPhi}
+  \end{minipage}
+  \begin{minipage}[hbt]{0,49\textwidth}
+    \begin{center}
+      \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
+      \def\myPoints{0/0,1/2,2/2}
+      \def\myPath{ -- node[descr]{$1$} (2,2)}
+      \myPlotFunction{\myPoints}{\myPath}{2}{0}{2}{$N(\rho^*P_{\phi})$}
+      \end{tikzpicture}
+    \end{center}
+    \caption{Newton-Polygon zu $\rho^*P_{\phi}$.} \label{fig:rhopPhi}
+  \end{minipage}
 \end{figure}
 
-Definiere die Linearform $\ell(s_0,s_1):=\lambda_0s_0+\lambda_1s_1=s_0+s_1$.
+Setze deshalb $\lambda_0=1$ und $\lambda_1=1$ und definiere die Linearform
+\[
+\ell(s_0,s_1):=\lambda_0s_0+\lambda_1s_1=s_0+s_1 \,.
+\]
 Wir suchen nun ein $\psi$, so dass der Twist $\rho^+\cM_{\phi}\otimes_{\hat
 L}\sE^\psi$ mehr als einen Slope hat, damit wir entlang der Slopes zerlegen
 können.  Berechne dazu die \emph{Determinantengleichung}
-$\sigma_\ell(\rho^*P_{\phi})\in \hat L[\xi]$ von $\rho^*P_{\phi}$.
+\linebreak
+$\sigma_\ell(\rho^*P_{\phi})\in \hat L[\xi]$ von $\rho^*P_{\phi}$:
 \begin{align*}
 \sigma_\ell(\rho^*P_{\phi})
-  &= \sum_{\{(i,j)\mid 2i-j=0\}}\alpha_{ij}x^{j}\xi^i = t^4\xi^2 + 2a
+  &= \sum_{\{(i,j)\mid 2i-j=0\}}\alpha_{ij}x^{j}\xi^i = t^4\xi^2 + 2a \,.
 \end{align*}
-Setze $\theta:=t^{\lambda_0+\lambda_1}\xi^{\lambda_1}=t^2\xi$, so erhalten wir
+Definiere $\theta:=t^{\lambda_0+\lambda_1}\xi^{\lambda_1}=t^2\xi$, so erhalten
+wir
 \begin{align*}
 \sigma_\ell(\rho^*P_{\phi}) &= \theta^2 + 2a \,,
 \end{align*}
@@ -450,8 +463,8 @@ Vektor von $\rho^+\cM$ ist.
   \]
   und damit ist dann $\cN=\cD/\cD\cdot(\partial_t^2+a_1(t)\partial_t+a_0(t))$.
 \fi
-Mit dem Lemma vom zyklischen Vektor, bzw. der Proposition
-\ref{prop:Zyklischer-Vektor}, wollen wir nun ein Minimalpolynom zu $\cN$
+Mit dem Lemma vom zyklischen Vektor bzw. der Proposition
+\ref{prop:Zyklischer-Vektor} wollen wir nun ein Minimalpolynom $P'$ zu $\cN$
 berechnen\footnote{
 Dies wäre auch schneller, aber weit weniger interessant, mit Lemma
 \ref{lem:twistRechenregel} möglich.
@@ -495,10 +508,12 @@ also
 0 &= \Big( \underset{=:P'}{\underbrace{
     \partial_t^2 - \big(t^{-1} + 2\psi'(t)\big)\partial_t
     + \psi'(t) t^{-1} + 2at^{-4} -\psi''(t)
-    + \psi'(t)^2 }} \Big) \bme\otimes 1
+    + \psi'(t)^2 }} \Big) \bme\otimes 1 \,.
 \end{align*}
-und mit $\psi(t)=i\sqrt{2a}t^{-1}$ ist $\psi'(t)=-i\sqrt{2a}t^{-2}$ und
-$\psi''(t)=2i\sqrt{2a}t^{-3}$. Also durch Einsetzen ergibt sich
+Da $\psi(t)=i\sqrt{2a}t^{-1}$ ist dessen Ableitung gegeben durch
+$\psi'(t)=-i\sqrt{2a}t^{-2}$ und man erhält daraus
+$\psi''(t)=2i\sqrt{2a}t^{-3}$.
+Also durch Einsetzen ergibt sich
 \begin{align*}
 P' &= \partial_t^2 - (t^{-1} + 2\psi'(t))\partial_t
     + \psi'(t)t^{-1} + 2at^{-4} -\psi''(t)
@@ -510,7 +525,7 @@ P' &= \partial_t^2 - (t^{-1} + 2\psi'(t))\partial_t
 \\&= \partial_t^2 - (t^{-1} - 2i\sqrt{2a}t^{-2})\partial_t - 3 i\sqrt{2a}t^{-3}
 \end{align*}
 mit, wie gewünscht, mehr als einem Slope (siehe Abbildung \ref{fig:afterTwist}).
-\begin{figure}[H]
+\begin{figure}[htbp]
 \begin{center}
   \begin{tikzpicture}[scale=1.5,descr/.style={fill=white,inner sep=2.5pt}]
   \def\myPoints{0/-3,1/-2,1/-3,2/-2}
@@ -518,7 +533,7 @@ mit, wie gewünscht, mehr als einem Slope (siehe Abbildung \ref{fig:afterTwist})
   \myPlotFunction{\myPoints}{\myPath}{2}{-3}{-2}{$N(P')$}
   \end{tikzpicture}
 \end{center}
-\caption{Newton-Polygon zu $\cN$}
+\caption{Newton-Polygon zu $\cN$.}
 \label{fig:afterTwist}
 \end{figure}
 \begin{comment}
@@ -553,9 +568,9 @@ $\rho^*P(t,\partial_t)=t^4\partial_t^2-t^3\partial_t+2a$, ist
 \end{comment}
 
 Nachdem wir jetzt ein Minimalpolynom gefunden haben, ist unser nächstes Ziel
-$\cN=\cD_{\hat L}/\cD_{\hat L}\cdot P'$ in zwei meromorphe Zusammenhänge mit
-nur einem Slope zerlegen.  Betrachte hierzu das Minimalpolynom und zerlege
-dieses in ein Produkt $P'(t,\partial_t)=Q_1(t,\partial_t)\cdot
+$\cN\cong\cD_{\hat L}/\cD_{\hat L}\cdot P'$ in zwei meromorphe Zusammenhänge
+mit nur einem Slope zu zerlegen.  Betrachte hierzu das Minimalpolynom und
+zerlege dieses in ein Produkt $P'(t,\partial_t)=Q_1(t,\partial_t)\cdot
 Q_2(t,\partial_t)$.
 
 Da der $\partial_t$-Grad von $P'$ genau $2$ ist, müssen die $Q_i$ jeweils Grad
@@ -578,19 +593,19 @@ P'=Q_1\cdot Q_2= Q_1\cdot
 \]
 \end{beo}
 Mit der Beobachtung \ref{beo:paarweise-verschieben} ist klar, dass wir den
-Faktor vor $\partial_t$ in $Q_2$ frei wählen können. Setze $\bar u(t):=1$ und
-erhalte
+Faktor vor $\partial_t$ in $Q_2$ frei wählen können. Setze oBdA als $\bar
+u(t):=1$ und erhalte
 \begin{align*}
-Q_1&=\bar v(t) \partial_t + v(t) \,, & Q_2&=\partial_t + u(t)
-& \mbox{mit } \bar v(t), v(t), u(t)\in \hat L
+Q_1&=\bar v(t) \partial_t + v(t) \,, \qquad Q_2=\partial_t + u(t)
+\qquad \mbox{mit } \bar v(t), v(t), u(t)\in \hat L
 \end{align*}
 %TODO: Namenskollision: u und v wie in Achsbeschriftung
 und somit ist ist das Produkt gegeben durch
 \begin{align} \label{eq:schritt100}
 Q_1\cdot Q_2&=\bar v(t) \partial_t^2 + \bar v(t)\partial_t u(t) +
   v(t)\partial_t + v(t)u(t)
-\notag\\&\overset{!}{=} \partial_t^2 - (t^{-1} - 2i\sqrt{2a}t^{-2})\partial_t
-  - 3 i\sqrt{2a}t^{-3} \,.
+\\&\overset{!}{=} \partial_t^2 - (t^{-1} - 2i\sqrt{2a}t^{-2})\partial_t
+  - 3 i\sqrt{2a}t^{-3} \,. \notag
 \end{align}
 Damit ist ebenfalls $\bar v(t)=1$.
 
@@ -601,7 +616,7 @@ $1$, deshalb ist $(1,-1)$ in beiden zugehörigen Newton-Polygonen enthalten.
 Da $Q_1$, oBdA durch Korollar \ref{cor:moduluKomutativität},
 nur den Slope $0$ hat, muss das Newton-Polygon wie in Abbildung
 \ref{abb:Q_1} aussehen und somit wissen wir, dass $v_n=0$ für alle $n<-1$.
-Da $Q_2$ genau den Slope $1$ hat, ist das Newton-Polygon gegeben durch
+Da $Q_2$ dann genau den Slope $1$ hat, ist das Newton-Polygon gegeben durch
 Abbildung \ref{abb:Q_2}. Damit ist $u_n=0$ für alle $n<-2$ und $u_{-2}\neq0$.
 \begin{figure}[htbp]
   \begin{minipage}[hbt]{0,49\textwidth}
@@ -612,7 +627,7 @@ Abbildung \ref{abb:Q_2}. Damit ist $u_n=0$ für alle $n<-2$ und $u_{-2}\neq0$.
     \myPlotFunction{\myPoints}{\myPath}{1}{-1}{-1}{}
     \end{tikzpicture}
   \end{center}
-  \caption{Newton-Polygon zu $Q_1$}
+  \caption{Newton-Polygon zu $Q_1.$}
   \label{abb:Q_1}
   \end{minipage}
   \begin{minipage}[hbt]{0,49\textwidth}
@@ -623,7 +638,7 @@ Abbildung \ref{abb:Q_2}. Damit ist $u_n=0$ für alle $n<-2$ und $u_{-2}\neq0$.
     \myPlotFunction{\myPoints}{\myPath}{1}{-2}{-1}{}
     \end{tikzpicture}
   \end{center}
-  \caption{Newton-Polygon zu $Q_2$}
+  \caption{Newton-Polygon zu $Q_2.$}
   \label{abb:Q_2}
   \end{minipage}
 \end{figure}
@@ -634,15 +649,13 @@ Q_1\cdot Q_2&=\partial_t^2 + \partial_t \sum_{n=-2}^\infty u_n t^n
   + \sum_{n=-1}^\infty v_nt^n \partial_t
   + \Big(\sum_{n=-1}^\infty v_nt^n \Big)\Big( \sum_{n=-2}^\infty u_n t^n \Big)
 \end{align}
-und mit denn Kommutatorregeln %TODO: lemma? quelle?
-gilt
+und mit denn Kommutatorregeln gilt
 \begin{align*}
 \partial_t \sum_{n=-2}^\infty u_n t^n &=
   \sum_{n=-2}^\infty (u_nt^n\partial_t + \myubracket{[\partial_t,u_nt^n]})
 \\&\!\!\overset{{(\ref{eq:kommutator1})}}{=}
   \sum_{n=-2}^\infty (u_nt^n\partial_t +\myobracket{ nu_nt^{n-1}})
-\\&= \sum_{n=-2}^\infty u_nt^n\partial_t + \sum_{n=-2}^\infty nu_nt^{n-1}
-%TODO: ist umsortieren immer erlaubt??
+\\&= \sum_{n=-2}^\infty u_nt^n\partial_t + \sum_{n=-2}^\infty nu_nt^{n-1} \,.
 \end{align*}
 Wenn wir dieses Ergebnis nun in (\ref{eq:schritt200}) einsetzen, ergibt sich
 \begin{align} \label{eq:schritt300}
@@ -687,8 +700,8 @@ Q_1\cdot Q_2&=\partial_t^2 + \sum_{n=-2}^\infty (u_n+v_n)t^n \partial_t
 \\&\overset{!}{=} \partial_t^2 - (t^{-1} - 2i\sqrt{2a}t^{-2})\partial_t
   - 3 i\sqrt{2a}t^{-3} \,.
 \end{align*}
-Damit haben wir ein Ergebnis, das sich nun koeffizientenweise mit der
-gewünschten Formel vergleichen lässt:
+Damit haben wir ein Ergebnis, das sich nun koeffizientenweise mit dem
+gewünschten Polynom vergleichen lässt:
 \begin{align}
 2i\sqrt{2a}t^{-2} - t^{-1} &= \sum_{n=-2}^\infty (u_n+v_n)t^n
 \label{eq:bedingung1}\\
@@ -699,6 +712,7 @@ gewünschten Formel vergleichen lässt:
 Nun können wir mit (\ref{eq:bedingung1}) und (\ref{eq:bedingung2}) jeweils
 nochmals einen Koeffizientenvergleich durchführen und erhalten zunächst aus
 (\ref{eq:bedingung1}) die Bedingungen
+\pagebreak
 \begin{align}
 2i\sqrt{2a} &= u_{-2} + \underset{=0}{\underbrace{v_{-2}}} = u_{-2}
 \label{eq:bedingung1a}
@@ -708,7 +722,7 @@ nochmals einen Koeffizientenvergleich durchführen und erhalten zunächst aus
 \label{eq:bedingung1c}
 \end{align}
 welche wir als Nächstes mit (\ref{eq:bedingung2}) kombinieren wollen.
-Betrachte zunächst die Vorfaktoren vor $t^{-3}$:
+Betrachte dazu zunächst die Vorfaktoren vor $t^{-3}$:
 \begin{align*}
 - 3 i\sqrt{2a} &= (-2)u_{-2} + \sum_{k=0}^{0} v_{k-1}u_{-3-k+1}
 \\&= -2u_{-2} + v_{-1}u_{-2}
@@ -744,11 +758,13 @@ und nach passendem Indexshift folgt
 \\&= \frac{i}{2\sqrt{2a}}
   \left((n-1)u_{n-1} + \sum_{k=0}^{n} v_{k-1}u_{n-k-1}\right)
 \end{align*}
-Also ist $\cN=\cN_1\oplus\cN_2$ mit
-$\cN_1=\cD_{\hat L}/\cD_{\hat L}\cdot (\partial_t + \sum_{n=-1}^\infty v_nt^n)$
-und
-$\cN_2=\cD_{\hat L}/\cD_{\hat L}\cdot (\partial_t + \sum_{n=-2}^\infty u_nt^n)$
-Zusammen mit $u_{-2}=2i\sqrt{2a}$, $u_{-1}=-\frac{3}{2}$ und
+Also ist $\cN\cong\cN_1\oplus\cN_2$ mit
+\begin{align*}
+\cN_1=\cD_{\hat L}/\cD_{\hat L}\cdot (\partial_t + \sum_{n=-1}^\infty v_nt^n)
+\qquad\text{ und } \qquad
+\cN_2=\cD_{\hat L}/\cD_{\hat L}\cdot (\partial_t + \sum_{n=-2}^\infty u_nt^n)
+\end{align*}
+und zusammen mit $u_{-2}=2i\sqrt{2a}$, $u_{-1}=-\frac{3}{2}$ und
 $v_{-1}=\frac{1}{2}$ sind durch
 \begin{align} \label{eq:induktiveFormel}
 v_n &= - u_n = \frac{i}{2\sqrt{2a}}
@@ -776,52 +792,66 @@ L}\cdot Q_2\otimes\sE^{-\psi(t)}$:
   \cD_{\hat L}/\cD_{\hat L}\cdot Q_2(t,\partial_t-i\sqrt{2a}t^{-2})
 \\&= \cD_{\hat L}/\cD_{\hat L}\cdot (\partial_t
   \myubracket{-i\sqrt{2a}t^{-2} + u(t)})
-\\&= \cD_{\hat L}/\cD_{\hat L}\cdot (\partial_t + \myobracket{i\sqrt{2a}t^{-2}
+\\&= \cD_{\hat L}/\cD_{\hat L}\cdot (\partial_t + \myobracket{
+  \underset{=-\frac{\partial \psi}{\partial t}}{\underbrace{i\sqrt{2a}t^{-2}}}
   +\sum_{n=-1}^\infty u_nt^n})
-\\&\!\!\overset{\text{\ref{lem:twistRechenregel}}}{=} \underset{\mbox{regulär}}{\underbrace{
+\\&\!\!\overset{\text{\ref{lem:twistRechenregel}}}{=} 
+  \underset{\mbox{regulär}}{\underbrace{
   \cD_{\hat L}/\cD_{\hat L}\cdot (\partial_t
-  + \sum_{n=-1}^\infty u_nt^n)}}\otimes\sE^{\psi(t)}
+  + \sum_{n=-1}^\infty u_nt^n)}}\otimes\sE^{\psi(t)} \,.
 \end{align*}
 \begin{comment}
 Damit ist der zweite Summand also auch ein elementarer meromorpher
 Zusammenhang.
 \end{comment}
 Also zerlegt sich $\cM$, nach einem Pullback mit $\rho:t\mapsto x=-2t^2$, in
-\begin{equation} \label{eq:finaleZerlegung}
+\begin{equation*} \label{eq:finaleZerlegung}
 \rho^+\cM_{\phi} = \Bigg(
   \underset{=:R_1}{\underbrace{\cD_{\hat L}/\cD_{\hat L}\cdot \Big(\partial_t
   + \sum_{n=-1}^\infty v_nt^n\Big)}}\otimes\sE^{-\frac{i\sqrt{2a}}{t}}\Bigg)
   \oplus \Bigg(
   \underset{=:R_2}{\underbrace{\cD_{\hat L}/\cD_{\hat L}\cdot \Big(\partial_t
   + \sum_{n=-1}^\infty u_nt^n\Big)}}\otimes\sE^{\frac{i\sqrt{2a}}{t}}\Bigg) \,.
-\end{equation}
+\end{equation*}
 Nach Zerlegen von $R_1$ und $R_2$ in eine direkte Summe von elementaren
 formalen meromorphen Zusammenhängen, wie in Satz \ref{thm:regulaerInDirSumme}
 beschrieben, ist die Levelt-Turrittin-Zerlegung vollständig gegeben.
 
+Die erhaltene Zerlegung lässt sich noch, wie in
+\cite[Cor 3.3]{sabbah_Fourier-local} beschrieben, nach einem Pushforward
+sortieren und zusammenfassen. Das Ergebnis ist eine direkte Summe aus, in
+\cite{sabbah_Fourier-local} eingeführten $El(\rho,\phi,R)$, welche die Slopes
+von $\cM$ \glqq{}respektieren\grqq{}.
+
+
 \section{Konvergenzbetrachtung am Beispiel $\cM_{\phi}$ mit
   $\phi_1:=\frac{a}{x}$} \label{sec:konvergenzDerPotReihen}
-Nun wollen wir in diesem Abschnitt noch das Konvergenzverhalten
-betrachten.
-Dieses Beispiel wurde auch schon in einem Brief von Takuro Mochizuki an
+Nun wollen wir in diesem Abschnitt noch das Konvergenzverhalten der berechneten
+Zerlegung, bzw. derer Summanden, betrachten.
+Dieses Beispiel wurde 2011 auch schon in einem Brief von Takuro Mochizuki an
 Giovanni Morando angesprochen. Demnach wurde mittels Monodromiebetrachtung
-gezeigt, dass die Zerlegung nicht konvergent möglich ist.
-Nichtsdestotrotz wollen wir dies hier trotzdem weiter untersuchen. Das Werkzeug
-der Wahl hierfür ist, zwei klassische Konvergenzkriterien mit dem Computer zu
-\glqq{}prüfen\grqq{}. Natürlich darf man hier dann nicht von einem Beweis der
+gezeigt, dass diese Zerlegung nicht konvergent möglich ist.
+Nichtsdestotrotz wollen wir dies hier trotzdem weiter untersuchen.
+Das Werkzeug der Wahl hierfür ist, zwei klassische Konvergenzkriterien
+(Vergleiche \cite[§18, Satz 94]{KnoppReihen}) mit dem Computer zu
+\glqq{}prüfen\grqq{}.
+\begin{comment}
+Natürlich darf man hier dann nicht von einem Beweis der
 sprechen, trotzdem werden die Ergebnisse darauf hindeuten, dass die Aussage
 stimmt.
+\end{comment}
 
 Für $n>0$ gilt $v_{n-1}\overset{(\ref{eq:bedingung1c})}{=}-u_{n-1}$ und damit
-wollen wir die Formel (\ref{eq:induktiveFormel}) noch weiter vereinfachen, um
-eine Version zu bekommen, die sich gut implementieren lässt.
+wollen wir die Formel (\ref{eq:induktiveFormel}) zunächst noch weiter
+vereinfachen, um eine Version zu bekommen, die sich gut implementieren lässt.
 Aus (\ref{eq:induktiveFormel}) ergeben sich zunächst für $n=0$ die
 Koeffizienten
 \begin{align*}
-v_{0} &= -\frac{1}{u_{-2}} ((-1)u_{-1} + \sum_{k=0}^{0} v_{k-1}u_{-k-1})
-\\&= -\frac{1}{u_{-2}} (\frac{3}{2} - \frac{3}{4})
+v_{0} &= -\frac{1}{u_{-2}} 
+  (\myubracket{(-1)u_{-1}} + \myubracket{\sum_{k=0}^{0} v_{k-1}u_{-k-1}})
+\\&= -\frac{1}{u_{-2}} (\myobracket{\frac{3}{2}} - \myobracket{\frac{3}{4}})
 \\&= -\frac{3}{4u_{-2}}
-\\&\!\!\overset{(\ref{eq:bedingung1a})}{=} \frac{3i}{8\sqrt{2a}} = -u_{0}
+\\&\!\!\overset{(\ref{eq:bedingung1a})}{=} \frac{3i}{8\sqrt{2a}} = -u_{0} \,.
 \end{align*}
   \begin{comment}
   Somit ergeben sich für $n=1$ die Koeffizienten
@@ -891,8 +921,11 @@ v_{n} &= -\frac{1}{u_{-2}}
 \\&= \frac{1}{u_{-2}} \Big((n-1+\frac{1}{2}+\frac{3}{2})v_{n-1}
   + \sum_{k=1}^{n-1} v_{k-1}v_{n-k-1}\Big)
 \\&=\frac{1}{u_{-2}} \Big((n+1)v_{n-1} + \sum_{k=1}^{n-1} v_{k-1}v_{n-k-1}\Big)
+\,.
 \end{align*}
-Zu gegebenem $u_{-2}=2i\sqrt{2a}$, sind die Koeffizienten gegeben durch:
+
+\pagebreak
+Zu gegebenem $u_{-2}=2i\sqrt{2a}$, sind nun die Koeffizienten gegeben durch:
 \begin{align*}
 v_{-1}&=\frac{1}{2} \,,~ u_{-1}=-\frac{3}{2}
 \\v_{0} = -u_{0} &= -\frac{3}{4u_{-2}}
@@ -947,7 +980,7 @@ $v(t)$ in Abhängigkeit von $n$ für verschiedene $u_{-2}$ aufgetragen.
 \end{comment}
 \begin{figure}[htbp]
   \centering
-  \includegraphics[angle=270,width=\the\textwidth]{../plot-betrag.pdf}
+  \includegraphics[angle=270,width=.9\textwidth]{../plot-betrag.pdf}
   \caption%[Koeffizienten in Abhängigkeit von $u_{-2}$]
    {Die Beträge der $v_n$ in Abhängigkeit von $n$ für unterschiedliche
      $u_{-2}$.}
@@ -974,16 +1007,13 @@ Sei $\sum_{n=0}^\infty a_n x^n$ eine Potenzreihe. Es gilt:
 \Rightarrow \text{ die Potenzreihe ist nur in $0$ konvergent.}
 \]
 \end{thm}
-\begin{proof}
-Siehe \cite[§18, Satz 94]{KnoppReihen}.
-\end{proof}
 In der Abbildung \ref{fig:plotCauchyKoeffs} sind für verschiedene $u_{-2}$ die
 numerischen Werte von $\sqrt[n]{|a_n|}$ in Abhängigkeit von $n$ aufgetragen.
 Man sieht, dass die Werte, soweit diese berechnet wurden, durchgehend steigen.
 Dies deutet darauf hin, dass der Konvergenzradius auch gegen $0$ geht.
 \begin{figure}[htbp]
   \centering
-  \includegraphics[angle=270,width=\the\textwidth]{../plot-cauchy.pdf}
+  \includegraphics[angle=270,width=.9\textwidth]{../plot-cauchy.pdf}
   \caption{Wurzelkriterium angewandt auf die Koeffizienten.}
   \label{fig:plotCauchyKoeffs}
 \end{figure}
@@ -1015,10 +1045,11 @@ Abhängigkeit von $n$ eingezeichnet.
 Auch hier sieht es so aus, als konvergieren die Werte, wie erwartet, für jedes
 $u_{-2}$ gegen $0$.
 Die zwei geprüften Konvergenzkriterien weisen also beide darauf hin, dass die
-Polynome $v(t)$ und $u(t)$ divergieren, also in $\hat L\backslash L$ liegen.
+Polynome $v(t)$ und $u(t)$ keinen positiven Konvergenzradius haben, also in
+$\hat L\backslash L$ liegen.
 \begin{figure}[htbp]
   \centering
-  \includegraphics[angle=270,width=\the\textwidth]{../plot-quot.pdf}
+  \includegraphics[angle=270,width=.9\textwidth]{../plot-quot.pdf}
   \caption{Quotientenkriterium angewendet auf die Koeffizienten.}
   \label{fig:plotQuotKoeffs}
 \end{figure}

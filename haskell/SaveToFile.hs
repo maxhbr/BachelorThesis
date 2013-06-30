@@ -1,11 +1,8 @@
 module Main where
 import ComplRat
--- Aus dem Paket: MemoTrie
-import Data.MemoTrie (memo)
--- Aus dem Paket: numbers.
-import Data.Number.CReal (CReal)
--- Aus dem Paket: monad-parallel.
-import qualified Control.Monad.Parallel as P (sequence_)
+import Data.MemoTrie (memo) -- Aus dem Paket: MemoTrie
+import Data.Number.CReal (CReal) -- Aus dem Paket: numbers.
+import qualified Control.Monad.Parallel as P (sequence_) -- Aus: monad-parallel.
 import System.Environment
 import System.IO
 

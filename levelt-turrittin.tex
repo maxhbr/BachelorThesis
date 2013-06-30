@@ -3,7 +3,8 @@
 Nun zum wichtigsten Satz in dieser Arbeit. Das Levelt-Turrittin-Theorem besagt,
 dass sich jeder meromorphe Zusammenhang $\cM$, nach einem möglicherweise
 nötigen Pullback, in eine direkte Summe von \glqq elementaren\grqq{}
-meromorphen Zusammenhängen zerlegen lässt.\\
+meromorphen Zusammenhängen zerlegen lässt. Vergleiche dazu
+\cite{sabbah_cimpa90}.\\
 Zunächst soll geklärt werden, welche Zusammenhänge die \glqq richtigen\grqq{}
 elementaren meromorphen Zusammenhänge sind.
 \section{Elementare meromorphe Zusammenhänge}
@@ -43,7 +44,9 @@ dass die Matrix, die $x\partial_x$ beschreibt, nur Einträge in $\Cfx$ hat.
 \end{comment}
 \begin{proof}[Beweisskizze] 
 Wähle einen zyklischen Vektor $m\in\cM_{\hat K}$ % TODO: richtiger Raum?
-und betrachte die Basis $m,\partial_x m,\dots,\partial_x^{d-1}m$ (siehe Lemma
+und betrachte die Basis
+\linebreak
+$m,\partial_x m,\dots,\partial_x^{d-1}m$ (siehe Lemma
 \ref{lem:Zyklischer-Vektor}).
 Schreibe $\partial_x^dm=\sum_{i=0}^{d-1}(-b_i(x))\partial_x^im$ mit
 Koeffizienten $b_i\in\hat K$.
@@ -51,7 +54,9 @@ Also erfüllt $m$ die Gleichung
 $\partial_x^dm+\sum_{i=0}^{d-1}b_i(x)\partial_x^im=0$.
 Tatsächlich kann man, wegen Regularität, $b_i(x)=x^ib_i'(x)$ mit $b_i'\in \Cfx$
 schreiben.
-Dies impliziert, dass $m,x\partial_xm,\dots,(x\partial_x)^{d-1}m$ ebenfalls
+Dies impliziert, dass
+\linebreak
+$m,x\partial_xm,\dots,(x\partial_x)^{d-1}m$ ebenfalls
 eine Basis von $\cM_{\hat K}$ ist.
 Die Matrix von $x\partial_x$ zu dieser neuen Basis hat nur Einträge in $\Cfx$.
 \end{proof}
@@ -88,7 +93,7 @@ $\sE^{\psi}\otimes R_{\alpha,p}\cong
 \cD/\cD\cdot(x\partial_x-(\alpha+x\frac{\partial \psi}{\partial x}))^p$.
 \end{lem}
 \begin{proof}
-Es gilt
+Mit Lemma \ref{lem:twistRechenregel} gilt
 \begin{align*}
 \sE^{\psi}\otimes R_{\alpha,p}
   &=\sE^{\psi}\otimes\cD_{\hat K}/\cD_{\hat K}(x\partial_x-\alpha)^p
@@ -144,7 +149,7 @@ Siehe \cite[Prop 3.1]{sabbah_Fourier-local}
 \end{comment}
 
 \section{Die Filtrierung $\,^\ell V\cD_{\hat K}$ und das $\ell$-Symbol}
-Dieser Abschnitt bezieht sich auf \cite[Seite 25ff]{sabbah_cimpa90} und
+Dieser Abschnitt bezieht sich auf \cite[Sec 5.1]{sabbah_cimpa90} und
 beschreibt das $\ell$-Symbol, welches im Beweis des Levelt-Turittin-Theorems
 Verwendung findet.\\
 Zu einer rationalen Zahl $\Lambda\geq0$ seien $\lambda_0\in\N_0$ und
@@ -229,6 +234,7 @@ $\Z$ indiziert ist, durch
 definieren.
 Falls $\lambda_0\neq 0$, ist der gradierte Ring $gr^{\,^\ell V}\cD_{\hat
 K}\bydef \bigoplus_{\lambda \in \Z}gr_\lambda^{\,^\ell V}\cD_{\hat K}$, wobei
+\linebreak
 $gr_\lambda^{\,^\ell V}\cD_{\hat K}:=\,^\ell V_\lambda\cD_{\hat K}/\,^\ell
 V_{\lambda-1}\cD_{\hat K}$ ist, ein kommutativer Ring. Bezeichne die Klasse von
 $\partial_x$ in dem Ring durch $\xi$, dann ist dieser Ring isomorph zu $\hat
@@ -351,6 +357,7 @@ Der folgende Beweis stammt hauptsächlich aus \cite[Seite 35]{sabbah_cimpa90}.
 \end{comment}
 \begin{proof}[Beweisskizze]
 Zum Beweis wird Induktion auf die lexikographisch geordneten Paare
+\linebreak
 $(\dim_{\hat K}\cM_{\hat K},\kappa)$ angewendet. Wobei
 $\kappa\in\N\cup\{\infty\}$ dem größtem Slope von $\cM_{\hat K}$, falls dieser
 ganzzahlig ist, entspricht. Sonsts wird $\kappa=\infty$ gesetzt. In jedem
@@ -364,11 +371,14 @@ Teile $\cM_{\hat K}$ mittels Satz \ref{thm:Split-after-slopes} in meromorphe
 Zusammenhänge mit je einem Slope auf und wende jeweils Induktion an.
 Mit $\frac{\lambda_0}{\lambda_1}:=\Lambda$ (vollständig gekürtzt) definieren
 wir die dem Slope zugeordnete Linearform
+\linebreak
 $\ell(s_0,s_1):=\lambda_0s_0+\lambda_1s_1$.  
 Wir nehmen oBdA auch an, dass $\ord_\ell(P)=0$. Dies geht nach Bemerkung
 \ref{bem:NPverschieben}.
 Da $\ell$ zu einem Slope von
 $P$ gehört, besteht $\sigma_\ell(P)$ aus zumindest zwei Monomen.
+
+\pagebreak
 Schreibe
 \begin{align*}
 \sigma_\ell(P)&=\sum_{\ell(i,i-j)=\ord_\ell(P)}\alpha_{ij}x^j\xi^i\\
@@ -425,8 +435,9 @@ durch ein Tensorieren mit $\sE_{\hat K}^{-\psi}$ rückgängig gemacht werden.
 In diesem Fall ist der einzige Slope $\Lambda$ nicht ganzzahlig. Führe deshalb
 einen Pullback mit Grad $\lambda_1$ aus.
 Sei beispielsweise $\rho:t\mapsto x:=t^{\lambda_1}$.
-Nach Lemma \ref{lem:slope-pb-multiplikation} hat dann $\rho^*\cM_{\hat K}$ nur
-den einen Slope $\Lambda'=\Lambda\cdot\lambda_1=\lambda_0\in\N$.
+Nach Lemma \ref{lem:slope-pb-multiplikation} hat dann $\rho^+\cM_{\hat K}$ nur
+den einen Slope $\Lambda'=\Lambda\cdot\lambda_1=\lambda_0\in\N$. Nun können wir
+auf $\rho^+\cM_{\hat K}$ den ersten Fall anwenden.
 \begin{comment}
 Damit können wir nun die zugehörige Linearform $\ell':=\lambda_0s_0+s_1$
 definieren. Es gilt dass

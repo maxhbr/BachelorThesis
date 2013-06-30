@@ -50,3 +50,83 @@
   adsnote       = {Provided by the SAO/NASA Astrophysics Data System},
   howpublished = "\url{http://www.math.polytechnique.fr/~sabbah/sabbah_Fourier-local.pdf}"
 }
+
+@book{hartshorne1977algebraic,
+  title     = {Algebraic Geometry},
+  author    = {Hartshorne, R.},
+  series    = {Graduate Texts in Mathematics},
+  year      = {1977},
+  publisher = {Springer}
+}
+@book{matsumura1989commutative,
+  title     = {Commutative Ring Theory},
+  author    = {{{Matsumura}, H.} and {{Reid}, M.}},
+  isbn      = {9780521367646},
+  lccn      = {86011691},
+  series    = {Cambridge Studies in Advanced Mathematics},
+  url       = {http://books.google.de/books?id=yJwNrABugDEC},
+  year      = {1989},
+  publisher = {Cambridge University Press}
+}
+@misc{0812.3921,
+    Author       = {Andr\'e, Y.},
+    Title        = {Slope filtrations},
+    Year         = {2008},
+    Eprint       = {arXiv:0812.3921},
+    howpublished = {arXiv:0812.3921}
+}
+@book{bjoerk1993analytic,
+  title={Analytic D-Modules and Applications},
+  author={Bj{\"o}rk, J.E.},
+  isbn={9780792321149},
+  lccn={lc92044826},
+  series={Mathematics and Its Applications},
+  url={http://books.google.de/books?id=Tz\_CO3aIWf0C},
+  year={1993},
+  publisher={Springer}
+}
+
+@misc{stacks-project,
+  author       = "The {Stacks Project Authors}",
+  title        = "{\itshape Stacks Project}",
+  howpublished = "\url{http://stacks.math.columbia.edu}",
+  year         = 2012,
+  month        = dec
+}
+@booklet{ginzburg,
+  title        = {Lectures on D-Modules},
+  author       = {{Ginzburg},V.},
+  howpublished = "Vorlesungsskript \url{http://www-bcf.usc.edu/~cautis/dmodules/ginzburg.pdf}",
+  year         = {1998},
+  publisher    = {unpublished}
+}
+@booklet{ArkhipovDmod,
+  title        = {$\mathcal{D}$-modules},
+  author       = {{Arkhipov},S.},
+  school       = {Department of Mathematics, University of Toronto },
+  year         = {2012},
+  month        = may,
+  day          = {15},
+  howpublished = "\url{http://wiki.math.toronto.edu/TorontoMathWiki/images/c/ce/MAT1191_Lecture_Notes.pdf}"
+}
+@ARTICLE{Bloch_localfourier,
+    author  = {Bloch, S.},
+    title   = {Local Fourier transforms and rigidity for $\mathcal{D}$-modules},
+    journal = {Asian J. Math},
+    year    = {2004},
+    pages   = {587--605}
+}
+@article{GarciaLopez04,
+    Author        = {Garc{\'{\i}}a L{\'o}pez, Ricardo},
+    Date-Added    = {2008-12-11 15:35:16 +0100},
+    Date-Modified = {2008-12-11 15:35:30 +0100},
+    Fjournal      = {The Asian Journal of Mathematics},
+    Issn          = {1093-6106},
+    Journal       = {Asian J. Math.},
+    Mrreviewer    = {Pedro C. Silva},
+    Number        = {4},
+    Pages         = {747--768},
+    Title         = {Microlocalization and stationary phase},
+    Volume        = {8},
+    Year          = {2004}
+}

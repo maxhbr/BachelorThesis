@@ -60,6 +60,8 @@
 
 \renewcommand*{\thefootnote}{[\arabic{footnote}]}
 
+\usepackage[table]{xcolor}
+
 %%%%  Zeichen  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{nicefrac}
 \usepackage{mathrsfs}
@@ -69,34 +71,34 @@
 %%%%  myobracket/myubracket  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{mathtools}
 \iffalse
-  \newcommand{\myobracket}[1]{ \overbracket[0.7pt]{ #1 } }
-  \newcommand{\myubracket}[1]{ \underbracket[0.7pt]{ #1 } }
+\newcommand{\myobracket}[1]{ \overbracket[0.7pt]{ #1 } }
+\newcommand{\myubracket}[1]{ \underbracket[0.7pt]{ #1 } }
 \else
-  \newcommand{\myobracket}[1]{%
-    \textcolor{gray}{%
-      \overbracket[0.7pt]{%
-        \textcolor{black}{%
-          #1%
-        }%
+\newcommand{\myobracket}[1]{%
+  \textcolor{gray}{%
+    \overbracket[0.7pt]{%
+      \textcolor{black}{%
+        #1%
       }%
     }%
-  }
-  \newcommand{\myubracket}[1]{%
-    \textcolor{gray}{%
-      \underbracket[0.7pt]{%
-        \textcolor{black}{%
-          #1%
-        }%
+  }%
+}
+\newcommand{\myubracket}[1]{%
+  \textcolor{gray}{%
+    \underbracket[0.7pt]{%
+      \textcolor{black}{%
+        #1%
       }%
     }%
-  }
+  }%
+}
 \fi
 
 %%%%  Ploting  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{tikz}   
 \usepackage{tikz-cd}
 \usetikzlibrary{matrix,arrows, calc, decorations.pathmorphing,%
-  decorations.pathreplacing }
+decorations.pathreplacing }
 
 \myinput{myPlotFunction.sty}
 
@@ -104,26 +106,26 @@
 \usepackage{float}
 %TODO: decorate floats
 \newcommand{\myfigurestart}{
-  %\textcolor{lightgray}{\hrule height 2pt}
-  \hline
-  \vspace{3mm}
+%\textcolor{lightgray}{\hrule height 2pt}
+\hline
+\vspace{3mm}
 }
 \newcommand{\myfigureend}{
-  \vspace{3mm}
-  \hline
-  %\textcolor{lightgray}{\hrule height 2pt}
+\vspace{3mm}
+\hline
+%\textcolor{lightgray}{\hrule height 2pt}
 }
 
 %\usepackage{lipsum}% http://ctan.org/pkg/lipsum
 %\usepackage{mdframed}% http://ctan.org/pkg/mdframed
 %\usepackage{xcolor}% http://ctan.org/pkg/xcolor
 %\newenvironment{inline}{
-  %\begin{figure}[h!]
-    %\begin{mdframed}[backgroundcolor=back!5]
-    %\vspace{10pt}%
+%\begin{figure}[h!]
+  %\begin{mdframed}[backgroundcolor=back!5]
+  %\vspace{10pt}%
 %}{%
-    %\end{mdframed}
-  %\end{figure}
+  %\end{mdframed}
+%\end{figure}
 %}
 
 %%%%  Theoreme Styles  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -173,10 +175,10 @@
 \usepackage[german]{varioref}
 %\usepackage[nameinlink,german]{cleveref}
 \ifnum\myDevelopVariable=0
-  \usepackage[colorlinks=false,linkcolor=black,plainpages = false]{hyperref}
-  %\linespread{1.5}
+\usepackage[colorlinks=false,linkcolor=black,plainpages = false]{hyperref}
+%\linespread{1.5}
 \else
-  \usepackage[colorlinks=true,linkcolor=black,plainpages = false]{hyperref}
+\usepackage[colorlinks=true,linkcolor=black,plainpages = false]{hyperref}
 \fi
 
 %% Autoref Names %%%%%%%%%%%%%%%%%
@@ -189,34 +191,34 @@
 %%%%  MyDevelop  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \myinput{mydevelop.sty}
 \ifnum\myDevelopVariable=0
-  %\cfoot{\today}
+%\cfoot{\today}
 \fi
 
 %%%%  Listings  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{listings}
 \lstset{
-  literate={ö}{{\"o}}1
-           {ä}{{\"a}}1
-           {ü}{{\"u}}1
+literate={ö}{{\"o}}1
+         {ä}{{\"a}}1
+         {ü}{{\"u}}1
 }
 
 \myinput{haskell.sty}
 
 \definecolor{myLightGrey}{rgb}{0.9,0.9,0.9}
 \lstdefinestyle{Bash} {
-  language=Bash,
-  backgroundcolor=\color{myLightGrey},
-  keywordstyle=\color{BlueViolet}\bfseries,
-  commentstyle=\color{Grey},
-  stringstyle=\color{Red},
-  showstringspaces=false,
-  basicstyle=\ttfamily\scriptsize,
-  numbers=left,
-  %captionpos=b,
-  tabsize=4,
-  xleftmargin=15pt,
-  xrightmargin=-20pt,
-  breaklines=true
+language=Bash,
+backgroundcolor=\color{myLightGrey},
+keywordstyle=\color{BlueViolet}\bfseries,
+commentstyle=\color{Grey},
+stringstyle=\color{Red},
+showstringspaces=false,
+basicstyle=\ttfamily\scriptsize,
+numbers=left,
+%captionpos=b,
+tabsize=4,
+xleftmargin=15pt,
+xrightmargin=-20pt,
+breaklines=true
 }
 
 %%%%  new Commands  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -389,7 +391,7 @@
 \myinput{titel.tex}
 \restoregeometry
 
-%\newpage \thispagestyle{empty} \mbox{}
+\newpage \thispagestyle{empty} \mbox{}
 
 \tableofcontents{}
 
@@ -432,6 +434,7 @@
 \myinput{schluss.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage \thispagestyle{empty} \mbox{}
 \pagebreak
 \appendix
 \addcontentsline{toc}{chapter}{Anhang}

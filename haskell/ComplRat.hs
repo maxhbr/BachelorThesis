@@ -26,14 +26,12 @@ imagPart :: ComplRat -> Rational
 imagPart (_ :+: y) =  y
 
 -- | Der nichtnegative Betrag einer komplexen Zahl.
--- Nur für rein reelle oder complexe Zahlen, da es sonst, aufgrund der
--- fehlenden Wurzel, zu Problemen kommt.
+-- Nur für rein reelle oder rein complexe Zahlen, da es sonst, aufgrund der
+-- fehlenden Wurzelfunktion, zu Problemen kommt.
 magnitude :: ComplRat -> Rational
 magnitude (x :+: 0) = abs x
 magnitude (0 :+: y) = abs y
-magnitude (_ :+: _) = error "Oops! Use magnitudeSq instead."
-{-magnitude (x :+: y) = P.sqrt ( sqr x P.+ (sqr y) )-}
-  {-where sqr z = z P.* z-}
+magnitude (_ :+: _) = error "Ups! Benutze magnitudeSq stattdessen."
 
 -- | Das Quadrat des Betrags einer komplexen rationalen Zahl
 -- ist für alle komplexen zahlen eine rationale Zahl.

@@ -447,9 +447,10 @@ mit $a_k(x)\in \hat K$ bzw. $\alpha_{kl}\in\C$ schreiben. Betrachte das zu $P$
 dazugehörige
 \begin{align*}
 H(P):&=\underset{m,l\mbox{ \footnotesize mit }\alpha_{ml}\neq0}{\bigcup}
-  \Big( (m,l-m) + \R_{\leq 0}\times \R_{\geq 0} \Big) \subset \R^2\\
+  \Big( (m,l-m) + \R_{\leq 0}\times \R_{\geq 0} \Big) \\
   &=\underset{m\mbox{ \footnotesize mit }a_{m}\neq0}{\bigcup}
-  \Big( (m,deg(a_m)-m) + \R_{\leq 0}\times \R_{\geq 0} \Big) \subset \R^2 \,.
+  \Big( (m,deg(a_m)-m) + \R_{\leq 0}\times \R_{\geq 0} \Big)
+    \qquad \subset \R^2 \,.
 \end{align*}
 
 \begin{defn} \label{defn:NP}
@@ -464,7 +465,7 @@ mit $a_k(x)\in \Ckx$ und definiert das Newton-Polygon als das
 Randpolygon der konvexen Hülle von
 \[
 H'(P):=\underset{m\mbox{ \footnotesize mit }a_{m}\neq0}{\bigcup}
-  \Big( (m,deg(a_m)) + \R_{\leq 0}\times \R_{\geq 0} \Big) \subset \R^2 \,.
+  \Big( (m,deg(a_m)) + \R_{\leq 0}\times \R_{\geq 0} \Big)\qquad\subset \R^2 \,.
 \]
 Er bemerkt auch, dass seine Definition, bis auf möglicherweise vertikale
 Verschiebung, zu Definition \ref{defn:NP} äquivalent ist.
@@ -480,9 +481,11 @@ die zu $\cM$ gehörigen Slopes und schreibe dafür $\cP(\cM)$.
 \item P heißt \emph{regulär singulär} oder nur \emph{regulär}
 $:\Leftrightarrow$ $\cP(P)=\{0\}$ oder $\deg P=0$, sonst \emph{irregulär
   singulär}.
-\item Ein meromorpher Zusammenhang $\cM_{\hat K}$ (bzw. $\cM_K$) heißt regulär
-singulär, falls es ein regulär singuläres $P\in \cD_{\hat K}$ (bzw. $P\in
-\cD_K$) gibt, mit $\cM_{\hat K}\cong\cD_{\hat K}/\cD_{\hat K}\cdot P$ (bzw.
+\item Ein meromorpher Zusammenhang $\cM_{\hat K}$ (bzw. $\cM_K$) heißt 
+\emph{regulär singulär}, falls es ein regulär singuläres $P\in \cD_{\hat K}$
+(bzw. $P\in \cD_K$) gibt, mit $\cM_{\hat K}\cong\cD_{\hat K}/\cD_{\hat K}\cdot
+P$ (bzw.
+\linebreak
 $\cM_K\cong\cD_K/\cD_K\cdot P$).
 \end{itemize}
 \end{defn}
@@ -519,7 +522,7 @@ Also ist $P_2$ irregulär singulär.
     \myPlotFunction[coordsize]{\myPoints}{\myPath}{2}{-1}{-1}{$N(P_1)$}
     \end{tikzpicture}
   \end{center}
-  \caption{Newton-Polygon zu $P_1=x\partial_x^2$}
+  \caption{Newton-Polygon zu $P_1=x\partial_x^2$.}
   \label{fig:Newton-Polygon1}
   \end{minipage}
   \begin{minipage}[hbt]{0,49\textwidth}
@@ -530,7 +533,7 @@ Also ist $P_2$ irregulär singulär.
     \myPlotFunction[coordsize]{\myPoints}{\myPath}{4}{-2}{-1}{$N(P_2)$}
     \end{tikzpicture}
   \end{center}
-  \caption{Newton-Polygon zu $P_2$}
+  \caption{Newton-Polygon zu $P_2$.}
   \label{fig:Newton-Polygon2}
   \end{minipage}
 \end{figure}
@@ -599,9 +602,9 @@ Newton-Polygon gesucht ist. Das \text{T.i.Q.} ist eine hier die Abkürzung für
 Nach \cite{sabbah_cimpa90} gilt sogar, dass beim Kommutieren von zwei
 Elementen\linebreak $a,b\in\cD_{\hat K}$ nur Elemente im gemeinsamen Quadranten
 auftauchen. Es gilt also
-\[
+\begin{equation} \label{eq:commuteInNP}
 a\cdot b = b\cdot a +  \text{T.i.Q. von }b\cdot a \,.
-\]
+\end{equation}
 Damit sieht man auch, dass Kommutieren innerhalb von $P$ das Newton-Polygon von
 $P$ nicht ändert.
 \end{bem}
@@ -683,7 +686,7 @@ wie folgt aus
   \myPlotFunction{\myPoints}{\myPath}{2}{0}{1}{$N(P)$}
   \end{tikzpicture}
 \end{center}
-\caption{Newton-Polygon zu $P=x(x\partial_x)^2+x\partial_x+\frac{1}{2}$}
+\caption{Newton-Polygon zu $P=x(x\partial_x)^2+x\partial_x+\frac{1}{2}$.}
 \end{figure}
 mit den Slopes $\cP(P)=\{0,1\}=:\{\Lambda_1,\Lambda_2\}$. Nach dem Satz
 \ref{thm:Split-after-slopes} existiert eine Zerlegung $P=P_1\cdot P_2$ mit
@@ -714,7 +717,7 @@ wie folgt aus
   \myPlotFunction{\myPoints}{\myPath}{2}{0}{1}{$N(P)$}
   \end{tikzpicture}
 \end{center}
-\caption{Newton-Polygon zu $P$}
+\caption{Newton-Polygon zu $P$.}
 \end{figure}
 \end{exmp}
 \end{comment}
