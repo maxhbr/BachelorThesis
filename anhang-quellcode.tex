@@ -174,19 +174,19 @@ parallelisiert.
 Auf Unix-artigen Systemen lässt sich durch die folgenden Befehle das Programm
 Kompilieren, danach wird ein Ordner erstellt, welcher nötig ist. Mit dem
 Letzten Befehlt wird das Programm ausgeführt, es nutzt dazu 8 Prozessorkerne
-(wegen dem \texttt{-N8}) und berechnet die ersten $10000$ Werte für die
+(wegen dem \texttt{-N8}) und berechnet die ersten $7500$ Werte für die
 Abbildungen.
 \begin{lstlisting}[style=Bash]
 $ ghc --make -threaded /Pfad/zu/SaveToFile.hs
 $ mkdir -p /Pfad/zu/data
-%$ /Pfad/zu/SaveToFile 10000 +RTS -N8
+%$ /Pfad/zu/SaveToFile 7500 +RTS -N8
 \end{lstlisting}
 Zum erzeugen der Daten für die eingebunden Grafiken lief Dieses Programm
-insgesammt $740$ Stunden verteilt auf $8$ Prozessorkernen mit jeweils
+insgesamt $740$ Stunden verteilt auf $8$ Prozessorkerne mit jeweils
 $2.27$GHz.
 Dabei hat es insgesamt $75000$ Zeilen an Werten erzeugt, wobei der längste
 Eintrag in einer Zeile $66028$ Zeichen lang war.
-Die entsandenen Textdateien hatten zusammen eine Größe von $1,2$GB.
+Die entstandenen Textdateien hatten zusammen eine Größe von $1,2$GB.
 
 Erstellt wurden die Graphen mit \texttt{Gnuplot} und auch sonst wurde zum
 erstellen dieser Arbeit ausschließlich freie Software verwendet.
