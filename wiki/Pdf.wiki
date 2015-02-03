@@ -1,7 +1,0 @@
-von Hien:
-    * ZulaBarbara.pdf
-    * sabbah_cimpa90.pdf
-    * sabbah_Fourier-local.pdf
-
-downloads:
-
